@@ -1,0 +1,518 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 446,
+                            "fontSize": 23,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Transfers"
+                        },          
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 23,
+                            "marginLeft": 440,
+                            "alpha": 5,
+                            "height": 5,
+                            "width": 120,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MainContentPanel",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "ContentContainer",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginLeft": -280,
+          "marginTop": 13,
+          "width": 300,
+          "height": 440,
+          "children": [
+            {
+              "commonName": "Panel",
+              "name": "TransferPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginRight": 0,
+              "width": 300,
+              "height": 440,
+              "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateTransfer",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 60
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 594
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                                  
+
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 60,
+                  "width": 330,
+                  "height": 340,
+                  "type": "$Icon_Budget_Cup"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 20,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Budget Overview"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 167,
+                  "marginLeft": 0,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "fontSize": 22,
+                  "fontColor": "0xffffff",
+                  "width": 150,
+                  "autoScroll": true,
+                  "fontFace": "$CruyffSansExpanded",
+                  "alpha": 0.7,
+                  "bindings": [
+                    {
+                      "binding": "bnd_finance",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 200,
+                  "marginLeft": 0,
+                  "scaleX": 0.7,
+                  "scaleY": 0.75,
+                  "fontSize": 25,
+                  "fontColor": "$COLOR_GREEN",
+                  "textAlignH": "CENTER",
+                  "width": 300,
+                  "multiline": true,
+                  "fontFace": "$CruyffSansLight",
+                  "alpha": 1,
+                  "bindings": [
+                    {
+                      "binding": "bnd_financeextra",
+                      "property": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "name": "ScoutPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginRight": 150,
+              "width": 300,
+              "height": 440,
+              "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateScout",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 50
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 283
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                                  
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab3sub2"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 20,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Transfers Hub"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 100,
+                  "width": 140,
+                  "height": 150,
+                  "type": "$Transfer_Hub"
+                },
+                {
+                  "commonName": "VerticalList",
+                  "name": "trainingList",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 100,
+                  "marginLeft": 20,
+                  "x": 0,
+                  "y": 0,
+                  "scaleY": 0.9,
+                  "scaleX": 0.9,
+                  "displayRange": 3,
+                  "rowChangeAction": "",
+                  "highlightable": false,
+                  "row": "TrainingPlan",
+                  "rowHeight": 92.5,
+                  "rowWidth": 275,
+                  "highlightable": true,
+                  "mouseInteractive": false,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_list",
+                      "property": "dataProviders"
+                    },
+                    {
+                      "binding": "bnd_rowvisible",
+                      "property": "visible"
+                    }
+                  ]
+                }
+              ]
+            },                      
+            {
+              "commonName": "Panel",
+              "name": "SearchPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": 30,
+              "width": 300,
+              "height": 440,
+              "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateSearch",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1000
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 30
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": -26
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                                  
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab3sub1"
+                },  
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 20,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Search Players"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 100,
+                  "width": 120,
+                  "height": 120,
+                  "type": "$FooterIconSearch"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 250,
+                  "marginLeft": 0,
+                  "fontSize": 11,
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "fontColor": "0xffffff",
+                  "textAlignH": "CENTER",
+                  "width": 200,
+                  "multiline": true,
+                  "leading": 3,
+                  "alpha": 0.7,
+                  "text": "Search for a specific player you want to buy, loan or scout"
+                }
+              ]
+            }
+          ],
+          "behaviors": [
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_search",
+              "script": "animateSearch",
+              "target": "SearchPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_search",
+              "target": "trigger_animate_search",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count1",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_scout",
+              "script": "animateScout",
+              "target": "ScoutPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_scout",
+              "target": "trigger_animate_scout",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count2",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_transfer",
+              "script": "animateTransfer",
+              "target": "TransferPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_transfer",
+              "target": "trigger_animate_transfer",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count3",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_budget",
+              "script": "animateBudget",
+              "target": "BudgetPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_budget",
+              "target": "trigger_animate_budget",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count4",
+                  "property": "value"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

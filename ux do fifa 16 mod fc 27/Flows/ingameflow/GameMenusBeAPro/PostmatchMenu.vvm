@@ -1,0 +1,5 @@
+{
+    "dds":   ["PostmatchMenu.dd", "GameMenu.dd"],
+    "vms":   [["lua", "PostmatchMenu.lua"], ["lua", "GameMenu.lua"]],
+    "views": [["gfx", {"layout": "PostmatchMenu.layout"}]]
+}

@@ -1,0 +1,11 @@
+{
+	"dds": [
+	"Standings/Standings.dd",
+	"Goalscorers/Goalscorers.dd"
+	],
+     "vms": [
+	 ["lua", "Standings/Standings.lua"],
+	 ["lua", "Goalscorers/Goalscorers.lua"]
+	 ],
+    "views": [["gfx", { "layout": "Tab3.layout" }]]
+}

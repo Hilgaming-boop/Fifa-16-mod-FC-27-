@@ -1,0 +1,453 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_OUT_RIGHT"
+                }
+            ]
+        }
+    ],    
+    "children":
+    [   
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -13,
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 107,
+                    "marginLeft": 90,
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "text": "Customise Audio"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "You can make sounds settings"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 173,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "Commentators in each region are available for use,"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 195,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "There are other sound settings that you can set here very easily"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "speechDownloadButton",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 235,
+                    "marginLeft": 90,
+                    "width": 480,
+                    "height": 40,
+                    "icon": "$",
+                    "clickAction": "act_show_speech_download_popup",
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "Download Comentary",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_download_speech_disable",
+                            "property": "enabled"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 305,
+                    "marginLeft": 90,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_BOLD",
+                    "text": "Music Playlist  :"
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 340,
+                    "marginLeft": 90,
+                    "height": 110,
+                    "width": 115,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x3E3E3E",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "height": 100,
+                            "width": 100,
+                            "type": "$l0_2"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 120,
+                            "marginBottom": 20,
+                            "height": 70,
+                            "width": 75,
+                            "type": "$_IconResume"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 200,
+                            "marginTop": -30,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_BOLD",
+                            "text":"Myke Towers - Lala"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 200,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_BOLD",
+                            "text":"Peso Pluma, Grupo Frontera - Tulum"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 125,
+                            "width": 350,
+                            "height": 5,
+                            "color": "0x555555",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 125,
+                            "marginBottom": 4,
+                            "width": 350,
+                            "fontSize": 8,
+                            "fontColor": "$COLOR_WHITE",
+                            "autoScroll":true,
+                            "alpha": 0.8,
+                            "text":"•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 125,
+                            "marginBottom": 10,
+                            "width": 350,
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "autoScroll":true,
+                            "alpha": 0.8,
+                            "text":"IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 34,
+                    "marginLeft": 400,
+                    "height": 70,
+                    "width": 140,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginBottom": 40,
+            "marginLeft": -72,
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "name": "ResetAll",
+                    "marginTop": 455,
+                    "marginLeft": 195,
+                    "width": 470,
+                    "height": 40,
+                    "icon": "$",
+                    "clickAction": "act_reset_all",
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "Reset"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "insToggleUserMusicMessage",
+                    "alignH": "CENTER",
+                    "marginTop": 405.0,
+                    "marginLeft": 240,
+                    "width": 270.0,
+                    "x": 600,
+                    "y": 136,
+                    "multiline": true,
+                    "textAlignH":"CENTER",
+                    "text":"Lock Sound",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "insToggleUserMusic",
+                    "alignH": "CENTER",
+                    "marginTop": 405.0,
+                    "marginLeft": 520,
+                    "height": 40,
+                    "width": 270,
+                    "x": 600,
+                    "y": 170,
+                    "arrowType": "blue_small",
+                    "hasArrows": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+                    "toggleAction":
+                    {
+                        "action": "act_usermusic_toggle",
+                        "binding": "bnd_userMusic_toggle_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_usermusic_yesno",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_usermusic_toggle_iscircular",
+                            "property": "isCircular"
+
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Group",
+                    "name": "insAudio",
+                    "x": 0.0,
+                    "y": -260,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "insMusicLabel",
+                            "x": 190.0,
+                            "y": 170.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Music",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 330.0,
+                            "y": 190.0,
+                            "changeAction": "act_music_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_music_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                    "property": "enabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "insFxLabel",
+                            "x": 190.0,
+                            "y": 230.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Sound FX",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 330.0,
+                            "y": 250,
+                            "changeAction": "act_fx_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_fx_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                    "property": "enabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "insCommentaryLabel",
+                            "x": 190.0,
+                            "y": 290.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Commentary",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 330.0,
+                            "y": 310,
+                            "changeAction": "act_commentary_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_commentary_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                      "property": "enabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "insCrowdLabel",
+                            "x": 190.0,
+                            "y": 350.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Crowd",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 330.0,
+                            "y": 370,
+                            "changeAction": "act_crowd_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_crowd_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                    "property": "enabled"
+                                }
+						
+                            ]
+                        }
+
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

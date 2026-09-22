@@ -1,0 +1,104 @@
+{
+    "commonName": "Composite",
+    "name": "Avatar",
+    "behaviors":
+    [
+        {
+            "commonName": "ApplyStyleOnControlChange",
+            "controlSource": "AvatarButton",
+            "offStyles":
+            [
+                "Hidden"
+            ],
+            "onStyles":
+            [
+                "Visible"
+            ],
+            "styleTargets":
+            [
+                "AvatarButton.AvatarPanel.FooterLabel",
+                "AvatarButton.AvatarPanel.Footer"
+            ],
+            "signal": "onIsPointedChanged",
+            "name": "applyStyleOnControl"
+        }
+    ],
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 129.0,
+            "height": 129.0
+        }
+    },
+    "style-definitions":
+    {
+        "FooterLabelStyle":
+        {
+            "fontColor": "$COLOR_WHITE",
+            "fontSize": "$FONT_SIZE_LARGE",
+            "fontFace": "$FONT_HEADER",
+            "textAlignH": "CENTER"
+        }
+    },
+    "propertyMap":
+    {
+        "label": "AvatarButton.AvatarPanel.FooterLabel.text",
+        "data": "AvatarButton.dataProviders",
+        "data.displayPicture": "AvatarButton.AvatarPanel.AvatarImage.path",
+        "data.status": "AvatarButton.AvatarPanel.StatusBar.status",
+        "editable": "AvatarButton.mouseInteractive",
+        "clickAction": "AvatarButton.clickAction"
+    },
+    "children":
+    [
+        {
+            "commonName": "fow.base.BaseButton",
+            "name": "AvatarButton",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "width": 129.0,
+                    "height": 129.0,
+                    "name": "AvatarPanel",
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "scaleX": 0.62,
+                            "scaleY": 0.62,
+                            "marginLeft": 5.0,
+                            "name": "AvatarImage"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "fillColor": "$COLOR_BLACK",
+                            "marginLeft": 5.0,
+                            "alpha": 0.7,
+                            "width": 129.0,
+                            "height": 30.0,
+                            "marginTop": 98.0,
+                            "name": "Footer"
+                        },
+                        {
+                            "commonName": "Label",
+                            "width": 129.0,
+                            "marginLeft": 5.0,
+                            "marginTop": 102.0,
+                            "name": "FooterLabel",
+                            "styles":
+                            [
+                                "FooterLabelStyle"
+                            ]
+                        },
+                        {
+                            "commonName": "StatusBar",
+                            "name": "StatusBar"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

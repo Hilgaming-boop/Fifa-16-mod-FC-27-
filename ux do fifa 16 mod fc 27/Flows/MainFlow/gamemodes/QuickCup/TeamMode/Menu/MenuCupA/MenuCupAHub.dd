@@ -1,0 +1,85 @@
+{
+    "actions":
+    [
+        {
+            "viewname":"act_a",
+            "actionname":"act_a"
+        },    
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+			}
+		},
+        {
+			"viewname": "act_to_cup_ucl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_ucl"
+			}
+		},
+        {
+            "viewname": "act_to_cup_uel",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_uel"
+	      }
+		},	
+		{
+			"viewname": "act_to_cup_uec",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_uec"
+    		}
+		},
+		{
+	    	"viewname": "act_to_cup_unl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_unl"
+			}
+		},		
+		{
+			"viewname": "act_to_cup_uwcl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_uwcl"
+			}
+        }
+    ],
+    "data":
+	[
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}    

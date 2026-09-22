@@ -1,0 +1,325 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "FC26_MENU_SHOW"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "FC26_MENU_HIDE"
+                }
+            ]
+        }
+    ],        
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Tab",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 301,
+                    "height": 30,
+                    "width": 100,
+                    "label": "",
+                    "textStyles": [ "" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 300,
+                    "height": 10,
+                    "width": 115,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 5,
+            "width": 1100,
+            "height": 375,
+            "alpha": 1,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 9,
+                            "alpha": 1,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 20,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "forceCaps": true,
+                            "text": "FIXTURES"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 52,
+                            "marginLeft": -80,
+                            "clickAction": "act_prev_group",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 50,
+                            "fontSize": 15,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_label_current",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 52,
+                            "marginLeft": 80,
+                            "clickAction": "act_next_group",
+                            "buttonAsset": "$BlueArrowRight1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 70,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_YELLOW",
+                            "bold": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_month_label",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "Fixtures",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 110,
+                            "marginLeft": 34,
+                            "scaleX": 0.6,
+                            "scaleY": 0.6,
+                            "displayRange": 6,
+                            "highlightable": true,
+                            "row": "FixturesSmallCustom",
+                            "rowHeight": 63,
+                            "rowWidth": 470,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_fixtures_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "width": 735,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 9,
+                            "alpha": 1,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_color_tourid",
+                                    "property": "fillColor"
+                                }
+                            ]
+                        },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "height": 54,
+                    "alpha": 1,
+                    "cornerRaduis": 10,
+                    "bindings":
+                    [
+			            {
+				            "binding": "bnd_color_tourid2",
+					    	"property": "fillColor"
+						}
+					]
+				},   
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 20,
+                    "marginLeft": 65,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontColor": "0xffffff",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tour_label",
+                            "property": "text"
+                        }
+		            ]
+                },                    
+                {
+                    "commonName": "Image",
+                    "name": "CupLogo",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 10,
+                    "marginLeft": 20,
+                    "width": 40,
+                    "height": 40,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tour_logo",
+                            "property": "image"
+                        }
+                    ]
+                },                
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 20,
+                            "marginRight": 20,
+                            "fontSize": 0,
+                            "fontColor": "0xAAAAAA",
+                            "forceCaps": false,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_label_current", 
+                                    "property": "text"
+                                }
+                            ]
+                        },               
+                        {
+                            "commonName": "Panel",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 95,
+                            "width": 700,
+                            "height": 20,
+                            "children": [
+                                { "commonName": "Label", "text": "Pos", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 15, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "Team", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 80, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "P", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 380, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "W", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 425, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "D", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 480, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "L", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 525, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "GF", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 565, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "GA", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 615, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" },
+                                { "commonName": "Label", "text": "PTS", "alignV": "CENTER", "alignH": "LEFT", "marginLeft": 665, "fontSize": 13, "fontColor": "0xF8F8F8", "fontFace": "$FONT_CRUYFFSANSBOLD" }
+                            ]
+                        },                        
+                        {
+                            "commonName": "VerticalList",
+                            "name": "GroupStandings",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 125,
+                            "marginLeft": 10,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8,
+                            "displayRange": 6,
+                            "highlightable": true,
+                            "row": "StandingsRowCustom",
+                            "rowHeight": 50,
+                            "rowWidth": 910,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_standings",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

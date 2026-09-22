@@ -1,0 +1,365 @@
+/* ------------------------------------- */
+/* MOD Created By Rober FL */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "children":
+    [    
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": -100,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "FcPanel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateFc",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginLeft": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 50
+                                        },
+                                        "duration": 500,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [        
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -15000,
+                    "marginLeft": 0,
+                    "height": 70,
+                    "width": 300,
+                    "type": "$Icon_FC25_In"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 170,
+                    "marginLeft": 0,
+                    "fontSize": 25,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor":"$COLOR_WHITE",
+                    "text": "WELCOME TO FC 26"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 120,
+                    "marginLeft": -5,
+                    "fontSize": 15,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor": "$COLOR_WHITE",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 400,
+                    "multiline": false,
+                    "leading": 1,
+                    "text": "We've Pre-Selected Some Options For You To Get Started Quickly"
+                },
+                {
+                    "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 0,
+            "width": 480,
+            "height": 190,
+                    "cornerRaduis": 10,
+                    "color": "0x504452",
+                    "alpha": 0.5
+                                                },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft":-160,
+                            "marginBottom": 70,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Regular",
+                            "text": "Difficulty Level"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft":-160,
+                            "marginBottom": -70,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Regular",
+                            "text": "World Class"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft":-3,
+                            "marginBottom": 70,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Regular",
+                            "text": "Controller Preset"
+                                                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft":0,
+                            "marginBottom": -70,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Regular",
+                            "text": "Classic"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft":150,
+                            "marginBottom": 70,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Regular",
+                            "text": "Favorite Team"
+                                                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft":150,
+                            "marginBottom": -70,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Regular",
+                            "text": "Barcelona"
+                            },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 230,
+                            "width": 1,
+                            "height": 160,
+                            "color": "0xFFFFFF",
+                            "alpha": 0.3
+                            },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 65,
+                            "width": 1,
+                            "height": 160,
+                            "color": "0xFFFFFF",
+                            "alpha": 0.3
+                            },
+                       {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 150,
+                    "height": 90,
+                    "width": 90,
+                    "type": "$Favorite_Team"
+                    },
+                       {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "height": 93,
+                    "width": 113,
+                    "type": "$Controller_Preset"
+                    },
+                       {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 10,
+                    "marginLeft": -150,
+                    "height": 113,
+                    "width": 93,
+                    "type": "$Difficulty_Level"
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_fc",
+                    "script": "animateFc",
+                    "target": "FcPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_fc",
+                    "target": "trigger_animate_fc",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 },       
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 10,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 6,
+                            "marginTop": 0,
+                            "height": 70,
+                            "width": 290,
+                            "backgroundImage": "$Tab_Action_Green",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_matchday"
+                        },
+                        {
+		                            "commonName": "Asset",
+		                            "alignV": "CENTER",
+		                            "alignH": "CENTER",
+                                    "marginLeft": -82,
+		                            "marginTop": 1,
+		                            "width": 35,
+                                    "height": 35,
+		                            "type": "$SimMatchIcon1",
+                                    "alpha": 1
+		                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 15,
+                            "marginBottom": 0,
+                            "fontSize": 16,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Change Background"
+                        }
+                    ]
+                },         		
+         {
+            "commonName": "Asset",
+            "alignH": "CENTER",
+            "alignV": "BOTTOM",
+            "marginBottom": 50,
+            "marginLeft": 0,
+            "width": 50,
+            "height": 50,
+            "alpha": 0,
+            "path": "views/loadingindicator/loadingIcon.swf"
+        },
+         {
+            "commonName": "Asset",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -147,
+            "marginLeft": 85,
+            "width": 110,
+            "height": 5,
+            "alpha": 5,
+            "path": "views/backgrounds/Green_Effect.swf"
+        },        
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -160,
+            "marginLeft": 55,
+            "height": 28,
+            "width": 251,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "FC NEWS",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_news",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEON"
+            ]
+            }
+            ]
+        }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}		

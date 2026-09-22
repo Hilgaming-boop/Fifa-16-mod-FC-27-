@@ -1,0 +1,9 @@
+{
+    "dds": ["SideSelect.dd",
+    "Animated.dd"],
+    "vms": [
+    ["lua", "SideSelect.lua"],
+    ["lua", "Animated.lua"]
+    ],
+    "views": [["gfx", { "layout": "SideSelect.layout" }]]
+}

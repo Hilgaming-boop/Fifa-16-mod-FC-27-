@@ -1,0 +1,196 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 13,
+            "marginLeft": 470,
+            "height": 65,
+            "width": 150,
+            "alpha": 1,
+            "path": "views/backgrounds/White_Effect.swf"
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 33,
+            "marginLeft": 482,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Customize",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to",
+            "textStyles":
+            [
+               "TF_BUTTON_TABON"
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 365,
+                            "cornerRaduis": 15,
+                            "alpha": 1,
+                            "color": "0x01002C"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "",
+                            "clickAction": "act_tab5"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -60,
+                            "width": 150,
+                            "height": 100,
+                            "type": "$_IconSettings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Settings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 250,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xFFFFFF",
+                            "textAlignH": "CENTER",
+                            "width": 210,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Time, Difficulty, Graphs, Weather..."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 390,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 365,
+                            "cornerRaduis": 15,
+                            "alpha": 1,
+                            "color": "0x01002C"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "",
+                            "clickAction": "act_tab6"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -60,
+                            "width": 150,
+                            "height": 100,
+                            "type": "$_IconReset"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Reset"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 250,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xFFFFFF",
+                            "textAlignH": "CENTER",
+                            "width": 210,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Reset all competition progress."
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}

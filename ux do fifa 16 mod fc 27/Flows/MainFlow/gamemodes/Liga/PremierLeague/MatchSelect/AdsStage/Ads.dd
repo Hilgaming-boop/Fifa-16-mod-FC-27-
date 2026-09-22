@@ -1,0 +1,107 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+
+        {
+            "viewname": "act_match_play",
+            "actionname": "act_match_play"
+            },
+
+        {
+            "viewname": "act_refresh_ads",
+            "actionname": "act_refresh_ads"
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_match_list",
+            "binding":  "bnd_match_list",
+            "type":     "array"
+        },
+        {
+        "viewname": "bnd_random_ads_text",
+            "binding":  "bnd_random_ads_text",
+            "type":     "string"
+        },
+        {
+           "viewname":"bnd_leaguebackground",
+           "binding":"bnd_leaguebackground",
+           "type":"object"
+        },      
+        {
+            "viewname": "bnd_table_career",
+            "binding":  "bnd_table_career",
+            "type":     "object"
+        },        
+        {
+        "viewname": "bnd_news_image",
+            "binding":  "bnd_news_image",
+            "type":     "object"
+        },
+        {
+        "viewname": "bnd_news_source",
+            "binding":  "bnd_news_source",
+            "type":     "string"      
+        },
+        {
+        "viewname": "bnd_news_comment1",
+            "binding":  "bnd_news_comment1",
+            "type":     "string"      
+        },
+        {
+        "viewname": "bnd_news_comment2",
+            "binding":  "bnd_news_comment2",
+            "type":     "string"      
+        },
+        {
+        "viewname": "bnd_news_comment3",
+            "binding":  "bnd_news_comment3",
+            "type":     "string"      
+        },
+        {
+        "viewname": "bnd_commenter_name1",
+            "binding":  "bnd_commenter_name1",
+            "type":     "string"      
+        },
+        {
+        "viewname": "bnd_commenter_name2",
+            "binding":  "bnd_commenter_name2",
+            "type":     "string"      
+        },
+        {
+        "viewname": "bnd_commenter_name3",
+            "binding":  "bnd_commenter_name3",
+            "type":     "string"      
+        },
+        {
+        "viewname": "bnd_commenter_image3",
+"binding":  "bnd_commenter_image3",
+"type":     "object"      
+},
+{
+"viewname": "bnd_commenter_image2",
+"binding":  "bnd_commenter_image2",
+"type":     "object"      
+},
+{
+"viewname": "bnd_commenter_image1",
+"binding":  "bnd_commenter_image1",
+"type":     "object"      
+},
+        {
+          "viewname": 	"bnd_player3d",
+          "binding": 		"bnd_player3d",
+          "type": 			"object"
+        }
+    ]
+}

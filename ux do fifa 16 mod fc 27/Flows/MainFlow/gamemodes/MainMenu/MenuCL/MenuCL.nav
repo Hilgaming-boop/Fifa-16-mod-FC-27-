@@ -1,0 +1,24 @@
+{
+    "name": "MenuCL",
+    "states":
+    [
+        {
+            "name": "MenuCL_Challenge",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Challenge/ChallengeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuCL_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

@@ -1,0 +1,720 @@
+/* ------------------------------------- */
+/* --------- BY ROBER FL----------- */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_BACKGROUND_SYSTEM"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+       {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 1,
+            "type": "$bg_ucl"
+         },
+         {
+            "commonName": "Image",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -250,
+            "marginLeft": -475,
+            "width": 90,
+            "height": 90,
+            "bindings":[
+            {
+                 "binding": "bnd_cuplogo",
+                  "property": "image"
+              }
+           ]
+        },
+        {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -250,
+            "marginLeft": -425,
+            "width": 1,
+            "height": 60,
+            "color": "0xffffff",
+            "alpha": 0.8
+         },
+         {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -250,
+            "marginLeft": -312,
+            "fontSize": 32,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "alpha": 1,
+            "text": "TEAM SELECT"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 8,
+            "marginLeft": -140,
+            "width": 714,
+            "height": 420,
+            "cornerRaduis": 25,
+            "alpha": 0.8,
+            "color": "0x01002C"
+         },
+         {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -175,
+            "marginLeft": -140,
+            "fontSize": 18,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "alpha": 1,
+            "text": "Round of 16"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 8,
+            "marginLeft": -140,
+            "width": 1,
+            "height": 250,
+            "cornerRaduis": 0,
+            "alpha": 1,
+            "color": "0xA0E7F3"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 8,
+            "marginLeft": 350,
+            "width": 257,
+            "height": 420,
+            "cornerRaduis": 25,
+            "alpha": 0.8,
+            "color": "0x01002C"
+         },
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -135,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team1",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "REAL MADRID"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -95,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team2",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "RB LEIPZIG"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -55,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team3",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "MAN. CITY"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -15,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team4",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "FC KØBENHAVN"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 25,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team5",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "FC BAYERN"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 65,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team6",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "LAZIO"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 105,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team7",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "PARIS SG"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 145,
+            "marginLeft": -450,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team8",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "REAL SOCIEDAD"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -135,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team9",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "INTER"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -95,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team10",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "ATLÉTICO MADRID"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -55,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team11",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "BOR. DORTMUND"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -15,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team12",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "PSV"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 25,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team13",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "ARSENAL"
+                 }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 65,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team14",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "FC PORTO"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 105,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team15",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "FC BARCELONA"
+               }
+            ]
+         },                   
+         {
+            "commonName":"Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 145,
+            "marginLeft": -30,
+            "children":[
+             {
+                 "commonName": "Image",
+                 "alignV": "CENTER",
+                 "alignH": "LEFT",
+                 "width": 35,
+                 "height": 35,
+                 "bindings":[
+                   {
+                       "binding": "bnd_team16",
+                       "property": "image"
+                     }
+                  ]
+               },
+               {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "fontSize": 20,
+                  "fontFace": "$FONT_CRUYFFSANSBOLD",
+                  "fontColor": "$COLOR_WHITE",
+                  "alpha": 1,
+                  "text": "NAPOLI"
+               }
+            ]
+         },                   
+         {
+            "commonName": "Image",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -155,
+            "marginLeft": 350,
+            "width": 70,
+            "height": 70,
+            "bindings":[
+            {
+                 "binding": "bnd_cuplogo",
+                  "property": "image"
+              }
+           ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "teamlist",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -135,
+            "marginLeft": 220,
+            "x": 0,
+            "y": 0,
+            "displayRange": 1,
+            "rowChangeAction": "act_team_select",
+            "highlightable": true,
+            "row": "TeamRow",
+            "rowHeight": 250,
+            "rowWidth": 257,
+            "bindings":
+            [
+                {
+                     "binding": "bnd_team_list",
+                     "property": "dataProviders"
+                 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+ }
+]
+}

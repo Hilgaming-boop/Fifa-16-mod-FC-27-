@@ -1,0 +1,334 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_leaguebackground",
+                   "property": "image"
+               }
+            ]        
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 10060,
+            "width": 2000,
+            "height": 800,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 0,
+                    "color": "0x2B2B2B",
+                    "alpha": 0.5
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 47,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.1
+                            },
+		                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 233,
+                    "marginLeft": -700,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": -460,
+            "width": 390,
+            "height": 390,
+            "children":
+            [
+              {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 390,
+                    "height": 390,
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                                       
+                {
+                "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "type": "$Scout_Info",
+                    "alpha": 0
+                    },
+                        {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "clickAction": "act_setscout"
+                }
+            ]
+        },
+        {
+        "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 0,
+            "width": 390,
+            "height": 390,
+            "children":
+            [
+              {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 390,
+                    "height": 390,
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                     
+                {
+                "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "type": "$SUS",
+                    "alpha": 0
+                    },
+                        {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "clickAction": "act_setscout"
+                    }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 460,
+            "width": 390,
+            "height": 390,
+            "children":
+            [
+              {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 390,
+                    "height": 390,
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                     
+                {
+                "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "type": "$SLT",
+                    "alpha": 0
+                    },
+                        {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "clickAction": "act_scoutlist"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -230,
+            "marginLeft": 0,
+            "width": 1200,
+            "height": 120,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "fontSize": 31,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchday_label",
+                            "property": "text"
+                        }
+                    ]
+                }                 
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                    },                
+                {
+                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 60,
+                            "width": 390,
+                            "height": 390,
+                            "type": "$Scout_Info"
+                            },                
+                {
+                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": 0,
+                            "width": 390,
+                            "height": 390,
+                            "type": "$SUS"
+                            },                
+                {
+                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 980,
+                            "width": 390,
+                            "height": 390,
+                            "type": "$SLT"
+                }
+            ]
+         }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

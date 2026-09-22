@@ -1,0 +1,51 @@
+{
+    "name": "MenuCupC",
+    "states":
+    [
+        {
+            "name": "FAcup",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/FAcup/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+             }
+        },
+        {
+            "name": "CopaEspana",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/CopaEspana/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "DfbPokal",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/DfbPokal/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+             }
+        },
+        {
+            "name": "CoppaItalia",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/CoppaItalia/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "FranceCup",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/FranceCup/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+{
+  "name": "PostMatch",
+  "let": { "gameState": "postmatch" },
+  "type": "parallel",
+
+  "onEnter": [
+    ["showControllerCursor"],
+    ["substateChange", ["INGAME"]],
+    ["feShowing", [true, true]],
+    ["activeZoneTransition", ["ZONE_NONE", "ZONE_OFFLINE"]],
+    ["zoneChange", ["ZONE_NONE"]]
+  ],
+
+  "onExit": [
+    ["substateChange", ["INGAME"]],
+    ["activeZoneTransition", ["ZONE_OFFLINE", "ZONE_NONE"]],
+    ["zoneChange", ["ZONE_NONE"]],
+    ["hideUI"],
+    ["hideStageBackground"]
+  ],
+
+  "transitions": [
+    { "event": "evt_restart", "targets": ["out_restart_match"] },
+    { "event": "evt_retry", "targets": ["out_retry_match"] },
+    { "event": "evt_quit_from_game", "targets": ["out_exit_match"] }
+  ],
+
+  "states": [
+    {
+      "onEnter": [["addAudioContext", ["postmatch"]]],
+      "onExit": [
+        ["removeAudioContext", ["postmatch"]],
+        ["RefreshUserCredit"],
+        ["clearMatchResults"],
+        ["clearCachedCoinBalance"],
+        ["startMenuMusic"]
+      ],
+
+      "states": [
+        {
+  "name": "InitPostMatch",
+          "states": [
+            {
+              "name": "ShowUI",
+              "onEnter": [
+                ["showInGameUI", [".gamemode", ".flow", ".type", ".gameState"]]
+              ],
+              "transitions": [
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "seasons"],
+                  "targets": ["SeasonUpdate"],
+                  "let": { "redirect": "MatchResults" }
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "tournaments"],
+                  "targets": ["MatchResults"],
+                  "let": { "redirect": "LevelUp" }
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "friendly"],
+                  "targets": ["MatchResults"],
+                  "let": { "redirect": "LevelUp" }
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "ftf"],
+                  "targets": ["PostmatchMenu"]
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "debug"],
+                  "targets": ["MatchResults"],
+                  "let": { "redirect": "LevelUp" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SeasonUpdate",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/seasonupdate/seasonupdate.nav",
+          "outputs": {
+            "out_advance": "MatchResults"
+          }
+        },
+        {
+          "name": "MatchResults",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/MatchResults/MatchResults.nav",
+          "outputs": {
+            "out_level_up": "LevelUp",
+            "out_captured_media": "PostmatchMenu",
+            "out_check_media": "PostmatchMenu"
+          }
+        },
+        {
+          "name": "LevelUp",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/levelup/levelup.nav",
+          "outputs": {
+            "out_advance": "PostmatchMenu",
+            "out_quit": "PostmatchMenu"
+          }
+        },
+        {
+          "name": "PostmatchMenu",
+          "onEnter": [
+            ["blockingLoadVVM", [
+              "/flows/ingameflow/GameMenusBeAPro/PostmatchMenu.vvm",
+              {
+                "gamemode": ".gamemode",
+                "flow": ".flow",
+                "type": ".type",
+                "gameState": ".gameState"
+              }
+            ]]
+          ],
+
+          "onExit": [["unloadVVM"]],
+
+          "states": [
+            {
+              "name": "TabAdvance",
+              "onEnter": [
+                ["loadVVM", ["/flows/ingameflow/GameMenusBeAPro/TabActive/Advance.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]],
+              "transitions": [
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] },
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] }
+              ]
+            },
+
+            {
+              "name": "TabRestart",
+              "onEnter": [
+                ["loadVVM", ["/flows/ingameflow/GameMenusBeAPro/TabActive/Restart.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]],
+              "transitions": [
+                { "event": "evt_tab_advance", "targets": ["TabAdvance"] },
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] },
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] }
+              ]
+            },
+            {
+              "name": "TabFacts",
+              "onEnter": [
+                ["loadVVM", ["/flows/ingameflow/GameMenusBeAPro/TabActive/Facts.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]],
+              "transitions": [
+                { "event": "evt_tab_advance", "targets": ["TabAdvance"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] }
+              ]
+            },
+            {
+              "name": "BackFacts",
+              "onEnter": [
+                ["loadVVM", ["/flows/ingameflow/GameMenusBeAPro/TabActive/BackFacts.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]],
+              "transitions": [
+                { "event": "evt_tab_advance", "targets": ["TabAdvance"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] }
+              ]
+            },
+            {
+              "name": "TabHighlight",
+              "onEnter": [
+                ["loadVVM", ["/flows/ingameflow/GameMenusBeAPro/TabActive/Highlight.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]],
+              "transitions": [
+                { "event": "evt_tab_advance", "targets": ["TabAdvance"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] }
+              ]
+            },
+            {
+              "name": "BackHighlight",
+              "onEnter": [
+                ["loadVVM", ["/flows/ingameflow/GameMenusBeAPro/TabActive/BackHighlight.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]],
+              "transitions": [
+                { "event": "evt_tab_advance", "targets": ["TabAdvance"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] }
+              ]
+            }
+          ],
+
+          "transitions": [
+            {
+              "event": "evt_to_match_facts",
+              "targets": ["MatchFacts"],
+              "let": { "redirect": "menu" }
+            },
+            {
+              "event": "evt_to_match_highlights",
+              "targets": ["MatchHighlights"],
+              "let": { "redirect": "menu" }
+            },
+            {
+              "event": "evt_restart_match",
+              "targets": ["out_restart_match"]
+            },
+            {
+              "event": "evt_quit",
+              "targets": ["Quit"]
+            }
+          ]
+        },
+
+        {
+          "name": "MatchFacts",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/matchfacts/matchfacts.nav",
+          "outputs": {
+            "out_menu": "BackFacts"
+          }
+        },
+
+        {
+          "name": "MatchHighlights",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/matchhighlights/matchhighlights.nav",
+          "outputs": {
+            "out_menu": "BackHighlight"
+          }
+        },
+
+        {
+          "name": "Quit",
+          "onEnter": [
+            ["hideUI"],
+            ["invoke", ["evt_quit_from_game"]]
+          ]
+        }
+      ]
+    }
+  ]
+}

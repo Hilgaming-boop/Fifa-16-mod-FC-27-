@@ -1,0 +1,203 @@
+{
+    "name": "Menu",
+    "type": "parallel",
+    "states":
+    [
+        {
+            "states":
+            [
+                {
+                    "onEnter":
+                    [
+						["showFEUI"],
+						["invoke", ["Hub"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_back",
+                            "targets": ["out_exit_gamemode"]
+                         },
+                         {
+                            "event": "Hub",
+                            "targets": ["MenuHub"]
+                        }
+                    ]
+                },
+                {
+                    "onEnter":
+                    [
+                        ["viewLayer", ["Gamemodes"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "MenuHub",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuHub.vvm", {}, { "viewType": "screen" }]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "MenuCupAHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupA/MenuCupAHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_back": "Back",
+                                        "out_menu_cupb": "MenuCupBHub",
+                                        "out_menu_cupc": "MenuCupCHub",
+                                        "out_menu_cupd": "MenuCupDHub",
+                                    
+                                        "out_ucl": "in_ucl",
+                                        "out_uel": "in_uel",
+                                        "out_uec": "in_uec",
+                                        "out_unl": "in_unl",
+                                        "out_uwcl": "in_uwcl"
+                                    }
+                                },
+                                {
+                                    "name": "MenuCupBHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupB/MenuCupBHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_back": "Back",
+                                        "out_menu_cupa": "MenuCupAHub",
+                                        "out_menu_cupc": "MenuCupCHub",
+                                        "out_menu_cupd": "MenuCupDHub",
+                                    
+                                        "out_libertadores": "in_libertadores",
+                                        "out_worldcupwomens": "in_worldcupwomens",
+                                        "out_copaamerica": "in_copaamerica",
+                                        "out_worldcup": "in_worldcup",
+                                        "out_clubworldcup": "in_clubworldcup"
+                                    }
+                                },
+                                {
+                                    "name": "MenuCupCHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupC/MenuCupCHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_back": "Back",
+                                        "out_menu_cupa": "MenuCupAHub",
+                                        "out_menu_cupb": "MenuCupBHub",
+                                        "out_menu_cupd": "MenuCupDHub",
+                                    
+                                        "out_facup": "in_facup",
+                                        "out_espana": "in_espana",
+                                        "out_dfbpokal": "in_dfbpokal",
+                                        "out_italia": "in_italia",
+                                        "out_france": "in_france"
+                                    }
+                                },
+                                {
+                                    "name": "MenuCupDHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupD/MenuCupDHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_back": "Back",
+                                        "out_menu_cupa": "MenuCupAHub",
+                                        "out_menu_cupb": "MenuCupBHub",
+                                        "out_menu_cupc": "MenuCupCHub",
+                                    
+                                        "out_usaopencup": "in_usaopencup",
+                                        "out_saudicup": "in_saudicup",
+                                        "out_pialaindonesia": "in_pialaindonesia",
+                                        "out_uecl": "in_uecl",
+                                        "out_afcasiancup": "in_afcasiancup"
+                                        
+                                    }
+                                }
+                            ]
+                        },				
+                        {
+                            "name": "MenuCupA",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupA/MenuCupA.nav",
+                            "inputs":
+                            {
+                                "in_ucl": "UCL",
+                                "in_uel": "UEL",
+                                "in_uec": "UEC",
+                                "in_unl": "UNL",
+                                "in_uwcl": "UWCL"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuCupAHub"
+                            }
+                        },
+                        {
+                            "name": "MenuCupB",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupB/MenuCupB.nav",
+                            "inputs":
+                            {
+                                "in_libertadores": "Libertadores",
+                                "in_worldcupwomens": "WorldCupWomens",
+                                "in_copaamerica": "CopaAmerica",
+                                "in_worldcup": "WorldCup",
+                                "in_clubworldcup": "ClubWorldCup"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuCupBHub"
+                             }
+                        },
+                        {
+                            "name": "MenuCupC",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupC/MenuCupC.nav",
+                            "inputs":
+                            {
+                                "in_facup": "FAcup",
+                                "in_espana": "CopaEspana",
+                                "in_dfbpokal": "DfbPokal",
+                                "in_italia": "CoppaItalia",
+                                "in_france": "FranceCup"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuCupCHub"
+                             }
+                        },
+                        {
+                            "name": "MenuCupD",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/MenuCupD/MenuCupD.nav",
+                            "inputs":
+                            {
+                                "in_usaopencup": "UsaOpenCup",
+                                "in_saudicup": "SaudiCup",
+                                "in_pialaindonesia": "PialaIndonesia",
+                                "in_uecl": "Uecl",
+                                "in_afcasiancup": "AfcAsianCup"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuCupDHub"
+                             }
+                        },       
+                        {
+                            "name": "Back",
+                            "type": "external",
+                            "file": "/flows/mainflow/gamemodes/MainMenu/MainMenu.nav",
+                            "outputs":
+                           {
+                               "out_exit_gamemode": "out_hub"
+                            }                            
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

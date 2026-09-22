@@ -1,0 +1,233 @@
+/* ------------------------------------- */
+/* MOD Created By Rober FL */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "children":
+    [    
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": -100,
+            "marginTop": 0,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginLeft": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 50
+                                        },
+                                        "duration": 500,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [    
+        {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -70,
+            "marginLeft": 20,
+            "fontSize": 70,
+            "fontFace": "$EAFC-Gamemodes",
+	        "fontColor": "0xffffff",
+            "text": "CM"
+        },
+        {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 0,
+            "fontSize": 27,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+	        "fontColor": "0xffffff",
+	        "text": "Are you ready to lead a club on and off"			  
+         },
+         {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 30,
+            "marginLeft": 0,
+            "fontSize": 27,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+	        "fontColor": "0xffffff",
+	        "text": "the pitch?"			  
+         },
+         {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 70,
+            "marginLeft": 0,
+            "fontSize": 16,
+            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+	        "fontColor": "0xffffff",
+	        "text": "Premier League • La Liga • Bundesliga • Serie A • BRI Liga 1"			  
+         }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 },
+         {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": 144,
+            "marginLeft": 6,
+            "height": 70,
+            "width": 300,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$Tab_Action_Green",
+            "backgroundHighlightImage": "$Tab_Action_Green",
+            "clickAction": "act_leaguemode",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+         },
+                                {
+                                    "commonName": "Label",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": 145,
+            "marginLeft": 15,
+            "alpha": 0.9,
+            "height": 60,
+            "width": 202,
+            "scaleY": 1,
+                                    "autoScroll": true,
+                                    "fontSize": 16,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "text": "Tap To Manager Career"
+                                 },    
+                        {
+		                            "commonName": "Asset",
+		                            "alignV": "CENTER",
+		                            "alignH": "CENTER",
+                                    "marginLeft": -90,
+		                            "marginTop": 143,
+		                            "width": 35,
+                                    "height": 35,
+		                            "type": "$SimMatchIcon1",
+                                    "alpha": 1
+                        },		
+         {
+            "commonName": "Asset",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -67,
+            "marginLeft": 85,
+            "width": 215,
+            "height": 5,
+            "alpha": 5,
+            "path": "views/backgrounds/Green_Effect.swf"
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -80,
+            "marginLeft": 154,
+            "height": 28,
+            "width": 251,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "MANAGER CAREER",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",    
+            "clickAction": "act_to",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEON"
+            ]
+            }
+               ]
+                    }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

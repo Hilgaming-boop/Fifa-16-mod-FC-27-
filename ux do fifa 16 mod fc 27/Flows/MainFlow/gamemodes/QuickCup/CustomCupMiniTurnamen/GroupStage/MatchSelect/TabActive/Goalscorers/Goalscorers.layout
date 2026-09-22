@@ -1,0 +1,376 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+    {
+      "commonName": "Image",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings": [
+        { "binding": "bnd_bg_tour", "property": "image" }
+      ]
+    },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+			"alpha": 0.6,
+            "type": "$Bg_Gradiant1"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_T"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -2,
+                            "marginLeft": 130,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Office"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 215,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": "|"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -2,
+                            "marginLeft": 225,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Top Scorers"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 1100,
+                    "width": 30,
+                    "height": 30,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 5,
+                    "marginLeft": 1135,
+                    "fontSize": 17,
+                    "fontFace": "$FONT_DINPRO",
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+                    "alpha": 0.5,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_name",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+			"marginTop": 30,
+            "alignH": "FILL",
+            "children":
+            [
+{
+  "commonName": "Panel",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginLeft": 0,
+  "marginTop": 15,
+  "width": 900,
+  "height": 440,
+  "children": [
+  {
+      "commonName": "Rectangle",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "cornerRaduis": 10,
+      "marginTop": -30,
+      "height": 90,
+      "alpha": 0.8,
+      "bindings":[
+        {
+            "binding": "bnd_color_tourid2",
+            "property": "color"
+        }
+      ]
+    },
+  {
+      "commonName": "Rectangle",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "cornerRaduis": 0,
+      "marginTop": 40,
+      "height": 390,
+      "alpha": 1,
+      "bindings":[
+        {
+            "binding": "bnd_color_tourid",
+            "property": "color"
+        }
+      ]
+    }
+  ]
+},
+{
+  "commonName": "Panel",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginLeft": 30,
+  "marginTop": 15,
+  "width": 960,
+  "height": 440,
+  "children": [
+  {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -10,
+                    "marginLeft": -430,
+                    "width": 43,
+                    "height": 43,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -10,
+                    "marginLeft": -370,
+                    "width": 45,
+                    "height": 45,
+                    "type": "$Icon_Banner"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 150,
+                    "fontSize": 18,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor": "0xFFFFFF",
+                    "forceCaps": true,
+                    "alpha": 1,
+                    "textAlignH": "LEFT",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+    {
+      "commonName": "Rectangle",
+      "alignV": "TOP",
+      "alignH": "CENTER",
+      "cornerRaduis": 0,
+      "marginTop": 80,
+	  "marginLeft": -30,
+      "height": 1,
+	  "width": 860,
+      "alpha": 0.7,
+      "color": "0x757575"
+    },
+    {
+      "commonName": "Label",
+      "alignH": "LEFT",
+      "alignV": "TOP",
+      "marginTop": 50,
+      "marginLeft": 30,
+      "fontSize": 17,
+      "fontFace": "$CruyffSansLight",
+      "fontColor": "0xFFFFFF",
+      "text": "Rank"
+    },
+    {
+      "commonName": "Label",
+      "alignH": "LEFT",
+      "alignV": "TOP",
+      "marginTop": 50,
+      "marginLeft": 150,
+      "fontSize": 17,
+      "fontFace": "$CruyffSansLight",
+      "fontColor": "0xFFFFFF",
+      "text": "Players"
+    },
+    {
+      "commonName": "Label",
+      "alignH": "LEFT",
+      "alignV": "TOP",
+      "marginTop": 50,
+      "marginLeft": 450,
+      "fontSize": 17,
+      "fontFace": "$CruyffSansLight",
+      "fontColor": "0xFFFFFF",
+      "text": "Team"
+    },
+    {
+      "commonName": "Label",
+      "alignH": "LEFT",
+      "alignV": "TOP",
+      "marginTop": 50,
+      "marginLeft": 700,
+      "fontSize": 17,
+      "fontFace": "$CruyffSansLight",
+      "fontColor": "0xFFFFFF",
+      "text": "Overall"
+    },
+    {
+      "commonName": "Label",
+      "alignH": "LEFT",
+      "alignV": "TOP",
+      "marginTop": 50,
+      "marginLeft": 810,
+      "fontSize": 17,
+      "fontFace": "$CruyffSansLight",
+      "fontColor": "0xFFFFFF",
+      "text": "Goals"
+    }
+  ]
+},
+{
+  "commonName": "Panel",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginLeft": 40,
+  "marginTop": 15,
+  "width": 960,
+  "height": 440,
+  "children": [
+    {
+      "commonName": "VerticalList",
+      "name": "matchlist",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 90,
+      "marginLeft": 20,
+      "x": 0,
+      "y": 0,
+      "displayRange": 5,
+      "highlightable": true,
+      "row": "StatsRowCustom",
+      "rowHeight": 63,
+      "rowWidth": 890,
+      "bindings": [
+        {
+          "binding": "bnd_match_list",
+          "property": "dataProviders"
+        }
+      ]
+    }
+  ]
+}
+            ]
+		}
+    ]
+}

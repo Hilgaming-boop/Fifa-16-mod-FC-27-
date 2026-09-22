@@ -1,0 +1,26 @@
+{
+    "name": "MenuLM",
+    "states":
+    [
+        {
+            "name": "MenuLM_LeagueMode",
+            "type": "external",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Liga/Newgame/Newgame.nav",
+            "outputs":
+        {
+                "out_exit_gamemode": "out_hub",
+                "out_exit_gamemode1": "out_hub"
+            }
+        },
+        {
+            "name": "MenuLM_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

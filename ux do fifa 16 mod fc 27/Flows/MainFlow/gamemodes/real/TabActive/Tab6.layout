@@ -1,0 +1,232 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings": [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+    "children": [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children": [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children": [
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 800,
+                            "fontSize": 21,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Notifications"
+                        },          
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 23,
+                            "marginLeft": 795,
+                            "alpha": 5,
+                            "height": 5,
+                            "width": 150,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MainContentPanel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children": [
+                {
+                    "commonName": "Panel",
+                    "name": "ContentContainer",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 0,
+                    "marginTop": 15,
+                    "width": 1200,
+                    "height": 440,
+                    "children": [
+                        {
+                            "commonName": "Panel",
+                            "name": "InboxPanel",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginRight": 150,
+                            "width": 300,
+                            "height": 440,
+                            "alpha": 0,
+                            "animationScripts": [
+                                {
+                                    "name": "animateInbox",
+                                    "script": [
+                                        {
+                                            "type": "Direct",
+                                            "data": {
+                                                "end": {
+                                                    "alpha": 0,
+                                                    "marginLeft": 1000
+                                                },
+                                                "duration": 100
+                                            }
+                                        },
+                                        {
+                                            "type": "Delay",
+                                            "data": {
+                                                "duration": 50
+                                            }
+                                        },
+                                        {
+                                            "type": "Direct",
+                                            "data": {
+                                                "end": {
+                                                    "alpha": 1,
+                                                    "marginLeft": 283
+                                                },
+                                                "duration": 500,
+                                                "easing": "OutBack"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                                                
+                                {
+                                    "commonName": "GenericButton",
+                                    "alignV": "TOP",
+                                    "alignH": "CENTER",
+                                    "width": 300,
+                                    "height": 370,
+                                    "icon": "$",
+                                    "clickAction": "act_tab6sub1"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "TOP",
+                                    "alignH": "CENTER",
+                                    "width": 300,
+                                    "height": 370,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "TOP",
+                                    "alignH": "CENTER",
+                                    "marginTop": 90,
+                                    "width": 100,
+                                    "height": 160,
+                                    "type": "$Message"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "alignV": "TOP",
+                                    "marginTop": 30,
+                                    "marginLeft": 0,
+                                    "fontSize": 23,
+                                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                                    "fontColor": "0xFFFFFF",
+                                    "text": "Inbox"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "TOP",
+                                    "alignH": "CENTER",
+                                    "marginTop": 270,
+                                    "marginLeft": 0,
+                                    "fontSize": 14,
+                                    "fontFace": "$FONT_DINPROBOLD",
+                                    "fontColor": "0xFFFFFF",
+                                    "textAlignH": "CENTER",
+                                    "width": 200,
+                                    "multiline": true,
+                                    "leading": 3,
+                                    "alpha": 0.9,
+                                    "text": "+1 Messages From Second Coach And 1 Message From Personal Coach"
+                                }
+                            ]
+                        }
+                    ],
+                    "behaviors": [
+                        {
+                            "commonName": "TriggerScriptBehavior",
+                            "name": "trigger_animate_inbox",
+                            "script": "animateInbox",
+                            "target": "InboxPanel"
+                        },
+                        {
+                            "commonName": "TriggerOnTrue",
+                            "name": "trigger_on_true_inbox",
+                            "target": "trigger_animate_inbox",
+                            "bindings": [
+                                {
+                                    "binding": "bnd_animate_count1",
+                                    "property": "value"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

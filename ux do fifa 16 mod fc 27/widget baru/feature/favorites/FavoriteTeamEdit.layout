@@ -1,0 +1,195 @@
+{
+    "commonName": "Composite",
+    "name":       "FavoriteTeamEditRoot",
+    "height":     500,
+    "children":
+    [
+        {
+            "commonName":   "Group",
+            "name":         "insBottom",
+            "y":            140,
+            "children":
+            [
+                {
+                    "commonName":   "Image",
+                    "name":         "insBackground",
+                    "image":        "$EditBioPopupBG"
+                },
+                {
+                    "commonName":   "Label",
+                    "name":         "insTeamName",
+                    "x":            150,
+                    "width":        260,
+                    "multiline":    true,
+                    "wordWrap":     true,
+                    "styles":       ["TF_USER_BIO_EDIT_PLAYER_NAME"],
+                    "bindings":
+                    [
+                        {
+                            "property": "text",
+                            "binding":  "bnd_team_name"
+                        },
+                        {
+                            "property": "y",
+                            "binding":  "bnd_team_name_position"
+                        }
+                    ]
+                },
+                {
+                    "commonName":   "Rectangle",
+                    "name":         "insDivider",
+                    "width":        290,
+                    "height":       1,
+                    "x":            152,
+                    "y":            100,
+                    "fillColor":    "0xBEBEBE"
+                },
+                {
+                    "commonName":   "Image",
+                    "name":         "insTeamCrest",
+                    "y":            15,
+                    "x":            20,
+                    "scaleX":       0.48,
+                    "scaleY":       0.48,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_team_crest"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName":   "Group",
+            "name":         "insRows",
+            "x":            -2,
+            "children":
+            [
+                {
+                    "commonName":   "Group",
+                    "name":         "insRowTeam",
+                    "y":            80,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name":       "insTeamLabel",
+                            "styles":     ["TF_LABEL_LEFT"],
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_team_label"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":        "ComboBox",
+                            "name":              "insTeamCB",
+                            "x":                 230,
+                            "y":                 -5,
+                            "width":             239,
+                            "height":            30,
+                            "displayRange":      6,
+                            "indexChangeAction":
+                            {
+                                "action":  "act_change",
+                                "binding": "bnd_team_index"
+                            },
+                            "bindings":
+                            [
+                                {
+                                    "property": "dataProviders",
+                                    "binding":  "bnd_team_list"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName":   "Group",
+                    "name":         "insRowLeague",
+                    "y":            40,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name":       "insLeagueLabel",
+                            "styles":     ["TF_LABEL_LEFT"],
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_league_label"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":        "ComboBox",
+                            "name":              "insLeagueCB",
+                            "x":                 230,
+                            "y":                 -5,
+                            "width":             239,
+                            "height":            30,
+                            "displayRange":      8,
+                            "indexChangeAction":
+                            {
+                                "action":  "act_change",
+                                "binding": "bnd_league_index"
+                            },
+                            "bindings":
+                            [
+                                {
+                                    "property": "dataProviders",
+                                    "binding":  "bnd_league_list"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName":   "Group",
+                    "name":         "insRowCountry",
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name":       "insCountryLabel",
+                            "styles":     ["TF_LABEL_LEFT"],
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_country_label"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":        "ComboBox",
+                            "name":              "insCountryCB",
+                            "x":                 230,
+                            "y":                 -5,
+                            "width":             239,
+                            "height":            30,
+                            "displayRange":      9,
+                            "indexChangeAction":
+                            {
+                                "action":  "act_change",
+                                "binding": "bnd_country_index"
+                            },
+                            "bindings":
+                            [
+                                {
+                                    "property": "dataProviders",
+                                    "binding":  "bnd_country_list"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

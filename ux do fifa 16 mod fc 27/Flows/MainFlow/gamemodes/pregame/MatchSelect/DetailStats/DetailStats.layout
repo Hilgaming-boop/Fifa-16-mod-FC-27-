@@ -1,0 +1,597 @@
+/*-- Layout Animated Design MOUNTSA--*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Icon_DetailsStats"
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuMatchSelect",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [        
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 1010,
+                            "height": 90,
+                            "width": 224,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 1052,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Detailed Stats"
+                        }
+                    ]
+                },
+        {
+          "commonName": "Panel",
+          "name": "Preview",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "height": 580,
+          "children": [
+            {
+              "commonName": "Image",
+              "name": "LogoManHome",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": -490,
+              "marginTop": 35,
+              "width": 430,
+              "height": 430,
+              "bindings": [
+                { "binding": "bnd_man_tim_home", "property": "image" }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoManAway",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginRight": -450,
+              "marginTop": 35,
+              "width": 430,
+              "height": 430,
+              "bindings": [
+                { "binding": "bnd_man_tim_away", "property": "image" }
+              ]
+            }
+          ]
+        }
+      ]
+    },                
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -230,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 70,
+                            "width": 210,
+                            "backgroundImage": "$Tab_Action_Green",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_detail"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": 0,
+                            "fontSize": 17,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Details"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "name": "Preview",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 580,
+                    "children":
+                    [
+    {
+      "commonName": "Panel",
+      "name": "panelHomeNameLogo",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_homenamelogo_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount1",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginLeft": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+                            "marginTop": -120,
+                            "width": 100,  
+                            "height": 100,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 80,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 106,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 133,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 161,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 189,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        }
+					]
+				},
+    {
+      "commonName": "Panel",
+      "name": "panelAwayNameLogo",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_awaynamelogo_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount1",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginRight": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginRight": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -250,
+                            "marginTop": -120,
+                            "width": 100,  
+                            "height": 100,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 80,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 106,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 133,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 161,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 189,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        }
+					]
+				},
+    {
+      "commonName": "Panel",
+      "name": "panelHomeKit",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_homekit_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount0",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginLeft": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+                        {
+                            "commonName": "Image",
+                            "name": "HomeKitPlayer",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -595,
+                            "marginTop": 35,
+                            "width": 600, 
+                            "height": 600,
+                            "scaleX": 0.69,
+                            "scaleY": 0.69,
+                          "bindings":
+                            [                
+                                {
+                                    "binding": "bnd_3d_home_kit",
+                                    "property": "image"
+                                }
+                            ]
+                        }
+					]
+				},
+    {
+      "commonName": "Panel",
+      "name": "panelAwayKit",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_awaykit_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount0",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginRight": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginRight": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+                        {
+                            "commonName": "Image",
+                            "name": "AwayKitPlayer",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -597,
+                            "marginTop": 35,
+                            "width": 600,
+                            "height": 600,
+                            "scaleX": 0.69,
+                            "scaleY": 0.69,
+                          "bindings":
+                            [
+                               
+                                {
+                                    "binding": "bnd_3d_away_kit",
+                                    "property": "image"
+                                }
+          ]
+        }
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_homekit",
+      "script": "animateCount0",
+      "target": "panelHomeKit"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_homekit",
+      "target": "trigger_fadein_homekit",
+      "bindings": [
+        { "binding": "bnd_animate_count0", "property": "value" }
+      ]
+    },
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_homenamelogo",
+      "script": "animateCount1",
+      "target": "panelHomeNameLogo"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_homenamelogo",
+      "target": "trigger_fadein_homenamelogo",
+      "bindings": [
+        { "binding": "bnd_animate_count1", "property": "value" }
+      ]
+    },
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_awaykit",
+      "script": "animateCount0",
+      "target": "panelAwayKit"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_awaykit",
+      "target": "trigger_fadein_awaykit",
+      "bindings": [
+        { "binding": "bnd_animate_count0", "property": "value" }
+      ]
+    },
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_awaynamelogo",
+      "script": "animateCount1",
+      "target": "panelAwayNameLogo"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_awaynamelogo",
+      "target": "trigger_fadein_awaynamelogo",
+      "bindings": [
+        { "binding": "bnd_animate_count1", "property": "value" }
+      ]
+    }
+  ]
+}
+
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Animated Design MOUNTSA--*/

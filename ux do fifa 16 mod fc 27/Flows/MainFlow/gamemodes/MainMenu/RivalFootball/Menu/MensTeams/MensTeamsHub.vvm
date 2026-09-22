@@ -1,0 +1,4 @@
+{
+    "dds": ["MensTeamsHub.dd"],
+    "views": [["gfx", { "layout": "MensTeamsHub.layout" }]]
+}

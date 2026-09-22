@@ -1,0 +1,58 @@
+{
+    "name": "ChallengeHub",
+    "initial":
+    {
+        "targets": ["RedirectChallengeHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectChallengeHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["ChallengeHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_to_icons",
+                    "targets": ["ICONS"]
+                },
+                {
+                    "event": "evt_to_season",
+                    "targets": ["SEASON"]
+                }
+
+            ]
+        },
+        
+        {
+            "name": "ICONS",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Challenge/Icons/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ChallengeHub"
+            }
+        },
+        {
+            "name": "SEASON",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Challenge/Season/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ChallengeHub"
+            }
+        }
+       
+        
+    ]
+}

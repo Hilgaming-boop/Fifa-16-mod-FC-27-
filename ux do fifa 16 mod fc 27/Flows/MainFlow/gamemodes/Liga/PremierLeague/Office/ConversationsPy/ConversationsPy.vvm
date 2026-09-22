@@ -1,0 +1,5 @@
+{
+	"dds": ["ConversationsPy.dd"],
+    "vms": [["lua", "ConversationsPy.lua"]],
+    "views": [["gfx", {"layout": "ConversationsPy.layout"}]]
+}

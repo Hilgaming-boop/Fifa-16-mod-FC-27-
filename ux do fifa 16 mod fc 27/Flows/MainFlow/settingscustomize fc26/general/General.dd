@@ -1,0 +1,47 @@
+{
+	"data":
+	[
+		{
+			"viewname": "bnd_general_settings_data",
+			"binding": "bnd_general_settings_data",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_push_notes_row_data",
+			"binding": "bnd_push_notes_row_data",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_list_y_coord",
+			"binding": "bnd_list_y_coord",
+			"type": "int"
+		},
+		{
+			"viewname": "bnd_push_notes_visibility",
+			"binding": "bnd_push_notes_visibility",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_start_list_striped",
+			"binding": "bnd_start_list_striped",
+			"type": "bool"
+		},
+    {
+      "viewname": "bnd_name_dev",
+      "binding": "bnd_name_dev",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_avatar_dev",
+      "binding": "bnd_avatar_dev",
+      "type": "object"
+    }
+	],
+	"actions":
+    [
+		{
+            "viewname":   "act_enable_push_notifications",
+            "actionname": "act_enable_push_notifications"
+        }
+	]
+}

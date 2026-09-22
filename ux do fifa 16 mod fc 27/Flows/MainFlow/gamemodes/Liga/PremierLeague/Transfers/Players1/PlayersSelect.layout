@@ -1,0 +1,558 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": -10,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Cm"
+                                            },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 46,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -410,
+            "marginTop": 0,
+            "width": 450,
+            "height": 400,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 0,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 }
+             ]
+         },
+         {
+         "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 2000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$DINPro",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -550,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Transfers"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -545,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -432,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Global Search"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -360,
+                    "fontFace": "$DINPro",
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -300,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "All Players"
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0.1
+                 }
+             ]
+         },
+         {
+         "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 50,
+            "marginTop": 0,
+            "width": 450,
+            "height": 400,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 15,
+                    "marginLeft": 0,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Scout Reports Finished"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": -110,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "Scouting Reports Finished,The Scout Is Free For Another Report..."
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 150,
+                    "marginLeft": -120,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 19,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 180,
+                    "multiline": true,
+                    "text": "Featured Players"
+                    },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": -10,
+                                    "marginRight": 370,
+                                    "width": 65,
+                                    "height": 67,
+                                    "type": "$Head_NA"
+                                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 150,
+                    "fontFace": "$CruyffSans-Extended-Heavy",
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "Goalkeeper"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-20,
+                                    "marginRight": 150,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "State:"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-20,
+                                    "marginRight": 100,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "Future Promess"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-40,
+                                    "marginRight": 150,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "Contract:"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-40,
+                                    "marginRight": 80,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "+1 Years"
+                    },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": -110,
+                                    "marginRight": 370,
+                                    "width": 65,
+                                    "height": 67,
+                                    "type": "$Head_NA"
+                                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": -100,
+                                    "marginRight": 150,
+                    "fontFace": "$CruyffSans-Extended-Heavy",
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "Midfielder"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-120,
+                                    "marginRight": 150,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "State:"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-120,
+                                    "marginRight": 100,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "Top Class"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-140,
+                                    "marginRight": 150,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "Contract:"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom":-140,
+                                    "marginRight": 80,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "width": 200,
+                    "multiline": true,
+                    "text": "+3 Years"
+                 }
+             ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "SelectTransfers",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "marginLeft": -50,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 800,
+                    "height": 340,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": -55,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Search Results"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 420,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 595,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 765,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 100,
+                    "marginRight": 0,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 131,
+                    "marginLeft": -55,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 5,
+                    "highlightable": true,
+                    "row": "ScoutRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 420,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

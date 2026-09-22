@@ -1,0 +1,166 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 15,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 325,
+                            "height": 90,
+                            "width": 150,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 360,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Website"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -150,
+            "width": 700,
+            "height": 430,
+            "children":
+            [
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 100,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Official Website BILLZ12"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 140,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "www.billz12.eu.org"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 180,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "If you download it elsewhere, if something happens to the game, it is beyond billzz12 responsibility"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 200,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Therefore, please download it from the official BILLZ12 website. If you are interested,"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 220,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "You can also join the official WhatsApp/Telegram group of billz12."
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 319,
+                   "fontSize": 18,
+                   "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "BILLZ12"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 342,
+                   "fontSize": 15,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "alpha": 0.8,
+                   "text": "@billz12 - Remain Be Creative"
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

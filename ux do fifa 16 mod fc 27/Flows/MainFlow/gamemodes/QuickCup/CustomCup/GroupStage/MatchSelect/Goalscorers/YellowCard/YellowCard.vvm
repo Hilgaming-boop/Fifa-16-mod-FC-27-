@@ -1,0 +1,6 @@
+{
+	"dds": ["YellowCard.dd"],
+    "vms": [["lua", "YellowCard.lua"]],
+    "views": [["gfx", {"layout": "YellowCard.layout"}]],
+	"ireqs": ["YellowCard.ireq"]
+}

@@ -1,0 +1,1092 @@
+/* ------------------------------------- */
+/* MOD Created By Rober FL */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "style-definitions":
+    {
+    "TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansExpanded",
+			"fontSize": 16,
+			"alpha": 0.8,
+			"fontColor": "0x808080",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$CruyffSansExpanded",
+			"fontSize": 16,
+			"alpha": 0.8,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+		}
+    },    
+    "children":
+    [    
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": [
+            {
+                    "binding": "bnd_avatar_dev",
+                    "property": "image"
+                }
+            ]
+        },     
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "LEFT",
+            "width": 900,
+            "alpha": 0.7,
+            "type": "$_Background_MenuRober1"
+        },
+         {
+            "commonName": "Asset",
+            "alignH": "CENTER",
+            "alignV": "BOTTOM",
+            "marginBottom": 30,
+            "marginLeft": 10,
+            "width": 50,
+            "height": 50,
+            "alpha": 1,
+            "path": "views/loadingindicator/loadingIcon.swf"
+        },      
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginRight": 0,
+            "marginTop": -50,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": -60
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 70
+                                        },
+                                        "duration": 1000,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "RIGHT",
+          "marginTop": 22,
+          "marginRight": 125,
+          "height": 20,
+          "width": 140,
+          "type": "$Icon_Hud"
+		},        
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "RIGHT",
+          "marginTop": 20,
+          "marginRight": 74,
+          "fontSize": 14,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$KnulExtraBold",
+          "text": "Inisial A          Level 48           98/1,000"
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginLeft": 60,
+            "marginTop": -60,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 15,
+                    "marginLeft": -60,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": -60
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 70
+                                        },
+                                        "duration": 1000,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [          
+         {
+            "commonName": "Asset",
+            "name": "LogoFC24",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 40,
+            "marginLeft": 100,
+            "width": 93,
+            "height": 32,
+            "alpha": 1,
+            "type": "$_FcLogo"
+         },      		
+        {
+            "commonName": "SimpleButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 25,
+            "marginLeft": 50,
+            "height": 62,
+            "width": 25,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$_SettingsLogo1",
+            "backgroundHighlightImage": "$_SettingsLogo2",
+            "clickAction": "act_customize",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }, 
+        {
+            "commonName": "Label",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": 165,
+            "marginLeft": 7,
+            "alpha": 0.7,
+            "height": 60,
+            "width": 172,
+            "scaleY": 1,
+            "autoScroll": true,
+            "fontSize": 17,
+            "fontColor": "0x000000",
+            "fontFace": "$CruyffSansExpanded",
+            "text": ""
+        },        
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "BOTTOM",
+            "alignH": "FILL",
+            "marginLeft": -60,
+            "marginBottom": 0,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -50,
+                    "marginLeft": 60,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginBottom": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginBottom": 0
+                                        },
+                                        "duration": 1000,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                  
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 20,
+            "marginLeft": 40,
+            "height": 30,
+            "width": 268,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$_Settings_Accessibility1",
+            "backgroundHighlightImage": "$_Settings_Accessibility2",
+            "clickAction": "act_customize",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }, 
+        {
+             "commonName": "Rectangle",
+             "alignV": "LEFT",
+             "alignH": "TOP",
+             "marginTop": 13,
+             "marginLeft": 1100,
+             "width": 300,
+             "height": 30,
+             "color": "$COLOR_BLACK",
+             "cornerRaduis": 10,
+             "alpha": 0
+         },         
+         {
+            "commonName": "Asset",
+            "alignV": "BOTTOM",
+            "alignH": "RIGHT",
+            "width": 250,
+            "height": 100,
+            "marginRight": 10,
+            "marginBottom": -7,
+            "type": "$_ButtonFc25"
+        },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginTop": 0,
+            "marginLeft": 99,
+            "width": 0.5,
+            "height": 1000,
+            "color": "0xffffff",
+            "alpha": 0
+         },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 70,
+            "marginTop": 38,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "FcPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 8,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateFc",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 8
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Fc",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "forceCaps": true,
+                            "clickAction": "act_menu_fc",
+                            "headline": ["FC NEWS"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "KickOffPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 48,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateKickOff",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 48
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "KickOff",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_ko",
+                            "headline": ["KICK OFF"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ManagerPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 88,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateManager",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 88
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Manager",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_lm",
+                            "headline": ["MANAGER CAREER"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "PlayerPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 128,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animatePlayer",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 128
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Player",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_cm",
+                            "headline": ["PLAYER CAREER"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "TournamentsPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 168,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateTournaments",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 168
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Tournaments",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_tn",
+                            "headline": ["TOURNAMENTS"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MatchdayPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 208,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateMatchday",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 208
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Matchday",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_md",
+                            "headline": ["MATCH DAY"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "SeasonPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 248,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateSeason",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 248
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Season",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_bt",
+                            "headline": ["BEAST TEAM"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ChallengePanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 288,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateChallenge",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 288
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Challenge",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_cl",
+                            "headline": ["CHALLENGE"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "RivalPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 328,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateRival",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 328
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 10
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Rival",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_menu_rm",
+                            "headline": ["RIVAL MATCH"]
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_fc",
+                    "script": "animateFc",
+                    "target": "FcPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_fc",
+                    "target": "trigger_animate_fc",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_kickoff",
+                    "script": "animateKickOff",
+                    "target": "KickOffPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_kickoff",
+                    "target": "trigger_animate_kickoff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_manager",
+                    "script": "animateManager",
+                    "target": "ManagerPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_manager",
+                    "target": "trigger_animate_manager",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count2",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_player",
+                    "script": "animatePlayer",
+                    "target": "PlayerPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_player",
+                    "target": "trigger_animate_player",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count3",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_tournaments",
+                    "script": "animateTournaments",
+                    "target": "TournamentsPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_tournaments",
+                    "target": "trigger_animate_tournaments",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count4",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_matchday",
+                    "script": "animateMatchday",
+                    "target": "MatchdayPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_matchday",
+                    "target": "trigger_animate_matchday",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count5",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_season",
+                    "script": "animateSeason",
+                    "target": "SeasonPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_season",
+                    "target": "trigger_animate_season",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count6",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_challenge",
+                    "script": "animateChallenge",
+                    "target": "ChallengePanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_challenge",
+                    "target": "trigger_animate_challenge",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count7",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_rival",
+                    "script": "animateRival",
+                    "target": "RivalPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_rival",
+                    "target": "trigger_animate_rival",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count8",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_more",
+                    "script": "animateMore",
+                    "target": "MorePanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_more",
+                    "target": "trigger_animate_more",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count9",
+                            "property": "value"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}                

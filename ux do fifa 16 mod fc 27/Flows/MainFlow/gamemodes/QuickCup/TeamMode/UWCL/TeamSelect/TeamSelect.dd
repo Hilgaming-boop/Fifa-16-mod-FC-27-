@@ -1,0 +1,121 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+
+        {
+            "viewname": "act_team_select",
+            "actionname": "act_team_select"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_team_list",
+            "binding":  "bnd_team_list",
+            "type":     "array"
+        },
+        {
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_loading_visible",
+            "binding":"bnd_loading_visible",
+            "type":"bool"
+        },
+        {
+            "viewname": "bnd_cuplogo",
+            "binding":  "bnd_cuplogo",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team1",
+            "binding":  "bnd_team1",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team2",
+            "binding":  "bnd_team2",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team3",
+            "binding":  "bnd_team3",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team4",
+            "binding":  "bnd_team4",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team5",
+            "binding":  "bnd_team5",
+            "type":     "object"
+         },
+        {     
+            "viewname": "bnd_team6",
+            "binding":  "bnd_team6",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team7",
+            "binding":  "bnd_team7",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team8",
+            "binding":  "bnd_team8",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team9",
+            "binding":  "bnd_team9",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team10",
+            "binding":  "bnd_team10",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team11",
+            "binding":  "bnd_team11",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team12",
+            "binding":  "bnd_team12",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team13",
+            "binding":  "bnd_team13",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team14",
+            "binding":  "bnd_team14",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team15",
+            "binding":  "bnd_team15",
+            "type":     "object"
+         },
+        {     
+            "viewname": "bnd_team16",
+            "binding":  "bnd_team16",
+            "type":     "object"
+        }
+    ]
+}

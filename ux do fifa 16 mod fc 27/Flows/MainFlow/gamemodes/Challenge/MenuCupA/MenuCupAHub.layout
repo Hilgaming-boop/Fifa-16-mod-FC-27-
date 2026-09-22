@@ -1,0 +1,971 @@
+/* ------------------------------------- */
+/* MOD Created By Rober FL */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],    
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "SLIDE_IN_ALPHA"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "SLIDE_OUT"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+       {
+            "commonName": "Asset",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -200,
+            "marginLeft": -500,
+             "height": 50,
+             "width": 130,
+             "path": "views/backgrounds/Green_Effect.swf"
+        },     
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -200,
+            "marginLeft": -505,
+            "height": 28,
+            "width": 65,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Cups A",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to_",
+             "textStyles":
+            [
+               "TF_BUTTON_PLAYMODEON"
+            ]
+         },
+        {
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 100,
+            "marginTop": -15,
+            "width": 600,
+            "height": 300,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info5",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab5_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "marginLeft": 33,
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupUcl1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupUel1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupEuro1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupNations1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupUwcl1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        }
+                    ]
+                },            
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_ucl"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupUcl2"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_uel"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupUel2"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_uec"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupEuro2"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_unl"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupNations2"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_uwcl"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$_CupUwcl2"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "MvnprodButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 39,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 270,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 500,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 731,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 961,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "actions": [
+        {
+            "viewname": "act_text_change",
+            "actionname": "act_text_change"
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_next_dev_type",
+            "actionname": "act_next_dev_type"
+        },
+        {
+            "viewname": "act_prev_dev_type",
+            "actionname": "act_prev_dev_type"
+        }
+    ],
+    "data": [
+        {
+            "binding": "bnd_dev_type_toggle",
+            "viewname": "bnd_dev_type_toggle",
+            "type": {
+                "metaType": "object",
+                "members": { "data": "array", "index": "int" }
+            }
+        },
+        {
+            "binding": "bnd_setting_changed",
+            "viewname": "bnd_setting_changed",
+            "type": "object",
+            "actions": [
+                {
+                    "viewname": "act_change_setting",
+                    "actionname": "act_change_setting"
+                }
+            ]
+        },
+        {
+            "viewname": "bnd_title",
+            "type": "string",
+            "impl": {
+                "type": "ltxt",
+                "tag": "LTXT_CREATE_DEV" 
+            }
+        },
+        {
+            "viewname": "bnd_description",
+            "binding": "bnd_description",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_dev_name",
+            "binding": "bnd_dev_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_dev_crest",
+            "binding":  "bnd_dev_crest",
+            "type":     "object"
+        },
+		{
+			"viewname": "bnd_prev_dev_crest",
+			"binding":  "bnd_prev_dev_crest",
+			"type":     "object"
+		},
+		{
+			"viewname": "bnd_next_dev_crest",
+			"binding":  "bnd_next_dev_crest",
+			"type":     "object"
+		},
+        {
+            "viewname": "bnd_dev_type_text",
+            "binding":  "bnd_dev_type_text",
+            "type":     "string"
+        },
+		{
+			"viewname": "bnd_prev2_dev_crest",
+			"binding":  "bnd_prev2_dev_crest",
+			"type":     "object"
+		},
+		{
+			"viewname": "bnd_next2_dev_crest",
+			"binding":  "bnd_next2_dev_crest",
+			"type":     "object"
+		}
+    ]
+}

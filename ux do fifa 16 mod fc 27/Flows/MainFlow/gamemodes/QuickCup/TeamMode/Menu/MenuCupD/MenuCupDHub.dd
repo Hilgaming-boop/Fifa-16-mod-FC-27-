@@ -1,0 +1,85 @@
+{
+    "actions":
+    [
+        {
+            "viewname":"act_a",
+            "actionname":"act_a"
+        },      
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_to_cup_usaopencup",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_usaopencup"
+	         }
+        },
+        {
+            "viewname": "act_to_cup_saudi",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_saudi"
+		     }
+        },
+		{
+			"viewname": "act_to_cup_pialaindonesia",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_pialaindonesia"
+			}
+        },
+		{
+			"viewname": "act_to_cup_uecl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_uecl"
+			}
+	    },
+		{
+			"viewname": "act_to_cup_afcasiancup",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_afcasiancup"
+			}
+        }
+    ],
+    "data":
+	[
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}            

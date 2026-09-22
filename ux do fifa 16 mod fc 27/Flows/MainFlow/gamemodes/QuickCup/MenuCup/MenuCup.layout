@@ -1,0 +1,1346 @@
+/* ------------------------------------- */
+/* MOD Created By inisial A */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_a",
+            "buttonContainer": "tapA"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        }        
+    ],    
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_OUT_RIGHT"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Career"
+        },   
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "CENTER",
+                    "alignH": "FILL",
+                    "marginTop": 0,
+                    "marginLeft": 0,                   
+                    "height": 30,
+                    "children":
+                    [
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 70,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginLeft": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 0
+                                        },
+                                        "duration": 500,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [         
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -195,
+                            "marginLeft": 195,
+                            "fontSize": 18,
+                            "alpha": 1,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Tournaments"
+                        }                                           
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                      ]
+                   }
+                ]
+             },        
+        {
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 100,
+            "marginTop": 60,
+            "width": 600,
+            "height": 300,
+            "children":
+            [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 90,
+                            "cornerRaduis": 5,
+                            "width": 550,
+                            "height": 250,
+                            "color": "0x111118"
+                        }
+                    ]
+                },	
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "CENTER",
+                    "alignH": "FILL",
+                    "marginTop": 0,
+                    "marginLeft": 70,                   
+                    "height": 30,
+                    "children":
+                    [             
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 0
+                                        },
+                                        "duration": 400,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [          
+         {
+            "commonName": "Image",
+            "name": "Icon",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginBottom": -1000,
+            "marginRight": 120,
+            "rotationX": -180,
+            "alpha": 0.1,
+            "width": 500,
+            "height": 500,
+ 		  "bindings": [
+				{
+					"binding": "bnd_trophy",
+					"property": "image"
+				}
+			]
+		} 
+]
+}         
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count3",
+                            "property": "value"
+                        }
+                      ]
+                   }
+                ]
+             },                  	     
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "CENTER",
+                    "alignH": "FILL",
+                    "marginTop": 0,
+                    "marginLeft": 70,                   
+                    "height": 30,
+                    "children":
+                    [             
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 0
+                                        },
+                                        "duration": 400,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                                              
+         {
+            "commonName": "Image",
+            "name": "Icon",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginBottom": -15,
+            "marginRight": 120,
+            "width": 500,
+            "height": 500,
+ 		  "bindings": [
+				{
+					"binding": "bnd_trophy",
+					"property": "image"
+				}
+			]
+		} 
+]
+}         
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count3",
+                            "property": "value"
+                        }
+                      ]
+                   }
+                ]
+             },                      
+        {
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 80,
+            "marginTop": 45,
+            "width": 600,
+            "height": 300,
+            "children":
+            [                
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 120,
+                            "width": 670,
+                            "height": 370,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -60,
+                            "marginLeft": 900,
+                            "width": 250,
+                            "height": 250,
+                            "type": "$"
+                        },                        
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 140,
+                            "fontFace": "$Epl",
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Men's 24 Teams"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 145,
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 350,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "AFC Asian Cup Qatar 2023™, UEFA Euro, UEFA Nations League, Us Open Tour, Africa Cup Of Nations"
+                        }                        
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 120,
+                            "width": 670,
+                            "height": 370,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -60,
+                            "marginLeft": 900,
+                            "width": 250,
+                            "height": 250,
+                            "type": "$"
+                        },                               
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 140,
+                            "fontFace": "$Epl",
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 200,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Men's 8 Teams"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 145,
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7, 
+                            "text": "ASEAN Hyundai Cup 2026, Piala Presiden, Sea Games U-23, Asean Shopee Cup, Saudi Arab Tour"
+                        }                       
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 120,
+                            "width": 670,
+                            "height": 370,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -60,
+                            "marginLeft": 900,
+                            "width": 250,
+                            "height": 250,
+                            "type": "$"
+                        },                             
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 140,
+                            "fontFace": "$Epl",
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Women's 8 Teams"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 145,
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7, 
+                            "text": "UEFA Women's Cl, FIFA Women's World Cup"                            
+                        }                    
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 120,
+                            "width": 670,
+                            "height": 370,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -60,
+                            "marginLeft": 900,
+                            "width": 250,
+                            "height": 250,
+                            "type": "$"
+                        },                               
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 140,
+                            "fontFace": "$Epl",
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Women's 8 Teams"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 145,
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0, 
+                            "text": "UEFA Women's Cl, FIFA Women's World Cup"
+                        }                                     
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info5",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab5_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 120,
+                            "width": 670,
+                            "height": 370,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 800,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$"
+                        },                                                   
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 140,
+                            "fontFace": "$Epl",
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Next Update...."
+                        }
+                    ]
+                }
+            ]
+	    },       
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "marginLeft": 33,
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1D1D1D"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 15,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's 24 Teams"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1D1D1D"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 15,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's 8 Team"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1D1D1D"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 15,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Women's 8 teams"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "alpha": 0,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1D1D1D"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$cupLogo_16"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 0,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "TOURNAMENTS 4"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 80,
+                            "alpha": 0,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1D1D1D"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$cupLogo_4"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 0,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "TOURNAMENTS 5"
+                                }
+                            ]
+                        }
+                    ]
+                },                                          
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -2,
+                            "height": 80,
+                            "width": 230,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xffffff",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_ucl"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 15,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's 24 Teams"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 229,
+                            "height": 80,
+                            "width": 230,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xffffff",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_uel"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 210,
+                                    "height": 72,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 15,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's 8 Teams"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 460,
+                            "height": 80,
+                            "width": 230,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xffffff",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_uec"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 15,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Women's 8 Teams"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 691,
+                            "height": 80,
+                            "width": 230,
+                            "alpha": 0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xffffff",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_cup_unl"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$cupLogo_16black"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 0,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "TOURNAMENTS 4"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": -2,
+                            "height": 80,
+                            "width": 230,
+                            "alpha": 0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xffffff",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginLeft": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$cupLogo_4"
+                                },
+                                 {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 0,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$CruyffSansExpanded",
+                                    "width": 170,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "TOURNAMENTS 5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },                        
+        {
+            "commonName": "Group",
+            "name": "tapA",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 39,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 270,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 500,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 731,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": false
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 961,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": false
+                }                
+            ]
+        }
+    ]
+}

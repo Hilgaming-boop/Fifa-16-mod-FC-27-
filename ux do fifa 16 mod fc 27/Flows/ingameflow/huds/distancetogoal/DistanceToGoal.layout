@@ -1,0 +1,271 @@
+      {
+            "commonName": "DistanceToGoal",
+            "name": "distanceToGoal",
+            "alignH": "FILL",
+			"alignV": "FILL",      
+            "width": 1024,
+		    "height": 768,
+            "alpha": 1.0,
+            "visible": true,
+            "bindings":
+            [
+                {
+                    "property": "nationalization",
+                    "binding":  "bnd_nationalization"
+                },
+                {
+                    "property": "visible",
+                    "binding":  "bnd_visible"
+                },
+                {
+                    "property": "data",
+                    "binding":  "bnd_distance_info"
+                }
+            ],
+            "children":
+            [
+	            {
+					"commonName": "Image",
+					"name": "D2Gbg",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.1,
+					"scaleY": 0.1,
+					"x": 760,
+					"y": 420,
+					"alpha": 0.85,
+					"visible": true,
+					"image": "$D2Gbg"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "D2GlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 773,
+					"y": 427,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 15,
+                    "alpha": 0.85,
+                    "text": "DISTANCE"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "D2GlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 773,
+					"y": 443,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 15,
+                    "alpha": 0.85,
+                    "text": "TO GOAL"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "D2Gsys",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 861,
+					"y": 451,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 9,
+                    "forceCaps": true,
+                    "alpha": 0.0,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+		                    "binding":  "bnd_visible"
+                        },
+                        {
+                            "binding": "bnd_distance_info_sys",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "D2GsysM",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 885,
+					"y": 453,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 9,
+                    "forceCaps": true,
+                    "alpha": 0.85,
+                    "text": "METRES"
+                },
+				{
+                    "commonName": "Label",
+                    "name": "D2Gnum",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 870,
+					"y": 424,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_ORANGE",
+                    "fontSize": 28,
+                    "alpha": 0.85,                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_distance_info_num",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_visible",
+                            "property": "visible"
+                        }
+                    ]               
+                },
+                
+	            {
+					"commonName": "Image",
+					"name": "xGbg",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.1,
+					"scaleY": 0.1,
+					"x": 120,
+					"y": 500,
+					"alpha": 0.85,
+					"visible": true,
+					"image": "$xGbg"
+                },           
+	            {
+					"commonName": "Image",
+					"name": "xGbg1",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 420,
+					"y": 495,
+					"alpha": 0.70,
+					"visible": true,
+					"image": "$xGbg1"
+				},
+				{
+					"commonName": "Image",
+					"name": "xGbg2",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 200,
+					"y": 470,
+					"visible": true,
+					"image": "$xGbg2"
+                },           
+	            {
+					"commonName": "Image",
+					"name": "xGbg3",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 415,
+					"y": 390,
+					"alpha": 0.70,
+					"visible": true,
+					"image": "$xGbg3"
+                },           
+	            {
+					"commonName": "Image",
+					"name": "xGbg4",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 488,
+					"y": 310,
+					"alpha": 0.70,
+					"visible": true,
+					"image": "$xGbg4"
+				},
+				{
+					"commonName": "Image",
+					"name": "xGbg5",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 810,
+					"y": 30,
+					"visible": true,
+					"image": "$xGbg5"
+				},
+				{
+					"commonName": "Image",
+					"name": "D2Gbg",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.4,
+					"scaleY": 0.4,
+					"x": 258,
+					"y": 195,
+					"alpha": 0.70,
+					"visible": true,
+					"image": "$D2Gbg1"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "xGlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 130,
+					"y": 507,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 15,
+                    "alpha": 0.85,
+                    "text": "EXPECTED"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "xGlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 130,
+					"y": 524,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 15,
+                    "alpha": 0.85,
+                    "text": "GOAL xG"
+                },
+				{
+                    "commonName": "Label",
+                    "name": "xGnum",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 228,
+					"y": 504,
+                    "fontFace": "$FONT_NORMAL",
+                    "fontColor": "$COLOR_ORANGE",
+                    "fontSize": 26,
+                    "alpha": 0.85,                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_xg_info_num",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_visible",
+                            "property": "visible"
+                        }
+                    ]               
+                }
+              ]
+            }
+         ]
+      }
+	]
+}

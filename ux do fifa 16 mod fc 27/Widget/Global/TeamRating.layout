@@ -1,0 +1,414 @@
+{
+    "name": "TeamRating",
+    "height": 60.0,
+    "width": 240.0,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 230.0,
+            "height": 75.0
+        }
+    },
+	"behaviors":
+	[
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorAL",
+			"styleTargets":["content.gridContainer.AttackLabel"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorML",
+			"styleTargets":["content.gridContainer.MiddleLabel"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorDL",
+			"styleTargets":["content.gridContainer.DefenseLabel"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorAV",
+			"styleTargets":["content.gridContainer.AttackValue"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorMV",
+			"styleTargets":["content.gridContainer.MiddleValue"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorDV",
+			"styleTargets":["content.gridContainer.DefenseValue"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorALhome",
+			"styleTargets":["content.gridContainer.AttackLabelHome"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorMLhome",
+			"styleTargets":["content.gridContainer.MiddleLabelHome"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorDLhome",
+			"styleTargets":["content.gridContainer.DefenseLabelHome"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorAVhome",
+			"styleTargets":["content.gridContainer.AttackValueHome"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorMVhome",
+			"styleTargets":["content.gridContainer.MiddleValueHome"]
+		},
+		{
+			"commonName": "ApplyStyle",
+			"name": "applyStyleBehaviorDVhome",
+			"styleTargets":["content.gridContainer.DefenseValueHome"]
+		}
+	],
+    "propertyMap":
+    {
+        "width": "content.width",
+        "height": "content.height",
+        "dataProviders.attackLabel": "content.gridContainer.AttackLabel.text",
+        "dataProviders.middleLabel": "content.gridContainer.MiddleLabel.text",
+        "dataProviders.defenseLabel": "content.gridContainer.DefenseLabel.text",
+        "dataProviders.attackValue": "content.gridContainer.AttackValue.text",
+        "dataProviders.middleValue": "content.gridContainer.MiddleValue.text",
+        "dataProviders.defenseValue": "content.gridContainer.DefenseValue.text",
+		"dividersVisible": "content.dividersContainer.visible",
+		"attLabelStyles": "applyStyleBehaviorAL.styles",
+        "midLabelStyles": "applyStyleBehaviorML.styles",
+        "defLabelStyles": "applyStyleBehaviorDL.styles",
+        "attValueStyles": "applyStyleBehaviorAV.styles",
+        "midValueStyles": "applyStyleBehaviorMV.styles",
+        "defValueStyles": "applyStyleBehaviorDV.styles",
+        
+        "dataProviders.attackLabelHome": "content.gridContainer.AttackLabelHome.text",
+        "dataProviders.middleLabelHome": "content.gridContainer.MiddleLabelHome.text",
+        "dataProviders.defenseLabelHome": "content.gridContainer.DefenseLabelHome.text",
+        "dataProviders.attackValueHome": "content.gridContainer.AttackValueHome.text",
+        "dataProviders.middleValueHome": "content.gridContainer.MiddleValueHome.text",
+        "dataProviders.defenseValueHome": "content.gridContainer.DefenseValueHome.text",
+		
+		"attLabelStylesHome": "applyStyleBehaviorALhome.styles",
+        "midLabelStylesHome": "applyStyleBehaviorMLhome.styles",
+        "defLabelStylesHome": "applyStyleBehaviorDLhome.styles",
+        "attValueStylesHome": "applyStyleBehaviorAVhome.styles",
+        "midValueStylesHome": "applyStyleBehaviorMVhome.styles",
+        "defValueStylesHome": "applyStyleBehaviorDVhome.styles"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "content",
+            "height": 60.0,
+            "width": 240.0,
+            "children":
+            [
+                {
+                    "commonName": "Grid",
+                    "name": "gridContainer",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "columns":
+                    [
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "layout":
+                    [
+                        {
+                            "child": "AttackLabel",
+                            "column": 0,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "MiddleLabel",
+                            "column": 1,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "DefenseLabel",
+                            "column": 2,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "AttackValue",
+                            "column": 0,
+                            "row": 1,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "MiddleValue",
+                            "column": 1,
+                            "row": 1,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "DefenseValue",
+                            "column": 2,
+                            "row": 1,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "AttackLabelHome",
+                            "column": 0,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "MiddleLabelHome",
+                            "column": 1,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "DefenseLabelHome",
+                            "column": 2,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "AttackValueHome",
+                            "column": 0,
+                            "row": 1,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "MiddleValueHome",
+                            "column": 1,
+                            "row": 1,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "DefenseValueHome",
+                            "column": 2,
+                            "row": 1,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        }
+                    ],
+                    "rows":
+                    [
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "AttackValue",
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "MiddleValue",
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "DefenseValue",
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "DefenseLabel",
+							"alpha": 0.8,
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "MiddleLabel",
+							"alpha": 0.8,
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "AttackLabel",
+                            "alpha": 0.8,
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "AttackValueHome",
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES_HOME"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "MiddleValueHome",
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES_HOME"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "DefenseValueHome",
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES_HOME"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "DefenseLabelHome",
+							"alpha": 0.8,
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS_HOME"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "MiddleLabelHome",
+							"alpha": 0.8,
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS_HOME"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "AttackLabelHome",
+                            "alpha": 0.8,
+                            "width": 80.0,
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS_HOME"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Grid",
+                    "name": "dividersContainer",
+                    "alignH": "FILL",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 18,
+                    "spacingH": 15.0,
+                    "columns":
+                    [
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "layout":
+                    [
+                        {
+                            "child": "div1",
+                            "column": 1,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        },
+                        {
+                            "child": "div2",
+                            "column": 2,
+                            "row": 0,
+                            "colSpan": 1,
+                            "rowSpan": 1
+                        }
+                    ],
+                    "rows":
+                    [
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "children":
+                    [
+						{
+							"commonName": "Image",
+							"name": "div1",
+                            "height": 2,
+                            "width": 9,
+                            "alpha": 1,
+                            "marginLeft": 4.0,
+							"image": "$DividerLine"
+						},
+						{
+							"commonName": "Image",
+							"name": "div2",
+                            "height": 2,
+                            "width": 9,
+                            "alpha": 1,
+							"image": "$DividerLine"
+						}
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "MenuCupCHub",
+    "onEnter":
+    [
+        ["setTabContext", [2]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuCupCHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_back"]
+        },       
+        {
+            "event": "evt_menu_cupa",
+            "targets": ["out_menu_cupa"]
+        },
+        { 
+            "event": "evt_menu_cupb",
+            "targets": ["out_menu_cupb"]
+        },
+        { 
+            "event": "evt_menu_cupd",
+            "targets": ["out_menu_cupd"]
+        },
+        { 
+            "event": "evt_to_cup_facup",
+            "targets": ["out_facup"]
+        },
+        { 
+            "event": "evt_to_cup_espana",
+            "targets": ["out_espana"]
+        },
+        { 
+            "event": "evt_to_cup_dfbpokal",
+            "targets": ["out_dfbpokal"]
+        },
+        { 
+            "event": "evt_to_cup_italia",
+            "targets": ["out_italia"]
+        },
+        { 
+            "event": "evt_to_cup_france",
+            "targets": ["out_france"]
+        }
+    ]
+}

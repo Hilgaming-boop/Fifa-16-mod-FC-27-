@@ -1,0 +1,128 @@
+{
+    "animationScripts":
+	[
+		{
+			"name" : "show",
+			"script" :
+			[
+				{
+					"anim" : "OVERLAY_TRANSITION_IN"
+				}
+			]
+		},
+		{
+			"name" : "hide",
+			"script" :
+			[
+				{
+					"anim" : "OVERLAY_TRANSITION_OUT"
+				}
+			]
+     }
+	],
+    "commonName": "Panel",
+    "name": "playerNIBAwayContainer",
+    "alignH": "FILL",
+	"alignV": "FILL",
+    "children":
+    [
+        {
+			"commonName": "Asset",
+			"name": "NIBBackgroundRight",
+			"alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 250,
+                            "height": 22,
+                            "marginTop": 567,
+                            "marginLeft": 250,
+			"type": "$Background_NamaPemain_Away",
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				}
+			]
+		},
+        {
+			"commonName": "Image",
+			"name": "insCrestAway",
+             "alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginRight": -359,
+			"marginBottom": 30.5,
+			"width": 50,
+			"height": 50,
+			"bindings":
+			[
+			    {
+					"property": "image",
+					"binding":  ""
+				},
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				}
+			]
+		},
+		{
+			"commonName": "PlayerNIB",
+			"name": "playerNIBAway",
+			"visible": false,
+			"orientation": "right",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginRight": -250,
+			"marginBottom": 14,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "dataProviders",
+					"binding":  "bnd_player_info"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "stamina",
+					"binding":  "bnd_stamina"
+				}
+			]
+			},
+        {
+            "commonName": "Asset",
+			"name": "NIBBackgroundRight",
+			"alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 230,
+                            "height": 22,
+                            "marginTop": 567,
+                            "marginLeft": 250,
+			"type": "$Button_Away",
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				}
+			]
+		}
+	]
+}

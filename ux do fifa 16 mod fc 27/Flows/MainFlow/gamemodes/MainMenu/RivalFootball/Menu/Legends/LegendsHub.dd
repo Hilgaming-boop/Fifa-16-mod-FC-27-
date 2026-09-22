@@ -1,0 +1,16 @@
+{
+	"actions":
+	[
+      {
+            "viewname": "act_rivallegends",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_rivallegends"
+            }
+        }
+	],
+	"data":
+	[
+	]
+}

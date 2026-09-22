@@ -1,0 +1,85 @@
+{
+    "actions":
+    [
+        {
+            "viewname":"act_a",
+            "actionname":"act_a"
+        },        
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_to_cup_facup",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_facup"
+			}
+		},
+		{
+			"viewname": "act_to_cup_espana",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_espana"
+			}
+		},
+		{
+			"viewname": "act_to_cup_dfbpokal",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_dfbpokal"
+			}
+        },
+        {
+           "viewname": "act_to_cup_italia",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_italia"
+            }
+        },
+        {
+           "viewname": "act_to_cup_france",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_france"
+		     }
+        }
+    ],
+    "data":
+	[
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}    

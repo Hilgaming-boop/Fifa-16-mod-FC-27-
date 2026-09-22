@@ -1,0 +1,435 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+    "style-definitions":
+    {
+    "TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$FONT_ORIGIN_NORMAL",
+			"fontSize": 21,
+			"alpha": 1,
+			"fontColor": "0x808080",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$FONT_ORIGIN_NORMAL",
+			"fontSize": 0,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+		}
+    },       
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_leaguebackground",
+                    "property": "image"
+                }
+            ]      
+        },         
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.3,
+            "type": "$Bg_Smoke"
+        },
+       {
+            "commonName": "Label",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 28,
+            "marginLeft": 260,
+            "fontSize": 15,
+             "fontColor": "$COLOR_LIGHT_GRAY",
+             "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+             "text": "Scroll news feed"
+        },    
+       {
+            "commonName": "Label",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 28,
+            "marginLeft": 400,
+            "fontSize": 15,
+             "fontColor": "$COLOR_LIGHT_GRAY",
+             "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+             "text": "Tutorials"
+        },                 
+       {
+            "commonName": "Label",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 28,
+            "marginLeft": 495,
+            "fontSize": 15,
+             "fontColor": "$COLOR_LIGHT_GRAY",
+             "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+             "text": "Advance Customisation "
+        },               
+       {
+            "commonName": "GenericButton",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 26,
+            "marginLeft": 195,
+            "scaleX": 0.7,
+            "scaleY": 0.7,
+            "icon": "$SimMatchIcon15",
+            "clickAction": "act_"
+        },    
+       {
+            "commonName": "GenericButton",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 38,
+            "marginLeft": 375,            
+            "alpha": 0.1,
+            "scaleX": 0.06,
+            "scaleY": 0.06,
+            "icon": "$SimMatchIcon13",
+            "clickAction": "act_"
+        },                 
+       {
+            "commonName": "GenericButton",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 32,
+            "marginLeft": 455,
+            "scaleX": 0.3,
+            "scaleY": 0.3,
+            "icon": "$SimMatchIcon14",
+            "clickAction": "act_to_settings_customize"
+        },       
+        {
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 12,
+            "marginLeft": 240,
+            "scaleX": 0.6,
+            "scaleY": 0.6,
+            "icon": "$SimMatchIcon11",
+            "clickAction": "act_"
+        },
+        {
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 12,
+            "marginLeft": 265,
+            "scaleX": 0.6,
+            "scaleY": 0.6,
+            "icon": "$SimMatchIcon10",
+            "clickAction": "act_"
+        },
+        {
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 10,
+            "marginLeft": 120,
+            "scaleX": 0.8,
+            "scaleY": 0.8,
+            "icon": "$SimMatchIcon9",
+            "clickAction": "act_"
+        },    
+         {
+            "commonName": "Asset",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 23.5,
+            "marginLeft": 130,
+            "height": 30,
+            "width": 268,
+            "alpha": 1,
+            "type": "$"
+         },        
+         {
+            "commonName": "Asset",
+            "name": "LogoFC24",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 30,
+            "marginLeft": 1290,
+            "width": 93,
+            "height": 32,
+            "alpha": 1,
+            "type": "$"
+         },        
+         {
+            "commonName": "Asset",
+            "alignV": "BOTTOM",
+            "alignH": "RIGHT",
+            "width": 250,
+            "height": 100,
+            "marginRight": 10,
+            "marginBottom": -7,
+            "type": "$_ButtonFc25"
+        },      
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": -7,
+                    "children":
+                    [   
+                         {
+                            "commonName": "Image",
+                            "name": "Crest",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 40,
+                            "marginRight": 258,
+                            "width": 33,
+                            "height": 33,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_crest",
+                                    "property": "image"
+                                }
+		                    ]
+                        },                                           
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 510,
+                            "marginTop": 25,
+                            "width": 240,
+                            "height": 70,
+                            "type": "$Icon_Tim_Central"
+                        },                      
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 45,
+                            "marginLeft": 1168,
+                            "width": 110,
+                            "autoScroll": true,
+                            "fontSize": 18,
+                            "textAlignH": "LEFT",                            
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_name",
+                                    "property": "text"
+                                }
+		                    ]
+                        }
+                     ]
+                 },     
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -5,
+                    "marginLeft": 15,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 105,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Select"
+                },            
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -5,
+                    "marginLeft": 95,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_exit"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 184,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_CM"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 140,
+                            "fontSize": 23,
+                            "alpha": 1,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Home"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 225,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": "|"
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 11,
+                            "marginLeft": 240,
+                            "width": 150,
+                            "height": 30,
+                            "clickAction": "act_tab1",
+                            "headline": ["Central"]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 11,
+                            "marginLeft": 340,
+                            "width": 150,
+                            "height": 30,
+                            "clickAction": "act_tab2",
+                            "headline": ["Squad"]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 11,
+                            "marginLeft": 430,
+                            "width": 150,
+                            "height": 30,
+                            "clickAction": "act_tab3",
+                            "headline": ["Transfers"]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 11,
+                            "marginLeft": 555,
+                            "width": 150,
+                            "height": 30,
+                            "clickAction": "act_tab4",
+                            "headline": ["Office"]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 11,
+                            "marginLeft": 645,
+                            "width": 150,
+                            "height": 30,
+                            "clickAction": "act_tab5",
+                            "headline": ["Customise"]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 11,
+                            "marginLeft": 785,
+                            "width": 150,
+                            "height": 30,
+                            "clickAction": "act_tab6",
+                            "headline": ["Notifications"]
+                        }                        
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+/*-- Layout Design MVNPROD YouTube --*/

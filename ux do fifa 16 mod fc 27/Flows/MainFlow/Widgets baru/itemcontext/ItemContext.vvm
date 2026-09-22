@@ -1,0 +1,5 @@
+{
+    "dds":   ["ItemContext.dd","/lua/common/PlayerViewModel.dd", "/flows/mainflow/gamemodes/fut/club/squad/TeamManagementModel.dd"],
+    "vms":   [["lua", "ItemContext.lua"]],
+    "views": [["gfx", { "layout": "/common/overlay/Scrim.layout"}], ["gfx", { "layout": "ItemContext.layout" }]]
+}

@@ -1,0 +1,37 @@
+{
+	"actions":
+	[
+		{
+	    	"viewname": "act_menu_cm",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_cm"
+			}
+        },
+        {
+			"viewname": "act_cup_ucl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_cup_ucl"
+	    	}
+        },
+        {
+			"viewname": "act_cup_uwcl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_cup_uwcl"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_ucl",
+			"binding": "bnd_live_tile_ucl",
+			"type": "live_tile"
+		}
+	]
+}

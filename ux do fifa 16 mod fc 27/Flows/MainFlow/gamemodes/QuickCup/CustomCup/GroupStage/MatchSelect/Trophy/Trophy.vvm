@@ -1,0 +1,6 @@
+{
+	"dds": ["Trophy.dd"],
+    "vms": [["lua", "Trophy.lua"]],
+    "views": [["gfx", {"layout": "Trophy.layout"}]],
+	"ireqs": ["Trophy.ireq"]
+}

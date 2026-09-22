@@ -1,0 +1,136 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_OUT_RIGHT"
+                }
+            ]
+        }
+    ],    
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -13,
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 107,
+                    "marginLeft": 90,
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "text": "Customise Graphic"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "Visualization settings required in the game"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 174,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "Increase or decrease the quality of graphics to run smoothly"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 215,
+                    "marginLeft": 90,
+                    "width": 480,
+                    "height": 250,
+                    "type": "$ImgGraphic"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 34,
+                    "marginLeft": 620,
+                    "height": 70,
+                    "width": 160,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "PengaturanMatch",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": -190,
+                    "marginLeft": 85,
+                    "rowWidth": 610,
+                    "rowHeight": 60,
+                    "displayRange": 7,
+                    "useAlternating": false,
+                    "row": "CustomizationRow",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_debug_settings_list_data",
+                            "property": "dataProviders"
+                        }
+                    ]
+                 }
+              ]
+           }
+        ]
+     }
+  ]
+}

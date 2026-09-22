@@ -1,0 +1,58 @@
+{
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_OUT_RIGHT"
+                }
+            ]
+        }
+    ],    
+   "commonName": "Overlay",
+    "title":"CONFIRM"
+    "footer":
+    [
+        {
+            "icon":        "$FooterIconNo",
+            "clickAction": "act_cancel",
+            "label":"CANCEL"
+        },
+        {
+            "icon":        "$FooterIconYes",
+            "clickAction": "act_confirm",
+            "label":"CONTINUE"
+        }
+    ],
+    "children":
+    [
+        {
+			"commonName": "Label",
+			"name":       "insDescLbl",
+			"x":          25,
+			"y":          20,
+			"width":      560,
+			"multiline":  true,
+			"wordWrap":   true,
+			"styles":     ["TF_LABEL_CENTERED"],
+			"bindings":
+			[
+				{
+					"property": "text",
+					"binding":  "bnd_message"
+				}
+			]
+		}
+    ]
+}

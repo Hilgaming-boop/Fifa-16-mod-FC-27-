@@ -1,0 +1,783 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "style-definitions":
+    {
+    "TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansExpanded",
+			"fontSize": 16,
+			"alpha": 0.8,
+			"fontColor": "0x808080",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$CruyffSansExpanded",
+			"fontSize": 16,
+			"alpha": 0.8,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+		}
+    },    
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "name": "Weather",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.7,
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_weather_type"
+                }
+            ]
+        },
+        {
+            "commonName": "Asset",
+            "name": "Rain",
+            "path": "views/weather/rain.swf",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "alpha":0.8,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_rain_visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Asset",
+            "name": "Snow",
+            "path": "views/weather/snow.swf",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "alpha":0.3,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_snow_visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.8,
+            "type": "$Bg_InGame"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_quit_match"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Quit"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": ""
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 185,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Confirm"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": -40,
+                    "marginLeft": -70,                    
+                    "height": 30,
+                    "children":
+                    [
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 70,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginLeft": 70
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 70
+                                        },
+                                        "duration": 1000,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                              
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 50,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Ko"
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                      ]
+                   }
+                ]
+             },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": -40,
+                    "marginLeft": 70,                   
+                    "height": 30,
+                    "children":
+                    [
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 70,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginLeft": 70
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": -70
+                                        },
+                                        "duration": 1000,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                                          
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -2,
+                            "marginLeft": 135,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Regular",
+                            "bindings":
+                            [
+                                { 
+                                    "binding": "bnd_match_type",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                      ]
+                   }
+                ]
+             }
+          ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 30,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MatchFactsPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 8,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateMatchFacts",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 8
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 8
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MatchFacts",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab_facts",
+                            "headline": ["MATCH FACTS"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MatchHighlightPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 48,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateMatchHighlight",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 48
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 48
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MatchHighlight",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab_highlight",
+                            "headline": ["MATCH HIGHLIGHT"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "RestartPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 88,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateRestart",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 88
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 88
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Restart",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab_restart",
+                            "headline": ["RESTART MATCH"]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "QuitPanel",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 129,
+                    "marginLeft": 10,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0.1,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateQuit",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 129
+                                        },
+                                        "duration": 700
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 129
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Quit",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab_quit",
+                            "headline": ["QUIT GAME"]
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_matchfacts",
+                    "script": "animateMatchFacts",
+                    "target": "MatchFactsPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_matchfacts",
+                    "target": "trigger_animate_matchfacts",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_matchhighlight",
+                    "script": "animateMatchHighlight",
+                    "target": "MatchHighlightPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_matchhighlight",
+                    "target": "trigger_animate_matchhighlight",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_restart",
+                    "script": "animateRestart",
+                    "target": "RestartPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_restart",
+                    "target": "trigger_animate_restart",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count2",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_quit",
+                    "script": "animateQuit",
+                    "target": "QuitPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_quit",
+                    "target": "trigger_animate_quit",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count3",
+                            "property": "value"
+                        }
+                    ]
+                }
+            ]
+        },
+       {
+          "commonName": "LiveTile",
+          "name": "Grade",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 100,
+          "marginLeft": 65,
+          "width": 200,
+          "height": 200,
+          "autoScaleImageToTileHeight": true,
+          "bindings":
+          [
+              {
+                  "binding": "bnd_live_tile_matchgrade",
+                  "property": "dataProviders"
+              }
+          ]
+       },
+       {
+            "commonName": "Panel",
+            "name": "Info",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 50,
+            "marginRight": 120,
+            "width": 470,
+            "height": 50,
+            "children":
+            [
+               {
+                    "commonName": "Rectangle",
+                    "name": "ColorBg",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x151515",
+                    "cornerRaduis": 13,
+                    "alpha": 0.9
+                },
+                {
+                    "commonName": "Label",
+                    "name": "time",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 20,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "bold": true,
+                    "bindings":
+                    [
+                        {
+                           "binding": "bnd_time",
+                           "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Team",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "width": 400,
+                    "height": 50,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "InfoHasil",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "fontSize": 19,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_result",
+                                    "property": "text"
+                                }
+                            ]
+                       },
+                       {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "scaleX": 0.13,
+                            "scaleY": 0.13,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 50,
+                            "scaleX": 0.13,
+                            "scaleY": 0.13,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                       {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": -135,
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "autoScroll":true,
+                            "width": 120,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 135,
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "autoScroll":true,
+                            "width": 120,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

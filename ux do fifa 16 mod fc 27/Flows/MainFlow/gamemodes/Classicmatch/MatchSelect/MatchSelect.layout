@@ -1,0 +1,285 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Rival"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Preview",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 580,
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "LogoManHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -500,
+                            "marginTop": 35,
+                            "width": 430,  
+                            "height": 430,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_man_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoManAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -530,
+                            "marginTop": 35,
+                            "width": 430,  
+                            "height": 430,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_man_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        }
+                   ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Ko"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -2,
+                            "marginLeft": 148,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Kick Off"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 257,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": "|"
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "name": "ClassicMatch",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 7,
+                            "marginLeft": 280,
+                            "width": 300,
+                            "height": 30,
+                            "clickAction": "act_match_preview",
+                            "headline": [""]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 295,
+                            "fontSize": 22,
+                            "alpha": 0.5,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Match Preview"
+                        },                        
+                        {
+                            "commonName": "LiveTile",
+                            "name": "ClassicMatch",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 7,
+                            "marginLeft": 445,
+                            "width": 300,
+                            "height": 30,
+                            "clickAction": "act_team_management",
+                            "headline": [""]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 460,
+                            "fontSize": 22,
+                            "alpha": 0.5,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Team Management"
+                        },                        
+                        {
+                            "commonName": "LiveTile",
+                            "name": "ClassicMatch",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 7,
+                            "marginLeft": 660,
+                            "width": 300,
+                            "height": 30,
+                            "clickAction": "act_game_settings",
+                            "headline": [""]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 675,
+                            "fontSize": 22,
+                            "alpha": 0.5,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Game Settings"
+                        },                        
+                        {
+                            "commonName": "LiveTile",
+                            "name": "ClassicMatch",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 7,
+                            "marginLeft": 830,
+                            "width": 300,
+                            "height": 30,
+                            "clickAction": "act_controller",
+                            "headline": [""]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 845,
+                            "fontSize": 22,
+                            "alpha": 0.5,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Controller Settings"
+                        },              
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 1052,
+                            "fontSize": 22,
+                            "alpha": 0.5,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Stadium Detailed"
+                        },          
+                        {
+                            "commonName": "LiveTile",
+                            "name": "ClassicMatch",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 7,
+                            "marginLeft": 1037,
+                            "width": 300,
+                            "height": 30,
+                            "clickAction": "act_stadium_detail",
+                            "headline": [""]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

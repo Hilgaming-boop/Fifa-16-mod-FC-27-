@@ -1,0 +1,54 @@
+{
+    "name": "MenuCupBHub",
+    "onEnter":
+    [
+        ["setTabContext", [1]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuCupBHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_back"]
+        },       
+        {
+            "event": "evt_menu_cupa",
+            "targets": ["out_menu_cupa"]
+        },
+        { 
+            "event": "evt_menu_cupc",
+            "targets": ["out_menu_cupc"]
+        },
+        { 
+            "event": "evt_menu_cupd",
+            "targets": ["out_menu_cupd"]
+        },
+        { 
+            "event": "evt_to_cup_libertadores",
+            "targets": ["out_libertadores"]
+        },
+        { 
+            "event": "evt_to_cup_worldcupwomens",
+            "targets": ["out_worldcupwomens"]
+        },
+        {
+            "event": "evt_to_cup_copaamerica",
+            "targets": ["out_copaamerica"]
+        },
+        {
+            "event": "evt_to_cup_worldcup",
+            "targets": ["out_worldcup"]
+         },
+         {
+            "event": "evt_to_cup_clubworldcup",
+            "targets": ["out_clubworldcup"]
+        }
+    ]
+}

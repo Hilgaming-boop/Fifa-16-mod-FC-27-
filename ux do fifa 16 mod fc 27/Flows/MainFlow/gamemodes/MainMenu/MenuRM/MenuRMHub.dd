@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_rivalmatch",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_rivalmatch"
+			}
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_rivalmatch",
+			"binding": "bnd_live_tile_rivalmatch",
+			"type": "live_tile"
+		}
+	]
+}

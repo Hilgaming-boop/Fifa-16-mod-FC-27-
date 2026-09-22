@@ -1,0 +1,289 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+   "animationScripts": [
+    {
+      "name": "show",
+      "script": [{ "anim": "QUICK_ANIMATION_IN" }]
+    },
+    {
+      "name": "hide",
+      "script": [{ "anim": "ANIMASI_KELUAR_MAINMENU" }]
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "type": "$Bg_Career"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.4,
+      "type": "$Bg_Smoke"
+    },    
+    {
+      "commonName": "Panel",
+      "name": "mainPanel",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "height": 450,
+      "width": 1000,
+      "children": [
+        {
+          "commonName": "Image",
+          "name": "devCrestImage",
+          "alignH": "CENTER",
+          "alignV": "TOP",
+          "marginTop": 30,
+          "marginLeft": -350,
+          "height": 100,
+          "width": 100,
+          "alpha": 0.6,
+          "bindings": [
+            {
+              "binding": "bnd_prev2_dev_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "name": "devCrestImage",
+          "alignH": "CENTER",
+          "alignV": "TOP",
+          "marginTop": 30,
+          "marginLeft": -200,
+          "height": 100,
+          "width": 100,
+          "alpha": 0.6,
+          "bindings": [
+            {
+              "binding": "bnd_prev_dev_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "name": "devCrestImage",
+          "alignH": "CENTER",
+          "alignV": "TOP",
+          "marginTop": 30,
+          "marginRight": -200,
+          "height": 100,
+          "width": 100,
+          "alpha": 0.6,
+          "bindings": [
+            {
+              "binding": "bnd_next_dev_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "name": "devCrestImage",
+          "alignH": "CENTER",
+          "alignV": "TOP",
+          "marginTop": 30,
+          "marginRight": -350,
+          "height": 100,
+          "width": 100,
+          "alpha": 0.6,
+          "bindings": [
+            {
+              "binding": "bnd_next2_dev_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "name": "devCrestImage",
+          "alignH": "CENTER",
+          "alignV": "TOP",
+          "height": 200,
+          "width": 200,
+          "bindings": [
+            {
+              "binding": "bnd_dev_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "GenericButton",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": -50,
+          "marginRight": 0,
+          "scaleX": 2,
+          "scaleY": 2,
+		  "showIconGlint": true
+		},
+        {
+          "commonName": "Rectangle",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "height": 40.0,
+          "width": 300.0,
+          "marginTop": 100,
+          "color": "0x1C1C1C",
+          "cornerRaduis": 12,
+          "alpha": 0.5
+        },
+        {
+          "commonName": "Label",
+          "name": "devNameLabel",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 100,
+          "width": 280,
+          "fontSize": 25,
+          "autoScroll": true,
+		  "forceCaps": true,
+          "fontColor": "0xffffff",
+          "fontFace": "$CruyffSansMedium",
+          "bindings": [
+            {
+              "binding": "bnd_name_valid",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "descriptionLabel",
+          "alignV": "CENTER",
+          "alignH": "FILL",
+          "marginTop": 150,
+          "fontSize": 17,
+		  "width": 1000,
+		  "textAlignH": "CENTER",
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "fontFace": "$CruyffSansMedium",
+          "bindings": [
+            {
+              "binding": "bnd_description",
+              "property": "text"
+            }
+          ]
+        },
+            {
+              "commonName": "Asset",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginLeft": 1,
+              "marginTop": 199,
+              "height": 83,
+              "width": 157,
+              "type": "$Tab_Action_White"
+            },
+            {
+              "commonName": "SimpleButton",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginLeft": 0,
+              "marginTop": 200,
+              "height": 80,
+              "width": 150,
+              "backgroundImage": "$Tab_Action_Green",
+              "backgroundHighlightImage": "$Tab_Action_Green",
+              "clickAction": "act_advance"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 200,
+              "marginLeft": 0,
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "text": "Advance"
+            },
+        {
+          "commonName": "AssetButton",
+          "name": "prevButton",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 100,
+          "marginLeft": -120,
+          "width": 65,
+          "height": 65,
+          "clickAction": "act_prev_dev_type",
+          "buttonAsset": "$ArrowLeftHighlight"
+        },
+        {
+          "commonName": "AssetButton",
+          "name": "nextButton",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 100,
+          "marginRight": -120,
+          "width": 65,
+          "height": 65,
+          "clickAction": "act_next_dev_type",
+          "buttonAsset": "$ArrowRightHighlight"
+        },
+        {
+          "commonName": "Label",
+          "name": "advanceLabel",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 10,
+          "fontSize": 0,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "fontFace": "$CruyffSansMedium",
+          "text": "Input Your Names",
+          "bindings": [
+            {
+              "binding": "bnd_manual_input_visible",
+              "property": "visible"
+            }
+          ]
+        },
+        {
+          "commonName": "InputTextField",
+          "name": "manualInputField",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 50,
+          "width": 200,
+          "height": 40,
+          "maxChars": 15,
+          "keyboardLayout": "EMAIL",
+          "changeAction": "act_text_change",
+          "bindings": [
+            {
+              "binding": "bnd_manual_input_visible",
+              "property": "visible"
+            },
+            {
+              "binding": "bnd_input_placeholder",
+              "property": "text"
+            }
+          ],
+          "styles": [
+            "TF_SQDMGMT_CREATE_TEXTFIELD"
+          ]
+        }
+      ]
+    }
+  ]
+}

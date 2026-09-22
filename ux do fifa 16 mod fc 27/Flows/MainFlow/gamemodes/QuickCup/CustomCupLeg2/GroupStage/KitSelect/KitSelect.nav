@@ -1,0 +1,71 @@
+{
+    "name": "KitSelect",
+    "initial":
+    {
+        "targets": ["KitSelectStartMatch"]
+    },
+    "states":
+    [
+        {
+            "name": "KitSelectStartMatch",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["KitSelectStartMatch.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_kitselect",
+                    "targets": ["Kitselect"]
+                },                
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_refresh_on_resize",
+                    "targets": ["KitSelectStartMatch"]
+                }
+            ]
+        },
+        {
+            "name": "Kitselect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/MatchSelect/KitSelect/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "KitSelectStartMatch"
+            }
+        },        
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/KitSelect/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "KitSelectStartMatch"
+            }
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        }
+    ]
+}

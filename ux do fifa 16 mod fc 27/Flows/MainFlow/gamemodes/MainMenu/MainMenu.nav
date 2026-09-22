@@ -1,0 +1,367 @@
+{
+    "name": "MainMenu",
+    "type": "parallel",
+    "states":
+    [
+        {
+            "states":
+            [
+                {
+                    "name": "InitHub",
+                    "onEnter":
+                    [
+                        ["showFEUI"],
+                        ["enableMainFlowLayerMouseInteraction", ["Widgets", true, false]],
+                        ["blockingLoadVVM", ["/flows/mainflow/widgets/extendeduserbio/loading/Loading.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_on_show_fe_ui_complete",
+                            "targets": ["MainMenuHub"]
+                        }
+                    ]
+                },
+                {
+                    "onEnter":
+                    [
+                        ["viewLayer", ["Gamemodes"]],
+                        ["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["updateUserPlateDisplayMode", ["full"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "MainMenuHub",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MainMenu/MainMenuHub.vvm", {}, { "viewType": "screen" }]],
+                                ["stateChange", ["ARENA"]],
+                                ["substateChange", ["SUBSTATE_NONE"]],
+                                ["updateUserPlateDisplayMode", ["full"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM", [{}, { "waitForNextView": ".enableScreenTransitions" }]]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "MenuFCHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuFC/MenuFCHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menufc_customize": "in_menufc_customize",
+                                        "out_menufc_matchday": "in_menufc_matchday"
+                                    }
+                                },
+                                {
+                                    "name": "MenuKOHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuKO/MenuKOHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menuko_customize": "in_menuko_customize",
+                                        "out_menuko_kickoff": "in_menuko_kickoff"
+                                    }
+                                },
+                                {
+                                    "name": "MenuTNHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuTN/MenuTNHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menutn_customize": "in_menutn_customize",
+                                        "out_menutn_tournaments": "in_menutn_tournaments"
+                                    }
+                                },
+                                {
+                                    "name": "MenuCMHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCM/MenuCMHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menucm_customize": "in_menucm_customize",
+                                        "out_menucm_careermode": "in_menucm_careermode"
+                                    }
+                                },
+                                {
+                                    "name": "MenuLMHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuLM/MenuLMHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menulm_customize": "in_menulm_customize",
+                                        "out_menulm_leaguemode": "in_menulm_leaguemode"
+                                    }
+                                },
+                                {
+                                    "name": "MenuMDHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuMD/MenuMDHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menumd_customize": "in_menumd_customize",
+                                        "out_menumd_matchday": "in_menumd_matchday"
+                                    }
+                                },
+                                {
+                                    "name": "MenuRMHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuRM/MenuRMHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menurm_customize": "in_menurm_customize",
+                                        "out_menurm_rivalmatch": "in_menurm_rivalmatch"
+                                    }
+                                },
+                                {
+                                    "name": "MenuCLHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCL/MenuCLHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_bt": "MenuBTHub",
+                                        
+                                        "out_menucl_customize": "in_menucl_customize",
+                                        "out_menucl_challenge": "in_menucl_challenge"
+                                    }
+                                },
+                                {
+                                    "name": "MenuBTHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuBT/MenuBTHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_fc": "MenuFCHub",
+                                        "out_menu_ko": "MenuKOHub",
+                                        "out_menu_tn": "MenuTNHub",
+                                        "out_menu_cm": "MenuCMHub",
+                                        "out_menu_lm": "MenuLMHub",
+                                        "out_menu_md": "MenuMDHub",
+                                        "out_menu_rm": "MenuRMHub",
+                                        "out_menu_cl": "MenuCLHub",
+                                        
+                                        "out_menubt_customize": "in_menubt_customize",
+                                        "out_menubt_bestteams": "in_menubt_bestteams"
+                                    }
+                                }
+                            ]
+                        },				
+                        {
+                            "name": "MenuFC",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuFC/MenuFC.nav",
+                            "inputs":
+                            {
+                                "in_menufc_customize": "MenuFC_Customize",
+                                "in_menufc_matchday": "MenuFC_MatchDay"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+                        {
+                            "name": "MenuKO",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuKO/MenuKO.nav",
+                            "inputs":
+                            {
+                                "in_menuko_customize": "MenuKO_Customize",
+                                "in_menuko_kickoff": "MenuKO_KickOff"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+                        {
+                            "name": "MenuTN",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuTN/MenuTN.nav",
+                            "inputs":
+                            {
+                                "in_menutn_customize": "MenuTN_Customize",
+                                "in_menutn_tournaments": "MenuTN_Tournaments"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+                        {
+                            "name": "MenuCM",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCM/MenuCM.nav",
+                            "inputs":
+                            {
+                                "in_menucm_customize": "MenuCM_Customize",
+                                "in_menucm_careermode": "MenuCM_CareerMode"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+                        {
+                            "name": "MenuLM",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuLM/MenuLM.nav",
+                            "inputs":
+                            {
+                                "in_menulm_customize": "MenuLM_Customize",
+                                "in_menulm_leaguemode": "MenuLM_LeagueMode"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+                        {
+                            "name": "MenuMD",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuMD/MenuMD.nav",
+                            "inputs":
+                            {
+                                "in_menumd_customize": "MenuMD_Customize",
+                                "in_menumd_matchday": "MenuMD_MatchDay"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+                        {
+                            "name": "MenuRM",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuRM/MenuRM.nav",
+                            "inputs":
+                            {
+                                "in_menurm_customize": "MenuRM_Customize",
+                                "in_menurm_rivalmatch": "MenuRM_RivalMatch"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                             }
+                        },
+                        {
+                            "name": "MenuCL",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCL/MenuCL.nav",
+                            "inputs":
+                            {
+                                "in_menucl_customize": "MenuCL_Customize",
+                                "in_menucl_challenge": "MenuCL_Challenge"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+                        {
+                            "name": "MenuBT",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuBT/MenuBT.nav",
+                            "inputs":
+                            {
+                                "in_menubt_customize": "MenuBT_Customize",
+                                "in_menubt_bestteams": "MenuBT_BestTeams"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuFCHub"
+                            }
+                        },
+        {
+            "name": "MenuBT_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }                        
+                    ]
+                }
+            ]
+        }
+    ]
+}

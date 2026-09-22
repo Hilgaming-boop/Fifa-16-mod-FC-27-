@@ -1,0 +1,15 @@
+{
+    "name": "MenuMD",
+    "states":
+    [
+        {
+            "name": "MenuMD_MatchDay",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MatchDay/MatchDay.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

@@ -1,0 +1,473 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+		         	"name" : "show",
+		         	"script" :
+		         	[
+			             	{
+					              "anim" : "SCREEN_SHOW"
+			             	}
+		         	]
+		     },
+		     {
+		         	"name" : "hide",
+		         	"script" :
+		         	[
+			             	{
+					              "anim" : "SIMPLE_SCREEN_HIDE"
+			             	}
+		         	]
+	       	}
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "MatchReveal",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 1,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_universal_show"
+                }
+            ],
+            "children":
+            [                              
+                {
+                    "commonName": "Image",
+                    "name": "insHomeStadium",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_home_stadium_bg"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 520,
+                    "marginLeft": 595,
+                    "width": 150,
+                    "height": 100,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_live_logo"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Asset",
+                    "name": "Bg",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 10,
+                    "marginLeft": -320,
+                    "width": 790,  
+                    "height": 260,         
+                    "type": "$Icon_MatchReveal"
+                },
+                {
+                    "commonName": "Asset",
+                    "name": "Bg",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 500,
+                    "marginLeft": -400,
+                    "width": 420,  
+                    "height": 160,         
+                    "type": "$Icon_MatchReveal1"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "LogoLeague",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 10,
+                    "marginLeft": 40,
+                    "height": 80,
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "League",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 6,
+                            "marginTop": -165,
+                            "width": 35,  
+                            "height": 35,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 70,
+                            "marginTop": -85,
+                            "height": 4,
+                            "width": 40,
+                            "color": "0x000000",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "Home",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 60,
+                            "marginTop": -45,
+                            "width": 50,  
+                            "height": 50,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_crest",
+                                    "property": "image"
+                                }
+                            ]    
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "Away",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 120,
+                            "marginTop": -45,
+                            "width": 50,  
+                            "height": 50,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_crest",
+                                    "property": "image"
+                                }
+                            ]                 
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 65,
+                            "marginTop": -105,
+                            "fontFace": "$CruyffSansExpandes",
+                            "fontColor": "$COLOR_BLACK",
+                            "fontSize": 13,
+                            "text": "STADIUM"              
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 70,
+                            "marginTop": -120,
+                            "fontFace": "$CruyffSansExpandes",
+                            "fontColor": "$COLOR_BLACK",
+                            "fontSize": 15,
+                            "forceCaps": true,                         
+                            "width": 90,
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_stadium",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Loading",
+                    "alignV": "BOTTOM",
+                    "alignH": "RIGHT",
+                    "marginBottom": 10,
+                    "width": 200,
+                    "height": 80,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "insLoadingIndicator",
+                            "path": "views/loadingindicator/loadingIcon.swf",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 200000000,
+                            "marginTop": -3,
+                            "width": 65,  
+                            "height": 65  
+                         },
+                         {
+                            "commonName": "GenericButton",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": -100,
+                            "marginTop": 10,
+                            "scaleX": 0.6,
+                            "scaleY": 0.6,
+                            "icon": "$SimMatchIcon4",
+                            "clickAction": ""                 
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": -40,
+                            "marginTop": 10,
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 17,
+                            "autoTextShadow": true,
+                            "text": "Hold for Full Match Intro"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MatchReveal",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 1,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_cup_show"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "name": "insHomeStadium",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_home_cup_bg"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Logo",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginLeft": 50,
+                    "marginTop": 50,
+                    "width": 50,  
+                    "height": 50,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Preview",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 410,
+                    "width": 500,  
+                    "height": 500,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 25,
+                            "forceCaps": true,
+                            "autoTextShadow": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_type",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "CrestHome",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -150,
+                            "marginTop": 90,
+                            "width": 100,  
+                            "height": 100,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_crest",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -150,
+                            "marginTop": 230,
+                            "fontFace": "$FONT_BOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 20,
+                            "forceCaps": true,
+                            "autoTextShadow": true,
+                            "width": 200,
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "CrestAway",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 150,
+                            "marginTop": 90,
+                            "width": 100,  
+                            "height": 100,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_crest",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 150,
+                            "marginTop": 230,
+                            "fontFace": "$FONT_BOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 20,
+                            "forceCaps": true,
+                            "autoTextShadow": true,
+                            "width": 200,
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 150,
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 20,
+                            "autoTextShadow": true,
+                            "text": "VS"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 60,
+                            "fontFace": "$FONT_BOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 15,
+                            "alpha": 0.7,
+                            "autoTextShadow": true,
+                            "text": "Stadium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 80,
+                            "fontFace": "$FONT_BOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 17,
+                            "forceCaps": true,
+                            "autoTextShadow": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_stadium",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "insLoadingIndicator",
+                            "path": "views/loadingindicator/loadingIcon.swf",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 4,
+                            "marginTop": 200,
+                            "width": 65,  
+                            "height": 65
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

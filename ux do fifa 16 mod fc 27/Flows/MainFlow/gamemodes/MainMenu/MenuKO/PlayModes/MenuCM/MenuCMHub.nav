@@ -1,0 +1,38 @@
+{
+    "name": "MenuCMHub",
+    "onEnter":
+    [
+        ["setTabContext", [0]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuCMHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_back"]
+        },       
+        {
+            "event": "evt_menu_md",
+            "targets": ["out_menu_md"]
+        },       
+        {
+            "event": "evt_menu_ucl",
+            "targets": ["out_menu_ucl"]
+        },       
+        {
+            "event": "evt_menu_cl",
+            "targets": ["out_menu_cl"]
+        },       
+        {
+            "event": "evt_kickoff",
+            "targets": ["out_menucm_kickoff"]
+        }
+    ]
+}

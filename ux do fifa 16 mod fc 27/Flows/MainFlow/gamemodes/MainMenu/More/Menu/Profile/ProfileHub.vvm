@@ -1,0 +1,5 @@
+{
+    "dds": ["ProfileHub.dd", "/lua/common/TabModel.dd", "/lua/enums/Home/Animated.dd"],
+    "vms": [["lua", "/lua/common/TabModel.lua"], ["lua", "ProfileHub.lua"], ["lua", "/lua/enums/Home/Animated.lua"]],
+    "views": [["gfx", { "layout": "ProfileHub.layout" }]]
+}

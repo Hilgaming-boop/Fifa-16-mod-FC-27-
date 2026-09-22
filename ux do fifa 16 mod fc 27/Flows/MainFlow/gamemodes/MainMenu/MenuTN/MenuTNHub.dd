@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_tournaments",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_tournaments"
+			}
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_tournaments",
+			"binding": "bnd_live_tile_tournaments",
+			"type": "live_tile"
+		}
+	]
+}

@@ -1,0 +1,669 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+            }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$"
+        },
+        {
+            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 0,
+                    "color": "0x2B2B2B",
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x000000",
+                    "alpha": 0
+                },                
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 233,
+                    "marginLeft": -700,
+                    "fontSize": 0,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$",
+                    "clickAction": ""
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": ""
+                    },
+                {
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 60,
+                            "height": 60,
+                            "type": "$"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "type": "$",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "clickAction": ""
+                    }
+            ]
+        },
+        {
+            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "type": "$",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "clickAction": ""
+                }
+            ]
+        },
+        {
+        "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginBottom": 0,
+            "width": 900,
+            "height": 180,
+            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_panelvisible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_panelanim",
+                                    "property": "alpha"
+                                }
+                            ],
+                    "children":
+                    [
+                        {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 0.1,
+                                    "height": 0.1,
+                                    "alpha": 0,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 0.1,
+                                    "height": 0.1,
+                                    "alpha": 0,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "",
+                                            "property": "image"
+                                            }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                            [
+                                {
+                                    "binding": "bnd_panelvisible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_panelanim",
+                                    "property": "alpha"
+                                }
+                            ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab10_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 240,
+                                    "height": 50,
+                                    "type": "$White_Action_X_Large"
+                                    },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 26,
+                    "marginLeft": 8,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 19,
+                    "fontColor": "$COLOR_BLACK",
+                    "alpha": 1,
+                    "text": "Enter New Game"
+                    },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -246,
+                            "marginLeft": 2,
+                            "width": 367,
+                            "height": 395,
+                            "type": "$Tab_Cup_Select",
+                            "alpha": 0.8
+                                },
+                                {
+                                "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_newgame"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "LEFT",
+                            "alignH": "CENTER",
+                            "marginTop": 9000,
+                            "marginLeft":-8000,
+                            "height": 0.01,
+                            "width": 0.01,
+                            "alpha": 0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab9_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 240,
+                                    "height": 50,
+                                    "type": "$"
+                                    },
+                 {
+                 "commonName": "Rectangle",
+                            "alignH": "CENTER",                           
+                            "height": 200,
+                            "width": 520,
+                            "marginTop": 0,
+                            "cornerRaduis": 10,
+                            "color": "0xFFFFFF",
+                            "alpha": 1
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 9,
+                            "marginLeft": 19,
+                            "fontSize": 16,
+                            "fontFace": "$CruyffSans-Medium",
+                            "fontColor": "$COLOR_BLACK",
+                            "text": "No"
+                        },
+                        {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 0,
+                    "fontColor": "$COLOR_BLACK",
+                    "alpha": 1,
+                    "text": "Enter Load Game"
+                                },
+                                {
+                                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -246,
+                            "marginLeft": -1,
+                            "width": 367,
+                            "height": 395,
+                            "type": "$",
+                            "alpha": 0.8
+                                },
+                                {
+                                "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "",
+                                            "property": "image"
+                                            }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "MvnprodButton",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginBottom": 20,
+            "width": 900,
+            "height": 180,
+            "alpha": 0,
+            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_panelvisible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "",
+                                    "property": ""
+                                }
+                            ],
+                    "children":
+                    [
+                        {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -135,
+                    "y": 50,
+                    "width": 170,
+                    "height": 20,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 170,
+                    "buttonHeight": 20,
+                    "alpha": 0,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -135,
+                    "y": 85,
+                    "width": 170,
+                    "height": 20,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 170,
+                    "buttonHeight": 20,
+                    "selectable": true
+                    },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 40,
+                    "y": 50,
+                    "width": 170,
+                    "height": 20,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 170,
+                    "buttonHeight": 20,
+                    "selectable": true
+                    },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 40,
+                    "y": 85,
+                    "width": 170,
+                    "height": 20,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 170,
+                    "buttonHeight": 20,
+                    "selectable": true
+                    },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 210,
+                    "y": 50,
+                    "width": 160,
+                    "height": 20,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 160,
+                    "buttonHeight": 20,
+                    "selectable": true
+                    }
+            ]
+        },
+        {
+        "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginTop": 0,
+            "marginLeft": 40,
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                    },
+                        {
+                        "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 110,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_toggle"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 166,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Stats"
+                }
+            ]
+         }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

@@ -1,0 +1,39 @@
+{
+    "name": "ClassicmatchMens",
+    "states":
+    [
+		{
+            "name": "MenuClassicmatchMens",
+            "onEnter":
+            [
+                ["loadVVM", ["/Flows/MainFlow/GameModes/Classicmatch/ClassicmatchMens/ClassicmatchMens.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_match_play",
+                    "targets": ["SelectKit"]
+                }
+            ]
+        },
+        {
+            "name": "SelectKit",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Classicmatch/SelectKit/SelectKit.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ClassicmatchMens",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+        
+    ]
+}

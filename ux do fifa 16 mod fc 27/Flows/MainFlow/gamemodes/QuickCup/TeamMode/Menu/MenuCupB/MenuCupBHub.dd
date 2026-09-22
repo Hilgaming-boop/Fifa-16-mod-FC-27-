@@ -1,0 +1,85 @@
+{
+    "actions":
+    [
+        {
+            "viewname":"act_a",
+            "actionname":"act_a"
+        },      
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_to_cup_libertadores",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_libertadores"
+			}
+		},
+		{
+			"viewname": "act_to_cup_worldcupwomens",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_worldcupwomens"
+			}
+		},
+		{
+			"viewname": "act_to_cup_copaamerica",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_copaamerica"
+			}
+        },
+        {
+           "viewname": "act_to_cup_worldcup",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_worldcup"
+            }
+        },
+        {
+           "viewname": "act_to_cup_clubworldcup",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_cup_clubworldcup"
+		     }
+        }
+    ],
+    "data":
+	[
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}    

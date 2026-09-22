@@ -1,0 +1,564 @@
+/*-- Layout Animated Design MOUNTSA--*/
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    { "binding": "BND_SCREEN_HEIGHT", "property": "height" },
+    { "binding": "BND_SCREEN_WIDTH", "property": "width" }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [ { "anim": "SCREEN_SHOW" } ]
+    },
+    {
+      "name": "hide",
+      "script": [ { "anim": "SIMPLE_SCREEN_HIDE" } ]
+    }
+  ],
+    "style-definitions":
+    {
+    "TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$FONT_ORIGIN_NORMAL",
+			"fontSize": 22,
+			"alpha": 0.7,
+			"fontColor": "0x808080",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$FONT_ORIGIN_NORMAL",
+			"fontSize": 22,
+			"alpha": 0.8,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+		}
+    },      
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "type": "$Bg_Career"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.5,
+      "type": "$Bg_Smoke"
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrameMain",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 86,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+          "text": "Back"
+        },
+        {
+          "commonName": "Panel",
+          "name": "Preview",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "height": 580,
+          "children": [
+            {
+              "commonName": "Image",
+              "name": "LogoManHome",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": -490,
+              "marginTop": 35,
+              "width": 430,
+              "height": 430,
+              "bindings": [
+                { "binding": "", "property": "image" }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoManAway",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginRight": -450,
+              "marginTop": 35,
+              "width": 430,
+              "height": 430,
+              "bindings": [
+                { "binding": "", "property": "image" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrameTop",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginLeft": 25,
+      "marginTop": 55,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel0Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            { "binding": "bnd_panel0_visible", "property": "Visible" }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount0",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": { "end": { "alpha": 0, "marginLeft": -50 }, "duration": 50 }
+                },
+                { "type": "Delay", "data": { "duration": 50 } },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                    "duration": 400,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Asset",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "marginLeft": 60,
+              "width": 65,
+              "height": 65,
+              "type": "$Icon_Ko"
+            },
+            {
+              "commonName": "Label",
+              "name": "KickOffLabel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": -2,
+              "marginLeft": 148,
+              "fontSize": 22,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSans-Bold",
+              "text": "Kick Off"
+            },
+            {
+              "commonName": "Label",
+              "name": "PipeLabel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": -5,
+              "marginLeft": 257,
+              "fontSize": 25,
+              "fontColor": "$COLOR_LIGHT_GRAY",
+              "fontFace": "$FONT_ORIGIN_NORMAL",
+              "alpha": 0.3,
+              "text": "|"
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_panel0",
+          "script": "animateCount0",
+          "target": "panel0Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_panel0",
+          "target": "trigger_fadein_panel0",
+          "bindings": [
+            { "binding": "bnd_animate_count0", "property": "value" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 36,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            { "binding": "bnd_panel1_visible", "property": "Visible" }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": { "end": { "alpha": 0, "marginLeft": 80 }, "duration": 50 }
+                },
+                { "type": "Delay", "data": { "duration": 50 } },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                    "duration": 400,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "LiveTile",
+              "name": "MatchPreviewTile",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginBottom": 7,
+              "marginLeft": 280,
+              "width": 300,
+              "height": 30,
+              "clickAction": "act_match_preview",
+              "headline": ["Match Preview"]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_panel1",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_panel1",
+          "target": "trigger_fadein_panel1",
+          "bindings": [
+            { "binding": "bnd_animate_count1", "property": "value" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout2",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 36,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel2Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            { "binding": "bnd_panel2_visible", "property": "Visible" }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount2",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": { "end": { "alpha": 0, "marginLeft": 80 }, "duration": 50 }
+                },
+                { "type": "Delay", "data": { "duration": 50 } },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                    "duration": 400,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "LiveTile",
+              "name": "TeamManagementTile",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginBottom": 7,
+              "marginLeft": 445,
+              "width": 300,
+              "height": 30,
+              "clickAction": "act_team_management",
+              "headline": ["Team Management"]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_panel2",
+          "script": "animateCount2",
+          "target": "panel2Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_panel2",
+          "target": "trigger_fadein_panel2",
+          "bindings": [
+            { "binding": "bnd_animate_count2", "property": "value" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout3",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 36,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel3Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            { "binding": "bnd_panel3_visible", "property": "Visible" }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount3",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": { "end": { "alpha": 0, "marginLeft": 80 }, "duration": 50 }
+                },
+                { "type": "Delay", "data": { "duration": 50 } },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                    "duration": 400,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "LiveTile",
+              "name": "GameSettingsTile",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginBottom": 7,
+              "marginLeft": 660,
+              "width": 300,
+              "height": 30,
+              "clickAction": "act_game_settings",
+              "headline": ["Game Settings"]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_panel3",
+          "script": "animateCount3",
+          "target": "panel3Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_panel3",
+          "target": "trigger_fadein_panel3",
+          "bindings": [
+            { "binding": "bnd_animate_count3", "property": "value" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout4",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 36,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel4Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            { "binding": "bnd_panel4_visible", "property": "Visible" }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount4",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": { "end": { "alpha": 0, "marginLeft": 80 }, "duration": 50 }
+                },
+                { "type": "Delay", "data": { "duration": 50 } },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                    "duration": 400,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "LiveTile",
+              "name": "ControllerSettingsTile",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginBottom": 7,
+              "marginLeft": 830,
+              "width": 300,
+              "height": 30,
+              "clickAction": "act_controller",
+              "headline": ["Controller Settings"]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_panel4",
+          "script": "animateCount4",
+          "target": "panel4Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_panel4",
+          "target": "trigger_fadein_panel4",
+          "bindings": [
+            { "binding": "bnd_animate_count4", "property": "value" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout5",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 36,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel5Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            { "binding": "bnd_panel5_visible", "property": "Visible" }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount5",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": { "end": { "alpha": 0, "marginLeft": 80 }, "duration": 50 }
+                },
+                { "type": "Delay", "data": { "duration": 50 } },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                    "duration": 400,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "LiveTile",
+              "name": "DetailedStatsTile",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginBottom": 7,
+              "marginLeft": 1037,
+              "width": 300,
+              "height": 30,
+              "clickAction": "act_detail_stats",
+              "headline": ["Detailed Stats"]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_panel5",
+          "script": "animateCount5",
+          "target": "panel5Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_panel5",
+          "target": "trigger_fadein_panel5",
+          "bindings": [
+            { "binding": "bnd_animate_count5", "property": "value" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+/*-- Layout Animated Design MOUNTSA--*/

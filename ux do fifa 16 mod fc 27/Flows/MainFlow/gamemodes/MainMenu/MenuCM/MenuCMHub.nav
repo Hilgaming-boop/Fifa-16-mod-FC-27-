@@ -1,0 +1,58 @@
+{
+    "name": "MenuCMHub",
+    "onEnter":
+    [
+        ["setTabContext", [3]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuCMHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_menu_ko",
+            "targets": ["out_menu_ko"]
+        },
+        {
+            "event": "evt_menu_fc",
+            "targets": ["out_menu_fc"]
+        },
+        {
+            "event": "evt_menu_tn",
+            "targets": ["out_menu_tn"]
+        },       
+        {
+            "event": "evt_menu_lm",
+            "targets": ["out_menu_lm"]
+        },       
+        {
+            "event": "evt_menu_md",
+            "targets": ["out_menu_md"]
+        },       
+        {
+            "event": "evt_menu_rm",
+            "targets": ["out_menu_rm"]
+        },       
+        {
+            "event": "evt_menu_cl",
+            "targets": ["out_menu_cl"]
+        },
+        {
+            "event": "evt_menu_bt",
+            "targets": ["out_menu_bt"]
+        },       
+        {
+            "event": "evt_customize",
+            "targets": ["out_menucm_customize"]
+        },
+        {
+            "event": "evt_careermode",
+            "targets": ["out_menucm_careermode"]
+        }
+    ]
+}

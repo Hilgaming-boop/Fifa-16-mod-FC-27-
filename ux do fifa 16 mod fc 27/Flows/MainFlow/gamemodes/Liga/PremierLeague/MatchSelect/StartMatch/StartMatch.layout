@@ -1,0 +1,1984 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings": [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts": [
+        {
+            "name": "show",
+            "script": [{ "anim": "SCREEN_SHOW" }]
+        },
+        {
+            "name": "hide",
+            "script": [{ "anim": "SIMPLE_SCREEN_HIDE" }]
+        }
+    ],
+    "children": [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 1,
+            "type": "$eplBg"
+        },     
+		{
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 30,
+            "marginLeft": 0,
+            "fontSize": 23,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$CruyffSans-Regular",
+            "bold":true,
+            "text": "Premier\nLeague"
+        },		
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "marginBottom": -15,
+            "marginLeft": 10,
+            "children": [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_exit"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                }
+            ]
+        },     
+        {
+                    "commonName": "Panel",
+                    "name": "MatchDataPanel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 260,
+                    "marginTop": -40,
+                    "width": 800,
+                    "height": 600,
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "visible": true,
+                    "children": [
+                    /*Teams Info*/
+                    	{
+				            "commonName": "Image",
+				            "marginTop": 100,
+				            "marginLeft": 0,
+				            "scaleY": 0.2,
+				            "scaleX": 0.2,
+							"flipY": false,
+							/*"blendMode": "SCREEN", */
+				            "bindings": [ { "binding": "bnd_HomeCrest", "property": "image"} ]
+				        },
+						{
+				            "commonName": "Image",
+				            "marginTop": 100,
+				            "marginLeft": 220,
+				            "scaleY": 0.2,
+				            "scaleX": 0.2,
+							"flipY": false,
+							/*"blendMode": "SCREEN", */
+				            "bindings": [ { "binding": "bnd_AwayCrest", "property": "image"} ]
+				        },
+						{
+				            "commonName": "Image",
+				            "marginTop": 100,
+				            "marginLeft": -100,
+				            "scaleY": 0.2,
+				            "scaleX": 0.2,
+							"flipY": false,
+							/*"blendMode": "SCREEN", */
+				            "bindings": [ { "binding": "bnd_HomeKit", "property": "image"} ]
+				        },
+						{
+				            "commonName": "Image",
+				            "marginTop": 100,
+				            "marginLeft": 320,
+				            "scaleY": 0.2,
+				            "scaleX": 0.2,
+							"flipY": false,
+							/*"blendMode": "SCREEN", */
+				            "bindings": [ { "binding": "bnd_AwayKit", "property": "image"} ]
+				        },
+				/*Match Info*/
+						{
+		                    "commonName": "Label",
+		                    "fontSize": 18,
+							"marginTop": 115,
+							"marginLeft": 110,
+		                    "fontColor": "0xFFFFFF",
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+							"bold": true,
+		                    "text": "Today"
+		                }						
+				]
+		},
+		{
+            "commonName": "Panel",
+            "name": "BtnPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 260,
+            "marginTop": -40,
+            "width": 800,
+            "height": 600,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "visible": true,
+            "children": [        
+				{
+                    "commonName": "Panel",
+                    "name": "Btn1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": -650,
+                    "marginTop": 290,		
+					"width": 385,									
+					"height": 55,                  
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "visible": true,
+                    "children": [
+						{
+		                    "commonName": "Rectangle",
+		                    "name": "BtnFrame",	
+							"alignV": "FILL",
+		                    "alignH": "FILL",
+		                    "cornerRaduis": 0,
+		                    "color": "0xFFFFFF",
+		                    "bindings": [ { "binding": "bnd_btn1visibility", "property": "alpha"} ]
+		                },
+						{
+		                    "commonName": "Label",
+		                    "fontSize": 24,
+							"alignV": "CENTER",
+		                    "alignH": "CENTER",		                    
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+							"bold": true,
+		                    "text": "Play Match",
+							"bindings": [ { "binding": "bnd_btn1textcolor", "property": "fontColor"} ]
+		                },
+						{
+		                    "commonName": "GenericButton",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",                    
+		                    "clickAction": "act_btn1"
+		                }
+					]
+				},           
+				{
+                    "commonName": "Panel",
+                    "name": "Btn2",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": -250,
+                    "marginTop": 290,		
+					"width": 385,									
+					"height": 55,                  
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "visible": true,
+                    "children": [
+						{
+		                    "commonName": "Rectangle",
+		                    "name": "BtnFrame",	
+							"alignV": "FILL",
+		                    "alignH": "FILL",
+		                    "cornerRaduis": 0,
+		                    "color": "0xFFFFFF",
+		                    "bindings": [ { "binding": "bnd_btn2visibility", "property": "alpha"} ]
+		                },
+						{
+		                    "commonName": "Panel",
+		                    "name": "BtnFrame",	
+							"alignV": "BOTTOM",
+		                    "alignH": "FILL",
+							"height": 165,
+							"bindings": [ { "binding": "bnd_btn1tabvisible", "property": "visible"} ],
+							"children": [
+							{
+			                    "commonName": "Panel",
+			                    "name": "Btn2ChildBtn1",
+			                    "alignV": "TOP",
+			                    "alignH": "FILL",							
+								"height": 55,                   
+			                    "visible": true,
+			                    "children": [
+									{
+				                    "commonName": "Rectangle",
+				                    "name": "BtnFrame",	
+									"alignV": "FILL",
+				                    "alignH": "FILL",
+				                    "color": "0xFFFFFF",
+				                    "bindings": [ { "binding": "bnd_btntabvisibility1", "property": "alpha"} ]
+				                },
+								{
+				                    "commonName": "Label",
+				                    "fontSize": 21,
+									"alignV": "CENTER",
+				                    "alignH": "CENTER",		                    
+				                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+									"bold": true,
+				                    "text": "Sim Match",
+									"bindings": [ { "binding": "bnd_btntabtextcolor1", "property": "fontColor"} ]									
+				                },
+								{
+				                    "commonName": "GenericButton",
+				                    "alignH": "CENTER",
+				                    "alignV": "CENTER",                    
+				                    "clickAction": "act_subbtn1"
+				                }
+							  ]
+							},
+							{
+			                    "commonName": "Panel",
+			                    "name": "Btn3ChildBtn2",
+			                    "alignV": "TOP",
+			                    "alignH": "FILL",							
+								"height": 55,
+								"marginTop": 55,                   
+			                    "visible": true,
+			                    "children": [
+									{
+				                    "commonName": "Rectangle",
+				                    "name": "BtnFrame",	
+									"alignV": "FILL",
+				                    "alignH": "FILL",
+				                    "color": "0xFFFFFF",
+				                    "bindings": [ { "binding": "bnd_btntabvisibility2", "property": "alpha"} ]
+				                },
+								{
+				                    "commonName": "Label",
+				                    "fontSize": 21,
+									"alignV": "CENTER",
+				                    "alignH": "CENTER",		                    
+				                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+									"bold": true,
+				                    "text": "Coach Mode",
+									"bindings": [ { "binding": "bnd_btntabtextcolor2", "property": "fontColor"} ]								
+				                },
+								{
+				                    "commonName": "GenericButton",
+				                    "alignH": "CENTER",
+				                    "alignV": "CENTER",                    
+				                    "clickAction": "act_subbtn2"
+				                }
+							  ]
+							}
+		                  ]
+		                },
+						{
+		                    "commonName": "Label",
+		                    "fontSize": 24,
+							"alignV": "CENTER",
+		                    "alignH": "CENTER",		                    
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+							"bold": true,
+		                    "text": "Tactical View",
+							"bindings": [ { "binding": "bnd_btn2textcolor", "property": "fontColor"} ]
+		                },
+						{
+		                    "commonName": "GenericButton",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",                    
+		                    "clickAction": "act_btn2"
+		                }
+					]
+				},				
+				{
+                    "commonName": "Panel",
+                    "name": "Btn3",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 150,
+                    "marginTop": 290,		
+					"width": 385,									
+					"height": 55,                   
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "visible": true,
+                    "children": [
+						{
+		                    "commonName": "Rectangle",
+		                    "name": "BtnFrame",	
+							"alignV": "FILL",
+		                    "alignH": "FILL",
+		                    "cornerRaduis": 0,
+		                    "color": "0xFFFFFF",
+		                    "bindings": [ { "binding": "bnd_btn3visibility", "property": "alpha"} ]
+		                },
+						{
+		                    "commonName": "Panel",
+		                    "name": "BtnFrame",	
+							"alignV": "BOTTOM",
+		                    "alignH": "FILL",
+							"height": 165,
+							"bindings": [ { "binding": "bnd_btn2tabvisible", "property": "visible"} ],
+							"children": [
+							{
+			                    "commonName": "Panel",
+			                    "name": "Btn3ChildBtn1",
+			                    "alignV": "TOP",
+			                    "alignH": "FILL",							
+								"height": 55,                   
+			                    "children": [
+									{
+				                    "commonName": "Rectangle",
+				                    "name": "BtnFrame",	
+									"alignV": "FILL",
+				                    "alignH": "FILL",
+				                    "color": "0xFFFFFF",
+				                    "bindings": [ { "binding": "bnd_btntabvisibility1", "property": "alpha"} ]
+				                },
+								{
+				                    "commonName": "Label",
+				                    "fontSize": 21,
+									"alignV": "CENTER",
+				                    "alignH": "CENTER",		                    
+				                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+									"bold": true,
+				                    "text": "Select Kits",
+									"bindings": [ { "binding": "bnd_btntabtextcolor1", "property": "fontColor"} ]									
+				                },
+								{
+				                    "commonName": "GenericButton",
+				                    "alignH": "CENTER",
+				                    "alignV": "CENTER",                    
+				                    "clickAction": "act_subbtn1"
+				                }
+							  ]
+							},
+							{
+			                    "commonName": "Panel",
+			                    "name": "Btn3ChildBtn2",
+			                    "alignV": "TOP",
+			                    "alignH": "FILL",							
+								"height": 55,
+								"marginTop": 55,                   
+			                    "visible": true,
+			                    "children": [
+									{
+				                    "commonName": "Rectangle",
+				                    "name": "BtnFrame",	
+									"alignV": "FILL",
+				                    "alignH": "FILL",
+				                    "color": "0xFFFFFF",
+				                    "bindings": [ { "binding": "bnd_btntabvisibility2", "property": "alpha"} ]
+				                },
+								{
+				                    "commonName": "Label",
+				                    "fontSize": 21,
+									"alignV": "CENTER",
+				                    "alignH": "CENTER",		                    
+				                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+									"bold": true,
+				                    "text": "Settings",
+									"bindings": [ { "binding": "bnd_btntabtextcolor2", "property": "fontColor"} ]								
+				                },
+								{
+				                    "commonName": "GenericButton",
+				                    "alignH": "CENTER",
+				                    "alignV": "CENTER",                    
+				                    "clickAction": "act_subbtn2"
+				                }
+							  ]
+							}
+		                  ]
+		                },						
+						{
+		                    "commonName": "Label",
+		                    "fontSize": 24,
+							"alignV": "CENTER",
+		                    "alignH": "CENTER",		                    
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+							"bold": true,
+		                    "text": "Customise",
+							"bindings": [ { "binding": "bnd_btn3textcolor", "property": "fontColor"} ]
+		                },
+						{
+		                    "commonName": "GenericButton",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",                    
+		                    "clickAction": "act_btn3"
+		                }
+					]
+				}									
+			]
+		},
+		/*Starting 11 Players Panel*/
+         {
+                    "commonName": "Panel",
+                    "name": "FormationPanel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 0,
+                    "marginTop": -70,
+                    "width": 800,
+                    "height": 600,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "visible": true,
+                    "children": [
+                    	{
+				            "commonName": "Image",
+				            "marginTop": 230,
+				            "marginLeft": 45,
+				            "scaleY": 0.9,
+				            "scaleX": 1.1,
+							"flipY": false,
+							"blendMode": "SCREEN", 
+							"alpha": 0.7,
+				            "image": "$Fcsquad"
+				        },
+						{
+		                    "commonName": "Label",
+		                    "alignV": "CENTER",
+		                    "alignH": "CENTER",
+		                    "fontSize": 20,
+							"marginTop": 330,
+		                    "fontColor": "0xFFFFFF",
+		                    "fontFace": "$CruyffSans-Regular",		                    
+							"bold": true,
+							"bindings": [ { "binding": "bnd_formationname", "property": "text"} ]
+		                },
+						{
+				            "commonName": "Panel",
+				            "name": "EditTacticBtn",
+				            "alignV": "CENTER",
+							"alignH": "CENTER",
+							"marginTop": 290,
+				            "width": 140,
+				            "height": 40,
+							"bindings": [ { "binding": "bnd_squadbtnvisible", "property": "visible"} ],
+				            "children": [						                
+								{
+				                    "commonName": "Label",
+				                    "alignV": "CENTER",
+				                    "alignH": "CENTER",
+				                    "fontSize": 21,
+				                    "fontColor": "0xFFFFFF",
+				                    "fontFace": "$CruyffSans-Regular",
+									"marginTop": 2,
+									"marginLeft": 10,
+				                    "text": "Team Management",
+									"bold": true
+				                },
+								{
+						            "commonName": "Image",
+									"alignV": "CENTER",
+				                    "alignH": "CENTER",
+						            "marginTop": 5,
+						            "marginLeft": -100,
+						            "scaleY": 0.9,
+						            "scaleX": 0.9,
+									"flipY": false,
+									/*"blendMode": "SCREEN", */
+						            "image": "$HotKeyGamepadYButton"
+						        },
+								{
+				                    "commonName": "GenericButton",
+				                    "alignH": "CENTER",
+				                    "alignV": "TOP",       
+									"marginTop": -45,             
+				                    "clickAction": "act_onSquad"
+				                }								
+							]
+						},
+						{
+				            "commonName": "Panel",
+				            "name": "MatchInfo",
+				            "alignV": "CENTER",
+							"alignH": "CENTER",
+							"marginTop": -110,
+				            "width": 140,
+				            "height": 40,
+				            "children": [						                                               
+								{
+				                    "commonName": "Label",
+									"alignV": "CENTER",
+				                    "alignH": "CENTER",
+				                    "fontSize": 15,
+									"marginTop": 0,
+									"marginLeft": 0,
+				                    "fontColor": "0xFFFFFF",
+				                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+									"bold": true,
+				                    "bindings": [ { "binding": "bnd_MatchInfo", "property": "text"} ]
+				                }						
+							]
+						},
+                        {
+                            "commonName": "Panel",
+                            "name": "Head1",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop1",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft1",
+                                    "property": "marginLeft"
+                                },
+                                {
+                                    "binding": "bnd_headvisible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting1",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected1",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname1",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos1",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr1",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head2",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop2",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft2",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting2",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected2",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname2",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos2",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr2",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head3",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop3",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft3",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting3",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected3",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname3",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos3",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr3",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head4",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop4",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft4",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting4",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected4",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname4",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos4",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr4",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head5",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop5",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft5",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting5",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected5",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname5",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos5",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr5",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head6",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop6",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft6",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting6",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected6",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname6",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos6",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr6",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head7",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop7",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft7",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting7",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected7",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname7",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos7",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr7",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head8",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop8",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft8",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting8",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected8",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname8",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos8",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr8",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head9",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop9",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft9",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting9",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected9",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname9",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos9",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr9",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head10",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop10",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft10",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting10",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected10",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname10",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos10",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr10",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Head11",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_posTop11",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_posLeft11",
+                                    "property": "marginLeft"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.4,
+                                    "scaleY": 0.4,
+                                    "alpha": 1,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_starting11",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.2,
+                                    "scaleY": 0.2,
+                                    "alpha": 1,
+                                    "image": "$Icon_Restart_Cup",
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_selected11",
+                                            "property": "visible"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "marginTop": 56,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingname11",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "marginTop": 40,
+                                    "marginLeft": -25,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingpos11",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 5,
+                                    "marginTop": 35,
+                                    "fontSize": 14,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "bold": true,
+                                    "bindings": [
+                                        {
+                                            "binding": "bnd_startingovr11",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+								{
+						            "commonName": "Panel",
+						            "name": "StaminaComponents",
+						            "alignV": "CENTER",
+									"alignH": "CENTER",
+						            "width": 70,
+						            "marginTop": 14,
+						            "height": 3.5,
+						            "children": [						                
+		                                {
+						                    "commonName": "Rectangle",
+						                    "name": "StaminaContainer",			                    
+						                    "alignH": "FILL",
+											"alignV": "FILL",											
+											"height": 3.5,
+						                    "cornerRaduis": 3,
+						                    "color": "0x595959",
+						                    "alpha": 1
+						                },
+										{
+						                    "commonName": "Rectangle",
+						                    "name": "Stamina",			                    
+						                    "alignH": "LEFT",
+											"alignV": "FILL",											
+											"height": 3.5,
+											"width": 70,
+						                    "cornerRaduis": 3,
+						                    "color": "0x00FF00",
+						                    "alpha": 1
+						                }
+									]
+								}                                                    
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "commonName": "Panel",
+            "name": "BtnsPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "marginTop": 70,
+            "width": 800,
+            "height": 600,
+            "visible": true,
+            "children": [            	
+				{
+		            "commonName": "Panel",
+		            "name": "EditTacticBtn",
+		            "alignV": "CENTER",
+					"alignH": "CENTER",
+					"marginTop": 380,
+		            "width": 140,
+		            "height": 40,
+		            "children": [						                
+                        {
+		                    "commonName": "Rectangle",
+		                    "name": "BtnFrame",			                    
+		                    "alignH": "FILL",
+							"alignV": "FILL",											
+							"height": 35,
+		                    "cornerRaduis": 20,
+		                    "color": "0xFFFFFF",
+		                    "alpha": 1
+		                },
+						{
+		                    "commonName": "Label",
+		                    "alignV": "CENTER",
+		                    "alignH": "CENTER",
+		                    "fontSize": 16,
+		                    "fontColor": "0x000000",
+		                    "fontFace": "$CruyffSans-Regular",
+							"marginTop": 2,
+							"marginLeft": 10,
+		                    "text": "Editad",
+							"bold": true
+		                },
+						{
+		                    "commonName": "GenericButton",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",                    
+		                    "clickAction": "act_confirm"
+		                }								
+					]
+				}
+			]
+		}		
+        
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

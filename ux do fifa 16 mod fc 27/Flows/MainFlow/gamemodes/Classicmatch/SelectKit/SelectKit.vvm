@@ -1,0 +1,5 @@
+{
+    "dds": ["SelectKit.dd"],
+    "vms": [["lua", "SelectKit.lua"]],
+    "views": [["gfx", { "layout": "SelectKit.layout" }]]
+}

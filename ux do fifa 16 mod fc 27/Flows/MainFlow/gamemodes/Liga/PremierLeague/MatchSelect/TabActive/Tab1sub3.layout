@@ -1,0 +1,99 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+      "commonName": "Panel",
+      "name": "TabInfoMatch",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 370,
+      "marginTop": -35,
+      "width": 350,
+      "height": 415,
+      "children": [
+        {
+           "commonName": "Image",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "bindings": [
+             {
+                 "binding": "bnd_tab_cup",
+                 "property": "image"
+              }
+            ]
+         },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 20,
+          "marginLeft": 0,
+          "fontSize": 30,
+          "alpha": 1,
+          "fontFace": "$MONTBLANC_TRIAL_BOLD",
+          "fontColor": "0xFFFFFF",
+          "text": "Top Score"
+        },
+        {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 89,
+                    "marginLeft": 20,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 6,
+                    "highlightable": true,
+                    "row": "Stats1Row",
+                    "rowHeight": 50,
+                    "rowWidth": 300,
+                    "bindings":
+                  [
+                {
+                    "binding": "bnd_match_score",
+                    "property": "dataProviders"
+                }
+              ]
+            },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -65,
+                    "marginLeft": 23,
+                    "fontSize": 50,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xFFFFFF",
+                    "text": "•",
+                    "textAlignH": "LEFT"
+                },                
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -55,
+                    "marginLeft": -40,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "icon": "$",
+                    "clickAction": "act_tab1sub1"
+                }
+           ]
+        }
+    ]
+}

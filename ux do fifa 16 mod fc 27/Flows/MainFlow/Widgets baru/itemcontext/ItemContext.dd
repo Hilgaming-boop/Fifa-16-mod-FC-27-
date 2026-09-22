@@ -1,0 +1,91 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_exit_context_popup",
+            "actionname": "act_exit_context_popup"
+        },
+        {
+            "viewname":   "act_header_click",
+            "actionname": "act_header_click"
+        },
+        {
+            "viewname":   "act_on_itemtoggle_loaded",
+            "actionname": "act_on_itemtoggle_loaded"
+        },
+        {
+            "viewname":   "act_on_item_toggle_complete",
+            "actionname": "act_on_item_toggle_complete"
+        },
+        {
+            "viewname":   "act_get_item_data_from_itemid",
+            "actionname": "act_get_item_data_from_itemid"
+        },
+		{
+            "viewname":   "act_move_to_club",
+            "actionname": "act_move_to_club"
+        },
+        {
+            "viewname":   "act_move_to_squad",
+            "actionname": "act_move_to_squad"
+        },
+        {
+            "viewname":   "act_make_active",
+            "actionname": "act_make_active"
+        },
+        {
+            "viewname":   "act_item_apply_consumable_pack",
+            "actionname": "act_item_apply_consumable_pack"
+        },
+        {
+            "viewname":   "act_disable_interaction",
+            "actionname": "act_disable_interaction"
+        },
+        {
+            "viewname":   "act_enable_interaction",
+            "actionname": "act_enable_interaction"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_title",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "AssignCards"
+            }
+        },
+		{
+			"viewname": "bnd_itemcontext_items_data",
+			"binding": "bnd_itemcontext_items_data",
+            "type":     "object"
+		},
+		{
+			"viewname": "bnd_item_options_data",
+			"binding": "bnd_item_options_data",
+            "type":     "object"
+		},
+		{
+			"viewname": "bnd_requested_item_data",
+			"binding": "bnd_requested_item_data",
+            "type":     "array"
+		},
+		{
+			"viewname": "bnd_context_group_id",
+			"binding": "bnd_context_group_id",
+            "type":     "int"
+		},
+		{
+			"viewname": "bnd_context_squad_pos_id",
+			"binding": "bnd_context_squad_pos_id",
+            "type":     "int"
+		},
+		{
+			"viewname": "bnd_item_view_enabled",
+			"binding": "bnd_item_view_enabled",
+			"type": "bool"
+		}
+    ]
+}

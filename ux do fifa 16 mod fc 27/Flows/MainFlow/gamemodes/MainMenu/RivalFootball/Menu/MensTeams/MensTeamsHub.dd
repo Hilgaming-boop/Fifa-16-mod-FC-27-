@@ -1,0 +1,16 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_rivalmens",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_rivalmens"
+			}
+		}
+	],
+	"data":
+	[
+	]
+}

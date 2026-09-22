@@ -1,0 +1,47 @@
+{
+    "name": "MusicHub",
+    "initial":
+    {
+        "targets": ["RedirectMusicHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectMusicHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MusicHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+
+                {
+                    "event": "evt_soundtrack",
+                    "targets": ["Soundtrack"]
+                }
+
+            ]
+        },
+
+        {
+            "name": "Soundtrack",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/More/Menu/Music/Soundtrack/MusicHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MusicHub"
+            }
+        }
+
+    ]
+}
+                
+            

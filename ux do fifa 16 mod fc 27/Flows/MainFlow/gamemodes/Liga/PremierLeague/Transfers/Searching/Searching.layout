@@ -1,0 +1,2109 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+        "style-definitions":
+    {
+		"TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 15,
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"leading": -4
+	    },
+		"TF_LIVE_TILE_HEADLINE_SMALL": 
+        {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 15,
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_HIGHLIGHTED_SMALL":
+        {
+			"fontFace": "$CruyffSansBold",
+			"fontSize": 15,
+		    "fontColor": "$COLOR_WHITE",
+			"leading": -4
+        }
+    },
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_leaguebackground",
+                   "property": "image"
+               }
+            ]        
+        },
+        {             
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": "act_search"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 185,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Search"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 240,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_reset"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 295,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Reset"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_CM"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -2,
+                            "marginLeft": 140,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Transfers"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 260,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": "|"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 300,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.5,
+                            "text": "Players Searching"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+         "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$"
+                                                
+                }
+            ]
+         },
+         {
+         "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 2000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0.1               
+                 }
+             ]                  
+         },
+         {
+                    "commonName": "Panel",
+            "name": "content",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 455,
+            "marginBottom": 60,
+            "marginLeft": 0,      
+            "marginTop": 30,
+            "width": 846,
+            "alpha": 1,
+            "children":
+            [
+                {
+                    "commonName": "Grid",
+                    "name": "filtersGrid",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "height": 390.0,
+                    "marginRight": 0.0,
+                    "marginTop": 75.0,
+                    "width": 600.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "spacingH": 0.0,
+                    "spacingV": 0.0,
+                    "columns":
+                    [
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "layout":
+                    [
+                        {
+                            "child": "filterCategory1",
+                            "column": 0,
+                            "row": 0
+                        },
+                        {
+                            "child": "filterCategory2",
+                            "color": "0x1C1C1C",
+                            "column": 1,
+                            "row": 0
+                        },
+                        {
+                            "child": "filterCategory3",
+                            "column": 2,
+                            "row": 0
+                        },
+                        {
+                            "child": "filterCategory4",
+                            "column": 0,
+                            "row": 1
+                        },
+                        {
+                            "child": "filterCategory5",
+                            "column": 1,
+                            "row": 1
+                        },
+                        {
+                            "child": "filterCategory6",
+                            "column": 2,
+                            "row": 1
+                        }
+                    ],
+                    "rows":
+                    [
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory6",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "imageWidth": 56, 
+                            "imageHeight": 76,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_6",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory5",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "imageWidth": 76, 
+                            "imageHeight": 86,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_5",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory4",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "imageWidth": 76, 
+                            "imageHeight": 86,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_4",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory3",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "imageWidth": 86, 
+                            "imageHeight": 86,
+                            "clickAction": "",
+                            "alternateBackground": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_3",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_club_filter_enabled",
+                                    "property": "forceDisabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory2",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "",
+                            "imageWidth": 210, 
+                            "imageHeight": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_2",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "",
+                            "alternateBackground": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_1",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }             
+            ]
+            },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": 90,
+                                    "fontSize": 20,
+                                    "fontColor": "0xffffff",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Player Name"
+                               },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 145,
+                    "marginLeft": 0,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "League"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 145,
+                    "marginLeft": 285,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Club"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 335,
+                    "marginLeft": 0,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Formation"
+                            },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 335,
+                    "marginLeft": 280,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Position"
+         },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 335,
+                    "marginLeft": -280,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Nationality"
+         },
+                {
+            "commonName": "Group",
+            "name": "MvnprodButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginBottom": 60,
+            "marginLeft": 0,      
+            "marginTop": 30,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 200,
+                    "y": 108,
+                    "width": 290,
+                    "height": 200,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 290,
+                    "buttonHeight": 200,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 480,
+                    "y": 108,
+                    "width": 290,
+                    "height": 200,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 290,
+                    "buttonHeight": 200,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 760,
+                    "y": 108,
+                    "width": 290,
+                    "height": 200,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 290,
+                    "buttonHeight": 200,
+                    "selectable": true
+                    },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 200,
+                    "y": 295,
+                    "width": 290,
+                    "height": 200,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 290,
+                    "buttonHeight": 200,
+                    "selectable": true
+                 },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 480,
+                    "y": 295,
+                    "width": 290,
+                    "height": 200,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 290,
+                    "buttonHeight": 200,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 760,
+                    "y": 295,
+                    "width": 290,
+                    "height": 200,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 290,
+                    "buttonHeight": 200,
+                    "selectable": true
+                }
+            ]
+          },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 460,
+            "marginBottom": 60,
+            "marginLeft": 0,      
+            "marginTop": 30,
+            "width": 1150,
+            "height": 480,
+            "children":
+            [            
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -46,
+                            "marginBottom": 280,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -75,
+                            "height": 140,
+                            "width": 272,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -72,
+                            "height": 180,
+                            "width": 272,
+                            "clickAction": "act_tex",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_1",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                               },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -29,
+                            "height": 140,
+                            "width": 272,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                            {
+                            "commonName": "Image",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 194,
+                            "marginBottom": -83,
+                            "height": 200,
+                            "width": 290,
+                            "bindings":
+                             [
+                                {
+                                    "binding": "bnd_searching_color",
+                                     "property": "image"
+                                 }
+                             ]
+                          },                           
+       {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 338,
+                            "marginBottom": 16,
+                            "height": 2,
+                            "width": 2,
+                            "imageWidth": 80, 
+                            "imageHeight": 80,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_1",
+                                    "property": "dataProviders"
+                                }
+                            ]                         
+                          },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 40,
+                            "width": 272,
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0 
+                              },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -42,
+                    "marginLeft": 88,
+                                    "fontSize": 20,
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Player Name"
+                            },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 200,
+                            "width": 290,
+                                    "clickAction": "act_text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 230,
+                            "marginBottom": 280,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -75,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -7200,
+                            "height": 180,
+                            "width": 272,
+                            "clickAction": "act_tex",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_2",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                               },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -29,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                            {
+                            "commonName": "Image",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 200,
+                            "marginBottom": -83,
+                            "height": 200,
+                            "width": 290,
+                            "bindings":
+                             [
+                                {
+                                    "binding": "bnd_searching_color",
+                                     "property": "image"
+                                 }
+                             ]
+                          },                           
+       {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 338,
+                            "marginBottom": 16,
+                            "height": 2,
+                            "width": 2,
+                            "imageWidth": 210,
+                            "imageHeight": 70,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_2",
+                                    "property": "dataProviders"
+                                }
+                            ]                         
+                          },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 40,
+                            "width": 272,
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0 
+                              },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": 94,
+                                    "fontSize": 20,
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "League"
+                            },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 200,
+                            "width": 290,
+                                    "clickAction": "act_show_filter2_overlay"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 512,
+                            "marginBottom": 280,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -75,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -72000,
+                            "height": 180,
+                            "width": 272,
+                            "clickAction": "act_tex",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_3",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                               },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -29,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                            {
+                            "commonName": "Image",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 200,
+                            "marginBottom": -83,
+                            "height": 200,
+                            "width": 290,
+                            "bindings":
+                             [
+                                {
+                                    "binding": "bnd_searching_color",
+                                     "property": "image"
+                                 }
+                             ]
+                          },                           
+       {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 344,
+                            "marginBottom": 16,
+                            "height": 2,
+                            "width": 2,
+                            "imageWidth": 86, 
+                            "imageHeight": 86,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_3",
+                                    "property": "dataProviders"
+                                }
+                            ]                         
+                          },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 40,
+                            "width": 272,
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0 
+                              },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": 98,
+                                    "fontSize": 20,
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Club"
+                            },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 200,
+                            "width": 290,
+                                    "clickAction": "act_show_filter3_overlay"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -46,
+                            "marginBottom": 89,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -75,
+                            "height": 140,
+                            "width": 272,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -700002,
+                            "height": 0.00001,
+                            "width": 272,
+                            "clickAction": "act_tex",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_4",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                               },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -29,
+                            "height": 140,
+                            "width": 272,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                            {
+                            "commonName": "Image",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 194,
+                            "marginBottom": -83,
+                            "height": 200,
+                            "width": 290,
+                            "bindings":
+                             [
+                                {
+                                    "binding": "bnd_searching_color",
+                                     "property": "image"
+                                 }
+                             ]
+                          },                           
+       {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 340,
+                            "marginBottom": 19,
+                            "height": 2,
+                            "width": 2,
+                            "imageWidth": 76, 
+                            "imageHeight": 86,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_4",
+                                    "property": "dataProviders"
+                                }
+                            ]                         
+                          },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 40,
+                            "width": 272,
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0 
+                              },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": 90,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Nationality"
+                            },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 200,
+                            "width": 290,
+                                    "clickAction": "act_show_filter4_overlay"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 235,
+                            "marginBottom": 90.,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -75,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0 
+                             },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -70002,
+                            "height": 0.00001,
+                            "width": 272,
+                            "clickAction": "act_tex",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_5",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                               },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -29,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0
+                             },
+                            {
+                            "commonName": "Image",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 195,
+                            "marginBottom": -83,
+                            "height": 200,
+                            "width": 290,
+                            "bindings":
+                             [
+                                {
+                                    "binding": "bnd_searching_color",
+                                     "property": "image"
+                                 }
+                             ]
+                          },                           
+       {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 340,
+                            "marginBottom": 19,
+                            "height": 2,
+                            "width": 2,
+                            "imageWidth": 76, 
+                            "imageHeight": 86,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_5",
+                                    "property": "dataProviders"
+                                }
+                            ]                         
+                          },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 40,
+                            "width": 272,
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0 
+                              },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": 90,
+                                    "fontSize": 20,
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Formation"
+                            },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 200,
+                            "width": 290,
+                                    "clickAction": "act_show_filter5_overlay"
+                                }
+                            ]
+                         },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab6",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 515,
+                            "marginBottom": 90,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab6_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -75,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0  
+                             },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -70002,
+                            "height": 0.0001,
+                            "width": 272,
+                            "clickAction": "act_tex",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_6",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                               },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -29,
+                            "height": 140,
+                            "width": 278,
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0  
+                            },
+                            {
+                            "commonName": "Image",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 196,
+                            "marginBottom": -83,
+                            "height": 200,
+                            "width": 290,
+                            "bindings":
+                             [
+                                {
+                                    "binding": "bnd_searching_color",
+                                     "property": "image"
+                                 }
+                             ]
+                          },                              
+                          {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 340,
+                            "marginBottom": 19,
+                            "height": 2,
+                            "width": 2,
+                            "imageWidth": 56, 
+                            "imageHeight": 76,
+                            "clickAction": "",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_6",
+                                    "property": "dataProviders"
+                                }
+                            ]                         
+                          },
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 40,
+                            "width": 272,
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 0,
+                                    "alpha": 0 
+                              },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": 90,
+                                    "fontSize": 20,
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "leading": 1,
+                                    "text": "Position"
+                            },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 206,
+                            "marginBottom": -59,
+                            "height": 200,
+                            "width": 290,
+                                    "clickAction": "act_show_filter6_overlay"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]                                   
+        },
+        {
+            "commonName": "Panel",
+            "name": "filterOverlayContainer",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "authoringData":
+            {
+                "visible": false,
+                "expanded": false
+            },
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "filtersPanelContainer",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_filter_table_container_height",
+                            "property": "height"
+                        },
+                        {
+                            "binding": "bnd_filter_table_width",
+                            "property": "width"
+                        }
+                    ],
+                    "behaviors":
+                    [
+                        {
+                            "commonName": "LoadItInOverlay",
+                            "name": "loadFilterTableInOverlay",
+                            "overlay": "gridTableOverlay",
+                            "overlayScrim": "scrimContainer",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_overlay_visibility",
+                                    "property": "loadInOverlay"
+                                },
+                                {
+                                    "binding": "bnd_filter_overlay_title",
+                                    "property": "overlayTitle"
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Grid",
+                            "name": "gridCountryInitials",
+                            "height": 56.0,
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "button0",
+                                    "column": 0,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider0",
+                                    "column": 1,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button1",
+                                    "column": 2,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider1",
+                                    "column": 3,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button2",
+                                    "column": 4,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider2",
+                                    "column": 5,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button3",
+                                    "column": 6,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider3",
+                                    "column": 7,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button4",
+                                    "column": 8,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider4",
+                                    "column": 9,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button5",
+                                    "column": 10,
+                                    "row": 0
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_country_initials_visible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_width",
+                                    "property": "width"
+                                }
+                            ],
+                            "authoringData":
+                            {
+                                "visible": false,
+                                "expanded": false
+                            },
+                            "children":
+                            [
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button0",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonAB",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_ab",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelAB",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter1_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_AB_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button1",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonCF",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_cf",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelCF",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter2_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_CF_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button2",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonGL",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_gl",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelGL",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter3_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_GL_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button3",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonMP",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_mp",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelMP",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter4_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_MP_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button4",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonQS",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_qs",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelQS",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter5_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_QS_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button5",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonTZ",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_tz",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelTZ",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter6_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_TZ_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider0",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider1",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider2",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider3",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider4",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                }
+                            ]                                  
+                        },
+                        {
+                            "commonName": "GridTable",
+                            "name": "filterGridTable",
+                            "cellIndexChangeAction":
+                            {
+                                "action": "act_change_filter_index",
+                                "binding": "bnd_filter_index"
+                            },
+                            "itemType": "FilterCell",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_table_height",
+                                    "property": "height"
+                                },
+                                {
+                                    "binding": "bnd_filter_grid_y_pos",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_columns",
+                                    "property": "columns"
+                                },
+                                {
+                                    "binding": "bnd_filter_category_data",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_default_cell_data",
+                                    "property": "defaultCellData"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_has_bullets",
+                                    "property": "hasBulletIndicator"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_cell_style",
+                                    "property": "itemStyleName"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_rows",
+                                    "property": "rows"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Group",
+                    "name": "scrimContainer",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "BND_SCREEN_HEIGHT",
+                            "property": "height"
+                        },
+                        {
+                            "binding": "BND_SCREEN_WIDTH",
+                            "property": "width"
+                        }
+                    ],
+                    "behaviors":
+                    [
+                        {
+                            "commonName": "ScrimClickBehavior",
+                            "name": "ClickThroughPreventer"
+                        },
+                        {
+                            "commonName": "PanelLayoutBehavior",
+                            "name": "MakeItAPanel"
+                        }
+                    ],
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "darkScrimAsset",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "styles":
+                            [
+                                "PopupScrim"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Overlay",
+                    "name": "gridTableOverlay",
+                    "height": 316.0,
+                    "width": 600.0,
+                    "footer":
+                    [
+                        {
+                            "icon": "$FooterIconNo",
+                            "clickAction": "act_filter_overlay_cancel",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "BND_LTXT_CNCL",
+                                    "property": "label"
+                                }
+                            ]
+                        },
+                        {
+                            "icon": "$FooterIconYes",
+                            "clickAction": "act_filter_overlay_any",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "BND_LTXT_ANY",
+                                    "property": "label"
+                                }
+                            ]                         
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

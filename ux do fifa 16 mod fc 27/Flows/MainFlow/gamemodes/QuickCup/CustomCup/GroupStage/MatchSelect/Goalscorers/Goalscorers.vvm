@@ -1,0 +1,6 @@
+{
+	"dds": ["Goalscorers.dd", "/lua/common/TabModel.dd"], 
+    "vms": [["lua", "/lua/common/TabModel.lua"], ["lua", "Goalscorers.lua"]],
+    "views": [["gfx", {"layout": "Goalscorers.layout"}]],
+	"ireqs": ["Goalscorers.ireq"]
+}

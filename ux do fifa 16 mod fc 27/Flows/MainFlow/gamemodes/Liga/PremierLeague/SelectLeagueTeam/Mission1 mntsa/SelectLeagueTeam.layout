@@ -1,0 +1,1378 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "SCREEN_SHOW"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "SIMPLE_SCREEN_HIDE"
+        }
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "commonName": "SquadCustomizationBehavior",
+      "actionName": "act_btn_click",
+      "buttonContainer": "insButtonsOptionsBot"
+    }
+  ],
+  "style-definitions": {
+    "TF_SELECT_FAVORITE_LEAGUE_TOGGLE": {
+      "fontFace": "$FONT_REGULAR",
+      "fontSize": 25,
+      "fontColor": "$COLOR_BLACK",
+      "textAlignH": "CENTER"
+    }
+  },
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "type": "$Bg_Career"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.1,
+      "type": "$Bg_Smoke"
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 86,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Back"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 130,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon1",
+          "clickAction": "act_proceed"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 185,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Confirm"
+        },
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+            
+            {
+                           "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 413,
+                            "marginLeft": 1110,
+                            "width": 50,
+                            "height": 50,
+                            "alpha": 0.6,
+                            "type": "$Divisa_Pin9"
+             },
+             {
+                           "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 319,
+                            "marginLeft": 978,
+                            "width": 100,
+                            "height": 90,
+                            "alpha": 0.8,
+                            "type": "$Divisa_Pin1"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "insTeamSelectorHome",
+      "alignH": "FILL",
+      "alignV": "CENTER",
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -400,
+          "marginTop": -240,
+          "width": 340,
+          "height": 50,
+          "color": "0x000000",
+          "cornerRaduis": 10,
+          "alpha": 0.2
+        },
+        {
+          "commonName": "Asset",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -550,
+          "marginTop": -240,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "alpha": 0,
+          "type": "$IconCheckMark"
+        },
+        {
+          "commonName": "Label",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -480,
+          "marginTop": -240,
+          "fontSize": 18,
+          "fontColor": "0xffffff",
+          "fontFace": "$CruyffSansMedium",
+          "alpha": 0.7,
+          "text": "Men's Team"
+        },
+        {
+          "commonName": "Label",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -300,
+          "marginTop": -240,
+          "fontSize": 18,
+          "fontColor": "0xffffff",
+          "fontFace": "$CruyffSansMedium",
+          "alpha": 0.7,
+          "text": "Women's Team"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "insTeamSelectorHome",
+      "alignH": "FILL",
+      "alignV": "CENTER",
+      "bindings": [
+        {
+          "binding": "bnd_mens_select_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -480,
+          "marginTop": -240,
+          "width": 170,
+          "height": 40,
+          "color": "0xffffff",
+          "cornerRaduis": 10,
+          "alpha": 1
+        },
+        {
+          "commonName": "Asset",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -550,
+          "marginTop": -240,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "alpha": 1,
+          "type": "$IconCheckMark"
+        },
+        {
+          "commonName": "Label",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -480,
+          "marginTop": -240,
+          "fontSize": 18,
+          "fontColor": "0x000000",
+          "fontFace": "$CruyffSansMedium",
+          "alpha": 1,
+          "text": "Men's Team"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "insTeamSelectorHome",
+      "alignH": "FILL",
+      "alignV": "CENTER",
+      "bindings": [
+        {
+          "binding": "bnd_womens_select_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -315,
+          "marginTop": -240,
+          "width": 170,
+          "height": 40,
+          "color": "0xffffff",
+          "cornerRaduis": 10,
+          "alpha": 1
+        },
+        {
+          "commonName": "Asset",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -380,
+          "marginTop": -240,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "alpha": 1,
+          "type": "$IconCheckMark"
+        },
+        {
+          "commonName": "Label",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -300,
+          "marginTop": -240,
+          "fontSize": 18,
+          "fontColor": "0x000000",
+          "fontFace": "$CruyffSansMedium",
+          "alpha": 1,
+          "text": "Women's Team"
+        }
+      ]
+    },
+    {
+      "commonName": "Group",
+      "name": "insButtonsOptionsBot",
+      "alignH": "CENTER",
+      "alignV": "CENTER",
+      "marginLeft": -100,
+      "alpha": 0,
+      "children": [
+        {
+          "commonName": "ClubButton",
+          "name": "countryButton",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "x": -450,
+          "y": -115,
+          "width": 300,
+          "height": 250,
+          "autoSelect": true,
+          "clickSFXID": "act_click_customization",
+          "id": 1,
+          "type": "blackandblue",
+          "buttonHeight": 250,
+          "buttonWidth": 300,
+          "buttonX": 0,
+          "buttonY": 0,
+          "selectable": true,
+          "rollOverSFXID": "mouse_over_customization"
+        },
+        {
+          "commonName": "ClubButton",
+          "name": "countryButton",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "x": -450,
+          "y": -210,
+          "width": 300,
+          "height": 50,
+          "autoSelect": true,
+          "clickSFXID": "act_click_customization",
+          "id": 2,
+          "type": "blackandblue",
+          "buttonHeight": 50,
+          "buttonWidth": 300,
+          "buttonX": 0,
+          "buttonY": 0,
+          "selectable": true,
+          "rollOverSFXID": "mouse_over_customization"
+        },
+        {
+          "commonName": "ClubButton",
+          "name": "countryButton",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "x": -450,
+          "y": 165,
+          "width": 300,
+          "height": 65,
+          "autoSelect": true,
+          "clickSFXID": "act_click_customization",
+          "id": 3,
+          "type": "blackandblue",
+          "buttonHeight": 65,
+          "buttonWidth": 300,
+          "buttonX": 0,
+          "buttonY": 0,
+          "selectable": true,
+          "rollOverSFXID": "mouse_over_customization"
+        },
+        {
+          "commonName": "ClubButton",
+          "name": "mensButton",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "x": -455,
+          "y": -261,
+          "width": 150,
+          "height": 40,
+          "autoSelect": true,
+          "clickSFXID": "act_click_customization",
+          "id": 5,
+          "type": "blackandblue",
+          "buttonHeight": 40,
+          "buttonWidth": 150,
+          "buttonX": 0,
+          "buttonY": 0,
+          "selectable": true,
+          "rollOverSFXID": "mouse_over_customization"
+        },
+        {
+          "commonName": "ClubButton",
+          "name": "mensButton",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "x": -290,
+          "y": -261,
+          "width": 150,
+          "height": 40,
+          "autoSelect": true,
+          "clickSFXID": "act_click_customization",
+          "id": 6,
+          "type": "blackandblue",
+          "buttonHeight": 40,
+          "buttonWidth": 150,
+          "buttonX": 0,
+          "buttonY": 0,
+          "selectable": true,
+          "rollOverSFXID": "mouse_over_customization"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "BagianInfo",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginLeft": 0,
+      "marginTop": 40,
+      "width": 600,
+      "height": 300,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "Info1",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "children": [
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": -47,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 20,
+              "fontColor": "$COLOR_WHITE",
+              "bold": false,
+              "width": 130,
+              "multiline": true,
+              "leading": -3,
+              "alpha": 1,
+              "text": "Board Expectations"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Regular",
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "width": 400,
+              "multiline": true,
+              "leading": 1,
+              "alpha": 0.7,
+              "text": "Domestic Success"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "Info2",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "children": [
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 20,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 20,
+              "bindings": [
+                {
+                  "binding": "bnd_difficulty_label1",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_difficulty_color1",
+                  "property": "fontColor"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 50,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Regular",
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "width": 400,
+              "multiline": true,
+              "leading": 1,
+              "alpha": 0.7,
+              "text": "Continental Success"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "Info3",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "children": [
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 70,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 20,
+              "bindings": [
+                {
+                  "binding": "bnd_difficulty_label2",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_difficulty_color2",
+                  "property": "fontColor"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 100,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Regular",
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "width": 400,
+              "multiline": true,
+              "leading": 1,
+              "alpha": 0.7,
+              "text": "Brand Exposure"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "Info4",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "children": [
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 120,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 20,
+              "bindings": [
+                {
+                  "binding": "bnd_difficulty_label3",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_difficulty_color3",
+                  "property": "fontColor"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 150,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Regular",
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "width": 400,
+              "multiline": true,
+              "leading": 1,
+              "alpha": 0.7,
+              "text": "Financial "
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 220,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 20,
+              "bindings": [
+                {
+                  "binding": "bnd_difficulty_label4",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_difficulty_color4",
+                  "property": "fontColor"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 200,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Regular",
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "width": 400,
+              "multiline": true,
+              "leading": 1,
+              "alpha": 0.7,
+              "text": "Players Form "
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "Info5",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "children": [
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 170,
+              "marginLeft": 500,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 20,
+              "bindings": [
+                {
+                  "binding": "bnd_difficulty_label5",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_difficulty_color5",
+                  "property": "fontColor"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": -50,
+              "marginLeft": 700,
+              "fontFace": "$CruyffSans-Regular",
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "bold": true,
+              "width": 5,
+              "multiline": true,
+              "leading": -3.1,
+              "alpha": 0.5,
+              "text": "||||||||||||||||||||||||"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "Info6",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "children": [
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": -100,
+              "marginLeft": 950,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 25,
+              "fontColor": "$COLOR_WHITE",
+              "bold": false,
+              "multiline": true,
+              "alpha": 0.7,
+              "text": "Club Info"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 130,
+              "marginLeft": 860,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "bold": false,
+              "multiline": true,
+              "alpha": 0.7,
+              "text": "Transfer Budget"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 150,
+              "marginLeft": 840,
+              "fontSize": 25,
+              "fontFace": "$CruyffSansLight",
+              "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team_value",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 130,
+              "marginLeft": 1120,
+              "fontFace": "$CruyffSans-Bold",
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "bold": false,
+              "alpha": 0.7,
+              "text": "Club Worth"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 150,
+              "marginLeft": 1070,
+              "fontSize": 28,
+              "fontFace": "$CruyffSansLight",
+              "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_transfer_budget",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Asset",
+              "alignV": "TOP",
+              "alignH": "CENTER",
+              "marginTop": 220,
+              "marginLeft": 850,
+              "width": 90,
+              "height": 90,
+              "type": "$"
+            },
+             {
+                         "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 298,
+                            "marginLeft": 1080,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "bold": false,
+                            "text": "Stadium Name"
+                        },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "CENTER",
+              "marginTop": 318,
+              "marginLeft": 840,
+              "fontFace": "$CruyffSans-Extended-Heavy",
+              "fontSize": 19,
+              "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_stadium_name",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "CENTER",
+              "marginTop": -30,
+              "marginLeft": 720,
+              "fontFace": "$CruyffSans-Regular",
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "width": 400,
+              "wrapText": true,
+              "leading": 1,
+              "alpha": 0.7,
+              "text": "The Team Was Founded On 1800's Era,By Some Workers That Really Love Football And Felt The Passion Of Football,This Team Is An Important Team Of His Respective League,It Have A Lot Of History Before,They Have Been Crowned Champion A Lot Of Titles In 1900's And 2000's Era,The Team Supporters Makes Good Expectations To This Season,The Season Start In Day 01/08/24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "Kit",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginTop": 140,
+      "marginLeft": 140,
+      "width": 200,
+      "height": 200,
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0x1C1C1C",
+          "cornerRaduis": 20,
+          "alpha": 0
+        },
+        {
+          "commonName": "Label",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 70,
+          "marginLeft": -50,
+          "fontFace": "$CruyffSans-Regular",
+          "fontSize": 15,
+          "fontColor": "$COLOR_WHITE",
+          "alpha": 1,
+          "text": "Home"
+        },
+        {
+          "commonName": "Label",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 70,
+          "marginLeft": 50,
+          "fontFace": "$CruyffSans-Regular",
+          "fontSize": 15,
+          "fontColor": "$COLOR_WHITE",
+          "alpha": 1,
+          "text": "Away"
+        },
+        {
+          "commonName": "Image",
+          "name": "insHomeKit",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 0,
+          "marginLeft": -50,
+          "height": 150,
+          "width": 145,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "bindings": [
+            {
+              "binding": "bnd_home_kit",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "name": "insHomeKit",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 0,
+          "marginLeft": 50,
+          "height": 150,
+          "width": 145,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "bindings": [
+            {
+              "binding": "bnd_away_kit",
+              "property": "image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "Country",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": -70,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 60,
+      "children": [
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": -115,
+          "marginLeft": 0,
+          "fontFace": "$CruyffSans-Bold",
+          "fontColor": "0xFFFFFF",
+          "fontSize": 18,
+          "alpha": 0.8,
+          "bindings": [
+            {
+              "binding": "bnd_country_name",
+              "property": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "Crest",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": 0,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 300,
+      "children": [
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": -115,
+          "marginLeft": 0,
+          "fontFace": "$CruyffSans-Bold",
+          "fontColor": "0xFFFFFF",
+          "fontSize": 18,
+          "alpha": 0.8,
+          "bindings": [
+            {
+              "binding": "bnd_selected_team_name",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": -10,
+          "scaleX": 0.7,
+          "scaleY": 0.7,
+          "bindings": [
+            {
+              "binding": "bnd_team_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "StarRating",
+          "name": "starRating",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 100,
+          "size": "medium",
+          "bindings": [
+            {
+              "binding": "bnd_team_star_rating",
+              "property": "stars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "LeagueContainerPanel",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": 200,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 80,
+      "children": [
+        {
+          "commonName": "Image",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 0,
+          "marginLeft": 0,
+          "scaleX": 0.4,
+          "scaleY": 0.4,
+          "alpha": 1,
+          "bindings": [
+            {
+              "binding": "bnd_league_crest",
+              "property": "image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "Country",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": -183,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 50,
+      "bindings": [
+        {
+          "binding": "bnd_home_league_select_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -150,
+          "marginTop": -60,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "alpha": 1,
+          "type": "$IconCheckMark"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "Country",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": -183,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 50,
+      "bindings": [
+        {
+          "binding": "bnd_home_team_select_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -150,
+          "marginTop": -60,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "alpha": 1,
+          "type": "$IconCheckMark"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "Country",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": -183,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 50,
+      "bindings": [
+        {
+          "binding": "bnd_home_country_select_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0xFFFFFF",
+          "cornerRaduis": 15,
+          "alpha": 1
+        },
+        {
+          "commonName": "Asset",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -150,
+          "marginTop": -60,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "alpha": 1,
+          "type": "$IconCheckMark"
+        },
+        {
+          "commonName": "AssetButton",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 20,
+          "clickAction": "act_away_league_previous",
+          "buttonAsset": "$ArrowLeft"
+        },
+        {
+          "commonName": "AssetButton",
+          "alignV": "CENTER",
+          "alignH": "RIGHT",
+          "marginBottom": 0,
+          "marginRight": 20,
+          "clickAction": "",
+          "buttonAsset": "$ArrowRight"
+        },
+        {
+          "commonName": "DragToggle",
+          "name": "teamsToggle",
+          "alignH": "CENTER",
+          "height": 1,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 0,
+          "width": 310,
+          "arrowType": "blue_medium",
+          "alpha": 1,
+          "clickAction": "act_select_team",
+          "clickSFX": "act_select_preferred_team",
+          "hasArrows": true,
+          "isCircular": true,
+          "itemStyleName": "TF_SELECT_FAVORITE_TEAM_TOGGLE",
+          "itemType": "Label",
+          "toggleAction": {
+            "action": "act_change",
+            "binding": "bnd_league_list_index"
+          },
+          "bindings": [
+            {
+              "binding": "bnd_league_list_toggle",
+              "property": "dataProviders"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 0,
+          "marginLeft": 0,
+          "fontFace": "$CruyffSans-Bold",
+          "fontColor": "0x000000",
+          "fontSize": 18,
+          "alpha": 0.8,
+          "bindings": [
+            {
+              "binding": "bnd_country_name",
+              "property": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "Crest",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": 0,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 300,
+      "bindings": [
+        {
+          "binding": "bnd_home_team_select_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0xFFFFFF",
+          "cornerRaduis": 15,
+          "alpha": 1
+        },
+        {
+          "commonName": "AssetButton",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 120,
+          "marginLeft": 20,
+          "clickAction": "act_away_league_previous",
+          "buttonAsset": "$ArrowLeft"
+        },
+        {
+          "commonName": "AssetButton",
+          "alignV": "BOTTOM",
+          "alignH": "RIGHT",
+          "marginBottom": 120,
+          "marginRight": 20,
+          "clickAction": "",
+          "buttonAsset": "$ArrowRight"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": -115,
+          "marginLeft": 0,
+          "fontFace": "$CruyffSans-Bold",
+          "fontColor": "0x000000",
+          "fontSize": 18,
+          "alpha": 0.8,
+          "bindings": [
+            {
+              "binding": "bnd_selected_team_name",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "fow.base.BaseButton",
+          "name": "buttonTeam",
+          "alignH": "FILL",
+          "alignV": "FILL",
+          "clickAction": "act_select_team"
+        },
+        {
+          "commonName": "Image",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": -10,
+          "scaleX": 0.7,
+          "scaleY": 0.7,
+          "bindings": [
+            {
+              "binding": "bnd_team_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "StarRating",
+          "name": "starRating",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 100,
+          "size": "medium",
+          "bindings": [
+            {
+              "binding": "bnd_team_star_rating",
+              "property": "stars"
+            }
+          ]
+        },
+        {
+          "commonName": "DragToggle",
+          "name": "teamsToggle",
+          "alignH": "CENTER",
+          "height": 1,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 150,
+          "width": 310,
+          "arrowType": "blue_medium",
+          "alpha": 0,
+          "clickAction": "act_select_team",
+          "clickSFX": "act_select_preferred_team",
+          "hasArrows": true,
+          "isCircular": true,
+          "itemStyleName": "TF_SELECT_FAVORITE_TEAM_TOGGLE",
+          "itemType": "Label",
+          "toggleAction": {
+            "action": "act_change",
+            "binding": "bnd_team_list_index"
+          },
+          "bindings": [
+            {
+              "binding": "bnd_team_list_toggle",
+              "property": "dataProviders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "LeagueContainerPanel",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "marginTop": 200,
+      "marginLeft": 123,
+      "width": 340,
+      "height": 80,
+      "bindings": [
+        {
+          "binding": "bnd_home_league_select_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0xFFFFFF",
+          "cornerRaduis": 15,
+          "alpha": 1
+        },
+        {
+          "commonName": "AssetButton",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 20,
+          "marginLeft": 20,
+          "clickAction": "act_away_league_previous",
+          "buttonAsset": "$ArrowLeft"
+        },
+        {
+          "commonName": "AssetButton",
+          "alignV": "BOTTOM",
+          "alignH": "RIGHT",
+          "marginBottom": 20,
+          "marginRight": 20,
+          "clickAction": "",
+          "buttonAsset": "$ArrowRight"
+        },
+        {
+          "commonName": "fow.base.BaseButton",
+          "name": "leagueButton",
+          "alignH": "CENTER",
+          "alignV": "BOTTOM",
+          "height": 200,
+          "width": 400,
+          "fontFace": "$CruyffSans-Bold",
+          "clickAction": "act_select_league"
+        },
+        {
+          "commonName": "DragToggle",
+          "name": "leaguesToggle",
+          "alignH": "CENTER",
+          "height": 40,
+          "fontFace": "$CruyffSans-Bold",
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 30,
+          "width": 310,
+          "alpha": 0,
+          "arrowType": "blue_medium",
+          "clickAction": "act_select_league",
+          "clickSFX": "act_select_preferred_league",
+          "hasArrows": true,
+          "itemStyleName": "TF_SELECT_FAVORITE_LEAGUE_TOGGLE",
+          "itemType": "Label",
+          "toggleAction": {
+            "action": "act_change",
+            "binding": "bnd_league_list_index"
+          },
+          "bindings": [
+            {
+              "binding": "bnd_league_list_toggle",
+              "property": "dataProviders"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 0,
+          "marginLeft": 0,
+          "scaleX": 0.4,
+          "scaleY": 0.4,
+          "alpha": 1,
+          "bindings": [
+            {
+              "binding": "bnd_league_crest_active",
+              "property": "image"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

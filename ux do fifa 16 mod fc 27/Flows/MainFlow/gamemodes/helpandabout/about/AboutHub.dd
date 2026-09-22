@@ -1,0 +1,84 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_to_about_tile",
+			"actionname": "act_to_about_tile"
+        },
+		{
+            "viewname": "act_to_credits_tile",
+			"actionname": "act_to_credits_tile"
+        },
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+            "viewname":   "act_to_disableshare_tile",
+            "actionname": "act_to_disableshare_tile"
+		},
+		{
+            "viewname":   "act_to_privacy_tile",
+            "actionname": "act_to_privacy_tile"
+		},
+		{
+            "viewname":   "act_to_licenseagreement_tile",
+            "actionname": "act_to_licenseagreement_tile"
+		},
+		{
+            "viewname":   "act_to_termsofservice_tile",
+            "actionname": "act_to_termsofservice_tile"
+		}
+    ],
+    "data":
+    [
+		{
+            "viewname": "bnd_general_about",
+            "binding":  "bnd_general_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_privacy_about",
+            "binding":  "bnd_privacy_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_licenseagreement_about",
+            "binding":  "bnd_licenseagreement_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_disableshare_about",
+            "binding":  "bnd_disableshare_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_termsofservice_about",
+            "binding":  "bnd_termsofservice_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_credits_about",
+            "binding":  "bnd_credits_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_back_visibility",
+            "binding":  "bnd_back_visibility",
+            "type":     "bool"
+        },
+		{
+            "viewname": "bnd_ltxt_back",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_BACK"
+            }
+        }
+    ]
+}

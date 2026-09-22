@@ -1,0 +1,128 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": ""
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "SIMPLE_SCREEN_HIDE"
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 1,
+      "type": "$Bg_Kick"
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 55,
+          "marginLeft": 120,
+          "fontSize": 20,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Customise"
+        },
+        {
+          "commonName": "Panel",
+          "name": "ButtonClick",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "children": [
+            {
+              "commonName": "GridTable",
+              "name": "CustumizeData",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "height": 400,
+              "width": 1000,
+              "columns": 4,
+              "rows": 2,
+              "hasArrows": true,
+              "consumeInput": true,
+              "resetPageOnData": false,
+              "hasBulletIndicator": false,
+              "itemType": "LiveTile",
+              "bindings": [
+                {
+                  "binding": "bnd_live_menu",
+                  "property": "dataProviders"
+                }
+              ],
+			  "alternateBacking": false
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "UIFrame",
+          "alignV": "CENTER",
+          "alignH": "FILL",
+          "height": 580,
+          "children": [
+            {
+              "commonName": "GenericButton",
+              "alignH": "LEFT",
+              "alignV": "BOTTOM",
+              "marginBottom": 0,
+              "marginLeft": 30,
+              "scaleX": 0.6,
+              "scaleY": 0.6,
+              "icon": "$SimMatchIcon2",
+              "clickAction": "act_back"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "BOTTOM",
+              "alignH": "LEFT",
+              "marginBottom": 0,
+              "marginLeft": 86,
+              "fontSize": 14,
+              "fontColor": "$COLOR_LIGHT_GRAY",
+              "styles": [
+                "TF_MATCH_REVEAL_TEAM_NAME"
+              ],
+              "text": "Back"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

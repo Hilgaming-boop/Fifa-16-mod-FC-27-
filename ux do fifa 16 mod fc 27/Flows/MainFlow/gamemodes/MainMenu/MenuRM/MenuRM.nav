@@ -1,0 +1,24 @@
+{
+    "name": "MenuRM",
+    "states":
+    [
+        {
+            "name": "MenuRM_RivalMatch",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MainMenu/RivalFootball/Menu/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuRM_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

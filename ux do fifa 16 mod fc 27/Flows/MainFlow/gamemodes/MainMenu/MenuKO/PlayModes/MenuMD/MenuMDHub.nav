@@ -1,0 +1,38 @@
+{
+    "name": "MenuMDHub",
+    "onEnter":
+    [
+        ["setTabContext", [1]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuMDHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_back"]
+        },       
+        {
+            "event": "evt_menu_cm",
+            "targets": ["out_menu_cm"]
+        },       
+        {
+            "event": "evt_menu_ucl",
+            "targets": ["out_menu_ucl"]
+        },       
+        {
+            "event": "evt_menu_cl",
+            "targets": ["out_menu_cl"]
+        },
+        {
+            "event": "evt_matchday",
+            "targets": ["out_menumd_matchday"]
+        }
+    ]
+}

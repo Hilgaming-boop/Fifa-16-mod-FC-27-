@@ -1,0 +1,985 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "marginTop": 45,
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_a",
+            "buttonContainer": "tapA"
+        }             
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+        "style-definitions":
+    {
+		"TF_CONTEXT_MENU_ROW":
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 18,
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+	    },
+		"TF_SELECT_FAVORITE_LABEL": 
+        {
+		    "fontFace": "$CruyffSansRegular",
+			"fontSize": 15,
+            "fontColor": "$COLOR_WHITE",                    
+            "alpha": 0.5
+        }
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": -18,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 3,
+                            "marginLeft": 245,
+                            "alpha": 5,
+                            "height": 5,
+                            "width": 100,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },                              
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -25,
+                            "marginLeft": 255,
+                            "fontSize": 23,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Central"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MatchDay",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 170,
+            "marginTop": 25,
+            "width": 500,
+            "height": 350,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -57,
+                    "marginLeft": -35,
+                    "fontSize": 40,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor": "$COLOR_WHITE",
+                    "forceCaps": true,
+                    "textAlignH": "LEFT",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchdate_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -83,
+                    "marginLeft": -25,
+                    "fontSize": 24,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor": "$COLOR_WHITE",
+                    "forceCaps": true,
+                    "alpha": 0.5,
+                    "textAlignH": "LEFT",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchtagOff",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -15,
+                    "marginLeft": -25,
+                    "fontSize": 24,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor": "$COLOR_WHITE",
+                    "forceCaps": true,
+                    "alpha": 0.5,
+                    "textAlignH": "LEFT",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_league_labelOff",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": true,
+                    "alpha": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_month_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+  "commonName": "Panel",
+  "alignV": "TOP",
+  "alignH": "LEFT",
+  "marginTop": 85,
+  "marginLeft": 130,
+  "children": [
+    {
+      "commonName": "Label",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginTop": 8,
+      "marginLeft": 0,
+      "fontSize": 22,
+      "fontFace": "$CruyffSansExpanded",
+      "fontColor": "0xffffff",
+      "bold": false,
+      "forceCaps": true,
+      "bindings": [
+        {
+          "binding": "bnd_short_name_team_home",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "commonName": "Label",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginTop": 37,
+      "marginLeft": 0,
+      "fontSize": 22,
+      "fontFace": "$CruyffSansExpanded",
+      "fontColor": "0xffffff",
+      "bold": false,
+      "forceCaps": true,
+      "bindings": [
+        {
+          "binding": "bnd_short_name_team_away",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "commonName": "Label",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginTop": 8,
+      "marginLeft": 0,
+      "fontSize": 23,
+      "textAlignH": "LEFT",
+      "fontFace": "$CruyffSansLight",
+      "fontColor": "0xffffff",
+      "bold": false,
+      "alpha": 0.6,
+      "forceCaps": true,
+      "bindings": [
+        {
+          "binding": "bnd_rank_home",
+          "property": "text"
+        },
+        {
+          "binding": "bnd_home_team_pos_marginLeft",
+          "property": "marginLeft"
+        }
+      ]
+    },
+    {
+      "commonName": "Label",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginTop": 36,
+      "marginLeft": 0,
+      "fontSize": 23,
+      "textAlignH": "LEFT",      
+      "fontFace": "$CruyffSansLight",
+      "fontColor": "0xffffff",
+      "bold": false,
+      "alpha": 0.6,
+      "forceCaps": true,
+      "bindings": [
+        {
+          "binding": "bnd_rank_away",
+          "property": "text"
+        },
+        {
+          "binding": "bnd_away_team_pos_marginLeft",
+          "property": "marginLeft"
+        }
+      ]
+    }
+  ]
+},
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 145,
+                    "marginLeft": -40,
+                    "fontSize": 0,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor": "$COLOR_LIGHT_GRAY",                  
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchtag",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -3,
+                    "marginLeft": 145,
+                    "fontSize": 16,
+                    "alpha": 0.7,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchup_label",
+                            "property": "text"
+                        }
+                    ]
+                }, 
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -3,
+                    "marginLeft": -25,
+                    "fontSize": 16,
+                    "alpha": 0.7,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_next_label",
+                            "property": "text"
+                        }
+                    ]
+                },                 
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 90,
+                    "marginLeft": 43,
+                    "alpha": 0.5,
+                    "width": 0.8,
+                    "height": 50,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_fifa16",
+                            "property": "image"
+                        }
+                    ]      
+                },              
+                {
+                    "commonName": "Image",
+                    "name": "Logo",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 28,
+                    "marginLeft": -180,
+                    "width": 190,
+                    "height": 33,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logoleague",
+                            "property": "image"
+                        }
+                    ]               
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 20,
+                    "marginLeft": -47,
+                    "width": 470,
+                    "height": 0.9,
+                    "alpha": 0.8,
+                    "type": "$Logo_Garis"           
+                },                
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 290,
+                    "marginLeft": -57,
+                    "width": 440,
+                    "height": 0.9,
+                    "alpha": 0.6,
+                    "type": "$Logo_Garis"
+                },                     
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 183,
+          "marginLeft": -70,
+          "fontSize": 15,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$FONT_DINPROBOLD",
+          "alpha": 1,
+          "text": "Standings"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 183,
+          "marginLeft": -130,
+          "scaleX": 0.7,
+          "scaleY": 0.7,
+          "icon": "$SimMatchIcon4",
+          "clickAction": "act_standings"
+        },                
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 85,
+                    "marginLeft": -250,
+                    "width": 65,
+                    "height": 65,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_crest_home",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "AwayCrest",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 85,
+                    "marginLeft": -160,
+                    "width": 65,
+                    "height": 65,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_crest_away",
+                            "property": "image"
+                        }
+                    ]                                 
+               },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": -75,
+                    "fontSize": 0,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "0xffffff",
+                    "width": 90,
+                    "multiline": true,
+                    "leading": 3000,
+                    "alpha": 0.7,
+                    "bold": true,
+                    "alpha": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_date_label",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 75,
+                    "marginLeft": -30,
+                    "width": 65,
+                    "height": 65,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logo_checkmark",
+                            "property": "image"
+                        }
+                    ]      
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 80,
+                    "marginLeft": 50,
+                    "fontSize": 22,
+                    "fontFace": "$CruyffSansExpanded",
+                    "textAlignH": "LEFT",
+                    "multiline": true,
+                    "width": 320,
+                    "fontColor": "0xFFFFFF",
+                    "forceCaps": true,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_checkmark_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "TabInfoMatch",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 300,
+            "marginTop": 0,
+            "width": 330,
+            "height": 400,
+            "children":
+            [ 
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 90,
+                   "marginLeft": -530,
+                   "fontSize": 13,
+                   "alpha": 0.7,
+                   "fontFace": "$FONT_ORIGIN_NORMAL",
+                   "fontColor": "0xffffff",
+                   "bindings":
+                    [
+                          {
+                              "binding": "bnd_realtime",
+                              "property": "text"
+                         }
+                    ]
+                },		
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 90,
+                   "marginLeft": 90,
+                   "fontSize": 15,
+                   "alpha": 0,
+                   "fontFace": "$CruyffSansExpanded",
+                   "fontColor": "0xffffff",
+                   "bindings":
+                    [
+                          {
+                              "binding": "bnd_match_label",
+                              "property": "text"
+                         }
+                    ]
+                },		          
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 120,
+                   "marginLeft": 360,
+                   "fontSize": 15,
+                   "alpha": 0,                   
+                   "fontFace": "$CruyffSansExpanded",
+                   "fontColor": "0xFFD700",
+                   "bindings":
+                    [
+                          {
+                              "binding": "bnd_point_label",
+                              "property": "text"
+                         }
+                    ]
+                },	
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -28,
+                    "marginLeft": 80,
+                    "fontSize": 30,
+                    "alpha": 0.5,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xFFFFFF",
+                    "text": "• • •",
+                    "textAlignH": "LEFT"
+                },                                        
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -26,
+                    "marginLeft": 35,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "icon": "$icon_banner",
+                    "clickAction": "act_"
+                },	      
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 296,
+                    "marginLeft": 152,
+                    "fontSize": 0,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xFFFFFF",
+                    "forceCaps": true,
+                    "textAlignH": "LEFT",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchdate_label",
+                            "property": "text"
+                        }
+                    ]
+                },                
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 100,
+          "marginLeft": 140,
+          "fontSize": 0,
+          "fontFace": "$CruyffSansExpanded",
+          "textAlignH": "LEFT",
+          "fontColor": "0xFFFFFF",
+          "forceCaps": true,
+          "bindings": [
+            {
+              "binding": "bnd_abbr_name_team_home",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 160,
+          "marginLeft": 190,
+          "fontSize": 0,
+          "fontFace": "$CruyffSansExpanded",
+          "textAlignH": "LEFT",
+          "fontColor": "0xFFFFFF",
+          "forceCaps": true,
+          "bindings": [
+            {
+              "binding": "bnd_abbr_name_team_away",
+              "property": "text"
+            }
+          ]
+        }
+        ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginBottom": 45,
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                       {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "marginBottom": 47,
+                            "height": 60,
+                            "width": 340,
+                            "children":
+                            [
+                {
+                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 8,
+                                    "marginLeft": -13,
+                                    "alpha": 0.6,
+                    "width": 105,
+                    "height": 85,
+                    "type": "$Logo_Standings"
+                },                                
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 2,
+                                    "marginLeft": 75,
+                                    "fontSize": 18,
+                                    "alpha": 0.6,                                    
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSansMedium",
+                                    "text": "Team Management"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "marginBottom": 120,
+                            "height": 60,
+                            "width": 340,
+                            "children":
+                            [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -3.5,
+                                    "marginLeft": 1,
+                            "height": 103,
+                            "width": 132,
+                            "alpha": 0.1,
+                            "type": "$Tab_Action_White"
+                        },                                        
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -2,
+                                    "marginLeft": 30,
+                                    "fontSize": 18,
+                                    "alpha": 0.6,                                    
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSansMedium",
+                                    "text": "Advance"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "marginBottom": 53,
+                            "height": 48,
+                            "width": 451,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xffffff",
+                                    "cornerRaduis": 4,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 1.80,
+                                    "marginBottom": 0.9,
+                                    "height": 46,
+                                    "width": 448,
+                                    "bindings":
+                                     [
+                                        {
+                                            "binding": "bnd_tab_color",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },                                        
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_sheet"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                {
+                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 8,
+                                    "marginLeft": -13,
+                    "width": 105,
+                    "height": 85,
+                    "type": "$Logo_Standings"
+                },                                
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 2,
+                                    "marginLeft": 75,
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSansMedium",
+                                    "text": "Team Management"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "marginBottom": 130,
+                            "height": 53,
+                            "width": 150,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x4A6666",
+                                    "cornerRaduis": 5,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 1.73,
+                                    "marginBottom": 1.5,
+                                    "height": 49,
+                                    "width": 448,
+                                    "color": "0x1C1B22",
+                                    "cornerRaduis": 5,
+                                    "alpha": 0
+                                },                                
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 4,
+                                    "marginLeft": 5,
+                                    "height": 85,
+                                    "width": 125,
+                                    "backgroundImage": "$",
+                                    "backgroundHighlightImage": "$",
+                                    "clickAction": "act_progressdate"
+                                },             
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 4,
+                                    "marginLeft": 3,
+                                    "height": 85,
+                                    "width": 127,
+                                    "bindings":
+                                     [
+                                        {
+                                            "binding": "bnd_button_liga",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },      
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 4,
+                                    "marginLeft": 30,
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$CruyffSansMedium",
+                                    "text": "Advance"
+                                }
+                            ]
+                        }                          
+                    ]
+                }
+            ]
+        },
+         {
+            "commonName": "Group",
+            "name": "tapA",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": -200,
+            "marginLeft": 50,
+            "width": 1210,
+            "height": 500,
+            "alpha": 1,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 55,
+                    "width": 450,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 340,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": -10,
+                    "width": 150,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 340,
+                    "buttonHeight": 70,
+                    "selectable": true
+                }      
+            ]
+        }
+    ]
+}
+    ]
+}

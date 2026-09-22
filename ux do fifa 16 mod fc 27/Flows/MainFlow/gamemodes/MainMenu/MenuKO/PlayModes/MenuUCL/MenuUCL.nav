@@ -1,0 +1,24 @@
+{
+    "name": "MenuUCL",
+    "states":
+    [
+        {
+            "name": "MenuUCL_CupUcl",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuUCL_CupUwcl",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UWCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

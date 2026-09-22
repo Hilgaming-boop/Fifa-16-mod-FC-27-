@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_matchday",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_matchday"
+			}
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_matchday",
+			"binding": "bnd_live_tile_matchday",
+			"type": "live_tile"
+		}
+	]
+}

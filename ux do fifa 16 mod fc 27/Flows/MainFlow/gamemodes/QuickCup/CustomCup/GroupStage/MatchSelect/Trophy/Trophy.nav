@@ -1,0 +1,24 @@
+{
+    "name": "Trophy",
+    "states":
+    [
+        {
+            "name": "RedirectTrophy",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Trophy.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+/* ------------------------------------- */
+/* MOD Created By Rober FL */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SLIDE_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "MOD_SLIDE_OUT_RIGHT"
+                }
+            ]
+        }
+    ],
+    "children":
+    [    
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -10,
+            "marginLeft": -353,
+            "width": 348,
+            "height": 386,
+            "type": "$_ClassicMatch"
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 48,
+            "marginLeft": -353,
+            "height": 70,
+            "width": 120,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$Tab_Action_Green",
+            "backgroundHighlightImage": "$Tab_Action_Green",
+            "clickAction": "act_kickoff",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+         },       
+        {
+            "commonName": "Label",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 73,
+            "marginLeft": -353,
+            "fontSize": 20,
+            "alpha": 1,            
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "text": "Play"
+        }        
+               ]
+                    }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

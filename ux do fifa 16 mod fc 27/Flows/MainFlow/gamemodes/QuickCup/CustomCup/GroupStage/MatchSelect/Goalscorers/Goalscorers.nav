@@ -1,0 +1,122 @@
+{
+    "name": "MatchStats",
+    "initial":
+    {
+        "targets": ["Goalscorers"]
+    },
+    "states":
+    [
+        {
+            "name": "Goalscorers",
+            "initial":
+            {
+                "targets": ["RedirectTopScorers"]
+            },
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Goalscorers.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTopScorers",
+                    "states":
+                    [
+                        {
+                            "name": "TopScorers",
+                            "onEnter":
+                            [
+                                ["setTabContext", [0]],
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Goalscorers/TopScorers/TopScorers.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_yellowcard",
+                            "targets": ["RedirectYellowCard"]
+                        },
+                        {
+                            "event": "evt_redcard",
+                            "targets": ["RedirectRedCard"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectYellowCard",
+                    "states":
+                    [
+                        {
+                            "name": "YellowCard",
+                            "onEnter":
+                            [
+                                ["setTabContext", [1]],
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Goalscorers/YellowCard/YellowCard.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_goalscorers",
+                            "targets": ["RedirectTopScorers"]
+                        },
+                        {
+                            "event": "evt_redcard",
+                            "targets": ["RedirectRedCard"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectRedCard",
+                    "states":
+                    [
+                        {
+                            "name": "RedCard",
+                            "onEnter":
+                            [
+                                ["setTabContext", [2]],
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Goalscorers/RedCard/RedCard.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_goalscorers",
+                            "targets": ["RedirectTopScorers"]
+                        },
+                        {
+                            "event": "evt_yellowcard",
+                            "targets": ["RedirectYellowCard"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        }
+    ]
+}

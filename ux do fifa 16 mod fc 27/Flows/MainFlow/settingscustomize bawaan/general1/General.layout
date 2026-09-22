@@ -1,0 +1,262 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "SLIDE_IN_ALPHA"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "SLIDE_OUT"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+         {
+            "commonName": "Asset",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 78,
+            "marginLeft": 55,
+            "width": 170,
+            "height": 50,
+            "alpha": 1,
+            "path": "views/backgrounds/Green_Effect.swf"
+        },     
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": 90,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "User Info",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEON"
+            ]
+        },
+        {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 32,
+            "marginLeft": -185,
+            "width": 615,
+            "height": 430,
+            "cornerRaduis": 10,
+            "alpha": 0.4,
+            "color": "0x1B1B1B"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 32,
+            "marginLeft": 315,
+            "width": 365,
+            "height": 430,
+            "cornerRaduis": 10,
+            "alpha": 0.4,
+            "color": "0x1B1B1B"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -122,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -61,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -5,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 57,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 116,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 180,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },                  
+         {
+            "commonName": "Asset",
+            "alignH": "CENTER",
+            "alignV": "BOTTOM",
+            "marginBottom": 250,
+            "marginLeft": 310,
+            "width": 100,
+            "height": 100,
+            "path": "views/loadingindicator/loadingIcon.swf"
+        },             
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginTop": -20,
+            "marginLeft": 120,
+            "height": 300,
+            "width": 560,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 120,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_BOLD",
+                    "text": "User Name"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": -120,
+                    "width": 200,
+                    "height": 40,
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "inisial A"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 60,
+                    "marginLeft": 120,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_BOLD",
+                    "text": "ID"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 60,
+                    "marginRight": -120,
+                    "width": 200,
+                    "height": 40,
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "010203"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 120,
+                    "marginLeft": 120,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_BOLD",
+                    "text": "Data Version"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 120,
+                    "marginRight": -105,
+                    "width": 200,
+                    "height": 40,
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "2.0"
+                }
+              ]
+           }
+        ]
+     }
+  ]
+}

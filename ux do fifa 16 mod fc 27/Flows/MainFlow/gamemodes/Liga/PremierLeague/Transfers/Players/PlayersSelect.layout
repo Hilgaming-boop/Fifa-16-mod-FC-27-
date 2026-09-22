@@ -1,0 +1,2398 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_leaguebackground",
+                   "property": "image"
+               }
+            ]        
+        },
+        {             
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": -10,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Cm"
+                                            },
+                {
+                "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -1,
+                    "marginLeft": 66,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_"
+                },
+                {
+                "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -1,
+                    "marginLeft": 666,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$",
+                    "clickAction": ""
+                },
+                {
+                "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$"
+                                            },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -1,
+                    "marginLeft": 123,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Transfer To Hub"
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 46,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -240,
+            "marginTop": 0,
+            "width": 450,
+            "height": 400,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 12,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 0,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 }
+             ]
+         },
+         {
+         "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 2000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -550,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Transfers"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -432,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Global Search"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -355,
+                    "fontFace": "$DINPro",
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.4,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -12,
+                    "marginLeft": -300,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "All Players"
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.75
+                    }
+             ]
+         },
+         {
+         "commonName": "Image",
+		            "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -260,
+                    "marginTop": 10,
+                    "height": 400,
+                    "width": 550,
+		        "bindings": 
+            [
+                                {
+                                    "binding": "bnd_table_career",
+                                    "property": "image"
+               }
+            ]        
+        },
+        {             
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": -100,
+  "marginLeft": -410,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab1_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": -100,
+  "marginLeft": -150,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab2_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": -15,
+  "marginLeft": -410,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab3_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": -15,
+  "marginLeft": -150,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab4_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": 70,
+  "marginLeft": -410,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab5_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": 70,
+  "marginLeft": -150,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab6_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": 155,
+  "marginLeft": -410,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab7_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+"commonName": "GenericButton",
+                    "alignV": "CENTER",
+  "alignH": "CENTER",
+  "marginTop": 155,
+  "marginLeft": -150,
+                    "scaleX": 0.1333,
+"scaleY": 0.1389,
+                    "icon": "$League_Bg",
+                    "clickAction": "act_advance",
+                "bindings": [
+    {
+      "binding": "bnd_tab8_visible",
+      "property": "visible"
+    }
+  ]
+},
+{
+                         "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -85,
+                           "marginLeft": -490,
+                           "width": 65,
+                           "height": 65,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_1",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -92,
+                           "marginLeft": -445,
+                           "width": 20,
+                           "height": 20,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_country_1",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -110,
+                           "marginLeft": -305,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_1",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "LEFT",
+                           
+                           "marginTop": -91,
+                           "marginLeft": 290,
+                           
+                    "fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_name_1",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": -70,
+                           "marginLeft": -370,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_position_1",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": -66,
+                           "marginLeft": -410,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_1",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": -66,
+                           "marginLeft": -440,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_1",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -85,
+                           "marginLeft": -230,
+                           "width": 65,
+                           "height": 65,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_2",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -92,
+                           "marginLeft": -185,
+                           "width": 20,
+                           "height": 20,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_country_2",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -110,
+                           "marginLeft": -42,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_2",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "LEFT",
+                           
+                           "marginTop": -92,
+                           "marginLeft": 550,
+                           
+                    "fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_name_2",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": -70,
+                           "marginLeft": -110,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_position_2",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": -66,
+                           "marginLeft": -150,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_2",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": -66,
+                           "marginLeft": -180,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_2",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 0,
+"marginLeft": -490,
+"width": 65,
+"height": 65,
+"bindings":
+[
+  {
+     "binding":"bnd_player_3",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": -7,
+"marginLeft": -445,
+"width": 20,
+"height": 20,
+"bindings":
+[
+  {
+     "binding":"bnd_player_country_3",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -25,
+                           "marginLeft": -305,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_3",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+
+"marginTop": -7,
+"marginLeft": 290,
+"fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+"bindings":
+[
+    {
+        "binding": "bnd_player_name_3",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "CENTER",
+
+"marginTop": 20,
+"marginLeft": -370,
+"fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+"bindings":
+[
+    {
+        "binding": "bnd_player_position_3",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 24,
+                           "marginLeft": -410,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_3",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 24,
+                           "marginLeft": -440,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_3",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 0,
+"marginLeft": -230,
+"width": 65,
+"height": 65,
+"bindings":
+[
+  {
+     "binding":"bnd_player_4",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": -7,
+"marginLeft": -185,
+"width": 20,
+"height": 20,
+"bindings":
+[
+  {
+     "binding":"bnd_player_country_4",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -27,
+                           "marginLeft": -42,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_4",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+
+"marginTop": -7,
+"marginLeft": 550,
+"fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+"bindings":
+[
+    {
+        "binding": "bnd_player_name_4",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "CENTER",
+
+"marginTop": 15,
+"marginLeft": -110,
+"fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+"bindings":
+[
+    {
+        "binding": "bnd_player_position_4",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 19,
+                           "marginLeft": -150,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_4",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 19,
+                           "marginLeft": -180,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_4",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 80,
+"marginLeft": -490,
+"width": 65,
+"height": 65,
+"bindings":
+[
+  {
+     "binding":"bnd_player_5",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 73,
+"marginLeft": -445,
+"width": 20,
+"height": 20,
+"bindings":
+[
+  {
+     "binding":"bnd_player_country_5",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 60,
+                           "marginLeft": -305,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_5",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+
+"marginTop": 73,
+"marginLeft": 290,
+"fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+"bindings":
+[
+    {
+        "binding": "bnd_player_name_5",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "CENTER",
+
+"marginTop": 95,
+"marginLeft": -370,
+"fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+"bindings":
+[
+    {
+        "binding": "bnd_player_position_5",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 99,
+                           "marginLeft": -410,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_5",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 99,
+                           "marginLeft": -440,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_5",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 80,
+"marginLeft": -230,
+"width": 65,
+"height": 65,
+"bindings":
+[
+  {
+     "binding":"bnd_player_6",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 73,
+"marginLeft": -185,
+"width": 20,
+"height": 20,
+"bindings":
+[
+  {
+     "binding":"bnd_player_country_6",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 60,
+                           "marginLeft": -41,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_6",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+
+"marginTop": 73,
+"marginLeft": 550,
+"fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+"bindings":
+[
+    {
+        "binding": "bnd_player_name_6",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "CENTER",
+
+"marginTop": 95,
+"marginLeft": -110,
+"fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+"bindings":
+[
+    {
+        "binding": "bnd_player_position_6",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 99,
+                           "marginLeft": -150,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_6",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 99,
+                           "marginLeft": -180,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_6",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 165,
+"marginLeft": -490,
+"width": 65,
+"height": 65,
+"bindings":
+[
+  {
+     "binding":"bnd_player_7",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 158,
+"marginLeft": -445,
+"width": 20,
+"height": 20,
+"bindings":
+[
+  {
+     "binding":"bnd_player_country_7",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 143,
+                           "marginLeft": -305,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_7",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+"marginTop": 158,
+"marginLeft": 290,
+"fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+"bindings":
+[
+    {
+        "binding": "bnd_player_name_7",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 180,
+"marginLeft": -370,
+"fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+"bindings":
+[
+    {
+        "binding": "bnd_player_position_7",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 184,
+                           "marginLeft": -410,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_7",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 184,
+                           "marginLeft": -440,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_7",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 165,
+"marginLeft": -230,
+"width": 65,
+"height": 65,
+"bindings":
+[
+  {
+     "binding":"bnd_player_8",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 158,
+"marginLeft": -185,
+"width": 20,
+"height": 20,
+"bindings":
+[
+  {
+     "binding":"bnd_player_country_8",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 143,
+                           "marginLeft": -42,
+                           "width": 25,
+                           "height": 25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_crest_8",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+"marginTop": 158,
+"marginLeft": 550,
+"fontSize": 14,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+"bindings":
+[
+    {
+        "binding": "bnd_player_name_8",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+"alignV": "CENTER",
+"alignH": "CENTER",
+"marginTop": 180,
+"marginLeft": -110,
+"fontSize": 14,
+                    
+                    "fontFace": "$EAExpandedLight",
+                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+"bindings":
+[
+    {
+        "binding": "bnd_player_position_8",
+        "property": "text"
+    }
+]
+},
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 184,
+                           "marginLeft": -150,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_8",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           
+                           "marginTop": 184,
+                           "marginLeft": -180,
+                           
+                    "fontSize": 14,
+                    
+                    "fontFace": "$CruyffSans-Regular",
+                    
+                    "fontColor": "$COLOR_WHITE",
+                    
+                    "alpha": 0.6,
+                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_age_label_8",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": -5,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$ArrowTop",
+                    "clickAction": "act_scroll_up"
+                },
+                {
+                "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -190,
+                    "marginLeft": -5,
+                    "rotationX": 360,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$ArrowBottom",
+                    "clickAction": "act_scroll_down"
+                },
+                {
+                 "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -155,
+                    "marginLeft": -445,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 5,
+                    "highlightable": true,
+                    "row": "ScoutRow",
+                    "rowHeight": 0,
+                    "rowWidth": 0.001,
+                    "bindings":
+                    [
+                        {
+                            "binding": "",
+                            "property": ""
+                 }
+             ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 215,
+            "marginTop": 0,
+            "width": 415,
+            "height": 400,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 12,
+                    "alpha": 0
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop":25,
+                    "marginLeft": -530,
+                    "fontFace": "$CruyffSans-Medium",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "SEARCH RESULTS"
+                    }
+             ]
+         },
+         {
+"commonName": "Group",
+            "name": "MvnprodButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 80,
+                    "y": 140,
+                    "width": 230,
+                    "height": 75,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 230,
+                    "buttonHeight": 75,
+                    "selectable": true
+                },
+                {
+                "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 325,
+                    "y": 140,
+                    "width": 250,
+                    "height": 75,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 250,
+                    "buttonHeight": 75,
+                    "selectable": true
+                },
+                {
+                "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 80,
+                    "y": 220,
+                    "width": 230,
+                    "height": 75,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 230,
+                    "buttonHeight": 75,
+                    "selectable": true
+                },
+                {
+                "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 325,
+                    "y": 220,
+                    "width": 250,
+                    "height": 75,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 250,
+                    "buttonHeight": 75,
+                    "selectable": true
+                },
+                {
+                "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 80,
+                    "y": 300,
+                    "width": 230,
+                    "height": 75,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 230,
+                    "buttonHeight": 75,
+                    "selectable": true
+                },
+                {
+                "commonName": "ClubButton",
+                    "name": "Act6",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 325,
+                    "y": 300,
+                    "width": 250,
+                    "height": 75,
+                    "autoSelect": true,
+                    "id": 6,
+                    "type": "blackandblue",
+                    "buttonWidth": 250,
+                    "buttonHeight": 75,
+                    "selectable": true
+                },
+                {
+                "commonName": "ClubButton",
+                    "name": "Act7",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 80,
+                    "y": 380,
+                    "width": 250,
+                    "height": 75,
+                    "autoSelect": true,
+                    "id": 7,
+                    "type": "blackandblue",
+                    "buttonWidth": 250,
+                    "buttonHeight": 75,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act8",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 325,
+                    "y": 380,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 8,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                    }
+             ]
+         },
+         {
+         "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 550,
+            "marginTop": 0,
+            "width": 0,
+            "height": 0,
+            "children":
+            [
+                {
+                "commonName": "Image",
+		            "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -270,
+                    "marginTop": 10,
+                    "height": 400,
+                    "width": 520,
+		        "bindings": 
+            [
+                                {
+                                    "binding": "bnd_table_career",
+                                    "property": "image"
+               }
+            ]        
+        },
+        {            
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 0
+                                    },
+                 {
+                 "commonName": "Image",
+"alignV": "CENTER",
+"alignH": "LEFT",
+"marginTop": -105,
+"marginLeft": -515,
+"width": 110,
+"height": 110,
+"bindings":
+[
+  {
+     "binding":"bnd_selected_player_head",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "LEFT",
+"marginTop": -105,
+"marginLeft": -80,
+"width": 40,
+"height": 40,
+"bindings":
+[
+  {
+     "binding":"bnd_selected_player_team",
+     "property":"image"
+  }
+]
+},
+{
+"commonName": "Image",
+"alignV": "CENTER",
+"alignH": "LEFT",
+"marginTop": -108,
+"marginLeft": -400,
+"width": 30,
+"height": 30,
+"bindings":
+[
+  {
+     "binding":"bnd_selected_player_nationality",
+     "property":"image"
+  }
+]
+},
+{
+                 "commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+
+"marginTop": -108,
+"marginLeft":-360,
+"fontSize": 15,
+"fontFace": "$CruyffSansExpanded",
+"forceCaps": true,
+"fontColor": "$COLOR_WHITE",
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_first_name",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+"alignH": "LEFT",
+
+"marginTop": -65,
+"marginLeft":-81,
+"fontSize": 14,
+"fontFace": "$CruyffSansExpanded",
+"forceCaps": true,
+"fontColor": "$COLOR_WHITE",
+"bindings":
+[
+    {
+        "binding": "bnd_team_name_3",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -152,
+                    "marginLeft": -358,
+"fontSize": 17,
+"fontFace": "$EAExpandedLight",
+"fontColor": "$COLOR_WHITE",
+"alpha": 0.6,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_position",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -155,
+                    "marginLeft": -417,
+                    "fontFace": "$EAExpandedLight",
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_EAFC24",
+                    "alpha": 0.85,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_rating",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -62,
+                    "marginLeft": -329,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.85,
+"bindings":
+[
+    {
+        "binding": "bnd_player_age",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -80,
+                    "marginLeft": -405,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+                    "text": "Potential"
+                    },
+{
+"commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -62,
+                    "marginLeft": -405,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.85,
+"bindings":
+[
+    {
+        "binding": "bnd_rating_range",
+        "property": "text"
+    }
+]
+},
+                 {
+"commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -75,
+                    "marginLeft": -340,
+                    "width": 1,
+                    "height": 30,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.2
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -80,
+                    "marginLeft": -333,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+                    "text": "Age"
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -62,
+                    "marginLeft": -310,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.85,
+                    "text": ""
+                    },
+{
+"commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -75,
+                    "marginLeft": -300,
+                    "width": 1,
+                    "height": 30,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.2
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -80,
+                    "marginLeft": -293,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+                    "text": "Height & Weight"
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -62,
+                    "marginLeft": -293,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.85,
+                    "text": "5'11/180 lbs"
+                    },
+{
+         "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -75,
+                    "marginLeft": -180,
+                    "width": 1,
+                    "height": 30,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.2
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -80,
+                    "marginLeft": -173,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+                    "text": "Pref. Foot"
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -62,
+                    "marginLeft": -173,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.85,
+                    "text": "L/R"
+                    },
+{
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -150,
+                    "marginLeft": -400,
+                    "fontFace": "$CruyffSansLight",
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "alpha": 0.7,
+                    "text": ""
+                    },
+                 {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -150,
+                    "marginLeft": -375,
+                    "fontFace": "$CruyffSansLight",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.3,
+                    "text": "|"
+                    },
+{
+         "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -169,
+                    "marginLeft": -140,
+                    "width": 130,
+                    "height": 40,
+                    "cornerRaduis": 12,
+                    "color": "0xDEF24C",
+                    "alpha": 1
+                    },
+{
+         "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -174,
+                    "marginLeft": -140,
+                    "width": 40,
+                    "height": 30,
+                    "cornerRaduis": 0,
+                    "color": "0xDEF24C",
+                    "alpha": 1
+                    },
+{
+         "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -164,
+                    "marginLeft": -50,
+                    "width": 40,
+                    "height": 30,
+                    "cornerRaduis": 0,
+                    "color": "0xDEF24C",
+                    "alpha": 1
+},
+{
+"commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -168,
+                    "marginLeft": -110,
+                    "fontFace": "$CruyffSans-Medium",
+                    "fontSize": 15,
+                    "fontColor": "0x000000",
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_advertasing_msg",
+        "property": "text"
+    }
+]
+},
+                 {
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -5,
+                    "marginLeft": -510,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+                    "text": "Preliminary Report"
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 140,
+                    "marginLeft": -510,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+                    "text": "Financial"
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 170,
+                    "marginLeft": -510,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+                    "text": "Release Clause"
+                    },
+{
+"commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 170,
+                    "marginLeft": -360,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+                    "text": "None"
+                    },
+{
+"commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": -510,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_label_1",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 55,
+                    "marginLeft": -510,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_label_2",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 80,
+                    "marginLeft": -510,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_label_3",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 105,
+                    "marginLeft": -510,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.6,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_label_4",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": -360,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_1",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 55,
+                    "marginLeft": -360,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_2",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 80,
+                    "marginLeft": -360,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_3",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 105,
+                    "marginLeft": -360,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_stat_4",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 15,
+                    "marginLeft": -280,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 18,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.9,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_advertasing_msg",
+        "property": "text"
+    }
+]
+},
+                 {
+"commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 65,
+                    "marginLeft": -285,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "textAlignV": "TOP",
+                    "alpha": 0.6,
+"bindings":
+[
+    {
+        "binding": "bnd_selected_player_scouting_msg",
+        "property": "text"
+    }
+]
+},
+                 {
+                 "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 120,
+                    "marginLeft": -280,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+                    "text": "Report Completition"
+                    },
+{
+"commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 145,
+                    "marginLeft": -280,
+                    "width": 130,
+                    "height": 10,
+                    "cornerRaduis": 8,
+                    "color": "0xFF675B6D",
+                    "alpha": 1
+                    },
+{
+"commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 145,
+                    "marginLeft": -280,
+                    "width": 45,
+                    "height": 10,
+                    "cornerRaduis": 8,
+                    "color": "0x1c98f1",
+                    "alpha": 1
+                    },
+{
+"commonName": "Label",
+"alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 146,
+                    "marginLeft": -130,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 14,
+                    "fontColor": "0xffffff",
+                    "alpha": 0.8,
+"bindings":
+[
+    {
+        "binding": "bnd_scouting_percentage",
+        "property": "text"
+    }
+]
+},
+                 {
+         "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -50,
+                    "marginLeft": -515,
+                    "width": 490,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

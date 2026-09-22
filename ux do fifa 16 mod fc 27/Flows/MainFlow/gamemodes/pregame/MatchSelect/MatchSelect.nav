@@ -1,0 +1,290 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["RedirectMatchSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMatchSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Pregame/MatchSelect/MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectMatchPreview",
+                    "states":
+                    [
+                        {
+                            "name": "MatchPreview",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Pregame/MatchSelect/MatchPreview/MatchPreview.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["MenuSquad"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectMenuSquad",
+                    "states":
+                    [
+                        {
+                            "name": "MenuSquad",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Pregame/MatchSelect/MenuSquad/MenuSquadHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectGameSettings",
+                    "states":
+                    [
+                        {
+                            "name": "GameSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Pregame/MatchSelect/GameSettings/GameSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["MenuSquad"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectControllerSettings",
+                    "states":
+                    [
+                        {
+                            "name": "ControllerSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Pregame/MatchSelect/ControllerSettings/ControllerSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["MenuSquad"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectDetailStats",
+                    "states":
+                    [
+                        {
+                            "name": "DetailStats",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Pregame/MatchSelect/DetailStats/DetailStats.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["MenuSquad"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                },
+                {
+                    "event": "evt_squadhome",
+                    "cond": ["==", ".gamemode", "real"],
+                    "targets": ["SquadHome"]
+                },
+                {
+                    "event": "evt_squadaway",
+                    "cond": ["==", ".gamemode", "real"],
+                    "targets": ["SquadAway"]
+                },
+                {
+                    "event": "evt_controls",
+                    "targets": ["Controls"]
+                },
+                {
+                    "event": "evt_detail",
+                    "targets": ["Detail"]
+                }
+            ]
+        },      
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/pregame/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_back": "out_back1"
+            }
+        },
+        {
+            "name": "SquadHome",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/pregame/MatchSelect/MenuSquad/squad/Squad.nav",
+            "outputs":
+            {
+                "out_back": "MenuSquad",
+                "out_advance": "MenuSquad"
+            }
+         },
+         {
+            "name": "SquadAway",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/pregame/MatchSelect/MenuSquad/squad/SquadAway.nav",
+            "outputs":
+            {
+                "out_back": "MenuSquad",
+                "out_advance": "MenuSquad"
+            }
+         },
+         {
+            "name": "Controls",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/pregame/MatchSelect/ControllerSettings/Controls/Controls.nav",
+            "outputs":
+            {
+                "out_back": "ControllerSettings",
+                "out_advance": "ControllerSettings"
+            }
+         },
+         {
+            "name": "Detail",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/pregame/MatchSelect/DetailStats/Detail/Detail.nav",
+            "outputs":
+            {
+                "out_back": "DetailStats",
+                "out_advance": "DetailStats"
+            }
+         }
+    ]
+}

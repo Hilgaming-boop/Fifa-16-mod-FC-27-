@@ -1,0 +1,36 @@
+{	
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+   
+	"children":
+    [
+		
+         {
+			"commonName": "Overlay",
+			"name": "browserOverlay",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"marginBottom":49,
+			"bindings":
+			[
+				{
+					"binding": "bnd_footer",
+					"property": "footer"
+				}
+			]
+		}
+	]
+}

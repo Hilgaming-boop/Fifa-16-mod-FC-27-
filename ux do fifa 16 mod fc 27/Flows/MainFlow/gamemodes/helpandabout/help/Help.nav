@@ -1,0 +1,118 @@
+{
+    "name": "Help",
+    "initial":
+    {
+        "targets": ["RedirectHelp"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectHelp",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["HelpHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectAbout",
+                    "states":
+                    [
+                        {
+                            "name": "About",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [0]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/helpandabout/help/controls_help/ControlsHelp.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_web",
+                            "targets": ["Web"]
+                        },
+                        {
+                            "event": "evt_youtube",
+                            "targets": ["YouTube"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectWeb",
+                    "states":
+                    [
+                        {
+                            "name": "Web",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [1]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/helpandabout/help/general_help/GeneralHelp.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_about",
+                            "targets": ["About"]
+                        },
+                        {
+                            "event": "evt_youtube",
+                            "targets": ["YouTube"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectYouTube",
+                    "states":
+                    [
+                        {
+                            "name": "YouTube",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [2]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/helpandabout/help/simulation_help/SimulationHelp.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_about",
+                            "targets": ["About"]
+                        },
+                        {
+                            "event": "evt_web",
+                            "targets": ["Web"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        }
+    ]
+}

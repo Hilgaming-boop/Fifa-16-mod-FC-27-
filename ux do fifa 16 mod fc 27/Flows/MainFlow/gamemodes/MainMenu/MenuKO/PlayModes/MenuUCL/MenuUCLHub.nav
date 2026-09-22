@@ -1,0 +1,42 @@
+{
+    "name": "MenuUCLHub",
+    "onEnter":
+    [
+        ["setTabContext", [2]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuUCLHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_back"]
+        },       
+        {
+            "event": "evt_menu_cm",
+            "targets": ["out_menu_cm"]
+        },       
+        {
+            "event": "evt_menu_md",
+            "targets": ["out_menu_md"]
+        },       
+        {
+            "event": "evt_menu_cl",
+            "targets": ["out_menu_cl"]
+        },
+        {
+            "event": "evt_cup_ucl",
+            "targets": ["out_menuucl_cupucl"]
+        },
+        {
+            "event": "evt_cup_uwcl",
+            "targets": ["out_menuucl_cupuwcl"]
+        }
+    ]
+}

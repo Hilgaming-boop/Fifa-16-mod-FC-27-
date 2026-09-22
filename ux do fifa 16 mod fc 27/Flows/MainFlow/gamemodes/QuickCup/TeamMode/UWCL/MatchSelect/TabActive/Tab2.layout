@@ -1,0 +1,176 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 13,
+            "marginLeft": 298,
+            "height": 65,
+            "width": 105,
+            "alpha": 1,
+            "path": "views/backgrounds/White_Effect.swf"
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 33,
+            "marginLeft": 290,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Squad",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to",
+            "textStyles":
+            [
+               "TF_BUTTON_TABON"
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 365,
+                            "cornerRaduis": 15,
+                            "alpha": 1,
+                            "color": "0x01002C"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 302,
+                            "height": 366,
+                            "type": "$_SelectTab",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Team Management"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 70,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xFFFFFF",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -25,
+                            "width": 150,
+                            "height": 100,
+                            "type": "$_IconSquad",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 110,
+                            "marginLeft": 0,
+                            "fontSize": 17,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Lineup"
+                        },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 90,
+                                    "width": 185,
+                                    "backgroundImage": "$_ClickToPlay3",
+                                    "backgroundHighlightImage": "$_ClickToPlay",
+                                    "clickAction": "act_squad"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginBottom": 0,
+                                    "width": 150,
+                                    "autoScroll": true,
+                                    "fontSize": 17,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "text": "Enter in Team Management"
+                                 }
+                             ]
+                         }
+                     ]
+                 }
+             ]
+         }
+     ]
+}

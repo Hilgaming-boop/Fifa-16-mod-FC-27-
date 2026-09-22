@@ -1,0 +1,2573 @@
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "behaviors": [
+    {
+      "commonName": "SquadCustomizationBehavior",
+      "actionName": "act_septiawan_click",
+      "buttonContainer": "insButtonsOptionsBot"
+    }
+  ],
+    "style-definitions":
+    {
+    "TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 22,
+			"alpha": 0.9,
+			"fontColor": "0x808080",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 0,
+			"alpha": 0.6,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+		}
+    },    
+  "children": [
+    {
+      "commonName": "Image",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings": [
+        {
+          "binding": "bnd_leaguebackground",
+          "property": "image"
+        }
+      ]
+    },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 7,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": -30,
+          "marginLeft": 85,
+          "width": 80,
+          "height": 80,
+          "type": "$Icon_Cm"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": -2,
+          "marginLeft": 180,
+          "fontSize": 22,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$FONT_ORIGIN_NORMAL",
+          "text": "Squad Hub"
+        },
+        {
+          "commonName": "Rectangle",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": -2,
+          "marginLeft": 315,
+          "width": 3,
+          "height": 20,
+          "alpha": 0.5,
+          "color": "0xFFFFFF"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": -30,
+          "marginLeft": 140,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "icon": "$SimMatchIcon8",
+          "clickAction": "act_"
+        },
+        {
+          "commonName": "LiveTile",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": 7,
+          "marginLeft": 330,
+          "width": 300,
+          "height": 30,
+          "clickAction": "act_tab1",
+          "headline": [
+            "Status"
+          ]
+        },
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 346,
+          "fontSize": 22,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$CruyffSansRegular",          
+          "text": "Status"
+        },                
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -25,
+                            "marginLeft": 315,
+                            "height": 70,
+                            "width": 130,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },        
+        {
+          "commonName": "LiveTile",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": 7,
+          "marginLeft": 430,
+          "width": 300,
+          "height": 30,
+          "clickAction": "act_back",
+          "headline": [
+            "Squad"
+          ]
+        }
+	]
+}
+]
+},
+        {
+          "commonName": "Panel",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 35,
+          "height": 30,
+          "children": [
+            {
+              "commonName": "Image",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": -3,
+              "marginLeft": 1082,
+              "width": 33,
+              "height": 33,
+              "bindings": [
+                {
+                  "binding": "bnd_team_crest_off",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 5,
+              "marginLeft": 1120,
+              "fontSize": 20,
+              "fontFace": "$CruyffSansRegular",
+              "fontColor": "0xFFFFFF",
+              "textAlignH": "LEFT",
+              "alpha": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team_name_off",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginBottom": 70,
+          "marginTop": 20,
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignV": "FILL",
+              "alignH": "LEFT",
+              "marginLeft": 200,
+              "width": 500,
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "width": 618,
+                  "height": 434,
+                  "marginLeft": -94,
+                  "marginTop": 119,
+                  "bindings": [
+                    {
+                      "binding": "bnd_table_visible",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "width": 344,
+                  "height": 434,
+                  "marginLeft": 527,
+                  "marginTop": 119,
+                  "bindings": [
+                    {
+                      "binding": "bnd_table_visible",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "width": 13,
+                  "height": 13,
+                  "marginLeft": 580,
+                  "marginTop": 223,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_style_position",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": -63,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "No"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": -18,
+                  "marginTop": 135,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Pos"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Name"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 282,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "OVR"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 355,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Role"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 452,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Morale"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 547,
+                  "marginTop": 127,
+                  "fontSize": 11.9,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Overview"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 208,
+                  "marginLeft": 580,
+                  "fontSize": 11,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_team_name",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "VerticalList",
+                  "name": "teamlist",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 160,
+                  "marginLeft": -70,
+                  "x": -20,
+                  "y": 0,
+                  "displayRange": 7,
+                  "rowChangeAction": "act_player_select",
+                  "highlightable": true,
+                  "row": "DevelopmentRow",
+                  "rowHeight": 55.5,
+                  "rowWidth": 598,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_list",
+                      "property": "dataProviders"
+                    },
+                    {
+                      "binding": "bnd_rowvisible",
+                      "property": "visible"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 540,
+                  "marginLeft": -145,
+                  "width": 90,
+                  "height": 90,
+                  "icon": "$SimMatchIcon3",
+                  "clickAction": "act_back"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": -70,
+                  "marginTop": 575,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "text": "Back"
+                },
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 540,
+                  "marginLeft": -50,
+                  "width": 90,
+                  "height": 90,
+                  "icon": "$SimMatchIcon2",
+                  "clickAction": "act_"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 25,
+                  "marginTop": 575,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "text": "Show Actions"
+                },
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 540,
+                  "marginLeft": 100,
+                  "width": 90,
+                  "height": 90,
+                  "icon": "$SimMatchIcon",
+                  "clickAction": "act_toggle"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 165,
+                  "marginTop": 575,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "text": "View Statistics"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginBottom": 70,
+          "marginTop": 20,
+          "bindings": [
+            {
+              "binding": "bnd_panelvisible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignV": "FILL",
+              "alignH": "LEFT",
+              "marginLeft": 200,
+              "width": 500,
+              "children": [
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "width": 610,
+                  "height": 240,
+                  "marginLeft": -90,
+                  "marginTop": 121,
+                  "cornerRaduis": 20,
+                  "color": "0xFFFFFF"
+                },
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 540,
+                  "marginLeft": 240,
+                  "width": 90,
+                  "height": 90,
+                  "icon": "$SimMatchIcon4",
+                  "clickAction": "act_hide"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 305,
+                  "marginTop": 575,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "text": "Close Window"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": -63,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "No"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": -18,
+                  "marginTop": 135,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Pos"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 40,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Name"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 282,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "OVR"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 355,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Role"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 452,
+                  "marginTop": 133,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansRegular",
+                  "text": "Morale"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginBottom": 70,
+          "marginTop": 20,
+          "bindings": [
+            {
+              "binding": "bnd_rowvisible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignV": "FILL",
+              "alignH": "LEFT",
+              "marginLeft": 200,
+              "width": 500,
+              "children": [
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 340,
+                  "fontSize": 18,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Summary"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 716,
+                  "marginTop": 340,
+                  "fontSize": 18,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "PlayStyles"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 258,
+                  "fontSize": 12,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Skill Moves"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 296,
+                  "fontSize": 12,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Weak Foot"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 647,
+                  "marginTop": 258,
+                  "fontSize": 12,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Height & Weight"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 647,
+                  "marginTop": 296,
+                  "fontSize": 12,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Preferred Foot"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 760,
+                  "marginTop": 258,
+                  "fontSize": 12,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Attacking Work"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 760,
+                  "marginTop": 296,
+                  "fontSize": 12,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Defensive Work"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 375,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Pace"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 403,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Shooting"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 432,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Passing"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 460,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Dribbling"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 490,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Defending"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 518,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Phhsical"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginBottom": 70,
+          "marginTop": 20,
+          "bindings": [
+            {
+              "binding": "bnd_panelvisible",
+              "property": "visible"
+            },
+            {
+              "binding": "bnd_panelanim",
+              "property": "alpha"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignV": "FILL",
+              "alignH": "LEFT",
+              "marginLeft": 200,
+              "width": 500,
+              "children": [
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 258,
+                  "fontSize": 18,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Player Status"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 296,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Suspends Status"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 730,
+                  "marginTop": 296,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_suspstatus",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 324,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Squad Role"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 730,
+                  "marginTop": 324,
+                  "fontSize": 15,
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_role_name",
+                      "property": "text"
+                    },
+                    {
+                      "binding": "bnd_player_role_color",
+                      "property": "color"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 730,
+                  "marginTop": 320,
+                  "width": 97,
+                  "height": 19,
+                  "alpha": 0.7,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_role_off",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 352,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Market Value"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 730,
+                  "marginTop": 352,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_value",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 380,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Availability"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 730,
+                  "marginTop": 380,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_fitness",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 418,
+                  "fontSize": 18,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Player Development"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 456,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Weekly Salary"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 730,
+                  "marginTop": 456,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_salary",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 543,
+                  "marginTop": 484,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "ETA"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 730,
+                  "marginTop": 484,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_level_up",
+                      "property": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "UIFrame",
+          "alignV": "CENTER",
+          "alignH": "FILL",
+          "height": 580,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_rowvisible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "GenericButton",
+              "alignH": "LEFT",
+              "alignV": "BOTTOM",
+              "marginBottom": -16,
+              "marginLeft": 30,
+              "width": 50,
+              "height": 50,
+              "icon": "$SimMatchIcon3",
+              "clickAction": "act_"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "BOTTOM",
+              "alignH": "LEFT",
+              "marginBottom": 0,
+              "marginLeft": 86,
+              "fontSize": 14,
+              "fontColor": "$COLOR_LIGHT_GRAY",
+              "styles": [
+                "TF_MATCH_REVEAL_TEAM_NAME"
+              ],
+              "text": "Back"
+            },
+            {
+              "commonName": "GenericButton",
+              "alignH": "LEFT",
+              "alignV": "BOTTOM",
+              "marginBottom": -16,
+              "marginLeft": 120,
+              "width": 50,
+              "height": 50,
+              "icon": "$SimMatchIcon14",
+              "clickAction": "act"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "BOTTOM",
+              "alignH": "LEFT",
+              "marginBottom": 0,
+              "marginLeft": 176,
+              "fontSize": 14,
+              "fontColor": "$COLOR_LIGHT_GRAY",
+              "styles": [
+                "TF_MATCH_REVEAL_TEAM_NAME"
+              ],
+              "text": "Change Player"
+            },
+            {
+              "commonName": "GenericButton",
+              "alignH": "LEFT",
+              "alignV": "BOTTOM",
+              "marginBottom": -16,
+              "marginLeft": 255,
+              "width": 50,
+              "height": 50,
+              "icon": "$SimMatchIcon",
+              "clickAction": "act_"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "BOTTOM",
+              "alignH": "LEFT",
+              "marginBottom": 0,
+              "marginLeft": 311,
+              "fontSize": 14,
+              "fontColor": "$COLOR_LIGHT_GRAY",
+              "styles": [
+                "TF_MATCH_REVEAL_TEAM_NAME"
+              ],
+              "text": "View Statistics"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "width": 340,
+          "height": 430,
+          "marginLeft": 730,
+          "marginTop": 140,
+          "bindings": [
+            {
+              "binding": "bnd_player_style",
+              "property": "image"
+            },
+            {
+              "binding": "bnd_rowvisible",
+              "property": "visible"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "width": 35,
+          "height": 35,
+          "marginLeft": 742,
+          "marginTop": 223,
+          "bindings": [
+            {
+              "binding": "bnd_team_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "FILL",
+          "alignH": "LEFT",
+          "marginLeft": 710,
+          "width": 400,
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignH": "FILL",
+              "alignV": "TOP",
+              "height": 100,
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "width": 70,
+                  "height": 70,
+                  "marginLeft": 30,
+                  "marginTop": 100,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_avatar_off",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 183,
+                  "marginLeft": 38,
+                  "fontSize": 20,
+                  "width": 250,
+                  "autoScroll": true,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansExpanded",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_name",
+                      "property": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "FILL",
+              "alignV": "TOP",
+              "height": 200,
+              "marginTop": 120,
+              "children": [
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 123,
+                  "marginLeft": -41,
+                  "fontSize": 14,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Age :  ?"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 123,
+                  "marginLeft": -28,
+                  "fontSize": 14,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "textAlignH": "LEFT",
+                  "alpha": 1,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_number_off",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "height": 12,
+                  "marginTop": 123,
+                  "marginRight": 270,
+                  "width": 1.8,
+                  "color": "0xFFFFFF",
+                  "alpha": 0.8
+                },
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "height": 12,
+                  "marginTop": 123,
+                  "marginRight": 207,
+                  "width": 1.8,
+                  "color": "0xFFFFFF",
+                  "alpha": 0.8
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 123,
+                  "marginLeft": -100,
+                  "fontSize": 14,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "textAlignH": "LEFT",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_position",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "marginTop": 60,
+                  "marginRight": 63,
+                  "fontSize": 16,
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "OVR"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "marginTop": 75,
+                  "marginRight": 59,
+                  "fontSize": 38,
+                  "fontFace": "$CruyffSansRegular",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_rating",
+                      "property": "text"
+                    },
+                    {
+                      "binding": "bnd_rating_color",
+                      "property": "color"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "marginTop": 153,
+                  "marginRight": 340,
+                  "fontSize": 22,
+                  "fontColor": "$COLOR_WHITE",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_rating",
+                      "property": "true"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "LEFT",
+                  "marginTop": 123,
+                  "marginLeft": 235,
+                  "fontSize": 14,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_country_name",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "marginTop": 115,
+                  "marginRight": 172,
+                  "width": 27,
+                  "height": 27,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_country",
+                      "property": "image"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "FILL",
+              "alignV": "TOP",
+              "height": 200,
+              "marginTop": 120,
+              "bindings": [
+                {
+                  "binding": "bnd_rowvisible",
+                  "property": "visible"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "height": 30,
+                  "marginTop": 197,
+                  "marginRight": 275,
+                  "width": 1.8,
+                  "color": "0xFFFFFF",
+                  "alpha": 0.8
+                },
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "height": 30,
+                  "marginTop": 159,
+                  "marginRight": 275,
+                  "width": 1.8,
+                  "color": "0xFFFFFF",
+                  "alpha": 0.8
+                },
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "height": 30,
+                  "marginTop": 197,
+                  "marginRight": 162,
+                  "width": 1.8,
+                  "color": "0xFFFFFF",
+                  "alpha": 0.8
+                },
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "RIGHT",
+                  "height": 30,
+                  "marginTop": 159,
+                  "marginRight": 162,
+                  "width": 1.8,
+                  "color": "0xFFFFFF",
+                  "alpha": 0.8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignH": "FILL",
+          "alignV": "TOP",
+          "height": 200,
+          "marginTop": 300,
+          "marginLeft": 740,
+          "bindings": [
+            {
+              "binding": "bnd_rowvisible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "RIGHT",
+              "marginTop": 95,
+              "marginRight": 570,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "bindings": [
+                {
+                  "binding": "bnd_player_stat1",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_player_stat1_color",
+                  "property": "color"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "RIGHT",
+              "marginTop": 123,
+              "marginRight": 570,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "bindings": [
+                {
+                  "binding": "bnd_player_stat2",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_player_stat2_color",
+                  "property": "color"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "RIGHT",
+              "marginTop": 152,
+              "marginRight": 570,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "bindings": [
+                {
+                  "binding": "bnd_player_stat3",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_player_stat3_color",
+                  "property": "color"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "RIGHT",
+              "marginTop": 180,
+              "marginRight": 570,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "bindings": [
+                {
+                  "binding": "bnd_player_stat4",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_player_stat4_color",
+                  "property": "color"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "RIGHT",
+              "marginTop": 210,
+              "marginRight": 570,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "bindings": [
+                {
+                  "binding": "bnd_player_stat5",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_player_stat5_color",
+                  "property": "color"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "TOP",
+              "alignH": "RIGHT",
+              "marginTop": 240,
+              "marginRight": 570,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "bindings": [
+                {
+                  "binding": "bnd_player_stat6",
+                  "property": "text"
+                },
+                {
+                  "binding": "bnd_player_stat6_color",
+                  "property": "color"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "CENTER",
+          "alignH": "FILL",
+          "marginTop": 25,
+          "bindings": [
+            {
+              "binding": "bnd_visible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Panel",
+              "name": "UIFrame",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 10,
+              "marginLeft": -270,
+              "width": 500,
+              "height": 500,
+              "children": [
+                {
+                  "commonName": "Panel",
+                  "alignV": "FILL",
+                  "alignH": "LEFT",
+                  "marginLeft": 200,
+                  "width": 500,
+                  "children": [
+                    {
+                      "commonName": "Label",
+                      "alignV": "CENTER",
+                      "alignH": "LEFT",
+                      "marginTop": 0,
+                      "marginLeft": 70,
+                      "fontSize": 0,
+                      "fontFace": "$KnulExtraBold",
+                      "fontColor": "$COLOR_WHITE",
+                      "text": "Squad Players"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "name": "InfoPlayer",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginLeft": 290,
+              "marginTop": 10,
+              "width": 580,
+              "height": 500,
+              "bindings": [
+                {
+                  "binding": "bnd_plinfo_visible",
+                  "property": "visible"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Panel",
+                  "alignH": "FILL",
+                  "alignV": "TOP",
+                  "marginTop": 0,
+                  "height": 300,
+                  "children": [
+                    {
+                      "commonName": "Label",
+                      "alignV": "TOP",
+                      "alignH": "LEFT",
+                      "marginTop": 180,
+                      "marginLeft": 265,
+                      "fontSize": 15,
+                      "fontColor": "$COLOR_LIGHT_GREEN",
+                      "fontFace": "$CruyffSansRegular",
+                      "bindings": [
+                        {
+                          "binding": "bnd_player_level_up_off",
+                          "property": "text"
+                        }
+                      ]
+                    },
+                    {
+                      "commonName": "Label",
+                      "alignV": "TOP",
+                      "alignH": "LEFT",
+                      "marginTop": 180,
+                      "marginLeft": 390,
+                      "fontSize": 15,
+                      "fontColor": "$COLOR_WHITE",
+                      "fontFace": "$CruyffSansBold",
+                      "bindings": [
+                        {
+                          "binding": "bnd_player_growth_off",
+                          "property": "text"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": -240,
+              "marginLeft": 140,
+              "width": 550,
+              "height": 500,
+              "bindings": [
+                {
+                  "binding": "bnd_panelvisible",
+                  "property": "visible"
+                },
+                {
+                  "binding": "bnd_panelanim",
+                  "property": "alpha"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": -147,
+                  "marginLeft": 525,
+                  "width": 25,
+                  "height": 25,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_morale",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": -15,
+                  "marginTop": -100,
+                  "width": 26,
+                  "height": 26,
+                  "type": "$SellHub"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 13,
+                  "marginTop": -100,
+                  "fontSize": 17,
+                  "fontFace": "$CruyffSansRegular",
+                  "fontColor": "$COLOR_BLACK",
+                  "text": "Transfer"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 185,
+                  "marginTop": -100,
+                  "width": 23,
+                  "height": 23,
+                  "type": "$SquaddHub"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 213,
+                  "marginTop": -100,
+                  "fontSize": 17,
+                  "fontFace": "$CruyffSansRegular",
+                  "fontColor": "$COLOR_BLACK",
+                  "text": "Squad"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 385,
+                  "marginTop": -100,
+                  "width": 23,
+                  "height": 23,
+                  "type": "$ContractHub"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginLeft": 413,
+                  "marginTop": -100,
+                  "fontSize": 17,
+                  "fontFace": "$CruyffSansRegular",
+                  "fontColor": "$COLOR_BLACK",
+                  "text": "Contract"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": -147,
+                  "marginLeft": 415,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_role_name",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": -147,
+                  "marginLeft": 5,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "textAlignH": "CENTER",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_number",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "width": 55,
+                  "height": 55,
+                  "marginLeft": 100,
+                  "marginTop": -150,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_avatar",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": -147,
+                  "marginLeft": 350,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_rating",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": -147,
+                  "marginLeft": 166,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_name",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": -147,
+                  "marginLeft": 55,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_BLACK",
+                  "textAlignH": "CENTER",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_position",
+                      "property": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Group",
+          "name": "insButtonsOptionsBot",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+		  "marginLeft": 50,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panelvisible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "ClubButton",
+              "name": "SellButton",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "x": -605,
+              "y": -85,
+              "width": 110,
+              "height": 80,
+              "autoSelect": true,
+              "clickSFXID": "act_click_customization",
+              "id": 1,
+              "type": "blackandblue",
+              "buttonHeight": 35,
+              "buttonWidth": 110,
+              "buttonX": 0,
+              "buttonY": 0,
+              "selectable": true,
+              "rollOverSFXID": "mouse_over_customization"
+            },
+            {
+              "commonName": "ClubButton",
+              "name": "SquadButton",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "x": -415,
+              "y": -85,
+              "width": 110,
+              "height": 80,
+              "autoSelect": true,
+              "clickSFXID": "act_click_customization",
+              "id": 2,
+              "type": "blackandblue",
+              "buttonHeight": 35,
+              "buttonWidth": 110,
+              "buttonX": 0,
+              "buttonY": 0,
+              "selectable": true,
+              "rollOverSFXID": "mouse_over_customization"
+            },
+            {
+              "commonName": "ClubButton",
+              "name": "ContractButton",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "x": -205,
+              "y": -85,
+              "width": 110,
+              "height": 80,
+              "autoSelect": true,
+              "clickSFXID": "act_click_customization",
+              "id": 3,
+              "type": "blackandblue",
+              "buttonHeight": 35,
+              "buttonWidth": 110,
+              "buttonX": 0,
+              "buttonY": 0,
+              "selectable": true,
+              "rollOverSFXID": "mouse_over_customization"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "insOptionsBot",
+          "alignH": "FILL",
+          "alignV": "CENTER",
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginTop": 0,
+              "marginLeft": 35,
+              "bindings": [
+                {
+                  "binding": "bnd_tab1_select_visible",
+                  "property": "visible"
+                },
+                {
+                  "binding": "bnd_panelvisible",
+                  "property": "visible"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Panel",
+                  "name": "ButtonPanel",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "marginTop": 0,
+                  "marginLeft": 0,
+                  "children": [
+                    {
+                      "commonName": "Rectangle",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -517,
+                      "marginTop": -25,
+                      "width": 205,
+                      "height": 30,
+                      "color": "0x000000"
+                    },
+                    {
+                      "commonName": "Asset",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -517,
+                      "marginTop": -25,
+                      "width": 205,
+                      "height": 30,
+                      "alpha": 0.7,
+                      "type": "$Icon_Sellect"
+                    },
+                    {
+                      "commonName": "Label",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -513,
+                      "marginTop": -24,
+                      "fontSize": 14,
+                      "fontColor": "0xFFFFFF",
+                      "fontFace": "$CruyffSansMedium",
+                      "text": "Sell offer players"
+                    },
+                    {
+                      "commonName": "SimpleButton",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -517,
+                      "marginTop": -25,
+                      "height": 80,
+                      "width": 200,
+                      "backgroundImage": "$",
+                      "backgroundHighlightImage": "$Tab_Action_White",
+                      "clickAction": "act_release"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "insOptionsBot",
+          "alignH": "FILL",
+          "alignV": "CENTER",
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginTop": 0,
+              "marginLeft": 35,
+              "bindings": [
+                {
+                  "binding": "bnd_tab2_select_visible",
+                  "property": "visible"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Panel",
+                  "name": "ButtonPanel",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "marginTop": 0,
+                  "marginLeft": 0,
+                  "children": [
+                    {
+                      "commonName": "Rectangle",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -314,
+                      "marginTop": -25,
+                      "width": 205,
+                      "height": 30,
+                      "color": "0x000000"
+                    },
+                    {
+                      "commonName": "Asset",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -314,
+                      "marginTop": -25,
+                      "width": 205,
+                      "height": 30,
+                      "alpha": 0.7,
+                      "type": "$Icon_Sellect"
+                    },
+                    {
+                      "commonName": "Label",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -310,
+                      "marginTop": -24,
+                      "fontSize": 14,
+                      "fontColor": "0xFFFFFF",
+                      "fontFace": "$CruyffSansMedium",
+                      "text": "Check the squad"
+                    },
+                    {
+                      "commonName": "SimpleButton",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -314,
+                      "marginTop": -25,
+                      "height": 80,
+                      "width": 200,
+                      "backgroundImage": "$",
+                      "backgroundHighlightImage": "$Tab_Action_White",
+                      "clickAction": "act_squad"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "insOptionsBot",
+          "alignH": "FILL",
+          "alignV": "CENTER",
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginTop": 0,
+              "marginLeft": 35,
+              "bindings": [
+                {
+                  "binding": "bnd_tab3_select_visible",
+                  "property": "visible"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Panel",
+                  "name": "ButtonPanel",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "marginTop": 0,
+                  "marginLeft": 0,
+                  "children": [
+                    {
+                      "commonName": "Rectangle",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -111.5,
+                      "marginTop": -25,
+                      "width": 205,
+                      "height": 30,
+                      "color": "0x000000"
+                    },
+                    {
+                      "commonName": "Asset",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -111.5,
+                      "marginTop": -25,
+                      "width": 205,
+                      "height": 30,
+                      "alpha": 0.7,
+                      "type": "$Icon_Sellect"
+                    },
+                    {
+                      "commonName": "Label",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -108,
+                      "marginTop": -24,
+                      "fontSize": 14,
+                      "fontColor": "0xFFFFFF",
+                      "fontFace": "$CruyffSansMedium",
+                      "text": "Add contract"
+                    },
+                    {
+                      "commonName": "SimpleButton",
+                      "alignV": "CENTER",
+                      "alignH": "CENTER",
+                      "marginLeft": -111,
+                      "marginTop": -25,
+                      "height": 80,
+                      "width": 200,
+                      "backgroundImage": "$",
+                      "backgroundHighlightImage": "$Tab_Action_White",
+                      "clickAction": "act_contract"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginBottom": 70,
+          "marginTop": 20,
+          "bindings": [
+            {
+              "binding": "bnd_plstat_visible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignV": "FILL",
+              "alignH": "LEFT",
+              "marginLeft": 200,
+              "width": 500,
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "width": 344,
+                  "height": 300,
+                  "marginLeft": 527,
+                  "marginTop": 250,
+                  "bindings": [
+                    {
+                      "binding": "bnd_table_visible",
+                      "property": "image"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "PlayerStats",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": 290,
+          "marginTop": 10,
+          "width": 580,
+          "height": 500,
+          "bindings": [
+            {
+              "binding": "bnd_plstat_visible",
+              "property": "visible"
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignH": "FILL",
+              "alignV": "TOP",
+              "marginTop": 0,
+              "height": 300,
+              "children": [
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": -30,
+                  "marginLeft": -120,
+                  "fontSize": 33,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansExpanded",
+                  "autoScroll": true,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_name_off",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "marginTop": 16,
+                  "marginLeft": -50,
+                  "width": 45,
+                  "height": 45,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_country_off",
+                      "property": "image"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "FILL",
+              "alignV": "BOTTOM",
+              "marginTop": 0,
+              "height": 296,
+              "children": [
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginLeft": 15,
+                  "marginTop": -3,
+                  "fontSize": 17,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "All Stats"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 41,
+                  "marginLeft": 15,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Competitions"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 43,
+                  "marginLeft": 170,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "G"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 43,
+                  "marginLeft": 210,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "CS"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 43,
+                  "marginLeft": 256,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "YC"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 43,
+                  "marginLeft": 297,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "RC"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 81,
+                  "marginLeft": 15,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Friendly"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 83,
+                  "marginLeft": 176,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_friendlygs",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 83,
+                  "marginLeft": 221,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_friendlycs",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 83,
+                  "marginLeft": 266,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_friendlyyc",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 83,
+                  "marginLeft": 308,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_friendlyrc",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 121,
+                  "marginLeft": 15,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Domestic League"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 123,
+                  "marginLeft": 176,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_domgs",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 123,
+                  "marginLeft": 221,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_domcs",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 123,
+                  "marginLeft": 266,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_domyc",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 123,
+                  "marginLeft": 308,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_domrc",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 161,
+                  "marginLeft": 15,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "text": "Total"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 163,
+                  "marginLeft": 176,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_totalgs",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 163,
+                  "marginLeft": 221,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_totalcs",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 163,
+                  "marginLeft": 266,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_totalyc",
+                      "property": "text"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "textAlignH": "CENTER",
+                  "marginTop": 163,
+                  "marginLeft": 308,
+                  "fontSize": 15,
+                  "fontColor": "$COLOR_WHITE",
+                  "fontFace": "$CruyffSansMedium",
+                  "bindings": [
+                    {
+                      "binding": "bnd_totalrc",
+                      "property": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "UIFrame",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "height": 580,
+          "children": [
+            {
+              "commonName": "Image",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginRight": -70,
+              "marginTop": -5,
+              "scaleX": 0.75,
+              "scaleY": 0.75,
+              "bindings": [
+                {
+                  "binding": "bnd_player_3d",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginRight": -70,
+              "marginTop": 1065,
+              "rotationX": 180,
+              "scaleX": 0.75,
+              "scaleY": 0.75,
+              "alpha": 0.3,
+              "bindings": [
+                {
+                  "binding": "bnd_player_3d",
+                  "property": "image"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

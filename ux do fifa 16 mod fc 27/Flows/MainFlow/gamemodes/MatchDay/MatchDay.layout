@@ -1,0 +1,135 @@
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$_Background_2"
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -25,
+            "marginLeft": 0,
+            "width": 800,
+            "height": 485,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1B22",
+                    "cornerRaduis": 15,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "height": 60,
+                    "color": "$"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 15,
+                   "marginLeft": 0,
+                   "fontSize": 30,
+                   "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+			       "fontColor": "0xffffff",
+			       "text": "Match Day"			  
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 42,
+                    "marginLeft": 0,
+                    "x": -20,
+                    "y": 0,
+                    "displayRange": 4,
+                    "rowChangeAction": "act_match_play",
+                    "highlightable": true,
+                    "row": "MatchDayRow",
+                    "rowHeight": 107.5,
+                    "rowWidth": 805.0,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "fontSize": 30,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "NO CONTEST",
+                   "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_empty",
+                            "property": "visible"
+                        }
+                    ]
+                }            
+            ]
+        }
+	]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "MenuCupAHub",
+    "onEnter":
+    [
+        ["setTabContext", [0]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuCupAHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_back"]
+        },       
+        {
+            "event": "evt_menu_cupb",
+            "targets": ["out_menu_cupb"]
+        },
+        { 
+            "event": "evt_menu_cupc",
+            "targets": ["out_menu_cupc"]
+        },
+        { 
+            "event": "evt_menu_cupd",
+            "targets": ["out_menu_cupd"]
+        },
+        { 
+            "event": "evt_to_cup_ucl",
+            "targets": ["out_ucl"]
+        },
+        { 
+            "event": "evt_to_cup_uel",
+            "targets": ["out_uel"]
+        },
+        {
+            "event": "evt_to_cup_uec",
+            "targets": ["out_uec"]
+        },
+        {
+            "event": "evt_to_cup_unl",
+            "targets": ["out_unl"]
+         },
+         {
+            "event": "evt_to_cup_uwcl",
+            "targets": ["out_uwcl"]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+	"dds": ["TeamSelectKnockout.dd"],
+    "vms": [
+    ["lua", "TeamSelectKnockout.lua"],
+    ["lua", "TournamentFormat.lua"]
+    ],
+    "views": [["gfx", {"layout": "TeamSelectKnockout.layout"}]]
+}

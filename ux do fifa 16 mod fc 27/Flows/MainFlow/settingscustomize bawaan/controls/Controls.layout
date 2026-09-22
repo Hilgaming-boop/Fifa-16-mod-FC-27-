@@ -1,0 +1,228 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "SLIDE_IN_ALPHA"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "SLIDE_OUT"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+         {
+            "commonName": "Asset",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 78,
+            "marginLeft": -290,
+            "width": 160,
+            "height": 50,
+            "alpha": 1,
+            "path": "views/backgrounds/Green_Effect.swf"
+        },         
+        {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -33,
+            "marginLeft": 315,
+            "width": 350,
+            "height": 30,
+            "cornerRaduis": 10,
+            "alpha": 5,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -33,
+            "marginLeft": 210,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Touch controls",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_select_touch_controls",
+             "textStyles":
+            [
+               "TF_BUTTON_CONTROLOFF"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -33,
+            "marginLeft": 385,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Controller controls",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_select_controller_controls",
+             "textStyles":
+            [
+               "TF_BUTTON_CONTROLOFF"
+            ]
+        },
+        {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 32,
+            "marginLeft": -185,
+            "width": 615,
+            "height": 430,
+            "cornerRaduis": 10,
+            "alpha": 0.7,
+            "color": "0x1C1B22"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 32,
+            "marginLeft": 315,
+            "width": 365,
+            "height": 430,
+            "cornerRaduis": 10,
+            "alpha": 0.7,
+            "color": "0x1C1B22"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -122,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -61,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -5,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 57,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 116,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 180,
+            "marginLeft": -185,
+            "width": 580,
+            "height": 1,
+            "cornerRaduis": 0,
+            "alpha": 0.2,
+            "color": "0xffffff"
+         },                  
+        {
+            "commonName": "BigBinaryToggle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -800000,
+            "marginLeft": 68,
+            "styles": ["TF_LABEL_CENTERED"],
+            "visible":    true,
+            "onLabel":          "LTXT_MOB_SETTINGS_CONTROLLER",
+            "onSelectedIcon":   "$CONTROL_ICON_GAMEPAD_GREY",
+            "onUnselectedIcon": "$CONTROL_ICON_TOUCHPAD_WHITE",
+            "onAction":         "act_select_touch_controls",
+            "offLabel":         "LTXT_MOB_SETTINGS_VIRTUAL",
+            "offUnselectedIcon":"$CONTROL_ICON_GAMEPAD_WHITE",
+            "offSelectedIcon":  "$CONTROL_ICON_TOUCHPAD_GREY",
+            "offAction":        "act_select_controller_controls",
+            "bindings":
+            [
+                {
+                     "property": "isOn",
+                     "binding":  "bnd_is_touch_control"
+                 }
+              ]
+           }
+        ]
+     }
+  ]
+}

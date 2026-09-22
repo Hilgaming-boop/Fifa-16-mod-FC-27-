@@ -1,0 +1,95 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["MenuMatchSelect"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuMatchSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_cupmap",
+                    "targets": ["CupMap"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                },
+                {
+                    "event":   "evt_refresh_on_resize",
+                    "targets": ["MatchSelect"]
+                }
+            ]
+        },
+        {
+            "name": "CupMap",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UCL/QuickCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UCL/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect"
+            }
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Restart/Restart.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        }
+    ]
+}

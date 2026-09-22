@@ -1,0 +1,165 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "DevelopmentPlans",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_REGULAR",
+            "fontColor": "$TILE_COLOR_LABEL",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_SIZE_SMALLEST_HEADER"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_REGULAR",
+            "textAlignH": "RIGHT",
+            "fontColor": "$TILE_COLOR_VALUE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+        "dataProviders.Status": "RowPanel.RowLeftPanel.Status.text",
+        "dataProviders.PlayerAvatar": "RowPanel.RowLeftPanel.PlayerAvatar.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.Rating": "RowPanel.RowRightPanel.PlayerRating.text",
+        "dataProviders.FontColor": "RowPanel.RowLeftPanel.Position.fontColor",
+        "dataProviders.FontColor": "RowPanel.RowLeftPanel.PlayerName.fontColor",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 530,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 480,
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "FILL",
+                            "marginTop": 28,
+                            "height": 2,
+                            "color": "0xFFFFFF",
+                            "alpha": 0.1
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Position",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 5,
+                            "marginLeft": 25,
+                            "fontSize": 16,
+                            "alpha": 2,
+                            "fontFace": "$CruyffSans-Medium",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.9
+                        },
+                        {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 15,
+                            "marginLeft": 135,
+                            "fontSize": 15,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7,
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Balanced"
+                },
+                {
+                            "commonName": "Image",
+                            "name": "PlayerAvatar",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -4,
+                            "marginLeft": 70,
+                            "width": 60,
+                            "height": 60
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"PlayerName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 135,
+                            "fontSize": 18,
+                            "bold": true,
+                            "fontFace": "$CruyffSans-Extended",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 1
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "RowRightPanel",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "width": 100,
+                    "height": 100,
+                    "children":
+                    [
+                       {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0xFFFFFF",
+                            "highlightable": true,
+                            "visible":false,
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"PlayerRating",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 10,
+                            "marginLeft": -20,
+                            "fontSize": 0,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontColor": "0xFFFFFF",
+                            "alpha": 0.7
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

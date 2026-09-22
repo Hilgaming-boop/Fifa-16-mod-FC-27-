@@ -1,0 +1,53 @@
+{
+	"commonName": "Panel",
+	"alignV": "FILL",
+	"alignH": "FILL",
+     "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_Background_1"
+        },
+        {
+           "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "fontSize": 20,
+            "alpha": 0,
+            "text": "A"
+        },              
+        {
+           "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 40,
+            "height": 40,
+            "width": 40,
+            "alpha": 0,
+            "path": "views/loadingindicator/loadingIcon.swf"
+        }        
+    ]
+}

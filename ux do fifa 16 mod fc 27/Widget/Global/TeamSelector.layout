@@ -1,0 +1,425 @@
+{
+    "name": "TeamSelectorRoot",
+    "height": 542,
+    "width": 360,
+    "behaviors":
+    [
+        {
+            "commonName": "TeamSelectorBehavior",
+            "name": "teamSelectorBehavior",
+            "avatar": "contentWrapper.teamCrestPanel.avatarContainer.avatar",
+            "avatarContainer": "contentWrapper.teamCrestPanel.avatarContainer",
+            "chemistryBar": "contentWrapper.chemPanel.chemistryBar",
+            "container": "contentWrapper",
+            "countryFlagContainer": "contentWrapper.teamCrestPanel.countryFlagContainer",
+            "defaultAvatar": "contentWrapper.teamCrestPanel.avatarContainer.defaultAvatar",
+            "leagueCrestContainer": "contentWrapper.teamCrestPanel.LeagueCrestContainer",
+            "coachAvatarContainer": "contentWrapper.teamCrestPanel.coachAvatarContainer",
+            "awayKitContainer": "contentWrapper.teamCrestPanel.awayKitContainer",
+            "homeKitContainer": "contentWrapper.teamCrestPanel.homeKitContainer",
+            "gkKitContainer": "contentWrapper.teamCrestPanel.gkKitContainer",
+            "thirdKitContainer": "contentWrapper.teamCrestPanel.thirdKitContainer",
+            "starRating": "contentWrapper.ratingPanel.starRating",
+            "team2Rating": "contentWrapper.team2Rating",
+            "teamRating": "contentWrapper.teamRating"
+        }
+    ],
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 360,
+            "height": 542
+        }
+    },
+    "propertyMap":
+    {
+        "width": "contentWrapper.width",
+        "height": "contentWrapper.height",
+        "dataProviders": "teamSelectorBehavior.data",
+        "dataProviders.chemistry":
+        [
+            "contentWrapper.chemPanel.chemValueLabel.text",
+            {
+                "property": "visible",
+                "converter": "ux.convert.ChooseValueConverter",
+                "target": "contentWrapper.chemPanel",
+                "converterParams":
+                {
+                    "default": true,
+                    "null": false
+                }
+            }
+        ],
+        "dataProviders.overall": "contentWrapper.ratingPanel.ratingValueLabel.text",
+        "dataProviders.crest": "contentWrapper.teamCrestPanel.teamCrest.image",
+        "dataProviders.leagueCrest": "contentWrapper.teamCrestPanel.LeagueCrestContainer.leagueCrest.image",
+        "dataProviders.coachAvatar": "contentWrapper.teamCrestPanel.coachAvatarContainer.coachAvatar.image",
+        "dataProviders.awayKit": "contentWrapper.teamCrestPanel.awayKitContainer.awayKit.image",
+        "dataProviders.homeKit": "contentWrapper.teamCrestPanel.homeKitContainer.homeKit.image",
+        "dataProviders.gkKit": "contentWrapper.teamCrestPanel.gkKitContainer.gkKit.image",
+        "dataProviders.thirdKit": "contentWrapper.teamCrestPanel.thirdKitContainer.thirdKit.image",
+        "dataProviders.flagCrest": "contentWrapper.teamCrestPanel.countryFlagContainer.flagCrest.image"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "contentWrapper",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "teamCrestPanel",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "crestBg",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "alpha": 0.0,
+                            "type": "$TeamSelectorBg"
+                        },
+	                      {
+                            "commonName": "Asset",
+                            "name": "smallCircleRighttest",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "alpha": 0.0,
+                            "type": "$TeamSelectorSmallCircle"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "teamCrest",
+                            "height": 166,
+                            "width": 166,
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginBottom": 36
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "countryFlagContainer",
+                            "alignH": "FILL",
+                            "alignV": "TOP",
+                            "height": 64,
+                            "marginTop": 30,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "smallCircleRight",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0.0,
+                                    "type": "$TeamSelectorSmallCircleRight"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "flagCrest",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 62,
+                                    "height": 62,
+                                    "marginLeft": 95
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "LeagueCrestContainer",
+                            "alignH": "FILL",
+                            "alignV": "BOTTOM",
+                            "height": 105,
+                            "marginBottom": 0,
+                            "resizeType": "NONE",
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "BigCircleRight",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0.0,
+                                    "type": "$TeamSelectorSmallCircleAlt",
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    }
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "leagueCrest",
+                                    "alignH": "CENTER",
+                                    "alignV": "BOTTOM",
+                                    "scaleX": 0.44,
+                                    "scaleY": 0.44,
+                                    "marginBottom": 0
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "coachAvatarContainer",
+                            "alignV": "CENTER",
+                            "alignH": "FILL",
+                            "marginTop": 170,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "coachAvatar",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 300,
+                                    "height": 300,
+                                    "marginLeft": 910,
+                                    "marginTop": -100
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "awayKitContainer",
+                            "alignV": "TOP",
+                            "alignH": "FILL",
+                            "marginTop": 280,
+                            "height":200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "awayKit",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.6,
+                                    "scaleY": 0.6,
+                                    "marginLeft": 615,
+                                    "marginTop":-150
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "homeKitContainer",
+                            "alignV": "TOP",
+                            "alignH": "FILL",
+                            "marginTop": 280,
+                            "height":200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "homeKit",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.6,
+                                    "scaleY": 0.6,
+                                    "marginLeft": 375,
+                                    "marginTop":-150
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "gkKitContainer",
+                            "alignV": "TOP",
+                            "alignH": "FILL",
+                            "marginTop": 290,
+                            "height":200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "gkKit",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.6,
+                                    "scaleY": 0.6,
+                                    "marginLeft": 375,
+                                    "marginTop":50
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "thirdKitContainer",
+                            "alignV": "TOP",
+                            "alignH": "FILL",
+                            "marginTop": 290,
+                            "height":200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "thirdKit",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "scaleX": 0.6,
+                                    "scaleY": 0.6,
+                                    "marginLeft": 615,
+                                    "marginTop":50
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "avatarContainer",
+                            "height": 75,
+                            "marginLeft": 5,
+                            "marginTop": 110,
+                            "width": 75,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "smallCircleLeft",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0.00,
+                                    "type": "$TeamSelectorSmallCircle"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "defaultAvatar",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "type": "$TeamSelectorAvatarBg"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "avatar",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TeamRating",
+                    "name": "teamRating",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 3,
+                    "marginTop": 126,
+                    "height": 50,
+                    "width": 250,
+                    "attLabelStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_LABELS"
+                    ],
+                    "attValueStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_VALUES"
+                    ],
+                    "defLabelStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_LABELS"
+                    ],
+                    "defValueStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_VALUES"
+                    ],
+                    "midLabelStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_LABELS"
+                    ],
+                    "midValueStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_VALUES"
+                    ]
+                },
+                {
+                    "commonName": "TeamRating",
+                    "name": "team2Rating",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 3,
+                    "marginTop": 126,
+                    "height": 50,
+                    "width": 250,
+                    "attLabelStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_LABELS"
+                    ],
+                    "attValueStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_VALUES"
+                    ],
+                    "defLabelStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_LABELS"
+                    ],
+                    "defValueStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_VALUES"
+                    ],
+                    "midLabelStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_LABELS"
+                    ],
+                    "midValueStyles":
+                    [
+                        "TF_TEAM_SELECT_RATING_VALUES"
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "chemPanel",
+                    "alignH": "FILL",
+                    "marginTop": 330,
+                    "width": 227.0,
+                    "height": 30.0,
+                    "children":
+                    [
+                        {
+                            "commonName": "ChemistryBar",
+                            "name": "chemistryBar",
+                            "height": 11,
+                            "marginLeft": 0,
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 141.0
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "chemValueLabel",
+                            "marginLeft": 0,
+                            "alignV": "CENTER",
+                            "styles":
+                            [
+                                "TF_TEAM_SELECT_RATING"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ratingPanel",
+                    "alignV": "CENTER",
+                    "alignH": "FILL",
+                    "marginTop": 104,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "StarRating",
+                            "name": "starRating",
+                            "marginRight": 186,
+                            "alignH": "CENTER",
+                            "alignV": "FILL"
+                        
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

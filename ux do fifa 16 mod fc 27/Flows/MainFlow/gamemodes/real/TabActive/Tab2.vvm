@@ -1,0 +1,5 @@
+{
+  "dds": ["/flows/MainFlow/GameModes/Liga/PremierLeague/MatchSelect/TabActive/Connected/TeamRoster.dd","/lua/enums/Career/Animated.dd"],
+  "vms": [["lua", "/flows/MainFlow/GameModes/Liga/PremierLeague/MatchSelect/TabActive/Connected/TeamRoster.lua"],["lua", "/lua/enums/Career/Animated.lua"]],
+  "views": [["gfx", { "layout": "Tab2.layout" }]]
+}

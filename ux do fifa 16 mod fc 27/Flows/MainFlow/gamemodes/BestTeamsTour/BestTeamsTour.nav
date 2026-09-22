@@ -1,0 +1,154 @@
+{
+    "name": "BestTeamsTour",
+    "states":
+    [
+		{
+            "name": "RedirectBestTeamsTour",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["BestTeamsTour.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_chelsea",
+                    "targets": ["Chelsea"]
+                },
+                {
+                    "event": "evt_manchesterutd",
+                    "targets": ["ManchesterUtd"]
+                },
+                {
+                    "event": "evt_fcbayern",
+                    "targets": ["FCBayern"]
+                },
+                {
+                    "event": "evt_borussiadortmund",
+                    "targets": ["BorussiaDortmund"]
+                },
+                {
+                    "event": "evt_fcbarcelona",
+                    "targets": ["FCBarcelona"]
+                },
+                {
+                    "event": "evt_realmadrid",
+                    "targets": ["RealMadrid"]
+                },
+                {
+                    "event": "evt_psg",
+                    "targets": ["PSG"]
+                },
+                {
+                    "event": "evt_juventus",
+                    "targets": ["Juventus"]
+                },
+                {
+                    "event": "evt_persib",
+                    "targets": ["Persib"]
+                },
+                {
+                    "event": "evt_indonesia",
+                    "targets": ["Indonesia"]
+                }                
+            ]
+        },
+        {
+            "name": "Chelsea",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/Chelsea/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "ManchesterUtd",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/ManchesterUtd/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "FCBayern",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/FCBayern/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "BorussiaDortmund",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/BorussiaDortmund/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "FCBarcelona",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/FCBarcelona/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "RealMadrid",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/RealMadrid/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "PSG",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/PSG/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "Juventus",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/Juventus/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "Persib",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/Persib/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        },
+        {
+            "name": "Indonesia",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Teams/Indonesia/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "BestTeamsTour"
+            }
+        }        
+    ]
+}

@@ -1,0 +1,387 @@
+{
+  "actions": [
+
+  ],
+  "data": [
+    {
+      "viewname": "bnd_starting_11",
+      "binding": "bnd_starting_11",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_subs_and_res",
+      "binding": "bnd_subs_and_res",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_team_name",
+      "binding": "bnd_team_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_team_crest",
+      "binding": "bnd_team_crest",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_team_rating",
+      "binding": "bnd_team_rating",
+      "type": "float"
+    },
+    {
+      "viewname": "bnd_team_rating_label",
+      "binding": "bnd_team_rating_label",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_team_overall",
+      "binding": "bnd_team_overall",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_1_head",
+      "binding": "bnd_player_1_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_1_name",
+      "binding": "bnd_player_1_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_1_pos",
+      "binding": "bnd_player_1_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_1_rating",
+      "binding": "bnd_player_1_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_2_head",
+      "binding": "bnd_player_2_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_2_name",
+      "binding": "bnd_player_2_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_2_pos",
+      "binding": "bnd_player_2_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_2_rating",
+      "binding": "bnd_player_2_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_3_head",
+      "binding": "bnd_player_3_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_3_name",
+      "binding": "bnd_player_3_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_3_pos",
+      "binding": "bnd_player_3_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_3_rating",
+      "binding": "bnd_player_3_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_4_head",
+      "binding": "bnd_player_4_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_4_name",
+      "binding": "bnd_player_4_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_4_pos",
+      "binding": "bnd_player_4_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_4_rating",
+      "binding": "bnd_player_4_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_5_head",
+      "binding": "bnd_player_5_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_5_name",
+      "binding": "bnd_player_5_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_5_pos",
+      "binding": "bnd_player_5_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_5_rating",
+      "binding": "bnd_player_5_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_6_head",
+      "binding": "bnd_player_6_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_6_name",
+      "binding": "bnd_player_6_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_6_pos",
+      "binding": "bnd_player_6_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_6_rating",
+      "binding": "bnd_player_6_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_7_head",
+      "binding": "bnd_player_7_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_7_name",
+      "binding": "bnd_player_7_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_7_pos",
+      "binding": "bnd_player_7_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_7_rating",
+      "binding": "bnd_player_7_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_8_head",
+      "binding": "bnd_player_8_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_8_name",
+      "binding": "bnd_player_8_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_8_pos",
+      "binding": "bnd_player_8_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_8_rating",
+      "binding": "bnd_player_8_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_9_head",
+      "binding": "bnd_player_9_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_9_name",
+      "binding": "bnd_player_9_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_9_pos",
+      "binding": "bnd_player_9_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_9_rating",
+      "binding": "bnd_player_9_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_10_head",
+      "binding": "bnd_player_10_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_10_name",
+      "binding": "bnd_player_10_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_10_pos",
+      "binding": "bnd_player_10_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_10_rating",
+      "binding": "bnd_player_10_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_player_11_head",
+      "binding": "bnd_player_11_head",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_11_name",
+      "binding": "bnd_player_11_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_11_pos",
+      "binding": "bnd_player_11_pos",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_11_rating",
+      "binding": "bnd_player_11_rating",
+      "type": "int"
+    },
+    {
+      "viewname": "bnd_team_formation",
+      "binding": "bnd_team_formation",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_formation_name",
+      "binding": "bnd_formation_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_player_item",
+      "binding": "bnd_player_item",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_player_1_left",
+      "binding": "bnd_player_1_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_1_bottom",
+      "binding": "bnd_player_1_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_2_left",
+      "binding": "bnd_player_2_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_2_bottom",
+      "binding": "bnd_player_2_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_3_left",
+      "binding": "bnd_player_3_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_3_bottom",
+      "binding": "bnd_player_3_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_4_left",
+      "binding": "bnd_player_4_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_4_bottom",
+      "binding": "bnd_player_4_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_5_left",
+      "binding": "bnd_player_5_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_5_bottom",
+      "binding": "bnd_player_5_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_6_left",
+      "binding": "bnd_player_6_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_6_bottom",
+      "binding": "bnd_player_6_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_7_left",
+      "binding": "bnd_player_7_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_7_bottom",
+      "binding": "bnd_player_7_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_8_left",
+      "binding": "bnd_player_8_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_8_bottom",
+      "binding": "bnd_player_8_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_9_left",
+      "binding": "bnd_player_9_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_9_bottom",
+      "binding": "bnd_player_9_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_10_left",
+      "binding": "bnd_player_10_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_10_bottom",
+      "binding": "bnd_player_10_bottom",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_11_left",
+      "binding": "bnd_player_11_left",
+      "type": "init"
+    },
+    {
+      "viewname": "bnd_player_11_bottom",
+      "binding": "bnd_player_11_bottom",
+      "type": "init"
+    }
+  ]
+}

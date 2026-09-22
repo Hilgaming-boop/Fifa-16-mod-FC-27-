@@ -1,0 +1,1376 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "SCREEN_SHOW"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "SIMPLE_SCREEN_HIDE"
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "type": "$"
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuMatchSelect",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+            {
+              "commonName": "Asset",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": -30,
+              "marginLeft": 410,
+              "height": 90,
+              "width": 285,
+              "alpha": 1,
+              "path": "views/backgrounds/Green_Effect.swf"
+            },
+            {
+              "commonName": "Label",
+              "name": "Live",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "marginLeft": 460,
+              "fontSize": 22,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_ORIGIN_NORMAL",
+              "text": "Team Management"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "Live",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": -20,
+          "marginLeft": 0,
+          "fontSize": 100,
+          "scaleX": 3,
+          "scaleY": 2.5,
+          "fontColor": "0xffffff",
+          "fontFace": "$MONTBLANC_TRIAL_BOLD",
+          "text": "VS",
+          "alpha": 0.04
+        },
+        {
+          "commonName": "Panel",
+          "name": "SquadHome",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginBottom": -240,
+          "marginLeft": -280,
+          "width": 350,
+          "children": [
+            {
+              "commonName": "SimpleButton",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginLeft": -15,
+              "marginTop": 0,
+              "height": 70,
+              "width": 230,
+              "backgroundImage": "$Tab_Action_Green",
+              "backgroundHighlightImage": "$Tab_Action_Green",
+              "clickAction": "act_squadhome"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": -15,
+              "marginBottom": 2,
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$MONTBLANC_TRIAL_BOLD",
+              "text": "Tap to Formation"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "SquadAway",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginBottom": -240,
+          "marginLeft": 280,
+          "width": 350,
+          "children": [
+            {
+              "commonName": "SimpleButton",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginLeft": 15,
+              "marginTop": 0,
+              "height": 70,
+              "width": 230,
+              "backgroundImage": "$Tab_Action_Green",
+              "backgroundHighlightImage": "$Tab_Action_Green",
+              "clickAction": "act_squadaway"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": 15,
+              "marginBottom": 2,
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$MONTBLANC_TRIAL_BOLD",
+              "text": "Tap to Formation"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "Preview",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "height": 580,
+          "children": [
+            {
+              "commonName": "Asset",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": -275,
+              "marginTop": 55,
+              "width": 470,
+              "height": 450,
+              "alpha": 1,
+              "type": ""
+            },
+            {
+              "commonName": "Asset",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginRight": -275,
+              "marginTop": 55,
+              "width": 470,
+              "height": 450,
+              "alpha": 1,
+              "type": ""
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoManHome",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": -575,
+              "marginTop": 35,
+              "width": 430,
+              "height": 430,
+              "bindings": [
+                {
+                  "binding": "",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoManAway",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginRight": -570,
+              "marginTop": 35,
+              "width": 430,
+              "height": 430,
+              "bindings": [
+                {
+                  "binding": "",
+                  "property": "image"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 140,
+          "marginLeft": -320,
+          "name": "insTeamStats",
+          "children": [
+            {
+              "commonName": "Image",
+              "scaleX": 1,
+              "scaleY": 1,
+              "name": "insTeamCrest",
+              "bindings": [
+                {
+                  "binding": "bnd_team_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "Live",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 15,
+              "marginLeft": -130,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$Epl",
+              "text": "Tactical Plan"
+            },
+            {
+              "commonName": "Label",
+              "name": "Live",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 15,
+              "marginLeft": 90,
+              "fontSize": 15,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$Epl",
+              "text": "Formation"
+            },
+            {
+              "commonName": "Label",
+              "name": "Live",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 40,
+              "marginLeft": -150,
+              "fontSize": 27,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$Epl",
+              "text": "Balanced"
+            },
+            {
+              "commonName": "Label",
+              "name": "formationDisplay",
+              "fontSize": 20,
+              "fontColor": "$COLOR_WHITE",
+              "alignH": "LEFT",
+              "marginTop": 27,
+              "marginLeft": 100,
+              "bindings": [
+                {
+                  "binding": "bnd_formation_name",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginLeft": 520,
+          "width": 500,
+          "height": 475,
+          "children": [
+            {
+              "commonName": "Image",
+              "marginTop": -70,
+              "marginLeft": 0,
+              "height": 279,
+              "width": 279,
+              "autoScaleImageToTileHeight": true,
+              "name": "insTeamManagerUnknown",
+              "type": "$ManagerCardUnknown"
+            },
+            {
+              "commonName": "Image",
+              "marginTop": -75,
+              "marginLeft": 0,
+              "height": 280,
+              "width": 278,
+              "autoScaleImageToTileHeight": true,
+              "name": "insTeamManager",
+              "bindings": [
+                {
+                  "binding": "bnd_team_man",
+                  "property": "image"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "marginTop": 240,
+          "width": 400,
+          "alignV": "TOP",
+          "height": 400,
+          "alignH": "CENTER",
+          "marginLeft": -250,
+          "name": "insSquad",
+          "children": [
+            {
+              "commonName": "Asset",
+              "alignV": "TOP",
+              "alignH": "CENTER",
+              "height": 400,
+              "width": 600,
+              "scaleX": 0.8,
+              "scaleY": 0.7,
+              "marginTop": -40,
+              "marginLeft": -45,
+              "alpha": 1,
+              "type": "$pitch"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "Starting11",
+          "alignH": "LEFT",
+          "alignV": "CENTER",
+          "marginTop": 48,
+          "marginLeft": 415,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "alpha": 1,
+          "children": [
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_1_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_1_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_1_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_1_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_1_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_1_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_2_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_2_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_2_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_2_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_2_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_2_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_3_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_3_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_3_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_3_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_3_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_3_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_4_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_4_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_4_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_4_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_4_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_4_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_5_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_5_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_5_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_5_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_5_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_5_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_6_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_6_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_6_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_6_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_6_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_6_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_7_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_7_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_7_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_7_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_7_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_7_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_8_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_8_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_8_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_8_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_8_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_8_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_9_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_9_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_9_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_9_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_9_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_9_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_10_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_10_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_10_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_10_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_10_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_10_rating"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "width": 100,
+              "height": 100,
+              "bindings": [
+                {
+                  "property": "marginLeft",
+                  "binding": "bnd_player_11_left"
+                },
+                {
+                  "property": "marginBottom",
+                  "binding": "bnd_player_11_bottom"
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_item"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 7,
+                  "width": 70,
+                  "height": 70,
+                  "bindings": [
+                    {
+                      "property": "image",
+                      "binding": "bnd_player_11_head"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "BOTTOM",
+                  "fontColor": "0xFFFFFF",
+                  "fontFace": "$FONT_DINPROCONDBOLD",
+                  "width": 80,
+                  "marginBottom": 0,
+                  "autoScroll": true,
+                  "fontSize": 15,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_11_name"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 0,
+                  "marginLeft": -1,
+                  "marginTop": -20,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_11_pos"
+                    }
+                  ]
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "RIGHT",
+                  "alignV": "CENTER",
+                  "fontColor": "0xFFFFFF",
+                  "fontSize": 15,
+                  "marginRight": 10,
+                  "marginTop": 7,
+                  "bindings": [
+                    {
+                      "property": "text",
+                      "binding": "bnd_player_11_rating"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

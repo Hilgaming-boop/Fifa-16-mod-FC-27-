@@ -1,0 +1,252 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 645,
+                            "fontSize": 23,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Finance"
+                        },          
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 23,
+                            "marginLeft": 645,
+                            "alpha": 5,
+                            "height": 5,
+                            "width": 120,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MainContentPanel",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "ContentContainer",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginLeft": -350,
+          "marginTop": 15,
+          "width": 300,
+          "height": 440,
+          "children": [
+            {
+              "commonName": "Panel",
+              "name": "BudgetPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": 0,
+              "width": 300,
+              "height": 440,
+              "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateBudget",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 70
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 903
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 500,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                   
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab3sub4"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 20,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Budget Overview"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 150,
+                  "marginLeft": 0,
+                  "scaleX": 1,
+                  "scaleY": 1,
+                  "fontSize": 35,
+                  "fontColor": "0xffffff",
+                  "width": 300,
+                  "autoScroll": true,
+                  "fontFace": "$CruyffSansExpanded",
+                  "alpha": 1,
+                  "bindings": [
+                    {
+                      "binding": "bnd_finance",
+                      "property": "text"
+                    }
+                  ]
+                },
+                               {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 400,
+                                    "height": 1,
+                                    "color": "0xffffff",
+                                    "alpha": 0.5
+                                },                
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 250,
+                  "marginLeft": 0,
+                  "scaleX": 0.7,
+                  "scaleY": 0.75,
+                  "fontSize": 25,
+                  "fontColor": "$COLOR_GREEN",
+                  "textAlignH": "CENTER",
+                  "width": 300,
+                  "multiline": true,
+                  "fontFace": "$CruyffSansExpanded",
+                  "alpha": 1,
+                  "bindings": [
+                    {
+                      "binding": "bnd_financeextra",
+                      "property": "text"
+                    }
+                  ]
+                }
+              ]
+            }         
+          ],
+          "behaviors": [
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_budget",
+              "script": "animateBudget",
+              "target": "BudgetPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_budget",
+              "target": "trigger_animate_budget",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count3",
+                  "property": "value"
+                }
+              ]
+            }            
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+    "dds": [
+
+        "TeamManagement/TeamManagement_Home.dd",
+        "TeamManagement/TeamManagementModelHome.dd",
+        "TeamManagement/Formation/FormationModelReal_Home.dd",
+
+        "TeamManagement/TeamManagement_Away.dd",
+        "TeamManagement/TeamManagementModelAway.dd",
+        "TeamManagement/Formation/FormationModelReal_Away.dd"
+    ],
+    "vms": [
+
+        ["lua", "TeamManagement/TeamManagementModelHome.lua"],
+        ["lua", "TeamManagement/TeamManagementModelAway.lua"]
+
+    ],
+    "views": [
+        ["gfx", {"layout": "TeamManagement/TeamManagement_Home.layout"}],
+        ["gfx", {"layout": "TeamManagement/TeamManagement_Away.layout"}]
+    ],
+    "ireqs": [
+        "Common.ireq",
+        "TeamManagement/TeamManagement_Home.ireq",
+        "TeamManagement/TeamManagement_Away.ireq",
+        "TeamManagement/TeamManagementModelHome.ireq",
+        "TeamManagement/TeamManagementModelAway.ireq",
+        "TeamManagement/Formation/FormationModelReal_Home.ireq",
+        "TeamManagement/Formation/FormationModelReal_Away.ireq"
+    ]
+}
+

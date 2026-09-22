@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_bestteams",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_bestteams"
+		     }
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_bestteams",
+			"binding": "bnd_live_tile_bestteams",
+			"type": "live_tile"
+		}
+	]
+}

@@ -1,0 +1,257 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+  "style-definitions": {
+
+		"TF_TABS_IDLE":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"alpha": 0.7,
+			"width": 250
+		},
+		"TF_TABS_HIGHLIGHT":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_WHITE",
+			"width": 250
+		},
+		"TF_TABS_SELECTED":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_WHITE",
+			"alpha": 1,
+			"width": 200
+		}
+  },         
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_bg_tour",
+                    "property": "image"
+                }
+			]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 250,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$",
+                    "clickAction": ""
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 310,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                }               
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 93,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_dynamic_label",
+                            "property": "text"
+                        }
+		            ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontColor": "0xFFFFFF",
+                    "text": "Home"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 245,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xA8A8A8",
+                    "alpha": 1   
+                }
+            ]
+        },
+        {
+          "commonName": "TabBar",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 35,
+          "marginLeft": 260,
+          "width": 400,
+          "height": 30,
+          "tabs": [
+            {
+              "label": "Central",
+              "clickAction": "act_tab1"
+            },
+            {
+              "label": "Squad",
+              "clickAction": "act_tab2"
+            },
+            {
+              "label": "Office",
+              "clickAction": "act_tab3"
+            },
+            {
+              "label": "Customise",
+              "clickAction": "act_tab4"
+            }
+          ],
+          "bindings": [
+            {
+              "binding": "bnd_tab_index",
+              "property": "selectedIndex"
+                        }
+                    ]
+                },
+        {
+            "commonName": "Panel",
+            "name": "TeamInfo",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 40,
+            "marginRight": 150,
+            "width": 180,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "name": "Crest",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 35,
+                    "height": 35,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_crest",
+                            "property": "image"
+                        }
+		            ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 45,
+                    "width": 130,
+                    "autoScroll": true,
+                    "fontSize": 18,
+                    "fontColor": "0xAAAAAA",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_name",
+                            "property": "text"
+                        }
+		            ]
+                }
+            ]
+        }
+    ]
+}

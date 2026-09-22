@@ -1,0 +1,154 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SLIDE_IN_ALPHA" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SLIDE_OUT" } ]
+	      }
+    ],    
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -90,
+                    "marginLeft": 0,
+                    "height": 100,
+                    "width": 100,
+                    "type": "$Icon_Cm"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "fontSize": 25,
+                    "fontFace": "$MONTBLANC_TRIAL_EXTRABOLD",
+                    "fontColor":"0xFFFFFF",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 500,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "Controle Your Team On And Off The Pitch"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -50,
+                    "marginLeft": 0,
+                    "fontSize": 17,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 550,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "Oversee Club • Design Tactics • Delight The Fans"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_Green",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_menu_careermode"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 13,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Expand Manager Career"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 40,
+                    "marginLeft": -17,
+                    "height": 90,
+                    "width": 255,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 70,
+                    "marginLeft": 24.7,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "text": "Manager Career"
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

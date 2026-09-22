@@ -1,0 +1,24 @@
+{
+    "name": "MenuBT",
+    "states":
+    [
+        {
+            "name": "MenuBT_BestTeams",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/BestTeamsTour.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuBT_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "commonName": "Composite",
+    "height": 551.0,
+    "width": 954.0,
+    "animationScripts":
+	[
+		{
+			"name" : "show",
+			"script" :
+			[
+				{
+					"anim" : "TUTORIAL_TRANSITION_IN"
+				}
+			]
+		},
+		{
+			"name" : "hide",
+			"script" :
+			[
+				{
+					"anim" : "TUTORIAL_TRANSITION_OUT"
+				}
+			]
+        }
+	],
+    "behaviors":
+    [
+        {
+            "commonName": "AddChildHitTestBehavior",
+            "name": "AddHeaderHitTest",
+            "childNodeName": "mainPanel.headerArea"
+        }
+    ],
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 954.0,
+            "height": 551.0
+        }
+    },
+    "propertyMap":
+    {
+        "width": "mainPanel.width",
+        "height": "mainPanel.height",
+		"title": "mainPanel.headerArea.titleLabel.text",
+		"visibleTitle": "mainPanel.headerArea.visible"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "mainPanel",
+            "height": 551.0,
+            "width": 954.0,
+            "children":
+            [
+				{
+                    "commonName": "Asset",
+                    "name": "background",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "styles":
+                    [
+                        "PanelBackgroundStyle"
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "headerArea",
+                    "height": 46.0,
+					"width": 954.0,
+                    "marginTop": -46.0,
+                    "visible": false,
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "header",
+                            "alignH": "FILL",
+                            "styles":
+                            [
+                                "PanelHeaderStyle"
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "titleLabel",
+                            "alignH": "FILL",
+                            "marginLeft": 35.0,
+                            "marginRight": 35.0,
+                            "marginTop": 8.0,
+                            "styles":
+                            [
+                                "TF_PANEL_HEADER_CENTERED"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

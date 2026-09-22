@@ -1,0 +1,200 @@
+{
+    "actions":
+    [
+        {
+            "viewname":"act_a",
+            "actionname":"act_a"
+        },        
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+            "viewname": "act_chelsea",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_chelsea"
+            }
+        },
+		{
+            "viewname": "act_manchesterutd",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_manchesterutd"
+            }
+        },
+		{
+            "viewname": "act_fcbayern",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_fcbayern"
+            }
+        },
+		{
+            "viewname": "act_borussiadortmund",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_borussiadortmund"
+            }
+        },
+		{
+            "viewname": "act_fcbarcelona",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_fcbarcelona"
+            }
+        },
+		{
+            "viewname": "act_realmadrid",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_realmadrid"
+            }
+        },
+		{
+            "viewname": "act_psg",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_psg"
+            }
+        },
+		{
+            "viewname": "act_juventus",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_juventus"
+             }
+        },
+		{
+            "viewname": "act_persib",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_persib"
+            }
+        },
+		{
+            "viewname": "act_indonesia",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_indonesia"
+             }
+        }        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_team1",
+            "binding":  "bnd_team1",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team2",
+            "binding":  "bnd_team2",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team3",
+            "binding":  "bnd_team3",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team4",
+            "binding":  "bnd_team4",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team5",
+            "binding":  "bnd_team5",
+            "type":     "object"
+         },
+        {     
+            "viewname": "bnd_team6",
+            "binding":  "bnd_team6",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team7",
+            "binding":  "bnd_team7",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team8",
+            "binding":  "bnd_team8",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team9",
+            "binding":  "bnd_team9",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team10",
+            "binding":  "bnd_team10",
+            "type":     "object"
+        },        
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab6_visible",
+            "binding":  "bnd_tab6_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab7_visible",
+            "binding":  "bnd_tab7_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab8_visible",
+            "binding":  "bnd_tab8_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab9_visible",
+            "binding":  "bnd_tab9_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab10_visible",
+            "binding":  "bnd_tab10_visible",
+            "type":     "bool"
+        }        
+    ]
+}

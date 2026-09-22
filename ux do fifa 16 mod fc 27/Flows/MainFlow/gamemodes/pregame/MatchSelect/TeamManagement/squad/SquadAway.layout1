@@ -1,0 +1,437 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+		         	"name" : "show",
+		         	"script" :
+		         	[
+			             	{
+					              "anim" : "SCREEN_SHOW"
+			             	}
+		         	]
+		     },
+		     {
+		         	"name" : "hide",
+		         	"script" :
+		         	[
+			             	{
+					              "anim" : "SIMPLE_SCREEN_HIDE"
+			             	}
+		         	]
+	       	}
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadTeamManagementBehavior",
+            "starting11": "insSquad.insSquadLayout",
+            "subsAndReserves": "insSquad.insItemDock",
+            "actionName": "act_swap_players"
+        },
+        {
+            "commonName": "SquadPlayerComparisonBehavior",
+            "comparisonTargetNames":
+            [
+                "insSquad.insSquadLayout",
+                "insSquad.insItemDock"
+            ],
+            "actionName": "act_compare_players"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "marginLeft": 140,
+            "actionName": "act_advance",
+            "icon": "",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "marginLeft": 30,
+            "actionName": "act_back",
+            "icon": "",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Pitch2"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 85,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 10,
+                    "scaleX": 0.7,
+                    "scaleY": 0.7,
+                    "label": "Back",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginBottom": 0,
+                   "marginLeft": 194,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_LIGHT_GRAY",
+                   "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                   "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 120,
+                    "scaleX": 0.7,
+                    "scaleY": 0.7,
+                    "label": "Save",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_advance"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "name": "insTeamStats",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "InfoManager",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginRight": -40,
+                    "marginTop": 20,
+                    "width": 260,
+                    "height": 270,
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "man",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_man",
+                                    "property": "image"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "InfoTeam",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 40,
+                    "width": 300,
+                    "height": 190,
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTim",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "width": 70,  
+                            "height": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_crest",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTim",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 80,
+                            "marginTop": -20,
+                            "width": 150,
+                            "textAlignH": "LEFT",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 20,
+                            "forceCaps": false,
+                            "autoTextShadow": true,
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "StarRating",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "x": 0.0,
+                            "y": 0.0,
+                            "marginTop": -6,
+                            "marginLeft": 80,
+                            "scaleX": 1.1,
+                            "scaleY": 1.1,
+                            "name": "insStarRating",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_rating",
+                                    "property": "stars"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Rating",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 80,
+                            "marginTop": 23,
+                            "width": 150,
+                            "textAlignH": "LEFT",
+                            "fontFace": "$FONT_BOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 17,
+                            "forceCaps": false,
+                            "autoTextShadow": true,
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_rating_label",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 68,
+                            "marginBottom": 0,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_BOLD",
+                            "alpha": 0.7,
+                            "text": "Formation"
+                        },
+                        {
+                            "commonName": "DragToggle",
+                            "itemStyleName": "SquadToggleInfo",
+                            "itemType": "Label",
+                            "toggleAction":
+                            {
+                                "action": "act_toggle_formation",
+                                "binding": "bnd_toggle_formation"
+                            },
+                            "x": 0,
+                            "y": 10,
+                            "width": 200,
+                            "height": 30,
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginBottom": 15,
+                            "name": "insFormationToggle",
+                            "arrowType": "blue_small",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_formation_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "InfoPlayer",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 20,
+                    "marginTop": 0,
+                    "width": 250,
+                    "height": 250,
+                    "children":
+                    [
+                        {
+                            "commonName": "PlayerComparison",
+                            "visible": true,
+                            "width": 250,
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "marginRight": 0,
+                            "name": "insPlayerComparison",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_player_comparison_data",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_comparison_type",
+                                    "property": "playerLabel"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "insSquad",
+            "alignV": "FILL",
+            "alignH": "CENTER",
+            "children":
+            [
+                {
+                    "commonName": "SquadChemistryLinks",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "name": "insChemistryLinks",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_chemistry_matrix",
+                            "property": "formationChemistry"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "SquadLayout",
+                    "contextMenuEnabled": true,
+                    "exchangeTargetNames":
+                    [
+                        "insSquad.insItemDock"
+                    ],
+                    "itemView": 1,
+                    "highlightable": true,
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "name": "insSquadLayout",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_context_menu",
+                            "property": "contextMenuEnabled"
+                        },
+                        {
+                            "binding": "bnd_item_view",
+                            "property": "itemView"
+                        },
+                        {
+                            "binding": "bnd_formation",
+                            "property": "formation"
+                        },
+                        {
+                            "binding": "bnd_enable_item_interaction",
+                            "property": "resetItemInteraction"
+                        },
+                        {
+                            "binding": "bnd_starting_11",
+                            "property": "starting11"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "SubsDrawer",
+                    "selectable": true,
+                    "mouseInteractive": true,
+                    "contextMenuEnabled": true,
+                    "exchangeTargetNames":
+                    [
+                        "insSquad.insSquadLayout"
+                    ],
+                    "itemView": 1,
+                    "size": 0,
+                    "autoHide": false,
+                    "scrollable": true,
+                    "draggable": true,
+                    "highlightable": true,
+                    "autoHide": true,
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 38,
+                    "width": 1500,
+                    "name": "insItemDock",
+                    "displayType": "SUBS_AND_RES",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_subs_and_res",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

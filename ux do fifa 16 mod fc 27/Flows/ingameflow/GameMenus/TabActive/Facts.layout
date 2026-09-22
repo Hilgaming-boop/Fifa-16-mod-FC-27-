@@ -1,0 +1,235 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "style-definitions":
+    {
+    "TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansExpanded",
+			"fontSize": 16,
+			"alpha": 0.9,
+			"fontColor": "0x808080",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$CruyffSansExpanded",
+			"fontSize": 0,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+		}
+    },       
+    "children":
+    [
+         {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$",
+                    "clickAction": "act_to_match_facts"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MyTeam",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 120,
+                    "marginTop": 0,
+                    "width": 550,
+                    "height": 370,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "name": "ColorBg",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x151515",
+                            "cornerRaduis": 19,
+                            "alpha": 0.9
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "cresthome",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "marginLeft": -205,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 110,
+                            "marginLeft": -205,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_TIMER",
+                            "forceCaps": false,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_name_abbr",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "crestaway",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "marginLeft": 205,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimAway",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 110,
+                            "marginLeft": 205,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_TIMER",
+                            "forceCaps": false,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_name_abbr",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Fo",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -80,
+                            "marginLeft": 0,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_TIMER",
+                            "forceCaps": false,
+                            "text": "Statistics"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "matchFactsBGPitch",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": -20,
+                            "height": 80,
+                            "width": 450,
+                            "alpha": 0.7,
+                            "type": "$Icon_Lapang"
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": 310,
+                            "x": 0.0,
+                            "y": 0.0,
+                            "marginTop": 15,
+                            "rowWidth": 650,
+                            "rowHeight": 35,
+                            "displayRange": 4,
+                            "row": "GameMenuRows",
+                            "useAlternating": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_facts",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 120,
+                    "marginLeft": -30,
+                    "height": 90,
+                    "width": 238,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 24.7,
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansExpandes",
+                    "text": "MATCH FATCH"
+                }
+            ]
+         }
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

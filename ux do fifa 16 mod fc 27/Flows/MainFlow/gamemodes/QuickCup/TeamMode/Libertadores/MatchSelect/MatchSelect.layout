@@ -1,0 +1,286 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$bg_libertadores"
+         },
+         {
+            "commonName": "GenericButton",
+            "alignV": "BOTTOM",
+            "alignH": "LEFT",
+            "marginBottom": -2,
+            "marginLeft": 45,
+            "height": 50,
+            "width": 50,
+            "label": "",
+            "icon": "$SimMatchIcon3",
+            "clickAction": "act_back"
+         },
+         {
+            "commonName": "Label",
+            "alignV": "BOTTOM",
+            "alignH": "LEFT",
+            "marginBottom": 13,
+            "marginLeft": 105,
+            "forceCaps": false,
+            "fontSize": 18,
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontColor": "$COLOR_WHITE",
+            "text": "Back"
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 27,
+            "marginLeft": 80,
+            "fontSize": 40,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "alpha": 1,
+            "text": "T"
+        },
+        {
+            "commonName": "Rectangle",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 35,
+            "marginLeft": 206,
+            "width": 2.5,
+            "height": 23,
+            "color": "0xffffff",
+            "alpha": 0.8
+         },
+         {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 37,
+            "marginLeft": 133,
+            "fontSize": 18,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "alpha": 1,
+            "text": "Home"
+        },
+                {
+                    "commonName": "Label",
+                    "alignV": "LEFT",
+                    "alignH": "TOP",
+                    "marginTop": 36,
+                    "marginLeft": 226,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xDBDBDB",
+                    "alpha": 0.8,
+                    "text": "Central"
+                },        
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 33,
+            "marginLeft": 201,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_tab1",
+            "textStyles":
+            [
+               "TF_BUTTON_TABOFF"
+            ]
+        },
+                {
+                    "commonName": "Label",
+                    "alignV": "LEFT",
+                    "alignH": "TOP",
+                    "marginTop": 36,
+                    "marginLeft": 320,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xDBDBDB",
+                    "alpha": 0.8,
+                    "text": "Squad"
+                },        
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 33,
+            "marginLeft": 290,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_tab2",
+            "textStyles":
+            [
+               "TF_BUTTON_TABOFF"
+            ]
+        },
+                {
+                    "commonName": "Label",
+                    "alignV": "LEFT",
+                    "alignH": "TOP",
+                    "marginTop": 37,
+                    "marginLeft": 407,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xDBDBDB",
+                    "alpha": 0.8,
+                    "text": "Office"
+                },        
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 33,
+            "marginLeft": 388,
+            "height": 28,
+            "width": 85,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_tab3",
+            "textStyles":
+            [
+               "TF_BUTTON_TABOFF"
+            ]
+        },
+                {
+                    "commonName": "Label",
+                    "alignV": "LEFT",
+                    "alignH": "TOP",
+                    "marginTop": 36,
+                    "marginLeft": 493,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xDBDBDB",
+                    "alpha": 0.8,
+                    "text": "Customize"
+                },        
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "TOP",
+            "marginTop": 33,
+            "marginLeft": 482,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_tab4",
+            "textStyles":
+            [
+               "TF_BUTTON_TABOFF"
+            ]
+          },
+          {
+             "commonName": "Image",
+             "name": "HomeCrest",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": 20,
+             "marginLeft": 940,
+             "width": 30,
+             "height": 30,
+             "bindings":
+             [
+                {
+                    "binding": "bnd_home_crest",
+                    "property": "image"
+                 }
+             ]
+          },
+          {
+             "commonName": "Label",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": 25,
+             "marginLeft": 975,
+             "fontSize": 18,
+             "fontFace": "$FONT_CRUYFFSANSREGULAR",
+             "fontColor": "0xFFFFFF",
+             "textAlignH": "LEFT",
+             "alpha": 0.7,
+             "bindings":
+             [
+                {
+                    "binding": "bnd_home_team",
+                    "property": "text"
+                }
+             ]
+          }
+       ]
+    }
+  ]
+}

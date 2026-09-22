@@ -1,0 +1,86 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": 
+  [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "children":
+  [
+     {
+         "commonName": "Panel",
+         "name": "UIFrame",
+         "alignV": "CENTER",
+         "alignH": "FILL",
+         "children": 
+         [
+            {
+                "commonName": "Panel",
+                "alignV": "CENTER",
+                "alignH": "LEFT",
+                "marginLeft": 100,
+                "marginTop": 15,
+                "width": 310,
+                "height": 440,
+                "children":
+                [
+                   {
+                      "commonName": "Asset",
+                      "alignV": "TOP",
+                      "alignH": "CENTER",
+                      "marginTop": -2,
+                      "marginLeft": -5,
+                      "width": 308,
+                      "height": 373,
+                      "type": "$Tab_Player_Select",
+                      "alpha": 0.5            
+                  },
+                  {
+                     "commonName": "Panel",
+                     "alignV": "BOTTOM",
+                     "alignH": "CENTER",
+                     "marginBottom": 0,
+                     "height": 50,
+                     "width": 200,
+                     "children":
+                     [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -5,
+                            "marginTop": -5,
+                            "height": 65,
+                            "width": 270,
+                            "backgroundImage": "$Tab_Career_Advance",
+                            "backgroundHighlightImage": "$Tab_Career_Advance",
+                            "clickAction": "act_fixtures"
+                        },
+                        {                          
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 9,
+                            "marginBottom": 3,
+                            "fontSize": 17,
+                            "autoTextShadow": true,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSansBold",
+                            "text": "Enter Fixtures"
+                         }
+                      ]
+                   }
+                ]
+             }
+          ]
+       }
+    ]
+}

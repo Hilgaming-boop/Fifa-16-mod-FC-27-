@@ -1,0 +1,24 @@
+{
+    "name": "Standings",
+    "states":
+    [
+        {
+            "name": "RedirectStandings",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Standings.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                }
+            ]
+        }
+    ]
+}             

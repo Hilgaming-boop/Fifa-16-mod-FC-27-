@@ -1,0 +1,54 @@
+{
+    "name": "MenuCupDHub",
+    "onEnter":
+    [
+        ["setTabContext", [3]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuCupDHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_back"]
+        },       
+        {
+            "event": "evt_menu_cupa",
+            "targets": ["out_menu_cupa"]
+        },
+        { 
+            "event": "evt_menu_cupb",
+            "targets": ["out_menu_cupb"]
+        },
+        { 
+            "event": "evt_menu_cupc",
+            "targets": ["out_menu_cupc"]
+        },
+        { 
+            "event": "evt_to_cup_usaopencup",
+            "targets": ["out_usaopencup"]
+        },
+        { 
+            "event": "evt_to_cup_saudi",
+            "targets": ["out_saudicup"]
+        },
+        { 
+            "event": "evt_to_cup_pialaindonesia",
+            "targets": ["out_pialaindonesia"]
+        },
+        { 
+            "event": "evt_to_cup_uecl",
+            "targets": ["out_uecl"]
+        },
+        { 
+            "event": "evt_to_cup_afcasiancup",
+            "targets": ["out_afcasiancup"]
+        }
+    ]
+}

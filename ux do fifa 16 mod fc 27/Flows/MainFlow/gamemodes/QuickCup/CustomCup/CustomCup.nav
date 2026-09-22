@@ -1,0 +1,66 @@
+{
+    "name": "CustomCup",
+    "states":
+    [
+        {
+            "name": "RedirectCustomCup",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["CustomCup.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_group_stage",
+                    "targets": ["GroupStage"]
+                },
+                {
+                    "event": "evt_goto_team_select_league",
+                    "targets": ["TeamSelectLeagueState"]
+                },
+                {
+                    "event": "evt_goto_team_select_knockout",
+                    "targets": ["TeamSelectKnockoutState"]
+                }
+            ]
+        },
+        {
+            "name": "GroupStage",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "TeamSelectLeagueState",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/TeamSelectLeague/TeamSelectLeague.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "TeamSelectKnockoutState",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/TeamSelectKnockout/TeamSelectKnockout.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+    ]
+}

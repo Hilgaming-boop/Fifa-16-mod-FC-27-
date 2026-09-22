@@ -1,0 +1,151 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_gamesettings",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_gamesettings"
+			}
+		},
+		{
+            "viewname": "act_version",
+			"actionname": "act_version"
+        },
+		{
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+		{
+            "viewname": "act_to_about_tile",
+			"actionname": "act_to_about_tile"
+        },
+		{
+            "viewname": "act_to_credits_tile",
+			"actionname": "act_to_credits_tile"
+        },
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+	    	"viewname": "act_credits",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_credits"
+            }
+        },
+        {
+	    	"viewname": "act_music",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_music"
+            }
+        },
+        {
+	    	"viewname": "act_load",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_load"
+            }
+        },
+		{
+            "viewname":   "act_to_Mountsacredits_tile",
+            "actionname": "act_to_Mountsacredits_tile"
+		},
+		{
+            "viewname":   "act_to_disableshare_tile",
+            "actionname": "act_to_disableshare_tile"
+		},
+		{
+            "viewname":   "act_to_privacy_tile",
+            "actionname": "act_to_privacy_tile"
+		},
+		{
+            "viewname":   "act_team_roster",
+            "actionname": "act_team_roster"
+		},
+		{
+            "viewname":   "act_team_sheets",
+            "actionname": "act_team_sheets"
+		},
+		{
+            "viewname":   "act_to_music_tile",
+            "actionname": "act_to_music_tile"
+		}
+	],
+	"data":
+	[
+
+		{
+			"viewname": "bnd_live_tile_settings",
+			"binding": "bnd_live_tile_settings",
+			"type": "live_tile"
+		},
+		
+		{
+			"viewname": "bnd_live_tile_easportstrack",
+            "binding": "bnd_live_tile_easportstrack",
+			"type": "live_tile"
+		},
+
+		{
+            "viewname": "bnd_general_about",
+            "binding":  "bnd_general_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_privacy_about",
+            "binding":  "bnd_privacy_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_licenseagreement_about",
+            "binding":  "bnd_licenseagreement_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_disableshare_about",
+            "binding":  "bnd_disableshare_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_termsofservice_about",
+            "binding":  "bnd_termsofservice_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_credits_about",
+            "binding":  "bnd_credits_about",
+            "type":     "live_tile"
+        },
+		{
+			"viewname": "bnd_player_bg",
+			"binding": "bnd_player_bg",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_menu_list",
+			"binding": "bnd_menu_list",
+			"type": "object"
+		},
+        {
+			"viewname": "bnd_live_menu",
+            "binding": "bnd_live_menu",
+			"type": "object"
+		}
+		
+	]
+}

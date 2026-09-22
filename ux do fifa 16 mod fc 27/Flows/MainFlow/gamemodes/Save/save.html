@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inisial A Save Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#08131f;
+    background-image:
+    radial-gradient(circle at top,#00dfff33,transparent 35%),
+    linear-gradient(180deg,#08131f,#04080d);
+    color:white;
+    padding:30px;
+}
+
+.container{
+    max-width:850px;
+    margin:auto;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logoCircle{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid #00dfff;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    font-weight:bold;
+    color:white;
+    box-shadow:0 0 30px #00dfff;
+}
+
+.logo h1{
+    margin-top:20px;
+    font-size:42px;
+}
+
+.logo h1 span{
+    color:#00dfff;
+}
+
+.logo p{
+    margin-top:8px;
+    color:#bbb;
+}
+
+.card{
+    background:#0f1825;
+    border:1px solid #00dfff55;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 0 20px #00dfff22;
+}
+
+.profile{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.avatar{
+    display:flex;
+    align-items:center;
+}
+
+.avatarCircle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:2px solid #00dfff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    margin-right:15px;
+    box-shadow:0 0 15px #00dfff;
+}
+
+.stats{
+    display:flex;
+    gap:30px;
+}
+
+.stats div{
+    text-align:center;
+}
+
+.stats h2{
+    color:#00dfff;
+}
+
+.saveHeader{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.saveHeader span{
+    color:#00ff99;
+}
+
+textarea{
+    width:100%;
+    height:220px;
+    background:#08131f;
+    color:#00e5ff;
+    border:2px solid #00dfff55;
+    border-radius:12px;
+    padding:15px;
+    resize:none;
+    font-size:14px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:18px;
+    border:none;
+    border-radius:12px;
+    background:#00dfff;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    box-shadow:0 0 25px #00dfff;
+}
+
+.features{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.feature{
+    flex:1;
+    min-width:180px;
+    background:#0f1825;
+    border-radius:15px;
+    border:1px solid #00dfff33;
+    padding:20px;
+    text-align:center;
+}
+
+.feature h3{
+    color:#00dfff;
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    color:#888;
+    margin-top:35px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">
+<div class="logoCircle">A</div>
+
+<h1>INISIAL A <span>SAVE HUB</span></h1>
+
+<p>Share & Copy Save Code</p>
+</div>
+
+<div class="card profile">
+
+<div class="avatar">
+
+<div class="avatarCircle">A</div>
+
+<div>
+<h2>Inisial A</h2>
+<p>FIFA 16 Save Creator</p>
+<small>Modder • Designer • Creator</small>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div>
+<h2>1.0</h2>
+<small>Version</small>
+</div>
+
+<div>
+<h2>100%</h2>
+<small>Secure</small>
+</div>
+
+<div>
+<h2>Offline</h2>
+<small>Status</small>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="saveHeader">
+<h2>KODE SAVE</h2>
+<span>✔ Siap Disalin</span>
+</div>
+
+<textarea id="saveCodeBox" readonly></textarea>
+
+<button onclick="copyCode()">📋 SALIN KODE (COPY)</button>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<h3>🛡 Aman</h3>
+<p>100% Aman Digunakan</p>
+</div>
+
+<div class="feature">
+<h3>⚡ Cepat</h3>
+<p>Salin Sekali Klik</p>
+</div>
+
+<div class="feature">
+<h3>💻 Mudah</h3>
+<p>Tampilan Modern</p>
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Inisial A Save Hub
+
+</footer>
+
+</div>
+
+<script>
+
+const urlParams=new URLSearchParams(window.location.search);
+
+const code=urlParams.get("code")||"Data kode tidak ditemukan!";
+
+document.getElementById("saveCodeBox").value=code;
+
+function copyCode(){
+
+const copy=document.getElementById("saveCodeBox");
+
+copy.select();
+
+copy.setSelectionRange(0,99999);
+
+navigator.clipboard.writeText(copy.value);
+
+alert("Kode berhasil disalin!");
+
+}
+
+</script>
+
+</body>
+</html>

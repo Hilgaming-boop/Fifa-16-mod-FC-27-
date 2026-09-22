@@ -1,0 +1,135 @@
+-- All In One Dev MounTsa --
+local Dev = {}
+
+local BND_DEV_TYPE_LABEL = "bnd_dev_type_toggle"
+local BND_DEV_TYPE_TEXT = "bnd_dev_type_text"
+local BND_DEV_CREST = "bnd_dev_crest"
+local BND_PREV_DEV_CREST = "bnd_prev_dev_crest"
+local BND_NEXT_DEV_CREST = "bnd_next_dev_crest"
+local BND_PREV2_DEV_CREST = "bnd_prev2_dev_crest"
+local BND_NEXT2_DEV_CREST = "bnd_next2_dev_crest"
+local ACT_NEXT_DEV_TYPE = "act_next_dev_type"
+local ACT_PREV_DEV_TYPE = "act_prev_dev_type"
+local ACT_CONFIRM_SETUP = "act_advance"
+local BND_DESCRIPTION = "bnd_description"
+
+GlobalDevSettings = GlobalDevSettings or {}
+
+function Dev:new(init)
+    local o = init or {}
+    setmetatable(o, self)
+    self.__index = self
+    o.services = { settingsService = o.api("SettingsService") }
+
+	Dev.options = {
+		devType = {
+        { name = "Background 1", value = 1 }, { name = "Background 2", value = 2 },
+        { name = "Background 3", value = 3 }, { name = "Background 4", value = 4 },
+        { name = "Background 5", value = 5 }, { name = "Background 6", value = 6 },
+        { name = "Background 7", value = 7 }, { name = "Background 8", value = 8 },    
+        { name = "Background 9", value = 9 }    
+		}
+	}
+    o.options = Dev.options
+    o.selectedIndices = {
+        devType = 1
+    }
+
+    o:RegisterBindingsAndActions()
+    o:PublishInitialData()
+    return o
+end
+
+function Dev:RegisterBindingsAndActions()
+    self.im.RegisterAction(ACT_NEXT_DEV_TYPE, function() self:nextDevType() end)
+    self.im.RegisterAction(ACT_PREV_DEV_TYPE, function() self:prevDevType() end)
+    self.im.RegisterAction(ACT_CONFIRM_SETUP, function() self:ConfirmAndProceed() end)
+    self.im.Subscribe(BND_DEV_TYPE_TEXT, function() self:updateDevTypeUI() end)
+    self.im.Subscribe(BND_DEV_CREST, function() self:updateDevTypeUI() end)
+    self.im.Subscribe(BND_PREV_DEV_CREST, function() self:updateDevTypeUI() end)
+    self.im.Subscribe(BND_NEXT_DEV_CREST, function() self:updateDevTypeUI() end)
+    self.im.Subscribe(BND_PREV2_DEV_CREST, function() self:updateDevTypeUI() end)
+    self.im.Subscribe(BND_NEXT2_DEV_CREST, function() self:updateDevTypeUI() end)
+    self.im.Subscribe(BND_DESCRIPTION, function() self:PublishDescription() end)
+end
+
+function Dev:navigate(settingName, direction)
+    local options = self.options[settingName]
+    local currentIndex = self.selectedIndices[settingName]
+    local newIndex = currentIndex + direction
+    if newIndex > #options then newIndex = 1
+    elseif newIndex < 1 then newIndex = #options end
+    self.selectedIndices[settingName] = newIndex
+end
+
+function Dev:nextDevType()
+    self:navigate("devType", 1)
+    self:updateDevTypeUI()
+end
+
+function Dev:prevDevType()
+    self:navigate("devType", -1)
+    self:updateDevTypeUI()
+end
+
+function Dev:updateDevTypeUI()
+    local options = self.options.devType
+    local totalOptions = #options
+    local currentIndex = self.selectedIndices.devType
+    local currentOpt = options[currentIndex]
+    if not currentOpt then return end
+
+    local prevIndex = (currentIndex - 2 + totalOptions) % totalOptions + 1
+    local nextIndex = (currentIndex % totalOptions) + 1
+    local prev2Index = (currentIndex - 3 + totalOptions) % totalOptions + 1
+    local next2Index = (currentIndex + 1) % totalOptions + 1
+    local prevOpt = options[prevIndex]
+    local nextOpt = options[nextIndex]
+    local prev2Opt = options[prev2Index]
+    local next2Opt = options[next2Index]
+
+    self.im.Publish(BND_DEV_TYPE_LABEL, { data = {{ name = currentOpt.name }}, index = 0 })
+    self.im.Publish(BND_DEV_TYPE_TEXT, currentOpt.name)
+    self.im.Publish(BND_DEV_CREST, { name = "$Dev", id = currentOpt.value })
+    self.im.Publish(BND_PREV_DEV_CREST, { name = "$Dev", id = prevOpt.value })
+    self.im.Publish(BND_NEXT_DEV_CREST, { name = "$Dev", id = nextOpt.value })
+    self.im.Publish(BND_PREV2_DEV_CREST, { name = "$Dev", id = prev2Opt.value })
+    self.im.Publish(BND_NEXT2_DEV_CREST, { name = "$Dev", id = next2Opt.value })
+    self:PublishDescription()
+end
+
+function Dev:PublishInitialData()
+    self:updateDevTypeUI()
+end
+
+function Dev:PublishDescription()
+    local typeOpt = self.options.devType[self.selectedIndices.devType]
+    if typeOpt then
+        local upperTypeName = string.upper(typeOpt.name)
+        local desc = string.format("To the Legends of Modding – You Are the Best \n%s", upperTypeName)
+        self.im.Publish(BND_DESCRIPTION, desc)
+    end
+end
+
+function Dev:ConfirmAndProceed()
+    local selectedDevId = self.options.devType[self.selectedIndices.devType].value
+    GlobalDevSettings = {
+        devId = selectedDevId
+    }
+    self.nav.Event(nil, "evt_advance")
+end
+
+function Dev:finalize()
+    self.im.UnregisterAction(ACT_NEXT_DEV_TYPE)
+    self.im.UnregisterAction(ACT_PREV_DEV_TYPE)
+    self.im.UnregisterAction(ACT_CONFIRM_SETUP)
+    self.im.Unsubscribe(BND_DEV_TYPE_LABEL)
+    self.im.Unsubscribe(BND_DEV_TYPE_TEXT)
+    self.im.Unsubscribe(BND_DEV_CREST)
+    self.im.Unsubscribe(BND_PREV_DEV_CREST)
+    self.im.Unsubscribe(BND_NEXT_DEV_CREST)
+    self.im.Unsubscribe(BND_PREV2_DEV_CREST)
+    self.im.Unsubscribe(BND_NEXT2_DEV_CREST)
+end
+
+return Dev

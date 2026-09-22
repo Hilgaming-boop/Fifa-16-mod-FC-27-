@@ -1,0 +1,85 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+          {
+             "commonName": "Panel",
+             "name": "TabInfoMatch",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginLeft": 370,
+             "marginTop": -35,
+             "width": 350,
+             "height": 415,
+             "children": [
+               {
+                   "commonName": "Image",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "alpha": 1,
+                   "bindings": [
+                   {
+                      "binding": "bnd_ads",
+                      "property": "image"
+                    }
+                  ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 331,
+                    "marginLeft": 52,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xFFFFFF",
+                    "forceCaps": true,
+                    "textAlignH": "LEFT",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchdate_label",
+                            "property": "text"
+                        }
+                    ]
+                },     
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -65,
+                    "marginLeft": -4,
+                    "fontSize": 50,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "0xFFFFFF",
+                    "text": "•",
+                    "textAlignH": "LEFT"
+                },                    
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -55,
+                    "marginLeft": -40,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "icon": "$",
+                    "clickAction": "act_tab1sub2"
+                }
+           ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+	"actions":
+	[
+  		{
+          "viewname": "act_menu_careermode",
+          "impl":
+          {
+            "type": "nav",
+            "event": "evt_menu_careermode"
+          }
+      }
+	],
+	"data":
+	[
+		
+	]
+}

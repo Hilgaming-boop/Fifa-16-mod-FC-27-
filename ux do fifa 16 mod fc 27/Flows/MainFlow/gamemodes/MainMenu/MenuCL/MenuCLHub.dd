@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_challenge",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_challenge"
+		     }
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_challenge",
+			"binding": "bnd_live_tile_challenge",
+			"type": "live_tile"
+		}
+	]
+}

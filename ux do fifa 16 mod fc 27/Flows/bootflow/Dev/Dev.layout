@@ -1,0 +1,325 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+  "children": [
+            {
+              "commonName": "Image",
+              "name": "devCrestImage",
+              "alignH": "FILL",
+              "alignV": "FILL",
+              "bindings": [
+                {
+                  "binding": "bnd_dev_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "BOTTOM",
+              "alignH": "CENTER",
+              "marginBottom": 50,
+              "marginLeft": 0,
+              "fontSize": 12,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSans-Regular",
+              "text": ""
+            },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginRight": 0,
+            "marginTop": -10,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "Panel",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": -30,
+                    "marginRight": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animate",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 20
+                                        },
+                                        "duration": 1000,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                                       
+            {
+            "commonName": "Asset",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 30,
+            "marginRight": 50,
+            "height": 30,
+            "width": 140,
+            "type": "$Icon_FC25_In"
+                       }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate",
+                    "script": "animate",
+                    "target": "Panel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true",
+                    "target": "trigger_animate",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }, 
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": -30,
+            "marginBottom": -50,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": -10,
+              "marginBottom": -50,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginBottom": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginBottom": 20
+                                        },
+                                        "duration": 1000,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [           			            
+            {
+              "commonName": "Panel",
+              "name": "tab1",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": -300,
+              "marginTop": 20,
+              "height": 350,
+              "width": 1000,
+              "children": [     		
+			{
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "height": 40.0,
+              "width": 250.0,
+              "marginTop": 140,
+              "color": "0x1C1B22",
+              "cornerRaduis": 5,
+              "alpha": 0.5
+			},	
+            {
+              "commonName": "Label",
+              "name": "Text",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 140,
+              "marginLeft": 0,
+			  "width": 150,
+			  "autoScroll": true,
+              "fontSize": 17,
+              "fontColor": "0xffffff",
+              "fontFace": "$CruyffSansExpanded",
+              "bindings": [
+                {
+                  "binding": "bnd_dev_type_text",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 80,
+              "marginLeft": 0,
+              "fontSize": 0,
+              "fontColor": "0xffffff",
+              "fontFace": "$CruyffSansMedium",
+              "text": "Select Background"
+            },
+            {
+              "commonName": "SimpleButton",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginLeft": 0,
+              "marginTop": 210,
+              "height": 70,
+              "width": 120,
+              "backgroundImage": "$Tab_Action_Green",
+              "backgroundHighlightImage": "$Tab_Action_Green",
+              "clickAction": "act_advance"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 210,
+              "marginLeft": 0,
+              "fontSize": 17,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$CruyffSansMedium",
+              "text": "Confirm"
+            },
+            {
+              "commonName": "AssetButton",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 140,
+              "marginLeft": -100,
+              "width": 65,
+              "height": 65,
+              "clickAction": "act_prev_dev_type",
+              "buttonAsset": "$ArrowLeftHighlight"
+            },
+            {
+              "commonName": "AssetButton",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 140,
+              "marginRight": -100,
+              "width": 65,
+              "height": 65,
+              "clickAction": "act_next_dev_type",
+              "buttonAsset": "$ArrowRightHighlight"
+            }
+          ]
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }
+      ]
+    }
+  ]
+}

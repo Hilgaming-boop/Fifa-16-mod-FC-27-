@@ -1,0 +1,385 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_leaguebackground",
+                   "property": "image"
+               }
+            ]        
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -5,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$CruyffSans-Regular",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "alpha": 0.8,
+                    "text": "Back"
+                },
+                {
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -285,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Cm"
+                            },
+		                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -5,
+                    "marginLeft": -580,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Office"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -5,
+                    "marginLeft": -545,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -6,
+                    "marginLeft": -472,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Match Fixtures"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -5,
+                    "marginLeft": -395,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -370,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                    },
+		                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 510,
+                    "marginLeft": 12000,
+                    "scaleX": 0.3,
+                    "scaleY": 0.3,
+                    "icon": "$R1_Button",
+                    "clickAction": "act_next"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 515,
+                    "marginLeft": 18000,
+                    "scaleX": 0.07,
+                    "scaleY": 0.07,
+                    "icon": "$L1_Button",
+                    "clickAction": "act_decrease"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -18,
+                    "marginLeft": 1060,
+                    "scaleX": 0.7,
+                    "scaleY": 0.7,
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": "act_nextteam"
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -17,
+                    "marginLeft": 1123,
+                    "fontSize": 16,
+                    "alpha": 0.7,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$CruyffSans-Regular",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Next Team"
+                    },                
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -21,
+                    "marginLeft": 1180,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_previousteam"
+                    },
+                {
+                "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -17,
+                    "marginLeft": 1270,
+                    "fontSize": 16,
+                    "alpha": 0.7,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$CruyffSans-Regular",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Previus Team"
+                    }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -176,
+            "marginLeft": -5400,
+            "width": 270,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 20,
+                    "color": "0x1C1C1C",
+                    "alpha": 0.6
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -50,
+            "marginLeft": 0,
+            "width": 2700,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 20,
+                    "color": "0x1C1C1C",
+                    "alpha": 0
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 0,
+            "width": 1100,
+            "height": 500,
+            "alpha": 1,
+            "children":
+            [
+       {
+            "commonName": "Image",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 0,
+            "width": 900,
+            "height": 460,
+            "alpha": 1,            
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_leaguetable",
+                   "property": "image"
+               }
+            ]               
+        },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Extended",
+                    "text": ""
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 435,
+                    "marginLeft": 920,
+                    "scaleX": 0.3,
+                    "scaleY": 0.3,
+                    "alpha": 0.6,
+                    "icon": "$R1_Button",
+                    "clickAction": "act_next"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 440,
+                    "marginLeft": 160,
+                    "scaleX": 0.07,
+                    "scaleY": 0.07,
+                    "icon": "$L1_Button",
+                    "clickAction": "act_decrease"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 50,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchday_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -45,
+                    "marginLeft": -320,
+                    "fontSize": 20,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 92,
+                    "marginLeft": 100,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 5,
+                    "highlightable": true,
+                    "row": "FixturesRow",
+                    "rowHeight": 74,
+                    "rowWidth": 950,
+                    "alpha": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

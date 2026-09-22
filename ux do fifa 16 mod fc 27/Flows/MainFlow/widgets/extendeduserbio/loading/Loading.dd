@@ -1,0 +1,14 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_loading",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_LOADING"
+            }
+        }
+    ]
+}

@@ -1,0 +1,189 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+         {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$",
+                    "clickAction": "act_to_ingame_squadaway"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MyTeam",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 120,
+                    "marginTop": 0,
+                    "width": 550,
+                    "height": 370,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "name": "ColorBg",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x151515",
+                            "cornerRaduis": 19,
+                            "alpha": 0.9
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "Icon",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$Tab_inTeam",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 7,
+                            "marginRight": 110,
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPRO",
+                            "forceCaps": false,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_name_abbr",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Fo",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 7,
+                            "marginRight": 40,
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPRO",
+                            "text": "Default"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "Crest",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 45,
+                            "marginRight": 40,
+                            "scaleX": 0.20,
+                            "scaleY": 0.20,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 45,
+                            "marginLeft": 40,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "forceCaps": true,
+                            "autoScroll":true,
+                            "width": 250,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Fo",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 75,
+                            "marginLeft": 40,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_TIMER",
+                            "forceCaps": true,
+                            "text": "Formation"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 77,
+                    "marginLeft": -30,
+                    "height": 96,
+                    "width": 348,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 110,
+                    "marginLeft": 24.7,
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansExpandes",
+                    "text": "TEAM MANAGEMENT AWAY"
+                }
+            ]
+        }
+    ]
+}
+/*-- Modified MVNPROD Youtube Channel --*/

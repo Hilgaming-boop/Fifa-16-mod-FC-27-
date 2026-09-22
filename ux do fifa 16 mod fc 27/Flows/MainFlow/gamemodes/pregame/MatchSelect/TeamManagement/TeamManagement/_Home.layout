@@ -1,0 +1,264 @@
+{
+	"commonName": "Panel",
+	"name": "rootContainer",
+	"alignV": "CENTER",
+	"alignH": "CENTER",
+	"bindings": [
+		{
+			"binding": "BND_SCREEN_WIDTH",
+			"property": "width"
+		},
+		{
+			"binding": "BND_SCREEN_HEIGHT",
+			"property": "height"
+		}
+	],
+	"animationScripts": [
+		{
+			"name": "show",
+			"script": [
+				{
+					"anim": "ANIMASI_MASUK_MAINMENU"
+				}
+			]
+		},
+		{
+			"name": "hide",
+			"script": [
+				{
+					"anim": "ANIMASI_KELUAR_MAINMENU"
+				}
+			]
+		}
+    ],
+    "behaviors": [
+        {
+            "commonName": "SquadTeamManagementBehavior",
+            "starting11": "insSquad.insSquadLayout",
+            "subsAndReserves": "insSquad.insItemList",
+            "actionName": "act_swap_players"
+        },
+        {
+            "commonName": "SquadPlayerComparisonBehavior",
+            "comparisonTargetNames": [
+                "insSquad.insSquadLayout",
+                "insSquad.insItemList"
+            ],
+            "actionName": "act_compare_players"
+        }
+    ],
+    "style-definitions": {
+        "TF_TEAM_NAME": {
+            "text-format": "fow.style.SquadStyle.TF_FORMATION_NAME"
+        },
+        "TF_TEAM_STATS_LABEL": {
+            "text-format": "fow.style.SquadStyle.TF_COMBOBOX_LABEL"
+        },
+        "TF_TEAM_STATS": {
+            "text-format": "fow.style.SquadStyle.TF_COMBOBOX_LABEL"
+        }
+    },
+    "children": [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Kick"
+        },
+						{
+							"commonName": "Asset",
+							"alignV": "CENTER",
+							"alignH": "LEFT",
+							"marginTop": 15,
+							"marginLeft": 160,	
+							"width": 500,
+							"height": 480,
+							"alpha": 0.7,
+							"type": "$Icon_TeamPitch"
+						},
+
+		{
+			"commonName": "Panel",
+			"alignV": "TOP",
+			"alignH": "CENTER",
+			"marginTop": 100,
+			"marginLeft": -330,
+			"name": "insTeamStats",
+			"children": [
+				{
+					"commonName": "Image",
+					"scaleX": 1,
+					"scaleY": 1,
+					"name": "insTeamCrest",
+			"marginLeft": 30,
+					"bindings": [
+						{
+							"binding": "bnd_team_crest",
+							"property": "image"
+						}
+					]
+				},
+        {
+          "commonName": "Label",
+          "name": "Live",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": 20,
+          "marginLeft": -100,
+          "fontSize": 15,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "fontFace": "$Epl",
+          "text": "Tactical Plan"
+        },
+        {
+          "commonName": "Label",
+          "name": "Live",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": 20,
+          "marginLeft": 110,
+          "fontSize": 15,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "fontFace": "$Epl",
+          "text": "Formation"
+        },
+        {
+          "commonName": "Label",
+          "name": "Live",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": 40,
+          "marginLeft": -110,
+          "fontSize": 27,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$Epl",
+          "text": "Balanced"
+        },
+
+		{
+			"commonName": "Group",
+			"marginTop": 20,
+			"marginLeft": 80,
+			"name": "insFormation",
+			"children":
+			[
+				
+				{
+					"commonName": "DragToggle",
+					"itemStyleName": "SquadToggleInfo",
+					"isCircular": true,
+					"itemType": "Label",
+					"toggleAction":
+					{
+						"action": "act_change",
+						"binding": "bnd_formation_index"
+					},
+					"x": 0,
+					"y": 10,
+					"width": 150,
+					"height": 33,
+					"alignH": "CENTER",
+					"clickAction": "act_formation_popup",
+					"name": "insFormationToggle",
+                    "arrowType": "",
+                    "animated": true,
+					"bindings":
+					[
+						{
+							"binding": "bnd_formation_list",
+							"property": "dataProviders"
+						}
+					]
+				}
+				
+			]
+		}
+			]
+		},
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 520,
+            "width": 500,
+            "height": 475,
+            "children": [
+
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "marginTop": 230,
+            "width": 450,
+            "alignV": "TOP",
+            "height": 450,
+            "alignH": "CENTER",
+            "marginLeft": -250,
+            "name": "insSquad",
+            "children": [
+
+                {
+                    "commonName": "SquadLayout",
+                    "contextMenuEnabled": true,
+                    "exchangeTargetNames": [
+                        "insSquad.insItemList"
+                    ],
+                    "itemView": 1,
+                    "scaleX": 0.576,
+                    "scaleY": 0.576,
+                    "highlightable": false,
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -135,
+                    "marginLeft": -30,
+                    "name": "insSquadLayout",
+                    "bindings": [
+                        {
+                            "binding": "bnd_context_menu",
+                            "property": "contextMenuEnabled"
+                        },
+
+                        {
+                            "binding": "bnd_formation",
+                            "property": "formation"
+                        },
+
+						{
+							"binding": "bnd_starting_11",
+							"property": "starting11"
+						}
+					]
+				},
+				{
+					"commonName": "SubsDrawer",
+					"selectable": false,
+					"mouseInteractive": false,
+					"contextMenuEnabled": false,
+					"exchangeTargetNames": [
+						"insSquad.insSquadLayout"
+					],
+					"itemView": 1,
+					"size": 0,
+					"scrollable": true,
+					"draggable": true,
+					"highlightable": true,
+					"autoHide": true,
+					"alignV": "BOTTOM",
+					"alignH": "CENTER",
+					"displayType": "SUBS_AND_RES",
+					"marginBottom": -385,
+					"marginLeft": 200,
+					"name": "insItemList",
+					"height": 320,
+					"width": 2000,
+					"bindings": [
+						{
+							"binding": "",
+							"property": "dataProviders"
+						}
+					]
+				}
+            ]
+        }
+    ]
+}

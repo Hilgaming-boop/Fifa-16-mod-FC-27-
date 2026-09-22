@@ -1,0 +1,98 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 700,
+                    "marginTop": 12,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "marginTop": -35,
+                            "width": 302,
+                            "height": 369,
+                            "type": "$Tab_Cup_Select",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 5,
+                                    "marginTop": 0,
+                                    "height": 90,
+                                    "width": 170,
+                                    "backgroundImage": "$Tab_Action_Green",
+                                    "backgroundHighlightImage": "$Tab_Action_Green",
+                                    "clickAction": "act_tpre"
+                                },
+                                {
+		                            "commonName": "Asset",
+		                            "alignV": "CENTER",
+		                            "alignH": "CENTER",
+                                    "marginLeft": -53,
+		                            "marginTop": 0,
+		                            "width": 35,
+                                    "height": 35,
+		                            "type": "$SimMatchIcon1",
+                                    "alpha": 1
+		                        },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 13,
+                                    "marginBottom": -1,
+                                    "fontSize": 17,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                                    "text": "Enter Tactical"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

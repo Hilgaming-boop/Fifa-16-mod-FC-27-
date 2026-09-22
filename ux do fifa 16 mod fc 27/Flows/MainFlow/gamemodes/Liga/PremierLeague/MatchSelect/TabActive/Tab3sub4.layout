@@ -1,0 +1,78 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "children": [
+        {
+          "commonName": "Panel",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginLeft": 1010,
+          "marginTop": 15,
+          "width": 300,
+          "height": 440,
+          "children": [
+            {
+              "commonName": "Asset",
+              "alignV": "TOP",
+              "alignH": "CENTER",
+              "width": 300,
+              "height": 370,
+              "type": "$Tab_Cup_Select",
+              "alpha": 0.5
+            },
+            {
+              "commonName": "Panel",
+              "alignV": "BOTTOM",
+              "alignH": "CENTER",
+              "marginBottom": 0,
+              "height": 50,
+              "width": 200,
+              "children": [
+                {
+                  "commonName": "SimpleButton",
+                  "alignH": "CENTER",
+                  "alignV": "CENTER",
+                  "marginLeft": 0,
+                  "marginTop": -10,
+                                    "height": 95,
+                                    "width": 220,
+                                    "backgroundImage": "$Tab_Action_White",
+                                    "backgroundHighlightImage": "$Tab_Action_White",
+                  "clickAction": "act_budget"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "marginLeft": 0,
+                  "marginBottom": 11,
+                  "fontSize": 17,
+                  "fontColor": "0x151515",
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "text": "Budget Overview"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

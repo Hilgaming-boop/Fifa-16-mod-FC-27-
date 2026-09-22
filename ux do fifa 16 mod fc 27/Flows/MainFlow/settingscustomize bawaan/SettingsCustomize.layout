@@ -1,0 +1,339 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "QUICK_ANIMATION_IN"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "QUICK_ANIMATION_OUT"
+        }
+      ]
+    }
+  ],
+    "style-definitions":
+    {
+        "TF_RIGHT_PANEL":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_MEDIUM",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "textAlignH": "CENTER",
+            "leading": -2.0
+        },
+        "TF_AUDIO_TITLE":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_MEDIUM",
+            "fontColor": "$COLOR_LIGHT_GRAY"
+        },
+        "TF_OPTIONS":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_BLUE",
+            "resizeType": "NONE"
+        },
+        "TF_OPTIONS_RIGHT":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_BLUE",
+            "textAlignH": "RIGHT"
+        },
+        "TF_TITLE":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_SMALL_HEADER",
+            "fontColor": "$COLOR_DARK_BLUE",
+            "textAlignH": "RIGHT"
+        },
+        "TF_GENERAL_TITLE":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_LARGE_HEADER",
+            "fontColor": "$COLOR_DARK_BLUE"
+        },
+        "TF_SETTINGS_ROW_LABEL":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": 20,
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "LEFT"
+        },
+        
+        "TF_SETTINGS_ROW_LABEL_DISABLED":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+            "fontColor": "$COLOR_MEDIUM_GRAY",
+            "textAlignH": "LEFT"
+        },
+        "TF_SETTINGS_ROW_TOGGLE":
+        {
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontSize": 20,
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER",
+            "textAlignV": "CENTER"
+        },
+        "TF_GENERAL_TEXT":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_MEDIUM",
+            "fontColor": "$COLOR_LIGHT_GRAY"
+        },
+        "TF_MULTILINE_TEXT":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "leading": 0.1
+        },
+        "TF_CUSTOMIZE_INGAME_WARNING":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontSize": 14.0,
+            "fontColor": "$COLOR_BLUE"
+        }
+    },
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_leaguebackground",
+                   "property": "image"
+               }
+            ]        
+        },
+                {
+                "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 90,
+                            "marginRight":538,
+                            "width": 70,
+                            "height": 30,
+                            "alpha": 1,
+                            "type": "$R1_Button"
+                            },        
+                {
+                "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 82,
+                            "marginLeft": 220,
+                            "width": 45,
+                            "height": 35,
+                            "alpha": 5,
+                            "type": "$L1_Button"
+                            },                            
+         {
+            "commonName": "Panel",
+            "name": "BackSave",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 2,
+                    "marginLeft": 98,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -1,
+                    "marginLeft": 8,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_cancel"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginBottom": 2,
+                   "marginLeft": 230,
+                   "fontSize": 18,
+                   "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                   "fontColor": "$COLOR_WHITE",
+                   "text": "Confirm"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -1,
+                    "marginLeft": 140,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_accept"
+                }
+            ]
+        },
+        {
+           "commonName": "Panel",
+            "name": "Menu",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 37,
+                    "marginLeft": 215,
+                    "fontSize": 23,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Game Settings"
+                  }
+              ]
+         },
+         {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": -375,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Match",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_select_match_settings",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEOFF"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": -255,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Controls",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_select_controls",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEOFF"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": -165,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Audio",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_select_audio_visual",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEOFF"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": -40,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Graphics",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_select_debug_settings",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEOFF"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": 90,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "User Info",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_select_user",
+             "textStyles":
+            [
+               "TF_BUTTON_GAMEMODEOFF"
+            ]
+        }
+    ]
+}

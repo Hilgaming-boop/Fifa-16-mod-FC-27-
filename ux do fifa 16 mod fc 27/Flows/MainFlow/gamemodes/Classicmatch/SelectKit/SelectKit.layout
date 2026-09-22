@@ -1,0 +1,472 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_BACKGROUND_SYSTEM"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Rival"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.3,
+            "type": "$Bg_Smoke"
+        },    
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon4",
+            "actionName": "act_advance",
+            "label": "Start match"
+        }
+    ],
+    "children":
+    [    
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": -340,
+            "width": 474,
+            "height": 640,
+            "type": "$_RMinfoKitsSelect1"
+         }, 
+         {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 340,
+            "width": 474,
+            "height": 640,
+            "type": "$_KOinfoKitsSelect2"
+         }, 
+         {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "width": 1,
+            "height": 250,
+            "color": "0x7F7F7F",
+            "alpha": 1
+         },
+         {
+            "commonName": "Label",
+            "name": "SelectMode",
+            "alignH": "FILL",
+            "alignV": "TOP",
+            "marginTop": 9010,
+            "width": 200,
+            "multiline": false,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_kit_select_label",
+                    "property": "text"
+                }
+            ],
+            "styles":
+            [
+                "TF_TEAMKITSELECT_VERSUS"
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "insTeamHome",
+            "scaleX": 0.75,
+	        "scaleY": 0.75,
+            "height": 350,
+			"width": 380,
+			"marginTop": 7,
+            "marginLeft": -140,
+			"alignH": "CENTER",
+			"alignV": "CENTER",
+            "children":
+            [            
+	            {
+					"commonName": "Image",
+					"name": "homeKitBG",
+					"alignV": "FILL",
+					"alignH": "FILL",
+					"image": "$KitSelectBgDark"
+				},
+				{
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 8,
+                    "marginLeft": 0,
+                    "width": 200,
+                    "fontSize": 23,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [                               
+                        {
+                            "binding": "bnd_insToggleHomeKitMessage",
+                            "property": "text"
+                         }
+                     ]                 
+                },               
+                {
+                    "commonName": "Panel",
+                    "name": "insCrestHome",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "insHomeKitPlayer",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -300,
+                            "marginTop": 55,
+                            "height": 600,
+                            "width": 600,
+                            "scaleX": 0.9,
+                            "scaleY": 0.9,
+                            "bindings":
+                            [                
+                                {
+                                    "binding": "bnd_3d_home_kit",
+                                    "property": "image"
+                                }
+                            ]                                
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "insHomeKit3",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginTop": 7,
+							"marginLeft": 35,
+					        "scaleX": 0.50,
+							"scaleY": 0.50,
+							"alpha": 0.80,
+							"blendMode": "NORMAL",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_2d_home_kit3",
+                                    "property": "image"
+                                }
+                            ]                                
+                        },             
+                        {
+                            "commonName": "Image",
+                            "name": "insHomeKit2",
+                            "alignH": "RIGHT",
+                            "alignV": "CENTER",
+                            "marginTop": 7,
+							"marginRight": 35,
+					        "scaleX": 0.50,
+							"scaleY": 0.50,
+							"alpha": 0.80,
+							"blendMode": "NORMAL",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_2d_home_kit2",
+                                    "property": "image"
+                                }
+                            ]                                
+                        },               
+                        {
+                            "commonName": "Image",
+                            "name": "insHomeKit",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "scaleX": 0.80,
+							"scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_kit_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_2d_home_kit",
+                                    "property": "image"
+                                }
+                            ]                                
+                        }                    
+                    ]                           
+                }               
+            ]
+        },					
+        {
+            "commonName": "Panel",
+            "name": "insTeamAway",
+            "height": 400,
+			"width": 430,
+            "scaleX": 0.75,
+	        "scaleY": 0.75,
+			"marginTop": 7,
+	        "marginRight": -140,
+			"height": 350,
+			"width": 380,
+            "alignH": "CENTER",
+			"alignV": "CENTER",
+            "children":
+            [
+	            {
+					"commonName": "Image",
+					"name": "awayKitBG",
+					"alignV": "FILL",
+					"alignH": "FILL",
+					"image": "$KitSelectBgLight"
+				},
+				{    
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 8,
+                    "marginLeft": 0,
+                    "width": 200,
+                    "fontSize": 23,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [                            
+                        {
+                            "binding": "bnd_insToggleAwayKitMessage",
+                            "property": "text"
+                        }
+                   ]                            
+                },             
+				{
+                    "commonName": "Panel",
+                    "name": "insCrestAway",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "insAwayKitPlayer",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -300,
+                            "marginTop": 55,
+                            "height": 600,
+                            "width": 600,
+                            "scaleX": 0.9,
+                            "scaleY": 0.9,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_3d_away_kit",
+                                    "property": "image"
+                                }
+                            ]                                
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "insAwayKit3",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginTop": 7,
+							"marginLeft": 35,
+					        "scaleX": 0.50,
+							"scaleY": 0.50,
+							"alpha": 0.80,
+							"blendMode": "NORMAL",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_2d_away_kit3",
+                                    "property": "image"
+                                }
+                            ]                                
+                        },              
+                        {
+                            "commonName": "Image",
+                            "name": "insAwayKit2",
+                            "alignH": "RIGHT",
+                            "alignV": "CENTER",
+                            "marginTop": 7,
+							"marginRight": 35,
+					        "scaleX": 0.50,
+							"scaleY": 0.50,
+							"alpha": 0.80,
+							"blendMode": "NORMAL",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_2d_away_kit2",
+                                    "property": "image"
+                                }
+                            ]                                
+                        },            
+                        {
+                            "commonName": "Image",
+                            "name": "insAwayKit",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "scaleX": 0.80,
+							"scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_kit_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_2d_away_kit",
+                                    "property": "image"
+                                  }
+                               ]                                
+                             }                    
+                           ]                           
+                        }               
+                      ]
+                    },					
+                    {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": -240,
+                            "height": 40,
+                            "width": 40,
+                            "scaleY": 1,
+                            "multiline": true,
+                            "bold": true,
+                            "label": "",
+                            "icon": "",
+                            "backgroundImage": "$ArrowLeft1",
+                            "backgroundHighlightImage": "$ArrowLeft1",
+                            "clickAction": "act_home_kit_previous",
+                            "textStyles":
+                            [
+                               "TF_BUTTON"
+                             ]
+                         },
+                         {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": -39,
+                            "height": 40,
+                            "width": 40,
+                            "scaleY": 1,
+                            "multiline": true,
+                            "bold": true,
+                            "label": "",
+                            "icon": "",
+                            "backgroundImage": "$ArrowRight1",
+                            "backgroundHighlightImage": "$ArrowRight1",
+                            "clickAction": "act_home_kit_next",
+                            "textStyles":
+                            [
+                               "TF_BUTTON"
+                             ]
+                         },
+                         {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": 39,
+                            "height": 40,
+                            "width": 40,
+                            "scaleY": 1,
+                            "multiline": true,
+                            "bold": true,
+                            "label": "",
+                            "icon": "",
+                            "backgroundImage": "$ArrowLeft1",
+                            "backgroundHighlightImage": "$ArrowLeft1",
+                            "clickAction": "act_away_kit_previous",
+                            "textStyles":
+                            [
+                               "TF_BUTTON"
+                             ]
+                         },
+                         {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": 240,
+                            "height": 40,
+                            "width": 40,
+                            "scaleY": 1,
+                            "multiline": true,
+                            "bold": true,
+                            "label": "",
+                            "icon": "",
+                            "backgroundImage": "$ArrowRight1",
+                            "backgroundHighlightImage": "$ArrowRight1",
+                            "clickAction": "act_away_kit_next",
+                            "textStyles":
+                            [
+                               "TF_BUTTON"
+                             ]
+                                }
+                            ]                                
+                        }                         
+                    ]                           
+                }           
+            ]
+        }                        
+    ]
+}

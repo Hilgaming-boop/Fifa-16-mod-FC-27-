@@ -1,0 +1,5 @@
+{
+    "dds": ["MatchSelect.dd", "Animated.dd"],
+    "vms": [["lua", "MatchSelect.lua"], ["lua", "Animated.lua"]],
+    "views": [["gfx", { "layout": "MatchSelect.layout" }]]
+}

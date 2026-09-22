@@ -1,0 +1,119 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 393,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                        "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": -347, 
+                            "marginTop": 189,
+                            "width": 127,
+                            "height": 111,
+                            "type": "$Tab_Select_Mision13",
+                            "alpha": 1
+                        },
+                        {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 20,
+                    "marginLeft": 410,
+                    "height": 600,
+                    "width": 600,
+                    "type": "$Icon_13"
+                },
+                        {
+                        "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": -190,
+                                    "marginBottom": 230,
+                                    "fontSize": 19,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "text": "Italy"
+                },
+                        {
+                        "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": -190,
+                                    "marginBottom": 190,
+                                    "fontSize": 19,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "text": "Serie A"
+                },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 240,
+                                    "marginTop": 20,
+                                    "height": 80,
+                                    "width": 160,
+                                    "backgroundImage": "$Tab_Action_White",
+                                    "backgroundHighlightImage": "$Tab_Action_White",
+                                    "clickAction": "act_missionmode1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 239,
+                                    "marginBottom": -23,
+                                    "fontSize": 19,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$CruyffSans-Bold",
+                                    "text": "Select"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

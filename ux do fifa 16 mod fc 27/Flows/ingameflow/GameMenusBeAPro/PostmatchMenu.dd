@@ -1,0 +1,198 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_tab_facts",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_facts"
+            }
+        },
+        {
+            "viewname": "act_menu_advance",
+            "actionname": "act_menu_advance"
+        },
+        {
+            "viewname": "act_menu_restart",
+            "actionname": "act_menu_restart"
+        },
+        {
+            "viewname": "act_menu_facts",
+            "actionname": "act_menu_facts"
+        },
+        {
+            "viewname": "act_menu_highlight",
+            "actionname": "act_menu_highlight"
+        },
+        {
+            "viewname": "act_tab_highlight",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_highlight"
+            }
+        },
+        {
+        
+            "viewname": "act_tab_restart",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_restart"
+            }
+        },
+        {
+            "viewname": "act_tab_advance",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_advance"
+            }
+        },
+        {
+            "viewname": "act_to_match_grade1",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_match_grade1"
+            }
+        }
+    ],
+    "data":
+    [
+		{
+            "viewname": "bnd_won_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_WON_MATCH"
+            }
+        },
+        {
+            "viewname": "bnd_well_done_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_WELL_DONE"
+            }
+        },
+        {
+            "viewname": "bnd_lost_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_LOST_MATCH"
+            }
+        },
+        {
+            "viewname": "bnd_draw_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_DRAW_MATCH"
+            }
+        },
+        {
+            "viewname": "bnd_quit_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_QUIT_TO_HUB"
+            }
+        },
+        {
+                    "viewname": "bnd_default_ad_banner_title",
+                    "type":     "string",
+                    "impl":
+                    {
+                        "type": "ltxt",
+                        "tag":  "LTXT_MOB_ADV_BOOST_1"
+                    }
+                },
+                {
+                    "viewname": "bnd_default_ad_banner_description",
+                    "type":     "string",
+                    "impl":
+                    {
+                        "type": "ltxt",
+                        "tag":  "LTXT_MOB_ADV_BOOST_2"
+                    }
+                },
+        {
+            "viewname": "bnd_match_data_panel_visible",
+            "binding":  "bnd_match_data_panel_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_match_won_footer_visible",
+            "binding":  "bnd_match_won_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_match_lost_footer_visible",
+            "binding":  "bnd_match_lost_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_label_advance_on",
+            "binding": "bnd_label_advance_on",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_advance_off",
+            "binding": "bnd_label_advance_off",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_restart_on",
+            "binding": "bnd_label_restart_on",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_restart_off",
+            "binding": "bnd_label_restart_off",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_facts_on",
+            "binding": "bnd_label_facts_on",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_facts_off",
+            "binding": "bnd_label_facts_off",
+            "type": "string"
+           },
+        {
+            "viewname": "bnd_label_highlight_on",
+            "binding": "bnd_label_highlight_on",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_highlight_off",
+            "binding": "bnd_label_highlight_off",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_match_draw_footer_visible",
+            "binding":  "bnd_match_draw_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_default_banner_visible",
+            "binding":  "bnd_default_banner_visible",
+            "type":     "bool"
+        },    
+        {
+            "viewname": "bnd_ad_banner_data",
+            "binding": "bnd_ad_banner_data",
+            "type": "object"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_next",
+            "actionname": "act_next"
+        },
+        {
+            "viewname": "act_prev",
+            "actionname": "act_prev"
+        }
+    ],        
+    "data":
+    [
+        {
+            "viewname": "bnd_color_tourid",
+            "binding":  "bnd_color_tourid",
+            "type":     "init"
+        },
+        {
+            "viewname": "bnd_color_tourid2",
+            "binding":  "bnd_color_tourid2",
+            "type":     "string"
+        },     
+        {
+            "viewname": "bnd_panel_loading",
+            "binding":  "bnd_panel_loading",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tour_label",
+            "binding":  "bnd_tour_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_trophy_left",
+            "binding":  "bnd_trophy_left",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_trophy",
+            "binding":  "bnd_trophy",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_trophy_right",
+            "binding":  "bnd_trophy_right",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_tour_logo",
+            "binding":  "bnd_tour_logo",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_bg_tour",
+            "binding":  "bnd_bg_tour",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_champion_team",
+            "binding":  "bnd_champion_team",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_trophy_count",
+            "binding":  "bnd_trophy_count",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_dynamic_label",
+            "binding":  "bnd_dynamic_label",
+            "type":     "string"
+        }              
+    ]
+}

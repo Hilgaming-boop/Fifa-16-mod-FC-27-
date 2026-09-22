@@ -1,0 +1,320 @@
+{
+    "name": "MatchSelect",
+    "initial": {
+        "targets": ["MenuMatchSelect"]
+    },
+    "states": [
+        {
+            "name": "MenuMatchSelect",
+            "onEnter": [
+                ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit": [
+                ["unloadVVM"]
+            ],
+            "states": [
+                {
+                    "name": "RedirectTab1",
+                    "states": [
+                        {
+                            "name": "Tab1",
+                            "onEnter": [
+								["setTabContext", [0]],
+                                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab1.vvm"]]
+                            ],
+                            "onExit": [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions": [
+                        {"event": "evt_tab2", "targets": ["RedirectTab2"]},
+                        {"event": "evt_tab3", "targets": ["RedirectTab3"]},
+                        {"event": "evt_tab4", "targets": ["RedirectTab4"]}
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states": [
+                        {
+                            "name": "Tab2",
+                            "onEnter": [
+								["setTabContext", [1]],
+                                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab2.vvm"]]
+                            ],
+                            "onExit": [
+                                ["unloadVVM"]
+                            ],
+                            "states": [
+                                {
+                                    "name": "RedirectTab2sub1",
+                                    "states": [
+                                        {
+                                            "name": "Tab2sub1",
+                                            "onEnter": [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab2sub1.vvm"]]
+                                            ],
+                                            "onExit": [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions": [
+                                        {"event": "evt_tab2sub2", "targets": ["RedirectTab2sub2"]}
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab2sub2",
+                                    "states": [
+                                        {
+                                            "name": "Tab2sub2",
+                                            "onEnter": [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab2sub2.vvm"]]
+                                            ],
+                                            "onExit": [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions": [
+                                        {"event": "evt_tab2sub1", "targets": ["RedirectTab2sub1"]}
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions": [
+                        {"event": "evt_tab1", "targets": ["RedirectTab1"]},
+                        {"event": "evt_tab3", "targets": ["RedirectTab3"]},
+                        {"event": "evt_tab4", "targets": ["RedirectTab4"]}
+                    ]
+                },
+{
+    "name": "RedirectTab3",
+    "states": [
+        {
+            "name": "Tab3",
+            "onEnter": [
+				["setTabContext", [2]],
+                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab3.vvm"]]
+            ],
+            "onExit": [
+                ["unloadVVM"]
+            ],
+            "states": [
+                {
+                    "name": "RedirectTab3sub1",
+                    "states": [
+                        {
+                            "name": "Tab3sub1",
+                            "onEnter": [
+                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab3sub1.vvm"]]
+                            ],
+                            "onExit": [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions": [
+                        {"event": "evt_tab3sub2", "targets": ["RedirectTab3sub2"]},
+                        {"event": "evt_tab3sub3", "targets": ["RedirectTab3sub3"]}
+                    ]
+                },
+                {
+                    "name": "RedirectTab3sub2",
+                    "states": [
+                        {
+                            "name": "Tab3sub2",
+                            "onEnter": [
+                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab3sub2.vvm"]]
+                            ],
+                            "onExit": [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions": [
+                        {"event": "evt_tab3sub1", "targets": ["RedirectTab3sub1"]},
+                        {"event": "evt_tab3sub3", "targets": ["RedirectTab3sub3"]}
+                    ]
+                },
+                {
+                    "name": "RedirectTab3sub3",
+                    "states": [
+                        {
+                            "name": "Tab3sub3",
+                            "onEnter": [
+                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab3sub3.vvm"]]
+                            ],
+                            "onExit": [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions": [
+                        {"event": "evt_tab3sub1", "targets": ["RedirectTab3sub1"]},
+                        {"event": "evt_tab3sub2", "targets": ["RedirectTab3sub2"]}
+                    ]
+                }
+            ]
+        }
+    ],
+    "transitions": [
+        {"event": "evt_tab1", "targets": ["RedirectTab1"]},
+        {"event": "evt_tab2", "targets": ["RedirectTab2"]},
+        {"event": "evt_tab4", "targets": ["RedirectTab4"]}
+    ]
+},
+                {
+                    "name": "RedirectTab4",
+                    "states": [
+                        {
+                            "name": "Tab4",
+                            "onEnter": [
+								["setTabContext", [3]],
+                                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab4.vvm"]]
+                            ],
+                            "onExit": [
+                                ["unloadVVM"]
+                            ],
+                            "states": [
+                                {
+                                    "name": "RedirectTab4sub1",
+                                    "states": [
+                                        {
+                                            "name": "Tab4sub1",
+                                            "onEnter": [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab4sub1.vvm"]]
+                                            ],
+                                            "onExit": [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions": [
+                                        {"event": "evt_tab4sub2", "targets": ["RedirectTab4sub2"]}
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab4sub2",
+                                    "states": [
+                                        {
+                                            "name": "Tab4sub2",
+                                            "onEnter": [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Tab4sub2.vvm"]]
+                                            ],
+                                            "onExit": [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions": [
+                                        {"event": "evt_tab4sub1", "targets": ["RedirectTab4sub1"]}
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions": [
+                        {"event": "evt_tab1", "targets": ["RedirectTab1"]},
+                        {"event": "evt_tab2", "targets": ["RedirectTab2"]},
+                        {"event": "evt_tab3", "targets": ["RedirectTab3"]}
+                    ]
+                }
+            ],
+            "transitions": [
+                {"event": "evt_back", "targets": ["out_exit_gamemode1"]},
+                {"event": "evt_advance", "targets": ["SelectSideFlow"]},
+                {"event": "evt_squad", "targets": ["Squad"]},
+                {"event": "evt_force_reset_tournament", "targets": ["Restart"]},
+                {"event": "evt_standing", "targets": ["Standing"]},
+                {"event": "evt_standing1", "targets": ["Standing1"]},
+                {"event": "evt_topscores", "targets": ["GoalScores"]},
+				{"event": "evt_auto_simulate_matchday","targets": ["MenuMatchSelect"]},
+				{"event": "evt_to_sim_match", "targets": ["SimulateMatch"] }
+            ]
+        },
+        {
+            "name": "SelectSideFlow",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/SelectSide/SelectSide.nav",
+            "outputs": {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "MatchPlay",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/MatchPlay/MatchPlay.nav",
+            "outputs": {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+		{
+			"name": "SimulateMatch",
+			"type": "external",
+			"file": "/flows/mainflow/GameModes/QuickCup/CustomCup24Team/PlaySim/Match.nav",
+			"outputs": {
+				"out_back": "MatchSelect"
+			}
+		},
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup24Team/GroupStage/KitSelect/KitSelect.nav",
+            "outputs": {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/flows/MainFlow/GameModes/QuickCup/CustomCup24Team/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2"
+                
+            }
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup24Team/Restart/Restart.nav",
+            "outputs": {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        },
+        {
+            "name": "GoalScores",
+            "type": "external",
+            "file": "/flows/MainFlow/GameModes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/Goalscorers/Goalscorers.nav",
+            "outputs": {
+                "out_exit_gamemode": "RedirectTab3sub2",
+                "out_exit_gamemode1": "RedirectTab3sub2"
+            }
+        },
+        {
+            "name": "Standing",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/standings/standings.nav",
+            "outputs": {
+                "out_exit_gamemode": "RedirectTab3",
+                "out_exit_gamemode1": "RedirectTab3"
+            }
+        },
+        {
+            "name": "Standing1",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup24Team/GroupStage/MatchSelect/TabActive/standings/standings.nav",
+            "outputs": {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        }
+    ]
+}
+
+

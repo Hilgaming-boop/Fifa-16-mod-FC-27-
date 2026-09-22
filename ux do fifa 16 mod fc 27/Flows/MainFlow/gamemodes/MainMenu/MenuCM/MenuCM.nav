@@ -1,0 +1,24 @@
+{
+    "name": "MenuCM",
+    "states":
+    [
+        {
+            "name": "MenuCM_CareerMode",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Career/CareerHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuCM_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

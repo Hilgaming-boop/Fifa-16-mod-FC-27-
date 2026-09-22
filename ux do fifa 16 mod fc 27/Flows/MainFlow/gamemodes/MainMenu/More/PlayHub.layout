@@ -1,0 +1,143 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -110,
+                    "marginLeft": 0,
+                    "height": 100,
+                    "width": 100,
+                    "type": "$Icon_L"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "fontSize": 25,
+                    "fontFace": "$MONTBLANC_TRIAL_EXTRABOLD",
+                    "fontColor":"0xFFFFFF",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 480,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "Whether Learning The Basics, Or Just A New Skill, Practice Makes Pro-Fect"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -70,
+                    "marginLeft": 0,
+                    "fontSize": 17,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 550,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "Complete Training Drills • Nail The Basics • Reach The Next Level"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_Green",
+                            "backgroundHighlightImage": "$Tab_Action_White",
+                            "clickAction": "act_menu_customize"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 14,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Expand Learn More"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 200,
+                    "marginLeft": -20,
+                    "height": 90,
+                    "width": 220,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 230,
+                    "marginLeft": 24.7,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "text": "Learn To Play"
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

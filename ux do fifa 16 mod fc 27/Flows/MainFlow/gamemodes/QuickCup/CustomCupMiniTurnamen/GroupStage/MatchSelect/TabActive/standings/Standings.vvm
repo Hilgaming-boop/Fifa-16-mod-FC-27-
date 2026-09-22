@@ -1,0 +1,6 @@
+{
+    "dds": ["Standings.dd", "/lua/common/TabModel.dd"],
+    "vms": [["lua", "/lua/common/TabModel.lua"], ["lua", "Standings.lua"]],
+    "views": [["gfx", { "layout": "Standings.layout" }]],
+	"ireqs": ["Standings.ireq"]    
+}

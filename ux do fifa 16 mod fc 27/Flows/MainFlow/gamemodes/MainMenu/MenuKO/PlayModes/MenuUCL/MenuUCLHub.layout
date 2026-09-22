@@ -1,0 +1,241 @@
+/* ------------------------------------- */
+/* MOD Created By Rober FL */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "QUICK_ANIMATION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "children":
+    [    
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Ucl"
+        },    
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -10,
+            "marginLeft": -353,
+            "width": 348,
+            "height": 386,
+            "type": "$_UEFAchampions"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -10,
+            "marginLeft": 5,
+            "width": 348,
+            "height": 386,
+            "type": "$_UEFAWchampions"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": -522,
+            "width": 105,
+            "height": 640,
+            "type": "$_KOinfo"
+         }, 
+         {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "forceCaps": false,
+            "marginTop": 36,
+            "marginLeft": -445,
+            "fontSize": 20,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "text": "Home"
+        },
+        {
+            "commonName": "Rectangle",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 35,
+            "marginLeft": -400,
+            "width": 2.5,
+            "height": 23,
+            "color": "0xA8A8A8",
+            "alpha": 1
+         },
+         {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 31,
+            "marginLeft": -312,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Classic Match",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_menu_cm",
+             "textStyles":
+            [
+               "TF_TABS_IDLE"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 31,
+            "marginLeft": -177,
+            "height": 28,
+            "width": 90,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Match Day",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_menu_md",
+             "textStyles":
+            [
+               "TF_TABS_IDLE"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 31,
+            "marginLeft": 8,
+            "height": 28,
+            "width": 190,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "UEFA Champions League",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_menu_ucl",
+             "textStyles":
+            [
+               "TF_TABS_SELECTED"
+            ]
+        },        
+        {
+            "commonName": "SimpleButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 47,
+            "marginLeft": -353,
+                            "height": 70,
+                            "width": 120,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$Tab_Action_Green",
+            "backgroundHighlightImage": "$Tab_Action_Green",
+            "clickAction": "act_cup_ucl",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+         },
+        {
+            "commonName": "Label",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 73,
+            "marginLeft": -353,
+            "fontSize": 20,
+            "alpha": 1,            
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "text": "Play"
+        },
+         {
+            "commonName": "SimpleButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 47,
+            "marginLeft": 5,
+            "height": 70,
+            "width": 120,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$Tab_Action_Green",
+            "backgroundHighlightImage": "$Tab_Action_Green",
+            "clickAction": "act_cup_uwcl",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+         },
+        {
+            "commonName": "Label",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 73,
+            "marginLeft": 5,
+            "fontSize": 20,
+            "alpha": 1,            
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "text": "Play"
+        }     
+               ]
+                    }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "QuickCup",
+    "initial":
+    {
+        "targets": ["MenuQuickCup"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuQuickCup",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["QuickCup.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event":   "evt_refresh_on_resize",
+                    "targets": ["QuickCup"]
+                }
+            ]
+        }
+    ]
+}

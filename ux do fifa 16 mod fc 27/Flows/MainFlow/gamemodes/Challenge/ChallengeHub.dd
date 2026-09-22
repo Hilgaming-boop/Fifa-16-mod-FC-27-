@@ -1,0 +1,80 @@
+{
+    "actions":
+    [
+        {
+            "viewname":"act_a",
+            "actionname":"act_a"
+        },     
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+
+        {
+			"viewname": "act_to_icons",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_icons"
+			}
+		},
+		{
+			"viewname": "act_to_season",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_to_season"
+			}
+		}
+
+       
+        
+    ],
+    "data":
+	[
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        },
+        {
+			"viewname": "bnd_live_tile_icons",
+			"binding": "bnd_live_tile_icons",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_season",
+			"binding": "bnd_live_tile_season",
+			"type": "live_tile"
+	    },
+		{
+		    "viewname": "bnd_ModelPlayer",
+            "binding": "bnd_ModelPlayer",
+			"type": "object"
+		}       
+    ]
+}

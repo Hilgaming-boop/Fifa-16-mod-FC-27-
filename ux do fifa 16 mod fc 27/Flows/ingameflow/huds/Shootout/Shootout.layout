@@ -1,0 +1,409 @@
+{
+    "commonName": "Panel",
+    "name": "PenaltiKick",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],        
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 30,
+            "marginRight": 90,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_active"
+                },
+                {
+                    "property": "image",
+                    "binding": "bnd_live_logo"
+                }
+            ]
+         },
+         {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 87,
+            "marginLeft": -1,
+            "width": 59,
+            "height": 100,
+            "alpha": 0.6,
+            "visible": true,
+            "type": "$ShootoutBallpoint",
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_active"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Pipinaltian",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginLeft": 60,
+            "width": 200,
+            "height": 75,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_active"
+                },
+                {
+                    "property": "marginTop",
+                    "binding": "bnd_sb_top"
+                }
+            ],
+            "children":
+            [		
+                {
+                    "commonName": "Rectangle",
+                    "name": "Bg",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "BgCrest",
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "width": 40,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_crest_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "StripClub",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 3.5,
+                    "height": 1,
+                    "width": 33,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_stripclub_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "CrestHome",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -18,
+                    "marginLeft": 6,
+                    "width": 27,
+                    "height": 27,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_homeCrest",
+                            "property": "image"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Image",
+                    "name": "CrestAway",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 18,
+                    "marginLeft": 6,
+                    "width": 27,
+                    "height": 27,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_awayCrest",
+                            "property": "image"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Shootout",
+                    "name": "HistoryHome",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": -7,
+                    "marginTop": -18.5,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "homeHistory",
+                            "binding":  "bnd_home_history"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Shootout",
+                    "name": "HistoryAway",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": -125,
+                    "marginTop": 20,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "awayHistory",
+                            "binding":  "bnd_away_history"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "name": "BgLapisan",
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "marginLeft": 78,
+                    "width": 3,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "StripTengah",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 4,
+                    "height": 1,
+                    "width": 152,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_strip_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "BgLapisan",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "width": 3,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NameHome",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -19,
+                    "marginLeft": 45,
+                    "fontFace": "$DINPro-CondBold",
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_homeName_text",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_homeName_fontColor",
+                            "property": "fontColor"
+                        },
+                        {
+                            "binding": "bnd_homeName_fontSize",
+                            "property": "fontSize"
+                        },
+					    {
+							"property": "fontFace",
+					        "binding":  "bnd_fontFace"
+					     },
+			      	   {
+					        "property": "forceCaps",
+					    	"binding":  "bnd_forceCaps"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Label",
+                    "name": "NameAway",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 19,
+                    "marginLeft": 45,
+                    "fontFace": "$DINPro-CondBold",
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_awayName_text",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_awayName_fontColor",
+                            "property": "fontColor"
+                        },
+                        {
+                            "binding": "bnd_awayName_fontSize",
+                            "property": "fontSize"
+                        },
+						{
+					    	"property": "fontFace",
+						    "binding":  "bnd_fontFace"
+				         },
+			      	   {
+				    	    "property": "forceCaps",
+					    	"binding":  "bnd_forceCaps"
+                        }
+                    ]
+                 }
+             ]
+         },
+         {
+            "commonName": "Shootout",
+            "name": "IniOrinyaHIDE",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": -500,
+            "marginLeft": 0,
+            "alpha": 0,
+            "visible": true,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_active"
+                },
+                {
+                    "property": "score",
+                    "binding":  "bnd_score"
+                },
+                {
+                    "property": "homeTeam",
+                    "binding":  "bnd_home_team"
+                },
+                {
+                    "property": "awayTeam",
+                    "binding":  "bnd_away_team"
+                },
+                {
+                    "property": "side",
+                    "binding":  "bnd_side"
+                },
+                {
+                    "property": "homeHistory",
+                    "binding":  "bnd_home_history"
+                },
+                {
+                    "property": "awayHistory",
+                    "binding":  "bnd_away_history"
+                }
+             ]
+          }
+       ]
+     }
+  ]
+}

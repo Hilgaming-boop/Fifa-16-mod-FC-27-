@@ -1,0 +1,149 @@
+{
+    "commonName": "Panel",
+	"name": "mentalityBar",
+	"alignH": "FILL",
+	"alignV": "FILL",
+    "children":
+    [
+        {
+            "commonName": "Mentality",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 50,
+            "marginLeft": 0,
+            "orientation": "left",
+            "bindings":
+            [
+                {
+                    "property": "mentality",
+                    "binding":  "bnd_home_mentality"
+                },
+                {
+                    "property": "label",
+                    "binding":  "bnd_home_label"
+                },
+                {
+                    "property": "active",
+                    "binding":  "bnd_home_active"
+                },
+                {
+                    "property": "visible",
+                    "binding":  "bnd_home_mentality_default_visible"
+                }
+            ]
+        },
+        {
+        "commonName": "Panel",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 60,
+                    "height":35,
+                    "marginRight": 250,
+                    "marginTop": 38,
+                    "children":[
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x101010",
+                            "alpha":0.8
+                        },
+                        
+                        {
+                            "commonName": "GenericButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            
+                            "height": 24,
+                            "width": 24,
+                            "label": "",
+                            "icon": "$iconCamera",
+                            "clickAction": "act_camera_change"
+                        }
+                    ]
+                },
+                {
+            "commonName": "Panel",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "width": 400,
+            "height": 80,
+            "marginRight":210,
+            "bindings":[
+                {
+                    "property": "visible",
+                    "binding":  "bnd_home_mentality_new_visible"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "width": 60,
+                    "height":35,
+                    "marginLeft":60,
+                    "marginTop":20,
+                    "children":[
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x101010",
+                            "alpha":0.8
+                        },
+                        
+                        {
+                            "commonName": "GenericButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            
+                            "height": 24,
+                            "width": 24,
+                            "label": "",
+                            "icon": "$iconCamera",
+                            "clickAction": "act_camera_change"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "TabBar",
+                    "name": "BagianTab",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "width": 250,
+                    "tabs":
+                    [
+                       {
+                           "label": "DEF",
+                           "clickAction": "act_defend"
+                       },
+                       {
+                           "label": "BAL",
+                           "clickAction": "act_balance"
+                       },
+                       {
+                           "label": "ATT",
+                           "clickAction": "act_attack"
+                       }
+                   ],
+                   "bindings":
+                   [
+                      {
+                          "binding": "bnd_home_mentality_index",
+                          "property": "selectedIndex"
+                      }
+                   ]
+                }
+                
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "PanelLayoutBehavior"
+        }
+    ]
+}

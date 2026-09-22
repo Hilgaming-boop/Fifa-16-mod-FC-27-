@@ -1,0 +1,2069 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],        
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "InfoCardInjury",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 1,
+            "bindings":
+            [
+              {
+                "binding": "bnd_visible",
+                "property": "visible"
+              },
+              {
+                "binding": "bnd_eventinfo_scaleY",
+                "property": "scaleY"
+              },
+              {
+                "binding": "bnd_eventinfo_scaleX",
+                "property": "scaleX"
+              }              
+            ],
+            "children":
+            [
+                {
+                     "commonName": "Asset",
+                     "alignV": "FILL",
+                     "alignH": "FILL",
+                     "alpha": 0,
+                     "type": "$LoadingScrim"
+                },  
+                {
+                    "commonName": "Panel",
+                    "width": 350,
+                    "height": 70,
+                    "bindings":
+                    [
+                        {
+                            "property": "alignV",
+                            "binding":  "bnd_eventinfo_alignV"
+                        },
+                        {
+                            "property": "alignH",
+                            "binding":  "bnd_eventinfo_alignH"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_eventinfo_bottom"
+                        },
+                        {
+                            "property": "marginLeft",
+                            "binding":  "bnd_eventinfo_left"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "TOP",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                         {
+                                            "property": "color",
+                                            "binding":  "bnd_bg1_color"
+                                         },
+                                         {
+                                            "property": "width",
+                                            "binding":  "bnd_bg1_color_width"
+                                         },
+                                         {
+                                            "property": "height",
+                                            "binding":  "bnd_bg1_color_height"
+                                         },
+                                         {
+                                            "property": "alignH",
+                                            "binding":  "bnd_bg1_color_alignH"
+                                         },
+                                         {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_bg1_color_left"
+                                         }
+                                    ]
+                                 },
+                                {
+                                    "commonName": "Image",
+                                    "name": "background",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_background"
+                                        },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_background_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_background_alignH"          
+                                 },
+                                 {
+                                    "property": "width",
+                                    "binding":  "bnd_background_width"
+                                 },
+                                 {
+                                    "property": "height",
+                                    "binding":  "bnd_background_height"  
+                                 },                                                                 
+                                        {
+                                           "property": "marginTop",
+                                           "binding":  "bnd_background_top"
+                                        },
+                                        {
+                                           "property": "marginLeft",
+                                           "binding":  "bnd_background_left"
+                                        }
+                                    ]
+                                },                                                    
+                                 {
+                                     "commonName": "Rectangle",
+                                     "alignV": "BOTTOM",
+                                     "alpha": 1,
+                                     "bindings":
+                                     [
+                                          {
+                                             "property": "color",
+                                             "binding":  "bnd_bg2_color"
+                                          },
+                                          {
+                                            "property": "width",
+                                            "binding":  "bnd_bg2_color_width"
+                                          },
+                                         {
+                                            "property": "height",
+                                            "binding":  "bnd_bg2_color_height"
+                                          },
+                                          {
+                                            "property": "alignH",
+                                            "binding":  "bnd_bg2_color_alignH"
+                                          },
+                                          {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_bg2_color_left"
+                                         }
+                                     ]
+                                  }
+                             ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "PlayerAvatar",
+                            "width": 70,
+                            "height": 70,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_avatar_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_avatar_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_avatar_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_avatar_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_avatar_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_avatar_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_avatar_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_avatar_color_alpha"
+                                        }                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Avatar",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_goal_player_avatar"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_goal_player_avatar_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_goal_player_avatar_width"
+                                        }                                                
+                                    ]
+                                }                                
+                            ]                
+                        },
+                        {
+                            "commonName": "Panel",
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_logo_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_logo_alignH"          
+                                 },
+                                 {
+                                    "property": "width",
+                                    "binding":  "bnd_logo_width"
+                                 },
+                                 {
+                                    "property": "height",
+                                    "binding":  "bnd_logo_height"  
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_logo_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_logo_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_logo_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_logo_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_logo_color"
+                                        },
+                                        {
+                                           "property": "width",
+                                           "binding":  "bnd_logo_width"
+                                        },
+                                        {
+                                           "property": "height",
+                                           "binding":  "bnd_logo_height"  
+                                        },
+                                        {
+                                           "property": "marginTop",
+                                           "binding":  "bnd_logo_color_top"
+                                        },
+                                        {
+                                           "property": "marginBottom",
+                                           "binding":  "bnd_logo_color_bottom"
+                                        }
+                                    ]
+                                },                          
+                                {
+                                    "commonName": "Image",
+                                    "name": "Logo",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_logo"
+                                        },
+                                        {
+                                           "property": "marginTop",
+                                           "binding":  "bnd_logo_top"
+                                        },
+                                        {
+                                           "property": "marginBottom",
+                                           "binding":  "bnd_logo_bottom"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "PlayerFlag",
+                            "width": 60,
+                            "height": 40,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_flag_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_flag_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_flag_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_flag_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_flag_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_flag_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_player_flag_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_player_flag_color_alpha"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Flag",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 40,
+                                    "height": 40,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_goal_player_flag"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_goal_player_flag_widthOFF"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_goal_player_flag_heightOFF"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                                           
+                        {
+                            "commonName": "Panel",
+                            "name": "TeamCrest",
+                            "width": 70,
+                            "height": 70,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_team_crest_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_team_crest_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_team_crest_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_team_crest_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_team_crest_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_team_crest_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_crest_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_crest_color_alpha"
+                                        }
+                                    ]    
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Crest",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team_crest"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team_crest_height"
+                                        }
+                                    ]
+                                }
+                            ] 
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "TeamCrest1",
+                            "width": 42,
+                            "height": 42,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_team1_crest_alignV"           
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_team1_crest_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_team1_crest_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_team1_crest_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_team1_crest_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_team1_crest_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_crest1_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_crest1_color_alpha"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Crest1",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 40,
+                                    "height": 40,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team1_crest"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team1_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team1_crest_height"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                     
+                        {
+                            "commonName": "Panel",
+                            "name": "Team2Crest",
+                            "width": 70,
+                            "height": 70,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_team2_crest_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_team2_crest_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_team2_crest_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_team2_crest_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_team2_crest_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_team2_crest_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_crest2_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_crest2_color_alpha"
+                                        }
+                                    ]    
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Crest2",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team2_crest"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team2_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team2_crest_height"
+                                        }
+                                    ]
+                                }
+                            ] 
+                        },                        
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerName",
+                            "leading": -5,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_player_name"
+                                 },
+                                 {
+                                    "property": "textAlignH",
+                                    "binding":  "bnd_goal_player_name_textAlignH"
+                                 },             
+                                 {
+                                    "property": "width",
+                                    "binding":  "bnd_goal_player_name_width"
+                                 },                    
+                                 {
+                                    "property": "autoScroll",
+                                    "binding":  "bnd_goal_player_name_autoScroll"
+                                 },            
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_player_name_fontFace"
+                                 },               
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_name_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_name_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_name_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_name_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_name_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_name_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_name_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_name_right"
+                                 },
+						  	   {
+							 	   "property": "forceCaps",
+						 	   	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },      
+                        {
+                            "commonName": "Label",
+                            "name": "TeamName",
+                            "width": 100,
+                            "alpha": 1,
+                            "autoScroll":true,
+                            "textAlight": "LEFT",
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],                            
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_team_name"
+                                 },
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_team_name_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_team_name_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_team_name_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_team_name_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_team_name_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_team_name_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_team_name_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_team_name_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						  	   },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },                                  
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerLevel",       
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_player_level"
+                                 },
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_player_level_fontFace"
+                                 },                                 
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_level_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_level_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_level_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_level_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_level_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_level_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_level_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_level_right"
+                                 },
+							     {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },                 
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerCount",
+                            "textAlignH": "LEFT",
+                            "width": 100,
+                            "autoScroll":true,                            
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  ""
+                                 },
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_count_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_count_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_count_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_count_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_count_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_count_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_count_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_count_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						  	   },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerDesc",
+                            "textAlignH": "LEFT",
+                            "width": 100,
+                            "autoScroll":true,                         
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  ""
+                                 },
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_desc_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_desc_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_desc_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_desc_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_desc_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_desc_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_desc_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_desc_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						  	   },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },                        
+                        {
+                            "commonName": "Label",
+                            "name": "GoalType",
+                            "textAlignH": "LEFT",
+                            "width": 80,
+                            "autoScroll":true,
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_type"
+                                 },
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_type_fontFace"
+                                 },                                 
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_type_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_type_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_type_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_type_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_type_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_type_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_type_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_type_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+							     },
+							     {
+								    "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "GoalTime",
+                            "textAlignH": "LEFT",
+                            "width": 100,
+                            "autoScroll":true,
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],                            
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_time"
+                                 },
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_time_fontFace"
+                                 },                                 
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_time_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_time_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_time_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_time_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_time_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_time_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_time_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_time_right"
+                                 }
+                            ]
+                        }                                   
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "InfoGoal",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                  "binding": "bnd_player_visible",
+                  "property": "visible"
+                },
+              {
+                "binding": "bnd_eventinfo_scaleY",
+                "property": "scaleY"
+              },
+              {
+                "binding": "bnd_eventinfo_scaleX",
+                "property": "scaleX"
+              }                     
+            ],
+            "children":
+            [
+               {
+                     "commonName": "Asset",
+                     "alignV": "FILL",
+                     "alignH": "FILL",
+                     "alpha": 0,
+                     "type": "$LoadingScrim"
+                },                 
+                {
+                    "commonName": "Panel",
+                    "width": 350,
+                    "height": 70,
+                    "bindings":
+                    [
+                        {
+                            "property": "alignV",
+                            "binding":  "bnd_eventinfo_alignV"
+                        },
+                        {
+                            "property": "alignH",
+                            "binding":  "bnd_eventinfo_alignH"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_eventinfo_bottom"
+                        },
+                        {
+                            "property": "marginLeft",
+                            "binding":  "bnd_eventinfo_left"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "TOP",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                         {
+                                            "property": "color",
+                                            "binding":  "bnd_bg1_color"
+                                         },
+                                         {
+                                            "property": "width",
+                                            "binding":  "bnd_bg1_color_width"
+                                         },
+                                         {
+                                            "property": "height",
+                                            "binding":  "bnd_bg1_color_height"
+                                         },
+                                         {
+                                            "property": "alignH",
+                                            "binding":  "bnd_bg1_color_alignH"
+                                         },
+                                         {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_bg1_color_left"
+                                         }
+                                    ]
+                                 },
+                                {
+                                    "commonName": "Image",
+                                    "name": "background",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_background"
+                                        },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_background_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_background_alignH"          
+                                 },
+                                 {
+                                    "property": "width",
+                                    "binding":  "bnd_background_width"
+                                 },
+                                 {
+                                    "property": "height",
+                                    "binding":  "bnd_background_height"  
+                                 },                                                                 
+                                        {
+                                           "property": "marginTop",
+                                           "binding":  "bnd_background_top"
+                                        },
+                                        {
+                                           "property": "marginLeft",
+                                           "binding":  "bnd_background_left"
+                                        }
+                                    ]
+                                },               
+                                {
+                                    "commonName": "Image",
+                                    "name": "bnd_logogoal",
+                                    "alignH": "TOP",
+                                    "alignV": "LEFT",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_logogoal"
+                                        },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_logogoal_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_logogoal_alignH"          
+                                 },
+                                 {
+                                    "property": "width",
+                                    "binding":  "bnd_logogoal_width"
+                                 },
+                                 {
+                                    "property": "height",
+                                    "binding":  "bnd_logogoal_height"  
+                                 },                                                                 
+                                        {
+                                           "property": "marginTop",
+                                           "binding":  "bnd_logogoal_top"
+                                        },
+                                        {
+                                           "property": "marginLeft",
+                                           "binding":  "bnd_logogoal_left"
+                                        }
+                                    ]
+                                },                                                               
+                                 {
+                                     "commonName": "Rectangle",
+                                     "alignV": "BOTTOM",
+                                     "alpha": 1,
+                                     "bindings":
+                                     [
+                                          {
+                                             "property": "color",
+                                             "binding":  "bnd_bg2_color"
+                                          },
+                                          {
+                                            "property": "width",
+                                            "binding":  "bnd_bg2_color_width"
+                                         },
+                                         {
+                                            "property": "height",
+                                            "binding":  "bnd_bg2_color_height"
+                                          },
+                                          {
+                                            "property": "alignH",
+                                            "binding":  "bnd_bg2_color_alignH"
+                                          },
+                                          {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_bg2_color_left"
+                                         }
+                                     ]
+                                  }
+                             ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "PlayerAvatar",
+                            "width": 70,
+                            "height": 70,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_avatar_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_avatar_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_avatar_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_avatar_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_avatar_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_avatar_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_avatar_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_avatar_color_alpha"
+                                        }                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Avatar",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_goal_player_avatar"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_goal_player_avatar_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_goal_player_avatar_width"
+                                        }                                                
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "PlayerFlag",
+                            "width": 60,
+                            "height": 40,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_flag_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_flag_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_flag_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_flag_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_flag_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_flag_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_player_flag_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_player_flag_color_alpha"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Flag",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 40,
+                                    "height": 40,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_goal_player_flag"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_goal_player_flag_widthOF"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_goal_player_flag_heightOFF"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                        
+                        {
+                            "commonName": "Panel",
+                            "name": "TeamCrest",
+                            "width": 70,
+                            "height": 70,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_team_crest_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_team_crest_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_team_crest_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_team_crest_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_team_crest_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_team_crest_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_crest_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_crest_color_alpha"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Crest",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team_crest"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team_crest_height"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "TeamCrest1",
+                            "width": 42,
+                            "height": 42,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_team1_crest_alignV"           
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_team1_crest_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_team1_crest_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_team1_crest_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_team1_crest_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_team1_crest_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_crest1_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_crest1_color_alpha"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Crest1",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 40,
+                                    "height": 40,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team1_crest"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team1_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team1_crest_height"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Team2Crest",
+                            "width": 70,
+                            "height": 70,
+                            "bindings":
+                            [
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_team2_crest_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_team2_crest_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_team2_crest_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_team2_crest_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_team2_crest_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_team2_crest_right"
+                                 }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg_crest2_color"
+                                        },
+                                        {
+                                            "property": "alpha",
+                                            "binding":  "bnd_bg_crest2_color_alpha"
+                                        }
+                                    ]    
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Crest2",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team2_crest"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team2_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team2_crest_height"
+                                        }
+                                    ]
+                                }
+                            ] 
+                        },                                              
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerName",
+                            "leading": -5,                            
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_player_name"
+                                 },
+                                 {
+                                    "property": "textAlignH",
+                                    "binding":  "bnd_goal_player_name_textAlignH"
+                                 },               
+                                 {
+                                    "property": "autoScroll",
+                                    "binding":  "bnd_goal_player_name_autoScroll"
+                                 },                                       
+                                 {
+                                    "property": "width",
+                                    "binding":  "bnd_goal_player_name_width"
+                                 },                               
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_player_name_fontFace"
+                                 },                                 
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_name_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_name_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_name_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_name_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_name_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_name_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_name_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_name_right"
+                                 },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "TeamName",
+                            "width": 100,
+                            "alpha": 1,
+                            "autoScroll":true,
+                            "textAlight": "LEFT",
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],                            
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_team_name"
+                                 },
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_team_name_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_team_name_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_team_name_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_team_name_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_team_name_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_team_name_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_team_name_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_team_name_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						  	   },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },                                                
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerLevel",                             
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_player_level"
+                                 },
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_player_level_fontFace"
+                                 },                                 
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_level_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_level_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_level_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_level_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_level_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_level_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_level_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_level_right"
+                                 },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerCount",
+                            "textAlignH": "LEFT",
+                            "width": 100,
+                            "autoScroll":true,                            
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_player_count"
+                                 },
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_count_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_count_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_count_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_count_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_count_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_count_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_count_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_count_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						  	   },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerDesc",
+                            "textAlignH": "LEFT",
+                            "width": 100,
+                            "autoScroll":true,                         
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_player_desc"
+                                 },
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_player_desc_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_player_desc_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_player_desc_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_player_desc_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_player_desc_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_player_desc_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_player_desc_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_player_desc_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						  	   },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "GoalType",
+                            "textAlignH": "LEFT",
+                            "width": 80,
+                            "autoScroll":true,
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_type"
+                                 },
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_type_fontFace"
+                                 },                                 
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_type_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_type_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_type_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_type_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_type_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_type_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_type_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_type_right"
+                                 },
+							     {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						  	   },
+						  	   {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                                 }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "GoalTime",
+                            "textAlignH": "LEFT",
+                            "width": 100,
+                            "autoScroll":true,
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],                            
+                            "bindings":
+                            [
+                                 {
+                                    "property": "text",
+                                    "binding":  "bnd_goal_time"
+                                 },
+                                 {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_goal_time_fontFace"
+                                 },                                 
+                                 {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_goal_time_fontColor"
+                                 },
+                                 {
+                                    "property": "fontSize",
+                                    "binding":  "bnd_goal_time_fontSize"
+                                 },
+                                 {
+                                    "property": "alignV",
+                                    "binding":  "bnd_goal_time_alignV"
+                                 },
+                                 {
+                                    "property": "alignH",
+                                    "binding":  "bnd_goal_time_alignH"
+                                 },
+                                 {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_goal_time_top"
+                                 },
+                                 {
+                                    "property": "marginBottom",
+                                    "binding":  "bnd_goal_time_bottom"
+                                 },
+                                 {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_goal_time_left"
+                                 },
+                                 {
+                                    "property": "marginRight",
+                                    "binding":  "bnd_goal_time_right"
+                                 }
+                            ]
+                        }                                           
+                    ]
+                },
+                {
+			                "commonName": "EventInfo",
+			                "alignV": "CENTER",
+			                "alignH": "RIGHT",
+			                "marginTop": -10,
+			                "marginRight": 385,
+                            "visible": false,
+			                "bindings":
+			                [
+				                {
+					                "binding": "bnd_nationalization",
+					                "property": "nationalization"
+				                },
+				                {
+					                "binding": "bnd_data",
+					                "property": "data"
+				                }
+			                ]
+		                },
+		                {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "fontSize": 18,
+                            "marginLeft": 24,
+                            "textAlignH": "LEFT",                                      
+                            "fontColor": "$COLOR_WHITE",
+                            "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_text",
+                                   "property": "text"
+                              },
+						      {
+							    	"property": "fontFace",
+								    "binding":  "bnd_fontFace"
+						       },
+						  	 {
+							 	   "property": "forceCaps",
+							    	"binding":  "bnd_forceCaps"
+                               }
+                            ]
+                        }
+                    ]
+                 }
+            ]
+        }
+    ]
+}           

@@ -1,0 +1,24 @@
+{
+    "name": "MenuKO",
+    "states":
+    [
+        {
+            "name": "MenuKO_KickOff",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuKO/PlayModes/PlayModes.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuKO_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_kickoff",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_kickoff"
+			}
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+             }
+        }       
+    ],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_kickoff",
+			"binding": "bnd_live_tile_kickoff",
+			"type": "live_tile"
+		}		
+	]
+}

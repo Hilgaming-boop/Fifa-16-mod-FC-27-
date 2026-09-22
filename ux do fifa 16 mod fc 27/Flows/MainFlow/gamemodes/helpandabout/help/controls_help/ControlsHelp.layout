@@ -1,0 +1,223 @@
+/*-- Layout Design billz12 YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 15,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 240,
+                            "height": 90,
+                            "width": 130,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 275,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "About"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -150,
+            "width": 700,
+            "height": 430,
+            "children":
+            [
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 20,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "FUT16, Which was modified to become Fc25"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 40,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "This is a football simulation video game for mobile"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 60,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Developed Electronic Arts under the EA Sports label."
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 100,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Official Fifpro license, this game has developed until now"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 120,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "With the presence of experts, this game will continue to be developed"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 140,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Thank you to the experts who have made updates to this game to be better"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 180,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "This patch data was modified by billz12, please visit the YouTube channel"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 200,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Come on, support the experts so they are enthusiastic about giving their best"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 300,
+                   "fontSize": 15,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "alpha": 0.8,
+                   "text": "Modified By :"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 317,
+                   "fontSize": 18,
+                   "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "billz12"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 342,
+                   "fontSize": 15,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "alpha": 0.8,
+                   "text": "@billz12 - Remain Be Creative"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 380,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Thanks To : Davun ,Mvn ,Septiawan ,Justin Putera ,Ma'Ruf ID & Laosiji & all modder"
+                }
+                
+            ]
+        }
+    ]
+}
+/*-- Layout Design billz12 YouTube --*/

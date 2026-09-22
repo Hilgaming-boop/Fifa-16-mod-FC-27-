@@ -1,0 +1,77 @@
+{
+    "behaviors":
+    [
+        {
+            "commonName": "ChemistryBarBehavior",
+            "name": "ChemistryBarBehavior",
+            "colorValues":
+            [
+                {
+                    "threshold": 50,
+                    "color": "$COLOR_LOW_VALUE"
+                },
+                {
+                    "threshold": 75,
+                    "color": "$COLOR_MEDIUM_VALUE"
+                },
+                {
+                    "threshold": 100,
+                    "color": "$COLOR_HIGH_VALUE"
+                }
+            ]
+        }
+    ],
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 95.0,
+            "height": 23.0
+        }
+    },
+    "propertyMap":
+    {
+        "value": "ChemistryBarBehavior.value",
+        "animated": "ChemistryBarBehavior.animated",
+        "alphaAnim": "ChemistryBarBehavior.alphaAnim",
+        "hasSFX": "ChemistryBarBehavior.hasSFX",
+        "colorValues": "ChemistryBarBehavior.colorValues"
+    },
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "name": "BackingBar",
+            "x": 0.0,
+            "y": 0.0,
+            "type": "$StatsBarBacking"
+        },
+        {
+            "commonName": "Asset",
+            "name": "FillBar",
+            "visible": false,
+            "width": 0.0,
+            "x": 0.0,
+            "y": 0.0,
+            "type": "$StatsBarFillWhite"
+        },
+        {
+            "commonName": "Asset",
+            "name": "Shine",
+            "x": 0.0,
+            "y": 0.0,
+            "type": "$StatsBarShine"
+        },
+                        {
+                            "commonName": "Label",
+                            "name":"position",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 250,
+                            "marginBottom": 0,
+                            "fontSize": 19,
+                            "fontColor": "0x556B2F",
+                            "fontFace": "$FONT_BOLD"
+                        }
+    ]
+}

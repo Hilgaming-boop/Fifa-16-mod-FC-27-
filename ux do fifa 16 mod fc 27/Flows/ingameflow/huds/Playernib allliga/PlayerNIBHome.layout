@@ -1,0 +1,1116 @@
+{
+    "commonName": "Panel",
+    "name": "playerNIBHomeContainer",
+    "alignH": "FILL",
+	"alignV": "FILL",
+    "children":
+    [    
+        {
+            "commonName": "Image",
+            "name": "Weather",
+            "alignV": "FILL",
+            "alignH": "FILL",
+			"alpha":0.5,           
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_weather_type"
+                }
+            ]
+        },
+        {
+		    "commonName": "Asset",
+		    "name": "Rain",
+			"path": "views/weather/rain.swf",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"height": 0,
+			"width": 0,
+			"marginRight": 0,
+			"marginLeft": 0,
+			"alpha": 0.7,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_rain_visible"
+				}
+			]
+		},
+        {
+		    "commonName": "Asset",
+		    "name": "snow",
+			"path": "views/weather/snow.swf",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"height": 0,
+			"width": 0,
+			"marginRight": 0,
+			"marginLeft": 0,
+			"alpha": 0.5,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_snow_visible"
+				}
+			]
+        },  
+                {
+                    "commonName": "AssetButton",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 27,
+                    "marginLeft": 10,
+                    "width": 40,
+                    "height": 40,
+                    "clickAction": "act_camera_change",
+                    "buttonAsset": "$IconCamera",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_active",
+                            "property": "visible"
+                        }
+                    ]
+                },               
+        {
+            "commonName": "Panel",
+            "name": "playerNIBHomeContainerSIDE",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "marginLeft": 10,
+            "marginBottom": 20,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_nibs_on_side_visible"
+                }
+            ],
+            "children":
+            [      
+        {
+			"commonName": "Rectangle",
+			"name": "NIBBackgroundRight",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginLeft": -480,
+			"marginBottom": 14,
+			"cornerRaduis": 3,
+			"width": 215,
+			"height": 20,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_bg_alpha"
+				},				
+				{
+					"property": "color",
+					"binding":  "bnd_bg"
+				}
+			]
+		},
+		{
+			"commonName": "Asset",
+			"name": "NIBBackgroundRight",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginLeft": -480,
+			"marginBottom": 10,
+			"width": 225,
+			"height": 36,
+            "type": "$NIBHomeRecOff", 
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				}				
+			]
+		},
+		{
+            "commonName": "Panel",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",  
+            "marginLeft": -480,
+            "marginBottom": 35,
+            "width": 200,
+			"height": 1.5,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "width",
+					"binding":  ""
+				},
+				{
+					"property": "marginBottom",
+					"binding":  ""
+				}
+			],
+            "children":
+            [
+               {
+					"commonName": "Rectangle",
+					"name": "NIBStaminaInner",
+					"alignH": "FILL",
+					"alignV": "FILL",
+			        "bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+						{
+							"property": "color",
+							"binding":  "bnd_stamina_inner_bg"
+						}
+					]
+				},
+				{
+					"commonName": "Rectangle",
+					"name": "NIBStaminaOutSide",
+					"alignH": "RIGHT",
+					"alignV": "FILL",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+						{
+							"property": "color",
+							"binding":  "bnd_stamina_outside_bg"
+						},	
+						{
+							"property": "width",
+							"binding":  "bnd_stamina_short_width"
+						}
+					]
+				}
+            ]
+		},
+		{
+            "commonName": "Panel",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 12,
+			"width":213,
+			"height": 31,
+			"bindings":[
+				{
+					"property": "marginLeft",
+					"binding":  "bnd_player_info_left"
+				}
+			],
+			"children":
+			[
+				{
+					"commonName": "Label",
+					"name": "NIBPlayerNumber",
+					"alignH": "LEFT",
+					"alignV": "CENTER",
+					"marginLeft": -245,
+					"marginTop": 4,
+                    "fontSize": 13,
+                    "fontFace": "$CruyffSans-Regular",
+					"bold":true,
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+						{
+							"property": "text",
+							"binding":  "bnd_player_number"
+				        },
+				        {	
+				       	"property": "marginBottom",
+				       	"binding":  ""
+			            },
+                        {
+                            "property": "fontSize",
+                            "binding": ""
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_player_number_color"
+					   },
+		               {
+					     	"property": "fontFace",
+					     	"binding":  ""
+				   	},
+				   	{
+							"property": "forceCaps",
+							"binding":  ""
+						}
+					]
+				},
+				{
+					"commonName": "Label",
+					"name": "NIBPlayerName",
+					"alignH": "LEFT",
+					"alignV": "CENTER",
+					"marginLeft": -220,
+					"marginTop": 4,
+					"fontSize": 13,
+                    "fontFace": "$CruyffSans-Regular",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+		               {
+					     	"property": "fontFace",
+					     	"binding":  ""
+				   	},
+				   	{
+							"property": "forceCaps",
+							"binding":  ""
+					    },
+                        {
+							"property": "text",
+							"binding":  "bnd_player_name"
+					    },
+				        {	
+				       	"property": "marginBottom",
+				       	"binding":  ""
+				        },
+                        {
+                            "property": "fontSize",
+                            "binding": ""
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_player_name_color"
+						}
+					]
+				}
+			]
+	    },
+		{
+	    	"commonName": "",
+			"name": "NIBBackgroundLeft",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+            "marginLeft": -615,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "color",
+					"binding":  "bnd_crest_bg"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_crestBg_alpha"
+				},
+				{
+					"property": "width",
+					"binding":  "bnd_crestBg_width"
+				},
+				{
+					"property": "height",
+					"binding":  "bnd_crestBg_height"
+				},
+				{	
+					"property": "marginBottom",
+					"binding":  "bnd_crestBg_bottom"
+				}
+				
+			]
+		},
+		{
+			"commonName": "Image",
+			"name": "insCrestHome",
+            "alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginBottom": 12,
+            "marginLeft": -610,
+            "width": 30,
+            "height": 30,
+			"bindings":
+			[
+			    {
+					"property": "image",
+					"binding":  "bnd_home_team_crest"
+				},
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "width",
+					"binding":  ""
+				},
+				{
+					"property": "height",
+					"binding":  ""
+				},
+				{
+					"property": "marginBottom",
+					"binding":  ""
+				}
+			]
+        },
+        {
+             "commonName": "Image",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "bindings":
+              [
+                  {
+                     "binding": "bnd_logo_inside_visible",
+                     "property": "visible"
+                  },
+                  {
+                     "binding": "bnd_logo_outside_visible",
+                     "property": "visible"
+                  },
+                  {
+                     "binding": "bnd_logo_height",
+                     "property": "height"
+                 },
+                 {
+                     "binding": "bnd_logo_width",
+                     "property": "width"
+                 },
+                 {
+                     "binding": "bnd_logo_top",
+                     "property": "marginTop"
+                 },
+                 {
+                      "binding": "bnd_logo_left",
+                      "property": "marginLeft"
+                 },
+                 {
+                      "binding": "bnd_logo_image",
+                      "property": "image"
+                 },
+                 {
+					"property": "visible",
+					"binding":  "bnd_active"
+               }
+           ]
+		}
+	]
+},
+        {
+            "commonName": "Panel",
+            "name": "playerNIBHomeContainerCENTER",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "marginLeft": 430,
+            "marginBottom": 20,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_nibs_on_center_visible"
+                }
+            ],
+            "children":
+            [
+        {
+			"commonName": "Rectangle",
+			"name": "NIBBackgroundRight",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginLeft": -480,
+			"marginBottom": 16,
+			"cornerRaduis": 3,
+			"width": 215,
+			"height": 20,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_bg_alpha"
+				},				
+				{
+					"property": "color",
+					"binding":  "bnd_bg"
+				}
+			]
+		},
+		{
+			"commonName": "Asset",
+			"name": "NIBBackgroundRight",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginLeft": -480,
+			"marginBottom": 10,
+			"width": 225,
+			"height": 36,
+            "type": "$NIBHomeRecOff", 
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				}				
+			]
+		},
+		{
+            "commonName": "Panel",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",  
+            "marginLeft": -480,
+            "marginBottom": 35,
+            "width": 200,
+			"height": 1.5,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "width",
+					"binding":  ""
+				},
+				{
+					"property": "marginBottom",
+					"binding":  ""
+				}
+			],
+            "children":
+            [
+               {
+					"commonName": "Rectangle",
+					"name": "NIBStaminaInner",
+					"alignH": "FILL",
+					"alignV": "FILL",
+			        "bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+						{
+							"property": "color",
+							"binding":  "bnd_stamina_inner_bg"
+						}
+					]
+				},
+				{
+					"commonName": "Rectangle",
+					"name": "NIBStaminaOutSide",
+					"alignH": "RIGHT",
+					"alignV": "FILL",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+						{
+							"property": "color",
+							"binding":  "bnd_stamina_outside_bg"
+						},	
+						{
+							"property": "width",
+							"binding":  "bnd_stamina_short_width"
+						}
+					]
+				}
+            ]
+		},
+		{
+            "commonName": "Panel",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 12,
+			"width":213,
+			"height": 31,
+			"bindings":[
+				{
+					"property": "marginLeft",
+					"binding":  "bnd_player_info_left"
+				}
+			],
+			"children":
+			[
+				{
+					"commonName": "Label",
+					"name": "NIBPlayerNumber",
+					"alignH": "LEFT",
+					"alignV": "CENTER",
+					"marginLeft": -245,
+					"marginTop": 4,
+                    "fontSize": 13,
+                    "fontFace": "$CruyffSans-Regular",
+					"bold":true,
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+						{
+							"property": "text",
+							"binding":  "bnd_player_number"
+				        },
+				        {	
+				       	"property": "marginBottom",
+				       	"binding":  ""
+			            },
+                        {
+                            "property": "fontSize",
+                            "binding": ""
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_player_number_color"
+					   },
+		               {
+					     	"property": "fontFace",
+					     	"binding":  ""
+				   	},
+				   	{
+							"property": "forceCaps",
+							"binding":  ""
+						}
+					]
+				},
+				{
+					"commonName": "Label",
+					"name": "NIBPlayerName",
+					"alignH": "LEFT",
+					"alignV": "CENTER",
+					"marginLeft": -220,
+					"marginTop": 4,
+					"fontSize": 13,
+                    "fontFace": "$CruyffSans-Regular",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						},
+		               {
+					     	"property": "fontFace",
+					     	"binding":  ""
+				   	},
+				   	{
+							"property": "forceCaps",
+							"binding":  ""
+					    },
+                        {
+							"property": "text",
+							"binding":  "bnd_player_name"
+					    },
+				        {	
+				       	"property": "marginBottom",
+				       	"binding":  ""
+				        },
+                        {
+                            "property": "fontSize",
+                            "binding": ""
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_player_name_color"
+						}
+					]
+				}
+			]
+	    },
+		{
+	    	"commonName": "",
+			"name": "NIBBackgroundLeft",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+            "marginLeft": -615,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "color",
+					"binding":  "bnd_crest_bg"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_crestBg_alpha"
+				},
+				{
+					"property": "width",
+					"binding":  "bnd_crestBg_width"
+				},
+				{
+					"property": "height",
+					"binding":  "bnd_crestBg_height"
+				},
+				{	
+					"property": "marginBottom",
+					"binding":  "bnd_crestBg_bottom"
+				}
+				
+			]
+		},
+		{
+			"commonName": "Image",
+			"name": "insCrestHome",
+            "alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginBottom": 12,
+            "marginLeft": -610,
+            "width": 30,
+            "height": 30,
+			"bindings":
+			[
+			    {
+					"property": "image",
+					"binding":  "bnd_home_team_crest"
+				},
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "width",
+					"binding":  ""
+				},
+				{
+					"property": "height",
+					"binding":  ""
+				},
+				{
+					"property": "marginBottom",
+					"binding":  ""
+				}
+			]
+        },
+        {
+             "commonName": "Image",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "bindings":
+              [
+                  {
+                     "binding": "bnd_logo_inside_visible",
+                     "property": "visible"
+                  },
+                  {
+                     "binding": "bnd_logo_outside_visible",
+                     "property": "visible"
+                  },
+                  {
+                     "binding": "bnd_logo_height",
+                     "property": "height"
+                 },
+                 {
+                     "binding": "bnd_logo_width",
+                     "property": "width"
+                 },
+                 {
+                     "binding": "bnd_logo_top",
+                     "property": "marginTop"
+                 },
+                 {
+                      "binding": "bnd_logo_left",
+                      "property": "marginLeft"
+                 },
+                 {
+                      "binding": "bnd_logo_image",
+                      "property": "image"
+                 },
+                 {
+					"property": "visible",
+					"binding":  "bnd_active"
+               }
+           ]
+		}
+	]
+},            
+        {
+            "commonName": "Panel",
+            "name": "playerNIBHomeContainerSingle",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_nibs_on_single_visible"
+                }
+            ],
+            "children":
+            [       
+                {
+                    "commonName": "Asset",
+                    "name": "NIBBackgroundLeft",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 300,
+                    "height": 70,
+                    "marginTop": 30,
+                    "marginRight": -375,
+                    "type": "$BeAPro",
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginRight": 200,
+                    "marginTop": 40,
+                    "scaleX":0.50,
+                    "scaleY":0.50,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "bnd_statsPL",
+                            "property": "image"
+                        },
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "alpha",
+                            "binding":  "bnd_alpha"
+                        }
+                    ]
+                },                
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 38,
+                    "marginRight": 266,
+                    "color": "0xffffff",
+                    "width": 180,
+                    "height": 20,
+                    "bindings":       
+                    [ 
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "alpha",
+                            "binding":  "bnd_alpha"
+                        }
+                    ]
+                },         
+                {
+                    "commonName": "Panel",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 31,
+                    "marginRight": 266,
+                    "width": 180,
+                    "height": 1.5,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "alpha",
+                            "binding":  "bnd_alpha"
+                        },
+                        {
+                            "property": "width",
+                            "binding":  "bnd_stamina_widthOFF"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_stamina_bottom"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "name": "NIBStaminaInner",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "color": "0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "visible",
+                                    "binding":  "bnd_active"
+                                },
+                                {
+                                    "property": "alpha",
+                                    "binding":  "bnd_alpha"
+                                },
+                                {
+                                    "property": "colorOff",
+                                    "binding":  "bnd_stamina_inner_bg"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "NIBStaminaOutSide",
+                            "alignH": "RIGHT",
+                            "alignV": "FILL",
+                            "color": "0x000000",                
+                            "bindings":
+                            [
+                                {
+                                    "property": "visible",
+                                    "binding":  "bnd_active"
+                                },
+                                {
+                                    "property": "alphaOff",
+                                    "binding":  "bnd_alpha"
+                                },
+                                {
+                                    "property": "colorOff",
+                                    "binding":  "bnd_stamina_outside_bg"
+                                },	
+                                {
+                                    "property": "width",
+                                    "binding":  "bnd_stamina_short_width"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 36,
+                    "marginRight": -50,
+                    "width":213,
+                    "height": 31,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "NIBPlayerNumber",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": -274,
+                            "marginTop": -3,
+                            "fontSize": 13,
+                            "textAlignH": "CENTER",        
+                            "fontFace": "$Epl",
+                            "fontColor": "$COLOR_BLACK",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "visible",
+                                    "binding":  "bnd_active"
+                                },
+                                {
+                                    "property": "alpha",
+                                    "binding":  "bnd_alpha"
+                                },
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_player_number"
+                                },
+                                {	
+                                    "property": "marginBottom",
+                                    "binding":  ""
+                                },
+                                {
+                                    "property": "fontSize",
+                                    "binding": ""
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_player_number_colorOFF"
+                                },
+                                {
+                                    "property": "fontFace",
+                                    "binding":  ""
+                                },
+                                {
+                                    "property": "forceCaps",
+                                    "binding":  "bnd_forceCaps"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NIBPlayerName",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": -260,
+                            "marginTop": -3,
+                            "fontSize": 13,
+                            "fontFace": "$Epl",
+                            "fontColor": "$COLOR_BLACK",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "visible",
+                                    "binding":  "bnd_active"
+                                },
+                                {
+                                    "property": "alpha",
+                                    "binding":  "bnd_alpha"
+                                },
+                                {
+                                    "property": "fontFace",
+                                    "binding":  ""
+                                },
+                                {
+                                    "property": "forceCaps",
+                                    "binding":  "bnd_forceCaps"
+                                },
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_player_name"
+                                },
+                                {	
+                                    "property": "marginBottom",
+                                    "binding":  ""
+                                },
+                                {
+                                    "property": "fontSize",
+                                    "binding": ""
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_player_name_colorOFF"
+                                }
+                            ]
+                        },
+                {
+                    "commonName": "Image",
+                    "name": "insCrestHome",
+                    "alignH": "RIGHT",
+                    "alignV": "TOP",
+                    "marginTop": -10,
+                    "width": 70,
+                    "height": 70,
+                    "marginRight": 245,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_player_head"
+                        },
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "alpha",
+                            "binding":  "bnd_alpha"
+                        }
+                    ]
+                }                        
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "playerNIBHomeContainerHIDE",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_nibs_off_visible"
+                }
+            ]
+        }
+    ]
+}

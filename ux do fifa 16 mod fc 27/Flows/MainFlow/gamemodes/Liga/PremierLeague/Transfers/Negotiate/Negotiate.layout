@@ -1,0 +1,735 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "children":
+    [
+        {
+        "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Fc"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 215,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_search"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 275,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Advance"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 20,
+                    "marginRight": 0,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "label": "",
+                    "icon": "$Icon_Setting",
+                    "clickAction": "act_to_settings_customize"
+                },                
+              {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "width": 1500,
+            "height": 620,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Name",
+                    "alignV": "FILL",
+                    "alignH": "CENTER",
+                    "width": 1600,
+                    "children":
+                    [
+                       {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "$COLOR_BLACK",
+                            "alpha": 0.0
+                        },
+                       {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -5,
+                           "marginLeft": -465,
+                            "width": 310,
+                            "height": 340,
+                            "color": "0xFF17191D",
+                            "cornerRaduis": 10,
+                            "alpha": 0.7
+                        },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -52,
+                           "marginLeft":-465,                        
+                            "height": 1.1,
+                            "width": 310,
+                            "color": "0xFFFFFF",
+                            "alpha": 0.2
+                        },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 70,
+                           "marginLeft": -465,
+                            "width": 310,
+                            "height": 60,
+                            "color": "0xFF17191D",
+                            "cornerRaduis": 10,
+                            "alpha": 0.7
+                        },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -22,
+                           "marginLeft":-465,                        
+                            "height": 1.1,
+                            "width": 310,
+                            "color": "0xFFFFFF",
+                            "alpha": 0.2
+                        },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 178.6,
+                           "marginLeft": 43.5,
+                            "width": 425,
+                            "height": 40,
+                            "color": "0x1C1C1C",
+                            "cornerRaduis": 5,
+                            "alpha": 0.7
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 92,
+                           "marginLeft": -530,
+                           "fontSize": 16,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$CruyffSans-Medium",
+                           "autoTextShadow": false,
+                           "alpha": 0.7,
+                           "text": "Budget"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 293,
+                           "marginLeft": -490,
+                           "fontSize": 0,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                           "autoTextShadow": false,
+                           "alpha": 1,
+                           "text": "$170.000.000"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 160,
+                           "marginLeft": -545,
+                           "fontSize": 18,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$CruyffSans-Medium",
+                           "autoTextShadow": false,
+                           "alpha": 1,
+                           "text": "CLUB OFFER  /"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 160,
+                           "marginLeft": -435,
+                           "fontSize": 18,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$CruyffSans-Medium",
+                           "autoTextShadow": false,
+                           "alpha": 0.6,
+                           "text": "PURCHASE"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 460,
+                           "marginLeft": 0,
+                           "fontSize": 0,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                           "autoTextShadow": true,
+                           "alpha": 1,
+                           "text": ""
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 280,
+                           "marginLeft": -570,
+                           "fontSize": 0,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                           "autoTextShadow": true,
+                           "alpha": 1,
+                           "text": ""
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 350,
+                           "marginLeft": -525,
+                           "fontSize": 15,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$CruyffSans-Regular",
+                           "autoTextShadow": false,
+                           "alpha": 1,
+                           "text": ""
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 395,
+                           "marginLeft": -520,
+                           "fontSize": 15,
+                           "fontColor": "$COLOR_LIGHT_BLUE",
+                           "fontFace": "$CruyffSans-Regular",
+                           "autoTextShadow": false,
+                           "alpha": 1,
+                           "text": ""
+                        },
+                        {
+                           "commonName": "VerticalList",
+                           "name": "Myteam",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 0,
+                           "marginLeft": 170,
+                           "x": -20,
+                           "y": 0,
+                           "displayRange": 1,
+                           "highlightable": true,
+                           "row": "1LigaRow",
+                           "rowHeight": 50,
+                           "rowWidth": 350,
+                           "bindings":
+                           [
+                               {
+                                   "binding": "bnd_list",
+                                   "property": "dataProviders"
+                               }
+                           ]
+                       },
+                 {
+                    "commonName": "Panel",
+                    "name": "MatchMessage",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 40,
+                    "width": 450,
+                    "height": 20,
+                    "children":
+                    [
+                       {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x1E1E1E",
+                            "alpha": 0
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": -30,
+                           "marginLeft": 0,
+                           "fontSize": 28,
+                           "fontFace": "$FONT_BOLD",
+                           "fontColor": "$COLOR_WHITE",
+                           "text": ""
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 225,
+                           "marginLeft": 400,
+                           "fontSize": 17,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "0xFFFFFF",
+                           "textAlignH": "CENTER",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_status_label",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                           "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -24,
+                           "marginLeft": -580,
+                           "fontSize": 0,
+                           "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                           "fontColor": "$COLOR_WHITE",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_transfervalue_label",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": -257,
+                           "marginLeft": -420,
+                           "fontSize": 16,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "0xFFFFFF",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_teammp_label",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -135,
+                           "marginLeft":-500,
+                           "fontSize": 16,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "$COLOR_WHITE",
+                           "alpha": 0.7,
+                           "text": "Age:"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -135,
+                           "marginLeft": -470,
+                           "fontSize": 16,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "0xFFFFFF",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_age",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -110,
+                           "marginLeft": -490,
+                           "fontSize": 16,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "0xFFFFFF",
+                           "forceCaps": true,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_position",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -112,
+                            "marginLeft": -510,
+                            "width": 13,
+                            "height": 13,
+                            "type": "$GreenPlayer"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -135,
+                           "marginLeft":-415,
+                           "fontSize": 17,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "$COLOR_WHITE",
+                           "alpha": 0.7,
+                           "text": "OVR"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -110,
+                           "marginLeft": -415,
+                           "fontSize": 19,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "0xFFFFFF",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_rating",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -123,
+                           "marginLeft": -350,
+                           "width": 35,
+                           "height": 35,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_team_logo",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -190,
+                           "marginLeft": -420,
+                           "fontSize": 0,
+                           "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                           "fontColor": "0xFFFFFF",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_teamname_label",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                           "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -260,
+                           "marginLeft": -590,
+					   	"scaleX": 0.15,
+		                   "scaleY": 0.15,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_our_team_crest",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -110000,
+                           "marginLeft": -420,
+					   	"scaleX": 0.25,
+		                   "scaleY": 0.25,
+                           "bindings":
+                           [
+                             {
+                                "binding":"",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                         {
+                           "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -130,
+                           "marginLeft": -565,
+                           "width": 75,
+                           "height": 75,
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_head",
+                                "property":"image"
+                             }
+                           ]
+                         },
+                        {
+                        "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -75,
+                           "marginLeft": -555,
+                           "fontSize": 16,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "0xFFFFFF",
+                           "textAlignH": "LEFT",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_player_name",
+                                "property":"text"
+                             }
+                           ]
+                         },
+                         {
+                         "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -35,
+                           "marginLeft": -555,
+                           "fontSize": 16,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$CruyffSans-Medium",
+                           "alpha": 0.7,
+                           "text": "Market Value"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -35,
+                           "marginLeft": -400,
+                           "fontSize": 16,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "$COLOR_WHITE",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_transfervalue_label",
+                                "property":"text"
+                           }
+                           ]
+                         },
+                        {
+                           "commonName": "Asset",
+                           "alignV": "CENTER",
+                           "alignH": "LEFT",
+                           "marginTop": -2,
+                           "marginLeft": -380,
+                            "height": 25,
+                            "alpha": 0.5,
+                            "type": "$Divisa_Pin"
+                        },                                      
+                         {
+                         "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 0,
+                           "marginLeft": -545,
+                           "fontSize": 15,
+                           "fontColor": "$COLOR_LIGHT_BLUE",
+                           "fontFace": "$CruyffSans-Medium",
+                           "alpha": 1,
+                           "text": "Financial"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 35,
+                           "marginLeft": -555,
+                           "fontSize": 16.5,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$CruyffSans-Medium",
+                           "alpha": 0.7,
+                           "text": "Transfer Sum"
+                        },
+                        {
+                        "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "LEFT",
+                           "marginTop": 65,
+                           "marginLeft": -377,
+                           "fontSize": 22,
+                           "fontFace": "$CruyffSans-Medium",
+                           "fontColor": "$COLOR_WHITE",
+                           "textAlignH": "LEFT",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_offer_price",
+                                "property":"text"
+                           }
+                           ]
+                         },
+                         {
+                           "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -80,
+                           "marginLeft": -400,
+                           "fontSize": 25,
+                           "fontFace": "$FONT_BOLD",
+                           "fontColor": "0x4A2C6D",
+                           "bindings":
+                           [
+                             {
+                                "binding":"bnd_teamstats_label",
+                                "property":"text"
+                             }
+                          ]
+                       }
+                    ]
+                 },
+                 {
+                            "commonName": "AmountSelector",
+                            "name": "insAmount4",
+                            "height": 45,
+                            "marginLeft": 633,
+                            "marginTop": 517,
+                            "width": 420,
+                            "changeAction": "act_max_buy_change",
+                            "decreaseAction": "act_amount_decrease",
+                            "focusOutAction": "act_max_buy_focusOut",
+                            "icon": "",
+                            "id": 4.0,
+                            "inactiveButtons": true,
+                            "increaseAction": "act_amount_increase",
+                            "maxChars": 100000.0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_maximum_buy_now_price",
+                                    "property": "description"
+                                },
+                                {
+                                    "binding": "bnd_max_value",
+                                    "property": "maxValue"
+                                },
+                                {
+                                    "binding": "bnd_min_value",
+                                    "property": "minValue"
+                                },
+                                {
+                                    "binding": "bnd_max_buy",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_amount_any",
+                                    "property": "zeroLabel"
+}
+            ]
+        },
+        {"commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$"
+                                    },
+                        {
+                        "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 492,
+                           "marginLeft": 22,
+                           "fontSize": 18,
+                           "fontColor": "$COLOR_WHITE",
+                           "fontFace": "$CruyffSans-Medium",
+                           "autoTextShadow": false,
+                           "alpha": 1,
+                           "text": "Transfer Fee"
+                                                               }
+                            ]
+                        }
+                    ]
+                },
+                 {
+                       }
+                    ]
+                 }
+              ]
+           }
+        ]
+     }
+  ]
+}

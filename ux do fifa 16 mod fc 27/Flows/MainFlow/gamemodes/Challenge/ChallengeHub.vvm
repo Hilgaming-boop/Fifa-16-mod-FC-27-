@@ -1,0 +1,5 @@
+{
+	"dds":	 ["ChallengeHub.dd"],
+	"vms":   [["lua", "ChallengeHub.lua"]],
+    "views": [["gfx", {"layout": "ChallengeHub.layout"}]]
+}

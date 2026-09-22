@@ -1,0 +1,348 @@
+-------------------------------------------
+-- Team Management Model - Improved Version
+-------------------------------------------
+
+local TeamManagementModelHome = {}
+local ItemModel, TableUtil, FormationModel = ...
+
+-- Constants
+local MAX_STARTING = 11
+local PLAYER_BINDINGS = {
+    HEADS = {},
+    NAMES = {},
+    POSITIONS = {},
+    RATINGS = {},
+    JERSEYS = {}
+}
+
+-- Initialize player bindings
+for i = 1, MAX_STARTING do
+    PLAYER_BINDINGS.HEADS[i]    = "bnd_player_"..i.."_head"
+    PLAYER_BINDINGS.NAMES[i]    = "bnd_player_"..i.."_name"
+    PLAYER_BINDINGS.POSITIONS[i] = "bnd_player_"..i.."_posisi"
+    PLAYER_BINDINGS.RATINGS[i]  = "bnd_player_"..i.."_rating"
+    PLAYER_BINDINGS.JERSEYS[i]  = "bnd_player_"..i.."_jersey"
+end
+
+-- Team bindings
+local TEAM_BINDINGS = {
+    STARTING_11 = "bnd_starting_11",
+    NAME = "bnd_team_name",
+    CREST = "bnd_team_crest",
+    RATING = "bnd_team_rating",
+    RATING_LABEL = "bnd_team_rating_label",
+    OVERALL = "bnd_team_overall"
+}
+
+-- Default style configuration
+local DEFAULT_STYLE = {
+    formation_scaleX = 0.8,
+    formation_scaleY = 0.8,
+    formation_left = 130,
+    formation_top = 10,
+    bg_number_color = "0x1AFE68",
+    player_number_fontColor = "0x151515",
+    bg_name_color = "0xF5F5F5",
+    player_name_fontColor = "0x151515",
+    player_avatar_alpha = 1,
+    fontFace = "$FONT_DINPROCONDBOLD",
+    forceCaps = true
+}
+
+function TeamManagementModelHome:new(init)
+    local o = init or {}
+    setmetatable(o, self)
+    self.__index = self
+
+    -- Initialize services
+    o.services = {
+    FUTSquadManagementService = o.api("FUTSquadManagementService"),
+    SquadManagementService = o.api("SquadMgtService"),
+    TacticsService = o.api("TacticsService"),
+    CardService = o.api("CardService"),
+    GameSetupService = o.api("GameSetupService")
+    }
+
+    o.teamID = o.services.GameSetupService.GetTeamId(true)
+    o.players = {}
+    o.teamInfo = {}
+
+    -- Initialize models
+    o.models = {
+        ItemModel = ItemModel:new{
+            im = o.im,
+            api = o.api,
+            nav = o.nav,
+            loc = o.loc,
+        },
+        FormationModel = FormationModel:new{
+            im = o.im,
+            api = o.api,
+            nav = o.nav,
+            loc = o.loc,
+            teamID = o.teamID,
+            gamemode = o.gamemode,
+        }
+    }
+
+    -- Load initial data
+    o:loadInitialData()
+
+    -- Setup subscriptions
+    o:setupSubscriptions()
+
+    return o
+end
+
+function TeamManagementModelHome:loadInitialData()
+    self.formationList = self.models.FormationModel:getFormationList()
+    self.teamInfo = self.services.SquadManagementService.GetTeamInfo(self.teamID)
+    self.players = self:getPlayers(self.teamID)
+end
+
+function TeamManagementModelHome:setupSubscriptions()
+    -- Subscribe to team bindings
+    self.im.Subscribe(TEAM_BINDINGS.STARTING_11, function()
+        self:publishStarting11()
+    end)
+
+    self.im.Subscribe(TEAM_BINDINGS.NAME, function()
+        self:publishTeamName()
+    end)
+
+    self.im.Subscribe(TEAM_BINDINGS.CREST, function()
+        self:publishTeamCrest()
+    end)
+
+    self.im.Subscribe(TEAM_BINDINGS.RATING, function()
+        self:publishTeamRating()
+    end)
+
+    self.im.Subscribe(TEAM_BINDINGS.RATING_LABEL, function()
+        self:publishTeamRatingLabel()
+    end)
+
+    self.im.Subscribe(TEAM_BINDINGS.OVERALL, function()
+        self:publishTeamOverall()
+    end)
+
+    -- Subscribe to player bindings
+    for i = 1, MAX_STARTING do
+        self.im.Subscribe(PLAYER_BINDINGS.HEADS[i], function() 
+            self:publishPlayerHead(i) 
+        end)
+        
+        self.im.Subscribe(PLAYER_BINDINGS.NAMES[i], function()
+            self:publishPlayerName(i)
+        end)
+        
+        self.im.Subscribe(PLAYER_BINDINGS.POSITIONS[i], function()
+            self:publishPlayerPosition(i)
+        end)
+        
+        self.im.Subscribe(PLAYER_BINDINGS.RATINGS[i], function()
+            self:publishPlayerRating(i)
+        end)
+        
+        self.im.Subscribe(PLAYER_BINDINGS.JERSEYS[i], function()
+            self:publishPlayerJersey(i)
+        end)
+    end
+
+    -- Publish default style
+    self:publishDefaultStyle()
+end
+
+function TeamManagementModelHome:getPlayers(teamID)
+    print("[TeamManagementModelHome]: Loading players for team", teamID)
+    local rawPlayers = self.services.SquadManagementService.GetCurrentPlayerLineup(0, teamID, 0) or {}
+    local players = {}
+
+    for i, player in ipairs(rawPlayers) do
+        players[i] = {
+            id = i - 1,
+            playerName = player.playerName or "Unknown Player",
+            position = player.position or "N/A",
+            rating = player.rating or 0,
+            jerseyNumber = player.jerseyNumber or i,
+            PlayerHead = player.CARD_ID or 0,
+            type = ItemModel.TYPE_FIELD_PLAYER,
+            level = self.models.ItemModel:getItemLevelByRating(player.rating or 0)
+        }
+
+        self:publishPlayerData(i, players[i])
+    end
+
+    return players
+end
+
+function TeamManagementModelHome:publishPlayerData(index, player)
+    if not player then return end
+
+    local headAsset = {
+        name = "$Head",
+        id = player.PlayerHead
+    }
+
+    self.im.Publish(PLAYER_BINDINGS.HEADS[index], headAsset)
+    self.im.Publish(PLAYER_BINDINGS.NAMES[index], player.playerName)
+    self.im.Publish(PLAYER_BINDINGS.POSITIONS[index], player.position)
+    self.im.Publish(PLAYER_BINDINGS.RATINGS[index], player.rating)
+    self.im.Publish(PLAYER_BINDINGS.JERSEYS[index], player.jerseyNumber)
+end
+
+function TeamManagementModelHome:publishPlayerHead(playerIndex)
+    local player = self.players[playerIndex]
+    if player then
+        local headAsset = {
+            name = "$Head",
+            id = player.PlayerHead
+        }
+        self.im.Publish(PLAYER_BINDINGS.HEADS[playerIndex], headAsset)
+    end
+end
+
+function TeamManagementModelHome:publishPlayerName(playerIndex)
+    local player = self.players[playerIndex]
+    if player then
+        self.im.Publish(PLAYER_BINDINGS.NAMES[playerIndex], player.playerName)
+    end
+end
+
+function TeamManagementModelHome:publishPlayerPosition(playerIndex)
+    local player = self.players[playerIndex]
+    if player then
+        self.im.Publish(PLAYER_BINDINGS.POSITIONS[playerIndex], player.position)
+    end
+end
+
+function TeamManagementModelHome:publishPlayerRating(playerIndex)
+    local player = self.players[playerIndex]
+    if player then
+        self.im.Publish(PLAYER_BINDINGS.RATINGS[playerIndex], player.rating)
+    end
+end
+
+function TeamManagementModelHome:publishPlayerJersey(playerIndex)
+    local player = self.players[playerIndex]
+    if player then
+        self.im.Publish(PLAYER_BINDINGS.JERSEYS[playerIndex], player.jerseyNumber)
+    end
+end
+
+function TeamManagementModelHome:publishStarting11()
+    if not self.players then return end
+    
+    local starting11 = {}
+    for i = 1, MAX_STARTING do
+        local player = self.players[i]
+        if player then
+            starting11[i] = {
+                id = player.id,
+                playerName = player.playerName,
+                position = player.position,
+                rating = player.rating,
+                PlayerHead = {
+                    name = "$Head",
+                    id = player.PlayerHead
+                },
+                type = player.type,
+                level = player.level
+            }
+        end
+    end
+    
+    self.im.Publish(TEAM_BINDINGS.STARTING_11, { data = starting11 })
+
+    -- Publish all player data
+    for i = 1, MAX_STARTING do
+        self:publishPlayerData(i, self.players[i])
+    end
+end
+
+function TeamManagementModelHome:publishTeamName()
+    self.im.Publish(TEAM_BINDINGS.NAME, self.loc.LocalizeString("TeamName_Abbr15_" .. self.teamID))
+end
+
+function TeamManagementModelHome:publishTeamCrest()
+    self.im.Publish(TEAM_BINDINGS.CREST, {
+        name = "$Crest64x64",
+        id = self.teamID
+    })
+end
+
+function TeamManagementModelHome:publishTeamRating()
+    self.im.Publish(TEAM_BINDINGS.RATING, self.teamInfo.starRating or 0)
+end
+
+function TeamManagementModelHome:publishTeamRatingLabel()
+    local ratingLabel = self.loc.LocalizeString("LTXT_SQD_TEAM_RATING_LABEL")
+    ratingLabel = ratingLabel .. " " .. tostring(self.teamInfo.overall or 0)
+    self.im.Publish(TEAM_BINDINGS.RATING_LABEL, ratingLabel)
+end
+
+function TeamManagementModelHome:publishTeamOverall()
+    self.im.Publish(TEAM_BINDINGS.OVERALL, self.teamInfo.overall or 0)
+end
+
+function TeamManagementModelHome:publishDefaultStyle()
+    for key, val in pairs(DEFAULT_STYLE) do
+        self.im.Publish("bnd_"..key, val)
+    end
+end
+
+function TeamManagementModelHome:updateTeamFromParams(params)
+    local teamID = tonumber(params[3]) or self.teamID
+    local teamSide = tonumber(params[5]) or 0
+
+    self.teamID = teamID
+    self.teamSide = teamSide
+
+    -- Get team info
+    self.teamInfo = self.services.SquadManagementService.GetTeamInfo(teamID) or {}
+
+    -- Get players
+    self.players = self:getPlayers(teamID)
+
+    -- Get formation
+    local formationID = self.services.TacticsService.GetFormation(teamSide, teamID)
+    if self.gamemode == "fut" then
+        formationID = self.services.SquadManagementService.GetFUTRelativeSquadFormation(formationID)
+    end
+
+    local formation = self.models.FormationModel:getFormationInfoByID(formationID)
+    self.formationName = formation and formation.name or "Unknown Formation"
+
+    -- Publish all updates
+    self:publishStarting11()
+    self:publishTeamName()
+    self:publishTeamCrest()
+    self:publishTeamOverall()
+    self:publishTeamRatingLabel()
+    self:publishDefaultStyle()
+
+    print(string.format(
+        "Updated team: ID %d, Formation %s, %d players",
+        teamID, self.formationName, #self.players
+    ))
+end
+
+function TeamManagementModelHome:finalize()
+    -- Finalize models
+    self.models.ItemModel:finalize()
+    self.models.FormationModel:finalize()
+
+    -- Unsubscribe from team bindings
+    for _, binding in pairs(TEAM_BINDINGS) do
+        self.im.Unsubscribe(binding)
+    end
+
+    -- Unsubscribe from player bindings
+    for i = 1, MAX_STARTING do
+        for _, bindingType in pairs(PLAYER_BINDINGS) do
+            self.im.Unsubscribe(bindingType[i])
+        end
+    end
+end
+
+return TeamManagementModelHome

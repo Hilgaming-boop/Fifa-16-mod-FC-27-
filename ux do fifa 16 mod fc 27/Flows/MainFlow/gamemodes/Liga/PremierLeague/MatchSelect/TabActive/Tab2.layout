@@ -1,0 +1,608 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "MOD_SMOOTH_IN_RIGHT"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 355,
+                            "fontSize": 23,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Squad"
+                        },          
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 23,
+                            "marginLeft": 349,
+                            "alpha": 5,
+                            "height": 5,                            
+                            "width": 80,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MainContentPanel",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "ContentContainer",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginLeft": -150,
+          "marginTop": 13,
+          "width": 300,
+          "height": 440,
+          "children": [
+            {
+              "commonName": "Panel",
+              "name": "TrainingPlansPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": 0,
+              "width": 300,
+              "height": 440,
+			  "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateTrainingPlans",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 70
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 903
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cupOFF",
+                         "property": "image"
+                     }
+                  ]        
+                },                       
+
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 0,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Transfers Hub"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 100,
+                  "width": 140,
+                  "height": 150,
+                  "type": "$Transfer_HubOFF"
+                },
+                {
+                  "commonName": "VerticalList",
+                  "name": "trainingList",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 100,
+                  "marginLeft": 20,
+                  "x": 0,
+                  "y": 0,
+                  "scaleY": 0.9,
+                  "scaleX": 0.9,
+                  "displayRange": 3,
+                  "rowChangeAction": "",
+                  "highlightable": false,
+                  "row": "TrainingPlan",
+                  "rowHeight": 92.5,
+                  "rowWidth": 275,
+                  "highlightable": true,
+                  "mouseInteractive": false,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_listOFF",
+                      "property": "dataProviders"
+                    },
+                    {
+                      "binding": "bnd_rowvisibleOFF",
+                      "property": "visible"
+                    }
+                  ]
+                }
+              ]
+            },                                
+            {
+              "commonName": "Panel",
+              "name": "TacticalPresetPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginRight": 0,
+              "width": 300,
+              "height": 440,
+			  "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateTacticalPreset",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 60
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 594
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cupOFF",
+                         "property": "image"
+                     }
+                  ]        
+                },                                  
+
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 0,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Search Players"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 100,
+                  "width": 120,
+                  "height": 120,
+                  "type": "$FooterIconSearchOFF"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 250,
+                  "marginLeft": 0,
+                  "fontSize": 11,
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "fontColor": "0xffffff",
+                  "textAlignH": "CENTER",
+                  "width": 200,
+                  "multiline": true,
+                  "leading": 3,
+                  "alpha": 0,
+                  "text": "Search for a specific player you want to buy, loan or scout"
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "name": "DevelopmentPlansPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginRight": 150,
+              "width": 300,
+              "height": 440,
+			  "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateDevelopmentPlans",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 50
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 283
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                                  
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab2sub2"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 20,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Squad Hub"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "marginTop": -30,
+                  "marginLeft": 0,
+                  "width": 295,
+                  "height": 330,
+                  "type": "$"
+                },
+                {
+                  "commonName": "VerticalList",
+                  "name": "matchlist",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 0,
+                  "marginLeft": -50,
+                  "x": 0,
+                  "y": 0,
+                  "displayRange": 1,
+                  "highlightable": true,
+                  "row": "GoalRow1",
+                  "rowHeight": 327.5,
+                  "rowWidth": 735,
+				  "mouseInteractive": false,
+                  "bindings": [
+                    {
+                      "binding": "bnd_player_list",
+                      "property": "dataProviders"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "name": "TeamManagementPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": 30,
+              "width": 300,
+              "height": 440,
+			  "alpha":0,
+              "animationScripts": [
+                {
+                  "name": "animateTeamManagement",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1000
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 30
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": -26
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+              {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370, 
+                  "bindings": 
+                  [
+                     {
+                         "binding": "bnd_tab_cup",
+                         "property": "image"
+                     }
+                  ]        
+                },                                  
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab2sub1"
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "marginTop": -30,
+                  "width": 290,
+                  "height": 350,
+                  "type": "$Icon_Team_Cup",
+                  "alpha": 1
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 0,
+                  "fontSize": 20,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Team Management"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 320,
+                  "marginLeft": 2,
+                  "fontSize": 13,
+                  "fontFace": "$FONT_ORIGIN_NORMAL",
+                  "fontColor": "$COLOR_LIGHT_GRAY",
+                  "text": "Fitness             Sharpness             Morale"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 65,
+                  "marginLeft": 0,
+                  "fontSize": 18,
+                  "fontFace": "$FONT_ORIGIN_NORMAL",
+                  "fontColor": "0xffffff",
+                  "alpha": 0.5,
+                  "bindings": [
+                    {
+                      "binding": "bnd_team_name",
+                      "property": "text"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "behaviors": [
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_team_management",
+              "script": "animateTeamManagement",
+              "target": "TeamManagementPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_team_management",
+              "target": "trigger_animate_team_management",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count1",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_development_plans",
+              "script": "animateDevelopmentPlans",
+              "target": "DevelopmentPlansPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_development_plans",
+              "target": "trigger_animate_development_plans",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count1",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_tactical_preset",
+              "script": "animateTacticalPreset",
+              "target": "TacticalPresetPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_tactical_preset",
+              "target": "trigger_animate_tactical_preset",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count2",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_training_plans",
+              "script": "animateTrainingPlans",
+              "target": "TrainingPlansPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "name": "trigger_on_true_training_plans",
+              "target": "trigger_animate_training_plans",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count3",
+                  "property": "value"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

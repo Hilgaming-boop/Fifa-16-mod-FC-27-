@@ -1,0 +1,97 @@
+{
+    "name": "StartMatch",
+    "initial":
+    {
+        "targets": ["StartMatchUI"]
+    },
+    "states":
+    [
+        {
+            "name": "StartMatchUI",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["StartMatch.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event":   "evt_sim",
+                    "targets": ["SimMatch"]
+                },
+                {
+                    "event":   "evt_matchsim",
+                    "targets": ["MatchSim"]
+                },
+                {
+                    "event":   "evt_squad",
+                    "targets": ["SquadMgt"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event":   "evt_kitselect",
+                    "targets": ["KitSelect"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        },
+        {
+            "name": "SimMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Screens/SimMatch/SimMatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "StartMatch",
+                "out_exit_gamemode1": "StartMatch"
+            }
+        },
+        {
+            "name": "MatchSim",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Screens/MatchSimulation/MatchSim.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "StartMatch",
+                "out_exit_gamemode1": "StartMatch"
+            }
+        },
+        {
+            "name": "SquadMgt",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Liga/Squad/Squadmgt/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "StartMatch",
+                "out_exit_gamemode1": "StartMatch"
+            }
+        }
+    ]
+}

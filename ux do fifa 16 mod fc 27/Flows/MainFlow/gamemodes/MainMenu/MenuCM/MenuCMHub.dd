@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_careermode",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_careermode"
+		    }
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_careermode",
+			"binding": "bnd_live_tile_careermode",
+			"type": "live_tile"
+		}
+	]
+}

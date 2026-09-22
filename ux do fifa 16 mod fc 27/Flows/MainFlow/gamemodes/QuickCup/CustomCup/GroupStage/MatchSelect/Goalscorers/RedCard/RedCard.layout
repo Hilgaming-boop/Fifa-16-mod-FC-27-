@@ -1,0 +1,178 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "FC26_MENU_SHOW"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "FC26_MENU_HIDE"
+                }
+            ]
+        }
+    ],    
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+    [    
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "width": 900,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "alpha": 1,
+                    "cornerRaduis": 20,
+                    "bindings":
+                    [
+			            {
+				            "binding": "bnd_color_tourid",
+					    	"property": "fillColor"
+						}
+					]
+				},
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "height": 54,
+                    "alpha": 1,
+                    "cornerRaduis": 10,
+                    "bindings":
+                    [
+			            {
+				            "binding": "bnd_color_tourid2",
+					    	"property": "fillColor"
+						}
+					]
+				},
+                {
+                    "commonName": "Image",
+                    "name": "CupLogo",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 7,
+                    "marginLeft": 27,
+                    "width": 45,
+                    "height": 45,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 18,
+                    "marginLeft": 85,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "forceCaps": false,
+                    "alpha": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tour_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 94,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 65,
+                    "marginLeft": -10,
+                    "width": 900,
+                    "fontSize": 19,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Pos               Player                                                                     Team                                              OVR              RedCard               "
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "TableMatch",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "VerticalList",
+                            "name": "matchlist",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 99,
+                            "marginLeft": 40,
+                            "displayRange": 5,
+                            "highlightable": true,
+                            "row": "StatsRowCustom",
+                            "rowHeight": 70,
+                            "rowWidth": 810,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

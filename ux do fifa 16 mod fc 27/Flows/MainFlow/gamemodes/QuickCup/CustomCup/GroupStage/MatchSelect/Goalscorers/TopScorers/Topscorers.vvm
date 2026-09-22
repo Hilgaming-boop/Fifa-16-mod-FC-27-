@@ -1,0 +1,6 @@
+{
+	"dds": ["Topscorers.dd"],
+    "vms": [["lua", "Topscorers.lua"]],
+    "views": [["gfx", {"layout": "Topscorers.layout"}]],
+	"ireqs": ["Topscorers.ireq"]
+}

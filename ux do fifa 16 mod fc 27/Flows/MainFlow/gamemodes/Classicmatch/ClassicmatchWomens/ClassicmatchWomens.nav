@@ -1,0 +1,39 @@
+{
+    "name": "ClassicmatchWomens",
+    "states":
+    [
+		{
+            "name": "MenuClassicmatchWomens",
+            "onEnter":
+            [
+                ["loadVVM", ["/Flows/MainFlow/GameModes/Classicmatch/ClassicmatchWomens/ClassicmatchWomens.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_match_play",
+                    "targets": ["SelectKit"]
+                }
+            ]
+        },
+        {
+            "name": "SelectKit",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Classicmatch/SelectKit/SelectKit.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ClassicmatchWomens",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+        
+    ]
+}

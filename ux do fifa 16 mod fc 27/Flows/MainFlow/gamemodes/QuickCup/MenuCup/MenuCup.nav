@@ -1,0 +1,94 @@
+{
+    "name": "MenuCup",
+    "states":
+    [
+        {
+            "name": "RedirectMenuCup",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MenuCup.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+    {
+        "event": "evt_back",
+        "targets": ["out_exit_gamemode"]
+    },       
+    { 
+        "event": "evt_to_cup_ucl",
+        "targets": ["UCL"]
+    },
+    { 
+        "event": "evt_to_cup_uel",
+        "targets": ["UEL"]
+    },
+    {
+        "event": "evt_to_cup_uec",
+        "targets": ["UEC"]
+    },
+    {
+        "event": "evt_to_cup_unl",
+        "targets": ["UNL"]
+    },
+    {
+        "event": "evt_to_cup_uwcl",
+        "targets": ["UWCL"]
+    }
+            ]
+        },
+        {
+            "name": "UCL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup24Team/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "UEL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCupMiniTurnamen/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "UEC",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCupWomens/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "UNL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCupWomens/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "UWCL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UWCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+    ]
+}

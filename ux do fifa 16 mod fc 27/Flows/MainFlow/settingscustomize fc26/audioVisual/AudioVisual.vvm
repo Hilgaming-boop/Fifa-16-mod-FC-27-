@@ -1,0 +1,5 @@
+{
+    "dds":   ["AudioVisual.dd"],
+    "vms":   [["lua", "AudioVisual.lua"]],
+    "views": [["gfx", {"layout": "AudioVisual.layout"}]]
+}

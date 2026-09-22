@@ -1,0 +1,46 @@
+/* ------------------------------------------------------ */
+/* New Game Mode Created By Ma'ruf ID */
+/* ------------------------------------------------------ */
+
+{
+    "name": "Match",
+    "onEnter":
+    [
+        ["invoke", ["evt_show_stage_background"]]
+    ],
+    "states":
+    [
+		{
+            "name": "MenuMatch",
+            "onEnter":
+            [
+                ["loadVVM", ["/Flows/MainFlow/GameModes/BestTeamsTour/Teams/Juventus/Match.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_match_play",
+                    "targets": ["KitSelect"]
+                }
+            ]
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/BestTeamsTour/Match/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Match",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+    ]
+}

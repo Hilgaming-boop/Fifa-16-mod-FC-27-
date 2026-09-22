@@ -1,0 +1,491 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+  ],
+    "style-definitions":
+    {
+    "TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 22,
+			"alpha": 0.9,
+			"fontColor": "0x808080",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 0,
+			"alpha": 0.6,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+		}
+    },    
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_leaguebackground",
+                    "property": "image"
+                }
+            ]      
+        },         
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.4,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 105,
+                    "marginLeft": 0,
+                    "width": 900,
+                    "height": 45,
+                    "color": "$",
+                    "cornerRaduis": 0,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 150,
+                    "marginLeft": 0,
+                    "width": 900,
+                    "height": 397,
+                    "color": "$",
+                    "cornerRaduis": 0,                    
+                    "alpha": 0
+                 },            
+                 {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -3,
+                    "marginLeft": 10,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 87,
+                    "fontSize": 14,
+                    "alpha": 0.7,                    
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                    }
+            ]
+         },
+       {
+            "commonName": "Rectangle",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "width": 800,
+            "height": 1,
+            "alpha": 0.2,
+            "marginLeft": -20,           
+            "marginTop": -120,   
+            "color": "$COLOR_WHITE"
+       },        
+       {
+            "commonName": "Image",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "width": 920,
+            "height": 470,
+            "marginLeft": 0,           
+            "marginBottom": -10,           
+            "alpha": 1,
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_leaguetable",
+                   "property": "image"
+               }
+            ]               
+        },
+        {
+          "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 65,
+            "marginRight": 285,
+          "fontSize": 17,
+          "alpha": 0,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$FONT_ORIGIN_NORMAL",          
+          "text": "Current Season"
+        },                       
+        {
+          "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 115,
+            "marginRight": 285,
+          "fontSize": 28,
+          "alpha": 0.3,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$CruyffSansRegular",          
+          "text": "2025/26"
+        },              
+       {
+            "commonName": "Asset",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 110,
+            "marginLeft": 350,
+            "width": 45,
+            "height": 45,
+            "type": "$Icon_Banner"
+        },               
+       {
+            "commonName": "Image",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 107,
+            "marginLeft": 280,
+            "width": 57,
+            "height": 47,
+            "alpha": 1,
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_logotable",
+                   "property": "image"
+               }
+            ]               
+        },
+       {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 123,
+            "marginLeft": 415,
+            "fontFace": "$CruyffSansExpanded",
+            "fontSize": 20,
+            "alpha": 0.8,
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_league_label",
+                   "property": "text"
+               }
+            ]               
+        },                      
+         {
+             "commonName": "Panel",
+             "name": "MenuLayout",
+             "alignV": "TOP",
+             "alignH": "FILL",
+             "marginTop": 37,        
+             "marginLeft": 0,
+             "height": 30,
+             "children":
+             [                                 
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -3,
+                    "marginLeft": 1170,
+                    "width": 30,
+                    "height": 30,
+                    "bindings":
+                    [
+                       {
+                           "binding": "bnd_team_logo",
+                           "property": "image"
+                       }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 5,
+                    "marginLeft": 1200,
+                    "fontSize": 17,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor": "0xffffff",
+                    "textAlignH": "LEFT",
+                    "alpha": 0.5,
+                    "bindings":
+                    [
+                       {
+                           "binding": "bnd_team_name",
+                           "property": "text"
+                       }
+                    ]                
+                 }
+             ]                                          
+         },         
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginLeft": -50,
+      "marginTop": 40,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": -18,
+          "marginLeft": 85,
+          "width": 65,
+          "height": 65,
+          "type": "$Icon_Cm"
+        },
+        {
+          "commonName": "LiveTile",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": -5,
+          "marginLeft": 155,
+          "width": 300,
+          "height": 30,          
+          "clickAction": "act_back",
+          "headline": [
+            "Office"
+          ]
+        },
+        {
+          "commonName": "Rectangle",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": 0,
+          "marginLeft": 405,
+          "width": 1,
+          "height": 20,
+          "alpha": 0.5,
+          "color": "0xFFFFFF"
+        },
+        {
+          "commonName": "LiveTile",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": 5,
+          "marginLeft": 240,
+          "width": 300,
+          "height": 30,
+          "clickAction": "act_tab1",
+          "headline": [
+            "Player Stats"
+          ]
+        },
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": -2,
+          "marginLeft": 256,
+          "fontSize": 22,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$CruyffSansRegular",          
+          "text": "Player Stats"
+        },                
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -23,
+                            "marginLeft": 410,
+                            "height": 70,
+                            "width": 160,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },        
+        {
+          "commonName": "LiveTile",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": 5,
+          "marginLeft": 420,
+          "width": 250,
+          "height": 30,
+          "clickAction": "",
+          "headline": [
+            "Top Scores"
+          ]
+        },
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginBottom": -2,
+          "marginLeft": 435,
+          "fontSize": 22,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$CruyffSansRegular",          
+          "text": "Top Scores"
+        }        
+	]
+},
+         {
+            "commonName": "Panel",
+            "name": "SelectTransfers",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "marginLeft": -50,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [        
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 123,
+                    "fontFace": "$DINPro",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Pos        Player"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 450,
+                    "fontFace": "$DINPro",
+                    "fontSize": 0,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Position"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 770,
+                    "fontFace": "$DINPro",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Overal"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 620,
+                    "fontFace": "$DINPro",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Team"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 125,
+                    "marginRight": 80,
+                    "fontFace": "$DINPro",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Goals"
+                 },
+                 {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 155,
+                    "marginLeft": 130,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 5,
+                    "highlightable": true,
+                    "row": "StatsRow",
+                    "rowHeight": 70,
+                    "rowWidth": 870,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                },
+        {
+          "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 150,
+                  "marginLeft": 970,
+          "type": "$ArrowTop"
+        },
+        {
+          "commonName": "Asset",
+                  "alignV": "BOTTOM",
+                  "alignH": "LEFT",
+                  "marginBottom": 10,
+                  "marginLeft": 970,
+          "type": "$ArrowBottom"
+        },                
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 185,
+                  "marginLeft": 985,
+                  "width": 5,
+                  "height": 270,
+                  "alpha": 0.3, 
+                  "color": "0xFFFFFF"
+               }                
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

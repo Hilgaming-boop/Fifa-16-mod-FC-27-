@@ -1,0 +1,466 @@
+/*-- Layout Animated Design MOUNTSA--*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Icon_MatchPreview"
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuMatchSelect",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [        
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 250,
+                            "height": 90,
+                            "width": 235,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 295,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_LIGHT_GREEN",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Match Preview"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -50,
+                    "marginLeft": 0,
+                    "fontSize": 100,
+                    "scaleX": 3,
+                    "scaleY": 2.5,
+                    "fontColor": "0xffffff",
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "text": "VS",
+                    "alpha": 0.04
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 70,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_Green",
+                            "backgroundHighlightImage": "$Tab_Action_White",
+                            "clickAction": "act_advance"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Start Match"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 105,
+                    "marginLeft": 0,
+                    "fontSize": 18,
+                    "fontColor": "0xCDBB7A",
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "text": "Overall H2H"
+                 },
+                 {
+                    "commonName": "Panel",
+                    "name": "INFO1",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 35.5,
+                    "height": 35,
+                    "width": 680,
+                    "alpha": 0.8,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 10,
+                            "marginLeft": 15,
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "forceCaps": false,
+                            "autoTextShadow": true,
+                            "width": 650,
+                            "autoScroll": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_info_match",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+{
+  "commonName": "Panel",
+  "name": "INFO_Group",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "height": 580,
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "panelHomeKit",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_homekit_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount0",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginLeft": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Image",
+          "name": "HomeKitPlayer",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginLeft": -595,
+          "marginTop": 35,
+          "width": 600,
+          "height": 600,
+          "scaleX": 0.69,
+          "scaleY": 0.69,
+          "bindings": [
+            { "binding": "bnd_3d_home_kit", "property": "image" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "panelHomeNameLogo",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_homenamelogo_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount1",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginLeft": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginLeft": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Image",
+          "name": "LogoTimHome",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginLeft": -250,
+          "marginTop": -35,
+          "width": 170,
+          "height": 170,
+          "bindings": [
+            { "binding": "bnd_logo_tim_home", "property": "image" }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "NamaTimHome",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginLeft": -250,
+          "marginTop": 70,
+          "width": 180,
+          "fontFace": "$FONT_DINPROBOLD",
+          "fontColor": "$COLOR_WHITE",
+          "fontSize": 20,
+          "autoTextShadow": true,
+          "autoScroll": true,
+          "bindings": [
+            { "binding": "bnd_nama_tim_home", "property": "text" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "panelAwayKit",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_awaykit_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount0",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginRight": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginRight": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Image",
+          "name": "AwayKitPlayer",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginRight": -597,
+          "marginTop": 35,
+          "width": 600,
+          "height": 600,
+          "scaleX": 0.69,
+          "scaleY": 0.69,
+          "bindings": [
+            { "binding": "bnd_3d_away_kit", "property": "image" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "panelAwayNameLogo",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "alpha": 0,
+      "bindings": [
+        { "binding": "bnd_panel_awaynamelogo_visible", "property": "Visible" }
+      ],
+      "animationScripts": [
+        {
+          "name": "animateCount1",
+          "script": [
+            {
+              "type": "Direct",
+              "data": { "end": { "alpha": 0, "marginRight": -50 }, "duration": 200 }
+            },
+            { "type": "Delay", "data": { "duration": 100 } },
+            {
+              "type": "Direct",
+              "data": {
+                "end": { "alpha": 1, "scaleX": 1, "scaleY": 1, "marginRight": 0 },
+                "duration": 500,
+                "easing": "OutBack"
+              }
+            }
+          ]
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Image",
+          "name": "LogoTimAway",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginRight": -250,
+          "marginTop": -35,
+          "width": 170,
+          "height": 170,
+          "bindings": [
+            { "binding": "bnd_logo_tim_away", "property": "image" }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "NamaTimAway",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginRight": -250,
+          "marginTop": 70,
+          "width": 180,
+          "fontFace": "$FONT_DINPROBOLD",
+          "fontColor": "$COLOR_WHITE",
+          "fontSize": 20,
+          "autoTextShadow": true,
+          "autoScroll": true,
+          "bindings": [
+            { "binding": "bnd_nama_tim_away", "property": "text" }
+          ]
+        }
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_homekit",
+      "script": "animateCount0",
+      "target": "panelHomeKit"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_homekit",
+      "target": "trigger_fadein_homekit",
+      "bindings": [
+        { "binding": "bnd_animate_count0", "property": "value" }
+      ]
+    },
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_homenamelogo",
+      "script": "animateCount1",
+      "target": "panelHomeNameLogo"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_homenamelogo",
+      "target": "trigger_fadein_homenamelogo",
+      "bindings": [
+        { "binding": "bnd_animate_count1", "property": "value" }
+      ]
+    },
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_awaykit",
+      "script": "animateCount0",
+      "target": "panelAwayKit"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_awaykit",
+      "target": "trigger_fadein_awaykit",
+      "bindings": [
+        { "binding": "bnd_animate_count0", "property": "value" }
+      ]
+    },
+    {
+      "commonName": "TriggerScriptBehavior",
+      "name": "trigger_fadein_awaynamelogo",
+      "script": "animateCount1",
+      "target": "panelAwayNameLogo"
+    },
+    {
+      "commonName": "TriggerOnTrue",
+      "name": "trigger_on_true_awaynamelogo",
+      "target": "trigger_fadein_awaynamelogo",
+      "bindings": [
+        { "binding": "bnd_animate_count1", "property": "value" }
+      ]
+    }
+  ]
+}
+
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Animated Design MOUNTSA--*/

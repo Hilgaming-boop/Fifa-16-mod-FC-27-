@@ -1,0 +1,119 @@
+{
+    "name": "MensHub",
+    "initial":
+    {
+        "targets": ["RedirectMensHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMensHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["Trainings.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_premierleague",
+                    "targets": ["PremierLeague"]
+                },
+                {
+                    "event": "evt_laliga",
+                    "targets": ["Laliga"]
+                },
+                {
+                    "event": "evt_ligue1",
+                    "targets": ["Ligue1"]
+                },
+                {
+                    "event": "evt_seriea",
+                    "targets": ["SerieA"]
+                },
+                {
+                    "event": "evt_briliga1",
+                    "targets": ["BRILiga1"]
+                    },
+                {
+                    "event": "evt_clubcustom",
+                    "targets": ["ClubCustom"]
+                    },
+                {
+                    "event": "evt_badgecustom",
+                    "targets": ["BadgeCustom"]
+                }
+            ]
+        },
+        {
+            "name": "PremierLeague",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/PlayerCareer/Mens/PremierLeague/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MensHub"
+            }
+        },
+        {
+            "name": "Laliga",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/PlayerCareer/Mens/Laliga/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MensHub"
+            }
+        },
+        {
+            "name": "Ligue1",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/PlayerCareer/Mens/Ligue1/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MensHub"
+            }
+        },
+        {
+            "name": "SerieA",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/PlayerCareer/Mens/SerieA/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MensHub"
+            }
+        },
+        {
+            "name": "BRILiga1",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/PlayerCareer/Mens/BRILiga1/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MensHub"
+                }
+        },
+        {
+            "name": "ClubCustom",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/club/clubcustomize/ClassicmatchClubCustom.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MensHub"
+                }
+        },
+        {
+            "name": "BadgeCustom",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/club/badge/BadgeCustom.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MensHub"
+            }
+        }
+    ]
+}

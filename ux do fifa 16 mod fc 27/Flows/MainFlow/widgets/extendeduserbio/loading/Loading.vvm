@@ -1,0 +1,4 @@
+{
+    "dds":   ["Loading.dd"],
+    "views": [["gfx", { "layout": "Loading.layout" }]]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Hub",
+    "initial":
+    {
+        "targets": ["TeamHub"]
+    },
+    "states":
+    [
+		{
+            "name": "TeamHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamRoster.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_sell",
+                    "targets": ["Sell"]
+                }
+            ]
+        },
+        {
+            "name": "Sell",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Squad/Hub/Sell/Sell.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TeamHub"
+            }
+        } 
+    ]
+}

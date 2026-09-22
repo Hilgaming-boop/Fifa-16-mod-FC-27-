@@ -1,0 +1,1167 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "SCREEN_SHOW"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "SIMPLE_SCREEN_HIDE"
+                }
+            ]
+	    }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_septiawan_click",
+            "buttonContainer": "insButtonsOptionsBot"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundPC"
+
+        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -280,
+                            "marginLeft": 40,
+                            "fontFace": "$EAFC-Gamemodes",
+                            "fontSize": 50,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "PC"
+                        },        
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -280,
+                            "marginLeft": 305,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": "|"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -280,
+                            "marginLeft": 350,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.7,
+                            "text": "Select Game Mode"
+                         },                        
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -280,
+                            "marginLeft": 140,
+                            "fontSize": 22,
+                            "alpha": 1,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Player Career"
+                        },                  
+        {
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 575,
+            "marginLeft": 30,
+            "height": 60,
+            "width": 60,
+            "label": "",
+            "icon": "$SymMatchIcon3",
+            "clickAction": "act_back"
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 595,
+            "marginLeft": 90,
+            "fontSize": 15,
+		    "fontColor": "$COLOR_WHITE",
+	        "fontFace": "$FONT_DINPROBOLD",
+		    "text": "Back"
+        },
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 20,
+                    "height": 500,
+                    "width": 500,
+                    "type": "$PlayerCareer"
+                },        
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": ""
+
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Info",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 100,
+            "marginTop": -15,
+            "width": 600,
+            "height": 300,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Seasons1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_seasons_1_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansExpanded",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Men's Player Career"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 6,
+                            "alpha": 0.7,
+                            "text": "Select from a set of origin stories and write your name in history. Cary on your family's legacy, rise from humble beginings, come back from an injury and prove that you still have what it takes or carve your own path in the world of football."
+
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Seasons2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_seasons_2_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansExpanded",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Women's Player Career"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 6,
+                            "alpha": 0.7,
+                            "text": "Select from a set of origin stories and write your name in history. Cary on your family's legacy, rise from humble beginings, come back from an injury and prove that you still have what it takes or carve your own path in the world of football."
+
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Seasons3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_seasons_3_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansExpanded",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Coach Mode"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 6,
+                            "alpha": 0.7,
+                            "text": "Select from a set of origin stories and write your name in history. Cary on your family's legacy, rise from humble beginings, come back from an injury and prove that you still have what it takes or carve your own path in the world of football."
+
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Seasons4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_seasons_4_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansExpanded",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Bundesliga"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 6,
+                            "alpha": 0.7,
+                            "text": "The Bundesliga is a professional football league in Germany. It is the top tier of the German football league system and is the premier competition in German football. The Bundesliga is contested by 18 clubs and operates on a promotion and relegation system."
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 770,
+                            "height": 270,
+                            "width": 390,       
+                            "type": "$Flags_Germany"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Seasons5",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_seasons_5_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansExpanded",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Ligue 1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 450,
+                            "multiline": true,
+                            "leading": 6,
+                            "alpha": 0.7,
+                            "text": "Ligue 1 is a French professional football league for men's association football clubs. As the pinnacle of the French football league system, it is the country's premier football competition. It is managed by the Ligue de Football Professionnel."
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 770,
+                            "height": 270,
+                            "width": 390,       
+                            "type": "$Flags_France"
+                        }
+                    ]
+                }
+            ]
+},
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "True",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -1.8,
+                            "marginBottom": -1.5,
+                            "height": 83,
+                            "width": 228,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_1_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFF3A8384",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Select",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_play_premierleague"
+
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 229.5,
+                            "marginBottom": -1.5,
+                            "height": 83,
+                            "width": 228,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_2_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFF3A8384",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 460.5,
+                            "marginBottom": -1.5,
+                            "height": 83,
+                            "width": 228,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_3_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFF3A8384",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+
+                                }
+                            ]
+                         }
+                      ]
+                    }
+                  ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "False",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x12151E",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's Player Career"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x12151E",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": ""
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Women's Player Career"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x12151E",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": ""
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Coach Mode"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+"alpha": 0,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 12,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l19_1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Bundesliga"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 80,
+                            "width": 225,
+"alpha": 0,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 12,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l16_1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Ligue 1"
+                                }
+                            ]
+                        }
+                    ]
+
+                    
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "True",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_1_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x12151E",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Select",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_player_career"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": ""
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's Player Career"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_2_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x12151E",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Select",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_women_career"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": ""
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Women's Player Career"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_3_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x12151E",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Select",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_women_career"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": ""
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Coach Mode"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+                            "alpha": 0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_4_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 12,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Select",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_play_bundesliga"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l19"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Bundesliga"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "Seasons5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 80,
+                            "width": 225,
+                            "alpha": 0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_seasons_5_select_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 12,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Select",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_play_ligue1"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l16"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Ligue 1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "insButtonsOptionsBot",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Seasons1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 39,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Seasons2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 270,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Seasons3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 500,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Seasons4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 731,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Seasons5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 961,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

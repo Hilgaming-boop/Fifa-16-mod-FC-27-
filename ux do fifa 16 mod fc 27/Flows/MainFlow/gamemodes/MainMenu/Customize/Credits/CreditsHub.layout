@@ -1,0 +1,340 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$Bg_Career"
+        },    
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -10,
+            "marginLeft": 0,
+            "width": 500,
+            "height": 455,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "type": "$Tab_Cup",
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "type": "$Tab_Cup_Select",
+                    "alpha": 0
+                }
+             ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -45,
+            "marginLeft": 0,
+            "width": 650,
+            "height": 485,
+            "children":
+            [                
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "marginLeft": 0,
+                   "fontSize": 30,
+                   "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+			       "fontColor": "$COLOR_WHITE",
+			       "text": ""			  
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginTop": -158,
+                   "marginLeft": -4,
+                   "fontSize": 25,
+			       "fontColor": "0xFFFFFF",
+			       "text": "EAFC26 V1"			  
+                },                
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginTop": -120,
+                   "marginLeft": -4,
+                   "fontSize": 20,
+			       "fontColor": "0xFFFFFF",
+			       "text": "Re-modified by inisial A"			  
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginTop": -90,
+                   "marginLeft": -4,
+                   "fontSize": 20,
+			       "fontColor": "0xFFFFFF",
+			       "text": "(Data source)"			  
+                },
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": -45,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Rober fl",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": -25,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "!MVNPROD",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },      
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": -5,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Mountsa",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },     
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 15,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Davun pes",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },    
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 35,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Ma'ruf id",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                }, 
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 55,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Laosiji",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },        
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 75,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "TLM26",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 95,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "AF ID",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 115,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Billzz yt",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },               
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 135,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "ZHINXI",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },      
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 155,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "RICDIM",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },              
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 175,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Alphatrix",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },          
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 205,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "and all modder.....",
+                   "fontSize": 20,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                },
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": 230,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "Thanks.",
+                   "fontSize": 20,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_WHITE"
+                }               
+                     ]
+                        }
+                    ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

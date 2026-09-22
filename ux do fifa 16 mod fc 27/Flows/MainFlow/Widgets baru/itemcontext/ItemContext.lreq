@@ -1,0 +1,10 @@
+[
+    "/lua/packages/tableutil.lua",
+    "/lua/common/VirtualButton.lua",
+    "/lua/enums/eventmanager.lua",
+	"/lua/common/PlayerViewModel.lua",
+	"/lua/common/ItemModel.lua",
+	"/lua/enums/ConsumableManager.lua",
+	"/lua/enums/fut_livetiles_service.lua",
+    "/lua/common/FormationModel.lua"
+]

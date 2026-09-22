@@ -1,0 +1,13 @@
+{
+  "dds": [
+    "Beapro.dd",
+    "Tabs/Players.dd"
+  ],
+  "vms": [
+    ["lua", "Beapro.lua"],
+    ["lua", "Tabs/Players.lua"]
+  ],
+  "views": [
+    ["gfx", { "layout": "Beapro.layout" }]
+  ]
+}

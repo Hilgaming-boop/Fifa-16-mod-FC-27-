@@ -1,0 +1,6 @@
+{
+	"dds": ["RedCard.dd"],
+    "vms": [["lua", "RedCard.lua"]],
+    "views": [["gfx", {"layout": "RedCard.layout"}]],
+	"ireqs": ["RedCard.ireq"]
+}

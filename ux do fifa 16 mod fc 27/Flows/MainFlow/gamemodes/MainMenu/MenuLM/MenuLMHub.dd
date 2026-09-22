@@ -1,0 +1,29 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_leaguemode",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_leaguemode"
+			}
+		},
+		{
+			"viewname": "act_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_customize"
+			}
+		}
+	],
+	"data":
+	[
+		{
+	    	"viewname": "bnd_live_tile_leaguemode",
+			"binding": "bnd_live_tile_leaguemode",
+			"type": "live_tile"
+		}
+	]
+}

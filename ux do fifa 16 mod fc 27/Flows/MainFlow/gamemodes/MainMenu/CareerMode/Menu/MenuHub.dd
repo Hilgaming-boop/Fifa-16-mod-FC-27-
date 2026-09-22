@@ -1,0 +1,499 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_tab_mission1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission1"
+            }
+        },
+        {
+            "viewname": "act_tab_mission2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission2"
+            }
+        },
+        {
+            "viewname": "act_tab_mission3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission3"
+            }
+        },
+        {
+            "viewname": "act_tab_mission4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission4"
+            }
+        },
+        {
+            "viewname": "act_tab_mission5",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission5"
+                }
+        },
+        {
+            "viewname": "act_tab_mission6",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission6"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission7",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission7"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission8",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission8"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission9",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission9"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission10",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission10"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission11",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission11"
+            }
+        },
+        {
+            "viewname": "act_tab_mission12",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission12"
+            }
+        },
+        {
+            "viewname": "act_tab_mission13",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission13"
+            }
+        },
+        {
+            "viewname": "act_tab_mission14",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission14"
+            }
+        },
+        {
+            "viewname": "act_tab_mission15",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission15"
+                }
+        },
+        {
+            "viewname": "act_tab_mission16",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission16"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission17",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission17"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission18",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission18"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission19",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission19"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission20",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission20"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission21",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission21"
+            }
+        },
+        {
+            "viewname": "act_tab_mission22",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission22"
+            }
+        },
+        {
+            "viewname": "act_tab_mission23",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission23"
+            }
+        },
+        {
+            "viewname": "act_tab_mission24",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission24"
+            }
+        },
+        {
+            "viewname": "act_tab_mission25",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission25"
+                }
+        },
+        {
+            "viewname": "act_tab_mission26",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission26"
+                }
+        },
+        {
+            "viewname": "act_tab_mission27",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission27"
+            }
+        },
+        
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        
+        {
+            "viewname": "act_missionmode1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode1"
+            }
+        },
+        
+        {
+            "viewname": "act_missionmode2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode2"
+            }
+        },
+        
+        {
+            "viewname": "act_missionmode3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode3"
+                }
+        },
+        
+        {
+            "viewname": "act_missionmodelaliga",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmodelaliga"
+            }
+        },
+        
+        {
+            "viewname": "act_missionmode4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode4"
+            }
+        },
+        
+        {
+            "viewname": "act_missionmode5",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode5"
+            }
+        },
+        
+        {
+        "viewname": "act_missionmode6",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode6"
+            }
+        },
+        
+        {
+        "viewname": "act_missionmode7",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode7"
+            }
+        },
+        
+        {
+        "viewname": "act_missionmode8",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode8"
+            }
+        },
+        
+        {
+        "viewname": "act_missionmode9",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode9"
+            }
+        },
+        
+        {
+        "viewname": "act_missionmode10",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode10"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission11",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission11"
+            }
+        },
+        {
+            "viewname": "act_tab_mission12",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission12"
+            }
+        },
+        {
+            "viewname": "act_tab_mission13",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission13"
+            }
+        },
+        {
+            "viewname": "act_tab_mission14",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission14"
+            }
+        },
+        {
+            "viewname": "act_tab_mission15",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission15"
+                }
+        },
+        {
+            "viewname": "act_tab_mission16",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission16"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission17",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission17"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission18",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission18"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission19",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission19"
+            }
+        },
+        
+        {
+        "viewname": "act_tab_mission20",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission20"
+                }
+        },
+        
+        {
+        "viewname": "act_tab_mission21",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission21"
+            }
+        },
+        {
+            "viewname": "act_tab_mission22",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission22"
+            }
+        },
+        {
+            "viewname": "act_tab_mission23",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission23"
+            }
+        },
+        {
+            "viewname": "act_tab_mission24",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission24"
+            }
+        },
+        {
+            "viewname": "act_tab_mission25",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission25"
+                }
+        },
+        {
+            "viewname": "act_tab_mission26",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission26"
+                }
+        },
+        {
+            "viewname": "act_tab_mission27",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission27"
+            }
+        },
+        
+        {
+            "viewname": "act_start",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_start"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_live_menu",
+            "binding": "bnd_live_menu",
+            "type": "object"
+        }
+    ]
+}

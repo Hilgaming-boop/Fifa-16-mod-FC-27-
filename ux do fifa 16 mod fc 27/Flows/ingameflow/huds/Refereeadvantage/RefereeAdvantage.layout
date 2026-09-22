@@ -1,0 +1,18 @@
+{
+    "commonName":  "Asset",
+    "type":        "$RefereeAdvantage",
+    "alignH":      "RIGHT",
+    "alignV":      "TOP",
+    "height":      80,
+    "width":       80,
+    "visible":     false,
+    "marginTop":   100,
+    "marginRight": 100,
+    "bindings":
+    [
+        {
+            "property": "visible",
+            "binding":  "bnd_visible"
+        }
+    ]
+}}

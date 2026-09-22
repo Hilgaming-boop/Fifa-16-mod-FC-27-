@@ -1,0 +1,68 @@
+{
+	"actions":
+	[
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_menu_cupa",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_cupa"
+			}
+        },
+        {
+            "viewname": "act_menu_cupb",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_cupb"
+			}
+        },
+        {
+            "viewname": "act_menu_cupc",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_cupc"
+		    }
+        },
+        {
+            "viewname": "act_menu_cupd",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_cupd"
+            }
+        }       
+    ],
+    "data":
+    [
+        {
+		    "viewname": "bnd_trophy",
+            "binding": "bnd_trophy",
+			"type": "object"
+	    },
+		{
+		    "viewname": "bnd_model_cup",
+            "binding": "bnd_model_cup",
+			"type": "object"
+		},
+    {
+      "viewname": "bnd_name_dev",
+      "binding": "bnd_name_dev",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_avatar_dev",
+      "binding": "bnd_avatar_dev",
+      "type": "object"
+    }				
+    ]
+}

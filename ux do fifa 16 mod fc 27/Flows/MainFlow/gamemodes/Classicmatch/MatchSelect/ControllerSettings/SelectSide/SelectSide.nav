@@ -1,0 +1,32 @@
+{
+    "name": "SelectSide",
+    "initial":
+    {
+        "targets": ["SelectSideStartMatch"]
+    },
+    "states":
+    [
+        {
+            "name": "SelectSideStartMatch",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["SelectSide.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        }
+    ]
+}

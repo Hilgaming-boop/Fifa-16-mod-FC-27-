@@ -1,0 +1,24 @@
+{
+    "name": "MenuFC",
+    "states":
+    [
+        {
+            "name": "MenuFC_MatchDay",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/helpandabout/Dev/Dev.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuFC_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

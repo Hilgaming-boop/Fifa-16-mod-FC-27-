@@ -1,0 +1,129 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_active",
+            "binding":  "bnd_active",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_sb_top",
+            "binding":  "bnd_sb_top",
+            "type":		  "int"
+        },
+        {
+            "viewname": "bnd_live_logo",
+            "binding":  "bnd_live_logo",
+            "type":		  "object"
+        },
+        {
+            "viewname": "bnd_bg_color",
+            "binding":  "bnd_bg_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_strip_color",
+            "binding":  "bnd_strip_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg_crest_color",
+            "binding":  "bnd_bg_crest_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stripclub_color",
+            "binding":  "bnd_stripclub_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_homeCrest",
+            "binding": 	"bnd_homeCrest",
+            "type": 		"object"
+        },
+        {
+            "viewname": "bnd_awayCrest",
+            "binding":  "bnd_awayCrest",
+            "type": 		"object"
+        },
+        {
+            "viewname": "bnd_homeName_text",
+            "binding": "bnd_homeName_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_homeName_fontColor",
+            "binding": "bnd_homeName_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_homeName_fontSize",
+            "binding": "bnd_homeName_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayName_text",
+            "binding": "bnd_awayName_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_awayName_fontColor",
+            "binding": "bnd_awayName_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_awayName_fontSize",
+            "binding": "bnd_awayName_fontSize",
+            "type": "int"
+        },    
+        {
+            "viewname": "bnd_score",
+            "binding":  "bnd_score",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team",
+            "binding":  "bnd_home_team",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_team",
+            "binding":  "bnd_away_team",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_title",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_PENALTIES"
+            }
+        },
+        {
+            "viewname": "bnd_side",
+            "binding":  "bnd_side",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_home_history",
+            "binding":  "bnd_home_history",
+            "type":     "int_array"
+        },
+        {
+            "viewname": "bnd_away_history",
+            "binding":  "bnd_away_history",
+            "type":     "int_array"
+        },
+        {
+            "viewname": "bnd_forceCaps",
+            "binding":  "bnd_forceCaps",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_fontFace",
+            "binding":  "bnd_fontFace",
+            "type":     "int"
+        }
+    ]
+}
