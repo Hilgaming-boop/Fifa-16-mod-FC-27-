@@ -1,0 +1,483 @@
+/*-- Modified MVN PROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],    
+    "children":
+    [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 1,
+      "type": "$Background_utama"
+    },    
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children":
+       [
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginLeft": 0,
+            "marginTop": 0,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "Panel",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animate",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginTop": 0
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                                
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginLeft": 0,
+                    "height": 38,
+                    "width": 160,
+                    "type": "$Icon_FC25_In"
+                       }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate",
+                    "script": "animate",
+                    "target": "Panel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true",
+                    "target": "trigger_animate",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count1",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }, 
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginLeft": -60,
+            "marginTop": 25,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 25,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 30
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginLeft": 0
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                          
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 60,
+                    "marginLeft": 25,
+                    "fontSize": 75,
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "fontColor":"$COLOR_WHITE",
+                    "text": "THE CLUB"
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count2",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }, 
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginRight": 0,
+            "marginTop": 0,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginTop": 65
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginRight": 0
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [                     		
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -20,
+                    "marginLeft": 0,
+                    "fontSize": 75,
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "fontColor":"$COLOR_WHITE",
+                    "text": "IS YOURS"
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count3",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }, 
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "BOTTOM",
+            "alignH": "FILL",
+            "marginLeft": 0,
+            "marginBottom": 0,
+            "height": 450,
+            "children":
+            [    
+                {
+                    "commonName": "Panel",
+                    "name": "BtPanel",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 15,
+                    "alpha": 0,
+                    "animationScripts":
+                    [
+                        {
+                            "name": "animateBt",
+                            "script":
+                            [
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 0,
+                                            "marginBottom": 0
+                                        },
+                                        "duration": 1
+                                    }
+                                },
+                                {
+                                    "type": "Direct",
+                                    "data": {
+                                        "end": {
+                                            "alpha": 1,
+                                            "marginBottom": 0
+                                        },
+                                        "duration": 700,
+                                        "easing": "OutBack"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [           		
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 180,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 63,
+                            "width": 150,
+                            "backgroundImage": "$Tab_Action_Lets_Play",
+                            "backgroundHighlightImage": "$Tab_Action_Lets_Play",
+                            "clickAction": "act_press_start"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 8,
+                            "marginBottom": 3,
+                            "fontSize": 18,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Let's Play!"
+                        }
+                    ]
+                        }
+                    ]
+                }
+            ],
+            "behaviors":
+            [
+                {
+                    "commonName": "TriggerScriptBehavior",
+                    "name": "trigger_animate_bt",
+                    "script": "animateBt",
+                    "target": "BtPanel"
+                },
+                {
+                    "commonName": "TriggerOnTrue",
+                    "name": "trigger_on_true_bt",
+                    "target": "trigger_animate_bt",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_animate_count4",
+                            "property": "value"
+                        }
+                    ]
+                }
+             ]
+		 }, 
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 120,
+                    "marginLeft": 0,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor":"0xffffff",
+                    "text": "©2026 Alphatrix",
+                    "alpha": 0.5
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 97,
+                    "marginLeft": 0,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor":"0xffffff",
+                    "text": "This patch data was modified by alphatrix visit the YouTube channel, Support the experts so they are enthusiastic about giving their best",
+                    "alpha": 0.5
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 85,
+                    "marginLeft": 0,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor":"0xffffff",
+                    "text": "Developed Electronic Arts under the EA Sports label.",
+                    "alpha": 0.5
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Loading",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,            
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginLeft": 3,
+                    "height": 50,
+                    "width": 50,
+                    "alpha": 1,
+                    "path": "views/loadingindicator/loadingIcon.sw"
+                }
+             ]
+          }
+        ]
+     }
+  ]
+}
+
+/*-- Modified MVN PROD Youtube Channel --*/

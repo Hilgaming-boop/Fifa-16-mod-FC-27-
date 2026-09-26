@@ -1,0 +1,35 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_is_controller_type_gamepad",
+            "binding":  "bnd_is_controller_type_gamepad",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_is_controller_type_keyboard_only",
+            "binding":  "bnd_is_controller_type_keyboard_only",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_is_controller_type_keyboard_and_mouse",
+            "binding":  "bnd_is_controller_type_keyboard_and_mouse",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_is_controller_configuration_classic",
+            "binding":  "bnd_is_controller_configuration_classic",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_is_controller_configuration_alternate",
+            "binding":  "bnd_is_controller_configuration_alternate",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_is_controller_configuration_two_buttons",
+            "binding":  "bnd_is_controller_configuration_two_buttons",
+            "type":     "bool"
+        }
+    ]
+}

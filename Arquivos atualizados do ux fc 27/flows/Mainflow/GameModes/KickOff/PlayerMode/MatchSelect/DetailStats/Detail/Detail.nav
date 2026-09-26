@@ -1,0 +1,32 @@
+{
+    "name": "Detail",
+    "initial":
+    {
+        "targets": ["RedirectDetail"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectDetail",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Detail.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        }
+    ]
+}

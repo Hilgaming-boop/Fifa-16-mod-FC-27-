@@ -1,0 +1,5 @@
+{
+	"dds": ["ClassicmatchMens.dd"],
+    "vms": [["lua", "ClassicmatchMens.lua"]],
+    "views": [["gfx", {"layout": "ClassicmatchMens.layout"}]]
+}

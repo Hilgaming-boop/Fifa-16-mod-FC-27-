@@ -1,0 +1,13 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_menu_fc",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_menu_fc"
+            }
+        }
+    ]
+}

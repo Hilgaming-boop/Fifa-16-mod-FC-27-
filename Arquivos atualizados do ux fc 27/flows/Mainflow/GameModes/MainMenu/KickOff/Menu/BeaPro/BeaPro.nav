@@ -1,0 +1,15 @@
+{
+    "name": "BeaPro",
+    "states":
+    [
+        {
+            "name": "Menu_BeaPro",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/BeaPro/PlayerMode.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+	"dds":	 ["GameControlsTest.dd"],
+	"vms":   [["lua", "GameControlsTest.lua"]],
+    "views": [["gfx", {"layout": "GameControlsTest.layout"}]]
+}

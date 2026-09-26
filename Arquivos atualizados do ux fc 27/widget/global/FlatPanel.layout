@@ -1,0 +1,48 @@
+{
+    "animationScripts":
+	[
+		{
+			"name" : "show",
+			"script" :
+			[
+				{
+					"anim" : "TUTORIAL_TRANSITION_IN"
+				}
+			]
+		},
+		{
+			"name" : "hide",
+			"script" :
+			[
+				{
+					"anim" : "TUTORIAL_TRANSITION_OUT"
+				}
+			]
+        }
+	],
+    "commonName": "Composite",
+    "name": "FlatPanelRoot",
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 520.0,
+            "height": 220.0
+        }
+    },
+    "propertyMap":
+    {
+        "width": "background.width",
+        "height": "background.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "styles":["FlatPanelBackground"],
+            "width": 500.0,
+            "height": 200.0,
+            "name": "background"        
+        }
+    ]
+}

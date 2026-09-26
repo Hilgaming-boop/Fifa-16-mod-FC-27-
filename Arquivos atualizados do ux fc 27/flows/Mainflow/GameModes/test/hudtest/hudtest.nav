@@ -1,0 +1,20 @@
+{
+	"name": "HUD_TestFlow",
+	"onEnter":
+	[
+		["updateUserPlateDisplayMode", ["lite"]],
+		["loadVVM", ["/flows/mainflow/gamemodes/test/hudtest/HUD_Test.vvm"]]
+	],
+	"onExit":
+	[
+		["updateUserPlateDisplayMode", ["full"]],
+		["unloadVVM"]
+	],
+	"transitions":
+	[
+		{
+			"event":   "evt_back",
+			"targets": ["out_back"]
+		}
+	]
+}

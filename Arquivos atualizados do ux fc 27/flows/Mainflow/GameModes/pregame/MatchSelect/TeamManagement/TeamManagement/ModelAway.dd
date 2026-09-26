@@ -1,0 +1,62 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_swap_players",
+            "actionname": "act_swap_players"
+        },
+        {
+            "viewname": "act_compare_players",
+            "actionname": "act_compare_players"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_awaychemistry_matrix",
+            "binding": "bnd_awaychemistry_matrix",
+            "type": "object",
+            "deps": ["bnd_awayformation"]
+        },
+        {
+            "viewname": "bnd_awaystarting_11",
+            "binding": "bnd_awaystarting_11",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_awaysubs_and_res",
+            "binding": "bnd_awaysubs_and_res",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_awayteam_name",
+            "binding": "bnd_awayteam_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_awayteam_crest",
+            "binding": "bnd_awayteam_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_awayteam_rating",
+            "binding": "bnd_awayteam_rating",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_awayteam_rating_label",
+            "binding": "bnd_awayteam_rating_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_awayteam_overall",
+            "binding": "bnd_awayteam_overall",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayplayer_comparison_data",
+            "binding": "bnd_awayplayer_comparison_data",
+            "type": "object"
+        }
+    ]
+}

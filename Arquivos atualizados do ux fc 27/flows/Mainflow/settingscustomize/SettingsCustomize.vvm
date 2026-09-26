@@ -1,0 +1,5 @@
+{
+    "dds":   ["SettingsCustomize.dd"],
+    "vms":   [["lua", "SettingsCustomize.lua"]],
+    "views": [["gfx", { "layout": "/common/overlay/Scrim.layout"}], ["gfx", { "layout": "SettingsCustomize.layout" }]]
+}

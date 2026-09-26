@@ -1,0 +1,5 @@
+{
+	"dds":	 ["LiveTileTest.dd"],
+	"vms":	 [["lua", "LiveTileTest.lua"]],
+    "views": [["gfx", {"layout": "LiveTileTest.layout"}]]
+}

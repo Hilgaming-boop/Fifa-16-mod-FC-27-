@@ -1,0 +1,116 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+
+    ],
+    "children":
+    [
+	    {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Kick"
+        },
+        {
+			"commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 615,
+            "height": 430,
+            "marginBottom": 0,
+            "marginLeft": -310,
+    		"type": "$Bg_Soundtrack1"
+		},
+        {
+			"commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 615,
+            "height": 430,
+            "marginBottom": 0,
+            "marginLeft": 310,
+    		"type": "$Bg_Soundtrack2"
+		},
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 80,
+            "marginLeft": 120,
+            "fontFace": "$CruyffSans-Regular",
+            "fontSize": 17,
+            "fontColor": "$COLOR_WHITE",
+            "text": "Customize   >    EA Sports Soundtrack"
+         },
+         {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+               }
+               ]
+               }
+            ]
+        }
+    ]
+}

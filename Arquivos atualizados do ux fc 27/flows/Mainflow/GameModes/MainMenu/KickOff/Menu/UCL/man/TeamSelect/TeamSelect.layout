@@ -1,0 +1,490 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "style-definitions": {
+    "TF_TEAM_SELECT_RATING_LABELS": {
+      "fontFace": "$FONT_DINPROBOLD",
+      "fontSize": 20,
+      "fontColor": "$COLOR_WHITE",
+      "textAlignH": "CENTER"
+    },
+    "TF_TEAM_SELECT_RATING_VALUES": {
+      "fontFace": "$FONT_DINPROBOLD",
+      "fontSize": 23,
+      "fontColor": "0x46AD1B",
+      "textAlignH": "CENTER"
+    }
+  },
+  "children": [
+    {
+      "commonName": "Image",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings": [
+        {
+          "binding": "bnd_bg_cup",
+          "property": "image"
+        }
+      ]
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+	  "marginBottom": -10,
+      "alpha": 0.6,
+      "type": "$Bg_Gradiant1"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.3,
+      "type": "$Bg_Smoke"
+    },
+    {
+      "commonName": "Image",
+      "alignV": "TOP",
+      "alignH": "CENTER",
+      "marginTop": 50,
+      "scaleX": 0.6,
+      "scaleY": 0.6,
+      "bindings": [
+        {
+          "binding": "bnd_cup_logo",
+          "property": "image"
+        }
+      ]
+    },
+    {
+      "commonName": "Label",
+      "alignV": "TOP",
+      "alignH": "FILL",
+      "marginTop": 140,
+      "fontFace": "$CruyffSans-Bold",
+      "fontSize": 20,
+      "wrapText": true,
+      "leading": 1,
+      "textAlignH": "CENTER",
+      "fontColor": "$COLOR_WHITE",
+      "bindings": [
+        {
+          "binding": "bnd_info_label",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "HomeTeamDisplay",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": -440,
+      "width": 300,
+      "height": 300,
+      "scaleX": 0.8,
+      "scaleY": 0.8,
+      "bindings": [
+        {
+          "binding": "bnd_home_panel_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "text": "Home",
+          "fontFace": "$CruyffSans-Bold",
+          "fontSize": 22,
+          "fontColor": "$COLOR_WHITE"
+        },
+        {
+          "commonName": "Rectangle",
+          "alignV": "BOTTOM",
+          "alignH": "FILL",
+          "height": 260,
+          "color": "0x000000",
+          "alpha": 0.2,
+          "cornerRaduis": 20
+        },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 50,
+          "fontFace": "$CruyffSans-Bold",
+          "fontColor": "0xFFFFFF",
+          "fontSize": 20,
+          "bindings": [
+            {
+              "binding": "bnd_home_team_name",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 20,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "bindings": [
+            {
+              "binding": "bnd_home_team_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "StarRating",
+          "alignH": "CENTER",
+          "alignV": "BOTTOM",
+          "marginBottom": 40,
+          "size": "medium",
+          "bindings": [
+            {
+              "binding": "bnd_home_team_stars",
+              "property": "stars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "InteractiveSelector",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "width": 300,
+      "height": 260,
+      "bindings": [
+        {
+          "binding": "bnd_interactive_panel_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0xFFFFFF",
+          "cornerRaduis": 20,
+          "alpha": 0
+        },
+        {
+          "commonName": "Image",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 0,
+          "scaleX": 0.7,
+          "scaleY": 0.7,
+          "bindings": [
+            {
+              "binding": "bnd_team_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "StarRating",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 95,
+          "size": "medium",
+          "bindings": [
+            {
+              "binding": "bnd_team_star_rating",
+              "property": "stars"
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "dataPanel",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 150,
+          "height": 50,
+          "width": 200,
+          "authoringData": {
+            "expanded": false
+          },
+          "children": [
+            {
+              "commonName": "TeamRating",
+              "name": "teamRating",
+              "width": 190,
+              "attLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "attValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "defLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "defValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "dividersVisible": true,
+              "midLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "midValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "bindings": [
+                {
+                  "binding": "bnd_team_rating",
+                  "property": "dataProviders"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "ToggleClick",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 0,
+          "marginLeft": 0,
+          "width": 250,
+          "height": 30,
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "alignV": "FILL",
+              "alignH": "FILL",
+              "color": "0x000000",
+              "alpha": 0.4
+            },
+            {
+              "commonName": "DragToggle",
+              "itemStyleName": "SquadToggleInfo",
+              "isCircular": true,
+              "itemType": "Label",
+              "toggleAction": {
+                "action": "act_change",
+                "binding": "bnd_team_list_index"
+              },
+              "height": 25,
+              "width": 250,
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "clickAction": "",
+              "name": "insFormationToggle",
+              "arrowType": "blue_small",
+              "animated": true,
+              "bindings": [
+                {
+                  "binding": "bnd_team_list_toggle",
+                  "property": "dataProviders"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "AwayTeamDisplay",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 440,
+      "width": 300,
+      "height": 300,
+      "scaleX": 0.8,
+      "scaleY": 0.8,
+      "bindings": [
+        {
+          "binding": "bnd_away_panel_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "text": "Away",
+          "fontFace": "$CruyffSans-Bold",
+          "fontSize": 22,
+          "fontColor": "$COLOR_WHITE"
+        },
+        {
+          "commonName": "Rectangle",
+          "alignV": "BOTTOM",
+          "alignH": "FILL",
+          "height": 260,
+          "color": "0x000000",
+          "alpha": 0.2,
+          "cornerRaduis": 20
+        },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 50,
+          "fontFace": "$CruyffSans-Bold",
+          "fontColor": "0xFFFFFF",
+          "fontSize": 20,
+          "bindings": [
+            {
+              "binding": "bnd_away_team_name",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "Image",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 20,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "bindings": [
+            {
+              "binding": "bnd_away_team_crest",
+              "property": "image"
+            }
+          ]
+        },
+        {
+          "commonName": "StarRating",
+          "alignH": "CENTER",
+          "alignV": "BOTTOM",
+          "marginBottom": 40,
+          "size": "medium",
+          "bindings": [
+            {
+              "binding": "bnd_away_team_stars",
+              "property": "stars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 86,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Back"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 130,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon1",
+          "clickAction": "act_confirm_team"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 185,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Confirm"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 235,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon3",
+          "clickAction": "act_reset"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 290,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Reset"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 340,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon4",
+          "clickAction": "act_random"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 390,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Random"
+        }
+      ]
+    }
+  ]
+}

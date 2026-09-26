@@ -1,0 +1,4 @@
+{
+	"dds":	 ["NavBarTest.dd"],
+    "views": [["gfx", {"layout": "NavBarTest.layout"}]]
+}

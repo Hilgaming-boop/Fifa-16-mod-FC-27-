@@ -1,0 +1,133 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "GROUND_TO_TOP_IN"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "GROUND_TO_TOP_OUT"
+        }
+      ]
+    }
+  ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 34,
+                    "marginLeft": 730,
+                    "height": 70,
+                    "width": 120,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                }
+            ]
+        },
+        {
+          "commonName": "Image",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 40,
+          "marginRight": -330,
+          "height": 250,
+          "width": 250,
+		  "bindings": [
+				{
+					"binding": "bnd_avatar_dev",
+					"property": "image"
+				}
+			]
+		},
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginTop": -45,
+            "marginLeft": 120,
+            "height": 300,
+            "width": 530,
+            "children":
+            [
+                {
+                    "commonName": "VerticalList",
+                    "name": "GeneralSettingsList",
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 4,
+                    "mouseWheelEnabled": true,
+                    "row": "GeneralSettingsRow",
+                    "rowHeight": 60,
+                    "rowWidth": 530,
+                    "useAlternating": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_general_settings_data",
+                            "property": "dataProviders"
+                        },
+                        {
+                        	"binding": "bnd_list_y_coord",
+                            "property": "y"
+                        },
+                        {
+                        	"binding": "bnd_start_list_striped",
+                        	"property": "startingDark"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "CustomizationRow",
+                    "name": "pushNotesRow",
+                    "marginLeft": -30,
+                    "marginTop": 200,
+                    "height": 30,
+                    "width": 600,
+                    "x": 0,
+                    "y": 0,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_push_notes_row_data",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_push_notes_visibility",
+                            "property": "visible"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

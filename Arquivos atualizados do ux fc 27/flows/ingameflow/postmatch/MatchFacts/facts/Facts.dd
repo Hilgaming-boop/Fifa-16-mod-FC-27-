@@ -1,0 +1,10 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_match_facts",
+            "binding":  "bnd_match_facts",
+            "type":     "array"
+        }
+    ]
+}

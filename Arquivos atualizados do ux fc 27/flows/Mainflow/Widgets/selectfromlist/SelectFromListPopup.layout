@@ -1,0 +1,150 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "children": [
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "alpha": 1,
+            "height": 650,
+            "width": 1500,
+            "type": "$Background_Gradian"
+        },
+        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 290,
+                            "marginLeft": 24,
+                            "width": 370,
+                            "height": 70,
+                            "type": "$kiri"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 290,
+                            "marginLeft": 1204,
+                            "width": 180,
+                            "height": 60,
+                            "type": "$kanan"
+                        },
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "alpha": 0.5,
+            "height": 650,
+            "width": 1500,
+            "type": "$Background_Gradian"
+        },
+        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -270,
+                            "marginLeft": 24,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Ko"
+                        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children": [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "height": 65,
+                    "width": 65,
+                    "marginTop": -70,
+                    "marginLeft": -150,
+                    "alpha": 1,
+                    "type": "$Icon_InGame"
+                },
+                {
+                    "commonName": "LiveTile",
+                    "name": "Tournamen",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -53,
+                    "marginLeft": -130,
+                    "width": 250,
+                    "height": 38,
+                    "clickAction": "",
+                    "headline": [
+                        "Team Management   |"
+                    ]
+                },
+
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -53,
+                    "marginLeft": 115,
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Tactics",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "styles": [
+                        "TF_MATCH_REVEAL_TEAM_NAME"
+                    ],
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -53,
+                    "marginLeft": 210,
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_DARK_GRAY",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "styles": [
+                        "TF_MATCH_REVEAL_TEAM_NAME"
+                    ],
+                    "text": "Assignment",
+                    "alpha": 0.5
+                }
+            ]
+        },
+        {
+            "commonName": "GridTable",
+            "name": "gridtable",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 50,
+            "marginLeft": 0,
+            "width": 1400,
+            "height": 400,
+            "rows": 1,
+            "columns": 3,
+            "hasArrows": true,
+            "arrowType": "blue_small",
+            "itemType": "TeamGridCell",
+            "autoScaleImageToTileHeight": true,
+            "cellIndexChangeAction": {
+                "action": "act_change",
+                "binding": "bnd_index"
+            },
+            "bindings": [
+                {
+                    "binding": "bnd_list",
+                    "property": "dataProviders"
+                },
+				{
+					"binding": "bnd_bullet_indicator",
+					"property": "hasBulletIndicator"
+				}
+            ]
+        }
+    ]
+}

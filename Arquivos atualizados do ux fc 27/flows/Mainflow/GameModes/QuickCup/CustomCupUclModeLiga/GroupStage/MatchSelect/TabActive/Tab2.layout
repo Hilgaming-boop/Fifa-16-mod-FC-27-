@@ -1,0 +1,213 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+		        "script" : [ { "anim" : "MOD_SLIDE_IN_RIGHT" } ]
+        },
+        {
+            "name": "hide",
+		        "script" : [ { "anim" : "SCREEN_TRANSITION_OUT" } ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 250,
+                    "marginTop": -20,
+                    "width": 300,
+                    "height": 370,
+                    "children":
+                    [
+						{
+							"commonName": "Rectangle",
+							"alignV": "TOP",
+							"alignH": "CENTER",
+							"cornerRaduis": 8,
+							"marginTop": 0,
+                            "width": 340,
+                            "height": 370,
+							"alpha": 1,
+							"bindings":[
+								{
+									"binding": "bnd_color_tourid",
+									"property": "color"
+								}
+							]
+						},
+						{
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "icon": "",
+                            "clickAction": "act_tab2sub1"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "type": "$Icon_Team_Cup"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor":"0xFFFFFF",
+							"autoTextShadow": true,
+                            "text": "Team Management"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 70,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFCA6D",
+							"forceCaps": true,
+							"autoTextShadow": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 140,
+                            "marginLeft": 0,
+                            "fontSize": 11,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "$COLOR_WHITE",
+							"autoTextShadow": true,
+                            "text": "Fitness"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 50,
+                    "marginTop": -20,
+                    "width": 300,
+                    "height": 370,
+                    "children":
+                    [
+						{
+							"commonName": "Rectangle",
+							"alignV": "TOP",
+							"alignH": "CENTER",
+							"cornerRaduis": 8,
+							"marginTop": 0,
+                            "width": 340,
+                            "height": 370,
+							"alpha": 1,
+							"bindings":[
+								{
+									"binding": "bnd_color_tourid",
+									"property": "color"
+								}
+							]
+						},
+						{
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "icon": "",
+                            "clickAction": "act_tab2sub2"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+							"marginTop": -10,
+							"scaleX": 1.1,
+							"scaleY": 1.1,
+                            "type": "$Icon_Coach"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor":"0xFFFFFF",
+							"autoTextShadow": true,
+                            "text": "Team Sheets"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 70,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+							"autoTextShadow": true,
+							"text": "Create Team Sheets: 1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 105,
+                            "marginLeft": 0,
+                            "fontSize": 14,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "$COLOR_WHITE",
+							"wrapText": true,
+							"leading": 1,
+							"textAlignH": "CENTER",
+							"autoTextShadow": true,
+							"width": 250,
+                            "text": "Use multiple team sheets to bring out the best in your squad. Switch between sheets to keep flexible against various opposition and give all your players a chance to play."
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}

@@ -1,0 +1,178 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 60,
+                    "marginLeft": 0,
+                    "fontSize": 73,
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "fontColor":"0xFFFFFF",
+                    "text": "THE CLUB"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginLeft": 0,
+                    "height": 35,
+                    "width": 150,
+                    "type": "$Icon_FC25_In"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -10,
+                    "marginLeft": 0,
+                    "fontSize": 73,
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "fontColor":"0xFFFFFF",
+                    "text": "IS YOURS"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 120,
+                    "marginLeft": 0,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor":"0xffffff",
+                    "text": "©2026 Alphatrix",
+                    "alpha": 0.5
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 280,
+            "width": 700,
+            "height": 430,
+            "children":
+            [
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 20,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "FUT16, Which was modified to become FC26"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 40,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "This is a football simulation video game for mobile"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 60,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Developed Electronic Arts under the EA Sports label."
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Loading",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginLeft": 3,
+                    "height": 50,
+                    "width": 50,
+                    "alpha": 1,
+                    "path": "views/loadingindicator/loadingIcon.swf"
+                }
+            ]
+        }
+    ]
+}

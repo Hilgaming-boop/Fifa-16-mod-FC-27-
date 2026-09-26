@@ -1,0 +1,7 @@
+[
+	"/lua/common/VirtualButton.lua",
+    "/lua/enums/pregamemanager.lua",
+	"/lua/common/CommonNavVars.lua",
+	"/lua/packages/tableutil.lua",
+    "/flows/mainflow/gamemodes/pregame/MatchSelect/TeamManagement/squad/formation/FormationModelReal.lua"
+]

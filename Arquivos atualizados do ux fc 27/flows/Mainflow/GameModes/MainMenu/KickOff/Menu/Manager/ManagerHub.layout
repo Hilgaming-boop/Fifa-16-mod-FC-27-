@@ -1,0 +1,149 @@
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+		        "script" : [ { "anim" : "MOD_SLIDE_IN_RIGHT" } ]
+        },
+        {
+            "name": "hide",
+		        "script" : [ { "anim" : "SCREEN_TRANSITION_OUT" } ]
+        }
+    ],
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+      
+
+       {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$_TabOff2"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$_TabOn2"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -40,
+                            "width": 150,
+                            "height": 150,
+                            "type": "$Icon_Coach",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 80,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Manager Mode"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 110,
+                            "marginLeft": 0,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0x04F377",
+                            "width": 250,
+                            "text": "Quick match - 1 VS 1 - CPU"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 145,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xffffff",
+                            "textAlignH": "CENTER",
+                            "width": 300,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Standard rules, for anything but standard\ngames"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 80,
+                    "height": 42,
+                    "width": 335,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "FILL",
+                            "width": 100,
+                            "backgroundImage": "$_ClickToEnterOn1",
+                            "backgroundHighlightImage": "$_ClickToEnterOn1",
+                            "clickAction": "act_coach"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 8,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "text": "Play"
+                        }
+                    ]
+                }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+{
+    "name": "MainHub",
+    "type": "parallel",
+    "states":
+    [
+        {
+            "states":
+            [
+                {
+                    "name": "InitHub",
+                    "onEnter":
+                    [
+                        ["showFEUI"],
+                        ["enableMainFlowLayerMouseInteraction", ["Widgets", true, false]],
+                        ["blockingLoadVVM", ["/flows/mainflow/widgets/extendeduserbio/loading/Loading.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_on_show_fe_ui_complete",
+                            "targets": ["Hub"]
+                        }
+                    ]
+                },
+                {
+                    "onEnter":
+                    [
+                        ["viewLayer", ["Gamemodes"]],
+                        ["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["updateUserPlateDisplayMode", ["full"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Hub",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MainHub.vvm", {}, { "viewType": "screen" }]],
+                                ["stateChange", ["ARENA"]],
+                                ["substateChange", ["SUBSTATE_NONE"]],
+                                ["updateUserPlateDisplayMode", ["full"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM", [{}, { "waitForNextView": ".enableScreenTransitions" }]]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "Fc",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [0]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/Fc/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "KickOff",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [1]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/KickOff/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "PlayerCareer",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [2]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/PlayerCareer/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Classicmatch",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [3]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/RivalFootball/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Tournaments",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [4]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/Tournaments/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "DailyMatch",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [5]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/DailyMatch/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Challenge",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [6]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/Challenge/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "CareerMode",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [7]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/CareerMode/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "More",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [7]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/More/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                        "event": "evt_ut",
+                                            "targets": ["UT"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                            }
+                                    ]
+                                },
+                                {
+                                    "name": "UT",
+                                    "onEnter":
+                                    [
+                                        ["setTabMVNPROD", [8]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/UT/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_fc",
+                                            "targets": ["Fc"]
+                                        },
+                                        {
+                                            "event": "evt_kickoff",
+                                            "targets": ["KickOff"]
+                                        },
+                                        {
+                                            "event": "evt_playercareer",
+                                            "targets": ["PlayerCareer"]
+                                        },
+                                        {
+                                            "event": "evt_Classicmatch",
+                                            "targets": ["Classicmatch"]
+                                        },
+                                        {
+                                            "event": "evt_tournaments",
+                                            "targets": ["Tournaments"]
+                                        },
+                                        {
+                                            "event": "evt_dailymatch",
+                                            "targets": ["DailyMatch"]
+                                        },
+                                        {
+                                            "event": "evt_challenge",
+                                            "targets": ["Challenge"]
+                                        },
+                                        {
+                                            "event": "evt_careermode",
+                                            "targets": ["CareerMode"]
+                                        },
+                                        {
+                                            "event": "evt_more",
+                                            "targets": ["More"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_menu_fc",
+                            "targets": ["menuFc"]
+                        },
+                        {
+                            "event": "evt_menu_kickoff",
+                            "targets": ["menuKickOff"]
+                        },
+                        {
+                            "event": "evt_menu_playercareer",
+                            "targets": ["menuPlayerCareer"]
+                        },
+                        {
+                            "event": "evt_menu_classicmatch",
+                            "targets": ["menuClassicmatch"]
+                        },
+                        {
+                            "event": "evt_menu_tournaments",
+                            "targets": ["menuTournaments"]
+                        },
+                        {
+                            "event": "evt_menu_matchday",
+                            "targets": ["menuDailyMatch"]
+                        },
+                        {
+                            "event": "evt_menu_challenge",
+                            "targets": ["menuChallenge"]
+                        },
+                        {
+                            "event": "evt_menu_careermode",
+                            "targets": ["menuCareerMode"]
+                        },
+                        {
+                            "event": "evt_menu_customize",
+                            "targets": ["menuCustomize"]
+                        },
+                        {
+                            "event":   "evt_to_about",
+                            "targets": ["About"]
+                        },
+                        {
+                            "event": "evt_menu_ut",
+                            "targets": ["menuUT"]
+                        },
+                        {
+                            "event":   "evt_to_refresh",
+                            "targets": ["TestScreen"]
+                        }
+                    ]
+                },
+                {
+                    "name": "menuFc",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/helpandabout/about/About.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "Fc"
+                    }
+                },
+                {
+                    "name": "menuKickOff",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/KickOff/Menu/KickOffHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "KickOff"
+                    }
+                },
+                {
+                    "name": "menuPlayerCareer",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/Career/CareerHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "PlayerCareer"
+                    }
+                },
+                {
+                    "name": "menuClassicmatch",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/RivalFootball/Menu/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "Classicmatch"
+                    }
+                },
+                {
+                    "name": "menuTournaments",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/Tournaments/Menu/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "Tournaments"
+                    }
+                },
+                {
+                    "name": "menuDailyMatch",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MatchDay/MatchDay.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "DailyMatch"
+                    }
+                },
+                {
+                    "name": "menuChallenge",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/Challenge/Menu/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "Challenge"
+                    }
+                },
+                {
+                    "name": "menuCareerMode",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/Liga/Newgame/Newgame.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "CareerMode",
+                        "out_exit_gamemode1": "CareerMode"
+                    }
+                },
+                {
+                    "name": "menuCustomize",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/More/Menu/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "More"
+                    }
+                },
+                {
+                    "name": "TestScreen",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/Test/Test.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "About",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/helpandabout/help/Help.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "menuUT",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/UT/Menu/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "UT"
+                    }
+                }
+            ]
+        }
+    ]
+}
+/*-- Modified MVNPROD Youtube Channel --*/

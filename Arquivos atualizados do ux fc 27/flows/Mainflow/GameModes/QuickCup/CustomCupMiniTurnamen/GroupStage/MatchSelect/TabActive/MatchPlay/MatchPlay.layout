@@ -1,0 +1,219 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "ANIMASI_MASUK_MAINMENU"
+        }
+      ]
+    },
+    {
+      "name": "",
+      "script": [
+        {
+          "anim": "ANIMASI_KELUAR_MAINMENU"
+        }
+      ]
+    }
+  ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_btn_click",
+            "buttonContainer": "insButtonsOptionsBot"
+        }
+	],
+    "children":
+    [
+    {
+      "commonName": "Image",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings": [
+        { "binding": "bnd_bg_tour", "property": "image" }
+      ]
+    },
+     {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                }
+			]
+		},
+        {
+            "commonName": "Group",
+            "name": "insButtonsOptionsBot",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 75,
+            "marginLeft": -50,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Home",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": -225,
+                    "y": 0,
+                    "width": 200,
+                    "height": 100,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 100,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Away",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 225,
+                    "y": 0,
+                    "width": 200,
+                    "height": 100,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 100,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "PlayMatch",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": -530,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "TacticalView",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": -240,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "PlayHilights",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 60,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Customise",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 350,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 6,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                }
+            ]
+        }
+    ]
+}
+]
+}

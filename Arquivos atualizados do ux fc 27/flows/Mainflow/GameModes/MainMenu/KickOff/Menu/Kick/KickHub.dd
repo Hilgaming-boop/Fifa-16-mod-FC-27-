@@ -1,0 +1,55 @@
+{
+	"actions":
+	[
+	
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+			"viewname": "act_kickoff",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_kickoff"
+			}
+		},
+		{
+			"viewname": "act_menu_beapro",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_beapro"
+			}
+		},
+		{
+			"viewname": "act_menu_manager",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_manager"
+			}
+		},
+		{
+			"viewname": "act_menu_ucl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_ucl"
+			}
+		}
+	],
+    "data":
+	[
+
+        {
+			"viewname": "bnd_menu_list",
+            "binding": "bnd_menu_list",
+			"type": "object"
+		}
+    ]
+}

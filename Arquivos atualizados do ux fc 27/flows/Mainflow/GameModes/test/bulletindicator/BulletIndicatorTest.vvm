@@ -1,0 +1,5 @@
+{
+	"dds":	 ["BulletIndicatorTest.dd"],
+	"vms":   [["lua", "BulletIndicatorTest.lua"]],
+    "views": [["gfx", {"layout": "BulletIndicatorTest.layout"}]]
+}

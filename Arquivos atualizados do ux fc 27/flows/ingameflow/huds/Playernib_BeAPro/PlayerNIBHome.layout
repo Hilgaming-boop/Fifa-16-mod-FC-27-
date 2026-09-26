@@ -1,0 +1,83 @@
+{
+    "animationScripts":
+	[
+		{
+			"name" : "show",
+			"script" :
+			[
+				{
+					"anim" : "OVERLAY_TRANSITION_IN"
+				}
+			]
+		},
+		{
+			"name" : "hide",
+			"script" :
+			[
+				{
+					"anim" : "OVERLAY_TRANSITION_OUT"
+				}
+			]
+     }
+	],
+    "commonName": "Panel",
+    "name": "playerNIBHomeContainer",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "children":
+    [
+
+        {
+			"commonName": "Asset",
+			"name": "NIBBackgroundLeft",
+			"alignV": "TOP",
+            "alignH": "CENTER",
+            "width": 300,
+            "height": 70,
+            "marginTop": 30,
+            "marginRight": -435,
+			"type": "$Playernib_BeAPro",
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				}
+			]
+		},
+        
+		{
+			"commonName":   "PlayerNIB",
+			"name": "playerNIBHome",
+			"alignH": "CENTER",
+			"alignV": "TOP",
+			"visible": false,
+			"orientation": "left",
+			"marginRight": -388,
+			"marginTop": 32,
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				},
+				{
+					"property": "dataProviders",
+					"binding":  "bnd_player_info"
+				},
+				{
+					"property": "alpha",
+					"binding":  "bnd_alpha"
+				},
+				{
+					"property": "stamina",
+					"binding":  "bnd_stamina"
+				}
+			]
+    }
+  ]
+}

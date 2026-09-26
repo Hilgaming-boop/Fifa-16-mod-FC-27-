@@ -1,0 +1,206 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+
+    ],
+    "children":
+    [
+								{
+									"commonName": "Asset",
+									"name": "background",
+									"alignH": "FILL",
+									"alignV": "FILL",
+									"type": "$Background_Default2"
+								},
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 20,
+                    "marginLeft": 105,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 25,
+                    "marginLeft": 50,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "width": 1600,
+            "height": 530,
+            "children":
+            [
+
+
+
+                {
+                   "commonName": "Asset",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginTop": -50,
+                   "marginLeft": 0,
+                   "width": 200,
+                   "height": 200,
+                   "visible": true,
+                   "type": "$Icon_ProfileM"
+                },
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": -215,
+                   "width": 420,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text": "  Ea FC25 Theme",
+                   "fontSize": 25,
+                   "alpha": 1,
+                   "fontColor": "$COLOR_LIGHT_GREEN"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "CENTER",
+                   "marginLeft": 0,
+                   "marginBottom": 170,
+                   "fontSize": 24,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "Follow the profiles, so you don't miss the next updates."			  
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "CENTER",
+                   "marginBottom": 120,
+                   "marginLeft": 0,
+                   "fontSize": 20,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "Respect For US."			  
+                },
+
+
+                {
+                   "commonName": "Label",
+                   "alignH": "CENTER",
+                   "alignV": "CENTER",
+                   "marginLeft": 0,
+                   "marginTop": -165,
+                   "width": 80,
+                   "autoScroll": true,
+                   "autoTextShadow": true,
+                   "text":" MOUNTSA ",
+                   "fontSize": 18,
+                   "alpha": 1,
+                   "fontColor": "0x8c2344"
+                },
+                {
+                   "commonName": "SimpleButton",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginTop": 0,
+                   "marginLeft": -450,
+                   "width": 200,
+                   "height": 200,
+                   "scaleY": 1,
+                   "multiline": true,
+                   "bold": true,
+                   "label": "",
+                   "icon": "",
+                   "backgroundImage": "$Icon_Yt",
+                   "backgroundHighlightImage": "$Icon_Yt",
+                   "clickAction": "act_youtube_mountsa",
+                   "textStyles":
+                   [
+                      "TF_BUTTON"
+                    ]
+                  },
+                  
+                  
+
+                  
+                  
+                  {
+                  "commonName": "SimpleButton",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginTop": 0,
+                   "marginRight": -450,
+                   "width": 180,
+                   "height": 180,
+                   "scaleY": 1,
+                   "multiline": true,
+                   "bold": true,
+                   "label": "",
+                   "icon": "",
+                   "backgroundImage": "$Icon_Ig",
+                   "backgroundHighlightImage": "$Icon_Ig",
+                   "clickAction": "act_instagram_mountsa",
+                   "textStyles":
+                   [
+                      "TF_BUTTON"
+                    ]
+                  }
+
+
+                     ]
+                        }
+                    ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

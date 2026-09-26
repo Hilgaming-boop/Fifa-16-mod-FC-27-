@@ -1,0 +1,5 @@
+{
+    "dds": ["SideSelect.dd","/flows/ingameflow/GameMenus/GameMenu.dd"],
+    "vms": [["lua", "SideSelect.lua"],["lua", "/flows/ingameflow/GameMenus/GameMenu.lua"]],
+    "views": [["gfx", { "layout": "SideSelect.layout" }]]
+}

@@ -1,0 +1,261 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_exit",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_exit"
+            }
+        },
+        {
+            "viewname": "act_player_select",
+            "actionname": "act_player_select"
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_player_list",
+            "binding":  "bnd_player_list",
+            "type":     "array"        
+        },
+        {
+            "viewname": "bnd_pr_w1",
+            "binding": "bnd_pr_w1",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_w2",
+            "binding": "bnd_pr_w2",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_w3",
+            "binding": "bnd_pr_w3",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_l1",
+            "binding": "bnd_pr_l1",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_l2",
+            "binding": "bnd_pr_l2",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_l3",
+            "binding": "bnd_pr_l3",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_d1",
+            "binding": "bnd_pr_d1",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_d2",
+            "binding": "bnd_pr_d2",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_d3",
+            "binding": "bnd_pr_d3",
+            "type": "string"
+        },       
+        {
+            "viewname": "bnd_home_w",
+            "binding": "bnd_home_w",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_l",
+            "binding": "bnd_home_l",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_d",
+            "binding": "bnd_home_d",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_w",
+            "binding": "bnd_away_w",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_l",
+            "binding": "bnd_home_l",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_d",
+            "binding": "bnd_away_d",
+            "type": "string"
+        },
+        {
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+            "type":"bool"
+         },
+         {
+            "viewname": "bnd_yt_select_visible",
+            "binding":  "bnd_yt_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_fb_select_visible",
+            "binding":  "bnd_fb_select_visible",
+            "type":     "bool"
+         },
+         {
+            "viewname": "bnd_ig_select_visible",
+            "binding":  "bnd_ig_select_visible",
+            "type":     "bool"
+         },
+         {
+            "viewname": "bnd_wa_select_visible",
+            "binding":  "bnd_wa_select_visible",
+            "type":     "bool"
+         },
+         {
+            "viewname": "bnd_tl_select_visible",
+            "binding":  "bnd_tl_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname":"bnd_loading_visible",
+            "binding":"bnd_loading_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_team_crest",
+            "binding":"bnd_team_crest",
+            "type":"object"
+        },
+        {
+            "viewname": "bnd_background_match",
+            "binding":  "bnd_background_match",
+            "type":     "object"  
+        },
+        {
+            "viewname":"bnd_player_role_name",
+            "binding":"bnd_player_role_name",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_role_color",
+            "binding":"bnd_player_role_color",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_team_name",
+            "binding":"bnd_team_name",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_name",
+            "binding":"bnd_player_name",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_number",
+            "binding":"bnd_player_number",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_avatar",
+            "binding":"bnd_player_avatar",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_ID",
+            "binding":"bnd_player_ID",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_position",
+            "binding":"bnd_player_position",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_pos",
+            "binding":"bnd_player_pos",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_num",
+            "binding":"bnd_player_num",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_rating",
+            "binding":"bnd_player_rating",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_national",
+            "binding":"bnd_player_national",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_kitnumber",
+            "binding":"bnd_player_kitnumber",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_country",
+            "binding":"bnd_player_country",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_style_position",
+            "binding":"bnd_player_style_position",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_stars",
+            "binding":"bnd_player_stars",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_3d_player",
+            "binding":"bnd_3d_player",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_stat1",
+            "binding":"bnd_player_stat1",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat2",
+            "binding":"bnd_player_stat2",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat3",
+            "binding":"bnd_player_stat3",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat4",
+            "binding":"bnd_player_stat4",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat5",
+            "binding":"bnd_player_stat5",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat6",
+            "binding":"bnd_player_stat6",
+            "type":"string"
+        }
+    ]
+}

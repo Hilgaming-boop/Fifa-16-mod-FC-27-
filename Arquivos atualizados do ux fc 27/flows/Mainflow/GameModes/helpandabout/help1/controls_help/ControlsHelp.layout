@@ -1,0 +1,138 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 15,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 240,
+                            "height": 90,
+                            "width": 130,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 150,
+            "height": 430,
+            "children":
+            [
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 150,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+				   "wrapText": true,
+				   "width": 500,
+				   "textAlignH": "LEFT",
+                   "text": "FUT16, Which was modified to become Fc25, This is a football simulation video game for mobile. Developed Electronic Arts under the EA Sports label. Official Fifpro license, this game has developed until now, With the presence of experts, this game will continue to be developed, Thank you to the experts who have made updates to this game to be better, This patch data was modified by MOUNTSA, please visit the YouTube channel, Come on, support the experts so they are enthusiastic about giving their best"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 300,
+				   "marginRight": 200,
+                   "fontSize": 15,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "alpha": 0.8,
+                   "text": "Modified By :"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 319,
+				   "marginRight": 200,
+                   "fontSize": 18,
+                   "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "MOUNTSA MOD"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 342,
+				   "marginRight": 200,
+                   "fontSize": 15,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "alpha": 0.8,
+                   "text": "@2025"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 380,
+				   "marginRight": 200,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "Thanks To : Ma'Ruf ID & Laosiji & all modder"
+                }
+                
+            ]
+        }
+    ]
+}

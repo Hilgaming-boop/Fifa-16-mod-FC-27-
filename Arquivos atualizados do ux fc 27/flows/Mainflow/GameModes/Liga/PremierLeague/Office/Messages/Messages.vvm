@@ -1,0 +1,5 @@
+{
+    "dds": ["Messages.dd"],
+    "vms": [["lua", "Messages.lua"]],
+    "views": [["gfx", {"layout": "Messages.layout"}]]
+}

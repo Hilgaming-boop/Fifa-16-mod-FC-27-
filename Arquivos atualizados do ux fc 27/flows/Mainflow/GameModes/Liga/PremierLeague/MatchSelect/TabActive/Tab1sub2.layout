@@ -1,0 +1,106 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+      "commonName": "Panel",
+      "name": "TabInfoMatch",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 370,
+      "marginTop": 20,
+      "width": 370,
+      "height": 430,
+      "children": [
+        {
+           "commonName": "Rectangle",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "cornerRaduis": 8,
+           "alpha": 1,
+           "bindings": [
+             {
+                 "binding": "bnd_league_color",
+                 "property": "color"
+              }
+            ]
+         },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 40,
+          "marginLeft": 0,
+          "fontSize": 35,
+          "alpha": 1,
+          "fontFace": "$CruyffSansMedium",
+          "fontColor": "0xFFFFFF",
+          "text": "Fixtures"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 80,
+          "marginLeft": 0,
+          "fontSize": 13,
+          "alpha": 1,
+          "fontFace": "$CruyffSansMedium",
+          "text": "Next Fixtures",
+         "bindings": [
+         {
+            "binding": "bnd_color_action",
+            "property": "color"
+         }
+      ]
+    },
+        {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 38,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 4,
+                    "highlightable": true,
+                    "row": "FixturesRow1",
+                    "rowHeight": 70,
+                    "rowWidth": 320,
+                    "bindings":
+                  [
+                {
+                    "binding": "bnd_Match_Fixtures",
+                    "property": "dataProviders"
+                }
+              ]
+            },
+        {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -25,
+                    "marginLeft": 0,
+                    "scaleX": 0.1,
+                    "scaleY": 0.1,
+                    "icon": "$icon_select_kit",
+                    "clickAction": "act_tab1sub3"
+                }
+           ]
+        }
+    ]
+}

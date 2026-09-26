@@ -1,0 +1,39 @@
+{
+    "name": "TeamSelect",
+    "states":
+    [
+        {
+            "name": "RedirectTeamSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"] 
+                },
+                {
+                    "event": "evt_team_select",
+                    "targets": ["QuickCupStart"]
+                }
+            ]
+        },
+        {
+            "name": "QuickCupStart",
+            "type": "external",
+            "file": "/flows/MainFlow/GameModes/MainMenu/KickOff/Menu/UCL/Women/MatchSelect/MatchSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TeamSelect",
+                "out_exit_gamemode1": "out_advance"
+            }
+        }
+        
+    ]
+}

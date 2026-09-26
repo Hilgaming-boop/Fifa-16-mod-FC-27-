@@ -1,0 +1,224 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+ 
+    "animationScripts":
+	  [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "SCREEN_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+
+    "children":
+    [
+    
+    
+
+
+        {
+            "commonName": "Asset",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "height": 65,
+            "width": 65,
+            "marginTop": 15,
+            "marginLeft": 20,
+            "alpha": 1,
+            "type": "$Icon_InGame"
+        },
+    {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 34,
+                    "marginLeft": 95,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Select Side |"
+                },
+
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 35,
+                    "marginLeft": 85,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 40,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_advance"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 40,
+                    "marginLeft": 140,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_advance"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginBottom": 35,
+                   "marginLeft": 194,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+                   "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                   "text": "Confirm"
+                },
+{
+    "commonName": "Label",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "marginTop": 120,
+    "marginLeft": 40,
+    "fontSize": 60,
+    "fontColor": "$COLOR_WHITE",
+    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+    "text": "HOME",
+    "alpha": 0.6,
+    "rotation": -90
+},
+
+                               {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginTop": 120,
+                    "marginRight": -20,
+                    "fontSize": 60,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "AWAY",
+                    "alpha": 0.6,
+                    "rotation": -90
+                },
+
+
+
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 800,
+            "height": 500,
+            "marginTop": -30,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 1100,
+                    "height": 700,
+                    "marginLeft": 0,
+                    "marginTop": 110,
+                    "type": "$vs"
+                },
+
+                {
+                    "commonName": "SimpleButton",
+                    "name": "ButtonSideHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 140,
+                    "marginLeft": -350,
+                    "width": 305,
+                    "height": 98,
+                    "animated": true,
+                    "backgroundImage": "",
+                    "backgroundHighlightImage": "",
+                    "clickAction": "act_toggle_home",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_home_icon",
+                            "property": "icon"
+                        },
+                        {
+                            "binding": "",
+                            "property": "label"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "name": "ButtonSideAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -140,
+                    "marginRight": -350,
+                    "width": 305,
+                    "height": 98,
+                    "animated": true,
+                    "backgroundImage": "",
+                    "backgroundHighlightImage": "",
+                    "clickAction": "act_toggle_away",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_away_icon",
+                            "property": "icon"
+                        },
+                        {
+                            "binding": "",
+                            "property": "label"
+                        }
+                    ]
+                }
+            ]
+	    }
+	]
+}

@@ -1,0 +1,57 @@
+{
+  "actions": [
+    {
+      "viewname": "act_back",
+      "impl": {
+        "type": "nav",
+        "event": "evt_back"
+      }
+    },
+    {
+      "viewname": "act_change",
+      "actionname": "act_change"
+    },
+    {
+      "viewname": "act_confirm",
+      "actionname": "act_confirm"
+    }
+  ],
+  "data": [
+    {
+      "viewname": "bnd_selected_index",
+      "binding": "bnd_selected_index",
+      "type": "int",
+      "actions": [
+        {
+          "viewname": "act_change",
+          "actionname": "act_change"
+        }
+      ]
+    },
+    {
+      "viewname": "bnd_default_cell_data",
+      "binding": "bnd_default_cell_data",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_trophy",
+      "binding": "bnd_trophy",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_banner",
+      "binding": "bnd_banner",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_live_menu",
+      "binding": "bnd_live_menu",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_cup_label",
+      "binding": "bnd_cup_label",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,936 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings": [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts": [
+        {
+            "name": "show",
+            "script": [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "",
+            "script": [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors": [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_btn_click",
+            "buttonContainer": "insButtonsOptionsBot"
+        }
+    ],
+    "children": [
+        {
+            "commonName": "Panel",
+            "name": "MatchDay",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "marginTop": 10,
+            "scaleX": 0.8,
+            "scaleY": 0.8,
+            "width": 850,
+            "height": 150,
+            "children": [
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "color": "0x000000",
+                    "cornerRaduis": 10,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Image",
+                    "name": "LogoCup",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 50,
+                    "height": 50,
+                    "alpha": 1,
+                    "bindings": [
+                        {
+                            "binding": "bnd_tour_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "fontSize": 21,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor": "0xffffff",
+                    "bindings": [
+                        {
+                            "binding": "bnd_realtime",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "marginBottom": -20,
+                    "marginLeft": 0,
+                    "fontSize": 19,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor": "0xffffff",
+                    "textAlignH": "CENTER",
+                    "bindings": [
+                        {
+                            "binding": "bnd_match_time",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -120,
+                    "width": 65,
+                    "height": 65,
+                    "bindings": [
+                        {
+                            "binding": "bnd_home_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "color": "0xFFFFFF",
+                    "marginTop": 0,
+                    "marginLeft": -170,
+                    "width": 2,
+                    "height": 50,
+                    "alpha": 0.3
+                },
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -220,
+                    "width": 65,
+                    "height": 65,
+                    "bindings": [
+                        {
+                            "binding": "bnd_2d_home_kit",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -300,
+                    "width": 100,
+                    "height": 100,
+                    "bindings": [
+                        {
+                            "binding": "bnd_home_side_icon",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "AwayCrest",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginRight": -120,
+                    "width": 65,
+                    "height": 65,
+                    "bindings": [
+                        {
+                            "binding": "bnd_away_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "color": "0xFFFFFF",
+                    "marginTop": 0,
+                    "marginRight": -170,
+                    "width": 2,
+                    "height": 50,
+                    "alpha": 0.3
+                },
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginRight": -220,
+                    "width": 65,
+                    "height": 65,
+                    "bindings": [
+                        {
+                            "binding": "bnd_2d_away_kit",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "HomeCrest",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginRight": -300,
+                    "width": 100,
+                    "height": 100,
+                    "bindings": [
+                        {
+                            "binding": "bnd_away_side_icon",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MatchDay",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "marginTop": 0,
+            "width": 600,
+            "height": 380,
+            "children": [
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "color": "0x000000",
+                    "cornerRaduis": 10,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Asset",
+                    "name": "HomeCrest",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -30,
+                    "scaleX": 0.3,
+                    "scaleY": 0.3,
+                    "alpha": 1,
+                    "type": "$Pitch2"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 50,
+                    "marginLeft": 0,
+                    "scaleY": 0.9,
+                    "scaleX": 0.9,
+                    "width": 350,
+                    "children": [
+                        {
+                            "commonName": "GenericButton",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -120,
+                            "marginTop": 0,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8,
+                            "icon": "$SimMatchIcon4",
+                            "clickAction": "act_squad"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": 0,
+                            "fontSize": 17,
+                            "autoTextShadow": true,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Bold",
+                            "text": "Enter  Team Management"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonSelect",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 55,
+            "height": 80,
+            "width": 1166,
+            "children": [
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.6,
+                            "type": "$Bg_Gradiant1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -445,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Play Match"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.6,
+                            "type": "$Bg_Gradiant1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -148,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tactical View"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.6,
+                            "type": "$Bg_Gradiant1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -148,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Play Highlights"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "bindings": [
+                                {
+                                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.6,
+                            "type": "$Bg_Gradiant1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -445,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Customise"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "insButtonsOptionsBot",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 65,
+            "marginLeft": -50,
+            "alpha": 0,
+            "children": [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Home",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": -225,
+                    "y": 0,
+                    "width": 200,
+                    "height": 100,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 100,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Away",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 225,
+                    "y": 0,
+                    "width": 200,
+                    "height": 100,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 100,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "PlayMatch",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": -530,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "TacticalView",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": -240,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "PlayHilights",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 60,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Customise",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 350,
+                    "y": 443,
+                    "width": 300,
+                    "height": 200,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 6,
+                    "type": "blackandblue",
+                    "buttonHeight": 70,
+                    "buttonWidth": 280,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonSelect",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 55,
+            "height": 80,
+            "width": 1166,
+            "children": [
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings": [
+                        {
+                            "binding": "bnd_tab3",
+                            "property": "visible"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0xF7F7F7"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.7,
+                            "type": "$Bg_Gradiant2"
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Customise",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "clickAction": "act_advance",
+                            "headline": [
+                                ""
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -445,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0x000000",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Play Match"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings": [
+                        {
+                            "binding": "bnd_tab4",
+                            "property": "visible"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0xF7F7F7"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.7,
+                            "type": "$Bg_Gradiant2"
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Customise",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "clickAction": "act_formation_popup",
+                            "headline": [
+                                ""
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -148,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0x000000",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tactical View"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings": [
+                        {
+                            "binding": "bnd_tab5",
+                            "property": "visible"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0xF7F7F7"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -148,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.7,
+                            "type": "$Bg_Gradiant2"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -148,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0x000000",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Play Highlights"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ButtonSelect",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings": [
+                        {
+                            "binding": "bnd_tab6",
+                            "property": "visible"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0xF7F7F7"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "cornerRaduis": 0,
+                            "alpha": 0.7,
+                            "type": "$Bg_Gradiant2"
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "name": "Customise",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -445,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 290,
+                            "clickAction": "act_customize",
+                            "headline": [
+                                ""
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginRight": -445,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "0x000000",
+                            "autoTextShadow": true,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Customise"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insSquad",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "children": [
+                        {
+                            "commonName": "SquadLayout",
+                            "contextMenuEnabled": true,
+                            "itemView": 1,
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": -230,
+                            "marginRight": 0,
+                            "scaleX": 0.5,
+                            "scaleY": 0.5,
+                            "highlightable": false,
+                            "preserveWidth": false,
+                            "mouseInteractive": false,
+                            "draggable": false,
+                            "name": "insSquadLayout",
+                            "bindings": [
+                                {
+                                    "binding": "bnd_context_menu",
+                                    "property": "contextMenuEnabled"
+                                },
+                                {
+                                    "binding": "bnd_item_view",
+                                    "property": "itemView"
+                                },
+                                {
+                                    "binding": "bnd_formation",
+                                    "property": "formation"
+                                },
+                                {
+                                    "binding": "bnd_enable_item_interaction",
+                                    "property": "resetItemInteraction"
+                                },
+                                {
+                                    "binding": "bnd_starting_11",
+                                    "property": "starting11"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

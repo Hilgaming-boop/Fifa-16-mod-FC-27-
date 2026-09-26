@@ -1,0 +1,119 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_play_ucl",
+                    "targets": ["Ucl"]
+                },
+                {
+                    "event": "evt_play_manscup",
+                    "targets": ["Manscup"]
+                },
+                {
+                    "event": "evt_play_custom",
+                    "targets": ["Customcup"]
+                },
+                {
+                    "event": "evt_play_custom_minitur",
+                    "targets": ["CustomMinitur"]
+                },
+                {
+                    "event": "evt_play_custom_leg2",
+                    "targets": ["Customcupleg2"]
+                },
+                {
+                    "event": "evt_play_uwcl",
+                    "targets": ["Uwcl"]
+                },
+                {
+                    "event": "evt_play_dfl",
+                    "targets": ["DflCup"]
+                }
+            ]
+        },
+        {
+            "name": "Ucl",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCupUclModeLiga/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Manscup",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MainMenu/Tournaments/Menu/Manscup/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Customcup",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "CustomMinitur",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCupMiniTurnamen/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Customcupleg2",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCupLeg2/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Uwcl",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/UWCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+             }
+        },
+        {
+            "name": "DflCup",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/Libertadores/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        }
+    ]
+}

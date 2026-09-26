@@ -1,0 +1,4 @@
+{
+    "dds": ["LegendsHub.dd"],
+    "views": [["gfx", { "layout": "LegendsHub.layout" }]]
+}

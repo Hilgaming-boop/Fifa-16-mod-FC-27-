@@ -1,0 +1,289 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_KickSet"
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuMatchSelect",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 410,
+                            "height": 90,
+                            "width": 285,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 460,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Team Management"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "SquadHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -170,
+                    "marginLeft": -250,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_White",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_squadhome"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Formation"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "name": "SquadAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -170,
+                    "marginLeft": 250,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_White",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_squadaway"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Formation"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "name": "Preview",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 580,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+                            "marginTop": 5,
+                            "width": 420,
+                            "height": 220,
+                            "alpha": 1,
+                            "type": "$Icon_TeamPitch"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -320,
+                            "marginTop": -130,
+                            "width": 50,  
+                            "height": 50,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -220,
+                            "marginTop": -145,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "alpha": 0.7,
+                            "text": "Team"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -220,
+                            "marginTop": -120,
+                            "width": 150,  
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 20,
+                            "forceCaps": false,
+                            "autoTextShadow": true,
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_nama_tim_home",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -250,
+                            "marginTop": 5,
+                            "width": 420,
+                            "height": 220,
+                            "alpha": 1,
+                            "type": "$Icon_TeamPitch"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -176,
+                            "marginTop": -130,
+                            "width": 50,  
+                            "height": 50,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -270,
+                            "marginTop": -145,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "alpha": 0.7,
+                            "text": "Team"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -270,
+                            "marginTop": -120,
+                            "width": 150,  
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "fontSize": 20,
+                            "forceCaps": false,
+                            "autoTextShadow": true,
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_nama_tim_away",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

@@ -1,0 +1,5 @@
+{
+    "dds": ["KickHub.dd"],
+    "vms": [["lua", "KickHub.lua"]],
+    "views": [["gfx", { "layout": "KickHub.layout" }]]
+}

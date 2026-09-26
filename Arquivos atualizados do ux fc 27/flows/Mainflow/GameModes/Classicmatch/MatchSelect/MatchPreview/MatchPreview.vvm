@@ -1,0 +1,5 @@
+{
+    "dds":   ["MatchPreview.dd"],
+    "vms":   [["lua", "MatchPreview.lua"]],
+    "views": [["gfx", { "layout": "MatchPreview.layout" }]]
+}

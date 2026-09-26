@@ -1,0 +1,187 @@
+{
+    "actions":
+    [
+        {
+            "viewname":   "act_swap_players",
+            "actionname": "act_swap_players"
+        },
+        {
+            "viewname":   "act_compare_players",
+            "actionname": "act_compare_players"
+        },
+        {
+            "viewname":   "act_item_show_bio",
+
+            "actionname": "act_item_show_bio"
+        },
+		{
+            "viewname":   "act_send_item_data",
+            "actionname": "act_send_item_data"
+        }
+    ],
+    "data":
+    [
+	    {
+            "viewname": "bnd_chemistry_sfx",
+            "binding":  "bnd_chemistry_sfx",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_chemistry_matrix",
+            "binding":  "bnd_chemistry_matrix",
+            "type":     "object",
+            "deps":     ["bnd_formation"]
+        },
+        {
+            "viewname": "bnd_starting_11",
+            "binding":  "bnd_starting_11",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_subs_and_res",
+            "binding":  "bnd_subs_and_res",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_team_name",
+            "binding":  "bnd_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_active_player_visible",
+            "binding":  "bnd_active_player_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_passive_player_visible",
+            "binding":  "bnd_passive_player_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_swap1_active",
+            "binding":  "bnd_swap1_active",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_swap2_active",
+            "binding":  "bnd_swap2_active",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_swap3_active",
+            "binding":  "bnd_swap3_active",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_swap1_passive",
+            "binding":  "bnd_swap1_passive",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_swap2_passive",
+            "binding":  "bnd_swap2_passive",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_swap3_passive",
+            "binding":  "bnd_swap3_passive",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_active_player_name",
+            "binding":  "bnd_active_player_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_passive_player_name",
+            "binding":  "bnd_passive_player_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_active_player_position",
+            "binding":  "bnd_active_player_position",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_passive_player_position",
+            "binding":  "bnd_passive_player_position",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_rating",
+            "binding":  "bnd_team_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_player_avatar",
+            "binding":  "bnd_player_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_player_rating",
+            "binding":  "bnd_player_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_active_player_avatar",
+            "binding":  "bnd_active_player_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_passive_player_avatar",
+            "binding":  "bnd_passive_player_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_active_player_rating",
+            "binding":  "bnd_active_player_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_passive_player_rating",
+            "binding":  "bnd_passive_player_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_team_rating_label",
+            "binding":  "bnd_team_rating_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_overall",
+            "binding":  "bnd_team_overall",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_player_comparison_data",
+            "binding":  "bnd_player_comparison_data",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_man",
+            "binding":  "bnd_team_man",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_manager",
+            "binding":  "bnd_manager",
+            "type":     "object",
+            "deps":     ["bnd_formation_index"]
+        },
+        {
+            "viewname": "bnd_manager_item_visibility",
+            "binding":  "bnd_manager_item_visibility",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_context_menu_visible",
+            "binding":  "bnd_context_menu_visible",
+            "type":     "bool"
+        }
+    ]
+}

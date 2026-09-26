@@ -1,0 +1,1402 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_background_career",
+                   "property": "image"
+               }
+            ]        
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 90,
+                                    "marginLeft": 100,
+                                    "fontSize": 50,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended",
+                                    "text": ""
+                                    },
+                {
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Cm"
+}
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 2000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$DINPro",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -550,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Notificacions"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -545,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -452,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Inbox"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -415,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -360,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Emails"
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0.1
+                 }
+             ]
+         },
+         {	
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 100,
+            "marginTop": -15,
+            "width": 600,
+            "height": 300,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Extended-Heavy",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Assistant Coach"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -40,
+                            "marginLeft": 720,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Friday 11:24 AM"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "My name is Sir Antony, and I am delighted to officially join your backroom staff as part of your coaching team. My primary role will be to assist you in refining our tactical approach, analyzing upcoming opponents, and providing key suggestions to maximize our squad's potential. Both myself and the rest of the staff are thrilled to have you leading this project, and we are fully committed to supporting you in achieving long-term success at the club."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 110,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "After evaluating our squad depth, I strongly recommend investing in a promising young left-back or center-back. Securing a future star now will ensure a smooth transition when our current defenders begin to decline."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 270,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "I look forward to collaborating with you and helping this club reach new heights. Don't hesitate to reach out if you need any additional analysis or suggestions."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 330,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 145,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Best Regards"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 190,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Regarding player development, our striker's performance data shows room for improvement in long-range shooting, through passes, and volleys. Implementing focused training on these specific areas could significantly boost his contributions on the pitch."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Extended-Heavy",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Sport Director"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -40,
+                            "marginLeft": 690,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Today 5:54 PM"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "My name is Sir Noguera, your Sports Director. It will be my responsibility to monitor our progress and ensure we achieve success in the league. The entire organization is thrilled to welcome you, and we're confident you can lead us to another league title."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Before we begin, I want to highlight our recent achievements: We've been crowned champions 3 times in the last 5 years. This club expects excellence, and we trust you'll continue this winning tradition during your tenure."
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 150,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Now, let me outline the board's key objectives:"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 180,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Domestic Success: Secure a top 6 finish to qualify for European competitions and generate additional revenue."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 300,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "These goals will provide the necessary funds to upgrade facilities and strengthen our squad. I'll be available to discuss strategies for meeting these targets."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 360,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Welcome aboard. Together, we'll write another successful chapter for this club."
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Financial Targets: Generate €35M+ through_ ticket sales, merchandise, sponsorships, and player transactions."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -50,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Extended-Heavy",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Sport Director"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -40,
+                            "marginLeft": 690,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Today 5:54 PM"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "My name is Sir Noguera, your Sports Director. It will be my responsibility to monitor our progress and ensure we achieve success in the league. The entire organization is thrilled to welcome you, and we're confident you can lead us to another league title."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Before we begin, I want to highlight our recent achievements: We've been crowned champions 3 times in the last 5 years. This club expects excellence, and we trust you'll continue this winning tradition during your tenure."
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 150,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Now, let me outline the board's key objectives:"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 180,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Domestic Success: Secure a top 6 finish to qualify for European competitions and generate additional revenue."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 300,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "These goals will provide the necessary funds to upgrade facilities and strengthen our squad. I'll be available to discuss strategies for meeting these targets."
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 360,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Welcome aboard. Together, we'll write another successful chapter for this club."
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Financial Targets: Generate €35M+ through_ ticket sales, merchandise, sponsorships, and player transactions."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 0,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Serie A"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 0,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the Serie A, win every match and upgrade your player's abilities"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info5",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab5_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 0,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "BRI Liga 1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize":0,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the BRI Liga 1, win every match and upgrade your player's abilities"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 400,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -5,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Assistant Coach"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 338,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": -80,
+                                    "marginRight": -800,
+                                    "width": 450,
+                                    "height": 470,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -5,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Sport Director"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 276,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -10,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Training Plans"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 214,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -5,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 160,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Physiotherapy"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 152,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -10,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Medical"	
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 400,
+                            "height": 60,
+                            "width": 300,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -5,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Assistant Coach"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 338,
+                            "height": 60,
+                            "width": 300,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -5,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Sports Director"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 276,
+                            "height": 60,
+                            "width": 300,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -10,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Training Plans"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 214,
+                            "height": 60,
+                            "width": 300,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -5,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 160,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Physiotherapy"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 152,
+                            "height": 60,
+                            "width": 300,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -10,
+                                    "marginLeft": 20,
+                                    "fontSize": 18,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Medical"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+        "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 50,
+                    "width": 450,
+                    "height": 470,
+                    "alpha": 1,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+            "commonName": "Group",
+            "name": "MvnprodButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 35,
+                    "width": 300,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 300,
+                    "buttonHeight": 60,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 95,
+                    "width": 300,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 300,
+                    "buttonHeight": 60,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 155,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 300,
+                    "buttonHeight": 60,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 220,
+                    "width": 300,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 300,
+                    "buttonHeight": 60,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 280,
+                    "width": 300,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 300,
+                    "buttonHeight": 60,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

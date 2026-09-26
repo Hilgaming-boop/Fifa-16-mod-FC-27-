@@ -1,0 +1,6 @@
+[
+    "/lua/enums/myclub_service.lua",
+    "/lua/enums/shared_futenums.lua",
+    "/lua/packages/tableutil.lua",
+	"/lua/enums/eventmanager.lua"
+]

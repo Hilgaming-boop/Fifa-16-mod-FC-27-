@@ -1,0 +1,102 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_play_ucl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_ucl"
+            }
+        },
+        {
+            "viewname": "act_play_manscup",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_manscup"
+            }
+        },
+        {
+            "viewname": "act_play_custom",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_custom"
+            }
+        },
+        {
+            "viewname": "act_play_custom_minitur",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_custom_minitur"
+            }
+        },
+        {
+            "viewname": "act_play_custom_leg2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_custom_leg2"
+            }
+        },
+        {
+            "viewname": "act_play_uwcl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_uwcl"
+             }
+        },
+        {
+            "viewname": "act_play_dfl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_dfl"
+            }
+        },
+        {
+            "viewname":"act_mvnprod",
+            "actionname":"act_mvnprod"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}

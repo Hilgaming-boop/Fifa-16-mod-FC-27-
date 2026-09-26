@@ -1,0 +1,333 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Icon_DetailsStats"
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuMatchSelect",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [        
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 1010,
+                            "height": 90,
+                            "width": 224,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 1052,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Detailed Stats"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -230,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_White",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_detail"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Details"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "name": "Preview",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 580,
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+                            "marginTop": -120,
+                            "width": 100,  
+                            "height": 100,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -250,
+                            "marginTop": -120,
+                            "width": 100,  
+                            "height": 100,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 80,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 106,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 133,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 161,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+                            "marginTop": 189,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 80,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 106,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 133,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 161,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -50,
+                            "marginTop": 189,
+                            "width": 20,  
+                            "height": 20,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_logo_tim_away",
+                                    "property": "image"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

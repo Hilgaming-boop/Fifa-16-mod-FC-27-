@@ -1,0 +1,304 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2LigaRowRoot",
+    "mouseInteractive": false,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_DINPROBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_DINPROBOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_DINPROBOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.TeamCrest": "RowPanel.RowLeftPanel.TeamCrest.image",
+        "dataProviders.NextOpponentCrest": "RowPanel.RowLeftPanel.NextOpponentCrest.image",
+        "dataProviders.BarisRow1": "RowPanel.RowLeftPanel.BarisRow1.image",
+        "dataProviders.BarisRow2": "RowPanel.RowLeftPanel.BarisRow2.image",
+        "dataProviders.BarisRow3": "RowPanel.RowLeftPanel.BarisRow3.image",
+        "dataProviders.TeamName": "RowPanel.RowLeftPanel.TeamName.text",
+        "dataProviders.TeamPoint": "RowPanel.RowLeftPanel.TeamPoint.text",
+        "dataProviders.Teammp": "RowPanel.RowLeftPanel.Teammp.text",
+        "dataProviders.TeamDraw": "RowPanel.RowLeftPanel.TeamDraw.text",
+        "dataProviders.TeamWin": "RowPanel.RowLeftPanel.TeamWin.text",
+        "dataProviders.TeamLoss": "RowPanel.RowLeftPanel.TeamLoss.text",
+        "dataProviders.TeamGA": "RowPanel.RowLeftPanel.TeamGA.text",
+        "dataProviders.TeamGC": "RowPanel.RowLeftPanel.TeamGC.text",
+        "dataProviders.TeamGD": "RowPanel.RowLeftPanel.TeamGD.text",
+        "dataProviders.Teampos": "RowPanel.RowLeftPanel.Teampos.text",
+        "dataProviders.GroupName": "RowPanel.RowLeftPanel.GroupName.text",
+        "dataProviders.NextMatch": "RowPanel.RowLeftPanel.NextMatch.text",
+        "dataProviders.RelegationText": "RowPanel.RowLeftPanel.RelegationText.text",
+        
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowLeftPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 1750,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 550,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                         {
+                            "commonName": "Image",
+                            "name": "BarisRow3",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": -2,
+                            "marginLeft": 90,
+                            "width": 2200,
+                            "height": 32,
+                            "alpha": 0.3
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "StartGameIcon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 18,
+                            "marginLeft": 130,
+                            "width": 30,
+                            "height": 30
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "TeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 18,
+                            "marginLeft": 55,
+                            "width": 50,
+                            "height": 50
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"NextMatch",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 1110,
+                            "marginBottom": 18,
+                            "fontSize": 34,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "NextOpponentCrest",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 1110,
+                            "marginBottom": 18,
+                            "width": 50,
+                            "height": 50
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 150,
+                            "marginBottom": 18,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Bold"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Teampos",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 10,
+                            "marginBottom": 18,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"GroupName",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 340,
+                            "marginBottom": -3,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Teammp",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 360,
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "alpha": 0.8,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamWin",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 460,
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "alpha": 0.8,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamDraw",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 560,
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "alpha": 0.8,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamLoss",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 660,
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "alpha": 0.8,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamGA",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 750,
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "alpha": 0.8,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamGC",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 830,
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "alpha": 0.8,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamGD",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 920,
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "alpha": 0.8,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamPoint",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 1010,
+                            "marginBottom": 18,
+                            "fontSize": 32,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "BarisRow1",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 60,
+                            "marginLeft": 90,
+                            "width": 2200,
+                            "height": 2,
+                            "alpha": 0.2
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "BarisRow2",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 16,
+                            "marginLeft": 90,
+                            "width": 2200,
+                            "height": 2,
+                            "alpha": 0.2
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "width": 1180,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

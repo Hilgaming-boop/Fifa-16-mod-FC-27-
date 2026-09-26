@@ -1,0 +1,332 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["RedirectMatchSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMatchSelect",
+            "onEnter":
+            [
+                ["set", ["fromScreen", ".fromScreen"]]
+            ],
+            "states":
+            [
+                {
+                    "name": "inMVNPROD",
+                    "onEnter":
+                    [
+                        ["invoke", [".type"]],
+                        ["invoke", [".flow"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "friendly",
+                            "targets": ["RedirectMatchSelectMenu"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectMatchSelectMenu",
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["MatchSelectMenu"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MatchSelectMenu",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["/Flows/MainFlow/gamemodes/KickOff/CoachMode/MatchSelect/MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectMatchPreview",
+                    "states":
+                    [
+                        {
+                            "name": "MatchPreview",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/gamemodes/KickOff/CoachMode/MatchSelect/MatchPreview/MatchPreview.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "evt_advance",
+                                    "targets": ["out_advance"]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectTeamManagement",
+                    "states":
+                    [
+                        {
+                            "name": "TeamManagement",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/gamemodes/KickOff/CoachMode/MatchSelect/TeamManagement/TeamManagement.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "evt_squadhome",
+                                    "cond": ["==", ".gamemode", "real"],
+                                    "targets": ["SquadHome"]
+                                },
+                                {
+                                    "event": "evt_squadaway",
+                                    "cond": ["==", ".gamemode", "real"],
+                                    "targets": ["SquadAway"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "SquadHome",
+                            "type": "external",
+                            "file": "/flows/mainflow/gamemodes/KickOff/CoachMode/MatchSelect/TeamManagement/squad/Squad.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectTeamManagement",
+                                "out_advance": "RedirectTeamManagement"
+                            }
+                        },
+                        {
+                            "name": "SquadAway",
+                            "type": "external",
+                            "file": "/flows/mainflow/gamemodes/KickOff/CoachMode/MatchSelect/TeamManagement/squad/SquadAway.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectTeamManagement",
+                                "out_advance": "RedirectTeamManagement"
+                            }
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectGameSettings",
+                    "states":
+                    [
+                        {
+                            "name": "GameSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/gamemodes/KickOff/CoachMode/MatchSelect/GameSettings/GameSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectControllerSettings",
+                    "states":
+                    [
+                        {
+                            "name": "ControllerSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/gamemodes/KickOff/CoachMode/MatchSelect/ControllerSettings/ControllerSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "evt_controls",
+                                    "targets": ["Controls"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Controls",
+                            "type": "external",
+                            "file": "/flows/mainflow/gamemodes/KickOff/CoachMode/MatchSelect/ControllerSettings/Controls/Controls.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectControllerSettings",
+                                "out_advance": "RedirectControllerSettings"
+                            }
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectDetailStats",
+                    "states":
+                    [
+                        {
+                            "name": "DetailStats",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/gamemodes/KickOff/CoachMode/MatchSelect/DetailStats/DetailStats.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "evt_detail",
+                                    "targets": ["Detail"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Detail",
+                            "type": "external",
+                            "file": "/flows/mainflow/gamemodes/KickOff/CoachMode/MatchSelect/DetailStats/Detail/Detail.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectDetailStats",
+                                "out_advance": "RedirectDetailStats"
+                            }
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        }
+    ]
+}

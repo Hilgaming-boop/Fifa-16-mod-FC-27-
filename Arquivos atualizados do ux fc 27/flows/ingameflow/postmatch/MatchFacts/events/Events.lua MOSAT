@@ -1,0 +1,284 @@
+-- mod by laosiji --
+-- Remod By MounTsa Tournament --
+local events = {}
+print("loaded events LUA")
+
+local instance = nil
+
+local bndHomeEventsList = "bnd_home_events_list"
+local bndAwayEventsList = "bnd_away_events_list"
+local bndEmptyRowsData = "bnd_empty_rows_data"
+local NUM_EMPTY_LIST_ROWS = 9
+local DEFAULT_ICON_HOME_OFFSET = 60
+local DEFAULT_ICON_AWAY_OFFSET = 105
+local OFFSET_PER_EXTRA_CHAR = 10
+local DEFAULT_MINUTE_STRING_LENGTH = 4
+
+local TournamentStats = TournamentStats or {}
+local TeamPlayerCache = TeamPlayerCache or {}
+
+global_currentMatchData = global_currentMatchData or {}
+global_currentMatchData.goals = global_currentMatchData.goals or {}
+
+function events:processAndRecordAllMatchStats()
+  print("Processing end-of-match stats...")
+  if not self.eventsData then
+    print("Warning: eventsData is nil. Cannot process stats.")
+    return
+  end
+
+  local allEvents = {
+    {teamId = self.TeamsData[1].assetId, data = self.eventsData.homeData},
+    {teamId = self.TeamsData[2].assetId, data = self.eventsData.awayData}
+  }
+
+  for _, teamEvents in ipairs(allEvents) do
+    if teamEvents.data then
+      for _, event in ipairs(teamEvents.data) do
+        if event.data.eventId == 0 then 
+          local minute = event.data.minute
+          local teamId = teamEvents.teamId
+          local scorerName = event.data.name
+          local playerNumber = event.data.number
+          
+          print("Found Goal Event -> Name:", scorerName, "Num:", playerNumber, "TeamID:", teamId)
+
+          self:updateGoalStats(minute, teamId, scorerName, playerNumber)
+        end
+      end
+    end
+  end
+  print("Finished processing end-of-match stats.")
+end
+
+
+function events:new(init)
+  print("New Function MatchEventsLua")
+  local o = init or {}
+  setmetatable(o, self)
+  self.__index = self
+  o.services = {
+    matchInfo = o.api("MatchInfoService"),
+    SquadManagementService = o.api("SquadMgtService")
+  }
+  self.eventsData = o.services.matchInfo.GetMatchEvents()
+  o.TeamsData = o.services.matchInfo.GetMatchTeams()
+  
+  o.homeTeamlineupData = o.services.SquadManagementService.GetCurrentPlayerLineup(0, o.TeamsData[1].assetId, 0)
+  o.awayTeamlineupData = o.services.SquadManagementService.GetCurrentPlayerLineup(1, o.TeamsData[2].assetId, 0)
+
+  o.mAdditionalIconOffset = (string.len(o.loc.LocalizeString("LTXT_VAR_EISM_MINUTE")) - DEFAULT_MINUTE_STRING_LENGTH) * OFFSET_PER_EXTRA_CHAR
+  
+  instance = o
+
+  o:processAndRecordAllMatchStats()
+
+  o.im.Subscribe(bndHomeEventsList, function()
+    o:publishHomeEventsList()
+  end)
+  o.im.Subscribe(bndAwayEventsList, function()
+    o:publishAwayEventsList()
+  end)
+  o.im.Subscribe(bndEmptyRowsData, function()
+    o:publishEmptyBgRows()
+  end)
+  return o
+end
+
+function events:publishHomeEventsList()
+  local o = self.eventsData.homeData
+  for i, v in ipairs(o) do
+    local playerInfo = self:getPlayerInfo(self.TeamsData[1].assetId, o[i].data.name, o[i].data.number)
+    v.data.image = {
+      name = "$Events",
+      id = o[i].data.eventId
+    }
+    v.data.iconOffset = DEFAULT_ICON_HOME_OFFSET + self.mAdditionalIconOffset
+    v.data.head = {
+      name = "$Head",
+      id = playerInfo.assetId
+    }
+  end
+  self.im.Publish(bndHomeEventsList, self.eventsData.homeData)
+end
+
+function events:publishAwayEventsList()
+  local o = self.eventsData.awayData
+  for i, v in ipairs(o) do
+    local playerInfo = self:getPlayerInfo(self.TeamsData[2].assetId, o[i].data.name, o[i].data.number)
+    v.data.image = {
+      name = "$Events",
+      id = o[i].data.eventId
+    }
+    v.data.head = {
+      name = "$Head",
+      id = playerInfo.assetId
+    }
+    v.data.iconOffset = DEFAULT_ICON_AWAY_OFFSET + self.mAdditionalIconOffset
+  end
+  self.im.Publish(bndAwayEventsList, self.eventsData.awayData)
+end
+
+function events:publishEmptyBgRows()
+  local emptyDataArr = {}
+  for i = 1, NUM_EMPTY_LIST_ROWS do
+    table.insert(emptyDataArr, {
+      data = {dummyParam = 0}
+    })
+  end
+  self.im.Publish(bndEmptyRowsData, emptyDataArr)
+end
+
+function events:getPlayerInfo(teamID, name, number)
+  local count = 0
+  local specialString = false
+  local playerInfo = {
+    assetId = 0,
+    jerseyNumber = number,
+    playerName = name
+  }
+  local teamlineupData = nil
+  
+  if teamID == self.TeamsData[1].assetId then
+    teamlineupData = self.homeTeamlineupData
+  else
+    teamlineupData = self.awayTeamlineupData
+  end
+
+  if not teamlineupData then
+      print("⚠️ Peringatan: teamlineupData tidak ditemukan untuk teamID: " .. tostring(teamID))
+      return playerInfo
+  end
+
+  if string.find(name, "-") or string.find(name, "%.") then
+    specialString = true
+  end
+  
+  if specialString == false then
+    count = 0
+    playerInfo.playerName =  string.gsub(name, "%b()", " ")
+    playerInfo.playerName =  string.gsub(playerInfo.playerName, "^%s*(.-)%s*$", "%1")
+  end
+  
+  for i = 1, #teamlineupData do
+    if i <= 18 then
+      if specialString == true then
+        if string.find(name, teamlineupData[i].playerName, 1, true) and teamlineupData[i].jerseyNumber == number then 
+          if count == 0 then
+            count = count + 1
+            playerInfo.assetId = teamlineupData[i].CARD_ID
+            playerInfo.jerseyNumber = teamlineupData[i].jerseyNumber
+            playerInfo.playerName = teamlineupData[i].playerName
+          end
+        end
+      else
+        if string.find(playerInfo.playerName, teamlineupData[i].playerName,1,true) and playerInfo.playerName == teamlineupData[i].playerName and teamlineupData[i].jerseyNumber == number then
+          if count == 0 then
+            count = count + 1
+            playerInfo.assetId = teamlineupData[i].CARD_ID
+            playerInfo.jerseyNumber = teamlineupData[i].jerseyNumber
+            playerInfo.playerName = teamlineupData[i].playerName
+          end
+        end
+      end
+    end
+  end
+  return playerInfo
+end
+
+-- In Events.lua
+function events:updateGoalStats(minute, teamId, scorerName, playerNumber)
+    local tourId = GlobalTournamentSettings.tourId or 1
+    
+    -- Initialize stats if needed
+    TournamentStats[tourId] = TournamentStats[tourId] or { 
+        Goals = {}, 
+        Assists = {}, 
+        Appearances = {},
+        YellowCards = {},
+        RedCards = {}
+    }
+    
+    -- Find player ID
+    local playerId = self:findPlayerId(teamId, scorerName, playerNumber)
+    if not playerId then 
+        print("⚠️ Player not found for stat update:", scorerName, "#"..playerNumber)
+        return 
+    end
+    
+    -- Update goal count
+    TournamentStats[tourId].Goals[playerId] = (TournamentStats[tourId].Goals[playerId] or 0) + 1
+    
+    -- Update appearances if this is first goal
+    if TournamentStats[tourId].Appearances[playerId] == nil then
+        TournamentStats[tourId].Appearances[playerId] = 1
+    end
+    
+    print("⚽ Goal Stat Recorded:", scorerName, "| Team:", teamId, "| Total Goals:", TournamentStats[tourId].Goals[playerId])
+    
+    -- Also update global match data
+    table.insert(global_currentMatchData.goals, {
+        minute = minute,
+        playerId = playerId,
+        playerName = scorerName,
+        teamId = teamId,
+        teamName = self.loc.LocalizeString("TeamName_Abbr15_"..teamId)
+    })
+end
+
+function events:findPlayerId(teamId, playerName, playerNumber)
+    local tourId = GlobalTournamentSettings.tourId or 1
+    
+    -- Initialize cache if needed
+    if not TeamPlayerCache[tourId] then TeamPlayerCache[tourId] = {} end
+    if not TeamPlayerCache[tourId][teamId] then
+        TeamPlayerCache[tourId][teamId] = self.services.SquadManagementService.GetCurrentPlayerLineup(0, teamId, 0) or {}
+    end
+
+    -- First try to match by jersey number
+    for _, player in ipairs(TeamPlayerCache[tourId][teamId]) do
+        if player.jerseyNumber == playerNumber then
+            return player.CARD_ID
+        end
+    end
+    
+    -- Fallback to name matching
+    local cleanName = string.gsub(playerName:lower(), "%b()", "")
+    cleanName = string.gsub(cleanName, "^%s*(.-)%s*$", "%1")
+    
+    for _, player in ipairs(TeamPlayerCache[tourId][teamId]) do
+        if string.find(player.playerName:lower(), cleanName, 1, true) then
+            return player.CARD_ID
+        end
+    end
+    
+    return nil
+end
+
+function onGoalScored(minute, scorerJerseyNumber, scorerName, teamId, teamName)
+  if instance then
+      instance:updateGoalStats(minute, teamId, scorerName, scorerJerseyNumber)
+  end
+
+  local playerId = 0
+  if instance then
+    playerId = instance:findPlayerId(teamId, scorerName, scorerJerseyNumber) or 0
+  end
+
+  table.insert(global_currentMatchData.goals, {
+      minute = minute,
+      playerId = playerId,
+      playerName = scorerName,
+      teamId = teamId,
+      teamName = teamName
+  })
+end
+
+function events:finalize()
+  self.im.Unsubscribe(bndHomeEventsList)
+  self.im.Unsubscribe(bndAwayEventsList)
+  self.im.Unsubscribe(bndEmptyRowsData)
+  instance = nil
+end
+
+return events

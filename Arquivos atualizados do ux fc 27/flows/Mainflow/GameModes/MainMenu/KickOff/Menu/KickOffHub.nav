@@ -1,0 +1,172 @@
+{
+    "name": "KickOff",
+    "type": "parallel",
+    "states":
+    [
+        {
+            "states":
+            [
+                
+                {
+                    "name": "InitHub",
+                    "onEnter":
+                    [
+                        ["showFEUI"],
+                        ["enableMainFlowLayerMouseInteraction", ["Widgets", true, false]],
+                        ["blockingLoadVVM", ["/flows/mainflow/widgets/extendeduserbio/loading/Loading.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_on_show_fe_ui_complete",
+                            "targets": ["KickOffHub"]
+                        }
+
+                    ]
+                },
+                {
+                    "onEnter":
+                    [
+                        ["viewLayer", ["Gamemodes"]],
+                        ["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["updateUserPlateDisplayMode", ["full"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "KickOffHub",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/KickOffHub.vvm", {}, { "viewType": "screen" }]],
+                                ["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["updateUserPlateDisplayMode", ["full"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM", [{}, { "waitForNextView": ".enableScreenTransitions" }]]
+                            ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_back",
+                            "targets": ["out_exit_gamemode"]
+                        }
+                    ],
+                            "states":
+                            [
+                                {
+                                    "name": "KickHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/Kick/KickHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_beapro": "BeaProHub",
+                                        "out_menu_manager": "ManagerHub",
+                                        "out_menu_ucl": "UCLHub",
+                                        "out_menu_kickoff": "in_menu_kickoff"
+                                    }
+                                },
+                                {
+                                    "name": "BeaProHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/BeaPro/BeaProHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_kick": "KickHub",
+                                        "out_menu_manager": "ManagerHub",
+                                        "out_menu_ucl": "UCLHub",
+                                        "out_beapro": "in_beapro"
+                                    }
+                                },
+                                {
+                                    "name": "ManagerHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/Manager/ManagerHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_kick": "KickHub",
+                                        "out_menu_beapro": "BeaProHub",
+                                        "out_menu_ucl": "UCLHub",
+                                        "out_coach": "in_coach"
+                                    }
+                                },
+                                {
+                                    "name": "UCLHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/UCL/UCLHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_kick": "KickHub",
+                                        "out_menu_beapro": "BeaProHub",
+                                        "out_menu_manager": "ManagerHub",
+                                        "out_man_ucl": "in_man_ucl",
+                                        "out_woman_ucl": "in_woman_ucl"
+                                    }
+                                }
+                            ]
+                        },				
+                        {
+                            "name": "Kick",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/Kick/Kick.nav",
+                            "inputs":
+                            {
+                                "in_menu_kickoff": "Menu_KickOff"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "KickHub"
+                            }
+                        },
+                        {
+                            "name": "BeaPro",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/BeaPro/BeaPro.nav",
+                            "inputs":
+                            {
+                                "in_beapro": "Menu_BeaPro"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "BeaProHub"
+                            }
+                        },
+                        {
+                            "name": "Manager",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/Manager/Manager.nav",
+                            "inputs":
+                            {
+                                "in_coach": "Menu_Coach"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "ManagerHub"
+                            }
+                        },
+                        {
+                            "name": "UCL",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/UCL/UCL.nav",
+                            "inputs":
+                            {
+                                "in_man_ucl": "Man_UCL",
+                                "in_woman_ucl": "Woman_UCL"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "UCLHub"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+	"actions":
+    [
+		{
+	        "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_to_fut_mode",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_fut_mode"
+            }
+        },
+		{
+            "viewname": "act_cab_to_quick_match",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_shortcut_to_quick_match"
+            }
+        }
+    ],
+    "data":
+    [
+		{
+			"viewname":"bnd_live_tile_list",
+            "binding":"bnd_live_tile_list",
+			"type": "object"
+		}
+    ]
+}

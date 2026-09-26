@@ -1,0 +1,123 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "style-definitions": {
+    "KitSelectToggleInfo": {
+      "font": "$FONT_BOLD",
+      "fontSize": 20,
+      "fontColor": "$COLOR_BLACK",
+      "textAlignH": "CENTER",
+      "textAlignV": "CENTER"
+    },
+    "KitSelectToggleInfo1": {
+      "font": "$FONT_BOLD",
+      "fontSize": 20,
+      "fontColor": "$COLOR_WHITE",
+      "textAlignH": "CENTER",
+      "textAlignV": "CENTER"
+    }
+  },
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "type": "$Bg_Ucl"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.1,
+      "type": "$Bg_Smoke"
+    },
+    {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 200,
+                    "marginLeft": -400,
+                    "fontSize": 30,
+                    "fontColor": "0xffffff",
+                    "alpha": 0,
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 300,
+                    "multiline": true,
+                    "leading": 2,
+                    "text": "UEFA CHAMPIONS LEAGUE TOURNAMENT"
+            },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 86,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Back"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 100,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon1",
+          "clickAction": "act_confirm_setup"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 160,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Confirm"
+        }
+	  ]
+	}
+      ]
+    }
+  ]
+}

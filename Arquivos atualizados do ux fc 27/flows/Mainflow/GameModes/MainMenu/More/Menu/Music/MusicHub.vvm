@@ -1,0 +1,5 @@
+{
+	"dds":	 ["MusicHub.dd"],
+	"vms":   [["lua", "MusicHub.lua"]],
+    "views": [["gfx", {"layout": "MusicHub.layout"}]]
+}

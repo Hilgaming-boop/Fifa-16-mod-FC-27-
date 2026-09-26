@@ -1,0 +1,181 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 320,
+                            "height": 90,
+                            "width": 140,
+                            "alpha": 1,
+                            "path": "views/backgrounds/White_Effect.swf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 250,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "type": "$Tab_Kick"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "type": "$Icon_Team_Cup"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Team Management"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 70,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0x3EF7FC",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 110,
+                            "marginLeft": 0,
+                            "fontSize": 11,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Fitness"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "type": "$Tab_Cup_Select",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 100,
+                                    "width": 200,
+                                    "backgroundImage": "$Tab_Action_White",
+                                    "backgroundHighlightImage": "$Tab_Action_White",
+                                    "clickAction": "act_squad"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginBottom": -1,
+                                    "fontSize": 17,
+                                    "fontColor": "0x050953",
+                                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                                    "text": "Tap to Squad"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}

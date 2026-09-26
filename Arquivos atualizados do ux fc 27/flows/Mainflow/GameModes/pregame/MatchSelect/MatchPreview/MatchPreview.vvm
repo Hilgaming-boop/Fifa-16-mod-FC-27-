@@ -1,0 +1,10 @@
+{
+    "dds":   ["MatchPreview.dd",
+    "/flows/mainflow/gamemodes/pregame/MatchSelect/Animated.dd"
+    ],
+    "vms":   [
+    ["lua", "MatchPreview.lua"],
+    ["lua", "/flows/mainflow/gamemodes/pregame/MatchSelect/Animated.lua"]
+    ],
+    "views": [["gfx", { "layout": "MatchPreview.layout" }]]
+}

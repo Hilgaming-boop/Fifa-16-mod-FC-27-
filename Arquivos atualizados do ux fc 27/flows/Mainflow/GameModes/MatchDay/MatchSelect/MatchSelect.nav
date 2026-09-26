@@ -1,0 +1,277 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["RedirectMatchSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMatchSelect",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectMatchPreview",
+                    "states":
+                    [
+                        {
+                            "name": "MatchPreview",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MatchDay/MatchSelect/MatchPreview/MatchPreview.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectTeamManagement",
+                    "states":
+                    [
+                        {
+                            "name": "TeamManagement",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MatchDay/MatchSelect/TeamManagement/TeamManagement.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectGameSettings",
+                    "states":
+                    [
+                        {
+                            "name": "GameSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MatchDay/MatchSelect/GameSettings/GameSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectControllerSettings",
+                    "states":
+                    [
+                        {
+                            "name": "ControllerSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MatchDay/MatchSelect/ControllerSettings/ControllerSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_detail_stats",
+                            "targets": ["DetailStats"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectDetailStats",
+                    "states":
+                    [
+                        {
+                            "name": "DetailStats",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MatchDay/MatchSelect/DetailStats/DetailStats.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "evt_detail",
+                                    "targets": ["Detail"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Detail",
+                            "type": "external",
+                            "file": "/flows/mainflow/gamemodes/MatchDay/MatchSelect/DetailStats/Detail/Detail.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectDetailStats",
+                                "out_advance": "RedirectDetailStats"
+                            }
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_squadhome",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_squadaway",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_selectside",
+                    "targets": ["SelectSide"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MatchDay/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MatchDay/MatchSelect/TeamManagement/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TeamManagement",
+                "out_exit_gamemode1": "out_exit_gamemode1"
+            }
+         },
+         {
+            "name": "SelectSide",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MatchDay/MatchSelect/ControllerSettings/SelectSide/SelectSide.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ControllerSettings",
+                "out_exit_gamemode1": "out_exit_gamemode1"
+            }
+         }
+    ]
+}

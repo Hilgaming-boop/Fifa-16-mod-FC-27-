@@ -1,0 +1,66 @@
+{
+    "name": "TeamSelect",
+    "initial":
+    {
+        "targets": ["RedirectSelectTeam"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectSelectTeam",
+            "onEnter":
+            [
+                ["set", ["fromScreen", ".fromScreen"]]
+            ],
+            "states":
+            [
+                {
+                    "name": "inMVNPROD",
+                    "onEnter":
+                    [
+                        ["invoke", [".type"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "friendly",
+                            "targets": ["RedirectFriendlyTeamSelect"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectFriendlyTeamSelect",
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["FriendlyTeamSelect"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FriendlyTeamSelect",
+            "onEnter":
+            [
+                ["loadVVM", ["/flows/mainflow/gamemodes/KickOff/CoachMode/TeamSelect/FriendlyTeamSelect.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE", "fromScreen" : ".fromScreen" }]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,421 @@
+{
+    "commonName": "Panel",
+    "name": "hudParent",
+	"alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+	"behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "alignH": "LEFT",
+            "icon": "$FooterIconBack",
+            "label": "BACK"
+        },
+		{
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cycle",
+            "actionName": "act_cycle_hud",
+            "alignH": "RIGHT",
+            "icon": "$FooterIconBack",
+			"autoDisable": false,
+            "label": "CYCLE"
+        }
+    ],
+    "children":
+    [
+		{
+			"commonName": "Panel",
+			"name": "hudContainer",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"marginTop": 90,
+			"marginBottom": 60,
+			"marginLeft": 10,
+			"marginRight": 10,
+			"children":
+			[
+				{
+					"commonName": "Rectangle",
+					"name": "dummyScreenBounds",
+					"alignH": "FILL",
+					"alignV": "FILL",
+					"drawFill": false,
+					"drawOutline": true,
+					"outlineThickness": 2,
+					"outlineColor": "$COLOR_OLIVE"
+				},
+				{
+					"commonName": "Label",
+					"name": "infoMessage",
+					"alignH": "FILL",
+					"alignV": "CENTER",
+					"height": 50,
+					"styles": ["TF_SQDMGMT_BUTTONS"],
+					"text": "click on the cycle button at the bottom to switch between HUD Overlays",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_info_message_visible"
+						}
+					]
+				},
+                {
+					"commonName": "ScoreClock",
+					"alignH": "CENTER",
+					"alignV": "TOP",
+					"marginTop": -4,
+					"visible": false,
+					"bindings":
+					[
+						{
+							"property": "extraTimeVisible",
+							"binding":  "bnd_extra_time_visible"
+						},
+						{
+							"property": "nationalization",
+							"binding":  "bnd_nationalization"
+						},
+						{
+							"property": "homeTeam",
+							"binding":  "bnd_home_team_name"
+						},
+						{
+							"property": "awayTeam",
+							"binding":  "bnd_away_team_name"
+						},
+						{
+							"property": "dividerString",
+							"binding":	"bnd_divider_string"
+						},
+						{
+							"property": "homeScore",
+							"binding":  "bnd_home_team_score"
+						},
+						{
+							"property": "awayScore",
+							"binding":  "bnd_away_team_score"
+						},
+						{
+							"property": "time",
+							"binding":  "bnd_time_remaining"
+						},
+						{
+							"property": "extraTime",
+							"binding":  "bnd_extraTime_remaining"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_scoreclock_visible"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha"
+						}
+					]
+				},
+				{
+					"commonName": "Substitution",
+					"name": "substitution",
+					"alignH": "CENTER",
+					"alignV": "BOTTOM",
+					"marginBottom": 20,
+					"visible": false,
+					"bindings":
+					[
+						{
+							"property": "nationalization",
+							"binding":  "bnd_subs_nationalization"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_substitution_visible"
+						},
+						{
+							"property": "data",
+							"binding":  "bnd_subs_info"
+						}
+					]
+				},
+				{
+					"commonName": "GameEvents",
+					"name": "gameEvents",
+					"alignH": "CENTER",
+					"alignV": "BOTTOM",
+					"marginBottom": 20,
+					"visible": false,
+					"bindings":
+					[
+						{
+							"property": "nationalization",
+							"binding":  "bnd_gameevents_nationalization"
+						},
+						{
+							"property": "data",
+							"binding":  "bnd_game_event_info"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_gameevents_visible"
+						}
+					]
+				},
+				{
+					"commonName": "Mentality",
+					"alignH": "CENTER",
+					"alignV": "TOP",
+					"marginTop": 32,
+					"orientation": "left",
+					"bindings":
+					[
+						{
+							"property": "mentality",
+							"binding":  "bnd_home_mentality"
+						},
+						{
+							"property": "label",
+							"binding":  "bnd_home_label"
+						},
+						{
+							"property": "active",
+							"binding":  "bnd_home_active"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_mentality_visible"
+						}
+					]
+				},
+                {
+                    "commonName": "GenericButton",
+                    "name": "mentalitySwitchButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 40.0,
+                    "width": 200.0,
+                    "clickAction": "act_switch_mentality",
+					"label": "Switch Mentality",
+                    "textStyles":
+                    [
+                        "TF_PLAY_OR_SIM_BUTTONS"
+                    ],
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_mentality_visible"
+						}
+					]
+                },
+				{
+					"commonName": "MatchInfo",
+					"alignH": "CENTER",
+					"alignV": "BOTTOM",
+					"marginBottom": 20,
+					"bindings":
+					[
+						{
+							"property": "nationalization",
+							"binding":  "bnd_nationalization"
+						},
+						{
+							"property": "data",
+							"binding":  "bnd_match_info"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_match_info_visible"
+						}
+					]
+				},
+				{
+					"commonName": "MatchInfoNPC",
+					"alignH": "CENTER",
+					"alignV": "BOTTOM",
+					"marginBottom": 20,
+					"bindings":
+					[
+						{
+							"property": "nationalization",
+							"binding":  "bnd_matchinfonpc_nationalization"
+						},
+						{
+							"property": "data",
+							"binding":  "bnd_npc_info"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_matchinfonpc_visible"
+						}
+					]
+				},
+				{
+					"commonName": "Panel",
+					"name": "hudContainer",
+					"alignH": "FILL",
+					"alignV": "FILL",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_playernib_active"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_playernib_alpha"
+						}
+					],
+					"children":
+					[
+						{
+							"commonName": "Asset",
+							"name": "NIBBackgroundLeft",
+							"alignH": "LEFT",
+							"alignV": "TOP",
+							"width": 60,
+							"height": 36,
+							"type": "$NIBBackgroundSide"
+						},
+						{
+							"commonName": "Asset",
+							"name": "NIBBackgroundMid",
+							"alignH": "FILL",
+							"alignV": "TOP",
+							"height": 36,
+							"marginLeft": 60,
+							"marginRight": 60,
+							"type": "$NIBBackgroundStretch"
+						},
+						{
+							"commonName": "Asset",
+							"name": "NIBBackgroundRight",
+							"alignH": "RIGHT",
+							"alignV": "TOP",
+							"width": 60,
+							"height": 36,
+							"rotationY": 180,
+							"marginRight": -60,
+							"type": "$NIBBackgroundSide"
+						}
+					]
+				},
+				{
+					"commonName": "PlayerNIB",
+					"name": "playerNIBHome",
+					"alignH": "LEFT",
+					"alignV": "TOP",
+					"marginLeft": 10,
+					"visible": false,
+					"orientation": "left",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_playernib_active"
+						},
+						{
+							"property": "dataProviders",
+							"binding":  "bnd_playernib_player_info"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_playernib_alpha"
+						},
+						{
+							"property": "stamina",
+							"binding":  "bnd_playernib_stamina"
+						}
+					]
+				},
+				{
+					"commonName": "PlayerNIB",
+					"name": "playerNIBAway",
+					"visible": false,
+					"orientation": "right",
+					"alignH": "RIGHT",
+					"alignV": "TOP",
+					"marginRight": 10,
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_playernib_active"
+						},
+						{
+							"property": "dataProviders",
+							"binding":  "bnd_playernib_player_info"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_playernib_alpha"
+						},
+						{
+							"property": "stamina",
+							"binding":  "bnd_playernib_stamina"
+						}
+					]
+				},
+				{
+					"commonName":   "EventInfo",
+					"name":         "eventInfo",
+					"alignH":       "CENTER",
+					"alignV":       "TOP",
+					"marginTop":    33,
+					"marginLeft":   -189,
+					"bindings":
+					[
+						{
+							"property": "nationalization",
+							"binding":  "bnd_nationalization_event_info"
+						},
+						{
+							"property": "data",
+							"binding":  "bnd_data_event_info"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_visible_event_info"
+						},
+						{
+							"property": "alpha",
+							"binding":  "bnd_alpha_event_info"
+						}
+					]
+				},
+				{
+					"commonName": "SkillGamesInfo",
+					"alignH": "CENTER",
+					"alignV": "TOP",
+					"bindings":
+					[
+						{
+							"property": "nationalization",
+							"binding":  "bnd_skill_games_info_nationalization"
+						},
+						{
+							"property": "data",
+							"binding":  "bnd_skill_games_info"
+						},
+						{
+							"property": "visible",
+							"binding":  "bnd_skill_games_info_visible"
+						}
+					]
+				}
+			]
+		}
+    ]
+}

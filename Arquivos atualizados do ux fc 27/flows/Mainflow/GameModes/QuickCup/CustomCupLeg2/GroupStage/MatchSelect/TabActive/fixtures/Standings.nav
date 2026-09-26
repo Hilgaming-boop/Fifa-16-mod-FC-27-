@@ -1,0 +1,364 @@
+{
+  "name": "Standings",
+  "initial": {
+    "targets": [
+      "MenuStandings"
+    ]
+  },
+  "states": [
+    {
+      "name": "MenuStandings",
+      "initial": {
+        "targets": [
+          "RedirectGroupStage"
+        ]
+      },
+      "onEnter": [
+        [
+          "blockingLoadVVM",
+          [
+            "Standings.vvm"
+          ]
+        ]
+      ],
+      "onExit": [
+        [
+          "unloadVVM"
+        ]
+      ],
+      "states": [
+        {
+          "name": "RedirectAllStandings",
+          "initial": {
+            "targets": [
+              "AllStandings"
+            ]
+          },
+          "states": [
+            {
+              "name": "AllStandings",
+              "onEnter": [
+                [
+                  "blockingLoadVVM",
+                  [
+                    "/flows/MainFlow/GameModes/QuickCup/CustomCupLeg2/GroupStage/MatchSelect/TabActive/fixtures/Standings/AllStandings.vvm"
+                  ]
+                ]
+              ],
+              "onExit": [
+                [
+                  "unloadVVM"
+                ]
+              ]
+            }
+          ],
+          "transitions": [
+            {
+              "event": "evt_groupstage",
+              "targets": [
+                "RedirectGroupStage"
+              ]
+            },
+            {
+              "event": "evt_quarter_final",
+              "targets": [
+                "RedirectQuarterFinal"
+              ]
+            },
+            {
+              "event": "evt_semi_final",
+              "targets": [
+                "RedirectSemiFinal"
+              ]
+            },
+            {
+              "event": "evt_final",
+              "targets": [
+                "RedirectFinal"
+              ]
+            },
+            {
+              "event": "evt_knockout",
+              "targets": [
+                "RedirectKnockout"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RedirectGroupStage",
+          "states": [
+            {
+              "name": "GroupStage",
+              "onEnter": [
+                [
+                  "blockingLoadVVM",
+                  [
+                    "/flows/MainFlow/GameModes/QuickCup/CustomCupLeg2/GroupStage/MatchSelect/TabActive/fixtures/GroupStage/GroupStage.vvm"
+                  ]
+                ]
+              ],
+              "onExit": [
+                [
+                  "unloadVVM"
+                ]
+              ]
+            }
+          ],
+          "transitions": [
+            {
+              "event": "evt_allstandings",
+              "targets": [
+                "RedirectAllStandings"
+              ]
+            },
+            {
+              "event": "evt_quarter_final",
+              "targets": [
+                "RedirectQuarterFinal"
+              ]
+            },
+            {
+              "event": "evt_semi_final",
+              "targets": [
+                "RedirectSemiFinal"
+              ]
+            },
+            {
+              "event": "evt_final",
+              "targets": [
+                "RedirectFinal"
+              ]
+            },
+            {
+              "event": "evt_knockout",
+              "targets": [
+                "RedirectKnockout"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RedirectSemiFinal",
+          "states": [
+            {
+              "name": "SemiFinal",
+              "onEnter": [
+                [
+                  "blockingLoadVVM",
+                  [
+                    "/flows/MainFlow/GameModes/QuickCup/CustomCupLeg2/GroupStage/MatchSelect/TabActive/fixtures/SemiFinal/SemiFinal.vvm"
+                  ]
+                ]
+              ],
+              "onExit": [
+                [
+                  "unloadVVM"
+                ]
+              ]
+            }
+          ],
+          "transitions": [
+            {
+              "event": "evt_allstandings",
+              "targets": [
+                "RedirectAllStandings"
+              ]
+            },
+            {
+              "event": "evt_quarter_final",
+              "targets": [
+                "RedirectQuarterFinal"
+              ]
+            },
+            {
+              "event": "evt_groupstage",
+              "targets": [
+                "RedirectGroupStage"
+              ]
+            },
+            {
+              "event": "evt_final",
+              "targets": [
+                "RedirectFinal"
+              ]
+            },
+            {
+              "event": "evt_knockout",
+              "targets": [
+                "RedirectKnockout"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RedirectFinal",
+          "states": [
+            {
+              "name": "Final",
+              "onEnter": [
+                [
+                  "blockingLoadVVM",
+                  [
+                    "/flows/MainFlow/GameModes/QuickCup/CustomCupLeg2/GroupStage/MatchSelect/TabActive/fixtures/Final/Final.vvm"
+                  ]
+                ]
+              ],
+              "onExit": [
+                [
+                  "unloadVVM"
+                ]
+              ]
+            }
+          ],
+          "transitions": [
+            {
+              "event": "evt_allstandings",
+              "targets": [
+                "RedirectAllStandings"
+              ]
+            },
+            {
+              "event": "evt_quarter_final",
+              "targets": [
+                "RedirectQuarterFinal"
+              ]
+            },
+            {
+              "event": "evt_groupstage",
+              "targets": [
+                "RedirectGroupStage"
+              ]
+            },
+            {
+              "event": "evt_semi_final",
+              "targets": [
+                "RedirectSemiFinal"
+              ]
+            },
+            {
+              "event": "evt_knockout",
+              "targets": [
+                "RedirectKnockout"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RedirectQuarterFinal",
+          "states": [
+            {
+              "name": "QuarterFinal",
+              "onEnter": [
+                [
+                  "blockingLoadVVM",
+                  [
+                    "/flows/MainFlow/GameModes/QuickCup/CustomCupLeg2/GroupStage/MatchSelect/TabActive/fixtures/QuarterFinal/QuarterFinal.vvm"
+                  ]
+                ]
+              ],
+              "onExit": [
+                [
+                  "unloadVVM"
+                ]
+              ]
+            }
+          ],
+          "transitions": [
+            {
+              "event": "evt_allstandings",
+              "targets": [
+                "RedirectAllStandings"
+              ]
+            },
+            {
+              "event": "evt_groupstage",
+              "targets": [
+                "RedirectGroupStage"
+              ]
+            },
+            {
+              "event": "evt_semi_final",
+              "targets": [
+                "RedirectSemiFinal"
+              ]
+            },
+            {
+              "event": "evt_final",
+              "targets": [
+                "RedirectFinal"
+              ]
+            },
+            {
+              "event": "evt_knockout",
+              "targets": [
+                "RedirectKnockout"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RedirectKnockout",
+          "states": [
+            {
+              "name": "Knockout",
+              "onEnter": [
+                [
+                  "blockingLoadVVM",
+                  [
+                    "/flows/MainFlow/GameModes/QuickCup/CustomCupLeg2/GroupStage/MatchSelect/TabActive/fixtures/Knockout/Knockout.vvm"
+                  ]
+                ]
+              ],
+              "onExit": [
+                [
+                  "unloadVVM"
+                ]
+              ]
+            }
+          ],
+          "transitions": [
+            {
+              "event": "evt_allstandings",
+              "targets": [
+                "RedirectAllStandings"
+              ]
+            },
+            {
+              "event": "evt_quarter_final",
+              "targets": [
+                "RedirectQuarterFinal"
+              ]
+            },
+            {
+              "event": "evt_semi_final",
+              "targets": [
+                "RedirectSemiFinal"
+              ]
+            },
+            {
+              "event": "evt_final",
+              "targets": [
+                "RedirectFinal"
+              ]
+            },
+            {
+              "event": "evt_groupstage",
+              "targets": [
+                "RedirectGroupStage"
+              ]
+            }
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "event": "evt_back",
+          "targets": [
+            "out_exit_gamemode1"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "children": [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Kick"
+        },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 86,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Back"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 150,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon1",
+          "clickAction": "act_confirm"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 200,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Confirm"
+        }
+	  ]
+	},
+    {
+      "commonName": "Panel",
+      "name": "ContentPanelContainer",
+      "alignV": "TOP",
+      "alignH": "FILL",
+	  "marginTop": 20,
+	  "width": 1200,
+	  "height": 570,
+      "children": [
+        {
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginLeft": 50,
+            "marginTop": 60,
+            "width": 670,
+            "height": 370,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "alpha": 1
+                },
+            {
+              "commonName": "Image",
+              "name": "Trophy",
+              "alignH": "FILL",
+              "alignV": "FILL",
+              "bindings": [
+                {
+                  "binding": "bnd_banner",
+                  "property": "image"
+                }
+              ]
+			},
+            {
+              "commonName": "Label",
+              "name": "CupLabel",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+			  "marginTop": 10,
+			  "marginLeft": 10,
+              "fontSize": 25,
+			  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+              "color": "0xffffff",
+              "bindings": [
+                {
+                  "binding": "bnd_cup_label",
+                  "property": "text"
+                }
+              ]
+            }
+			]
+			},
+            {
+              "commonName": "Image",
+              "name": "Trophy",
+              "alignH": "RIGHT",
+              "alignV": "BOTTOM",
+              "marginRight": -50,
+              "scaleX": 0.4,
+              "scaleY": 0.4,
+              "bindings": [
+                {
+                  "binding": "bnd_trophy",
+                  "property": "image"
+                }
+              ]
+            }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "GridContainer",
+      "alignV": "BOTTOM",
+      "alignH": "CENTER",
+      "height": 220,
+      "width": 1300,
+      "marginBottom": 20,
+      "children": [
+        {
+          "commonName": "GridTable",
+          "name": "CupHubGrid",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "height": 100,
+          "width": 1300,
+          "columns": 5,
+          "rows": 1,
+          "hasArrows": true,
+          "consumeInput": true,
+          "resetPageOnData": false,
+          "hasBulletIndicator": false,
+          "itemType": "FilterCell",
+          "cellIndexChangeAction": {
+            "action": "act_change",
+            "binding": "bnd_selected_index"
+          },
+          "bindings": [
+            {
+              "binding": "bnd_default_cell_data",
+              "property": "selectedCellID"
+            },
+            {
+              "binding": "bnd_live_menu",
+              "property": "dataProviders"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

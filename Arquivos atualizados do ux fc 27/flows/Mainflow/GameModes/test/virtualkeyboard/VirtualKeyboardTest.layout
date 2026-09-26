@@ -1,0 +1,48 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "alignH": "LEFT",
+            "icon": "$FooterIconBack",
+            "label": "BACK"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Group",
+            "name": "content",
+            "alignH": "CENTER",
+            "height": 50.0,
+            "marginTop": 230.0,
+            "width": 541.0,
+            "children":
+            [
+                {
+                    "commonName": "InputTextField",
+                    "name": "typeDigits",
+                    "width": 201.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "helpText": "Type digits here",
+                    "inputType": "0-9",
+                    "keyboardLayout": "DIGITS"
+                },
+                {
+                    "commonName": "InputTextField",
+                    "name": "typeText",
+                    "width": 200.0,
+                    "x": 340.0,
+                    "y": 0.0,
+                    "helpText": "Type text here"
+                }
+            ]
+        }
+    ]
+}

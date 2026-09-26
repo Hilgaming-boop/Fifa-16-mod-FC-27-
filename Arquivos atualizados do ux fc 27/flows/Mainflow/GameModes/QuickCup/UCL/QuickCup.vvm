@@ -1,0 +1,11 @@
+{
+	"dds": [
+    "QuickCup.dd",
+    "MatchSelect/MatchSelect.dd"
+    ],
+    "vms": [
+    ["lua", "QuickCup.lua"],
+    ["lua", "MatchSelect/MatchSelect.lua"]
+    ],
+    "views": [["gfx", {"layout": "QuickCup.layout"}]]
+}

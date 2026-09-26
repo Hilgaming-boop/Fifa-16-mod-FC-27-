@@ -1,0 +1,371 @@
+/*-- Mod By MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "InfoPergantianPemain",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 85,
+            "marginLeft": -450,
+            "width": 350,
+            "height": 100,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_visible",
+                    "property": "visible"
+                },
+                {
+                    "binding": "bnd_alpha",
+                    "property": "alpha"
+                }
+            ],
+            "children":
+            [
+
+                {
+                    "commonName": "Panel",
+                    "name": "Bg1Home",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "bindings":
+                            [
+                                {
+                                   "property": "visible",
+                                   "binding":  "bnd_bg1homeaway_show"
+                                },
+                                {
+                                   "property": "alignH",
+                                   "binding":  "bnd_bg1home_alignH"
+                                },
+                                {
+                                   "property": "alignV",
+                                   "binding":  "bnd_bg1home_alignV"
+                                },
+                                {
+                                   "property": "width",
+                                   "binding":  "bnd_bg1_width"
+                                },
+                                {
+                                   "property": "height",
+                                   "binding":  "bnd_bg1_height"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bg1_color"
+                                        },
+                                        {
+                                            "property": "visible",
+                                            "binding":  "bnd_home_crest_show"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "fontSize": 15,
+                                    "marginTop": 1,
+                                    "marginLeft": 0,
+                                    "alpha": 0,
+                                    "text": "SUBSTITUTION",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "fontColor",
+                                            "binding":  "bnd_textsub_fontColor"
+                                        },
+                                        {
+                                            "property": "visible",
+                                            "binding":  "bnd_home_crest_show"
+                                        }
+                                    ]
+                                 }
+                             ]
+                          }
+                      ]
+                  },
+                  {
+     "commonName": "Panel",
+     "name": "BagianPlayer",
+     "alignH": "LEFT",
+     "alignV": "TOP",
+     "height": 80,
+     "width": 400,
+     "bindings":
+     [
+          {
+               "property": "alignV",
+               "binding":  "bnd_bg2_alignV"
+          }
+     ],
+     "children":
+     [
+          {
+               "commonName": "Image",
+               "name": "BackgroundSub",
+               "alignH": "CENTER",
+               "alignV": "CENTER",
+               "bindings":
+               [
+                    { "property": "image", "binding": "bnd_background_sub" },
+                    { "property": "marginLeft", "binding": "bnd_background_sub_left" },
+                    { "property": "marginTop", "binding": "bnd_background_sub_top" },
+                    { "property": "width", "binding": "bnd_background_sub_width" },
+                    { "property": "height", "binding": "bnd_background_sub_height" }
+               ]
+          },
+                                {
+                                    "commonName": "Image",
+                                    "name": "HomeCrest",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_home_crest"
+                                        },
+                                        {
+                                            "property": "alignV",
+                                            "binding":  "bnd_home_crest_alignV"
+                                        },
+                                        { 
+                                            "property": "alignH", 
+                                            "binding":  "bnd_Inplayer_name_alignH" 
+                                        },
+                                        { 
+                                            "property": "marginLeft", 
+                                            "binding": "bnd_home_crest_left" 
+                                        },
+                                        { 
+                                            "property": "marginRight", 
+                                            "binding": "bnd_home_crest_right" 
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_home_crest_bottom"
+                                        },
+                                        {
+                                            "property": "marginTop",
+                                            "binding":  "bnd_home_crest_top"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_home_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_home_crest_height"
+                                        },
+                                        {
+                                            "property": "visible",
+                                            "binding":  "bnd_home_crest_show"
+                                        }
+                                    ]
+                                 },
+          {
+               "commonName": "Rectangle",
+               "alignH": "FILL",
+               "alignV": "FILL",
+               "alpha": 0,
+               "bindings":
+               [
+                    {
+                         "property": "color",
+                         "binding":  "bnd_bg2_color"
+                    }
+               ]
+          },
+          {
+               "commonName": "Image",
+               "name": "InAvatar",
+               "alignH": "LEFT",
+               "alignV": "TOP",
+               "bindings":
+               [
+                    { "property": "image", "binding": "bnd_Inplayer_avatar" },
+                    { "property": "marginLeft", "binding": "bnd_Inplayer_avatar_left" },
+                    { "property": "marginTop", "binding": "bnd_Inplayer_avatar_top" },
+                    { "property": "width", "binding": "bnd_Inplayer_avatar_width" },
+                    { "property": "height", "binding": "bnd_Inplayer_avatar_height" }
+               ]
+          },
+          {
+               "commonName": "Label",
+               "name": "InNumber",
+               "alignH": "CENTER",
+               "alignV": "TOP",
+               "forceCaps":  true,
+               "bindings":
+               [
+                    { "property": "text", "binding": "bnd_Inplayer_number" },
+                    { "property": "fontColor", "binding": "bnd_InOut_name_fontColor" },
+                    { "property": "marginLeft", "binding": "bnd_Inplayer_number_left" },
+                    { "property": "marginTop", "binding": "bnd_Inplayer_number_top" },
+                    { "property": "fontFace", "binding":  "bnd_fontFace" },
+                    { "property": "fontSize", "binding": "bnd_Inplayer_number_fontSize" }
+               ]
+          },
+          {
+               "commonName": "Label",
+               "name": "InName",
+               "autoScroll": true,
+               "bindings":
+               [
+                    { "property": "alignH", "binding":  "bnd_Inplayer_name_alignH" },
+                    { "property": "alignV", "binding":  "bnd_Inplayer_name_alignV" },
+                    { "property": "text", "binding": "bnd_Inplayer_name" },
+                    { "property": "fontColor", "binding": "bnd_InOut_name_fontColor" },
+                    { "property": "marginLeft", "binding": "bnd_Inplayer_name_left" },
+                    { "property": "marginRight", "binding": "bnd_Inplayer_name_right" },
+                    { "property": "marginTop", "binding": "bnd_Inplayer_name_top" },
+                    { "property": "fontFace", "binding":  "bnd_fontFace" },
+                    { "property": "forceCaps", "binding":  "bnd_forceCaps" },
+                    { "property": "width", "binding": "bnd_InOut_name_width" },
+                    { "property": "fontSize", "binding": "bnd_Inplayer_name_fontSize" }
+               ]
+          },
+          {
+               "commonName": "Image",
+               "name": "OutAvatar",
+               "alignH": "LEFT",
+               "alignV": "TOP",
+               "bindings":
+               [
+                    { "property": "image", "binding": "bnd_Outplayer_avatar" },
+                    { "property": "marginLeft", "binding": "bnd_Outplayer_avatar_left" },
+                    { "property": "marginTop", "binding": "bnd_Outplayer_avatar_top" },
+                    { "property": "width", "binding": "bnd_Outplayer_avatar_width" },
+                    { "property": "height", "binding": "bnd_Outplayer_avatar_height" }
+               ]
+          },
+          {
+               "commonName": "Label",
+               "name": "OutNumber",
+               "alignH": "CENTER",
+               "alignV": "TOP",
+               "forceCaps":  true,
+               "bindings":
+               [
+                    { "property": "text", "binding": "bnd_Outplayer_number" },
+                    { "property": "fontColor", "binding": "bnd_InOut_name_fontColor" },
+                    { "property": "marginLeft", "binding": "bnd_Outplayer_number_left" },
+                    { "property": "marginTop", "binding": "bnd_Outplayer_number_top" },
+                    { "property": "fontFace", "binding":  "bnd_fontFace" },
+                    { "property": "fontSize", "binding": "bnd_Outplayer_number_fontSize" }
+               ]
+          },
+          {
+               "commonName": "Label",
+               "name": "OutName",
+               "autoScroll": true,
+               "bindings":
+               [
+                    { "property": "alignH", "binding":  "bnd_Outplayer_name_alignH" },
+                    { "property": "alignV", "binding":  "bnd_Outplayer_name_alignV" },
+                    { "property": "text", "binding": "bnd_Outplayer_name" },
+                    { "property": "fontColor", "binding": "bnd_InOut_name_fontColor" },
+                    { "property": "marginLeft", "binding": "bnd_Outplayer_name_left" },
+                    { "property": "marginRight", "binding": "bnd_Outplayer_name_right" },
+                    { "property": "marginTop", "binding": "bnd_Outplayer_name_top" },
+                    { "property": "fontFace", "binding":  "bnd_fontFace" },
+                    { "property": "forceCaps", "binding":  "bnd_forceCaps" },
+                    { "property": "width", "binding": "bnd_InOut_name_width" },
+                    { "property": "fontSize", "binding": "bnd_Outplayer_name_fontSize" }
+               ]
+          }
+     ]
+},
+                        {
+                            "commonName": "Panel",
+                            "name": "BagianHome",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "bindings":
+                            [
+                                {
+                                   "property": "alignV",
+                                   "binding":  "bnd_bghomeaway_alignV"
+                                },
+                                {
+                                   "property": "width",
+                                   "binding":  "bnd_bghome_width"
+                                },
+                                {
+                                   "property": "height",
+                                   "binding":  "bnd_bghome_height"
+                                },
+                                {
+                                   "property": "marginLeft",
+                                   "binding":  "bnd_bghome_left"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "alpha": 0,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "color",
+                                            "binding":  "bnd_bghome_color"
+                                        },
+                                        {
+                                            "property": "visible",
+                                            "binding":  "bnd_home_crest_show"
+                                        }
+                                    ]
+                                }
+                             ]
+                         }
+                    ]
+                },
+                {
+                    "commonName": "ScoreboardSubstitutions",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "visible": false,
+                    "bindings":
+                    [
+                       {
+                           "binding": "bnd_nationalization",
+                           "property": "nationalization"
+                       },
+                       {
+                           "binding": "bnd_data",
+                           "property": "data"
+                       }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+/*-- Mod By MVNPROD Youtube Channel --*/

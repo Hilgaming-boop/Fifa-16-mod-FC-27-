@@ -1,0 +1,1711 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "children":
+    [   
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BGmatchgadePOST"     
+       },
+       { 
+            "commonName": "Asset",           
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 35,
+            "marginLeft": 100,
+            "height": 60,
+            "width": 70,
+            "type": "$LogoFC24_2_"
+       },
+       {
+            "commonName": "Panel",
+            "name": "MenuPostMatch",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 900,
+            "height": 460,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianInfoTim&Skor",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -30,
+                    "marginLeft": -30,
+                    "width": 1150,
+                    "height": 120,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$yap"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 4.5,
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$ZHFont-Expanded",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoWaktu",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -15,
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$ZHFont-Expanded",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_nama_stadion",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoHasilAduPinalti",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_shootout_result",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoHasil",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 40,
+                            "fontSize": 35,
+                            "fontColor": "$COLOR_WHITE",
+                            
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_result",
+                                    "property": "text"
+                                }
+                            ]
+                       },
+                       {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 40,
+                            "marginLeft": -250,
+                            "fontSize": 35,
+                            "fontColor": "$COLOR_WHITE",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimAway",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 40,
+                            "marginRight": -250,
+                            "fontSize": 35,
+                            "fontColor": "$COLOR_WHITE",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                       },
+                       {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "scaleX": 0.35,
+                            "scaleY": 0.35,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "scaleX": 0.35,
+                            "scaleY": 0.35,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "name": "UIFrame",
+                    "alignV": "CENTER",
+                    "alignH": "FILL",
+                    "height": 580,
+                    "children":
+                   [
+                     {
+                        "commonName": "Label",
+                        "alignV": "TOP",
+                       "alignH": "CENTER",
+                       "marginTop": 35,
+                       "marginLeft": -25,
+                       "fontSize": 17,
+                       "fontColor": "$COLOR_WHITE",
+                       "bindings":
+                       [
+                          { 
+                              "binding": "bnd_match_type",
+                              "property": "text"
+                          }
+                       ]
+                    }
+                  ]      
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianPerfomance",
+                    "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -5265,
+            "marginLeft": -155,
+                    
+                    "width": 574,
+                    "height": 10,
+                    
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "FILL",
+                            "height": 10,
+                            "alpha": 0,
+                            "color": "0x1e1e1e"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "BOTTOM",
+                            "alignH": "FILL",
+                            "height": 140,
+                            "alpha": 0.9,
+                            "color": "0x1e1e1e"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Info",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 8,
+                            "fontSize": 24,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": "PLAYER FERMORMANCE"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "txt",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 50,
+                            "marginLeft": -33,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": "SHOOT"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "txt",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 50,
+                            "marginLeft": 75,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": "SKILL"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "txt",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 50,
+                            "marginLeft": 186,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": "ROUND"
+                        },
+                        {
+		                    "commonName": "Image",
+		                    "name": "PlayerHead",
+		                    "alignH": "LEFT",
+		                    "alignV": "CENTER",
+		                    "marginLeft": 20,
+		                    "marginBottom": 75,
+                            "scaleX": 0.2,
+                            "scaleY": 0.2,
+                            "bindings":
+		                    [
+		                         {
+		                             "binding": "bnd_home_team_crest3",
+		                             "property": "image"
+		                       }
+		                 ]
+                      },            
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsWon1",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 30,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0x43EA48",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_w1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsWon2",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -80,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0xFFE30D",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_w2",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsWon3",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -190,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0xFF8613",
+                           "fontFace": "$FONT_HEADER",
+                           "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_w3",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarWon1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 30,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar5",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_won_footer_visible",
+                                    "property": "visible"
+                                }
+                           ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarWon2",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -80,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar3",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_won_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarWon3",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -190,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar2",
+                            "bindings":
+                             [
+                                {
+                                      "binding": "bnd_match_won_footer_visible",
+                                      "property": "visible"
+                                }
+                           ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsLose1",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 30,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0x7EFD00",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsLose2",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -80,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0xFFE30D",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                     [
+			                       {
+			                            "binding": "bnd_match_lost_footer_visible",
+			                            "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l2",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsLose3",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -190,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0xFF8613",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                     [
+			                      {
+			                           "binding": "bnd_match_lost_footer_visible",
+			                           "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l3",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarLose1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 30,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar4",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_lost_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarLose2",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -80,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar3",
+                            "bindings":
+                            [
+                                {
+                                       "binding": "bnd_match_lost_footer_visible",
+                                       "property": "visible"
+                                }
+                           ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarLose3",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -190,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar2",
+                            "bindings":
+                            [
+                                 {
+                                       "binding": "bnd_match_lost_footer_visible",
+                                       "property": "visible"
+                                 }
+                           ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsDraw1",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 30,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0x7EFD00",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_draw_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_d1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsDraw2",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -80,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0xFFE30D",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                     [
+			                      {
+			                           "binding": "bnd_match_draw_footer_visible",
+			                           "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_d2",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsDraw3",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -190,
+		                    "marginBottom": 55,
+                            "fontSize": 25,
+                            "fontColor": "0xFF8613",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                     [
+			                    {
+			                        "binding": "bnd_match_draw_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_d3",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarDraw1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 30,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar4",
+                            "bindings":
+                            [
+                                  {
+                                         "binding": "bnd_match_draw_footer_visible",
+                                         "property": "visible"
+                                  }
+                            ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarDraw2",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -80,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar3",
+                            "bindings":
+                            [
+                                 {
+                                      "binding": "bnd_match_draw_footer_visible",
+                                      "property": "visible"
+                                }
+                           ]
+                      },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarDraw3",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": -190,
+		                    "marginBottom": 55,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar2",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_draw_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                      },
+                      {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 35,
+                            "fontSize": 24,
+                            "fontColor": "$COLOR_WHITE",
+                     
+                            "text": "TEAM PERFORMANCE"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 20,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": "HOME"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": 70,
+                            "marginRight": 20,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": "AWAY"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "matchFactsBGPitch",
+                            "alignH": "CENTER",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 30,
+                            "height": 80,
+                            "width": 400,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 0.35,
+                            "type": "$pitchviewpausemenu"
+                        },           
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 80,
+                            "marginBottom": 80,
+                            "scaleX": 0.2,
+                            "scaleY": 0.2,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image",
+                                  "required": true
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 80,
+                            "marginBottom": 80,
+                            "scaleX": 0.2,
+                            "scaleY": 0.2,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image",
+                                  "required": true
+                               }
+                            ]
+                        },
+                        {
+		                    "commonName": "Label",
+		                    "name": "StatsWonHome",
+		                    "width": 40.0,
+		                    "alignH": "LEFT",
+		                    "alignV": "BOTTOM",
+		                    "marginLeft": 25,
+		                    "marginBottom": 70,
+                            "fontSize": 25,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_home_w",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                        },
+                        {
+		                    "commonName": "Label",
+		                    "name": "StatsLoseHome",
+		                    "width": 40.0,
+		                    "alignH": "LEFT",
+		                    "alignV": "BOTTOM",
+		                    "marginLeft": 25,
+		                    "marginBottom": 70,
+                            "fontSize": 25,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$FONT_HEADER",
+                           "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_home_l",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                        },
+                        {
+		                    "commonName": "Label",
+		                    "name": "StatsDrawHome",
+		                    "width": 40.0,
+		                    "alignH": "LEFT",
+		                    "alignV": "BOTTOM",
+		                    "marginLeft": 25,
+		                    "marginBottom": 70,
+                            "fontSize": 25,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_draw_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_home_d",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsWonAway",
+		                    "width": 40.0,
+		                    "alignH": "RIGHT",
+		                    "alignV": "BOTTOM",
+		                    "marginRight": 25,
+		                    "marginBottom": 70,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_EAFC24",
+                           "fontFace": "$FONT_HEADER",
+                           "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_away_w",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsLoseAway",
+		                    "width": 40.0,
+		                    "alignH": "RIGHT",
+		                    "alignV": "BOTTOM",
+		                    "marginRight": 25,
+		                    "marginBottom": 70,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_EAFC24",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_away_l",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsDrawAway",
+		                    "width": 40.0,
+		                    "alignH": "RIGHT",
+		                    "alignV": "BOTTOM",
+		                    "marginRight": 25,
+		                    "marginBottom": 70,
+                            "fontSize": 25,
+                           "fontColor": "$COLOR_EAFC24",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_draw_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_away_d",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      }                   
+                  ]
+               },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMatchFacts",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom" : 247,
+                    "marginLeft": 265.0,
+                    "width": 555,
+                    "height": 373.9,                  
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "FILL",
+                            "height": 381,
+                            "alpha": 0.9,
+                            "marginTop" : 265,
+                            "color": "0x1e1e1e"
+                            
+                  },
+                  {
+                    "commonName": "VerticalList",
+                    "alignH": "FILL",
+		            "alignV": "FILL",
+		            "marginTop": 465,
+		            "marginLeft": -30.0,
+		            "divider": "$PauseScoreTimeDivider",
+		            "mouseWheelEnabled": false,
+		            "row": "GameMenuRows",
+		            "displayRange": 4,            
+		            "autoScroll": true,
+					"scrollPos": 4,
+					"currentSelectedRow": 4,
+					"enabled": false,
+		            "rowHeight": 40.0,
+		            "rowWidth": 640,
+		            "useAlternating": false,
+		            "alternatingAlpha": 0,
+                    "bindings":
+                     [
+                           {
+                                 "binding": "bnd_match_facts",
+                                 "property": "dataProviders"
+                           }
+                      ]
+                      },
+                        {
+                            "commonName": "Asset",
+                            "name": "matchFactsBGPitch",
+                            "alignH": "CENTER",
+                            "alignV": "BOTTOM",
+                            "marginBottom": -80,
+                            "height": 80,
+                            "width": 400,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 0.35,
+                            "type": "$pitchviewpausemenu"
+                            },
+                      {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 100,
+                            "fontSize": 24,
+                            "fontColor": "$COLOR_WHITE",
+                  
+                            "text": "TEAM PERFORMANCE"
+                            
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 45,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": 240,
+                            "marginRight": 50,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace":"$FONT_HEADER",
+                            "text": ""
+                            },           
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 40,
+                            "marginBottom": -40,
+                            "scaleX": 0.2,
+                            "scaleY": 0.2,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image",
+                                  "required": true
+                               }
+                            ]
+                            },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 40,
+                            "marginBottom": -40,
+                            "scaleX": 0.2,
+                            "scaleY": 0.2,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image",
+                                  "required": true
+                               }
+                            ]
+                            
+                 }
+            ]
+            },
+		                        {
+		                            "commonName": "Label",
+		                            "name": "insLabelHomeTeamName",
+		                            "alignH": "CENTER",
+		                            "alignV": "BOTTOM",
+									"marginLeft": 67,
+									"marginBottom": 180,
+									"fontColor": "$COLOR_WHITE",
+				                    
+		                            "bindings":
+		                            [
+		                                {
+		                                    "binding": "bnd_home_team_name_abbr",
+		                                    "property": "text"
+		                                }
+		                            ],
+		                            "styles":
+		                            [
+		                                "TF_MATCHFACTS_MATCH_STADIUM"
+		                            ]
+            },
+		                        {
+		                            "commonName": "Label",
+		                            "name": "insLabelAwayTeamName",
+		                            "alignH": "RIGHT",
+		                            "alignV": "BOTTOM",
+									"marginRight": -58,
+									"marginBottom": 180,
+									"fontColor": "$COLOR_EAFC24",
+				                    
+		                            "bindings":
+		                            [
+		                                {
+		                                    "binding": "bnd_away_team_name_abbr",
+		                                    "property": "text"
+		                                }
+		                            ],
+		                            "styles":
+		                            [
+		                                "TF_MATCHFACTS_MATCH_STADIUM"
+		                            ]
+            },
+                        {
+		                    "commonName": "Label",
+		                    "name": "StatsWonHome",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "BOTTOM",
+		                    "marginLeft": 51,
+		                    "marginBottom": 180,
+                            "fontSize": 0,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_home_w",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                        },
+                        {
+		                    "commonName": "Label",
+		                    "name": "StatsLoseHome",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "BOTTOM",
+		                    "marginLeft": 51,
+		                    "marginBottom": 180,
+                            "fontSize": 0,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$FONT_HEADER",
+                           "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_home_l",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+            },
+                        {
+		                    "commonName": "Label",
+		                    "name": "StatsDrawHome",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "BOTTOM",
+		                    "marginLeft": 51,
+		                    "marginBottom": 180,
+                            "fontSize": 0,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_draw_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_home_d",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsWonAway",
+		                    "width": 40.0,
+		                    "alignH": "RIGHT",
+		                    "alignV": "BOTTOM",
+		                    "marginRight": -35,
+		                    "marginBottom": 180,
+                            "fontSize": 0,
+                         "fontColor": "$COLOR_EAFC24",
+                           "fontFace": "$FONT_HEADER",
+                           "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_away_w",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsLoseAway",
+		                    "width": 40.0,
+		                    "alignH": "RIGHT",
+		                    "alignV": "BOTTOM",
+		                    "marginRight": -35,
+		                    "marginBottom": 180,
+                            "fontSize": 0,
+                            "fontColor": "$COLOR_EAFC24",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_away_l",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsDrawAway",
+		                    "width": 40.0,
+		                    "alignH": "RIGHT",
+		                    "alignV": "BOTTOM",
+		                    "marginRight": -35,
+		                    "marginBottom": 180,
+                            "fontSize": 0,
+                            "fontColor": "$COLOR_EAFC24",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_team_draw_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_away_d",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+                      }                   
+                  ]
+		
+        },              
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -70,
+            "marginLeft": 125,
+            "height": 140,
+            "width": 280,
+            "scaleY": 0.8,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$playpst",
+            "backgroundHighlightImage": "$playpst",
+            "clickAction": "act_quit_match",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -70,
+            "marginLeft": 420,
+            "height": 140,
+            "width": 280,
+            "scaleY": 0.8,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$restart",
+            "backgroundHighlightImage": "$restart",
+
+            "clickAction": "act_restart_match",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": 60,
+            "marginLeft": 125,
+            "height": 150,
+            "width": 575,
+            "scaleY": 0.8,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$facts",
+            "backgroundHighlightImage": "$facts",
+                        "clickAction": "act_to_match_facts",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+            },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": 195,
+            "marginLeft": 125,
+            "height": 150,
+            "width": 575,
+            "scaleY": 0.8,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$motm",
+            "backgroundHighlightImage": "$motm",
+            "clickAction": "act_to_match_grade",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+            },
+                        {
+		                    "commonName": "Image",
+		                    "name": "PlayerHead",
+		                    "alignH": "LEFT",
+		                    "alignV": "CENTER",
+		                    "marginLeft": 320,
+		                    "marginBottom": -195,
+                            "scaleX": 0.78,
+                            "scaleY": 0.75,
+                            "bindings":
+		                    [
+		                         {
+		                             "binding": "bnd_home_team_crest3",
+		                             "property": "image"
+		                       }
+		                 ]
+						},
+		{
+		                    "commonName": "Image",
+		                    "name": "NameHead",
+		                    "alignH": "CENTER",
+		                    "alignV": "BOTTOM",
+		                    "marginLeft": -220,
+		                    "marginBottom": 110,               
+							"width": 220,
+							"height": 30,
+							"bindings":
+		                            [
+		                                {
+		                                    "binding": "bnd_home_team_crest7",
+		                                    "property": "image"
+		                                }
+		                            ]
+		     },
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarWon1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 80,
+		                    "marginBottom": -195,
+                            "scaleX": 0.40,
+                            "scaleY": 0.40,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar5",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_won_footer_visible",
+                                    "property": "visible"
+                                }
+                           ]
+                           },            
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsWon1",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 82,
+		                    "marginBottom": -195,
+                            "fontSize": 30,
+                            "fontColor": "0x43EA48",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_w1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarDraw1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 80,
+		                    "marginBottom": -195,
+                            "scaleX": 0.40,
+                            "scaleY": 0.40,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar4",
+                            "bindings":
+                            [
+                                  {
+                                         "binding": "bnd_match_draw_footer_visible",
+                                         "property": "visible"
+                                  }
+                            ]
+                            },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsDraw1",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 82,
+		                    "marginBottom": -195,
+                            "fontSize": 30,
+                            "fontColor": "0x7EFD00",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_draw_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_d1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "Image",
+		                    "name": "CircleBarLose1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 80,
+		                    "marginBottom": -195,
+                            "scaleX": 0.40,
+                            "scaleY": 0.40,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar4",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_lost_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                            },
+                      {
+		                    "commonName": "Label",
+		                    "name": "StatsLose1",
+		                    "width": 40.0,
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "marginRight": 82,
+		                    "marginBottom": -195,
+                            "fontSize": 30,
+                            "fontColor": "0x7EFD00",
+                            "fontFace": "$FONT_HEADER",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 160,
+                            "marginLeft": -550,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                  
+                            "text": "Player"
+		},
+                      {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -105,
+                            "marginLeft": -535,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                  
+                            "text": "Advanced"
+		},
+                      {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -105,
+                            "marginLeft": -255,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                  
+                            "text": "Restart"
+		},
+                      {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 25,
+                            "marginLeft": -520,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                  
+                            "text": "Match Facts"
+                            },
+                      {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 190,
+                            "marginLeft": -515,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                  
+                            "text": "Performance"
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": 30,
+            "marginLeft": -12000,
+            "height": 35,
+            "width": 270,
+            "scaleY": 0.8,
+            "multiline": true,
+            "bold": true,
+            "label": "",
+            "icon": "",
+            "backgroundImage": "$_Restart_Match1",
+            "backgroundHighlightImage": "$_Restart_Match1",
+            "clickAction": "act_restart_match",
+             "textStyles":
+            [
+               "TF_BUTTON"
+            ]
+                }
+                     ]
+                        }
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+} 
+    ]
+}

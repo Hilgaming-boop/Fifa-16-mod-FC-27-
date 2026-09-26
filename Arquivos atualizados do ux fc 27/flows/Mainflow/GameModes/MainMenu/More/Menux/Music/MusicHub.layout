@@ -1,0 +1,131 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+
+    ],
+    "children":
+    [
+								{
+									"commonName": "Asset",
+									"name": "background",
+									"alignH": "FILL",
+									"alignV": "FILL",
+									"type": "$Bg_Soundtrack"
+								},
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 25,
+                    "marginLeft": 105,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 25,
+                    "marginLeft": 50,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "width": 1600,
+            "height": 530,
+            "children":
+            [
+
+		{
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "FILL",
+              "height": 500,
+
+              "marginTop": -100,
+              "marginLeft": 0,
+              "color": "0x000000",
+              "alpha": 0
+			},
+
+
+
+                  {
+                  "commonName": "SimpleButton",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginTop": 0,
+                   "marginRight": 0,
+                   "width": 180,
+                   "height": 180,
+                   "scaleY": 1,
+                   "multiline": true,
+                   "bold": true,
+                   "label": "",
+                   "icon": "",
+                   "backgroundImage": "",
+                   "backgroundHighlightImage": "",
+                   "clickAction": "act_soundtrack",
+                   "textStyles":
+                   [
+                      "TF_BUTTON"
+                    ]
+                  }
+
+
+                     ]
+                        }
+                    ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

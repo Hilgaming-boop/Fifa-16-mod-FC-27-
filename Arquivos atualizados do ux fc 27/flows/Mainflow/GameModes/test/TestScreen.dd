@@ -1,0 +1,93 @@
+{
+    "actions":
+    [
+		{
+	        "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+	        "viewname": "act_to_nav_bar_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_nav_bar_test_flow"
+            }
+        },
+		{
+	        "viewname": "act_to_game_controls_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_game_controls_test_flow"
+            }
+        },
+		{
+	        "viewname": "act_to_bulletindicator_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_bulletindicator_test_flow"
+            }
+		},
+		{
+	        "viewname": "act_to_grid_table_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_grid_table_test_flow"
+            }
+        },
+		{
+	        "viewname": "act_to_virtual_keyboard_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_virtual_keyboard_test_flow"
+            }
+        },
+		{
+	        "viewname": "act_to_simulatioin_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_simulation_test_flow"
+			}
+		},
+		{
+	        "viewname": "act_to_loc_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_loc_test_flow"
+            }
+        },
+		{
+	        "viewname": "act_to_dragtoggle_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_dragtoggle_test_flow"
+            }
+        },
+		{
+	        "viewname": "act_to_hud_test_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_hud_test_flow"
+            }
+        },
+		{
+	        "viewname": "act_to_rate_app_flow",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_rate_app_flow"
+            }
+        }
+    ]
+}

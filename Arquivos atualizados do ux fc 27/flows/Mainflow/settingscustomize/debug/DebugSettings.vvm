@@ -1,0 +1,5 @@
+{
+    "dds":   ["DebugSettings.dd"],
+    "vms":   [["lua", "DebugSettings.lua"]],
+    "views": [["gfx", {"layout": "DebugSettings.layout"}]]
+}

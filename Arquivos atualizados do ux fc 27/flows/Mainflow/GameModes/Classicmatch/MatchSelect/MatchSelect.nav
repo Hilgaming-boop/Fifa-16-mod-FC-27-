@@ -1,0 +1,274 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["RedirectMatchSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMatchSelect",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectMatchPreview",
+                    "states":
+                    [
+                        {
+                            "name": "MatchPreview",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/MatchPreview/MatchPreview.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_stadium_detail",
+                            "targets": ["StadiumDetail"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectTeamManagement",
+                    "states":
+                    [
+                        {
+                            "name": "TeamManagement",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/TeamManagement/TeamManagement.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_stadium_detail",
+                            "targets": ["StadiumDetail"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectGameSettings",
+                    "states":
+                    [
+                        {
+                            "name": "GameSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/GameSettings/GameSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        },
+                        {
+                            "event": "evt_stadium_detail",
+                            "targets": ["StadiumDetail"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectControllerSettings",
+                    "states":
+                    [
+                        {
+                            "name": "ControllerSettings",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/ControllerSettings/ControllerSettings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_stadium_detail",
+                            "targets": ["StadiumDetail"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "RedirectStadiumDetail",
+                    "states":
+                    [
+                        {
+                            "name": "StadiumDetail",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/StadiumDetail/StadiumDetail.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_match_preview",
+                            "targets": ["MatchPreview"]
+                        },
+                        {
+                            "event": "evt_game_settings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_team_management",
+                            "targets": ["TeamManagement"]
+                        },
+                        {
+                            "event": "evt_controller",
+                            "targets": ["ControllerSettings"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_squadhome",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_squadaway",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_selectside",
+                    "targets": ["SelectSide"]
+                },
+                {
+                    "event": "evt_stadiumselect",
+                    "targets": ["StadiumSelect"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/ClassicMatch/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/TeamManagement/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TeamManagement",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+         },
+         {
+            "name": "SelectSide",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/ControllerSettings/SelectSide/SelectSide.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ControllerSettings",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+         },
+         {
+            "name": "StadiumSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Classicmatch/MatchSelect/StadiumDetail/StadiumSelect/StadiumSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "StadiumDetail",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+         }
+    ]
+}

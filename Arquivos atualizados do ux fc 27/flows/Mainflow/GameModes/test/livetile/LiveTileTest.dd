@@ -1,0 +1,51 @@
+{
+	"actions":
+    [
+		{
+	        "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_live_tile_real",
+            "binding":  "bnd_live_tile_real",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_live_tile_quick_match",
+            "binding":  "bnd_live_tile_quick_match",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_live_tile_arena",
+            "binding":  "bnd_live_tile_arena",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_live_tile_practice",
+            "binding":  "bnd_live_tile_practice",
+            "type":     "live_tile"
+        },
+        {
+            "viewname": "bnd_live_tile_fut_title",
+            "binding":  "bnd_live_tile_fut_title",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_fut_description",
+            "binding":  "bnd_live_tile_fut_description",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MHUB_LIVE_TILE_UT_DESC"
+            }
+        }
+    ]
+}

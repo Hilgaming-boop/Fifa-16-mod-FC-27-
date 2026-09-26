@@ -1,0 +1,38 @@
+{
+    "name": "UclHub",
+    "onEnter":
+    [
+        ["setTabContext", [3]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["UclHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_man_ucl",
+            "targets": ["out_man_ucl"]
+        },
+        {
+            "event": "evt_woman_ucl",
+            "targets": ["out_woman_ucl"]
+        },
+        {
+            "event": "evt_menu_kick",
+            "targets": ["out_menu_kick"]
+        },
+        {
+            "event": "evt_menu_beapro",
+            "targets": ["out_menu_beapro"]
+        },
+        {
+            "event": "evt_menu_manager",
+            "targets": ["out_menu_manager"]
+        }
+    ]
+}

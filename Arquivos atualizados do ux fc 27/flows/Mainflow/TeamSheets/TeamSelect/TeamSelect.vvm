@@ -1,0 +1,7 @@
+{
+    "dds":   ["TeamSelect.dd",
+	"/lua/common/PlayerViewModel.dd"
+	],
+    "vms":   [["lua", "TeamSelect.lua"]],
+    "views": [["gfx", { "layout": "TeamSelect.layout" }]]
+}

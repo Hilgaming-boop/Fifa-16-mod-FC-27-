@@ -1,0 +1,90 @@
+{
+    "actions":
+    [
+        {
+            "viewname":"act_belum",
+            "actionname":"act_belum"
+        },
+        {
+            "viewname": "act_play_mens",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_mens"
+            }
+        },
+        {
+            "viewname": "act_play_custom",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_custom"
+            }
+        },
+        {
+            "viewname": "act_play_custom_minitur",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_custom_minitur"
+            }
+        },
+        {
+            "viewname": "act_play_customcup6gruop",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_customcup6gruop"
+            }
+        },
+        {
+            "viewname": "act_play_customcup4gruop",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_customcup4gruop"
+            }
+        },
+        {
+            "viewname":"act_fifabutton",
+            "actionname":"act_fifabutton"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}

@@ -1,0 +1,400 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+
+        {
+        "viewname": "act_advance",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_advance"
+            }
+        },
+
+        {
+        "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+
+        {
+            "viewname": "act_player_select",
+            "actionname": "act_player_select"
+        },
+        {
+            "viewname": "act_mvnprod",
+            "actionname": "act_mvnprod"
+        },
+        {
+            "viewname": "act_hide",
+            "actionname": "act_hide"
+        },
+        {
+            "viewname": "act_toggle",
+            "actionname": "act_toggle"
+        },
+        {
+            "viewname": "act_block",
+            "actionname": "act_block"
+        },
+        {
+            "viewname": "act_renewal",
+            "actionname": "act_renewal"
+        },
+        {
+            "viewname": "act_transfer_list",
+            "actionname": "act_transfer_list"
+        },
+        {
+            "viewname": "act_sell_player",
+            "actionname": "act_sell_player"
+            },
+            {
+            "viewname": "act_confirm_sell",
+            "actionname": "act_confirm_sell"
+        },
+        {
+            "viewname": "act_confirm_transfer_list",
+            "actionname": "act_confirm_transfer_list"
+        },
+        {
+            "viewname": "act_confirm_remove_transfer_list",
+            "actionname": "act_confirm_remove_transfer_list"
+        },
+        {
+            "viewname": "act_release",
+            "actionname": "act_release"
+        },
+        {
+            "viewname": "act_sell",
+            "actionname": "act_sell"
+        },
+        {
+            "viewname": "act_advance1number",
+            "actionname": "act_advance1number"
+        },
+        {
+            "viewname": "act_decrease1number",
+            "actionname": "act_decrease1number"
+        },
+        {
+            "viewname": "act_confirm_changenumber",
+            "actionname": "act_confirm_changenumber"
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_player_number_edit",
+            "binding":  "bnd_player_number_edit",
+            "type":     "string"
+        },
+        {
+        "viewname": "bnd_player_number_edit",
+            "binding":  "bnd_player_number_edit",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_player_age",
+            "binding":  "bnd_player_age",
+            "type":     "string"
+        },
+        {
+            "viewname":"bnd_background_career",
+            "binding":"bnd_background_career",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_table_career",
+            "binding":"bnd_table_career",
+            "type":"object"
+        },
+        {
+            "viewname": "bnd_player_list",
+            "binding":  "bnd_player_list",
+            "type":     "array"
+        },
+        {
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_panelvisible",
+            "binding":"bnd_panelvisible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_rowvisible",
+            "binding":"bnd_rowvisible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_plstat_visible",
+            "binding":"bnd_plstat_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_panelanim",
+            "binding":"bnd_panelanim",
+            "type":"int"
+        },
+        {
+            "viewname":"bnd_plinfo_visible",
+            "binding":"bnd_plinfo_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_loading_visible",
+            "binding":"bnd_loading_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_team_crest",
+            "binding":"bnd_team_crest",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_team_name",
+            "binding":"bnd_team_name",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_friendlygs",
+            "binding":"bnd_friendlygs",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_friendlycs",
+            "binding":"bnd_friendlycs",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_friendlyyc",
+            "binding":"bnd_friendlyyc",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_friendlyrc",
+            "binding":"bnd_friendlyrc",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_domgs",
+            "binding":"bnd_domgs",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_domcs",
+            "binding":"bnd_domcs",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_domyc",
+            "binding":"bnd_domyc",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_domrc",
+            "binding":"bnd_domrc",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_totalgs",
+            "binding":"bnd_totalgs",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_totalcs",
+            "binding":"bnd_totalcs",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_totalyc",
+            "binding":"bnd_totalyc",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_totalrc",
+            "binding":"bnd_totalrc",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_value",
+            "binding":"bnd_value",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_fitness",
+            "binding":"bnd_fitness",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_suspstatus",
+            "binding":"bnd_suspstatus",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_name",
+            "binding":"bnd_player_name",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_avatar",
+            "binding":"bnd_player_avatar",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_ID",
+            "binding":"bnd_player_ID",
+            "type":"string"
+        },
+        {
+        "viewname":"bnd_player_mood",
+            "binding":"bnd_player_mood",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_status",
+            "binding":"bnd_player_status",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_position",
+            "binding":"bnd_player_position",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_rating",
+            "binding":"bnd_player_rating",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_number",
+            "binding":"bnd_player_number",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_kitnumber",
+            "binding":"bnd_player_kitnumber",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_country",
+            "binding":"bnd_player_country",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_3d_player",
+            "binding":"bnd_3d_player",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_kit_home",
+            "binding":"bnd_kit_home",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_stat1",
+            "binding":"bnd_player_stat1",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat2",
+            "binding":"bnd_player_stat2",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat3",
+            "binding":"bnd_player_stat3",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat4",
+            "binding":"bnd_player_stat4",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat5",
+            "binding":"bnd_player_stat5",
+            "type":"string"
+        },
+        {
+        "viewname": "bnd_transfer_list_status",
+            "binding": "bnd_transfer_list_status",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_transfer_list_updated",
+            "binding": "bnd_transfer_list_updated",
+            "type": "event"
+        },
+        {
+            "viewname": "bnd_player_sell_value",
+            "binding": "bnd_player_sell_value",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_sell_button_visible",
+            "binding": "bnd_sell_button_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_transfer_list_button_visible",
+            "binding": "bnd_transfer_list_button_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_transfer_list_price",
+            "binding": "bnd_transfer_list_price",
+            "type": "string"
+        },
+        {
+        "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+        "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+        "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_transfer_list_min_price",
+            "binding": "bnd_transfer_list_min_price",
+            "type": "string"
+            },
+            {
+            "viewname":"bnd_player_stat6",
+            "binding":"bnd_player_stat6",
+            "type":"string"
+        }
+    ]
+}

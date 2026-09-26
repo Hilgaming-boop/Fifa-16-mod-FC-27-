@@ -1,0 +1,1071 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_fifabutton",
+            "buttonContainer": "Fifabutton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Kick"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 80,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "text": "Tournaments"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 120,
+            "marginTop": -15,
+            "width": 600,
+            "height": 325,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 300,
+                            "height": 500,
+                            "type": "$Cupi_Women"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM EPL"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Premier League"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 350,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the Premier League, win every match and upgrade your player's abilities"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM LALIGA"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Bold",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Laliga"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 40,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 350,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the Laliga, win every match and upgrade your player's abilities"
+                            },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 400,
+                            "height": 500,
+                            "type": "$"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM LIGUE1"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Ligue 1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the Ligue 1, win every match and upgrade your player's abilities"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM SERI A"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Serie A"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the Serie A, win every match and upgrade your player's abilities"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info5",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab5_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM BRAZIL2"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Brasileirao"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the Brasileirao, win every match and upgrade your player's abilities"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l13_1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Premier League"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                   "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l53_1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Laliga"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l16_2"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Ligue 1"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l31_2"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Serie A"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l7_1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Brasileirao"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_ligapremier"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l13"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Premier League"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_laliga"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l53"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Laliga"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_ligue1"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l16"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Ligue 1"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_serie"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l31_1"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Serie A"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 5,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_brasil"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$l7"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": -13,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Brasileirao"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "Fifabutton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 39,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 270,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 500,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 731,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 961,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

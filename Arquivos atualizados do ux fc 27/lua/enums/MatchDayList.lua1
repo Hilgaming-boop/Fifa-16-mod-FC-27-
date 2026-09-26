@@ -1,0 +1,28 @@
+-- Modif Sndiri aja --
+
+local MatchDayList = {
+  -- UCL ROAD FINAL 
+	{ HomeTeamID = 241,AwayTeamID = 243,Date = "2026/02/11", type="6",data = {}, score="" },
+	{ HomeTeamID = 243,AwayTeamID = 1,Date = "2025/10/24", type="6",data = {}, score="" },
+	{ HomeTeamID = 2,AwayTeamID = 73,Date = "2025/10/24", type="6",data = {}, score="" },
+  { HomeTeamID = 44,AwayTeamID = 21,Date = "2025/10/24", type="6",data = {}, score="" },
+  -- EPL
+	{ HomeTeamID = 9,AwayTeamID = 18,Date = "2025/10/24", type="1",data = {}, score="" },
+	{ HomeTeamID = 110,AwayTeamID = 1923,Date = "2025/10/24", type="1",data = {}, score="" },
+	{ HomeTeamID = 144,AwayTeamID = 1799,Date = "2025/10/24", type="1",data = {}, score="" },
+  { HomeTeamID = 13,AwayTeamID = 1794,Date = "2025/10/24", type="1",data = {}, score="" },  { HomeTeamID = 11,AwayTeamID = 1796,Date = "2025/10/24", type="1",data = {}, score="" },
+  { HomeTeamID = 7,AwayTeamID = 1925,Date = "2025/10/24", type="1",data = {}, score="" },
+  
+	{ HomeTeamID = 5,AwayTeamID = 5,Date = "2024/11/29", type="1",data = {}, score="" },
+  { HomeTeamID = 1943,AwayTeamID = 1808,Date = "2024/04/28", type="1",data = {}, score="" },  { HomeTeamID = 18,AwayTeamID = 1,Date = "2024/04/28", type="1",data = {}, score="" },
+  { HomeTeamID = 14,AwayTeamID = 10,Date = "2024/04/28", type="1",data = {}, score="" },
+  -- ARAB
+  { HomeTeamID = 112096,AwayTeamID = 112096,Date = "2024/11/29", type="5",data = {}, score="" },
+  { HomeTeamID = 112883,AwayTeamID = 112139,Date = "2024/04/28", type="5",data = {}, score="" },
+  -- ITALY  { HomeTeamID = 347,AwayTeamID = 111811,Date = "2024/11/29", type="4",data = {}, score="" },
+  { HomeTeamID = 45,AwayTeamID = 47,Date = "2024/04/27", type="4",data = {}, score="" },
+  { HomeTeamID = 46,AwayTeamID = 206,Date = "2024/04/28", type="4",data = {}, score="" },
+
+  
+}
+return MatchDayList

@@ -1,0 +1,1313 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "bindings":
+    [
+        {
+            "binding": "bnd_show_hud_visible",
+            "property": "visible"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginLeft": 70,
+            "width": 300,
+            "height": 100,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_visible",
+                  "property": "visible"
+               }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Stats",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "bindings": 
+                    [
+                        {
+                            "binding": "bnd_stat_visible",
+                            "property": "visible"
+                        },
+                        {
+                            "binding": "bnd_stat_width",
+                            "property": "width"
+                        },
+                        {
+                            "binding": "bnd_stat_height",
+                            "property": "height"
+                        },
+                        {
+                            "binding": "bnd_stat_top",
+                            "property": "marginTop"
+                        },
+                        {
+                            "binding": "bnd_stat_left",
+                            "property": "marginLeft"
+                        },
+                        {
+                            "binding": "bnd_stats_alignH",
+                            "property": "alignH"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                  "property": "color",
+                                  "binding":  "bnd_stat_color"
+                                },
+                                {
+                                  "property": "alpha",
+                                  "binding":  "bnd_stat_color_alpha"
+                                },
+                                {
+                                    "binding":  "bnd_cornerRaduis",
+                                    "property": "cornerRaduis"
+                                }
+                            ]
+                        },
+                        {
+    "commonName": "Image",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "bindings": [
+        {
+            "binding": "bnd_stat_image",
+            "property": "image"
+        },
+        {
+            "binding": "bnd_stat_image_top",
+            "property": "marginTop"
+        },
+        {
+            "binding": "bnd_stat_image_left",
+            "property": "marginLeft"
+        },
+        {
+            "binding": "bnd_stat_image_width",
+            "property": "width"
+        },
+        {
+            "binding": "bnd_stat_image_height",
+            "property": "height"
+        }
+    ]
+},
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                  "binding":  "bnd_stat_bgtext_color",
+                                  "property": "color"
+                                },
+                                {
+                                  "binding":  "bnd_stat_bgtext_color_alignV",
+                                  "property": "alignV"
+                                },
+                                {
+                                  "binding":  "bnd_stat_bgtext_color_alignH",
+                                  "property": "alignH"
+                                },
+                                {
+                                    "binding": "bnd_stat_bgtext_color_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_stat_bgtext_color_height",
+                                    "property": "height"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontFace":"$FONT_TIMER",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_home_stat_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_stat_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_stat_h_a_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_home_stat_text_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_home_stat_text_top",
+                                   "property": "marginTop"
+                               },
+                                {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_fontFace"
+                                },
+                                {
+                                    "property": "forceCaps",
+                                    "binding":  "bnd_forceCaps"
+                               }
+                               
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontFace":"$FONT_TIMER",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_away_stat_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_stat_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_stat_h_a_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_away_stat_text_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_away_stat_text_top",
+                                   "property": "marginTop"
+                               },
+                                {
+                                    "property": "fontFace",
+                                    "binding":  "bnd_fontFace"
+                                },
+                                {
+                                    "property": "forceCaps",
+                                    "binding":  "bnd_forceCaps"
+                               }
+                               
+                            ]
+                        },
+                        {
+    "commonName": "Image",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "bindings": [
+        {
+            "binding": "bnd_homeStatCrest",
+            "property": "image"
+        },
+        {
+            "binding": "bnd_homeStatCrest_top",
+            "property": "marginTop"
+        },
+        {
+            "binding": "bnd_homeStatCrest_left",
+            "property": "marginLeft"
+        },
+        {
+            "binding": "bnd_homeStatCrest_width",
+            "property": "width"
+        },
+        {
+            "binding": "bnd_homeStatCrest_height",
+            "property": "height"
+        }
+    ]
+},
+{
+    "commonName": "Image",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "bindings": [
+        {
+            "binding": "bnd_awayStatCrest",
+            "property": "image"
+        },
+        {
+            "binding": "bnd_awayStatCrest_top",
+            "property": "marginTop"
+        },
+        {
+            "binding": "bnd_awayStatCrest_left",
+            "property": "marginLeft"
+        },
+        {
+            "binding": "bnd_awayStatCrest_width",
+            "property": "width"
+        },
+        {
+            "binding": "bnd_awayStatCrest_height",
+            "property": "height"
+        }
+    ]
+},
+{
+    "commonName": "Label",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "fontFace": "$FONT_EPL",
+    "bindings": [
+        {
+            "binding": "bnd_homeStatName_text",
+            "property": "text"
+        },
+        {
+            "binding": "bnd_homeStatName_left",
+            "property": "marginLeft"
+        },
+        {
+            "binding": "bnd_homeStatName_top",
+            "property": "marginTop"
+        },
+        {
+            "property": "fontFace",
+            "binding": "bnd_fontFace"
+        },
+        {
+            "property": "forceCaps",
+            "binding": "bnd_forceCaps"
+        },
+        {
+            "binding": "bnd_homeStatName_fontSize",
+            "property": "fontSize"
+        },
+        {
+            "binding": "bnd_homeStatName_fontColor",
+            "property": "fontColor"
+        },
+        {
+            "binding": "bnd_text_bold",
+            "property": "bold"
+        },
+        {
+            "binding": "bnd_stat_name_text_alignH",
+            "property": "alignH"
+        }
+    ]
+},
+{
+    "commonName": "Label",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "fontFace": "$FONT_EPL",
+    "bindings": [
+        {
+            "binding": "bnd_awayStatName_text",
+            "property": "text"
+        },
+        {
+            "binding": "bnd_awayStatName_left",
+            "property": "marginLeft"
+        },
+        {
+            "binding": "bnd_awayStatName_top",
+            "property": "marginTop"
+        },
+        {
+            "property": "fontFace",
+            "binding": "bnd_fontFace"
+        },
+        {
+            "property": "forceCaps",
+            "binding": "bnd_forceCaps"
+        },
+        {
+            "binding": "bnd_awayStatName_fontSize",
+            "property": "fontSize"
+        },
+        {
+            "binding": "bnd_awayStatName_fontColor",
+            "property": "fontColor"
+        },
+        {
+            "binding": "bnd_text_bold",
+            "property": "bold"
+        },
+        {
+            "binding": "bnd_stat_name_text_alignH",
+            "property": "alignH"
+        }
+    ]
+},
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontFace":"$FONT_TIMER",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_stat_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_stat_text",
+                                   "property": "text"
+                               },
+							        	{
+								       	"property": "fontFace",
+								       	"binding":  "bnd_fontFace"
+							        	},
+							        	{
+								      	"property": "forceCaps",
+							      		"binding":  "bnd_forceCaps"
+                               }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        
+                        {
+                            "commonName": "Image",
+                            "name": "ScoreBoard",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_scoreboard_inside_visible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_image",
+                                    "property": "image"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_height",
+                                    "property": "height"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_top",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_left",
+                                    "property": "marginLeft"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "MatchInfo",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "fontFace":"$FONT_DINPRO",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_matchinfo_text",
+                                    "property": "text"
+                                },
+                                {
+                                    "binding": "bnd_matchinfo_fontSize",
+                                    "property": "fontSize"
+                                },
+                                {
+                                    "binding": "bnd_matchinfo_fontColor",
+                                    "property": "fontColor"
+                                },
+                                {
+                                    "binding": "bnd_matchinfo_top",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_matchinfo_left",
+                                    "property": "marginLeft"
+                                },
+                                {
+                                    "binding": "bnd_text_bold",
+                                    "property": "bold"
+                                },
+							        	{
+								       	"property": "fontFace",
+								       	"binding":  "bnd_fontFace"
+							        	},
+							        	{
+								      	"property": "forceCaps",
+							      		"binding":  "bnd_forceCaps"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "commonName": "Rectangle",
+                            "name": "background_home",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_homeRect_visible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_homeRect_height",
+                                    "property": "height"
+                                },
+                                {
+                                    "binding": "bnd_homeRect_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_homeRect_color",
+                                    "property": "color"
+                                },
+                                {
+                                    "binding": "bnd_homeRect_left",
+                                    "property": "marginLeft"
+                                },
+                                {
+                                    "binding": "bnd_homeRect_top",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding":  "bnd_cornerRaduis",
+                                    "property": "cornerRaduis"
+                                }
+                            ]
+                        },
+                        {
+    "commonName": "Rectangle",
+    "name": "background_home_shorts",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "bnd_homeShorts_visible",
+            "property": "visible"
+        },
+        {
+            "binding": "bnd_homeShorts_height",
+            "property": "height"
+        },
+        {
+            "binding": "bnd_homeShorts_width",
+            "property": "width"
+        },
+        {
+            "binding": "bnd_homeShorts_color",
+            "property": "color"
+        },
+        {
+            "binding": "bnd_homeShorts_left",
+            "property": "marginLeft"
+        },
+        {
+            "binding": "bnd_homeShorts_top",
+            "property": "marginTop"
+        },
+        {
+            "binding": "bnd_cornerRaduis",
+            "property": "cornerRaduis"
+        }
+    ]
+},
+                        {
+                            "commonName": "Rectangle",
+                            "name": "background_away",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_awayRect_visible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_awayRect_height",
+                                    "property": "height"
+                                },
+                                {
+                                    "binding": "bnd_awayRect_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_awayRect_color",
+                                    "property": "color"
+                                },
+                                {
+                                    "binding": "bnd_awayRect_left",
+                                    "property": "marginLeft"
+                                },
+                                {
+                                    "binding": "bnd_awayRect_top",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding":  "bnd_cornerRaduis",
+                                    "property": "cornerRaduis"
+                                }
+                            ]
+                        },
+                        {
+    "commonName": "Rectangle",
+    "name": "background_away_shorts",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "bnd_awayShorts_visible",
+            "property": "visible"
+        },
+        {
+            "binding": "bnd_awayShorts_height",
+            "property": "height"
+        },
+        {
+            "binding": "bnd_awayShorts_width",
+            "property": "width"
+        },
+        {
+            "binding": "bnd_awayShorts_color",
+            "property": "color"
+        },
+        {
+            "binding": "bnd_awayShorts_right",
+            "property": "marginRight"
+        },
+        {
+            "binding": "bnd_awayShorts_top",
+            "property": "marginTop"
+        },
+        {
+            "binding": "bnd_cornerRaduis",
+            "property": "cornerRaduis"
+        }
+    ]
+},
+
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "fontFace":"$FONT_EPL",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_homeName_visible",
+                                   "property": "visible"
+                               },
+                               {
+                                   "binding": "bnd_homeName_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_homeName_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_homeName_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "property": "fontFace",
+                                   "binding":  "bnd_fontFace"
+                               },
+                               {
+                                   "property": "forceCaps",
+                                   "binding":  "bnd_forceCaps"
+                               },
+                               {
+                                   "binding": "bnd_homeName_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_homeName_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_name_text_alignH",
+                                   "property": "alignH"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "fontFace":"$FONT_EPL",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_awayName_visible",
+                                   "property": "visible"
+                               },
+                               {
+                                   "binding": "bnd_awayName_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_awayName_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_awayName_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "property": "fontFace",
+                                   "binding":  "bnd_fontFace"
+                               },
+                               {
+                                   "property": "forceCaps",
+                                   "binding":  "bnd_forceCaps"
+                               },
+                               {
+                                   "binding": "bnd_awayName_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_awayName_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_name_text_alignH",
+                                   "property": "alignH"
+                               }
+                            ]
+                        },
+                        
+                        {
+    "commonName": "Label",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "fontFace": "$FONT_EPL",
+    "bindings":
+    [
+       {
+           "binding": "bnd_homeName2_text",
+           "property": "text"
+       },
+       {
+           "binding": "bnd_homeName2_left",
+           "property": "marginLeft"
+       },
+       {
+           "binding": "bnd_homeName2_top",
+           "property": "marginTop"
+       },
+       {
+           "property": "fontFace",
+           "binding": "bnd_fontFace"
+       },
+       {
+           "property": "forceCaps",
+           "binding": "bnd_forceCaps"
+       },
+       {
+           "binding": "bnd_homeName2_fontSize",
+           "property": "fontSize"
+       },
+       {
+           "binding": "bnd_homeName2_fontColor",
+           "property": "fontColor"
+       },
+       {
+           "binding": "bnd_text_bold",
+           "property": "bold"
+       },
+       {
+           "binding": "bnd_name_text_alignH",
+           "property": "alignH"
+       }
+    ]
+},
+{
+    "commonName": "Label",
+    "alignV": "CENTER",
+    "alignH": "LEFT",
+    "fontFace": "$FONT_EPL",
+    "bindings":
+    [
+       {
+           "binding": "bnd_awayName2_text",
+           "property": "text"
+       },
+       {
+           "binding": "bnd_awayName2_left",
+           "property": "marginLeft"
+       },
+       {
+           "binding": "bnd_awayName2_top",
+           "property": "marginTop"
+       },
+       {
+           "property": "fontFace",
+           "binding": "bnd_fontFace"
+       },
+       {
+           "property": "forceCaps",
+           "binding": "bnd_forceCaps"
+       },
+       {
+           "binding": "bnd_awayName2_fontSize",
+           "property": "fontSize"
+       },
+       {
+           "binding": "bnd_awayName2_fontColor",
+           "property": "fontColor"
+       },
+       {
+           "binding": "bnd_text_bold",
+           "property": "bold"
+       },
+       {
+           "binding": "bnd_name_text_alignH",
+           "property": "alignH"
+       }
+    ]
+},
+                        
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "bindings":
+                            [
+                              {
+                                   "binding": "bnd_homeCrest_visible",
+                                   "property": "visible"
+                               },
+                              {
+                                  "binding": "bnd_homeCrest",
+                                  "property": "image"
+                              },
+                              {
+                                  "binding": "bnd_homeCrest_Top",
+                                  "property": "marginTop"
+                              },
+                              {
+                                  "binding": "bnd_homeCrest_left",
+                                  "property": "marginLeft"
+                              },
+                              {
+                                  "binding": "bnd_homeCrest_width",
+                                  "property": "width"
+                              },
+                              {
+                                  "binding": "bnd_homeCrest_height",
+                                  "property": "height"
+                              }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "bindings":
+                            [
+                              {
+                                   "binding": "bnd_awayCrest_visible",
+                                   "property": "visible"
+                               },
+                              {
+                                  "binding": "bnd_awayCrest",
+                                  "property": "image"
+                              },
+                              {
+                                  "binding": "bnd_awayCrest_top",
+                                  "property": "marginTop"
+                              },
+                              {
+                                  "binding": "bnd_awayCrest_left",
+                                  "property": "marginLeft"
+                              },
+                              {
+                                  "binding": "bnd_awayCrest_width",
+                                  "property": "width"
+                              },
+                              {
+                                  "binding": "bnd_awayCrest_height",
+                                  "property": "height"
+                              }
+                            ]
+                        
+},
+                        {
+                            "commonName": "Image",
+                            "name": "ScoreBoard",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_scoreboard_outside_visible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_image",
+                                    "property": "image"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_height",
+                                    "property": "height"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_top",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_scoreboard_left",
+                                    "property": "marginLeft"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "fontFace":"$FONT_EPL",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_homeScore_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_homeScore_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "binding": "bnd_homeScore_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "property": "fontFace",
+                                   "binding":  "bnd_fontFace"
+                               },
+                               {
+                                   "property": "forceCaps",
+                                   "binding":  "bnd_forceCaps"
+                               },
+                               {
+                                   "binding": "bnd_homeScore_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_homeScore_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_score_text_alignH",
+                                   "property": "alignH"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "fontFace":"$FONT_EPL",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_awayScore_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_awayScore_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "binding": "bnd_awayScore_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "property": "fontFace",
+                                   "binding":  "bnd_fontFace"
+                               },
+                               {
+                                   "property": "forceCaps",
+                                   "binding":  "bnd_forceCaps"
+                               },
+                               {
+                                   "binding": "bnd_awayScore_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_awayScore_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_score_text_alignH",
+                                   "property": "alignH"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "fontFace": "$FONT_BOLD",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_time_text",
+                                    "property": "text"
+                                },
+                                {
+                                    "binding": "bnd_time_fontSize",
+                                    "property": "fontSize"
+                                },
+                                {
+                                    "binding": "bnd_time_fontColor",
+                                    "property": "fontColor"
+                                },
+                                {
+                                    "binding": "bnd_time_text_left",
+                                    "property": "marginLeft"
+                                },
+                                {
+                                    "binding": "bnd_time_text_top",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_time_text_alignH",
+                                    "property": "alignH"
+                                },
+                                {
+                                    "binding": "bnd_fontFace",
+                                    "property": "fontFace"
+                                },
+                                {
+                                    "binding": "bnd_forceCaps",
+                                    "property": "forceCaps"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_goalAnimation",
+                                    "property": "image"
+                                },
+                                {
+                                    "binding": "bnd_goalAnimation_top",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_goalAnimation_left",
+                                    "property": "marginLeft"
+                                },
+                                {
+                                    "binding": "bnd_goalAnimation_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_goalAnimation_height",
+                                    "property": "height"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ExtraTime",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_extraTime_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "bindings":
+                            [
+                                {
+                                   "binding": "bnd_extraTime_width",
+                                   "property": "width"
+                                },
+                                {
+                                   "binding": "bnd_extraTime_height",
+                                   "property": "height"
+                                },
+                                {
+                                   "binding": "bnd_extraTime_top",
+                                   "property": "marginTop"
+                                },
+                                {
+                                   "binding": "bnd_extraTime_left",
+                                   "property": "marginLeft"
+                                },
+                                {
+                                   "binding": "bnd_time_text_alignH",
+                                   "property": "alignH"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "bindings":
+                                    [
+                                       {
+                                          "binding": "bnd_extraTime_color",
+                                          "property": "color"
+                                       },
+                                       {
+                                          "binding": "bnd_extraTime_color_show",
+                                          "property": "visible"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "commonName": "Image",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "bindings":
+                                    [
+                                       {
+                                          "binding": "bnd_extratime_image",
+                                          "property": "image"
+                                       }
+                                    ]
+                                 },
+                                 {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "fontFace":"$FONT_BOLD",
+                                    "bindings":
+                                    [
+                                       {
+                                          "binding": "bnd_extraTime_text",
+                                          "property": "text"
+                                       },
+                                       {
+                                          "binding": "bnd_extraTime_fontSize",
+                                          "property": "fontSize"
+                                       },
+                                       {
+                                          "binding": "bnd_extraTime_fontColor",
+                                          "property": "fontColor"
+                                       },
+							        	{
+								       	"property": "fontFace",
+								       	"binding":  "bnd_fontFace"
+							        	},
+							        	{
+								      	"property": "forceCaps",
+							      		"binding":  "bnd_forceCaps"
+                                       }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+               {
+                  "binding": "bnd_nibs_on_side_visible",
+                  "property": "visible"
+               }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 50,
+                    "width": 150,
+                    "height": 100,
+                    "alpha": 0.8,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_live_logo"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+               {
+                  "binding": "bnd_nibs_on_center_visible",
+                  "property": "visible"
+               }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 50,
+                    "width": 150,
+                    "height": 100,
+                    "alpha": 0.8,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_live_logo"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+               {
+                  "binding": "bnd_nibs_on_single_visible",
+                  "property": "visible"
+               }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 1,
+                    "height": 1,
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_live_logo"
+                        }
+                    ]
+                }
+            ]
+        }
+     ]
+  },
+  {
+      "commonName": "Panel",
+      "name": "rootContainer",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings":
+      [
+         {
+            "binding": "bnd_hide_hud_visible",
+            "property": "visible"
+         }
+      ]
+    }
+  ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

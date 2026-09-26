@@ -1,0 +1,401 @@
+/* ------------------------------------- */
+/* MOD Created By MounTsa */
+/* ------------------------------------- */
+{
+  "commonName": "Panel",
+  "name": "parentContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "ANIMASI_MASUK_MAINMENU"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "ANIMASI_KELUAR_MAINMENU"
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "type": "$Bg_kick"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.2,
+      "type": "$Bg_Smoke"
+    },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_menu_match"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                }
+			]
+		},
+        {
+          "commonName": "Panel",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 140,
+          "marginLeft": -300,
+          "name": "insTeamStats",
+          "children": [
+            {
+              "commonName": "Image",
+              "scaleX": 0.2,
+              "scaleY": 0.2,
+              "name": "insTeamCrest",
+              "bindings": [
+                {
+                  "binding": "bnd_home_team_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "Live",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 20,
+              "marginLeft": -120,
+              "fontSize": 15,
+              "fontColor": "$COLOR_LIGHT_GREEN",
+              "fontFace": "$Epl",
+              "text": "Tactical Plan"
+            },
+            {
+              "commonName": "Label",
+              "name": "Live",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 20,
+              "marginLeft": 85,
+              "fontSize": 15,
+              "fontColor": "$COLOR_LIGHT_GREEN",
+              "fontFace": "$Epl",
+              "text": "Formation"
+            },
+            {
+              "commonName": "Label",
+              "name": "Live",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 40,
+              "marginLeft": -150,
+              "fontSize": 27,
+              "fontColor": "$COLOR_LIGHT_GREEN",
+              "fontFace": "$Epl",
+              "text": "Balanced"
+            },
+            {
+              "commonName": "Label",
+              "name": "formationDisplay",
+              "fontSize": 20,
+              "fontColor": "$COLOR_WHITE",
+              "alignH": "LEFT",
+              "marginTop": 27,
+              "marginLeft": 90,
+              "bindings": [
+                {
+                  "binding": "bnd_home_formation_name",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        },
+		{
+			"commonName": "Panel",
+			"alignV": "TOP",
+			"alignH": "CENTER",
+			"marginTop": 140,
+			"marginLeft": 260,
+			"name": "insTeamStats",
+			"children": [
+				{
+					"commonName": "Image",
+              "scaleX": 0.2,
+              "scaleY": 0.2,
+					"name": "insTeamCrest",
+					"bindings": [
+						{
+							"binding": "bnd_away_team_crest",
+							"property": "image"
+						}
+					]
+				},
+        {
+          "commonName": "Label",
+          "name": "Live",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": 20,
+          "marginLeft": -120,
+          "fontSize": 15,
+          "fontColor": "$COLOR_LIGHT_GREEN",
+          "fontFace": "$Epl",
+          "text": "Tactical Plan"
+        },
+        {
+          "commonName": "Label",
+          "name": "Live",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": 20,
+          "marginLeft": 85,
+          "fontSize": 15,
+          "fontColor": "$COLOR_LIGHT_GREEN",
+          "fontFace": "$Epl",
+          "text": "Formation"
+        },
+        {
+          "commonName": "Label",
+          "name": "Live",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "marginTop": 40,
+          "marginLeft": -150,
+          "fontSize": 27,
+          "fontColor": "$COLOR_LIGHT_GREEN",
+          "fontFace": "$Epl",
+          "text": "Balanced"
+        },
+            {
+              "commonName": "Label",
+              "name": "formationDisplay",
+              "fontSize": 20,
+              "fontColor": "$COLOR_WHITE",
+              "alignH": "LEFT",
+              "marginTop": 27,
+              "marginLeft": 90,
+              "bindings": [
+                {
+                  "binding": "bnd_away_formation_name",
+                  "property": "text"
+                }
+              ]
+            }
+		  ]
+		},
+    {
+      "commonName": "Panel",
+      "name": "insSquadHome",
+      "alignH": "CENTER",
+      "alignV": "CENTER",
+      "height": 400.0,
+	  "width": 500.0,
+      "marginTop": 0,
+	  "marginLeft": -280.0,
+      "children": [
+		{
+			"commonName": "Rectangle",
+			"alignV": "FILL",
+			"alignH": "FILL",
+			"cornerRaduis": 15,
+			"color": "0x1C1C1C",
+			"alpha": 0
+		},
+    {
+      "commonName": "Asset",
+      "alignH": "CENTER",
+      "alignV": "CENTER",
+	  "marginTop": 40,
+      "height": 300.0,
+	  "width": 550.0,
+      "type": "$Icon_TeamPitch"
+    },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "BOTTOM",
+                            "marginLeft": 0,
+                            "marginBottom": -70,
+                            "height": 70,
+                            "width": 270,
+                            "backgroundImage": "$Tab_Action_fc26_career",
+                            "backgroundHighlightImage": "$Tab_Action_fc26_career",
+                            "clickAction": "act_menusquad_home"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -30,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Formation"
+                        },
+        {
+          "commonName": "Panel",
+          "name": "insSquadContainer",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "children": [
+            {
+              "commonName": "SquadLayout",
+              "name": "insSquadLayout",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+			  "marginTop": 30,
+			  "size": 0,
+              "itemView": 1,
+              "highlightable": false,
+              "preserveWidth": false,
+			  "mouseInteractive": false,
+			  "draggable": false,
+              "bindings": [
+                {
+                  "binding": "bnd_home_formation",
+                  "property": "formation"
+                },
+
+                {
+                  "binding": "bnd_home_starting_11",
+                  "property": "starting11"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "insSquadAway",
+      "alignH": "CENTER",
+      "alignV": "CENTER",
+      "height": 400.0,
+	  "width": 500.0,
+      "marginTop": 0,
+	  "marginLeft": 280.0,
+      "children": [
+		{
+			"commonName": "Rectangle",
+			"alignV": "FILL",
+			"alignH": "FILL",
+			"cornerRaduis": 15,
+			"color": "0x1C1C1C",
+			"alpha": 0
+		},
+    {
+      "commonName": "Asset",
+      "alignH": "CENTER",
+      "alignV": "CENTER",
+	  "marginTop": 40,
+      "height": 300.0,
+	  "width": 550.0,
+      "type": "$Icon_TeamPitch"
+    },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "BOTTOM",
+                            "marginLeft": 0,
+                            "marginBottom": -70,
+                            "height": 70,
+                            "width": 270,
+                            "backgroundImage": "$Tab_Action_fc26_career",
+                            "backgroundHighlightImage": "$Tab_Action_fc26_career",
+                            "clickAction": "act_menusquad_away"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -30,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Formation"
+                        },
+        {
+          "commonName": "Panel",
+          "name": "insSquadContainer",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "children": [
+            {
+              "commonName": "SquadLayout",
+              "name": "insSquadLayout",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+			  "marginTop": 30,
+			  "size": 0,
+              "itemView": 1,
+              "highlightable": false,
+              "preserveWidth": false,
+			  "mouseInteractive": false,
+			  "draggable": false,
+              "bindings": [
+                {
+                  "binding": "bnd_away_formation",
+                  "property": "formation"
+                },
+                {
+                  "binding": "bnd_away_starting_11",
+                  "property": "starting11"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

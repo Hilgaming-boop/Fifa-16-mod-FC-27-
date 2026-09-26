@@ -1,0 +1,158 @@
+{
+	"name": "TestFlow",
+	"initial":
+    {
+        "targets": ["Main"]
+    },
+	"states":
+    [
+		{
+			"name": "Main",
+			"onEnter":
+			[
+				["loadVVM", ["/flows/mainflow/gamemodes/test/TestScreen.vvm"]]
+			],
+			"onExit":
+			[
+				["unloadVVM"]
+			],
+			"transitions":
+            [
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+				{
+                    "event":   "evt_to_nav_bar_test_flow",
+                    "targets": ["NavBarTestFlow"]
+                },
+				{
+                    "event":   "evt_to_game_controls_test_flow",
+                    "targets": ["GameControlsTestFlow"]
+                },
+				{
+                    "event":   "evt_to_bulletindicator_test_flow",
+                    "targets": ["BulletIndicatorTestFlow"]
+                },
+                {
+                    "event":   "evt_to_grid_table_test_flow",
+                    "targets": ["GridTableTestFlow"]
+                },
+                {
+                    "event":   "evt_to_virtual_keyboard_test_flow",
+                    "targets": ["VirtualKeyboardTestFlow"]
+                },
+				{
+					"event":   "evt_to_simulation_test_flow",
+                    "targets": ["SimulationTestFlow"]
+				},
+				{
+					"event":   "evt_to_loc_test_flow",
+                    "targets": ["LocTestFlow"]
+				},
+				{
+					"event":   "evt_to_dragtoggle_test_flow",
+                    "targets": ["DragToggleTest"]
+				},
+				{
+					"event":   "evt_to_hud_test_flow",
+                    "targets": ["HUDTestFlow"]
+				},
+				{
+					"event":   "evt_to_rate_app_flow",
+                    "targets": ["RateAppTestFlow"]
+				}
+            ]
+		},
+		{
+			"name": "NavBarTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/navbar/navbartest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+		{
+			"name": "GameControlsTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/gamecontrols/gamecontrolstest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+		{
+			"name": "BulletIndicatorTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/bulletindicator/bulletindicatortest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+        },
+        {
+			"name": "GridTableTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/gridtable/gridtabletest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+        {
+			"name": "VirtualKeyboardTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/virtualkeyboard/VirtualKeyboardTest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+		{
+			"name": "SimulationTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/simulation/simulationtest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+		{
+			"name": "LocTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/localizationtest/loctest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+		{
+			"name": "DragToggleTest",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/dragtoggle/dragtoggletest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+		{
+			"name": "HUDTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/hudtest/hudtest.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		},
+		{
+			"name": "RateAppTestFlow",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/test/rateApp/rateapp.nav",
+			"outputs":
+			{
+				"out_back": "Main"
+			}
+		}
+	]
+}

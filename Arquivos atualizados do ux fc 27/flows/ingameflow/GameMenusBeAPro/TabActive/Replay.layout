@@ -1,0 +1,119 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_IN" } ]
+	    },
+	    {
+			"name" : "hide",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_OUT" } ]
+	    }
+    ],
+    "children":
+    [
+        {               
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 120,
+            "marginTop": 10,
+            "width": 550,
+            "height": 380,
+            "color": "0x151515",
+            "cornerRaduis": 15,
+            "alpha": 0.9
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 120,
+            "marginTop": 10,
+            "width": 550,
+            "height": 380,
+            "alpha": 1,
+            "type": "$HighlighterPC"  
+        },
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 20,
+                    "marginLeft": 85,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "clickAction": "act_to_instant_replay"
+
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 20,
+                    "marginLeft": 175,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "clickAction": "act_toggle_pause"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 106,
+                    "marginLeft": 17,
+                    "height": 12,
+                    "width": 143,
+                    "alpha": 0,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 106,
+                    "marginLeft": 17,
+                    "height": 12,
+                    "width": 143,
+                    "alpha": 0,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        }
+    ]
+}

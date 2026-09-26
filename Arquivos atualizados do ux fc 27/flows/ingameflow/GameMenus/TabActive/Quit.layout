@@ -1,0 +1,68 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "alignH": "LEFT",
+    "alignV": "CENTER",
+    "children":
+    [
+         {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": "act_quit_match"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 60,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 120,
+                    "marginLeft": -20,
+                    "height": 90,
+                    "width": 185,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 24.7,
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Expandes",
+                    "text": "QUIT GAME"
+                }
+            ]
+         }
+     ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

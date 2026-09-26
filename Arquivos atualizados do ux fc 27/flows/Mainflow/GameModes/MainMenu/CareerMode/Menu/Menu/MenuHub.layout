@@ -1,0 +1,203 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    { "binding": "BND_SCREEN_HEIGHT", "property": "height" },
+    { "binding": "BND_SCREEN_WIDTH", "property": "width" }
+  ],
+  "animationScripts": [
+    { "name": "show", "script": [ { "anim": "SCREEN_SHOW" } ] },
+    { "name": "hide", "script": [ { "anim": "SIMPLE_SCREEN_HIDE" } ] }
+  ],
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 1,
+      "type": "$Bg_Career"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.3,
+      "type": "$Bg_Smoke"
+    },
+    {
+      "commonName": "Panel",
+      "name": "BackNext",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "marginBottom": 40,
+      "children": [
+        {
+          "commonName": "SimpleButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": -10,
+          "marginLeft": 50,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "label": "Back",
+          "icon": "$SimMatchIcon1",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "SimpleButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": -10,
+          "marginLeft": 150,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "label": "Confirm",
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_confirm"
+        }
+      ]
+    },
+    {
+      "commonName": "Image",
+      "name": "FlagImage",
+      "alignH": "LEFT",
+      "alignV": "TOP",
+      "marginTop": 60,
+      "marginLeft": 50,
+      "width": 60,
+      "height": 60,
+      "bindings": [
+        { "binding": "bnd_crest", "property": "image" }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "ToggleClick",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginTop": 75,
+      "marginLeft": 160,
+      "width": 250,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0x000000",
+		  "cornerRaduis": 10,
+          "alpha": 0.4
+        },
+        {
+          "commonName": "AssetButton",
+          "alignH": "LEFT",
+          "alignV": "CENTER",
+          "width": 65,
+          "height": 65,
+          "clickAction": "act_prev_type",
+          "buttonAsset": "$ArrowLeftHighlight"
+        },
+        {
+          "commonName": "Label",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+		  "textAlign": "CENTER",
+          "fontSize": 22,
+          "fontColor": "0xffffff",
+          "fontFace": "$CruyffSansMedium",
+          "bindings": [
+            { "binding": "bnd_type_text", "property": "text" }
+          ]
+		},
+        {
+          "commonName": "AssetButton",
+          "alignH": "RIGHT",
+          "alignV": "CENTER",
+          "width": 65,
+          "height": 65,
+          "clickAction": "act_next_type",
+          "buttonAsset": "$ArrowRightHighlight"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "LiveGridPanel",
+      "alignH": "LEFT",
+      "alignV": "CENTER",
+      "marginLeft": 40,
+	  "marginTop": -60,
+      "width": 400,
+      "height": 300,
+      "children": [
+        {
+          "commonName": "GridTable",
+          "name": "CupHubGridLive",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "width": 400,
+          "height": 250,
+          "columns": 2,
+          "rows": 4,
+          "consumeInput": true,
+          "resetPageOnData": false,
+          "hasBulletIndicator": false,
+          "itemType": "TeamGridCell",
+          "cellIndexChangeAction": {
+            "action": "act_change",
+            "binding": "bnd_selected_index"
+          },
+          "bindings": [
+            { "binding": "bnd_default_cell_data", "property": "selectedCellID" },
+            { "binding": "bnd_live_menu", "property": "dataProviders" }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TeamGridPanel",
+      "alignH": "RIGHT",
+      "alignV": "CENTER",
+      "marginRight": 40,
+      "width": 500,
+      "height": 500,
+      "children": [
+        {
+          "commonName": "GridTable",
+          "name": "CupHubGridTeam",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "width": 500,
+          "height": 600,
+          "columns": 3,
+          "rows": 4,
+          "consumeInput": true,
+          "resetPageOnData": false,
+          "hasBulletIndicator": false,
+          "itemType": "FilterCell",
+          "cellIndexChangeAction": {
+            "action": "act_change_team",
+            "binding": "bnd_selected_team_index"
+          },
+          "bindings": [
+            { "binding": "bnd_default_cell_data", "property": "selectedCellID" },
+            { "binding": "bnd_teams_menu", "property": "dataProviders" }
+          ]
+        }
+      ]
+    },
+        {
+          "commonName": "Image",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+		  "width": 250,
+          "height": 250,
+		  "alpha": 0.2,
+          "bindings": [
+            { "binding": "bnd_avatar_dev", "property": "image" }
+          ]
+		}
+  ]
+}

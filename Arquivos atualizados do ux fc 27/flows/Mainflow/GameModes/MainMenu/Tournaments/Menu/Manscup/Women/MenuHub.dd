@@ -1,0 +1,139 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_play_ucl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_ucl"
+                }
+        },
+        {
+            "viewname": "act_missionmodebarclay",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmodebarclay"
+            }
+        },
+        {
+        "viewname": "act_missionmodearkema",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmodearkema"
+            }
+        },
+        {
+        "viewname": "act_missionmodeligaf",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmodeligaf"
+            }
+        },
+        {
+        "viewname": "act_missionmodegpfbl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmodegpfbl"
+            }
+        },
+        {
+        "viewname": "act_missionmodenwsl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmodenwsl"
+            }
+        },
+        {
+            "viewname": "act_play_libertadores",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_libertadores"
+             }
+        },
+        {
+            "viewname": "act_play_libertadore",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_libertadore"
+            }
+        },
+        {
+            "viewname": "act_play_uwcc",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_uwcc"
+            }
+        },
+        {
+            "viewname": "act_play_AFifa26",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_AFifa26"
+            }
+        },
+        {
+            "viewname": "act_play_Europa",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_Europa"
+            }
+        },
+        {
+            "viewname":"act_mvnprod",
+            "actionname":"act_mvnprod"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab6_visible",
+            "binding":  "bnd_tab6_visible",
+            "type":     "bool"
+        }
+    ]
+}

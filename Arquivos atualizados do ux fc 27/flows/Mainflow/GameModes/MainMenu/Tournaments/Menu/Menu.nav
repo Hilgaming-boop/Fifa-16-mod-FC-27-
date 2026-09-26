@@ -1,0 +1,24 @@
+{
+    "name": "Menu",
+    "states":
+    [
+        {
+            "name": "Menu_Tournaments",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Menu/Menu.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "Menu_Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/CustomizeHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

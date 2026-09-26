@@ -1,0 +1,86 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_ligue1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_ligue1"
+            }
+        },
+        {
+            "viewname": "act_ligapremier",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_ligapremier"
+            }
+        },
+        {
+            "viewname": "act_laliga",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_laliga"
+            }
+        },
+        {
+            "viewname": "act_serie",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_serie"
+             }
+        },
+        {
+            "viewname": "act_brasil",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_brasil"
+            }
+        },
+        {
+            "viewname":"act_fifabutton",
+            "actionname":"act_fifabutton"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}

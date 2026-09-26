@@ -1,0 +1,14 @@
+{
+    "name": "Kick",
+    "states": [
+        {
+            "name": "Menu_KickOff",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/Kick/QuickMatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

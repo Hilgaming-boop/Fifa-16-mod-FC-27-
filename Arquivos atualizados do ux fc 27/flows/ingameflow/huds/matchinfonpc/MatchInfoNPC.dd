@@ -1,0 +1,282 @@
+{
+    "actions":
+    [
+    ],
+    "data":
+    [
+
+        {
+            "viewname": "bnd_latar1_color",
+            "binding": 	"bnd_latar1_color",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_latar1_color_width",
+            "binding": 	"bnd_latar1_color_width",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_latar1_color_height",
+            "binding": 	"bnd_latar1_color_height",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_latar_color_left",
+            "binding": 	"bnd_latar_color_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_latar1_color_alpha",
+            "binding": "bnd_latar1_color_alpha",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_latar2_color",
+            "binding": 	"bnd_latar2_color",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_latar2_color_width",
+            "binding": 	"bnd_latar2_color_width",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_latar2_color_height",
+            "binding": 	"bnd_latar2_color_height",
+            "type": 		"int"
+        },
+        
+        
+        {
+            "viewname": "bnd_title_width",
+            "binding": 	"bnd_title_width",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_title_height",
+            "binding": 	"bnd_title_height",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_title_left",
+            "binding": 	"bnd_title_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_title_color",
+            "binding": 	"bnd_title_color",
+            "type": 		"string"
+        },
+        {
+            "viewname":	"bnd_cornerRaduis",
+            "binding":	"bnd_cornerRaduis",
+            "type":			"bool"
+        },
+        {
+            "viewname": "bnd_title_text_color",
+            "binding": 	"bnd_title_text_color",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_title_text_bottom",
+            "binding": 	"bnd_title_text_bottom",
+            "type": 		"int"
+        },
+        
+        {
+            "viewname":	"bnd_mvnprod1_show",
+            "binding":	"bnd_mvnprod1_show",
+            "type":			"bool"
+        },
+        {
+            "viewname": "bnd_bgIcon_color",
+            "binding": 	"bnd_bgIcon_color",
+            "type": 		"string"
+        },
+        {
+            "viewname":	"bnd_logo",
+            "binding":	"bnd_logo",
+            "type":			"object"
+        },
+        {
+            "viewname": "bnd_logo_width",
+            "binding": 	"bnd_logo_width",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_logo_height",
+            "binding": 	"bnd_logo_height",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_logo_top",
+            "binding": 	"bnd_logo_top",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_logo_left",
+            "binding": 	"bnd_logo_left",
+            "type": 		"int"
+        },
+        
+        {
+            "viewname": "bnd_line_color",
+            "binding": 	"bnd_line_color",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_line_color_alpha",
+            "binding":  "bnd_line_color_alpha",
+            "type": 		"int"
+        },
+        
+        {
+            "viewname":	"bnd_comimage1",
+            "binding":	"bnd_comimage1",
+            "type":			"object"
+        },
+        {
+            "viewname": "bnd_comimage1_left",
+            "binding": 	"bnd_comimage1_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_comimage1_top",
+            "binding": 	"bnd_comimage1_top",
+            "type": 		"int"
+        },
+        {
+            "viewname":	"bnd_com1_text",
+            "binding":	"bnd_com1_text",
+            "type":			"string"
+        },
+        {
+            "viewname": "bnd_com1_text_left",
+            "binding": 	"bnd_com1_text_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_com1_text_alignH",
+            "binding": 	"bnd_com1_text_alignH",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_com1_text_top",
+            "binding": 	"bnd_com1_text_top",
+            "type": 		"int"
+        },
+        
+        {
+            "viewname": "bnd_com_text_fontColor",
+            "binding": 	"bnd_com_text_fontColor",
+            "type": 		"string"
+        },
+        
+        {
+            "viewname":	"bnd_comimage2",
+            "binding":	"bnd_comimage2",
+            "type":			"object"
+        },
+        {
+            "viewname": "bnd_comimage2_left",
+            "binding": 	"bnd_comimage2_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_comimage2_top",
+            "binding": 	"bnd_comimage2_top",
+            "type": 		"int"
+        },
+        {
+            "viewname":	"bnd_com2_text",
+            "binding":	"bnd_com2_text",
+            "type":			"string"
+        },
+        {
+            "viewname": "bnd_com2_text_left",
+            "binding": 	"bnd_com2_text_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_com2_text_alignH",
+            "binding": 	"bnd_com2_text_alignH",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_com2_text_top",
+            "binding": 	"bnd_com2_text_top",
+            "type": 		"int"
+        },
+        
+        
+        
+        {
+            "viewname":	"bnd_ref_Name_text",
+            "binding":	"bnd_ref_Name_text",
+            "type":			"string"
+        },
+        {
+            "viewname": "bnd_ref_Name_text_left",
+            "binding": 	"bnd_ref_Name_text_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_ref_Name_text_alignH",
+            "binding": 	"bnd_ref_Name_text_alignH",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_ref_Name_text_top",
+            "binding": 	"bnd_ref_Name_text_top",
+            "type": 		"int"
+        },
+        
+        {
+            "viewname":	"bnd_ref_Country_text",
+            "binding":	"bnd_ref_Country_text",
+            "type":			"string"
+        },
+        {
+            "viewname": "bnd_ref_Country_text_left",
+            "binding": 	"bnd_ref_Country_text_left",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_ref_Country_text_alignH",
+            "binding": 	"bnd_ref_Country_text_alignH",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_ref_Country_text_top",
+            "binding": 	"bnd_ref_Country_text_top",
+            "type": 		"int"
+        },
+        
+        {
+            "viewname":	"bnd_visible_com",
+            "binding":	"bnd_visible_com",
+            "type":			"bool"
+        },
+        {
+            "viewname":	"bnd_visible_ref",
+            "binding":	"bnd_visible_ref",
+            "type":			"bool"
+        },
+        {
+            "viewname": "bnd_npc_info",
+            "binding":  "bnd_npc_info",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+                    "topText":     "string",
+                    "middleText":  "string",
+                    "bottomText":  "string",
+                    "overlayTitle":"string",
+                    "leagueId":    "int"
+                }
+            }
+        }
+    ]
+}

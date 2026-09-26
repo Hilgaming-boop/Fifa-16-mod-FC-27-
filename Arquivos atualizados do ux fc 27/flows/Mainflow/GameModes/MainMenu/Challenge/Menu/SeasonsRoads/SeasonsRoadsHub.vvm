@@ -1,0 +1,4 @@
+{
+    "dds": ["SeasonsRoadsHub.dd"],
+    "views": [["gfx", { "layout": "SeasonsRoadsHub.layout" }]]
+}

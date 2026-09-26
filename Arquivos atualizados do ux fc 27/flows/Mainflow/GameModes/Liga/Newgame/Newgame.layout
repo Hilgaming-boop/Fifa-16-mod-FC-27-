@@ -1,0 +1,274 @@
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "SCREEN_SHOW"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "SIMPLE_SCREEN_HIDE"
+        }
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "commonName": "SquadCustomizationBehavior",
+      "actionName": "act_selected",
+      "buttonContainer": "FifaButton"
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "type": "$Bg_Kick"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.1,
+      "type": "$Bg_Smoke"
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginTop": -20,
+      "marginLeft": -240,
+      "width": 380,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "cornerRaduis": 15,
+          "type": "$New_Game",
+          "alpha": 1.5
+		}
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginTop": -20,
+      "marginLeft": 300,
+      "width": 380,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "cornerRaduis": 15,
+          "type": "$Load_Game",
+          "alpha": 1.5
+		}
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginTop": -20,
+      "marginLeft": -240,
+      "width": 380,
+      "height": 400,
+      "bindings": [
+        {
+          "binding": "bnd_tab1_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "cornerRaduis": 15,
+          "type": "$New_Game",
+          "alpha": 0
+        },
+        {
+          "commonName": "SimpleButton",
+          "alignH": "CENTER",
+          "alignV": "BOTTOM",
+          "marginLeft": 0,
+          "marginBottom": -75,
+          "height": 60,
+          "width": 150,
+          "backgroundImage": "$Tab_Action_Lets_Play",
+          "backgroundHighlightImage": "$Tab_Action_Lets_Play",
+          "clickAction": "act_newgame"
+        },
+		{
+          "commonName": "Label",
+          "alignH": "FILL",
+          "alignV": "BOTTOM",
+          "marginLeft": 25,
+          "marginBottom": -55,
+		  "fontSize": 19,
+          "fontFace": "$CruyffSans-Bold",
+          "textAlignH": "CENTER",
+          "fontColor": "0x1E1E1E",
+          "text": "Play New"
+		}
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginTop": -20,
+      "marginLeft": 300,
+      "width": 380,
+      "height": 400,
+      "bindings": [
+        {
+          "binding": "bnd_tab2_visible",
+          "property": "visible"
+        }
+      ],
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "cornerRaduis": 15,
+          "type": "$Load_Game",
+          "alpha": 0
+        },
+        {
+          "commonName": "SimpleButton",
+          "alignH": "CENTER",
+          "alignV": "BOTTOM",
+          "marginLeft": 0,
+          "marginBottom": -80,
+          "height": 60,
+          "width": 150,
+          "backgroundImage": "$Tab_Action_Lets_Play",
+          "backgroundHighlightImage": "$Tab_Action_Lets_Play",
+          "clickAction": "act_loadgame"
+        },
+		{
+          "commonName": "Label",
+          "alignH": "FILL",
+          "alignV": "BOTTOM",
+          "marginLeft": 25,
+          "marginBottom": -60,
+		  "fontSize": 19,
+          "fontFace": "$CruyffSans-Bold",
+          "textAlignH": "CENTER",
+          "fontColor": "0x1E1E1E",
+          "text": "Play Load"
+		}
+      ]
+    },
+    {
+      "commonName": "Group",
+      "name": "FifaButton",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginBottom": 20,
+      "marginLeft": -40,
+      "width": 800,
+      "height": 400,
+      "alpha": 0,
+      "children": [
+        {
+          "commonName": "ClubButton",
+          "name": "Act1",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 400,
+          "autoSelect": true,
+          "id": 1,
+          "type": "blackandblue",
+          "buttonWidth": 400,
+          "buttonHeight": 400,
+          "selectable": true
+        },
+        {
+          "commonName": "ClubButton",
+          "name": "Act2",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "x": 540,
+          "y": 0,
+          "width": 400,
+          "height": 400,
+          "autoSelect": true,
+          "id": 2,
+          "type": "blackandblue",
+          "buttonWidth": 400,
+          "buttonHeight": 400,
+          "selectable": true
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 86,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Back"
+        }
+      ]
+    }
+  ]
+}

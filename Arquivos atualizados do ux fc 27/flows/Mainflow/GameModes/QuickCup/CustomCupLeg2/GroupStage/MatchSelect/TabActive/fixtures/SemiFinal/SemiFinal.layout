@@ -1,0 +1,205 @@
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    { "binding": "BND_SCREEN_WIDTH", "property": "width" },
+    { "binding": "BND_SCREEN_HEIGHT", "property": "height" }
+  ],
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginBottom": 1,
+              "marginLeft": 730,
+			  "fontSize": 22,
+			  "fontColor": "0xffffff",
+			  "text": "Semi Final"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginTop": 40,
+      "width": 1100,
+      "height": 400,
+      "alpha": 1,
+      "children": [
+        {
+          "commonName": "Panel",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 10,
+          "width": 930,
+          "height": 460,
+          "children": [
+          {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": -235,
+              "width": 950,
+              "height": 75,
+              "cornerRaduis": 15,
+              "alpha": 0.99,
+			  "bindings": [
+                {
+				   "binding": "bnd_color_tourid2",
+                   "property": "color"
+				}
+              ]
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": -200,
+              "width": 950,
+              "height": 30,
+              "alpha": 1,
+			  "bindings": [
+                {
+				   "binding": "bnd_color_tourid",
+                   "property": "color"
+				}
+              ]
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 20,
+              "width": 950,
+              "height": 445,
+              "alpha": 0.9,
+			  "bindings": [
+                {
+				   "binding": "bnd_color_tourid",
+                   "property": "color"
+				}
+              ]
+            },
+            {
+                   "commonName": "Label",
+                   "name": "Name",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": -25,
+                   "marginLeft": 150,
+                   "fontSize": 18,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor": "0xFFFFFF",
+                    "forceCaps": true,
+                    "alpha": 1,
+                    "textAlignH": "LEFT",
+                   "bindings": 
+                  [
+                { 
+                     "binding": "bnd_tour_label",
+                     "property": "text" 
+                }
+              ]
+            },
+            {
+                    "commonName": "Image",
+                    "name": "Logo",
+                    "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": -35,
+                   "marginLeft": -410,
+                    "width": 40,
+                    "height": 40,
+                    "alpha": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tour_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -35,
+                    "marginLeft": -350,
+                    "width": 40,
+                    "height": 40,
+                    "type": "$SimMatchIcon5"
+                },
+			    {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 140,
+                    "marginLeft": 0,
+                    "fontSize": 22,
+                    "fontColor": "0xffffff",
+                    "fontFace": "$CruyffSansExpanded",
+                    "forceCaps": true,
+                    "alpha": 1,
+                    "textAlignH": "LEFT",
+                    "text": "Semi-Final"
+            },
+            {
+              "commonName": "Panel",
+              "name": "TableMatch",
+              "alignV": "FILL",
+              "alignH": "FILL",
+              "width": 495,
+              "scaleX": 0.6,
+              "scaleY": 0.6,
+              "alpha": 1,
+              "children": [
+                {
+                  "commonName": "VerticalList",
+                  "name": "matchlist",
+                  "alignV": "TOP",
+                  "alignH": "LEFT",
+                  "marginTop": 200,
+                  "marginLeft": 180,
+                  "displayRange": 8,
+                  "highlightable": true,
+                  "row": "FixturesQuarterFinal",
+                  "rowHeight": 150,
+                  "rowWidth": 1200,
+                  "bindings": [
+                    {
+                      "binding": "bnd_semi_fixtures",
+                      "property": "dataProviders"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

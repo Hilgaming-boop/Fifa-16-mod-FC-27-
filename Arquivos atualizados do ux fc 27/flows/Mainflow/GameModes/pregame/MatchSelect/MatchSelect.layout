@@ -1,0 +1,174 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon2",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Smoke"
+         },
+         {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Kick"
+        },
+        {
+            "commonName": "Panel",
+            "name": "ModeInfo",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Ko"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -2,
+                    "marginLeft": 148,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "text": "Kick Off"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 260,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xAAAAAA",
+                    "alpha": 1
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 285,
+                    "height": 30,
+                    "width": 110,
+                    "label": "Match Preview",
+                    "clickAction": "act_tab1",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 465,
+                    "height": 30,
+                    "width": 130,
+                    "label": "Team Management",
+                    "clickAction": "act_tab2",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 655,
+                    "height": 30,
+                    "width": 115,
+                    "label": "Game Settings",
+                    "clickAction": "act_tab3",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 830,
+                    "height": 30,
+                    "width": 130,
+                    "label": "Controller Settings",
+                    "clickAction": "act_tab4",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 1030,
+                    "height": 30,
+                    "width": 110,
+                    "label": "Detailed Stats",
+                    "clickAction": "act_to",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                }
+            ]
+        }
+      ]
+    }
+  ]
+}

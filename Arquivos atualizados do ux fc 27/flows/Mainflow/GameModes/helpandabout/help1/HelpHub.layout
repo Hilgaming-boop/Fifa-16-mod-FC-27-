@@ -1,0 +1,200 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+  "style-definitions": {
+
+		"TF_TABS_IDLE":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"alpha": 0.7,
+			"width": 250
+		},
+		"TF_TABS_HIGHLIGHT":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_WHITE",
+			"width": 250
+		},
+		"TF_TABS_SELECTED":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_WHITE",
+			"alpha": 1,
+			"width": 250
+		}
+  },
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Background_default"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.2,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.6,
+            "type": "$Bg_InGame"
+        },
+        {
+          "commonName": "Image",
+          "alignV": "CENTER",
+          "alignH": "RIGHT",
+          "marginTop": 0,
+          "marginRight": 200,
+          "height": 150,
+          "width": 150,
+		  "bindings": [
+				{
+					"binding": "bnd_avatar_dev",
+					"property": "image"
+				}
+			]
+		},
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -10,
+                    "marginLeft": -140,
+                    "height": 200,
+                    "width": 205,
+                    "path": "views/backgrounds/Triangles.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 10,
+                    "marginLeft": 100,
+                    "height": 35,
+                    "width": 100,
+                    "type": "$Icon_FC25"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 15,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 230,
+                            "fontSize": 27,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_BOLD",
+                            "alpha": 0.5,
+                            "text": "|"
+                        }
+                    ]
+                },
+        {
+          "commonName": "TabBar",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 10,
+          "marginLeft": 260,
+          "width": 400,
+          "height": 30,
+          "tabs": [
+            {
+              "label": "About",
+              "clickAction": "act_about"
+            },
+            {
+              "label": "Website",
+              "clickAction": "act_web"
+            },
+            {
+              "label": "YouTube",
+              "clickAction": "act_youtube"
+            }
+          ],
+          "bindings": [
+            {
+              "binding": "bnd_tab_index",
+              "property": "selectedIndex"
+            }
+          ]
+        }
+            ]
+        }
+    ]
+}

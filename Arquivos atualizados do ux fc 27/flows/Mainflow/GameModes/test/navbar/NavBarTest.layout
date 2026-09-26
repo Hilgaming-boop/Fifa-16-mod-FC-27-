@@ -1,0 +1,29 @@
+{
+    "behaviors":
+    [
+		{
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "icon": "$FooterIconBack",
+			"alignH": "LEFT",
+			"label": "BACK"
+        },
+		{
+			"commonName": "TickerNavPublisher",
+            "name": "bvr_advance",
+            "actionName": "act_back",
+            "icon": "$FooterIconAdvance",
+			"alignH": "RIGHT",
+			"label": "ADVANCE"
+		},
+		{
+			"commonName": "TickerNavPublisher",
+            "name": "bvr_advance",
+            "actionName": "act_back",
+            "icon": "$FooterIconAdvance",
+			"alignH": "RIGHT",
+			"label": "ADVANCE FORWARDLY"
+		}
+    ]
+}

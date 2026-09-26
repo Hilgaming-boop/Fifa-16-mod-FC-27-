@@ -1,0 +1,15 @@
+{
+    "name": "Manager",
+    "states":
+    [
+        {
+            "name": "Menu_Coach",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/KickOff/Menu/Manager/CoachMode.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

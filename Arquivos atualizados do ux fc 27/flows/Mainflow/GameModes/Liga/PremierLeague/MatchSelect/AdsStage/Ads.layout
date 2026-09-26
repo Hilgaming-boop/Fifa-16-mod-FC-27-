@@ -1,0 +1,658 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SLIDE_IN_ALPHA" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "TUTORIAL_TRANSITION_OUT" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_background_career",
+                   "property": "image"
+               }
+            ]        
+        },
+        {         
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.2,
+            "type": "$Bg_Smoke"
+        },
+        {
+        "commonName": "Rectangle",
+		            "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 0,
+                    "marginBottom": -10,
+                    "height": 385,
+                    "width": 715,
+		            "cornerRaduis": 15,
+                    "outlineAlpha": 12,
+		        "bindings": 
+            [
+                                {
+                                    "binding": "bnd_league_color",
+                                    "property": "color"
+               }
+            ]        
+        },
+        {             
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Regular",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 110,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon5",
+                    "clickAction": "act_refresh_ads"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 176,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Regular",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Toggle Ads"
+                },
+                {
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$"
+}
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 2000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -144,
+                    "marginLeft": 313,
+                    "width": 90,
+            "height": 35,
+                    "color": "0xFFDFFA62",
+                    "cornerRaduis": 10,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -144,
+                    "marginLeft": 310,
+                    "fontFace": "$CruyffSans-Medium",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_BLACK",
+                    "text": "New"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -550,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -545,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -452,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -415,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -330,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0.1
+                 }
+             ]
+         },
+         {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 12.5,
+                    "marginRight": 82,
+                    "fontSize": 13,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$KnulExtraBold",
+                    "text": ""
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 400000000,
+                    "marginTop": 30,
+                    "scaleX":0.60,
+                    "scaleY":0.60,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 105,
+                            "marginLeft": 220,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Regular",
+                            "alpha": 0.7,
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 215,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 105,
+                            "marginLeft": 355,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Regular",
+                            "alpha": 1,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMenu",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 950,
+                    "height": 250,
+                    "marginTop": 60,
+                    "marginLeft": 0,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x1C1C1C",
+                            "cornerRaduis": 0,
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": 170,
+                            "marginRight": 0,
+                            "height": 70,
+                            "width": 950,
+                            "color": "0x1C1C1C",
+                            "alpha": 0
+                        },
+                        {
+                        "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -170,
+                    "marginLeft": 0,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "icon": "$",
+                    "clickAction": ""
+                },
+                {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": -170,
+                            "marginRight": 0,
+                            "height": 70,
+                            "width": 950,
+                            "color": "0x1C1C1C",
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -100,
+                            "marginLeft": -390,
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Regular",
+                            "alpha": 0,
+                            "text": "Keep Items"
+                                                        },
+                        {
+                        "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 160,
+                            "marginLeft": -335,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Regular",
+                            "alpha": 0,
+                            "text": ""
+                                                        },
+                        {
+                        "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -170,
+                            "marginLeft": -350,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Regular",
+                            "alpha": 0,
+                            "text": "Send To Transfer List"
+                                                        },
+                        {
+                        },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 160,
+                    "marginTop": -155,
+                    "fontSize": 14,
+                    "fontFace": "$CruyffSans-Medium",
+                    "width": 340,
+                    "multiline": true,
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_random_ads_text",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 5,
+                    "marginTop": -65,
+                    "width": 30,
+                    "height": 30,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "bnd_commenter_image3",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 80,
+                    "marginTop": -70,
+                    "fontSize": 13,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_commenter_name1",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 205,
+                    "marginTop": -50,
+                    "fontSize": 12,
+                    "fontFace": "$CruyffSans-Regular",
+                    "width": 340,
+                    "multiline": true,
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_news_comment1",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 5,
+                    "marginTop": 10,
+                    "width": 30,
+                    "height": 30,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "bnd_commenter_image2",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 80,
+                    "marginTop": 5,
+                    "fontSize": 13,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_commenter_name2",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 205,
+                    "marginTop": 25,
+                    "fontSize": 12,
+                    "fontFace": "$CruyffSans-Regular",
+                    "width": 340,
+                    "multiline": true,
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_news_comment2",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 5,
+                    "marginTop": 80,
+                    "width": 30,
+                    "height": 30,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "bnd_commenter_image3",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 80,
+                    "marginTop": 75,
+                    "fontSize": 13,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_commenter_name3",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 205,
+                    "marginTop": 95,
+                    "fontSize": 12,
+                    "fontFace": "$CruyffSans-Regular",
+                    "width": 340,
+                    "multiline": true,
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_news_comment3",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 95,
+                    "marginTop": -210,
+                    "fontSize": 16,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "0xffffff",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_news_source",
+                            "property": "text"
+                        }
+                    ]               
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": -190,
+                    "marginTop": -50,
+                    "width": 325,
+                    "height": 375,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "bnd_news_image",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                            "commonName": "Group",
+            "name": "content",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "height": 20.0,
+            "marginTop": 100000,
+            "width": 320,
+            "color": "0xFFFFFF",
+            "children":
+            [
+                {
+                    "commonName": "InputTextField",
+                    "name": "typeText",
+                    "width": 150.0,
+                    "height": 20.0,
+                    "x": 340.0,
+                    "y": 0.0,
+                    "alpha": 1,
+                    "helpText": "Input Comment"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

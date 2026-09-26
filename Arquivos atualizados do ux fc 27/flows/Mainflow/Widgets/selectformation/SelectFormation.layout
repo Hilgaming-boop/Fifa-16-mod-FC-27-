@@ -1,0 +1,332 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "OVERLAY_TRANSITION_IN" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "OVERLAY_TRANSITION_OUT" } ]
+	      }
+    ],
+        "style-definitions":
+    {
+		"TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 15,
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"leading": -4
+	    },
+		"TF_LIVE_TILE_HEADLINE_SMALL": 
+        {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 15,
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_HIGHLIGHTED_SMALL":
+        {
+			"fontFace": "$CruyffSansBold",
+			"fontSize": 15,
+		    "fontColor": "$COLOR_WHITE",
+			"leading": -4
+        },
+		"TF_FILTER_CATEGORY": {
+			"fontFace": "$CruyffSansBold",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_SELECTION_NAME": {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"forceCaps": false,
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_CELL_LABEL": {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+        },
+		"TF_PANEL_HEADER_CENTERED":
+		{
+			"fontFace": "$CruyffSansBold",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_YELLOW",
+			"alpha": 0,
+			"forceCaps": true,
+			"textAlignH": "CENTER"
+        },
+        "SquadToggleInfo":
+		{
+			"fontFace": "$CruyffSansBold",
+			"fontSize": 20,                                                        
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+        },
+		"TF_SELECT_FAVORITE_LABEL": {
+			"fontFace": "$CruyffSansExpanded",
+			"fontSize": 18,
+			"marginTop": 20,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+        }
+    },
+    "children":
+    [
+      {
+        "commonName": "Asset",
+        "alignV": "FILL",
+        "alignH": "FILL",
+        "type": "$BackgroundPC"
+      },
+      {
+        "commonName": "GridTable",
+        "name": "FormationGrid",
+        "alignH": "CENTER",
+        "alignV": "CENTER",
+        "marginTop": 0,
+        "marginLeft": 0,
+        "width": 500,
+        "height": 200,
+        "rows": 1,
+        "columns": 1,
+        "cellIndexChangeAction":
+        {
+          "action": "act_change",
+          "binding": "bnd_index"
+        },
+        "bindings":
+        [
+          {
+            "binding": "bnd_list",
+            "property": "dataProviders"
+          },
+          {
+            "binding": "bnd_item_type",
+            "property": "itemType"                
+          }
+        ]
+     },
+     {
+        "commonName": "Panel",
+        "name": "UIFrame",
+        "alignV": "CENTER",
+        "alignH": "FILL",
+        "height": 580,
+        "children":
+        [
+          {
+             "commonName": "GenericButton",
+             "alignH": "LEFT",
+             "alignV": "BOTTOM",
+             "marginBottom": -16,
+             "marginLeft": 30,
+             "width": 50,
+             "height": 50,
+             "icon": "$SymMatchIcon3",
+             "clickAction": "act_close"
+          },
+          {
+             "commonName": "Label",
+             "alignV": "BOTTOM",
+             "alignH": "LEFT",
+             "marginBottom": 0,
+             "marginLeft": 86,
+             "fontSize": 14,
+             "fontColor": "$COLOR_LIGHT_GRAY",
+             "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+             "text": "Back"
+          },
+          {
+             "commonName": "GenericButton",
+             "alignH": "LEFT",
+             "alignV": "BOTTOM",
+             "marginBottom": -16,
+             "marginLeft": 105,
+             "width": 50,
+             "height": 50,
+             "icon": "$SymMatchIcon4",
+             "clickAction": "act_select"
+          },
+          {
+             "commonName": "Label",
+             "alignV": "BOTTOM",
+             "alignH": "LEFT",
+             "marginBottom": 0,
+             "marginLeft": 161,
+             "fontSize": 14,
+             "fontColor": "$COLOR_LIGHT_GRAY",
+             "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+             "text": "Select"
+          },
+          {
+             "commonName": "GenericButton",
+             "alignH": "LEFT",
+             "alignV": "BOTTOM",
+             "marginBottom": -16,
+             "marginLeft": 191,
+             "width": 50,
+             "height": 50,
+             "icon": "$SymMatchIcon21",
+             "clickAction": "act_select"
+          },
+          {
+             "commonName": "Label",
+             "alignV": "BOTTOM",
+             "alignH": "LEFT",
+             "marginBottom": 0,
+             "marginLeft": 247,
+             "fontSize": 14,
+             "fontColor": "$COLOR_LIGHT_GRAY",
+             "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+             "text": "Tutorials"  
+          },
+          {
+             "commonName": "SimpleButton",
+             "alignH": "CENTER",
+             "alignV": "CENTER",
+             "marginTop": 182,
+             "marginLeft": 0,
+             "height": 65,
+             "width": 270,
+             "backgroundImage": "$Tab_Career_Advance",
+             "backgroundHighlightImage": "$Tab_Career_Advance",
+             "clickAction": "act_select"
+	      },
+          {
+             "commonName": "Label",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginBottom": -183,
+             "marginLeft": 12,
+             "fontSize": 17,
+             "autoTextShadow": true,
+             "fontColor": "0xFFFFFF",
+             "fontFace": "$CruyffSansBold",
+             "text": "Select Tactical"                          
+          },
+          {
+             "commonName": "Asset",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": -10,
+             "marginLeft": 105,
+             "width": 50,
+             "height": 50,
+             "type": "$Icons_PC"
+         },
+         {
+             "commonName": "Label",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": 5,
+             "marginLeft": 288,
+             "fontSize": 20,
+             "fontColor": "$COLOR_WHITE",
+             "fontFace": "$CruyffSansBold",
+             "text": "Edit Tactics"     
+          },
+          {
+             "commonName": "Label",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginTop": -210,
+             "marginLeft": 0,
+             "fontSize": 35,
+             "fontColor": "$COLOR_WHITE",
+             "fontFace": "$CruyffSansExpanded",
+             "text": "Tactics Code"  
+         },
+         {
+             "commonName": "Label",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginTop": -175,
+             "marginLeft": 0,
+             "fontSize": 16,
+             "fontColor": "$COLOR_WHITE",
+             "fontFace": "$CruyffSansRegular",
+             "text": "Import a new Tactic using a Code"  
+          },
+          {
+             "commonName": "Rectangle",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": 5,
+             "marginLeft": 430,
+             "width": 2,
+             "height": 20,
+             "alpha": 0.3,
+             "color": "0xFFFFFF"
+         },
+         {
+             "commonName": "GenericButton",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": -20,
+             "marginLeft": 150,
+             "scaleX": 0.8,
+             "scaleY": 0.8,
+             "icon": "$SymMatchIcon8",
+             "clickAction": "act_"       
+         },
+         {
+             "commonName": "Label",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": 9,
+             "marginLeft": 456,
+             "fontSize": 15,
+             "fontColor": "$COLOR_WHITE",
+             "fontFace": "$CruyffSansBold",
+             "text": "Tactics Code"           
+         },
+         {
+             "commonName": "LiveTile",
+             "name": "Office",
+             "alignV": "TOP",
+             "alignH": "LEFT",
+             "marginTop": -2,
+             "marginLeft": 160,
+             "width": 300,
+             "height": 35,
+             "clickAction": "act_close",
+             "headline": ["Team Squad"],
+             "bindings": 
+             [
+                {
+                    "binding": "",
+                    "property": ""
+                }
+             ]            
+          }
+       ]   
+    }
+  ]
+}

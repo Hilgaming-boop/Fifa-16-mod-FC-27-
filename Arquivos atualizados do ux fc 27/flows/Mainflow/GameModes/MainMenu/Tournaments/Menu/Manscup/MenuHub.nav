@@ -1,0 +1,119 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_play_league",
+                    "targets": ["League"]
+                },
+                {
+                    "event": "evt_play_custom",
+                    "targets": ["Customcup"]
+                },
+                {
+                    "event": "evt_play_custom_minitur",
+                    "targets": ["CustomMinitur"]
+                },
+                {
+                    "event": "evt_play_customcup6gruop",
+                    "targets": ["Customcup6gruop"]
+                },
+                {
+                    "event": "evt_play_customcup4gruop",
+                    "targets": ["Customcup4gruop"]
+                },
+                {
+                    "event": "evt_play_mens",
+                    "targets": ["Cup"]
+                 },
+                {
+                    "event": "evt_play_women",
+                    "targets": ["Women"]
+                }
+            ]
+        },
+        {
+            "name": "Cup",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MainMenu/Tournaments/Menu/Manscup/Cup/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "League",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MainMenu/Tournaments/Menu/Manscup/League/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Customcup",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "CustomMinitur",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCupMiniTurnamen/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Customcup6gruop",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup6Gruop/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Customcup4gruop",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup4Gruop/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Women",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MainMenu/Tournaments/Menu/Manscup/Women/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        }
+    ]
+}

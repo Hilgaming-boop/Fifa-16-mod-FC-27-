@@ -1,0 +1,792 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_fifabutton",
+            "buttonContainer": "Fifabutton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 80,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "text": "Tournaments"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 120,
+            "marginTop": -15,
+            "width": 600,
+            "height": 325,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x212321",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$cupTrophy_0"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$cupBanner_0"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Men's Cup"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 500,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "FIFA World Cup 2026, Dfb Pokal, The Emirates FA Cup, Copa del Rey, Coppa Italia, EA Sports Cup, FIFA Club World Cup, UEFA Women CL, Coupe de France, Kratingdaeng Piala Indonesia, ALL STAR CUP,Leagues Cup"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$cupTrophy_0"
+                         },
+                         {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$cupBanner_0"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Mini Turnaments"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 350,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "Asean Shopee Cup, Sea Games U-23, ASEAN Hyundai Cup 2026, Piala Presiden"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$cupBanner_0"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$cupTrophy_0"
+                         },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Six Group Tournament"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 350,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "UEFA Euro, US Open Tour, Copa Argentina, Africa Cup Of Nations, UEFA Nations League, AFC Asian Cup 2027"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$cupBanner_0"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": -40,
+                            "width": 500,
+                            "height": 500,
+                            "type": "$cupTrophy_0"
+                         },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Four Group Tournament"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "Copa do Brasil, Copa MX, Copa America"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOff1",
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's Cup"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOff1",
+                                    "alpha": 1
+                                },
+                                {
+                                     "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Mini Turnaments"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOff1",
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Six Group Tournament"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOff1",
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Four Group Tournament"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOn1",
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_play_custom"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Men's Cup"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOn1",
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_play_custom_minitur"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Mini Turnaments"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOn1",
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_play_customcup6gruop"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Six Group Tournament"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693.5,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Asset",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$_ButtonPlayModeOn1",
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_play_customcup4gruop"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x000000",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Four Group Tournament"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "Fifabutton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 39,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 270,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 500,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 731,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

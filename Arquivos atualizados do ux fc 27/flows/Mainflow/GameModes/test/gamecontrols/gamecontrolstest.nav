@@ -1,0 +1,20 @@
+{
+	"name": "GameControlsFlow",
+	"onEnter":
+	[
+		["hideFEMask"],
+		["loadVVM", ["/flows/mainflow/gamemodes/test/gamecontrols/GameControlsTest.vvm"]]
+	],
+	"onExit":
+	[
+		["unloadVVM"],
+		["showFEMask"]
+	],
+	"transitions":
+	[
+		{
+			"event":   "evt_back",
+			"targets": ["out_back"]
+		}
+	]
+}

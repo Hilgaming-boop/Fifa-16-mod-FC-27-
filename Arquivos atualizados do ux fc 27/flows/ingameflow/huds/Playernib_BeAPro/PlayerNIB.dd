@@ -1,0 +1,43 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_active",
+            "binding": "bnd_active",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_alpha",
+            "binding": "bnd_alpha",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_player_info",
+            "binding": "bnd_player_info",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_stamina",
+            "binding": "bnd_stamina",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+                    "stamina": "float",
+                    "shortStamina": "float"
+                }
+            }
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding": "bnd_home_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding": "bnd_away_team_crest",
+            "type": "object"
+        }
+    ]
+}

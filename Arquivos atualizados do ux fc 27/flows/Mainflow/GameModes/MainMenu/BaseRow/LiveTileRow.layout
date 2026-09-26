@@ -1,0 +1,66 @@
+{
+  "commonName": "fow.base.BaseRow",
+  "name": "LiveTileRow",
+  "height": 60,
+  "mouseInteractive": true,
+  "children": [
+    {
+      "commonName": "LiveTile",
+      "name": "Tile",
+      "width": 300,
+      "height": 40,
+      "alignH": "CENTER",
+      "alignV": "CENTER",
+      "bindings": [
+        {
+          "binding": "TileHeadline",
+          "property": "headline"
+        },
+        {
+          "binding": "TileClickAction",
+          "property": "clickAction"
+        }
+      ]
+    }
+  ],
+  "propertyMap": {
+    "dataProviders.TileHeadline": "Tile.headline",
+    "dataProviders.TileClickAction": "Tile.clickAction"
+  },
+  "scripts": {
+    "onRowFocus": [
+      {
+        "target": "Tile",
+        "property": "scaleX",
+        "value": 1.1
+      },
+      {
+        "target": "Tile",
+        "property": "scaleY",
+        "value": 1.1
+      },
+      {
+        "target": "Tile",
+        "property": "alpha",
+        "value": 1
+      }
+    ],
+    "onRowUnfocus": [
+      {
+        "target": "Tile",
+        "property": "scaleX",
+        "value": 0.9
+      },
+      {
+        "target": "Tile",
+        "property": "scaleY",
+        "value": 0.9
+      },
+      {
+        "target": "Tile",
+        "property": "alpha",
+        "value": 0.7
+      }
+    ]
+  }
+}

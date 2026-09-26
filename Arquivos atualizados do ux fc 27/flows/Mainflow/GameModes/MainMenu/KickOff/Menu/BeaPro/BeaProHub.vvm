@@ -1,0 +1,5 @@
+{
+    "dds": ["BeaProHub.dd"],
+    "vms": [["lua", "BeaProHub.lua"]],
+    "views": [["gfx", { "layout": "BeaProHub.layout" }]]
+}

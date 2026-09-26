@@ -1,0 +1,446 @@
+{
+    "constants":
+    {
+        "Color" :
+        {
+            "COLOR_WHITE"                       :   "0xFFFFFF",
+            "COLOR_PUTIH"                       :   "0xFAFAFA",
+            "COLOR_BLACK"                       :   "0x1E1E1E",
+            "COLOR_PURE_BLACK"                  :   "0x000000",
+            "COLOR_BEIGE"                       :   "0xE6E6E6",
+            "COLOR_OLIVE"                       :   "0xD2D1AD",
+            "COLOR_BLUE"                        :   "0x083C65",
+            "COLOR_DARK_GRAY"                   :   "0x555555",
+            "COLOR_MEDIUM_GRAY"                 :   "0x999999",
+            "COLOR_LIGHT_GRAY"                  :   "0xC3C3C3",
+            "COLOR_DARK_BLUE"                   :   "0x1E2930",
+            "COLOR_LIGHT_BLUE"                  :   "0x197FC5",
+            "COLOR_LIGHTER_BLUE"                :   "0x33B9F7",
+            "COLOR_DARK_RED"                    :   "0x860000",
+            "COLOR_LIGHT_RED"                   :   "0xc82727",
+            "COLOR_GOLD"                        :   "0xD0950B",
+            "COLOR_DARK_GOLD"                   :   "0x734203",
+            "COLOR_GREEN"                       :   "0x28992D",
+            "COLOR_LIGHT_GREEN"                 :   "0x04F377",
+            "COLOR_YELLOW"                      :   "0xE2BA00",
+            "COLOR_GOLDEN_MVN"                      :   "0xFFBB00",
+			"COLOR_LIGHT_YELLOW"                :   "0xF7C849",
+            "COLOR_ORANGE"                      :   "0xFFAF3D",
+            "COLOR_DARK_GREEN"                  :   "0x287800",
+            "COLOR_HUD_BLUE"                    :   "0x44adf5",
+			"COLOR_GREEN_CREDITS"               :   "0x5c901a",
+			"COLOR_DARK_BLUE_GRAY"				:   "0x34434e",
+			"COLOR_FIFA_POINTS"					:   "0x04b10c",
+      "COLOR_UNGU_PREMIER"        :  "0x460240",
+      "COLOR_ABU_MOD"        :  "0xE0E0E0",
+      "COLOR_HIGH_CAREER"        :  "0xdc7d2a",
+      "COLOR_MEDIUM_CAREER"        :  "0xdbab03",
+      "COLOR_VERYLOW_CAREER"        :  "0xc8c5c8",
+      "COLOR_LOW_CAREER"        :  "0x1c98f1",
+			
+			"COLOR_FC_GREY"					    :   "0x7A7A7A",
+			"COLOR_FIFA_MOD_WHITE"                       :   "0xFFFFFF",
+            "COLOR_FIFA_MOD_BLACK"                       :   "0x151515",
+            "COLOR_FIFA_MOD_PURE_BLACK"                  :   "0x000000",
+            "COLOR_FIFA_MOD_BEIGE"                       :   "0xE6E6E6",
+            "COLOR_FIFA_MOD_OLIVE"                       :   "0xD2D1AD",
+            "COLOR_FIFA_MOD_BLUE"                        :   "0x083C65",
+            "COLOR_FIFA_MOD_DARK_GRAY"                   :   "0x555555",
+            "COLOR_FIFA_MOD_MEDIUM_GRAY"                 :   "0x999999",
+            "COLOR_FIFA_MOD_LIGHT_GRAY"                  :   "0xC3C3C3",
+            "COLOR_FIFA_MOD_DARK_BLUE"                   :   "0x1E2930",
+            "COLOR_FIFA_MOD_LIGHT_BLUE"                  :   "0x197FC5",
+            "COLOR_FIFA_MOD_LIGHTER_BLUE"                :   "0x33B9F7",
+            "COLOR_FIFA_MOD_DARK_RED"                    :   "0x860000",
+            "COLOR_FIFA_MOD_LIGHT_RED"                   :   "0xc82727",
+            "COLOR_FIFA_MOD_GOLD"                        :   "0xD0950B",
+            "COLOR_FIFA_MOD_DARK_GOLD"                   :   "0x734203",
+            "COLOR_FIFA_MOD_GREEN"                       :   "0x28992D",
+            "COLOR_FIFA_MOD_LIGHT_GREEN"                 :   "0x7EFD00",
+            "COLOR_FIFA_MOD_YELLOW"                      :   "0xE2BA00",
+			"COLOR_FIFA_MOD_LIGHT_YELLOW"                :   "0xF7C849",
+            "COLOR_FIFA_MOD_ORANGE"                      :   "0xFFAF3D",
+            "COLOR_FIFA_MOD_DARK_GREEN"                  :   "0x287800",
+            "COLOR_FIFA_MOD_HUD_BLUE"                    :   "0x44adf5",
+			"COLOR_FIFA_MOD_GREEN_CREDITS"               :   "0x5c901a",
+			"COLOR_FIFA_MOD_DARK_BLUE_GRAY"				:   "0x34434e",
+			"COLOR_FIFA_MOD_POINTS"					:   "0x04b10c",
+			
+			"COLOR_FIFA_MOD_PURPLE"                 :   "0x800080",
+			"COLOR_FIFA_MOD_PINK"                       :   "0xF33A6A",
+			"COLOR_FIFA_MOD_ORANGE_2"             :   "0xFF9420",
+			
+			"COLOR_FIFA_MOD_WON"                       :   "0x7EFD00",
+			"COLOR_FIFA_MOD_LOST"                       :   "0xFF8613",
+			"COLOR_FIFA_MOD_DRAW"                      :   "0xFFE30D",
+			
+			"COLOR_FIFA_MOD_THEME_ORANGE"	     	:   "0xff5e0d",
+			"COLOR_FIFA_MOD_THEME_OFFWHITE"	  	:   "0xf2e9d8",
+			"COLOR_FIFA_MOD_THEME_BLUE"					:   "0x144162",
+			
+			"COLOR_FIFA_MOD_THEME_BLUE_TEXT"	     	:   "0x263964",
+
+			"COLOR_FC_GREEN"					:   "0x00FC7F",
+			"COLOR_FC_GREEN1": "0x4b8be5",
+				
+                "COLOR_EAFC24"					:   "0x0AF16D",
+                
+			"COLOR_FC_BLUE"					:   "0x38003D",
+			
+			"COLOR_SCORE_PURPLE"           : "0x34003a",
+			"COLOR_SCORE_EFOOTBALL_YELLOW"           : "0xFCFE01",
+			"COLOR_SCORE_EFOOTBALL_BLUE"           : "0x00009E",
+			"COLOR_SCORE_FRENCH_GREEN"           : "0xCDFB0a",			
+
+            "TILE_COLOR_HEADER"                 : "0xFFFFFF",
+            "TILE_COLOR_HEADER_HIGHLIGHT"       : "0x283860",
+            "TILE_COLOR_SUBHEADLINE"            : "0x454545",
+            "TILE_COLOR_SUBHEADLINE_HIGHLIGHT"  : "0x197FC5",
+            "TILE_COLOR_BODY"                   : "0x575757",
+            "TILE_COLOR_BODY_HIGHLIGHT"         : "0x197FC5",
+			"TILE_COLOR_LABEL"                  : "0x666666",
+			"TILE_COLOR_VALUE"                  : "0x333333",
+
+			"COLOR_GOLD_PACKS"    : "0x9c8012",
+			"COLOR_SILVER_PACKS"  : "0x6f7374",
+			"COLOR_BRONZE_PACKS"  : "0x875636",
+			"COLOR_SPECIAL_PACKS" : "0x084b80",
+
+            "STD_TITLE_TEXT_COLOR"  : "0x454545",
+            "STD_HEADER_TEXT_COLOR" : "0x333333",
+            "STD_SUBHEADER_TEXT_COLOR" : "0x777777",
+            "STD_BODY_TEXT_COLOR"   : "0x575757",
+            "STD_LINK_TEXT_COLOR"   : "0x0790E2",
+
+            "COLOR_LOW_VALUE"       : "0xCF0400",
+            "COLOR_MEDIUM_VALUE"    : "0xF6EE00",
+            "COLOR_HIGH_VALUE"      : "0x5DB515",
+
+            "COLOR_GOOD_LATENCY"    : "0x00FF00",
+            "COLOR_MEDIUM_LATENCY"  : "0xFFF000",
+            "COLOR_BAD_LATENCY"     : "0xFF0000",
+
+			"COLOR_POSITIVE_COMPARE" : "0x669B6F",
+			"COLOR_NEGATIVE_COMPARE" : "0xC52339",
+			"COLOR_GOLD_TEXT"        : "0xB48C13",
+			"COLOR_GREEN_TEXT"       : "0x5b951b",
+			"COLOR_RED_TEXT"         : "0x982222",
+
+			"COLOR_COMING_SOON": "0xE57C00"
+        },
+        "String" :
+        {
+            "FONT_ORIGIN_NORMAL"   : "$Default",
+            "FONT_ORIGIN_BODY"     : "$Body",
+            "FONT_ORIGIN_BOLD"     : "$Title",
+            "FONT_ORIGIN_REGULAR"  : "$Title",
+            "FONT_ORIGIN_HEADER"   : "$Header",
+            "FONT_ORIGIN_TITLE"    : "$Title_Original",
+            "FONT_ORIGIN_TUTORIAL" : "$Body",
+            "FONT_ORIGIN_TIMER"    : "$Timer",
+            "FONT_ORIGIN_KNULMEDIUM": "$KnulMedium",
+            "FONT_ORIGIN_KNULBOLD": "$KnulBold",
+            "FONT_ORIGIN_KNULEXTRABOLD": "$KnulExtraBold",
+            "FONT_CRUYFFSANSHEAVY": "$CruyffSans-Heavy",
+            
+            "FONT_EPL": "$Epl",
+            "MONTBLANC_TRIAL_BOLD": "$MontBlanc-Trial-Bold",
+            "MONTBLANC_TRIAL_EXTRABOLD": "$MontBlanc-Trial-ExtraBold",
+            
+            "FONT_NORMAL"   : "$DINPro-Cond",
+            "FONT_BODY"     : "$DINPro-Cond",
+            "FONT_BOLD"     : "$DINPro-CondBold",
+            "FONT_REGULAR"  : "$DINPro-CondMedium",
+            "FONT_HEADER"   : "$DINPro-CondBold",
+            "FONT_TITLE"    : "$DINPro-CondBlack",
+            "FONT_TUTORIAL" : "$DINPro-Cond",
+            "FONT_TIMER"    : "$Timer",
+            
+            "FONT_DINPRO": "$DINPro",
+            "FONT_DINPROBOLD": "$DINPro-Bold",
+            "FONT_DINPROMEDIUM": "$DINPro-Medium",
+            "FONT_DINPROBLACK": "$DINPro-Black",
+            
+            "FONT_DINPROCOND": "$DINPro-Cond",
+            "FONT_DINPROCONDMEDIUM": "$DINPro-CondMedium",
+            "FONT_DINPROCONDBOLD": "$DINPro-CondBold",
+            "FONT_DINPROCONDBLACK": "$DINPro-CondBlack"
+            
+        },
+               
+        "Number" :
+        {
+            "SCREEN_WIDTH"      : 2340.0,
+            "SCREEN_HEIGHT"     : 1080.0,
+            "HALF_SCREEN_HEIGHT": 540.0,
+            "HALF_SCREEN_WIDTH" : 1170.0,
+
+            "PADDING_SMALL"         : 6,
+            "PADDING_MEDIUM"        : 10,
+            "PADDING_LARGE"         : 24,
+            "PADDING_JUMBO"         : 36,
+			"TILE_PADDING"          : 8,
+			"TILES_MARGIN_H"        : 28,
+			"TILES_MARGIN_TOP"      : 148,
+			"TILES_MARGIN_BOT"      : 65,
+
+            "BUTTON_HEIGHT_SMALL"   :32,
+            "BUTTON_HEIGHT_MEDIUM"  :38,
+            "BUTTON_CONTENT_INDENT" :43,
+
+            "TWEEN_DURATION"        : 0.5,
+            "SCROLL_TWEEN_DURATION" : 0.2,
+            "FADE_DURATION"         : 2,
+
+            "FAST_ANIM_DURATION"    : 100,
+            "SHORT_ANIM_DURATION"   : 200,
+            "MEDIUM_ANIM_DURATION"  : 400,
+            "LONG_ANIM_DURATION"    : 500,
+            "EXTRA_LONG_ANIM_DURATION": 750,
+            "EXTRA_EXTRA_LONG_ANIM_DURATION": 800,
+            "EXTRA_EXTRA_EXTRA_LONG_ANIM_DURATION": 2000,
+            "EXTRA_EXTRA_EXTRA_EXTRA_LONG_ANIM_DURATION": 5000,
+            "EXTRA_EXTRA_EXTRA_EXTRA_EXTRA_LONG_ANIM_DURATION": 10000,
+
+            "FONT_SIZE_SMALLEST"        : 12,
+            "FONT_SIZE_SMALL"           : 14,
+            "FONT_SIZE_MEDIUM"          : 16,
+            "FONT_SIZE_LARGE"           : 18,
+            "FONT_SIZE_SMALLEST_SMALLEST_HEADER": 18,
+            "FONT_SIZE_LARGEST"         : 20,
+            "FONT_SIZE_TINY_HEADER" 	: 22,
+            "FONT_SIZE_SMALLEST_HEADER" : 24,
+            "FONT_SIZE_TUTORIAL_DESCRIPTION": 25,
+            "FONT_SIZE_SMALL_HEADER" 	: 26,
+            "FONT_SIZE_MEDIUM_HEADER"   : 28,
+            "FONT_SIZE_HEADER"          : 30,
+            "FONT_SIZE_LARGE_HEADER"    : 32,
+            "FONT_SIZE_LARGER_HEADER"	: 34,
+            "FONT_SIZE_LEVEL_UP_TEXT"	: 36,
+            "FONT_SIZE_HUD_LARGE_TEXT"  : 40,
+            "FONT_SIZE_BIG_TITLE"       : 40,
+            "FONT_SIZE_SMALLER_COINS"   : 46,
+            "FONT_SIZE_LARGEST_HEADER"  : 48,
+            "FONT_SIZE_BIG_COINS"       : 50,
+            "FONT_SIZE_WELCOME_TITLE"   : 55,
+            "FONT_SIZE_AUCTION_ITEMS"  : 60,
+            "FONT_SIZE_LARGE_POSITION"  : 72,
+            "FONT_SIZE_LEVEL_UP_TITLE"  : 80,
+            "FONT_SIZE_SUPER_UP_TITLE"  : 100,
+            "FONT_SIZE_SUPER_EXTRA_TITLE"  : 200
+        }
+    },
+    "animations":
+    {
+    
+		"MOD_SLIDE_IN_RIGHT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0, "marginLeft": -50},
+                "end" : { "alpha" : 1, "marginLeft": 0},
+                "duration" : "$MEDIUM_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "MOD_SLIDE_OUT_RIGHT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "marginLeft": 0 },
+                "end" : { "alpha" : 0, "marginLeft": -100 },
+                "duration" : "$MEDIUM_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+		"MOD_SLIDE_IN_ALPHA" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0, "marginRight": -20},
+                "end" : { "alpha" : 1, "marginRight": 0},
+                "duration" : "$MEDIUM_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "MOD_SLIDE_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "marginLeft": 0 },
+                "end" : { "alpha" : 0, "marginLeft": -20 },
+                "duration" : "$MEDIUM_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+		"SLIDE_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "marginLeft":-50},
+                "end" : { "marginLeft":0 },
+                "duration" : "$EXTRA_EXTRA_LONG_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+		"SCREEN_TRANSITION_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "x":2000},
+                "end" : { "x":0 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "TUTORIAL_TRANSITION_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha":0},
+                "end" : { "alpha":1 },
+                "duration" : "$LONG_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "TUTORIAL_TRANSITION_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha":1},
+                "end" : { "alpha":0 },
+                "duration" : "$LONG_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+		"OVERLAY_TRANSITION_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha":0},
+                "end" : { "alpha":1 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+		"SLIDE_IN_ALPHA" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0},
+                "end" : { "alpha" : 1},
+                "duration" : "$EXTRA_EXTRA_LONG_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "SLIDE_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "marginLeft": 0 },
+                "end" : { "alpha" : 0, "marginLeft": -50 },
+                "duration" : "$LONG_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "SCREEN_TRANSITION_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "x": 0 },
+                "end" : { "alpha" : 0, "x": 50 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "OVERLAY_TRANSITION_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "SCREEN_SHOW" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : "$FAST_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "SCREEN_HIDE" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "z" : 0 },
+                "end" : { "alpha" : 0, "z" : -1000 },
+                "duration" : "$FAST_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "SIMPLE_SCREEN_SHOW" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : "$FAST_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        },
+        "SIMPLE_SCREEN_HIDE" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : "$FAST_ANIM_DURATION",
+                "easing" : "outBack"
+                            }
+        },
+        "GROUND_TO_TOP_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0, "marginTop": -50},
+                "end" : { "alpha" : 1, "marginTop": 0},
+                "duration" : "$LONG_ANIM_DURATION",
+                "easing" : "outBack"
+                }
+        },
+        "GROUND_TO_TOP_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "y": 0 },
+                "end" : { "alpha" : 0, "y": 100 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "outBack"
+            }
+        }
+    }
+}

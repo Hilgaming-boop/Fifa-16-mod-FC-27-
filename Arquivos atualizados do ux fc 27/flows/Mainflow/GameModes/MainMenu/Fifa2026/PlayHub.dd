@@ -1,0 +1,13 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_menu_fifa2026",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_menu_fifa2026"
+            }
+        }
+    ]
+}

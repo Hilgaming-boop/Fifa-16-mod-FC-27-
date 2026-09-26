@@ -1,0 +1,113 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 96,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": -10,
+                            "marginTop": -35,
+                            "width": 320,
+                            "height": 370,
+                            "type": "$Tab_Cup_Select",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                            {
+                                    "commonName": "Rectangle",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 42,
+                                    "width": 180,
+                                    "cornerRaduis": 23,
+                                    "alpha": 1,
+                                    "bindings": [
+                                  {
+                                      "binding": "bnd_color_action",
+                                      "property": "color"
+                                   }
+                                ]
+                            },
+                            {
+                                    "commonName": "Asset",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 42,
+                                    "width": 180,
+                                    "type": "$ClickAdvanceOn2"
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 42,
+                                    "width": 180,
+                                    "clickAction": "act_sheet"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 10,
+                                    "marginBottom": 0,
+                                    "fontSize": 17,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                                    "text": "Management"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

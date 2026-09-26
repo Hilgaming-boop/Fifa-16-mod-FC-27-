@@ -1,0 +1,110 @@
+{
+    "actions": [
+        {
+            "viewname": "act_input_name",
+            "actionname": "act_input_name"
+        },
+        {
+            "viewname": "act_text_change",
+            "actionname": "act_text_change"
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_change_option",
+            "actionname": "act_change_option"
+        },
+        {
+            "viewname": "act_next_dev_type",
+            "actionname": "act_next_dev_type"
+        },
+        {
+            "viewname": "act_prev_dev_type",
+            "actionname": "act_prev_dev_type"
+        }
+    ],
+    "data": [
+        {
+            "binding": "bnd_dev_type_toggle",
+            "viewname": "bnd_dev_type_toggle",
+            "type": {
+                "metaType": "object",
+                "members": { "data": "array", "index": "int" }
+            }
+        },
+	     {
+            "viewname": "bnd_index_change",
+            "binding":  "bnd_index_change",
+            "type":     "int",
+            "actions":
+            [
+                {
+					"viewname":   "act_change_option",
+					"actionname": "act_change_option"
+				}
+			]
+        },
+        {
+            "viewname": "bnd_name_valid",
+            "binding": "bnd_name_valid",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_description",
+            "binding": "bnd_description",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_dev_name",
+            "binding": "bnd_dev_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_dev_name_label",
+            "binding": "bnd_dev_name_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_dev_crest",
+            "binding": "bnd_dev_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_prev_dev_crest",
+            "binding": "bnd_prev_dev_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_next_dev_crest",
+            "binding": "bnd_next_dev_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_dev_type_text",
+            "binding": "bnd_dev_type_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_prev2_dev_crest",
+            "binding": "bnd_prev2_dev_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_next2_dev_crest",
+            "binding": "bnd_next2_dev_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_manual_input_visible",
+            "binding": "bnd_manual_input_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_input_placeholder",
+            "binding": "bnd_input_placeholder",
+            "type": "string"
+        }
+    ]
+}

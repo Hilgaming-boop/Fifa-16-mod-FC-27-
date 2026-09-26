@@ -1,0 +1,232 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -31,
+                            "marginLeft": 395,
+                            "height": 90,
+                            "width": 140,
+                            "alpha": 1,
+                            "path": "views/backgrounds/White_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -1.4,
+                            "marginLeft": 424,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansBold",
+                            "text": "My Team"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 100,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,                 
+                            "clickAction": "act_tab2sub1"
+                        },               
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,                         
+                            "cornerRaduis": 15,
+                            "color": "0x0C0506"   
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 20,
+                            "width": 280,
+                            "height": 350,
+                            "type": "$Icon_Squad_Player"      
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 73,
+                            "marginLeft": 0,
+                            "fontSize": 16,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontColor": "0xFF3A8384",
+                            "alpha": 1,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_active_home_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 105,
+                            "marginLeft": -3,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Fitness"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 25,
+                            "marginLeft": 0,
+                            "fontSize": 27,
+                            "fontFace": "$CruyffSansBold",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Team Squad"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 420,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,                           
+                            "clickAction": "act_tab2sub2"
+                        },               
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,                         
+                            "cornerRaduis": 15,
+                            "color": "0x0C0506"   
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 25,
+                            "marginLeft": 0,
+                            "fontSize": 27,
+                            "fontFace": "$CruyffSansBold",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Personality"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 73,
+                            "marginLeft": 0,
+                            "fontSize": 16,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontColor": "0xFF3A8384",
+                            "text": "Players to play in"
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "teamlist",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": -52,
+                            "x": 0,
+                            "y": 0,
+                            "displayRange": 1.0,
+                            "rowChangeAction": "act_player_select",
+                            "highlightable": true,
+                            "row": "PlayersCareerRow",
+                            "rowHeight": 360.5,
+                            "rowWidth": 735,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_player_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,                           
+                            "clickAction": "act_tab2sub2"
+                        }
+                    ]                   
+                }
+            ]
+         }
+     ]
+}

@@ -1,0 +1,134 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2LigaRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_DINPROBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_DINPROBOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_DINPROBOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.TeamAwayCrest": "RowPanel.RowLeftPanel.TeamAwayCrest.image",
+        "dataProviders.TeamHomeCrest": "RowPanel.RowLeftPanel.TeamHomeCrest.image",
+        "dataProviders.TeamAwayName": "RowPanel.RowLeftPanel.TeamAwayName.text",
+        "dataProviders.TeamHomeName": "RowPanel.RowLeftPanel.TeamHomeName.text",
+        "dataProviders.MatchScore": "RowPanel.RowLeftPanel.MatchScore.text",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 900,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 550,
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "TeamHomeCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "width": 40,
+                            "height": 40
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamHomeName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 45,
+                            "marginBottom": -20,
+                            "fontSize": 13,
+                            "alpha": 0.6,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSansBold"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "TeamAwayCrest",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginBottom": 0,
+                            "marginRight": 605,
+                            "width": 35,
+                            "height": 35
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamAwayName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 45,
+                            "marginBottom": -2,
+                            "fontSize": 15,
+                            "forceCaps": true,
+                            "width": 180,
+                            "autoScroll":true,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSansExpanded"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 35,
+                            "marginLeft": 0,
+                            "width": 280,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.3
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

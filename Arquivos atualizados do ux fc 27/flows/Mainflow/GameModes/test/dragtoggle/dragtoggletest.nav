@@ -1,0 +1,37 @@
+{
+	"name": "DragToggleTestFlow",
+	"states":
+	[
+		{
+			"name": "Main",
+			"onEnter":
+			[
+				["loadVVM", ["/flows/mainflow/gamemodes/test/dragtoggle/DragToggleTest.vvm"]]
+			],
+			"onExit":
+			[
+				["unloadVVM"]
+			]
+		},
+		{
+			"name": "QuickMatch",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/quickmatch/quickmatch.nav",
+			"outputs":
+			{
+				"out_exit_gamemode": "DragToggleTestFlow"
+			}
+		}
+	],
+	"transitions":
+	[
+		{
+			"event":   "evt_back",
+			"targets": ["out_back"]
+		},
+		{
+			"event":   "evt_shortcut_to_quick_match",
+			"targets": ["QuickMatch"]
+		}
+	]
+}

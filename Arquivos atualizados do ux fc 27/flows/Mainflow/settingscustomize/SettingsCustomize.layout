@@ -1,0 +1,293 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "style-definitions":
+    {
+        "TF_RIGHT_PANEL":
+        {
+            "fontFace": "$FONT_REGULAR",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "textAlignH": "CENTER",
+            "leading": -2.0
+        },
+        "TF_AUDIO_TITLE":
+        {
+            "fontFace": "$FONT_ORIGIN_NORMAL",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_GRAY"
+        },
+        "TF_OPTIONS":
+        {
+            "fontFace": "$FONT_REGULAR",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_BLUE",
+            "resizeType": "NONE"
+        },
+        "TF_OPTIONS_RIGHT":
+        {
+            "fontFace": "$FONT_REGULAR",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_BLUE",
+            "textAlignH": "RIGHT"
+        },
+        "TF_TITLE":
+        {
+            "fontFace": "$FONT_ORIGIN_NORMAL",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_BLACK",
+            "textAlignH": "RIGHT"
+        },
+        "TF_GENERAL_TITLE":
+        {
+            "fontFace": "$FONT_TITLE",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_DARK_BLUE"
+        },
+        
+        "TF_SETTINGS_ROW_LABEL":
+        {
+            "fontFace": "$FONT_ORIGIN_NORMAL",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "textAlignH": "LEFT"
+        },
+        
+        "TF_SETTINGS_ROW_LABEL_DISABLED":
+        {
+            "fontFace": "$FONT_ORIGIN_NORMAL",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_MEDIUM_GRAY",
+            "textAlignH": "LEFT"
+        },
+        
+        "TF_SETTINGS_ROW_TOGGLE":
+        {
+            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER"
+        },
+        
+        "TF_GENERAL_TEXT":
+        {
+            "fontFace": "$FONT_ORIGIN_NORMAL",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_GRAY"
+        },
+        "TF_MULTILINE_TEXT":
+        {
+            "fontFace": "$FONT_ORIGIN_NORMAL",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "leading": 0.1
+        },
+        "TF_CUSTOMIZE_INGAME_WARNING":
+        {
+            "fontFace": "$FONT_ORIGIN_NORMAL",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_BLACK",
+            "textAlignH": "CENTER"
+        },
+		"TF_TABS_IDLE":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"alpha": 0.5
+		},
+		"TF_TABS_HIGHLIGHT":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TABS_SELECTED":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_WHITE",
+			"alpha": 1
+		}
+    },
+    "children":
+    [
+        {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "height": 450.0,
+            "width": 600.0,
+            "marginTop": 30,
+            "marginLeft": 100,
+            "color": "0x1C1C1C",
+			"cornerRaduis": 12,
+            "alpha": 5
+        },
+        {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 450.0,
+            "width": 570.0,
+            "marginTop": 30,
+            "marginLeft": 320,
+            "color": "0x1C1C1C",
+			"cornerRaduis": 12,
+            "alpha": 5
+        },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 40,
+          "marginLeft": 50,
+          "fontSize": 25,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$CruyffSans-Bold",
+          "text": "Game Settings"
+        },
+        {
+            "commonName": "Panel",
+            "name": "BackSave",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_cancel"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$Icon_Save",
+                    "clickAction": "act_accept"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 185,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Save"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "RIGHT",
+                    "marginBottom": 0,
+                    "marginRight": 80,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "alpha": 0.3,
+                    "text": ""
+                }
+            ]
+        },
+        {
+          "commonName": "TabBar",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 70,
+          "marginLeft": 100,
+          "width": 750,
+          "height": 30,
+          "tabs": [
+            {
+              "label": "Gameplay",
+              "clickAction": "act_select_match_settings"
+            },
+            {
+              "label": "Camera",
+              "clickAction": "act_select_camera"
+            },
+            {
+              "label": "Visual",
+              "clickAction": "act_select_visual"
+            },
+            {
+              "label": "Audio",
+              "clickAction": "act_select_audio_visual"
+            },
+            {
+              "label": "Controller",
+              "clickAction": "act_select_controls"
+            },
+            {
+              "label": "Graphic",
+              "clickAction": "act_select_debug_settings"
+            },
+            {
+              "label": "User",
+              "clickAction": "act_select_user"
+            }
+          ],
+          "bindings": [
+            {
+              "binding": "bnd_settings_customize_tab_index",
+              "property": "selectedIndex"
+            }
+          ]
+        },
+        {
+            "commonName": "Layer",
+            "name": "SettingsCustomizeContent"
+        }
+    ]
+}

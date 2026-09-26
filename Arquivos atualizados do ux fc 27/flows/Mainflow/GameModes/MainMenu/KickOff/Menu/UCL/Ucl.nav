@@ -1,0 +1,25 @@
+{
+    "name": "Ucl",
+    "states":
+    [
+        {
+            "name": "Man_UCL",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/CustomCupUclModeLiga/CustomCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "Woman_UCL",
+            "type": "external",
+            "file": "/flows/MainFlow/GameModes/MainMenu/KickOff/Menu/UCL/women/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_back": "out_hub",
+                "out_advance": "out_hub"
+            }
+        }
+    ]
+}

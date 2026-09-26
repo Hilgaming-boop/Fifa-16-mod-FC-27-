@@ -1,0 +1,137 @@
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "SCREEN_SHOW"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "SIMPLE_SCREEN_HIDE"
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 15,
+          "height": 30,
+          "children": [
+            {
+              "commonName": "Asset",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": -30,
+              "marginLeft": 325,
+              "height": 90,
+              "width": 150,
+              "alpha": 1,
+              "path": "views/backgrounds/Green_Effect.swf"
+            }
+          ]
+        }
+      ]
+    },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 150,
+            "height": 430,
+            "children":
+            [
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 100,
+          "fontSize": 17,
+          "fontFace": "$FONT_DINPROBOLD",
+          "fontColor": "$COLOR_WHITE",
+          "autoTextShadow": true,
+          "text": "Official Website MOUNTSA MOD\r"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 140,
+          "fontSize": 17,
+          "fontFace": "$FONT_DINPROBOLD",
+          "fontColor": "$COLOR_WHITE",
+          "autoTextShadow": true,
+          "text": "www.MOUNTSAMOD.eu.org"
+        },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 250,
+                   "fontSize": 17,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+				   "wrapText": true,
+				   "width": 500,
+				   "textAlignH": "LEFT",
+					"text": "If you download it elsewhere, if something happens to the game, it is beyond MOUNTSA's responsibility. Therefore, please download it from the official MOUNTSA MOD  website. If you are interested, You can also join the official WhatsApp/Telegram group of MOUNTSA MOD."
+				},
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 319,
+				   "marginRight": 200,
+                   "fontSize": 18,
+                   "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "text": "MOUNTSA MOD\r"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 342,
+				   "marginRight": 200,
+                   "fontSize": 15,
+                   "fontFace": "$FONT_DINPROBOLD",
+                   "fontColor": "$COLOR_WHITE",
+                   "autoTextShadow": true,
+                   "alpha": 0.8,
+                   "text": "@2025"
+                }
+            ]
+        }
+    ]
+}

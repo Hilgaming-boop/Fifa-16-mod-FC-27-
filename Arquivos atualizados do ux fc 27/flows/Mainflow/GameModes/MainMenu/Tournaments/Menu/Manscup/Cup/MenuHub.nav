@@ -1,0 +1,42 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_go_to_team_select",
+                    "targets": ["TeamSelect"]
+                }
+            ]
+        },
+        {
+            "name": "TeamSelect",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/Domestic/Cup/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuHub",            
+                "out_exit_gamemode1": "MenuHub"
+            }
+        }
+    ]
+}

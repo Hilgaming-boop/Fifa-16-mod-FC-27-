@@ -1,0 +1,193 @@
+{
+  "commonName": "fow.base.BaseRow",
+  "name": "TrainingPlan",
+  "mouseInteractive": false,
+  "authoringData": {
+    "designSize": {
+      "width": 505,
+      "height": 40
+    }
+  },
+  "style-definitions": {
+    "EventStyle": {
+      "fontFace": "$FONT_REGULAR",
+      "fontColor": "$TILE_COLOR_LABEL",
+      "textAlignH": "RIGHT",
+      "textAlignV": "CENTER",
+      "marginRight": 130.0
+    },
+    "LabelStyle": {
+      "resizeType": "NONE",
+      "textAlignV": "CENTER",
+      "alignV": "FILL",
+      "fontSize": "$FONT_SIZE_SMALLEST_HEADER"
+    },
+    "NumberStyle": {
+      "width": 80.0,
+      "marginRight": 10.0,
+      "fontFace": "$FONT_REGULAR",
+      "textAlignH": "RIGHT",
+      "fontColor": "$TILE_COLOR_VALUE"
+    }
+  },
+  "propertyMap": {
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+    "dataProviders.Status": "RowPanel.RowLeftPanel.Status.text",
+    "dataProviders.PlayerAvatar": "RowPanel.RowLeftPanel.PlayerAvatar.image",
+    "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+    "dataProviders.Rating": "RowPanel.RowLeftPanel.PlayerRating.text",
+    "dataProviders.FontColor": "RowPanel.RowLeftPanel.PlayerName.fontColor",
+    "height": "RowPanel.height"
+  },
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "RowPanel",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "RowLeftPanel",
+          "width": 400,
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "FILL",
+              "marginTop": 28,
+              "height": 2,
+              "color": "0xFFFFFF",
+              "alpha": 0.1
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 18,
+              "marginLeft": 80,
+              "width": 120,
+              "height": 8,
+              "color": "0x000000",
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 18,
+              "marginLeft": 80,
+              "width": 16,
+              "height": 8,
+              "color": "0x3471eb",
+              "alpha": 0.9
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 18,
+              "marginLeft": 100,
+              "width": 16,
+              "height": 8,
+              "color": "0x3471eb",
+              "alpha": 0.9
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 18,
+              "marginLeft": 120,
+              "width": 16,
+              "height": 8,
+              "color": "0x3471eb",
+              "alpha": 0.9
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 18,
+              "marginLeft": 140,
+              "width": 16,
+              "height": 8,
+              "color": "0xd925bb",
+              "alpha": 0.9
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 18,
+              "marginLeft": 160,
+              "width": 16,
+              "height": 8,
+              "color": "0xd925bb",
+              "alpha": 0.9
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 18,
+              "marginLeft": 180,
+              "width": 16,
+              "height": 8,
+              "color": "0xd925bb",
+              "alpha": 0.9
+            },
+            {
+              "commonName": "Label",
+              "name":"Position",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": -2,
+              "marginLeft": 80,
+              "fontSize": 19,
+              "fontFace": "$CruyffSans-Regular",
+              "fontColor": "$COLOR_WHITE",
+              "alpha": 0.9
+            },
+            {
+              "commonName": "Image",
+              "name": "PlayerAvatar",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": -10,
+              "marginLeft": 0,
+              "width": 75,
+              "height": 75
+            },
+            {
+              "commonName": "Label",
+              "name": "PlayerName",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": -25,
+              "marginLeft": 80,
+              "fontSize": 18,
+              "bold": true,
+              "fontFace": "$CruyffSans-Extended",
+              "fontColor": "$COLOR_WHITE",
+              "alpha": 1
+            },
+            {
+              "commonName": "Asset",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": -10,
+              "marginLeft": 40,
+              "width": 60,
+              "height": 30,
+              "type": "$StaminaTraining"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

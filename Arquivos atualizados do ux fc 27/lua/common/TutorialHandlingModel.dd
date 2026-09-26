@@ -1,0 +1,34 @@
+{
+	"actions":
+    [
+        {
+            "viewname": "act_advance_tutorial",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_advance_tutorial"
+            }
+        },        
+		{
+            "viewname":   "act_advance",
+            "actionname": "act_advance"
+        }
+    ],	
+    "data":
+    [
+        {
+            "viewname": "bnd_continue_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_FTUF_ANY_KEY_TO_CONTINUE"
+            }
+        },
+        {
+            "viewname": "bnd_continue_label_visible",
+            "binding":  "bnd_continue_label_visible",
+            "type":     "bool"
+        }		
+    ]
+}

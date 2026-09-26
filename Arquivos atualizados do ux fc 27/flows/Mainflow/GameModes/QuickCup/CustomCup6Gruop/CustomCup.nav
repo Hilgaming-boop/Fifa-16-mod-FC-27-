@@ -1,0 +1,66 @@
+{
+    "name": "CustomCup",
+    "states":
+    [
+        {
+            "name": "RedirectCustomCup",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["CustomCup.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_group_stage",
+                    "targets": ["GroupStage"]
+                },
+                {
+                    "event": "evt_knockout",
+                    "targets": ["Knockout"]
+                },
+                {
+                    "event": "evt_league",
+                    "targets": ["League"]
+                }
+            ]
+        },
+        {
+            "name": "GroupStage",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup6Gruop/GroupStage/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "Knockout",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup6Gruop/Knockout/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "League",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup6Gruop/League/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+    ]
+}

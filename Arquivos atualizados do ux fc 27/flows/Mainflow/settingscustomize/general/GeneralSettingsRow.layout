@@ -1,0 +1,43 @@
+{
+	"commonName": "fow.base.BaseRow",
+	"name": "GeneralSettingsRow",
+	"propertyMap":
+	{
+		"dataProviders.title": "insRowGroup.insTitle.text",
+		"dataProviders.value": "insRowGroup.insValue.text"
+	},
+	"children":
+	[
+		{
+			"commonName": "Panel",
+			"name": "insRowGroup",
+			"width": 530,
+			"height": 70,
+			"children":
+			[
+				{
+					"commonName": "Label",
+					"name": "insTitle",
+					"alignH": "LEFT",
+					"alignV": "CENTER",
+					"marginLeft": 0,
+					"margintTop": 50,
+					"fontSize": 20,
+					"fontColor": "$COLOR_LIGHT_GRAY",
+					"fontFace": "$FONT_ORIGIN_NORMAL"
+				},
+				{
+					"commonName": "Label",
+					"name": "insValue",
+					"alignH": "RIGHT",
+					"alignV": "CENTER",
+					"marginRight": 0,
+					"margintTop": 45,
+					"fontSize": 18,
+					"fontColor": "$COLOR_WHITE",
+					"fontFace": "$FONT_ORIGIN_KNULEXTRABOLD"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "StadiumSelect",
+    "initial":
+    {
+        "targets": ["RedirectStadiumSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectStadiumSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["StadiumSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        }
+    ]
+}

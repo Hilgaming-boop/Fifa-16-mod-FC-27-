@@ -1,0 +1,5 @@
+{
+    "dds":   ["MatchSelect.dd", "/lua/common/TabModel.dd"],
+    "vms":   [["lua", "MatchSelect.lua"], ["lua", "/lua/common/TabModel.lua"]],
+    "views": [["gfx", { "layout": "MatchSelect.layout" }]]
+}

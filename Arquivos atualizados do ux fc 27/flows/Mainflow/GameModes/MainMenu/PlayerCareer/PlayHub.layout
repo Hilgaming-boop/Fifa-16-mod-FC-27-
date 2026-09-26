@@ -1,0 +1,205 @@
+
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "marginLeft": 0,
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -50,
+                    "marginLeft": -205,
+                    "height": 100,
+                    "width": 100,
+                    "type": "$Icon_Pc"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -30,
+                    "marginLeft": -40,
+                    "fontSize": 27,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor":"0xFFFFFF",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 500,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "The journey of becoming the next"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -60,
+                    "marginLeft": -140,
+                    "fontSize": 27,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor":"0xFFFFFF",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 400,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "goat starts here"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -100,
+                    "marginLeft": -40,
+                    "fontSize": 16,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "0x04F377",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": false,
+                    "width": 550,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "Dazzle The Fans • Choose Your Patch • Become An Icon"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -136,
+                            "marginTop": 0,
+                            "height": 42,
+                            "width": 204,
+                            "backgroundImage": "$_ClickToEnterOn3",
+                            "backgroundHighlightImage": "$_ClickToEnterOn3",
+                            "clickAction": "act_menu_playercareer"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -125,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "text": "Enter Player Career"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 220,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 220,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 220,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 110,
+                    "marginLeft": 24.7,
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Expandes",
+                    "text": "PLAYER CAREER"
+                },
+                {
+                    "commonName": "AssetButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -51,
+                    "marginLeft": -40,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "clickAction": "act_menu_kickoff",
+                    "buttonAsset": "$SimMatchIcon1"
+				},
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -43,
+                    "marginLeft": -10,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Select",
+                    "alpha": 0.9
+                }
+            ]
+        }
+    ]
+}

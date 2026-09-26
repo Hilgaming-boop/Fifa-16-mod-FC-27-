@@ -1,0 +1,1372 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_background_career",
+                   "property": "image"
+               }
+            ]        
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 90,
+                                    "marginLeft": 100,
+                                    "fontSize": 50,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended",
+                                    "text": ""
+                                    },
+                {
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Cm"
+}
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 2000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$DINPro",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": ""
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -580,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Squad"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -545,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -482,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Training Plans"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -405,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -310,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Automated Plans"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 85,
+                    "marginLeft": -540,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "text": "Balanced"
+                    },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginLeft": -550,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.65,
+                    "text": "Inactive Plan"
+                    },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 85,
+                    "marginLeft": -300,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "width": 250,
+                            "multiline": true,
+                            "leading": 1,
+                    "alpha": 0.65,
+                    "text": "Will be active by default when no other Automated Rule is active, but at least one is set."
+                                    },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 0,
+                    "height": 0,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0.1
+                 }
+             ]
+         },
+         {	
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 100,
+            "marginTop": -15,
+            "width": 600,
+            "height": 300,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 630,
+                            "fontFace": "$CruyffSans-Extended-Heavy",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "All Out Performance"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSans-Regular",
+                            "textAlignH": "CENTER",
+                            "fontSize": 15,
+                            "multiline": true,
+                            "width": 160,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Is active as long as Sharpness is lower than"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 100,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSansLight",
+                            "fontSize": 85,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                                                        "leading": 4,
+                            "text": "N/A"
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 770,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7,
+                            "text": "Inactive Plan"
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 270,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 330,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 145,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 190,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 610,
+                            "fontFace": "$CruyffSans-Extended-Heavy",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Performance-Focused"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSans-Regular",
+                            "textAlignH": "CENTER",
+                            "fontSize": 15,
+                            "multiline": true,
+                            "width": 160,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Is active as long as Sharpness is lower than"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 100,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSansLight",
+                            "fontSize": 85,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                                                        "leading": 4,
+                            "text": "N/A"
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 770,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7,
+                            "text": "Inactive Plan"
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 70,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 150,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 180,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 300,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 360,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 400,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 800,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": ""
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 680,
+                            "fontFace": "$CruyffSans-Extended-Heavy",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "All Out Energy"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSans-Regular",
+                            "textAlignH": "CENTER",
+                            "fontSize": 15,
+                            "multiline": true,
+                            "width": 160,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Is active as long as Sharpness is lower than"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 100,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSansLight",
+                            "fontSize": 85,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                                                        "leading": 4,
+                            "text": "N/A"
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 770,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7,
+                            "text": "Inactive Plan"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -10,
+                            "marginLeft": 670,
+                            "fontFace": "$CruyffSans-Extended-Heavy",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Energy-Focused"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 30,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSans-Regular",
+                            "textAlignH": "CENTER",
+                            "fontSize": 15,
+                            "multiline": true,
+                            "width": 160,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Is active as long as Sharpness is lower than"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 100,
+                            "marginLeft": 750,
+                            "fontFace": "$CruyffSansLight",
+                            "fontSize": 85,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                                                        "leading": 4,
+                            "text": "N/A"
+                            },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 240,
+                            "marginLeft": 770,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7,
+                            "text": "Inactive Plan"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info5",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab5_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBLACK",
+                            "fontSize": 0,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "BRI Liga 1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 20,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontSize":0,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 400,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 0.7,
+                            "text": "You will play in the BRI Liga 1, win every match and upgrade your player's abilities"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 276,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "All Out Performance"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 214,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "Performance-focused"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 152,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "All Out Energy"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                    }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 90,
+                            "height": 60,
+                            "width": 300,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 10,
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "Energy-focused"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 276,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "All Out Performance"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 214,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "Performance-focused"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 152,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "All Out Energy"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                    }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": -50,
+                            "marginBottom": 90,
+                            "height": 60,
+                            "width": 500,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 10,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": ""
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 0,
+                                    "marginRight": 15,
+                                    "width": 50,
+                                    "height": 50,
+                                    "type": "$"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 60,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Regular",
+                                    "leading": 1,
+                                    "text": "Energy-focused"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 400,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Extended-Heavy",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "N/A"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+        "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 50,
+                    "width": 450,
+                    "height": 470,
+                    "alpha": 1,
+                    "bindings": 
+                    [
+                        {
+                            "binding": "",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+            "commonName": "Group",
+            "name": "MvnprodButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 155,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 500,
+                    "buttonHeight": 60,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 220,
+                    "width": 300,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 500,
+                    "buttonHeight": 60,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 280,
+                    "width": 300,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 500,
+                    "buttonHeight": 60,
+                    "selectable": true
+                    },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": -20,
+                    "y": 340,
+                    "width": 300,
+                    "height": 60,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 500,
+                    "buttonHeight": 60,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

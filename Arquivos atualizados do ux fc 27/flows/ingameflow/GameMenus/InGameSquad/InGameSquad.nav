@@ -1,0 +1,39 @@
+{
+    "name": "InGameSquad",
+    "onEnter":
+    [
+        ["updateUserPlateDisplayMode", ["lite"]],
+        ["invoke", ["evt_hide_watermark"]], 
+        ["loadVVM", ["/flows/ingameflow/GameMenus/InGameSquad/InGameSquad.vvm", { "type": ".type", "gamemode": ".gamemode", "eventData": ".event.data" } ]]
+    ],
+    "onExit":
+    [
+        ["updateUserPlateDisplayMode", ["full"]],
+        ["invoke", ["evt_show_watermark"]], 
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_advance",
+            "targets": ["out_advance"]
+        },
+        {
+            "event":   "evt_back",
+            "targets": ["out_back"]
+        }
+    ],
+    "states":
+    [
+        {
+            "name": "Idle",
+            "transitions":
+            [
+                {
+                    "event":   "evt_toggle_pause",
+                    "targets": ["Idle"]
+                }
+            ]
+        }
+    ]
+}

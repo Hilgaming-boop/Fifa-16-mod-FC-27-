@@ -1,0 +1,185 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 495,
+                            "height": 90,
+                            "width": 170,
+                            "alpha": 1,
+                            "path": "views/backgrounds/White_Effect.swf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 250,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "icon": "$Tab_Kick",
+                            "clickAction": "act_tab5"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 120,
+                            "width": 150,
+                            "height": 150,
+                            "type": "$Icon_Setting_1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Settings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 300,
+                            "marginLeft": 0,
+                            "fontSize": 11,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xA9B5EF",
+                            "textAlignH": "CENTER",
+                            "width": 200,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 0.9,
+                            "text": "Half length, difficulty & more"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 560,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "icon": "$Tab_Kick",
+                            "clickAction": "act_tab6"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 120,
+                            "width": 130,
+                            "height": 130,
+                            "type": "$Icon_Restart_1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Team Reset"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 270,
+                            "marginLeft": 0,
+                            "fontSize": 11,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xA9B5EF",
+                            "textAlignH": "CENTER",
+                            "width": 200,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 0.9,
+                            "text": "Reset team then you will repeat the match do you agree to change teams and repeat the schedule"
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}

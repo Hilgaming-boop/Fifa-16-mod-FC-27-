@@ -1,0 +1,193 @@
+{
+    "actions":
+    [
+
+    ],
+    "data":
+    [
+		{
+            "viewname": "bnd_won_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_WON_MATCH"
+            }
+        },
+        {
+            "viewname": "bnd_well_done_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_WELL_DONE"
+            }
+        },
+        {
+            "viewname": "bnd_lost_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_LOST_MATCH"
+            }
+        },
+        {
+            "viewname": "bnd_draw_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_DRAW_MATCH"
+            }
+        },
+        {
+            "viewname": "bnd_quit_label",
+            "type":     "headline",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_QUIT_TO_HUB"
+            }
+        },
+        {
+                    "viewname": "bnd_default_ad_banner_title",
+                    "type":     "string",
+                    "impl":
+                    {
+                        "type": "ltxt",
+                        "tag":  "LTXT_MOB_ADV_BOOST_1"
+                    }
+                },
+                {
+                    "viewname": "bnd_default_ad_banner_description",
+                    "type":     "string",
+                    "impl":
+                    {
+                        "type": "ltxt",
+                        "tag":  "LTXT_MOB_ADV_BOOST_2"
+                    }
+                },
+        {
+            "viewname": "bnd_match_data_panel_visible",
+            "binding":  "bnd_match_data_panel_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_match_won_footer_visible",
+            "binding":  "bnd_match_won_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_match_lost_footer_visible",
+            "binding":  "bnd_match_lost_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_match_draw_footer_visible",
+            "binding":  "bnd_match_draw_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_team_won_footer_visible",
+            "binding":  "bnd_team_won_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_team_lost_footer_visible",
+            "binding":  "bnd_team_lost_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_team_draw_footer_visible",
+            "binding":  "bnd_team_draw_footer_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_default_banner_visible",
+            "binding":  "bnd_default_banner_visible",
+            "type":     "bool"
+        },    
+        {
+            "viewname": "bnd_ad_banner_data",
+            "binding": "bnd_ad_banner_data",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_pr_w1",
+            "binding": "bnd_pr_w1",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_w2",
+            "binding": "bnd_pr_w2",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_w3",
+            "binding": "bnd_pr_w3",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_l1",
+            "binding": "bnd_pr_l1",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_l2",
+            "binding": "bnd_pr_l2",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_l3",
+            "binding": "bnd_pr_l3",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_d1",
+            "binding": "bnd_pr_d1",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_d2",
+            "binding": "bnd_pr_d2",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_pr_d3",
+            "binding": "bnd_pr_d3",
+            "type": "string"
+        },
+        
+        {
+            "viewname": "bnd_home_w",
+            "binding": "bnd_home_w",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_l",
+            "binding": "bnd_home_l",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_d",
+            "binding": "bnd_home_d",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_w",
+            "binding": "bnd_away_w",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_l",
+            "binding": "bnd_home_l",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_d",
+            "binding": "bnd_away_d",
+            "type": "string"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+	"name": "PlayerMode",
+    "let":  
+	{ 
+		"type": "friendly",
+		"gamemode": "real",
+		"flow": "offline",
+		"flowState": "BE_A_PRO"
+	},
+    "onEnter":
+    [
+        ["viewLayer", ["Gamemodes"]],
+        ["finishViewUnload", ["screen"]],
+        ["showFEUI", [".gamemode"]],
+        ["stateChange", ["PlayerMode"]],
+        ["SetGameMode", ["PlayerMode"]]
+
+    ],
+    "onExit":
+    [
+        ["hideUI", [".gamemode"]]
+    ],
+    
+    "states":
+    [
+        {
+            "name": "Pregame",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/KickOff/playermode/pregame.nav",
+            "outputs":
+            {
+                "out_exit": "out_exit_gamemode",
+                "out_ingame_flow": "InGameFlow"
+            }
+        },
+		{
+			"name": "InGameFlow",
+			"type": "external",
+			"file": "/flows/ingameflow/InGameFlow.nav",
+			"outputs":
+			{
+				"out_exit": "out_exit_gamemode"
+			}
+		}
+    ]
+}

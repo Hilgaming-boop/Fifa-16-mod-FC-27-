@@ -1,0 +1,224 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "MouseClickActionBehavior",
+            "name": "clickBehavior",
+            "actionName": "act_toggle_controls"
+        }
+    ],
+    "children":
+    [
+			    	   
+        {
+            "commonName": "GestureArea",
+            "name": "BagianAreaUntukZoom&Pan",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "panAction":
+            {
+                "action": "act_pan_camera",
+                "binding": "bnd_pan_camera"
+            },
+            "zoomAction":
+            {
+                "action": "act_zoom_camera",
+                "binding": "bnd_zoom_camera"
+            },
+            "bindings":
+            [
+                {
+                    "binding": "BND_SCREEN_WIDTH",
+                    "property": "width"
+                },
+                {
+                    "binding": "BND_SCREEN_HEIGHT",
+                    "property": "height"
+                }
+            ]
+        },
+        {
+        "commonName": "Asset",
+            "alignH": "LEFT",
+                    "alignV": "CENTER",
+            "marginBottom": 0,
+            "marginLeft": -200,
+            "width": 1423,
+                    "height": 654,
+            "type": "$Background_VAR"
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianKontrolUntukReplay",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 290,
+            "marginLeft": 455,
+            "width": 800,
+            "height": 50,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_controls_visibility",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+			    {
+			        "commonName": "Panel",
+			        "name": "BagianBarLamaReplay",
+			        "alignV": "TOP",
+			        "alignH": "CENTER",
+					"marginTop": -40,
+			        "width": 800,
+			        "height": 20,
+			        "children":
+			        [
+			    	   {
+                           "commonName": "Rectangle",
+                           "alignH": "CENTER",
+                           "alignV": "FILL",
+                           "cornerRaduis": 8,
+                           "width": 470,
+                           "alpha": 0.5,
+                           "color": "0x000000"
+			    	   },
+			    	   {
+			"commonName": "Image",
+            "name": "Weather",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.8,
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_weather_type"
+                }
+            ]
+        },
+        {
+                           "commonName": "ReplayControl",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "width": 450,
+                           "movePlayheadAction":
+                           {
+                              "action": "act_move_playhead",
+                              "binding": "bnd_playhead_position"
+                           },
+                           "blueTrackAsset": "$BlueTrackAsset",
+                           "replayControlKnob": "$ReplayControlKnob",
+                           "replayMiddleTrack": "$ReplayMiddleTrack",
+                           "bindings":
+                           [
+                              {
+                                  "binding": "bnd_replay_control",
+                                  "property": "dataProviders"
+                              }
+                           ]
+			    	   }
+			        ]
+			    }
+			]
+		},
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+			"marginLeft": -200,
+			"width": 500,
+            "height": 580,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_controls_visibility",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+               {
+                    "commonName": "Asset",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": 350,
+                    "marginLeft": 35077778,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+					"rotation": 180,
+                    "type": "$CircularProgressBarCircleBig"
+               },
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 200,
+                    "icon": "$ReplayExit",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "AssetButton",
+                    "name": "ButtonPlay&Pause",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 550,
+                    "width": 40,
+                    "height": 40,
+                    "clickAction": "act_toggle_play",
+                    "bindings":
+                    [
+						{
+							"binding": "bnd_play_instant_replay",
+							"property": "buttonAsset"
+						}
+                    ]
+                },
+                {
+                    "commonName": "AssetButton",
+                    "name": "ButtonPlay&Pause",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 650,
+                    "width": 40,
+                    "height": 40,
+                    "clickAction": "act_next_target",
+                    "buttonAsset": "$ReplayNextTarget"
+                },
+                {
+                    "commonName": "AssetButton",
+                    "name": "ButtonPlay&Pause",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 450,
+                    "width": 40,
+                    "height": 40,
+                    "clickAction": "act_previous_target",
+                    "buttonAsset": "$ReplayPreviousTarget"
+                },
+                {
+                    "commonName": "AssetButton",
+                    "name": "ButtonPlay&Pause",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 350,
+                    "width": 300,
+                    "height": 300,
+                    "clickAction": "act_change_camera",
+                    "buttonAsset": "$ReplayChangeCamera"
+                }
+            ]
+		}
+    ]
+}

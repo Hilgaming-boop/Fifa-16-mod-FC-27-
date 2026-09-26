@@ -1,0 +1,440 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "alignH": "LEFT",
+            "icon": "$FooterIconBack",
+            "bindings":
+            [
+                {
+                    "binding": "BND_LTXT_CNCL",
+                    "property": "label"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "content",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "animationScripts":
+            [
+                {
+                    "name": "show",
+                    "script":
+                    [
+                        {
+                            "anim": "SCREEN_TRANSITION_IN"
+                        }
+                    ]
+                },
+                {
+                    "name": "hide",
+                    "script":
+                    [
+                        {
+                            "anim": "SCREEN_TRANSITION_OUT"
+                        }
+                    ]
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "name": "pauseButton",
+                    "alignH": "RIGHT",
+                    "height": 67.0,
+                    "marginRight": 20.0,
+                    "marginTop": 80.0,
+                    "width": 80.0,
+                    "clickAction": "act_to_pause_sim",
+                    "icon": "$PauseButton"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "buttonsContainer",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "height": 30.0,
+                    "marginBottom": 890.0,
+                    "marginLeft": 15.0,
+                    "marginRight": 25.0,
+                    "marginTop": 155.0,
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Grid",
+                            "name": "buttonsGrid",
+                            "alignH": "FILL",
+                            "height": 30.0,
+                            "spacingH": 20.0,
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "ultraDefBtn",
+                                    "column": 0,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "defBtn",
+                                    "column": 1,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "neutralBtn",
+                                    "column": 2,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "attBtn",
+                                    "column": 3,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "ultraAttBtn",
+                                    "column": 4,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "ultraDefBtn",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 30.0,
+                                    "clickAction": "act_update_mentality",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_ultra_def_btn_label",
+                                            "property": "label"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "defBtn",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 30.0,
+                                    "clickAction": "act_update_mentality",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_def_btn_label",
+                                            "property": "label"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "neutralBtn",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 30.0,
+                                    "clickAction": "act_update_mentality",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_neutral_btn_label",
+                                            "property": "label"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "attBtn",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 30.0,
+                                    "clickAction": "act_update_mentality",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_att_btn_label",
+                                            "property": "label"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "ultraAttBtn",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 30.0,
+                                    "clickAction": "act_update_mentality",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_ultra_att_btn_label",
+                                            "property": "label"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "SimulationList",
+                    "name": "simulationList",
+                    "alignH": "FILL",
+                    "alignV": "TOP",
+                    "marginBottom": 20.0,
+                    "marginLeft": 20.0,
+                    "marginRight": 20.0,
+                    "marginTop": 200.0,
+                    "displayRange": 4.0,
+					"height": 400.0,
+                    "rowHeight": 90.0,
+                    "rowType": "SimulationRow",
+                    "rowWidth": 700.0,
+					"rowUpdateAction": "act_update_event_pool",
+					"bindings":
+					[
+						{
+							"binding": "bnd_match_events_list",
+							"property": "dataProviders"
+						}
+					]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "scorePanel",
+                    "alignH": "CENTER",
+                    "marginTop": 30.0,
+                    "width": 450.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "tfAwayScore",
+                            "fontFace": "$Title",
+                            "fontSize": 48.0,
+                            "height": 100.0,
+                            "marginLeft": 300.0,
+                            "text": "0",
+                            "textAlignH": "CENTER",
+                            "textAlignV": "CENTER",
+                            "width": 128.0,
+							"bindings":
+                            [
+                                {
+                                    "binding": "bnd_publish_away_score",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "tfMinute",
+                            "fontFace": "$Title",
+                            "fontSize": 48.0,
+                            "height": 100.0,
+                            "marginLeft": 190.0,
+                            "textAlignH": "CENTER",
+                            "textAlignV": "CENTER",
+                            "width": 110.0,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_publish_minute",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "tfHomeScore",
+                            "fontFace": "$Title",
+                            "fontSize": 48.0,
+                            "height": 100.0,
+                            "text": "0",
+                            "textAlignH": "CENTER",
+                            "textAlignV": "CENTER",
+                            "width": 128.0,
+							"bindings":
+                            [
+                                {
+                                    "binding": "bnd_publish_home_score",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "stopwatch",
+                            "height": 38.0,
+                            "marginLeft": 142.0,
+                            "marginTop": 29.0,
+                            "width": 35.0,
+                            "type": "$SimulationScreenStopwatch"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "awayTeamPanel",
+                    "alignH": "RIGHT",
+                    "height": 150.0,
+                    "marginRight": 10.0,
+                    "marginTop": 10.0,
+                    "width": 334.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "circleBackground2",
+                            "alignH": "RIGHT",
+                            "type": "$SimulationScreenTeamCircle"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "awayTeamLogo",
+                            "alignH": "RIGHT",
+                            "height": 94.0,
+                            "marginRight": 34.0,
+                            "marginTop": 19.0,
+                            "width": 94.0
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "tfAwayTeam",
+                            "alignH": "RIGHT",
+                            "fontFace": "$Body",
+                            "fontSize": 24.0,
+                            "height": 65.0,
+                            "marginRight": 169.95999999999998,
+                            "marginTop": 30.0,
+                            "text": "FC AWAY TEAM",
+                            "textAlignV": "CENTER"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "homeTeamPanel",
+                    "height": 150.0,
+                    "marginLeft": 10.0,
+                    "marginTop": 10.0,
+                    "width": 340.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "circleBackground",
+                            "type": "$SimulationScreenTeamCircle"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "homeTeamLogo",
+                            "height": 94.0,
+                            "marginLeft": 33.0,
+                            "marginTop": 23.0,
+                            "width": 94.0,
+                            "authoringData":
+                            {
+                                "expanded": false
+                            }
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "tfHomeTeam",
+                            "fontFace": "$Body",
+                            "fontSize": 24.0,
+                            "height": 65.0,
+                            "marginLeft": 170.0,
+                            "marginTop": 30.0,
+                            "text": "FC HOME TEAM",
+                            "textAlignV": "CENTER",
+                            "authoringData":
+                            {
+                                "expanded": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

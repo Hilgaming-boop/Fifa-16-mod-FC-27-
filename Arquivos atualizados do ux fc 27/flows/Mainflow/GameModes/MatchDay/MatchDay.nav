@@ -1,0 +1,39 @@
+{
+    "name": "MatchDay",
+    "states":
+    [
+		{
+            "name": "MenuMatchDay",
+            "onEnter":
+            [
+                ["loadVVM", ["/Flows/MainFlow/GameModes/MatchDay/MatchDay.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_match_play",
+                    "targets": ["SelectKit"]
+                }
+            ]
+        },
+        {
+            "name": "SelectKit",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MatchDay/SelectKit/SelectKit.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchDay",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+        
+    ]
+}

@@ -1,0 +1,132 @@
+{
+    "actions": [
+        {
+            "viewname": "act_change",
+            "actionname": "act_change"
+        },
+        {
+            "viewname": "act_confirm_team",
+            "actionname": "act_confirm_team"
+        },
+        {
+            "viewname": "act_back",
+            "impl": {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_reset",
+            "actionname": "act_reset"
+        },
+        {
+            "viewname": "act_random",
+            "actionname": "act_random"
+        }
+    ],
+    "data": [
+        {
+            "viewname": "bnd_bg_cup",
+            "binding": "bnd_bg_cup",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_cup_logo",
+            "binding": "bnd_cup_logo",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_interactive_panel_visible",
+            "binding": "bnd_interactive_panel_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_selected_team_name",
+            "binding": "bnd_selected_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding": "bnd_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team_star_rating",
+            "binding": "bnd_team_star_rating",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_home_panel_visible",
+            "binding": "bnd_home_panel_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding": "bnd_home_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home_team_stars",
+            "binding": "bnd_home_team_stars",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_away_panel_visible",
+            "binding": "bnd_away_panel_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding": "bnd_away_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding": "bnd_away_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_team_stars",
+            "binding": "bnd_away_team_stars",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_comparison_bars",
+            "binding": "bnd_comparison_bars",
+            "type": "init"
+        },
+		{
+			"binding": "bnd_team_rating",
+			"viewname": "bnd_team_rating",
+			"type": "object"
+		},
+        {
+            "binding": "bnd_team_list_toggle",
+            "viewname": "bnd_team_list_toggle",
+            "type": {
+                "metaType": "object",
+                "members": {
+                    "data": "array",
+                    "index": "int"
+                }
+            }
+        },
+        {
+            "binding": "bnd_team_list_index",
+            "viewname": "bnd_team_list_index",
+            "type": "int",
+            "actions": [
+                {
+                    "viewname": "act_change",
+                    "actionname": "act_change"
+                }
+            ]
+        },
+		{ "viewname": "bnd_info_label", "binding": "bnd_info_label", "type": "string" }
+    ]
+}

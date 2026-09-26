@@ -1,0 +1,5 @@
+{
+	"dds":	 ["VirtualKeyboardTest.dd"],
+	"vms":	 [["lua", "VirtualKeyboardTest.lua"]],
+    "views": [["gfx", {"layout": "VirtualKeyboardTest.layout"}]]
+}

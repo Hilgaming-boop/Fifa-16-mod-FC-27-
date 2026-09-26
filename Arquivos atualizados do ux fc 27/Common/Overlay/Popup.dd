@@ -1,0 +1,92 @@
+{
+    "actions": [
+        {
+            "viewname": "act_hide_popup",
+            "impl": {
+                "type": "nav",
+                "event": "evt_hide_popup"
+            }
+        },
+        {
+            "viewname": "act_confirm",
+            "actionname": "act_confirm"
+        },
+        {
+            "viewname": "act_cancel", 
+            "actionname": "act_cancel"
+        },
+        {
+            "viewname": "act_button_1",
+            "actionname": "act_button_1"
+        },
+        {
+            "viewname": "act_button_2",
+            "actionname": "act_button_2"
+        },
+        {
+            "viewname": "act_button_3",
+            "actionname": "act_button_3"
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+        }
+    ],
+    "data": [
+        {
+            "viewname": "bnd_popup_title",
+            "binding": "bnd_popup_title",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_popup_message",
+            "binding": "bnd_popup_message", 
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_button1_visible",
+            "binding": "bnd_button1_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_button2_visible",
+            "binding": "bnd_button2_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_button3_visible",
+            "binding": "bnd_button3_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_button1_label",
+            "binding": "bnd_button1_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_button2_label",
+            "binding": "bnd_button2_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_button3_label",
+            "binding": "bnd_button3_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_tab1",
+            "binding":  "bnd_tab1",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2",
+            "binding":  "bnd_tab2",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3",
+            "binding":  "bnd_tab3",
+            "type":     "bool"
+        }
+    ]
+}

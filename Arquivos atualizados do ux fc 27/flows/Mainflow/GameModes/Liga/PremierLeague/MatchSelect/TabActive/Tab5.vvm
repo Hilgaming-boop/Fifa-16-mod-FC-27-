@@ -1,0 +1,5 @@
+{
+  "dds": ["/lua/enums/Career/Animated.dd"],
+  "vms": [["lua", "/lua/enums/Career/Animated.lua"]],
+  "views": [["gfx", { "layout": "Tab5.layout" }]]
+}

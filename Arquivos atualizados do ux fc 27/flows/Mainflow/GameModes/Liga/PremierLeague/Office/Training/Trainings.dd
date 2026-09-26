@@ -1,0 +1,116 @@
+{
+	"actions":
+	[
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname":"act_mvnprod",
+            "actionname":"act_mvnprod"
+        },
+        {
+            "viewname": "act_premierleague",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_premierleague"
+            }
+        },
+        {
+            "viewname": "act_laliga",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_laliga"
+            }
+        },
+        {
+            "viewname": "act_ligue1",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_ligue1"
+            }
+        },
+        {
+            "viewname": "act_seriea",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_seriea"
+            }
+        },
+        {
+            "viewname": "act_briliga1",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_briliga1"
+                }
+        },
+        {
+            "viewname": "act_clubcustom",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_clubcustom"
+                }
+        },
+        {
+            "viewname": "act_badgecustom",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_badgecustom"
+            }
+        }
+	],
+    "data":
+	[
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+            },
+        {
+            "viewname": "bnd_tab6_visible",
+            "binding":  "bnd_tab6_visible",
+            "type":     "bool"
+        },
+         {
+            "viewname": "bnd_background_career",
+            "binding":  "bnd_background_career",
+            "type":     "object"
+        },
+        {
+        "viewname": 	"bnd_player3d",
+          "binding": 		"bnd_player3d",
+          "type": 			"object"
+        }
+    ]
+}

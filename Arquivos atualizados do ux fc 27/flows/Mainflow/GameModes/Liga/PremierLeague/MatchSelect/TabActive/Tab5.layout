@@ -1,0 +1,464 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "TUTORIAL_TRANSITION_IN"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "TUTORIAL_TRANSITION_OUT"
+        }
+      ]
+    }
+  ],
+  "children": [
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+            {
+              "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 820,
+                            "height": 90,
+                            "width": 180,
+                            "alpha": 1,
+                            "path": "views/backgrounds/White_Effect.swf"
+            },
+            {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -1,
+                            "marginLeft": 851,
+                            "fontSize": 19,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSans-Bold",
+                            "text": "Customise"
+                        }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MainContentPanel",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "ContentContainer",
+          "alignV": "CENTER",
+          "alignH": "RIGHT",
+          "marginRight": 80,
+          "marginTop": 15,
+          "width": 1200,
+          "height": 440,
+          "children": [
+            {
+              "commonName": "Panel",
+              "name": "InboxPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginRight": 150,
+              "width": 300,
+              "height": 440,
+              "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateInbox",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 50
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 283
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginLeft": 15,
+                  "width": 320,
+                  "height": 370,
+                  "bindings": [
+                {
+                      "binding": "bnd_table_league",
+                      "property": "image"
+                     }
+                   ]
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginLeft": 15,
+                  "marginTop": 100,
+                  "width": 140,
+                  "height": 140,
+                  "type": "$Icon_Restart_Cup"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "marginLeft": 15,
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "fontSize": 23,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Delete Career"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 250,
+                  "marginLeft": 15,
+                  "fontSize": 11,
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "fontColor": "0xFFFFFF",
+                  "textAlignH": "CENTER",
+                  "width": 200,
+                  "multiline": true,
+                  "leading": 3,
+                  "alpha": 0.9,
+                  "text": "You Will Delete Your Current Career"
+                },
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginLeft": 15,
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab5sub2"
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "name": "ConversationPanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": 30,
+              "width": 300,
+              "height": 440,
+              "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateConversation",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1000
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 30
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": -26
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 320,
+                  "height": 370,
+                  "bindings": [
+                {
+                      "binding": "bnd_table_league",
+                      "property": "image"
+                     }
+                   ]
+                },
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 100,
+                  "width": 140,
+                  "height": 140,
+                  "type": "$Icon_Setting_Cup"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "fontSize": 23,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Settings"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 250,
+                  "fontSize": 11,
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "fontColor": "0xFFFFFF",
+                  "textAlignH": "CENTER",
+                  "width": 200,
+                  "multiline": true,
+                  "leading": 3,
+                  "alpha": 0.9,
+                  "text": "Customise Your Game Settings"
+                },
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab5sub1"
+                }
+              ]
+            },
+            {
+              "commonName": "Panel",
+              "name": "SaveGamePanel",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginLeft": 700,
+              "marginTop": 0,
+              "width": 300,
+              "height": 440,
+              "alpha": 0,
+              "animationScripts": [
+                {
+                  "name": "animateSaveGame",
+                  "script": [
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 0,
+                          "marginLeft": 1800
+                        },
+                        "duration": 100
+                      }
+                    },
+                    {
+                      "type": "Delay",
+                      "data": {
+                        "duration": 70
+                      }
+                    },
+                    {
+                      "type": "Direct",
+                      "data": {
+                        "end": {
+                          "alpha": 1,
+                          "marginLeft": 595
+                        },
+                        "duration": 500,
+                        "easing": "OutBack"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "children": [
+                {
+                  "commonName": "Image",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginLeft": 30,
+                  "width": 320,
+                  "height": 370,
+                  "bindings": [
+                {
+                      "binding": "bnd_table_league",
+                      "property": "image"
+                     }
+                   ]
+                },	
+                {
+                  "commonName": "Asset",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginLeft": 30,
+                  "marginTop": 100,
+                  "width": 120,
+                  "height": 120,
+                  "type": "$Icon_Save_cup"
+                },
+                {
+                  "commonName": "Label",
+                  "alignH": "CENTER",
+                  "alignV": "TOP",
+                  "marginTop": 30,
+                  "marginLeft": 30,
+                  "fontSize": 23,
+                  "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                  "fontColor": "0xFFFFFF",
+                  "text": "Save Game"
+                },
+                {
+                  "commonName": "Label",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginTop": 250,
+                  "marginLeft": 30,
+                  "fontSize": 11,
+                  "fontFace": "$FONT_DINPROBOLD",
+                  "fontColor": "0xFFFFFF",
+                  "textAlignH": "CENTER",
+                  "width": 200,
+                  "multiline": true,
+                  "leading": 3,
+                  "alpha": 0.9,
+                  "text": "Save Your Current Progress And Load Your Progress Later"
+                },
+                {
+                  "commonName": "GenericButton",
+                  "alignV": "TOP",
+                  "alignH": "CENTER",
+                  "marginLeft": 30,
+                  "width": 300,
+                  "height": 370,
+                  "icon": "$",
+                  "clickAction": "act_tab5sub3"
+                }
+              ]
+            }
+          ],
+          "behaviors": [
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_conversation",
+              "script": "animateConversation",
+              "target": "ConversationPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "target": "trigger_animate_conversation",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count1",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_inbox",
+              "script": "animateInbox",
+              "target": "InboxPanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "target": "trigger_animate_inbox",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count1",
+                  "property": "value"
+                }
+              ]
+            },
+            {
+              "commonName": "TriggerScriptBehavior",
+              "name": "trigger_animate_savegame",
+              "script": "animateSaveGame",
+              "target": "SaveGamePanel"
+            },
+            {
+              "commonName": "TriggerOnTrue",
+              "target": "trigger_animate_savegame",
+              "bindings": [
+                {
+                  "binding": "bnd_animate_count2",
+                  "property": "value"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

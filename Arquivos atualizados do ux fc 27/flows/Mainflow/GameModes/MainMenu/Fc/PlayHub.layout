@@ -1,0 +1,292 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+    {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Background_13x"
+         },
+         {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_BgShadow",
+            "alpha": 0.6
+         },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+        {
+          "commonName": "Rectangle",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": 0,
+          "marginTop": 0,
+          "width": 480,
+          "height": 190,
+          "color": "0x504452",
+          "cornerRaduis": 10,
+          "alpha": 0.5
+        },
+        {
+          "commonName": "Rectangle",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": 80,
+          "marginTop": 0,
+          "width": 1,
+          "height": 160,
+          "color": "0xFFFFFF",
+          "cornerRaduis": 0,
+          "alpha": 0.3
+        },
+        {
+          "commonName": "Rectangle",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginLeft": -80,
+          "marginTop": 0,
+          "width": 1,
+          "height": 160,
+          "color": "0xFFFFFF",
+          "cornerRaduis": 0,
+          "alpha": 0.3
+        },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 160,
+                    "height": 90,
+                    "width": 90,
+                    "type": "$Favorite_Team"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -70,
+                    "marginLeft": 160,
+                    "fontSize": 17,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor":"0xFFFFFF",
+                    "text": "Favorite Team"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -70,
+                    "marginLeft": 160,
+                    "fontSize": 17,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor":"0xFFFFFF",
+                    "text": "Arsenal"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "height": 80,
+                    "width": 95,
+                    "type": "$Controller_Preset"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -70,
+                    "marginLeft": 0,
+                    "fontSize": 17,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor":"0xFFFFFF",
+                    "text": "Controller Preset"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -70,
+                    "marginLeft": 0,
+                    "fontSize": 17,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor":"0xFFFFFF",
+                    "text": "Classic"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -160,
+                    "height": 90,
+                    "width": 100,
+                    "type": "$Difficulty_Level"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -70,
+                    "marginLeft": -160,
+                    "fontSize": 17,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor":"0xFFFFFF",
+                    "text": "Difficulty Level"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -70,
+                    "marginLeft": -160,
+                    "fontSize": 17,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor":"0xFFFFFF",
+                    "text": "Profesional"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 170,
+                    "marginLeft": 0,
+                    "fontSize": 25,
+                    "fontFace": "$CruyffSansExpanded",
+                    "fontColor":"$COLOR_WHITE",
+                    "text": "WELCOME TO FC 27"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 120,
+                    "marginLeft": -5,
+                    "fontSize": 15,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontColor": "$COLOR_WHITE",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 400,
+                    "multiline": false,
+                    "leading": 1,
+                    "text": "We've Pre-Selected Some Options For You To Get Started Quickly"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 120,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 42,
+                            "width": 180,
+                            "backgroundImage": "$_ClickToEnterOn2",
+                            "backgroundHighlightImage": "$_ClickToEnterOn2",
+                            "clickAction": "act_menu_fc"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 5,
+                            "marginBottom": 0,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "text": "Jump In"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 45,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 170,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 45,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 170,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 45,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 170,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": 24.7,
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansExpanded",
+                    "text": "FC NEWS"
+                }
+            ]
+        }
+    ]
+}

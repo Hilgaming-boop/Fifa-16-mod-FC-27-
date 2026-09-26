@@ -1,0 +1,254 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "alignH": "LEFT",
+            "icon": "$FooterIconBack",
+            "label": "BACK"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Group",
+            "name": "buttonsContainer",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 20.0,
+            "width": 940.0,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "name": "selectedTeamLabel",
+                    "marginLeft": 980.0,
+                    "marginTop": 160.0,
+                    "width": 140.0,
+                    "x": 800.0,
+                    "y": 0.0,
+                    "clickAction": "act_show_teams_overlay",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_selected_team_name",
+                            "property": "label"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "selectedLeagueLabel",
+                    "marginLeft": 580.0,
+                    "marginTop": 160.0,
+                    "width": 140.0,
+                    "x": 400.0,
+                    "y": 0.0,
+                    "clickAction": "act_show_leagues_overlay",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_selected_league_name",
+                            "property": "label"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "selectedCountryLabel",
+                    "marginLeft": 180.0,
+                    "marginTop": 160.0,
+                    "width": 140.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "clickAction": "act_show_countries_overlay",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_selected_country_name",
+                            "property": "label"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "GridTable",
+            "name": "countriesGridTable",
+            "height": 454.0,
+            "width": 600.0,
+            "itemType": "GenericButton",
+            "rows": 2,
+            "columns": 3,
+            "cellIndexChangeAction":
+            {
+                "action": "act_change_index",
+                "binding": "bnd_country_index"
+            },
+			"bindings":
+			[
+				{
+					"binding": "bnd_countries_list",
+					"property": "dataProviders"
+				},
+				{
+					"binding": "bnd_default_cell_data",
+					"property": "defaultCellData"
+				}
+			],
+            "behaviors":
+            [
+                {
+                    "commonName": "LoadItInOverlay",
+                    "name": "loadCountriesTableInOverlay",
+                    "overlay": "gridTableOverlay",
+                    "overlayScrim": "scrimContainer",
+                    "overlayTitle": "SELECT COUNTRY",
+					"bindings":
+					[
+						{
+							"property": "loadInOverlay",
+							"binding": "bnd_countries_overlay_visibility"
+						}
+					]
+                }
+            ]
+        },
+        {
+            "commonName": "GridTable",
+            "name": "leaguesGridTable",
+            "height": 454.0,
+            "width": 600.0,
+            "itemType": "GenericButton",
+            "rows": 2,
+            "columns": 2,
+            "cellIndexChangeAction":
+            {
+                "action": "act_change_index",
+                "binding": "bnd_league_index"
+            },
+			"bindings":
+			[
+				{
+					"binding": "bnd_leagues_list",
+					"property": "dataProviders"
+				},
+				{
+					"binding": "bnd_default_cell_data",
+					"property": "defaultCellData"
+				}
+			],
+            "behaviors":
+            [
+                {
+                    "commonName": "LoadItInOverlay",
+                    "name": "loadLeaguesTableInOverlay",
+                    "overlay": "gridTableOverlay",
+                    "overlayScrim": "scrimContainer",
+                    "overlayTitle": "SELECT LEAGUE",
+					"bindings":
+					[
+						{
+							"property": "loadInOverlay",
+							"binding": "bnd_leagues_overlay_visibility"
+						}
+					]
+                }
+            ]
+        },
+        {
+            "commonName": "GridTable",
+            "name": "teamsGridTable",
+            "height": 454.0,
+            "width": 600.0,
+            "itemType": "GenericButton",
+            "rows": 2,
+            "columns": 3,
+            "cellIndexChangeAction":
+            {
+                "action": "act_change_index",
+                "binding": "bnd_team_index"
+            },
+			"bindings":
+			[
+				{
+					"binding": "bnd_teams_list",
+					"property": "dataProviders"
+				},
+				{
+					"binding": "bnd_default_cell_data",
+					"property": "defaultCellData"
+				}
+			],
+            "behaviors":
+            [
+                {
+                    "commonName": "LoadItInOverlay",
+                    "name": "loadTeamsTableInOverlay",
+                    "overlay": "gridTableOverlay",
+                    "overlayScrim": "scrimContainer",
+                    "overlayTitle": "SELECT TEAM",
+					"bindings":
+					[
+						{
+							"property": "loadInOverlay",
+							"binding": "bnd_teams_overlay_visibility"
+						}
+					]
+                }
+            ]
+        },
+		{
+			"commonName": "Group",
+			"alignH":"FILL",
+			"alignV":"FILL",
+			"name": "scrimContainer",
+			"children":
+			[
+				{
+					"commonName": "Asset",
+					"name":"darkScrimAsset",
+					"styles": ["PopupScrim"],
+					"alignH":"FILL",
+					"alignV":"FILL"
+				}
+			],
+			"behaviors":
+			[
+				{
+					"commonName" : "ScrimClickBehavior",
+					"name":"ClickThroughPreventer"
+				},
+				{
+					"commonName" : "PanelLayoutBehavior",
+					"name":"MakeItAPanel"
+				}
+			]
+		},
+        {
+            "commonName": "Overlay",
+            "name": "gridTableOverlay",
+            "height": 420.0,
+            "width": 600.0,
+            "footer":
+            [
+                {
+                    "icon": "$FooterIconNo",
+                    "clickAction": "act_selector_cancel",
+                    "bindings":
+                    [
+                        {
+                            "binding": "BND_LTXT_CANCEL",
+                            "property": "label"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+	"dds":	 ["GridTableTest.dd"],
+	"vms":	 [["lua", "GridTableTest.lua"]],
+    "views": [["gfx", {"layout": "GridTableTest.layout"}]]
+}

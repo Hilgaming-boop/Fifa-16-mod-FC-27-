@@ -1,0 +1,247 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+		        "script" : [ { "anim" : "TUTORIAL_TRANSITION_IN" } ]
+        },
+        {
+            "name": "hide",
+		        "script" : [ { "anim" : "TUTORIAL_TRANSITION_OUT" } ]
+        }
+    ],
+  "style-definitions": {
+
+		"TF_TABS_IDLE":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"alpha": 0.7,
+			"width": 250
+		},
+		"TF_TABS_HIGHLIGHT":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "23",
+			"fontColor": "$COLOR_WHITE",
+			"width": 250
+		},
+		"TF_BUTTON_PLAYMODEOFF":
+		{
+			"alignV": "CENTER",
+			"fontFace": "$Title",
+			"fontSize": "20",
+			"fontColor": "$COLOR_WHITE",
+			"alpha": 0.7,
+			"width": 200
+		}
+  },
+  "children": [
+    {
+      "commonName": "Image",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings": [
+        { "binding": "bnd_bg_tour", "property": "image" }
+      ]
+    },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -10,
+                    "marginLeft": 50,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -10,
+                    "marginLeft": 130,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_T"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -2,
+                            "marginLeft": 130,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Home"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 215,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": "|"
+                        }
+					]
+				},
+                {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 10,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 255,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Central",
+                    "clickAction": "act_tab1",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 345,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Squad",
+                    "clickAction": "act_tab2",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 435,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Office",
+                    "clickAction": "act_tab3",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 535,
+                    "height": 30,
+                    "width": 110,
+                    "label": "Customize",
+                    "clickAction": "act_tab4",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEOFF" ]
+                }
+            ]
+        },
+                {
+                            "commonName": "Image",
+                            "name": "HomeCrest",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -3,
+                            "marginLeft": 1085,
+                            "width": 33,
+                            "height": 33,
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_team_crest",
+                                   "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 505,
+                            "marginTop": -5,
+                            "width": 210,
+                            "height": 50,
+                            "type": "$Icon_Tim_Central"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 5,
+                            "marginLeft": 1125,
+                            "fontSize": 20,
+                            "fontFace": "$CruyffSansRegular",
+                            "fontColor": "0xffffff",
+                            "textAlignH": "LEFT",
+                            "width": 140,
+                            "autoScroll":true,
+                            "alpha": 0.5,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                        }
+            ]
+        }
+    ]
+}

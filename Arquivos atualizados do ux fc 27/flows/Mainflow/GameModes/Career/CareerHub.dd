@@ -1,0 +1,105 @@
+{
+	"actions":
+	[
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname":"act_septiawan_click",
+            "actionname":"act_septiawan_click"
+        },
+        {
+            "viewname":"act_women_career",
+            "actionname":"act_women_career"
+        },
+        {
+			"viewname": "act_player_career",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_player_career"
+			}
+        },
+        {
+			"viewname": "act_play_premierleague",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_premierleague"
+            }
+        },
+		{
+            "viewname": "act_play_laliga",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_laliga"
+             }
+        },
+		{
+            "viewname": "act_play_bundesliga",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_bundesliga"
+             }
+        },
+		{
+            "viewname": "act_play_seriea",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_seriea"
+             }
+        },
+		{
+            "viewname": "act_play_ligue1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_ligue1"
+             }
+        },
+		{
+            "viewname": "act_play_brasileirao",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_brasileirao"
+            }
+        }
+	],
+    "data":
+	[
+        {
+            "viewname": "bnd_seasons_1_select_visible",
+            "binding":  "bnd_seasons_1_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_seasons_2_select_visible",
+            "binding":  "bnd_seasons_2_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_seasons_3_select_visible",
+            "binding":  "bnd_seasons_3_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_seasons_4_select_visible",
+            "binding":  "bnd_seasons_4_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_seasons_5_select_visible",
+            "binding":  "bnd_seasons_5_select_visible",
+            "type":     "bool"
+        }
+    ]
+}

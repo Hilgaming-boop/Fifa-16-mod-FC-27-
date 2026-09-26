@@ -1,0 +1,18 @@
+{
+	"name": "SimulationTestFlow",
+	"onEnter":
+	[
+		["loadVVM", ["/flows/mainflow/gamemodes/test/simulation/SimulationTest.vvm"]]
+	],
+	"onExit":
+	[
+		["unloadVVM"]
+	],
+	"transitions":
+	[
+		{
+			"event":   "evt_back",
+			"targets": ["out_back"]
+		}
+	]
+}

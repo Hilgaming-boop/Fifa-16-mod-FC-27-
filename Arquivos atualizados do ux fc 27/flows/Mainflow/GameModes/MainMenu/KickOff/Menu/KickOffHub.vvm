@@ -1,0 +1,5 @@
+{
+    "dds": ["KickOffHub.dd", "/lua/common/TabModel.dd"],
+    "vms": [["lua", "/lua/common/TabModel.lua"], ["lua", "KickOffHub.lua"]],
+    "views": [["gfx", { "layout": "KickOffHub.layout" }]]
+}

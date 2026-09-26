@@ -1,0 +1,66 @@
+{
+	"actions":
+	[
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+			"viewname": "act_menu_kick",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_kick"
+			}
+		},
+		{
+			"viewname": "act_menu_beapro",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_beapro"
+			}
+		},
+		{
+			"viewname": "act_menu_manager",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_manager"
+			}
+		},
+		{
+			"viewname": "act_man_ucl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_man_ucl"
+			}
+		},
+		{
+			"viewname": "act_woman_ucl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_woman_ucl"
+			}
+		}
+	],
+    "data":
+	[
+        {
+            "viewname": "bnd_team17_team",
+            "binding":  "bnd_team17_team",
+            "type":     "string"
+        },
+        {
+			"viewname": "bnd_menu_list",
+            "binding": "bnd_menu_list",
+			"type": "object"
+		}
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "commonName": "Panel",
+    "name": "container",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "alignH": "LEFT",
+            "icon": "$FooterIconBack",
+            "label": "BACK"
+        }
+    ],
+    "children":
+    [
+		{
+			"commonName": "Panel",
+			"name": "stringContainer",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"marginTop": 140.0,
+			"marginLeft": 30.0,
+			"marginRight": 30.0,
+			"marginBottom": 100.0,
+			"children":
+			[
+				{
+					"commonName": "DragToggle",
+					"name": "insItemViewsCB",
+					"alignH": "FILL",
+					"height": 400.0,
+					"arrowType": "blue_thick",
+					"hasArrows": true,
+					"isCircular": true,
+					"itemStyleName": "TF_CONTROL_SELECT_PLAY",
+					"itemType": "Label",
+					"bindings":
+					[
+						{
+							"binding": "bnd_loc_test_data",
+							"property": "dataProviders"
+						}
+					]
+				}
+			]
+		}
+	]
+}

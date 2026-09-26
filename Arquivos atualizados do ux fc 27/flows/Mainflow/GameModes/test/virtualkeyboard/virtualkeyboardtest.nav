@@ -1,0 +1,18 @@
+{
+	"name": "VirtualKeyboardTestFlow",
+	"onEnter":
+	[
+		["loadVVM", ["/flows/mainflow/gamemodes/test/virtualkeyboard/VirtualKeyboardTest.vvm"]]
+	],
+	"onExit":
+	[
+		["unloadVVM"]
+	],
+	"transitions":
+	[
+		{
+			"event":   "evt_back",
+			"targets": ["out_back"]
+		}
+	]
+}

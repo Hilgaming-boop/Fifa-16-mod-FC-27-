@@ -1,0 +1,5 @@
+{
+    "dds":   ["Customization.dd"],
+    "vms":   [["lua", "customization.lua"]],
+    "views": [["gfx", {"layout": "Customization.layout"}]]
+}

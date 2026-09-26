@@ -1,0 +1,5 @@
+{
+	"dds":	 ["HUD_Test.dd"],
+	"vms":	 [["lua", "HUD_Test.lua"]],
+    "views": [["gfx", {"layout": "HUD_Test.layout"}]]
+}

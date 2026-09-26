@@ -1,0 +1,651 @@
+{
+  "actions": [
+    {
+      "viewname": "act_back",
+      "impl": {
+        "type": "nav",
+        "event": "evt_back"
+      }
+    },
+    {
+      "viewname": "act_next_group",
+      "actionname": "act_next_group"
+    },
+    {
+      "viewname": "act_prev_group",
+      "actionname": "act_prev_group"
+    },
+    {
+      "viewname": "act_groupstage",
+      "impl": {
+        "type": "nav",
+        "event": "evt_groupstage"
+      }
+    },
+    {
+      "viewname": "act_quarter_final",
+      "impl": {
+        "type": "nav",
+        "event": "evt_quarter_final"
+      }
+    },
+    {
+      "viewname": "act_bracket",
+      "impl": {
+        "type": "nav",
+        "event": "evt_bracket"
+      }
+    },
+    {
+      "viewname": "act_final",
+      "impl": {
+        "type": "nav",
+        "event": "evt_final"
+      }
+    },
+    {
+      "viewname": "act_knockout",
+      "impl": {
+        "type": "nav",
+        "event": "evt_knockout"
+      }
+    }
+  ],
+  "data": [
+     {
+      "viewname": "bnd_r16_team_name1",
+      "binding": "bnd_r16_team_name1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name2",
+      "binding": "bnd_r16_team_name2",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name3",
+      "binding": "bnd_r16_team_name3",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name4",
+      "binding": "bnd_r16_team_name4",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name5",
+      "binding": "bnd_r16_team_name5",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name6",
+      "binding": "bnd_r16_team_name6",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name7",
+      "binding": "bnd_r16_team_name7",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name8",
+      "binding": "bnd_r16_team_name8",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name9",
+      "binding": "bnd_r16_team_name9",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name10",
+      "binding": "bnd_r16_team_name10",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name11",
+      "binding": "bnd_r16_team_name11",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name12",
+      "binding": "bnd_r16_team_name12",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name13",
+      "binding": "bnd_r16_team_name13",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name14",
+      "binding": "bnd_r16_team_name14",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name15",
+      "binding": "bnd_r16_team_name15",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_name16",
+      "binding": "bnd_r16_team_name16",
+      "type": "string"
+    },
+    
+    
+    {
+      "viewname": "bnd_qf_team_name1",
+      "binding": "bnd_qf_team_name1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_name2",
+      "binding": "bnd_qf_team_name2",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_name3",
+      "binding": "bnd_qf_team_name3",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_name4",
+      "binding": "bnd_qf_team_name4",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_name5",
+      "binding": "bnd_qf_team_name5",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_name6",
+      "binding": "bnd_qf_team_name6",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_name7",
+      "binding": "bnd_qf_team_name7",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_name8",
+      "binding": "bnd_qf_team_name8",
+      "type": "string"
+    },
+    
+    {
+      "viewname": "bnd_semifinal_team_name1",
+      "binding": "bnd_semifinal_team_name1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_semifinal_team_name2",
+      "binding": "bnd_semifinal_team_name2",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_semifinal_team_name3",
+      "binding": "bnd_semifinal_team_name3",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_semifinal_team_name4",
+      "binding": "bnd_semifinal_team_name4",
+      "type": "string"
+    },
+    
+    {
+      "viewname": "bnd_final_team_name1",
+      "binding": "bnd_final_team_name1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_final_team_name2",
+      "binding": "bnd_final_team_name2",
+      "type": "string"
+    },
+    
+    
+    {
+      "viewname": "bnd_r16_team_crest1",
+      "binding": "bnd_r16_team_crest1",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest2",
+      "binding": "bnd_r16_team_crest2",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest3",
+      "binding": "bnd_r16_team_crest3",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest4",
+      "binding": "bnd_r16_team_crest4",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest5",
+      "binding": "bnd_r16_team_crest5",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest6",
+      "binding": "bnd_r16_team_crest6",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest7",
+      "binding": "bnd_r16_team_crest7",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest8",
+      "binding": "bnd_r16_team_crest8",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest9",
+      "binding": "bnd_r16_team_crest9",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest10",
+      "binding": "bnd_r16_team_crest10",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest11",
+      "binding": "bnd_r16_team_crest11",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest12",
+      "binding": "bnd_r16_team_crest12",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest13",
+      "binding": "bnd_r16_team_crest13",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest14",
+      "binding": "bnd_r16_team_crest14",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest15",
+      "binding": "bnd_r16_team_crest15",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_r16_team_crest16",
+      "binding": "bnd_r16_team_crest16",
+      "type": "object"
+    },
+    
+    {
+      "viewname": "bnd_qf_team_crest1",
+      "binding": "bnd_qf_team_crest1",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_qf_team_crest2",
+      "binding": "bnd_qf_team_crest2",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_qf_team_crest3",
+      "binding": "bnd_qf_team_crest3",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_qf_team_crest4",
+      "binding": "bnd_qf_team_crest4",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_qf_team_crest5",
+      "binding": "bnd_qf_team_crest5",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_qf_team_crest6",
+      "binding": "bnd_qf_team_crest6",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_qf_team_crest7",
+      "binding": "bnd_qf_team_crest7",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_qf_team_crest8",
+      "binding": "bnd_qf_team_crest8",
+      "type": "object"
+    },
+    
+    {
+      "viewname": "bnd_semifinal_team_crest1",
+      "binding": "bnd_semifinal_team_crest1",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_semifinal_team_crest2",
+      "binding": "bnd_semifinal_team_crest2",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_semifinal_team_crest3",
+      "binding": "bnd_semifinal_team_crest3",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_semifinal_team_crest4",
+      "binding": "bnd_semifinal_team_crest4",
+      "type": "object"
+    },
+    
+    {
+      "viewname": "bnd_final_team_crest1",
+      "binding": "bnd_final_team_crest1",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_final_team_crest2",
+      "binding": "bnd_final_team_crest2",
+      "type": "object"
+    },
+    
+    {
+      "viewname": "bnd_r16_team_score1",
+      "binding": "bnd_r16_team_score1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score2",
+      "binding": "bnd_r16_team_score2",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score3",
+      "binding": "bnd_r16_team_score3",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score4",
+      "binding": "bnd_r16_team_score4",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score5",
+      "binding": "bnd_r16_team_score5",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score6",
+      "binding": "bnd_r16_team_score6",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score7",
+      "binding": "bnd_r16_team_score7",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score8",
+      "binding": "bnd_r16_team_score8",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score9",
+      "binding": "bnd_r16_team_score9",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score10",
+      "binding": "bnd_r16_team_score10",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score11",
+      "binding": "bnd_r16_team_score11",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score12",
+      "binding": "bnd_r16_team_score12",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score13",
+      "binding": "bnd_r16_team_score13",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score14",
+      "binding": "bnd_r16_team_score14",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score15",
+      "binding": "bnd_r16_team_score15",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_r16_team_score16",
+      "binding": "bnd_r16_team_score16",
+      "type": "string"
+    },
+    
+    {
+      "viewname": "bnd_qf_team_score1",
+      "binding": "bnd_qf_team_score1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_score2",
+      "binding": "bnd_qf_team_score2",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_score3",
+      "binding": "bnd_qf_team_score3",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_score4",
+      "binding": "bnd_qf_team_score4",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_score5",
+      "binding": "bnd_qf_team_score5",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_score6",
+      "binding": "bnd_qf_team_score6",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_score7",
+      "binding": "bnd_qf_team_score7",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_qf_team_score8",
+      "binding": "bnd_qf_team_score8",
+      "type": "string"
+    },
+    
+    {
+      "viewname": "bnd_semifinal_team_score1",
+      "binding": "bnd_semifinal_team_score1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_semifinal_team_score2",
+      "binding": "bnd_semifinal_team_score2",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_semifinal_team_score3",
+      "binding": "bnd_semifinal_team_score3",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_semifinal_team_score4",
+      "binding": "bnd_semifinal_team_score4",
+      "type": "string"
+    },
+    
+    {
+      "viewname": "bnd_final_team_score1",
+      "binding": "bnd_final_team_score1",
+      "type": "string"
+    }, 
+    {
+      "viewname": "bnd_final_team_score2",
+      "binding": "bnd_final_team_score2",
+      "type": "string"
+    },
+    
+    
+    {
+      "viewname": "bnd_color_tourid",
+      "binding":  "bnd_color_tourid",
+      "type":     "string"
+    },
+    {
+      "viewname": "bnd_color_tourid2",
+      "binding":  "bnd_color_tourid2",
+      "type":     "string"
+    },
+    {
+      "viewname": "bnd_standings_list",
+      "binding": "bnd_standings_list",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_fixtures_list",
+      "binding": "bnd_fixtures_list",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_group_standings",
+      "binding": "bnd_group_standings",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_group_standings2",
+      "binding": "bnd_group_standings2",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_round16_fixtures",
+      "binding": "bnd_round16_fixtures",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_quarter_fixtures",
+      "binding": "bnd_quarter_fixtures",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_semi_fixtures",
+      "binding": "bnd_semi_fixtures",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_final_fixture",
+      "binding": "bnd_final_fixture",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_knockout_fixtures",
+      "binding": "bnd_knockout_fixtures",
+      "type": "array"
+    },
+    {
+      "viewname": "bnd_info_progres",
+      "binding": "bnd_info_progres",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_matchday_label",
+      "binding": "bnd_matchday_label",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_realtime",
+      "binding": "bnd_realtime",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_month_label",
+      "binding": "bnd_month_label",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_group_label_current",
+      "binding": "bnd_group_label_current",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_group_label_prev",
+      "binding": "bnd_group_label_prev",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_group_label_next",
+      "binding": "bnd_group_label_next",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_tour_label",
+      "binding": "bnd_tour_label",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_tour_trophy",
+      "binding": "bnd_tour_trophy",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_bg_tour",
+      "binding": "bnd_bg_tour",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_tour_logo",
+      "binding": "bnd_tour_logo",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_cup_map_tourid",
+      "binding": "bnd_cup_map_tourid",
+      "type": "object"
+    },
+    {
+      "viewname": "bnd_champions_label",
+      "binding": "bnd_champions_label",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_champions_team_name",
+      "binding": "bnd_champions_team_name",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_champions_team_crest",
+      "binding": "bnd_champions_team_crest",
+      "type": "object"
+    }
+  ]
+}

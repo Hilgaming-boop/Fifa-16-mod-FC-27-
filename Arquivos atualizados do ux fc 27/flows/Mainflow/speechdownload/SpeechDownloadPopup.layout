@@ -1,0 +1,127 @@
+{
+	"commonName": "Overlay",
+	"height": 469.0,
+	"width": 630.0,
+	"bindings":
+	[
+		{
+			"binding": "bnd_footer",
+			"property": "footer"
+		},
+		{
+			"binding": "bnd_title",
+			"property": "title"
+		}
+
+	],
+	"children":
+	[
+		{
+			"commonName": "GridTable",
+			"name": "SpeechDownloadGrid",
+			"itemType": "SpeechDownloadCell",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"color": "$COLOR_WHITE",
+			"height": 364.0,
+			"width": 630.0,
+			"x": 0.0,
+			"y": 55.0,
+			"rows": 2,
+			"columns": 3,
+			"hasBulletIndicator": true,
+			"resetPageOnData": false,
+			"cellIndexChangeAction":
+			{
+				"action": "act_change",
+				"binding": "bnd_lng_index"
+			},
+			"bindings":
+			[
+				{
+					"binding": "bnd_country_selected",
+					"property": "selectedCellID"
+				},
+				{
+					"binding": "bnd_country_list",
+					"property": "dataProviders"
+				}
+			]
+		},
+		{
+			"commonName": "Panel",
+			"name": "bottomContent",
+			"alignH": "FILL",
+			"height": 55.0,
+			"width": 630.0,
+            "y": 415.0,
+			"children":
+			[
+				{
+					"commonName": "Label",
+					"name": "statusLabel",
+					"alignH": "FILL",
+					"alignV": "CENTER",
+					"height": 40.0,
+					"width": 630.0,
+					"marginLeft": 20,
+					"marginRight": 20,
+					"bindings":
+					[
+						{
+							"binding": "bnd_speech_download_status",
+							"property": "text"
+						}
+					],
+					"styles": [ "TF_LABEL_CENTERED" ]
+				},
+				{
+					"commonName": "Asset",
+					"name": "divider",
+					"alignH": "FILL",
+					"height": 3.0,
+					"width": 630.0,
+					"type": "$DividerLineHorizontal"
+				}
+			]
+		},
+		{
+			"commonName": "Panel",
+			"name": "topContent",
+			"alignH": "FILL",
+			"height": 55.0,
+			"width": 630.0,
+			"children":
+			[
+				{
+					"commonName": "Label",
+					"name": "statusLabelTop",
+					"alignH": "FILL",
+					"alignV": "CENTER",
+					"height": 55.0,
+					"width": 630.0,
+					"leading": -3,
+					"marginLeft": 20,
+					"marginRight": 20,
+					"bindings":
+					[
+						{
+							"binding": "bnd_speech_download_status_top",
+							"property": "text"
+						}
+					],
+					"styles": [ "TF_LABEL_CENTERED" ]
+				},
+				{
+					"commonName": "Asset",
+					"name": "divider",
+					"alignH": "FILL",
+					"height": 3.0,
+					"marginTop": 48.0,
+					"width": 630.0,
+					"type": "$DividerLineHorizontal"
+				}
+			]
+		}
+	]
+}

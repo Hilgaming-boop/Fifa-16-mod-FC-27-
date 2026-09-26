@@ -1,0 +1,280 @@
+        {
+            "commonName": "DistanceToGoal",
+            "name": "distanceToGoal",
+            "alignH": "FILL",
+			"alignV": "FILL",      
+            "width": 1024,
+		    "height": 768,
+            "alpha": 1.0,
+            "visible": true,
+            "bindings":
+            [
+                {
+                    "property": "nationalization",
+                    "binding":  "bnd_nationalization"
+                },
+                {
+                    "property": "visible",
+                    "binding":  "bnd_visible"
+                },
+                {
+                    "property": "data",
+                    "binding":  "bnd_distance_info"
+                }
+            ],
+            "children":
+            [
+	            {
+					"commonName": "Image",
+					"name": "D2Gbg",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.1,
+					"scaleY": 0.1,
+					"x": 735,
+					"y": 390,
+					"alpha": 0.85,
+					"visible": true,
+					"image": "$D2Gbg"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "D2GlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 755,
+					"y": 397,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "0xCDFB0A",
+                    "fontSize": 13,
+                    "alpha": 0.85,
+                    "text": "DISTANCE"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "D2GlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 755,
+					"y": 413,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "0xCDFB0A",
+                    "fontSize": 13,
+                    "alpha": 0.85,
+                    "text": "TO GOAL"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "D2Gsys",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 861,
+					"y": 421,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 9,
+                    "forceCaps": true,
+                    "alpha": 0.0,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+		                    "binding":  "bnd_visible"
+                        },
+                        {
+                            "binding": "bnd_distance_info_sys",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "D2GsysM",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 843,
+					"y": 423,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 7,
+                    "forceCaps": true,
+                    "alpha": 0.85,
+                    "text": "METRES"
+                },
+				{
+                    "commonName": "Label",
+                    "name": "D2Gnum",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 830,
+					"y": 390,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 28,
+                    "alpha": 0.85,                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_distance_info_num",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_visible",
+                            "property": "visible"
+                        }
+                    ]               
+                },
+                
+	            {
+					"commonName": "Image",
+					"name": "xGbg",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.1,
+					"scaleY": 0.1,
+					"x": 200,
+					"y": 500,
+					"alpha": 0.85,
+					"visible": true,
+					"image": "$xGbg"
+                },           
+	            {
+					"commonName": "Image",
+					"name": "xGbg1",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 382,
+					"y": 527,
+					"alpha": 0.70,
+					"visible": true,
+					"image": "$xGbg1"
+				},
+				{
+					"commonName": "Image",
+					"name": "xGbg2",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 20,
+					"y": 370,
+					"visible": true,
+					"image": "$xGbg2"
+                },           
+	            {
+					"commonName": "Image",
+					"name": "xGbg3",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.2,
+					"x": 435,
+					"y": 390,
+					"alpha": 1,
+					"visible": true,
+					"image": "$xGbg3"
+                },           
+	            {
+					"commonName": "Image",
+					"name": "xGbg4",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.2,
+					"scaleY": 0.3,
+					"x": 485,
+					"y": 290,
+					"alpha": 0.60,
+					"visible": true,
+					"image": "$xGbg4"
+				},
+				{
+					"commonName": "Image",
+					"name": "xGbg5",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.4,
+					"scaleY": 0.4,
+					"x": 640,
+					"y": 15,
+					"alpha": 0.80,
+					"visible": true,
+					"image": "$xGbg5"
+				},
+				{
+					"commonName": "Image",
+					"name": "D2Gbg",
+		             "alignH": "FILL",
+					"alignV": "FILL",
+					"scaleX": 0.5,
+					"scaleY": 0.5,
+					"x": 145,
+					"y": 168,
+					"alpha": 0.58,
+					"visible": true,
+					"image": "$D2Gbg1"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "xGlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 220,
+					"y": 507,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "0xCDFB0A",
+                    "fontSize": 13,
+                    "alpha": 0.85,
+                    "text": "EXPECTED"
+				},
+				{
+                    "commonName": "Label",
+                    "name": "xGlabelP1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 220,
+					"y": 524,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "0xCDFB0A",
+                    "fontSize": 13,
+                    "alpha": 0.85,
+                    "text": "GOAL xG"
+                                },
+                                {
+            "commonName": "Label",
+            "name": "xGlabelP1",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "x": 285,
+            "y": 407,
+            "fontFace": "$FONT_HEADER",
+            "fontSize": 18,
+            "fontColor": "0xCDFB0A",
+            "text": "PLAYER"
+                },
+				{
+                    "commonName": "Label",
+                    "name": "xGnum",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": 298,
+					"y": 504,
+                    "fontFace": "$FONT_HEADER",
+                    "fontColor": "$COLOR_WHITE",
+                    "fontSize": 26,
+                    "alpha": 0.85,                    
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_xg_info_num",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_visible",
+                            "property": "visible"
+                        }
+                    ]               
+                }
+			]
+        }

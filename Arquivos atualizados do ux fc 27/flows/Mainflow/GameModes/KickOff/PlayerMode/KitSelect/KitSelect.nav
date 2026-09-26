@@ -1,0 +1,69 @@
+{
+    "name": "KitSelect",
+    "initial":
+    {
+        "targets": ["RedirectKitSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectKitSelect",
+            "onEnter":
+            [
+                ["set", ["fromScreen", ".fromScreen"]]
+            ],
+            "states":
+            [
+                {
+                    "name": "inMVNPROD",
+                    "onEnter":
+                    [
+                        ["invoke", [".type"]],
+                        ["invoke", [".flow"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "friendly",
+                            "targets": ["RedirectKitSelectStartMatch"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectKitSelectStartMatch",
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["KitSelectStartMatch"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "KitSelectStartMatch",
+            "onEnter":
+            [
+                ["notifyEnterKitSelect"],
+                ["loadVVM", ["/Flows/MainFlow/gamemodes/KickOff/PlayerMode/KitSelect/KitSelect.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "skipFE":   ".SKIP_FE", "fromScreen": ".fromScreen" }]]
+            ],
+            "onExit":
+            [
+                ["notifyExitKitSelect"],
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_play_ucl",
+                    "targets": ["Ucl"]
+                },
+                {
+                "event": "evt_sele_league",
+                    "targets": ["League"]
+                    },
+                {
+                "event": "evt_tournaments",
+                "targets": ["Tournaments"]
+                },
+                {
+                "event": "evt_sele_16",
+                "targets": ["16team"]
+                },
+                {
+                "event": "evt_play_womenleague",
+                    "targets": ["WomenLeague"]
+                },
+                {
+                    "event": "evt_play_man_cup",
+                    "targets": ["ManCup"]
+                    },
+                {
+                    "event": "evt_play_tornei",
+                    "targets": ["Tornei"]
+                }
+            ]
+        },
+        {
+            "name": "Ucl",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/UCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+                }
+        },
+        {
+            "name": "Tournaments",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/MainHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+        "name": "16team",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/Custom/CustomKnock16/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "ManCup",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/DomesticCup/ManCup/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+                }
+        },
+        {
+            "name": "WomenLeague",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/Custom/CustomKnock32Women/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+                }
+        },
+        {
+            "name": "Tornei",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/CustomKnockT/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+                }
+        },
+        {
+            "name": "League",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/Custom/CustomLiga32/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        }
+    ]
+}

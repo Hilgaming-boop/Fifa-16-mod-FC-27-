@@ -1,0 +1,5 @@
+{
+    "dds":   ["GameEvents.dd"],
+    "vms":   [["lua", "GameEvents.lua"]],
+    "views": [["gfx", {"layout":"GameEvents.layout"}]]
+}

@@ -1,0 +1,10 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_tab_index",
+            "binding":  "bnd_tab_index",
+            "type":     "int"
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "commonName": "Panel",
+    "name": "container",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "alignH": "LEFT",
+            "icon": "$FooterIconBack",
+            "label": "BACK"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Career"
+        },
+        {
+            "commonName": "Group",
+            "name": "buttonsContainer",
+            "alignH": "CENTER",
+            "marginTop": 100.0,
+            "width": 640.0,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "name": "navBarTestFlowButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "y": 0.0,
+                    "clickAction": "act_to_nav_bar_test_flow",
+                    "label": "Open NavBar Test Flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "gameControlsTestFlowButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 340.0,
+                    "y": 0.0,
+                    "clickAction": "act_to_game_controls_test_flow",
+                    "label": "Open Game Controls Test Flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "bulletIndicatorTestFlowButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 0.0,
+                    "y": 65.0,
+                    "clickAction": "act_to_bulletindicator_test_flow",
+                    "label": "Open Bullet Indicator Test Flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "gridTableTestFlowButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 340.0,
+                    "y": 66.0,
+                    "clickAction": "act_to_grid_table_test_flow",
+                    "label": "Open Grid Table Test Flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "virtualKeyboardTestFlowButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 0.0,
+                    "y": 130.0,
+                    "clickAction": "act_to_virtual_keyboard_test_flow",
+                    "label": "Open Virtual Keyboard Test Flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "listTestFlowButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 340.0,
+                    "y": 130.0,
+                    "clickAction": "act_to_simulatioin_test_flow",
+                    "label": "Open Simulation Test Flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "LocFlowButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 0.0,
+                    "y": 190.0,
+                    "clickAction": "act_to_loc_test_flow",
+                    "label": "Open Localization Test Flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "GenericButton1",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 340.0,
+                    "y": 190.0,
+                    "clickAction": "act_to_dragtoggle_test_flow",
+                    "label": "Open Swipe Drag Toggle test + bullet"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "HUD_TestButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 0.0,
+                    "y": 250.0,
+                    "clickAction": "act_to_hud_test_flow",
+                    "label": "Open ingame HUD test flow"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "HUD_TestButton",
+                    "height": 40.0,
+                    "width": 300.0,
+                    "x": 340,
+                    "y": 250.0,
+                    "clickAction": "act_to_rate_app_flow",
+                    "label": "Open rate app overlay flow"
+                }
+            ]
+        }
+    ]
+}

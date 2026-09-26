@@ -1,0 +1,136 @@
+
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+         {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": "act_to_performance"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "MyTeam",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 120,
+                    "marginTop": 0,
+                    "width": 550,
+                    "height": 370,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "name": "ColorBg",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x151515",
+                            "cornerRaduis": 19,
+                            "alpha": 0.9
+                        },
+                {
+                    "commonName": "Image",
+                    "name": "imgFramePlayer2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 105,
+                    "height": 105,
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "bindings": [
+                        {
+                            "binding": "bnd_player1_performance",
+                            "property": "image"
+                        }
+                    ]
+                },
+                        {
+                            "commonName": "VerticalList",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginRight": 250,
+                            "x": 0.0,
+                            "y": 0.0,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7,
+                            "marginTop": 10,
+                            "rowWidth": 900,
+                            "rowHeight": 100,
+                            "displayRange": 5,
+                            "row": "MatchPerfomeRow",
+                            "bindings":
+                                [
+                            {
+                                "binding": "bnd_home_events_list",
+                                "property": "dataProviders"
+                            }
+                                ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": -20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 120,
+                    "marginLeft": -30,
+                    "height": 90,
+                    "width": 238,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 24.7,
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Expandes",
+                    "text": "PERFORMANCE"
+                }
+            ]
+         }
+     ]
+}

@@ -1,0 +1,17 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_play_seasons",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_play_seasons"
+			}
+		}
+	],
+	"data":
+	[
+		
+	]
+}

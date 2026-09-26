@@ -1,0 +1,5 @@
+{
+	"dds": ["Standings/Standings.dd"],
+     "vms": [["lua", "Standings/Standings.lua"]],
+    "views": [["gfx", { "layout": "Tab1.layout" }]]
+}

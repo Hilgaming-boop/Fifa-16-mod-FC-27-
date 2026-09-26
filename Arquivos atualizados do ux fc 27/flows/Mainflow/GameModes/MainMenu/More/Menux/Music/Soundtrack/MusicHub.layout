@@ -1,0 +1,89 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIconOff",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 20,
+            "marginLeft": 0,
+            "width": 480,
+            "height": 190,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 20,
+                    "color": "0x1C1C1C",
+                    "alpha": 0.9
+                                                },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft":-160,
+                            "marginBottom": 70,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$CruyffSans-Regular",
+                            "text": "Difficulty Level"
+               ]
+                  }
+                    ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

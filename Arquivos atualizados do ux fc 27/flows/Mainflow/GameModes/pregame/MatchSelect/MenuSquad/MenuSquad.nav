@@ -1,0 +1,26 @@
+{
+    "name": "MenuSquad",
+    "states":
+    [
+        {              
+            "name": "SquadHome",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/pregame/MatchSelect/MenuSquad/TeamManagement/TeamManagement_Home.nav",
+            "outputs":
+            {
+               "out_back": "out_hub",
+               "out_advance": "out_hub"
+            }
+        },
+        {              
+            "name": "SquadAway",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/pregame/MatchSelect/MenuSquad/TeamManagement/TeamManagement_Away.nav",
+            "outputs":
+            {
+               "out_back": "out_hub",
+               "out_advance": "out_hub"
+            }
+        }
+    ]
+}

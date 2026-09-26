@@ -1,0 +1,34 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Career"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Loading",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginLeft": 3,
+                    "height": 50,
+                    "width": 50,
+                    "alpha": 1,
+                    "path": "views/loadingindicator/loadingIcon.swf"
+                }
+            ]
+        }
+    ]
+}

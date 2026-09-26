@@ -1,0 +1,335 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+		        "script" : [ { "anim" : "MOD_SLIDE_IN_RIGHT" } ]
+        },
+        {
+            "name": "hide",
+		        "script" : [ { "anim" : "SCREEN_TRANSITION_OUT" } ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 405,
+                            "height": 90,
+                            "width": 140,
+                            "alpha": 1,
+                            "path": "views/backgrounds/White_Effect.swf"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 250,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "type": "$Tab_Kick"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Standings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 70,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0x3EF7FC",
+                            "text": "UEFA Champions League"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 110,
+                            "marginLeft": 40,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "text": "Pos",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 110,
+                            "marginLeft": 70,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "text": "Team",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 110,
+                            "marginRight": 40,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "text": "Pts",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "PosNumber",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 150,
+                            "marginLeft": 47,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "text": "1",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "ScorePts",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 150,
+                            "marginRight": 47,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "text": "1",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "HomeCrest",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 143,
+                            "marginLeft": 70,
+                            "width": 30,
+                            "height": 30,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_crest",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 160,
+                            "marginLeft": 113,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 185,
+                            "marginLeft": 2,
+                            "width": 250,
+                            "height": 1,
+                            "color": "0xffffff",
+                            "alpha": 0.1
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "PosNumber",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 205,
+                            "marginLeft": 47,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "text": "2",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "ScorePts",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 205,
+                            "marginRight": 47,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "text": "1",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "HomeCrest",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 200,
+                            "marginLeft": 70,
+                            "width": 30,
+                            "height": 30,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_crest",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 205,
+                            "marginLeft": 113,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 245,
+                            "marginLeft": 2,
+                            "width": 250,
+                            "height": 1,
+                            "color": "0xffffff",
+                            "alpha": 0.1
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+                            "type": "$Tab_Cup_Select",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 100,
+                                    "width": 200,
+                                    "backgroundImage": "$Tab_Action_White",
+                                    "backgroundHighlightImage": "$Tab_Action_White",
+                                    "clickAction": "act_standing"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginBottom": -1,
+                                    "fontSize": 17,
+                                    "fontColor": "0x050953",
+                                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                                    "text": "Tap to Standings"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

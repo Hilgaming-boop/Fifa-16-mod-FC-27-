@@ -1,0 +1,5 @@
+{
+    "dds": ["HelpHub.dd", "/lua/common/TabModel.dd"],
+    "vms": [["lua", "/lua/common/TabModel.lua"], ["lua", "HelpHub.lua"]],
+    "views": [["gfx", { "layout": "HelpHub.layout" }]]
+}

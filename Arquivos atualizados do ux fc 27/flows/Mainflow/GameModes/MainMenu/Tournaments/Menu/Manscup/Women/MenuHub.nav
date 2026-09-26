@@ -1,0 +1,171 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_play_ucl",
+                    "targets": ["Ucl"]
+                },
+                {
+                    "event": "evt_play_libertadores",
+                    "targets": ["Libertadores"]
+                },
+                {
+                    "event": "evt_play_libertadore",
+                    "targets": ["Libertadore"]
+                },
+                {
+                    "event": "evt_play_uwcc",
+                    "targets": ["Uwcc"]
+                },
+                {
+                    "event": "evt_play_AFifa26",
+                    "targets": ["AFifa26"]
+                },
+                {
+                    "event": "evt_play_Europa",
+                    "targets": ["Europa"]
+                    },
+                {
+                    "event": "evt_missionmodebarclay",
+                    "targets": ["MissionBarclay"]
+                    },
+                {
+                    "event": "evt_missionmodearkema",
+                    "targets": ["MissionArkema"]
+                    },
+                {
+                    "event": "evt_missionmodeligaf",
+                    "targets": ["MissionLigaF"]
+                    },
+                {
+                    "event": "evt_missionmodegpfbl",
+                    "targets": ["MissionGPFBL"]
+                    },
+                {
+                    "event": "evt_missionmodenwsl",
+                    "targets": ["MissionNWSL"]
+                }
+            ]
+        },
+        {
+            "name": "Ucl",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/UCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Libertadores",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/UEC/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+             }
+        },
+        {
+            "name": "Libertadore",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MainMenu/Tournaments/Menu/Mores/MoreT/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Uwcc",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/CopaAmerica/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+                }
+        },
+        {
+            "name": "AFifa26",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/AFifa26/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+                }
+        },
+        {
+            "name": "Europa",
+            "type": "external",
+            "file": "/flows/mainflow/GameModes/QuickCup/UNL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+                }
+        },
+        {
+        "name": "MissionBarclay",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission1Barclays/SelectLeagueTeam.nav",
+            "outputs":
+            {
+            "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+        "name": "MissionArkema",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission1Arkema/SelectLeagueTeam.nav",
+            "outputs":
+            {
+            "out_exit_gamemode": "RedirectMenuHub"
+                            }
+        },
+        {
+        "name": "MissionLigaF",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission1LigaF/SelectLeagueTeam.nav",
+            "outputs":
+            {
+            "out_exit_gamemode": "RedirectMenuHub"
+                                        }
+        },
+        {
+        "name": "MissionGPFBL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission1GPFBL/SelectLeagueTeam.nav",
+            "outputs":
+            {
+            "out_exit_gamemode": "RedirectMenuHub"
+                                        }
+        },
+        {
+        "name": "MissionNWSL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission1NWSL/SelectLeagueTeam.nav",
+            "outputs":
+            {
+            "out_exit_gamemode": "RedirectMenuHub"
+            }
+        }
+    ]
+}

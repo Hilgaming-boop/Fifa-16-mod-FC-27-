@@ -1,0 +1,5 @@
+{
+    "dds":   ["Facts2.dd"],
+    "vms":   [["lua", "Facts2.lua"]],
+    "views": [["gfx", {"layout": "Facts2.layout"}]]
+}

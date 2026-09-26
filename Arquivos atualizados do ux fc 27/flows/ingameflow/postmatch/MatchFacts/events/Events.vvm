@@ -1,0 +1,5 @@
+{
+    "dds":   ["Events.dd"],
+    "vms":   [["lua", "Events.lua"]],
+    "views": [["gfx", {"layout": "Events.layout"}]]
+}

@@ -1,0 +1,157 @@
+{
+	"commonName": "Panel",
+	"name": "container",
+    "alignH": "FILL",
+    "alignV": "FILL",
+	"children":
+	[
+		{
+            "commonName": "GenericButton",
+            "name": "gameControlsTestFlowButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 40.0,
+            "width": 300.0,
+			"clickAction": "act_toggle_touch_input",
+			"bindings":
+			[
+				{
+					"binding": "bnd_touch_input_label",
+					"property": "label"
+				}
+			]
+        },
+		{
+			"commonName": "Group",
+			"name": "gameControlsContainer",
+			"children":
+			[
+				{
+					"commonName": "DPad",
+					"name": "dPad",
+					"styles":
+					[
+						"DPadButtonBackground"
+					],
+					"bindings":
+					[
+						{
+							"binding": "bnd_left_stick_data",
+							"property": "dataProviders"
+						},
+						{
+							"binding": "BND_SCREEN_SCALE_FACTOR",
+							"property": "screenScaleFactor"
+						}
+					]
+				},
+				{
+					"commonName": "GameButton",
+					"name": "sprintButton",
+					"styles":
+					[
+						"SprintButtonBackground"
+					],
+					"bindings":
+					[
+						{
+							"binding": "bnd_button_S_data",
+							"property": "dataProviders"
+						},
+						{
+							"binding": "BND_SCREEN_SCALE_FACTOR",
+							"property": "screenScaleFactor"
+						}
+					]
+				},
+				{
+					"commonName": "GameButton",
+					"name": "passButton",
+					"styles":
+					[
+						"GameButtonBackground"
+					],
+					"bindings":
+					[
+						{
+							"binding": "bnd_button_A_data",
+							"property": "dataProviders"
+						},
+						{
+							"binding": "BND_SCREEN_SCALE_FACTOR",
+							"property": "screenScaleFactor"
+						}
+					]
+				},
+				{
+					"commonName": "GameButton",
+					"name": "shootButton",
+					"styles":
+					[
+						"GameButtonBackground"
+					],
+					"bindings":
+					[
+						{
+							"binding": "bnd_button_B_data",
+							"property": "dataProviders"
+						},
+						{
+							"binding": "BND_SCREEN_SCALE_FACTOR",
+							"property": "screenScaleFactor"
+						}
+					]
+				},
+				{
+					"commonName": "GameButton",
+					"name": "throughButton",
+					"styles":
+					[
+						"GameButtonBackground"
+					],
+					"bindings":
+					[
+						{
+							"binding": "bnd_button_C_data",
+							"property": "dataProviders"
+						},
+						{
+							"binding": "BND_SCREEN_SCALE_FACTOR",
+							"property": "screenScaleFactor"
+						}
+					]
+				},
+				{
+					"commonName": "BaseGameButton",
+					"name": "pauseButton",
+					"styles":
+					[
+						"PauseButtonBackground"
+					],
+					"bindings":
+					[
+						{
+							"binding": "bnd_button_pause_data",
+							"property": "dataProviders"
+						},
+						{
+							"binding": "BND_SCREEN_SCALE_FACTOR",
+							"property": "screenScaleFactor"
+						}
+					]
+				}
+			]
+		}
+	],
+    "behaviors":
+    [
+		{
+            "commonName": "TickerNavPublisher",
+            "name": "bvr_cancel",
+            "actionName": "act_back",
+            "icon": "$FooterIconBack",
+			"alignH": "LEFT",
+			"label": "BACK"
+        }
+    ]
+}

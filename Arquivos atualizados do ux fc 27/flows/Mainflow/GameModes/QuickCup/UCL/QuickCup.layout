@@ -1,0 +1,3719 @@
+/*-- IMPROVED ANIM MOUNTSA --*/
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "SCREEN_SHOW"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "SIMPLE_SCREEN_HIDE"
+        }
+      ]
+    }
+  ],
+  "children": [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+			[
+				{
+					"binding": "bnd_cup_bg",
+					"property": "image"
+				}
+            ]
+        },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 35,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$MONTBLANC_TRIAL_EXTRABOLD",
+                    "text": "UEFA Champions League"
+                },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 85,
+          "fontSize": 20,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": [
+            "TF_MATCH_REVEAL_TEAM_NAME"
+          ],
+          "text": "Back"
+        },
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 3,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "label": "",
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableCup",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "width": 1205,
+      "height": 450,
+      "marginLeft": 0,
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0x05061B",
+          "cornerRaduis": 25,
+          "alpha": 0.1
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeamLeft",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "width": 210,
+      "height": 450,
+      "marginLeft": 100,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": -25,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": 25,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": 95,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": 145,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": 210,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": 260,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": 320,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team1",
+              "alignV": "LEFT",
+              "alignH": "TOP",
+              "marginTop": 370,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team1",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": -20,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team1_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team2",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": -20,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team2_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team3",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team3_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team4",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team4_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team5",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team5_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team6",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team6_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team7",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 149,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team7_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team8",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 149,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team8_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team9",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team9_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team10",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team10_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team11",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 265,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team11_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team12",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 265,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team12_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team13",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 326,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team13_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team14",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 326,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team14_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team15",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team15_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team16",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginLeft": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team16_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score1",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": -16,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team1_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score2",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": -16,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team2_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score3",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team3_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score4",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team4_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score5",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team5_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score6",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team6_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score7",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 150,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team7_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score8",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 150,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team8_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score9",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team9_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score10",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team10_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score11",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 270,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team11_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score12",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 270,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team12_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score13",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 325,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team13_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score14",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 325,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team14_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score15",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginLeft": 60,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team15_score",
+                  "property": "text"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "score16",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginLeft": 100,
+			  "fontSize": 17,
+			  "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+			  "fontColor": "$COLOR_WHITE",
+              "bindings": [
+                {
+                  "binding": "bnd_team16_score",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count1",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeamRight",
+      "alignV": "CENTER",
+      "alignH": "RIGHT",
+      "width": 210,
+      "height": 450,
+      "marginRight": 100,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginRight": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginRight": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": -25,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 25,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 95,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 145,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 210,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 260,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 320,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 370,
+              "marginRight": 10,
+              "height": 40,
+              "width": 160,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team17",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": -20,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team17_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team18",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": -20,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team18_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team19",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team19_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team20",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team20_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team21",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team21_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team22",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team22_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team23",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 149,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team23_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team24",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 149,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team24_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team25",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team25_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team26",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team26_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team27",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 265,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team27_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team28",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 265,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team28_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team29",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 326,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team29_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team30",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 326,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team30_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team31",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team31_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team32",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginRight": 130,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team32_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score17",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": -16,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team17_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score18",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": -16,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team18_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score19",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 30,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team19_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score20",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 30,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team20_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score21",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 100,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team21_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score22",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 100,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team22_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score23",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 150,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team23_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score24",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 150,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team24_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score25",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 215,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team25_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score26",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 215,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team26_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score27",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 270,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team27_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score28",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 270,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team28_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score29",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 325,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team29_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score30",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 325,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team30_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score31",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 375,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team31_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score32",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 375,
+    "marginRight": 110,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team32_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count1",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam8Left",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "width": 210,
+      "height": 450,
+      "marginLeft": 270,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel2Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel2_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount2",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": -25,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 25,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 95,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 145,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 210,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 260,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 320,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 370,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team33",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": -20,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team33_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team34",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team34_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team34",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team35_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team35",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 143,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team36_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team36",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team37_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team37",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 255,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team38_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team38",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 326,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team39_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team39",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team40_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score33",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": -18,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team33_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score34",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 32,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team34_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score35",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 100,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team35_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score36",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 150,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team36_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score37",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 215,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team37_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score38",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 265,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team38_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score39",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 325,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team39_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score40",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 375,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team40_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount2",
+          "target": "panel2Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count2",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam8Right",
+      "alignV": "CENTER",
+      "alignH": "RIGHT",
+      "width": 210,
+      "height": 450,
+      "marginRight": 270,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel2Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel2_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount2",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginRight": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginRight": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": -25,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 25,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 95,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 145,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 210,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 260,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 320,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 370,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": -20,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team41_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team41",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 30,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team42_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team34",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 100,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team43_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team35",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 149,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team44_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team36",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 215,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team45_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team37",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 265,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team46_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team38",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 326,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team47_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team39",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 375,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team48_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score41",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": -18,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team41_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score42",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 32,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team42_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score43",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 100,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team43_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score44",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 150,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team44_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score45",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 215,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team45_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score46",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 265,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team46_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score47",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 325,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team47_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score48",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 375,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team48_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount2",
+          "target": "panel2Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count2",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam4Left",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "width": 210,
+      "height": 450,
+      "marginLeft": 410,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel3Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel3_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount3",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team49",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 10,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team49",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 120,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team49",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 238,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team49",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 343,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team49",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 15,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team49_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team49",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 123,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team50_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team36",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 240,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team51_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team37",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 345,
+              "marginLeft": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team52_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score49",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 15,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team49_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score50",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 123,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team50_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score51",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 240,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team51_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score52",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 345,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team52_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount3",
+          "target": "panel3Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count3",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam4Right",
+      "alignV": "CENTER",
+      "alignH": "RIGHT",
+      "width": 210,
+      "height": 450,
+      "marginRight": 410,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel3Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel3_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount3",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginRight": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginRight": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team53",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 10,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team53",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 120,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team53",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 238,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team53",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 343,
+              "marginRight": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team53",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 15,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team53_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team35",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 123,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team54_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team36",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 240,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team55_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team37",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 345,
+              "marginRight": 20,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team56_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score53",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 15,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team53_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score54",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 123,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team54_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score55",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 240,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team55_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score56",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 345,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team56_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount3",
+          "target": "panel3Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count3",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam2Left",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "width": 210,
+      "height": 450,
+      "marginLeft": 540,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel4Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel4_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount4",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team57",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop":  63,
+              "marginLeft": 0,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team57",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 293,
+              "marginLeft": 0,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team57",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 66,
+              "marginLeft": 3,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team57_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team36",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 296,
+              "marginLeft": 3,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team58_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score57",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 66,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team57_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score58",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 296,
+    "marginLeft": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team58_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount4",
+          "target": "panel4Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count4",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam2Right",
+      "alignV": "CENTER",
+      "alignH": "RIGHT",
+      "width": 210,
+      "height": 450,
+      "marginRight": 540,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel4Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel4_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount4",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginRight": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginRight": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team59",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop":  63,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Rectangle",
+              "name": "team59",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 293,
+              "marginLeft": 10,
+              "height": 40,
+              "width": 100,
+              "color": "0x05061B",
+              "cornerRaduis": 10,
+              "alpha": 0.8
+            },
+            {
+              "commonName": "Image",
+              "name": "team57",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 66,
+              "marginRight": 3,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team59_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "team37",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 296,
+              "marginRight": 3,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team60_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score59",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 66,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team59_score", "property": "text" }
+    ]
+  },
+  {
+    "commonName": "Label",
+    "name": "score60",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 296,
+    "marginRight": 70,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team60_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount4",
+          "target": "panel4Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count4",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam1Right",
+      "alignV": "CENTER",
+      "alignH": "RIGHT",
+      "width": 210,
+      "height": 450,
+      "marginRight": 650,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel5Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel5_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount5",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginTop": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+
+            {
+              "commonName": "Image",
+              "name": "team62",
+              "alignH": "RIGHT",
+              "alignV": "TOP",
+              "marginTop": 180,
+              "marginRight": -30,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team62_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score61",
+    "alignH": "RIGHT",
+    "alignV": "TOP",
+    "marginTop": 180,
+    "marginRight": 60,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team61_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount5",
+          "target": "panel5Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count5",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam2Left",
+      "alignV": "CENTER",
+      "alignH": "LEFT",
+      "width": 210,
+      "height": 450,
+      "marginLeft": 650,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel5Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel5_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount5",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": -50
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "marginTop": 0
+                    },
+                    "duration": 700,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+
+            {
+              "commonName": "Image",
+              "name": "team35",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 180,
+              "marginLeft": -30,
+              "scaleX": 0.5,
+              "scaleY": 0.5,
+              "bindings": [
+                {
+                  "binding": "bnd_team61_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "score62",
+    "alignH": "LEFT",
+    "alignV": "TOP",
+    "marginTop": 180,
+    "marginLeft": 60,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_team62_score", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount5",
+          "target": "panel5Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count5",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam1Winner",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "width": 210,
+      "height": 450,
+      "marginLeft": 80,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel7Group",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "marginTop": 30,
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel7_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount7",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": -80,
+                      "scaleX": 0.4,
+                      "scaleY": 0.4
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 0.6,
+                      "scaleY": 0.6,
+                      "marginTop": 50
+                    },
+                    "duration": 5000,
+                    "easing": "easeOut"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "team62",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 142,
+              "marginLeft": 100,
+              "height": 115,
+              "width": 125,
+              "color": "0x05061B",
+              "cornerRaduis": 25,
+              "alpha": 0
+            },
+            {
+              "commonName": "Image",
+              "name": "team35",
+              "alignH": "LEFT",
+              "alignV": "TOP",
+              "marginTop": 0,
+              "marginLeft": -15,
+              "scaleX": 0.4,
+              "scaleY": 0.4,
+              "bindings": [
+                {
+                  "binding": "bnd_champion_crest",
+                  "property": "image"
+                }
+              ]
+            },
+  {
+    "commonName": "Label",
+    "name": "team35",
+    "alignH": "CENTER",
+    "alignV": "TOP",
+    "marginTop": 0,
+    "marginLeft": 0,
+    "fontSize": 18,
+    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+    "fontColor": "$COLOR_WHITE",
+    "bindings": [
+      { "binding": "bnd_text", "property": "text" }
+    ]
+  }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount7",
+          "target": "panel7Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count7",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeamTrophy",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel7Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel7_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount7",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 0.6,
+                      "scaleY": 0.6,
+                      "marginTop": 0
+                    },
+                    "duration": 500,
+                    "easing": "outBack"
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 500
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 0.4,
+                      "scaleY": 0.4,
+                      "marginTop": 120
+                    },
+                    "duration": 900,
+                    "easing": "inOutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Image",
+              "name": "team35",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginTop": 0,
+              "marginLeft": 0,
+              "scaleX": 0.3,
+              "scaleY": 0.3,
+              "bindings": [
+                {
+                  "binding": "bnd_trophy",
+                  "property": "image"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount7",
+          "target": "panel7Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count7",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TableTeam1Winner",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel8Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel8_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount8",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": 0
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 100
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginTop": 0
+                    },
+                    "duration": 1000,
+                    "easing": "easeOut"
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 5
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "scaleX": 2,
+                      "scaleY": 2
+                    },
+                    "duration": 16000,
+                    "easing": "outBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Image",
+              "name": "team35",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginTop": 0,
+              "marginLeft": 0,
+              "scaleX": 1,
+              "scaleY": 1,
+              "type": "$WinnerBg"
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount8",
+          "target": "panel8Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count8",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

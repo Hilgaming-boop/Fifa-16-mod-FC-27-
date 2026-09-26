@@ -1,0 +1,93 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_team_roster",
+                    "targets": ["TeamRoster"]
+                },
+                {
+                    "event": "evt_team_sheets",
+                    "targets": ["TeamSheets"]
+                },
+                {
+                    "event": "evt_music",
+                    "targets": ["Music"]
+                },
+                {
+                    "event": "evt_load",
+                    "targets": ["Load"]
+                },
+                {
+                    "event": "evt_credits",
+                    "targets": ["Credits"]
+                }
+            ]
+        },
+        {
+            "name": "TeamRoster",
+            "type": "external",
+            "file": "/Flows/MainFlow/TeamRoster/TeamSelectHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuHub"
+            }
+        },
+        {
+            "name": "TeamSheets",
+            "type": "external",
+            "file": "/Flows/MainFlow/TeamSheets/TeamSelectHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuHub"
+            }
+        },
+        {
+            "name": "Music",
+            "type": "external",
+            "file": "/Flows/MainFlow/gamemodes/MainMenu/More/Menu/Music/MusicHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuHub"
+            }
+        },
+        {
+            "name": "Credits",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/MainMenu/More/Menu/Profile/ProfileHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuHub"
+            }
+        },
+        {
+            "name": "Load",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/MainMenu/More/Menu/Load/LoadHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuHub"
+            }
+        }
+    ]
+}

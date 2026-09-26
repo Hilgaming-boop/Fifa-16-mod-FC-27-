@@ -1,0 +1,4 @@
+{
+	"dds":	 ["HelpHub.dd"],
+    "views": [["gfx", {"layout": "HelpHub.layout"}]]
+}

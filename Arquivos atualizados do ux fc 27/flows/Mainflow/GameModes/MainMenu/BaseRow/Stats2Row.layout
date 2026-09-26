@@ -1,0 +1,130 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2LigaRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_DINPROBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_DINPROBOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_DINPROBOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.PlayerHead": "RowPanel.RowLeftPanel.PlayerHead.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.TeamCrest": "RowPanel.RowLeftPanel.TeamCrest.image",
+        "dataProviders.Nationality": "RowPanel.RowLeftPanel.Nationality.image",
+        "dataProviders.TableAsset": "RowPanel.RowLeftPanel.TableAsset.image",
+        "dataProviders.TeamName": "RowPanel.RowLeftPanel.TeamName.text",
+        "dataProviders.Rank": "RowPanel.RowLeftPanel.Rank.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.Rating.text",
+        "dataProviders.Goals": "RowPanel.RowLeftPanel.Goals.text",
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 800,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 550,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                    {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 0,
+                            "marginLeft": 0,
+                            "fontSize": 14,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": "Pos",
+                            "alpha": 0.9
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 0,
+                            "marginLeft": 30,
+                            "fontSize": 14,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": "Player",
+                            "alpha": 0.9
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 0,
+                            "marginLeft": 200,
+                            "fontSize": 14,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": "Club",
+                            "alpha": 0.9
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 0,
+                            "marginLeft": 240,
+                            "fontSize": 14,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": "Goals",
+                            "alpha": 0.9
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

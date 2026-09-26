@@ -1,0 +1,5 @@
+{
+	"dds": ["TeamSheets.dd"],
+    "vms": [["lua", "TeamSheets.lua"]],
+    "views": [["gfx", {"layout": "TeamSheets.layout"}]]
+}

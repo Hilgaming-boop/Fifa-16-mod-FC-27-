@@ -1,0 +1,19 @@
+{
+	"name": "RateAppTestFlow",
+	"onEnter":
+	[
+		["loadVVM", ["/flows/mainflow/gamemodes/rateApp/RateAppOverlay.vvm"]]
+		
+	],
+	"onExit":
+	[
+		["unloadVVM"]
+	],
+	"transitions":
+	[
+		{
+			"event":   "evt_back",
+			"targets": ["out_back"]
+		}
+	]
+}

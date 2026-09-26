@@ -1,0 +1,16 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_rivalwomens",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_rivalwomens"
+			}
+		}
+	],
+	"data":
+	[
+	]
+}

@@ -1,0 +1,471 @@
+/*-- Mod By MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "PenaltiKick",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "bindings":
+    [
+        {
+            "binding": "bnd_show_hud_visible",
+            "property": "visible"
+        }
+    ],
+    "children":
+    [
+         {
+            "commonName": "Asset",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 154,
+            "marginLeft": 0,
+            "width": 65,
+            "height": 100,
+            "alpha": 0.6,
+            "visible": true,
+            "type": "$ShootoutBallpoint",
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_active"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Pipinaltian",
+            "alignV": "TOP",
+            "alignH": "LEFT",            "marginLeft": 60,
+            "width": 200,
+            "height": 75,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_active"
+                },
+                {
+                    "property": "marginTop",
+                    "binding": "bnd_sb_top"
+                }
+            ],
+            "children":
+            [		
+                {
+                    "commonName": "Rectangle",
+                    "name": "Bg",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "BgCrest",
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "width": 40,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_crest_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "StripClub",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 3.5,
+                    "height": 1,
+                    "width": 33,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_stripclub_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "CrestHome",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -18,                    "marginLeft": 6,
+                    "width": 27,
+                    "height": 27,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_homeCrest",
+                            "property": "image"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Image",
+                    "name": "CrestAway",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 18,                    "marginLeft": 6,
+                    "width": 27,
+                    "height": 27,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_awayCrest",
+                            "property": "image"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Shootout",
+                    "name": "HistoryHome",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": -7,
+                    "marginTop": -18.5,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "homeHistory",
+                            "binding":  "bnd_home_history"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Shootout",
+                    "name": "HistoryAway",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": -125,
+                    "marginTop": 20,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "awayHistory",
+                            "binding":  "bnd_away_history"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "name": "BgLapisan",
+                    "alignV": "FILL",
+                    "alignH": "LEFT",                    "marginLeft": 78,
+                    "width": 3,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "StripTengah",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 4,
+                    "height": 1,
+                    "width": 152,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_strip_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "name": "BgLapisan",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "width": 3,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "color",
+                            "binding":  "bnd_bg_color"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NameHome",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": -19,                    "marginLeft": 50,
+                    "fontFace":"$FONT_EPL",
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_homeName_text",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_homeName_fontColor",
+                            "property": "fontColor"
+                        }
+                    ]
+                 },
+                 {
+                    "commonName": "Label",
+                    "name": "NameAway",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 19,                    "marginLeft": 50,
+                    "fontFace":"$FONT_EPL",
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "binding": "bnd_awayName_text",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_awayName_fontColor",
+                            "property": "fontColor"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+               {
+                  "binding": "bnd_nibs_on_side_visible",
+                  "property": "visible"
+               }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 50,
+                    "width": 150,
+                    "height": 100,
+                    "alpha": 0.8,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_live_logo"
+                        },
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+               {
+                  "binding": "bnd_nibs_on_center_visible",
+                  "property": "visible"
+               }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 50,
+                    "width": 150,
+                    "height": 100,
+                    "alpha": 0.8,
+                    "visible": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_live_logo"
+                        },
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+               {
+                  "binding": "bnd_nibs_on_single_visible",
+                  "property": "visible"
+               }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 1,
+                    "height": 1,
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_live_logo"
+                        },
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Shootout",
+            "name": "IniOrinyaHIDE",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": -500,            "marginLeft": 0,
+            "alpha": 0,
+            "visible": true,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_active"
+                },
+                {
+                    "property": "score",
+                    "binding":  "bnd_score"
+                },
+                {
+                    "property": "homeTeam",
+                    "binding":  "bnd_home_team"
+                },
+                {
+                    "property": "awayTeam",
+                    "binding":  "bnd_away_team"
+                },
+                {
+                    "property": "side",
+                    "binding":  "bnd_side"
+                },
+                {
+                    "property": "homeHistory",
+                    "binding":  "bnd_home_history"
+                },
+                {
+                    "property": "awayHistory",
+                    "binding":  "bnd_away_history"
+                }
+            ]
+        }
+    ]
+  },
+  {
+      "commonName": "Panel",
+      "name": "rootContainer",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings":
+      [
+         {
+            "binding": "bnd_hide_hud_visible",
+            "property": "visible"
+         }
+      ]
+    }
+  ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

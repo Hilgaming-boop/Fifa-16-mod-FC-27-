@@ -1,0 +1,42 @@
+{
+	"actions":
+    [
+		{
+	        "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+            "viewname":   "act_next_index",
+            "actionname": "act_next_index"
+        },
+		{
+            "viewname":   "act_prev_index",
+            "actionname": "act_prev_index"
+        },
+		{
+            "viewname":   "act_add_bullet",
+            "actionname": "act_add_bullet"
+        },
+		{
+            "viewname":   "act_remove_bullet",
+            "actionname": "act_remove_bullet"
+        }
+    ],
+	"data":
+    [
+		{
+            "viewname": "bnd_publish_current_index",
+            "binding":  "bnd_publish_current_index",
+            "type":     "int"
+        },
+		{
+            "viewname": "bnd_publish_bullet_count",
+            "binding":  "bnd_publish_bullet_count",
+            "type":     "int"
+        }
+	]
+}

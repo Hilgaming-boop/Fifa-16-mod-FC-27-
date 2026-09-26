@@ -1,0 +1,107 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectIconsRoadsHub",
+                    "states":
+                    [
+                        {
+                            "name": "IconsRoadsHub",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [0]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/Challenge/Menu/IconsRoads/IconsRoadsHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_menuseasons",
+                            "targets": ["SeasonsRoadsHub"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectSeasonsRoadsHub",
+                    "states":
+                    [
+                        {
+                            "name": "SeasonsRoadsHub",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [1]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/Challenge/Menu/SeasonsRoads/SeasonsRoadsHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_menuicons",
+                            "targets": ["IconsRoadsHub"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_play_icons",
+                    "targets": ["Play_Icons"]
+                },
+                {
+                    "event": "evt_play_seasons",
+                    "targets": ["Play_Seasons"]
+                }
+            ]
+        },
+        {
+            "name": "Play_Icons",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/Challenge/Icons/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectIconsRoadsHub"
+            }
+        },
+        {
+            "name": "Play_Seasons",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/Challenge/Seasons/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectSeasonsRoadsHub"
+            }
+        }
+    ]
+}

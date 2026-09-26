@@ -1,0 +1,1091 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_kick"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.8,
+            "type": "$Bg_Smoke"
+            },
+                    {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -240,
+                            "marginLeft": 60,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_T"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -210,
+                    "marginLeft": 120,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Regular",
+                    "text": "Tournament > Domestic Cup > Women's League"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 120,
+            "marginTop": -30,
+            "width": 680,
+            "height": 325,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM BARCLAYS WSL"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": 0,
+                            "width": 400,
+                            "height": 320,
+                            "type": "$England_Flago"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Bold",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Barclays WSL"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 70,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 16,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "England"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 80,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 630,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "The first women's football match in England dates back to 1895.The Women's Football Association was created in 1969. The FA Women's Super League was rebranded in 2011 replacing the Women's Premier League National Division. The league started with 8 teams and expanded to 12 teams. The most successful team in the history is Arsenal who won 15 league titles and 14 FA Women's Cups."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM D1"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": 0,
+                            "width": 400,
+                            "height": 320,
+                            "type": "$French_Flago"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Bold",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Arkema PL"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 70,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 16,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "France"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 80,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 630,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "The Premiere Ligue is a 12-team competition first organized by the French Football Federation (FFF) in 1974. Stade de Reims won the first title in 1974-75. At the time of its foundation, the league consisted of 8 teams, and in 1992 it expanded to 12. Historically, Olympique Lyonnais dominates the competition having won 14 consecutive titles between 2007 and 2020."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info3",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM LIGA F"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": 0,
+                            "width": 400,
+                            "height": 320,
+                            "type": "$Spain_Flago"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Bold",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Liga F"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 70,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 16,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Spain"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 80,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 630,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Women's football was introduced in Germany by The German Football Association (DFB) in 1970. In 1973 the first toumament was played crowning Tus Worrstadt as champions. The Frauen Bundesliga was established in 1990 with north and south divisions. They were then grouped together in 1997 to form the league known today. 1. FFC Frankfurt and VfL Wolfsburg have won the most championships, boasting 7 titles each."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info4",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM GPF"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": 0,
+                            "width": 400,
+                            "height": 320,
+                            "type": "$Nazi_Flago"
+                            },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Bold",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GPFBL"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 70,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 16,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Germany"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 80,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 630,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "Women's football was introduced in Germany by The German Football Association (DFB) in 1970. In 1973 the first toumament was played crowning Tus Worrstadt as champions. The Frauen Bundesliga was established in 1990 with north and south divisions. They were then grouped together in 1997 to form the league known today. 1. FFC Frankfurt and VfL Wolfsburg have won the most championships, boasting 7 titles each."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info5",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab5_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ANIM NWSL"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "icon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 600,
+                            "marginBottom": 0,
+                            "width": 400,
+                            "height": 320,
+                            "type": "$England_Flago"
+},
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 7,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Bold",
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "NWSL"
+                        },
+                        {
+                        "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 70,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 16,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "United States"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 80,
+                            "marginLeft": 20,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 630,
+                            "multiline": true,
+                            "leading": 1,
+                            "alpha": 1,
+                            "text": "The National Women's Soccer League (NWSL) is a professional women's soccer league in the United States. The league was established in 2012 under the guidance of the United States Soccer Federation (USSF) as the successor to the Women's Professional Soccer Leaque (WPS 2007-2012), which was itself the successor to the Women's United Soccer Association (WUSA 2001-2003). Since 2020, the NWSL has operated independently as the top tier professional women's soccer competition in the United States."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Barclays WSL"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginRight": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Arkema PL"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Liga F"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "GPFBL"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 925,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1C1C1C",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                 },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "NWSL"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginRight": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_missionmodebarclay"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Barclays WSL"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginBottom": 0,
+                                    "marginRight": 0,
+                                    "width": 60,
+                                    "height": 60,
+                                    "type": "$l2242"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_missionmodearkema"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Arkema PL"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 462.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_missionmodeligaf"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Liga F"
+                                    },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$FONT_DINPROBLACK",
+                                    "width": 130,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 693,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_missionmodegpfbl"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "GPFBL"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 925,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "name": "ColorBg",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0xFFFFFF",
+                                    "cornerRaduis": 15,
+                                    "alpha": 1
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_missionmodenwsl"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop":-10,
+                                    "marginLeft": 15,
+                                    "fontSize": 22,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSans-Medium",
+                                    "width": 180,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "NWSL"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "MvnprodButton",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 39,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 270,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 500,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 731,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 961,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

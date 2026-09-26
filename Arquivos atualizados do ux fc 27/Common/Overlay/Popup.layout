@@ -1,0 +1,430 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_IN" } ]
+	    },
+	    {
+			"name" : "hide",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_OUT" } ]
+	    }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_btn_click",
+            "buttonContainer": "selectedButton"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Rectangle",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "alpha": 0,
+            "color": "0x0C0C0C"
+        },
+        {
+            "commonName": "Rectangle",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "alpha": 0,
+            "color": "0xFFFFFF"
+        },
+        {
+            "commonName": "Panel",
+            "name": "MessagePanel",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 80,
+            "height": 400,
+            "width": 650,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "FILL",
+                    "fontSize": 25,
+                    "autoTextShadow": true,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "textAlignH": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_popup_message",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 160,
+            "height": 100,
+            "width": 250,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -1,
+		            "height": 42,
+		            "width": 180,
+	            	"type": "$_ClickToEnterOff2",
+		            "bindings":
+                    [
+                        {
+                            "binding": "bnd_button1_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 17,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+		            "bindings":
+                    [
+                        {
+                            "binding": "bnd_button1_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 110,
+            "height": 100,
+            "width": 250,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -1,
+	          	  "height": 42,
+	          	  "width": 180,
+	            	"type": "$_ClickToEnterOff2",
+		            "bindings":
+                    [
+                        {
+                            "binding": "bnd_button2_visible",
+                            "property": "visible"
+                        }
+                    ] 
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 17,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_button2_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 210,
+            "height": 100,
+            "width": 250,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -1,
+		            "height": 42,
+		            "width": 180,
+	          	  "type": "$_ClickToEnterOff2",
+	          	  "bindings":
+                    [
+                        {
+                            "binding": "bnd_button3_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 17,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+		            "bindings":
+                    [
+                        {
+                            "binding": "bnd_button3_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 160,
+            "height": 100,
+            "width": 250,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_tab1",
+                    "property": "visible"
+                }
+            ],
+            "children": 
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "name": "cancelButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -1,
+                    "height": 42,
+                    "width": 180,
+                    "backgroundImage": "$_ClickToEnterOn2",
+                    "backgroundHighlightImage": "$_ClickToEnterOn2",
+                    "clickAction": "act_button_1",
+		            "bindings":
+                    [
+                        {
+                            "binding": "bnd_button1_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 17,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "0x1E1E1E",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_button1_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 110,
+            "height": 100,
+            "width": 250,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_tab2",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "name": "confirmButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -1,
+                    "height": 42,
+                    "width": 180,
+                    "backgroundImage": "$_ClickToEnterOn2",
+                    "backgroundHighlightImage": "$_ClickToEnterOn2",
+                    "clickAction": "act_button_2",
+	          	  "bindings":
+                    [
+                        {
+                            "binding": "bnd_button2_visible",
+                            "property": "visible"
+                        }
+                    ]
+	        	},
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 17,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "0x1E1E1E",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_button2_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ButtonPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 210,
+            "height": 100,
+            "width": 250,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_tab3",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "name": "cancelButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -1,
+                    "height": 42,
+                    "width": 180,
+                    "backgroundImage": "$_ClickToEnterOn2",
+                    "backgroundHighlightImage": "$_ClickToEnterOn2",
+                    "clickAction": "act_button_3",
+	          	  "bindings":
+                    [
+                        {
+                            "binding": "bnd_button3_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 17,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "0x1E1E1E",
+	          	  "bindings":
+                    [
+                        {
+                            "binding": "bnd_button3_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "selectedButton",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 170,
+            "width": 200,
+            "height": 180,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": 0,
+                    "y": 60,
+                    "width": 200,
+                    "height": 40,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 40,
+                    "selectable": true
+                },
+                {                
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": 0,
+                    "y": 0,
+                    "width": 200,
+                    "height": 40,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 40,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": 0,
+                    "y": 120,
+                    "width": 200,
+                    "height": 40,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 40,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

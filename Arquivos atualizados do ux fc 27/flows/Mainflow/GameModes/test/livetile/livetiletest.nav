@@ -1,0 +1,26 @@
+{
+	"name": "LiveTileTestFlow",
+	"states":
+	[
+		{
+			"name": "Main",
+			"onEnter":
+			[
+				["loadGfxModule", ["LiveTile"]],
+				["loadVVM", ["/flows/mainflow/gamemodes/test/livetile/LiveTileTest.vvm"]]
+			],
+			"onExit":
+			[
+				["unloadVVM"],
+				["unloadGfxModule", ["LiveTile"]]
+			]
+		}
+	],
+	"transitions":
+	[
+		{
+			"event":   "evt_back",
+			"targets": ["out_back"]
+		}
+	]
+}

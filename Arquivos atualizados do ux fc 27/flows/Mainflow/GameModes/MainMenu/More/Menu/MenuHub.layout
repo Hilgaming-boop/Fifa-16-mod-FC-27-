@@ -1,0 +1,1158 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_mvnprod",
+            "buttonContainer": "MvnprodButton"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Kick"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.2,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 80,
+                    "marginLeft": 200,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Customise",
+                    "alpha": 0.7
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayoutNon",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 20,
+            "marginLeft": -350,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Action1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 0,
+                    "height": 180,
+                    "width": 230,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_settings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Settings"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action2",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 235,
+                    "width": 230,
+                    "height": 180,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_profil"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Profile"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action3",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 470,
+                    "width": 230,
+                    "height": 180,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_online"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Online"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Settings"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action4",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 705,
+                    "width": 230,
+                    "height": 180,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_time"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Playtime"
+                        }
+                    ]
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "Action1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 0,
+                    "width": 230,
+                    "height": 180,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_team"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Edit"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Teams"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action2",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 235,
+                    "width": 230,
+                    "height": 180,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_team_sheets"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Team"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Sheets"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action3",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 470,
+                    "width": 230,
+                    "height": 180,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_player"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Create"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Player"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action4",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 705,
+                    "width": 230,
+                    "height": 180,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_off"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_music"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "EA SPORTS™"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Music"
+                        }
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "commonName": "Group",
+            "name": "MvnprodButton",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "marginLeft": 0,
+            "width": 900,
+            "height": 300,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Atas",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 0,
+                    "y": 5,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Atas",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 235,
+                    "y": 5,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Atas",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 470,
+                    "y": 5,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Atas",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 705,
+                    "y": 5,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Bawah",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 0,
+                    "y": 190,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Bawah",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 235,
+                    "y": 190,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 6,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Bawah",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 470,
+                    "y": 190,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 7,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Bawah",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "x": 705,
+                    "y": 190,
+                    "width": 200,
+                    "height": 150,
+                    "autoSelect": true,
+                    "id": 8,
+                    "type": "blackandblue",
+                    "buttonWidth": 200,
+                    "buttonHeight": 150,
+                    "selectable": true
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayoutActive",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 20,
+            "marginLeft": -350,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Action1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 0,
+                    "height": 180,
+                    "width": 230,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_settings_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_settings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Settings"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_to_settings_customize"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action2",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 235,
+                    "width": 230,
+                    "height": 180,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_profile_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_profil"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Profile"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_credits"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action3",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 470,
+                    "width": 230,
+                    "height": 180,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_update_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_online"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Online"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Settings"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_update"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action4",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -80,
+                    "marginLeft": 705,
+                    "width": 230,
+                    "height": 180,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_roster_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_time"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Playtime"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_update"
+                        }
+                    ]
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "Action1",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 0,
+                    "width": 230,
+                    "height": 180,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_free1_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_team"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Edit"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Teams"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_team_roster"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action2",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 235,
+                    "width": 230,
+                    "height": 180,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_free2_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_team_sheets"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Team"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Sheets"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_team_sheets"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action3",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 470,
+                    "width": 230,
+                    "height": 180,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_free3_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_Player"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Create"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Player"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_update"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action4",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": 705,
+                    "width": 230,
+                    "height": 180,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_free4_select",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 190,
+                            "width": 240,
+                            "type": "$Tab_settings_on"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "height": 80,
+                            "width": 80,
+                            "marginLeft": 50,
+                            "marginTop": 30,
+                            "type": "$Icon_more_music"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "EA SPORTS™"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "marginTop": 30,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "text": "Music"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "name": "Action",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_to_music_tile"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

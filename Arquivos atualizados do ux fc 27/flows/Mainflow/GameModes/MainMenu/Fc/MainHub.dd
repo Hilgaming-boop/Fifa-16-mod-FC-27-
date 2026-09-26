@@ -1,0 +1,147 @@
+{
+	"actions":
+	[
+    {
+			"viewname": "act_fc",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_fc"
+			}
+		},
+		{
+			"viewname": "act_kickoff",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_kickoff"
+			}
+		},
+    {
+            "viewname": "act_ut",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_ut"
+			}
+		},
+    {
+			"viewname": "act_playercareer",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_playercareer"
+			}
+		},
+    {
+			"viewname": "act_rivalfootball",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_rivalfootball"
+			}
+		},
+    {
+			"viewname": "act_tournaments",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_tournaments"
+			}
+		},
+    {
+			"viewname": "act_dailymatch",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_dailymatch"
+			}
+		},
+    {
+			"viewname": "act_challenge",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_challenge"
+			}
+		},
+     {
+			"viewname": "act_fifa2026",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_fifa2026"
+			}
+		},
+    {
+			"viewname": "act_careermode",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_careermode"
+			}
+		},
+    {
+			"viewname": "act_more",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_more"
+			}
+		},
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+        {
+            "viewname": "act_to_about",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_about"
+            }
+        },
+        {
+      "viewname": "act_home_select",
+      "actionname": "act_home_select"
+    },
+        {
+            "viewname":"act_belum",
+            "actionname":"act_belum"
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+        },
+        {
+            "viewname": "act_to_refresh",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_refresh"
+            }
+        }
+	],
+    "data":
+	[
+     {
+        "viewname": "bnd_menu_bg",
+        "binding": "bnd_menu_bg",
+        "type": "object"
+	   },
+       {
+      "viewname": "bnd_name_dev",
+      "binding": "bnd_name_dev",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_avatar_dev",
+      "binding": "bnd_avatar_dev",
+      "type": "object"
+    }
+  ]
+}

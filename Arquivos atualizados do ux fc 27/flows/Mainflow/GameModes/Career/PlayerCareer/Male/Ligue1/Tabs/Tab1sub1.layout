@@ -1,0 +1,75 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {               
+           "commonName": "Panel",
+           "name": "Tab1Sub1",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+           "marginLeft": 150,
+           "marginTop": 20,
+           "width": 500,
+           "height": 350,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_match_visible",
+                    "property": "visible"
+                }
+            ],
+           "children": 
+           [
+              {        
+                  "commonName": "Panel",
+                  "name": "Pattern",
+                  "alignV": "BOTTOM",
+                  "alignH": "CENTER",
+                  "marginBottom": 150,
+                  "marginLeft": -225,
+                  "width": 350,
+                  "children":
+                  [
+                     {
+                         "commonName": "SimpleButton",
+                         "alignH": "CENTER",
+                         "alignV": "CENTER",
+                         "marginLeft": 40,
+                         "marginTop": 5,
+                         "height": 60,
+                         "width": 230,
+                         "backgroundImage": "$Tab_Career_Advance",
+                         "backgroundHighlightImage": "$Tab_Career_Advance",
+                         "clickAction": "act_play"                     
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "CENTER",
+                         "marginLeft": 50,
+                         "marginBottom": -7,
+                         "fontSize": 17,
+                         "fontColor": "0xFFFFFF",
+                            "autoTextShadow": true,
+                         "fontFace": "$CruyffSansBold",
+                         "text": "Matchday"            
+                      }
+                  ]
+               }
+            ]           
+        }
+    ]
+}

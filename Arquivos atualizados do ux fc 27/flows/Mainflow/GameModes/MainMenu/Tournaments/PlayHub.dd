@@ -1,0 +1,18 @@
+{
+	"actions":
+	[
+  		{
+          "viewname": "act_menu_tournaments",
+          "impl":
+          {
+            "type": "nav",
+            "event": "evt_menu_tournaments"
+          }
+      }
+
+	],
+	"data":
+	[
+		
+	]
+}

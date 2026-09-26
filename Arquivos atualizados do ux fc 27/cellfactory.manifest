@@ -1,0 +1,19 @@
+{
+	"GridHeader" :
+	{
+		"className" : "wf.widgets.grid::TextCell",
+		"horizontalAlign" : "center",
+		"textFormatName" : "HEAVY_24PT_BLACK"
+	},
+	"PlayerName" :
+	{
+		"className" : "wf.widgets.grid::TextCell",
+		"width" : 225
+	},
+	"PlayerStat" :
+	{
+		"className" : "wf.widgets.grid::TextCell",
+		"width" : 100,
+		"horizontalAlign" : "center"
+	}
+}

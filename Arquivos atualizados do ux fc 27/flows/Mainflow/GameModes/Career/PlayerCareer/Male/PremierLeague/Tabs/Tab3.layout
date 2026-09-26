@@ -1,0 +1,158 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "SCREEN_SHOW"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "SIMPLE_SCREEN_HIDE"
+                }
+            ]
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -31,
+                            "marginLeft": 538,
+                            "height": 90,
+                            "width": 100,
+                            "alpha": 1,
+                            "path": "views/backgrounds/White_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -1,
+                            "marginLeft": 559,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansBold",
+                            "text": "Office"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 100,
+                    "marginTop": 15,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,                            
+                            "clickAction": "act_tab3sub1"
+                        },               
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,                         
+                            "cornerRaduis": 15,
+                            "color": "0x18001A"   
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 100,
+                            "width": 140,
+                            "height": 140,
+                            "type": "$Icon_Fixtures_Player"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 25,
+                            "marginLeft": 0,
+                            "fontSize": 27,
+                            "fontFace": "$CruyffSansBold",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Fixtures"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 270,
+                            "marginLeft": 0,
+                            "fontSize": 13,
+                            "fontFace": "$CruyffSansMedium",
+                            "fontColor": "0xFFFFFF",
+                            "textAlignH": "CENTER",
+                            "width": 200,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 0.9,
+                            "text": "View your team's upcoming schedule."
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}

@@ -1,0 +1,17 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_play_icons",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_play_icons"
+			}
+		}
+	],
+	"data":
+	[
+		
+	]
+}

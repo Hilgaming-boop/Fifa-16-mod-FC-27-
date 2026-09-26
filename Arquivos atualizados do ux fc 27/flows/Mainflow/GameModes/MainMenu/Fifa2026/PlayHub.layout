@@ -1,0 +1,157 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -150,
+                    "marginLeft": 0,
+                    "height": 200,
+                    "width": 200,
+                    "type": "$Icon_FIFA26"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": 0,
+                    "marginLeft": 0,
+                    "fontSize": 35,
+                    "fontFace": "$MONTBLANC_TRIAL_EXTRABOLD",
+                    "fontColor":"0xD2691E",
+                    "text": "Welcome To FIFA World Cup 2026"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -60,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "textAlignH": "CENTER",
+                    "autoTextShadow": true,
+                    "width": 350,
+                    "multiline": true,
+                    "leading": 1,
+                    "text": "Playing Qualification World Cup 2026 To Be Champion In The World"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 60,
+                            "width": 245,
+                            "backgroundImage": "$Tab_Action_fc26_white",
+                            "backgroundHighlightImage": "$Tab_Action_fc26_white",
+                            "clickAction": "act_belum"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 10,
+                            "marginBottom": 1,
+                            "fontSize": 15,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Expand World Cup 26"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 405,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 300,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 405,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 300,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 405,
+                    "marginLeft": 0,
+                    "height": 10,
+                    "width": 300,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 389,
+                    "marginLeft": 25,
+                    "fontSize": 18,
+                    "fontColor": "0xDE6300",
+                    "fontFace": "$CruyffSans-Expandes",
+                    "text": "FIFA World Cup 2026™"
+                }
+            ]
+        }
+    ]
+}

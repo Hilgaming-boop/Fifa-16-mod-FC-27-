@@ -1,0 +1,18 @@
+{
+	"actions":
+	[
+  		{
+          "viewname": "act_menu_challenge",
+          "impl":
+          {
+            "type": "nav",
+            "event": "evt_menu_challenge"
+          }
+      }
+
+	],
+	"data":
+	[
+		
+	]
+}

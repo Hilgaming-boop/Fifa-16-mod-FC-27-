@@ -1,0 +1,411 @@
+{
+  "commonName": "Panel",
+  "alignH": "CENTER",
+  "alignV": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    },
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "SCREEN_SHOW"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "SIMPLE_SCREEN_HIDE"
+        }
+      ]
+    }
+  ],
+  "style-definitions": {
+    "TF_TEAM_SELECT_RATING_LABELS": {
+      "fontFace": "$FONT_DINPROBOLD",
+      "fontSize": 20,
+      "fontColor": "$COLOR_WHITE",
+      "textAlignH": "CENTER"
+    },
+    "TF_TEAM_SELECT_RATING_VALUES": {
+      "fontFace": "$FONT_DINPROBOLD",
+      "fontSize": 23,
+      "fontColor": "0x46AD1B",
+      "textAlignH": "CENTER"
+    }
+  },
+  "children": [
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 1,
+      "type": "$Bg_Career"
+    },
+    {
+      "commonName": "Asset",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "alpha": 0.3,
+      "type": "$Bg_Smoke"
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "Image",
+          "alignV": "TOP",
+          "alignH": "RIGHT",
+          "marginTop": 0,
+          "marginRight": 30,
+          "height": 40,
+          "width": 40,
+		  "bindings": [
+				{
+					"binding": "bnd_avatar_dev",
+					"property": "image"
+				}
+			]
+		},
+        {
+          "commonName": "Label",
+          "alignV": "TOP",
+          "alignH": "RIGHT",
+          "marginTop": 10,
+          "marginRight": 82,
+          "fontSize": 13,
+		  "forceCaps": true,
+          "fontColor": "$COLOR_WHITE",
+          "fontFace": "$KnulExtraBold",
+ 		  "bindings": [
+				{
+					"binding": "bnd_name_dev",
+					"property": "text"
+				}
+			]
+		}
+	]
+	},
+    {
+      "commonName": "Panel",
+      "name": "BackNext",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "marginBottom": 40,
+      "children": [
+        {
+          "commonName": "SimpleButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": -10,
+          "marginLeft": 50,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "label": "Back",
+          "icon": "$SimMatchIcon1",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "SimpleButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": -10,
+          "marginLeft": 150,
+          "scaleX": 0.8,
+          "scaleY": 0.8,
+          "label": "Confirm",
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_confirm"
+        }
+      ]
+    },
+    {
+      "commonName": "Image",
+      "name": "FlagImage",
+      "alignH": "LEFT",
+      "alignV": "TOP",
+      "marginTop": 50,
+      "marginLeft": 400,
+      "scaleX": 0.3,
+      "scaleY": 0.3,
+      "bindings": [
+        {
+          "binding": "bnd_league_crest",
+          "property": "image"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "ToggleClick",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginTop": 35,
+      "marginLeft": 80,
+      "width": 220,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0x2C2C2C",
+          "cornerRaduis": 8,
+          "alpha": 0.4
+        },
+    {
+      "commonName": "Label",
+      "alignH": "LEFT",
+      "alignV": "CENTER",
+	  "marginLeft": 10,
+	  "fontSize": 22,
+	  "fontColor": "0xffffff",
+      "text": "Country"
+    },
+        {
+          "commonName": "DragToggle",
+          "name": "insCountryToggle",
+          "alignV": "FILL",
+          "alignH": "CENTER",
+          "marginTop": 0,
+          "marginLeft": 110,
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "isCircular": true,
+          "animated": true,
+          "arrowType": "blue_small",
+          "itemType": "Label",
+          "itemStyleName": "SquadToggleInfo",
+          "toggleAction": {
+            "action": "act_change_country",
+            "binding": "bnd_country_index_change"
+          },
+          "bindings": [
+            {
+              "binding": "bnd_country_selector_data",
+              "property": "dataProviders"
+            }
+          ]
+        }
+	]
+	},
+    {
+      "commonName": "Panel",
+      "name": "ToggleClick",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+      "marginTop": 75,
+      "marginLeft": 80,
+      "width": 220,
+      "height": 30,
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0x2C2C2C",
+          "cornerRaduis": 8,
+          "alpha": 0.4
+        },
+    {
+      "commonName": "Label",
+      "alignH": "LEFT",
+      "alignV": "CENTER",
+	  "marginLeft": 10,
+	  "fontSize": 22,
+	  "fontColor": "0xffffff",
+      "text": "League"
+    },
+        {
+          "commonName": "DragToggle",
+          "name": "insLeagueToggle",
+          "alignV": "FILL",
+          "alignH": "CENTER",
+          "marginTop": 0,
+          "marginLeft": 110,
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "isCircular": true,
+          "animated": true,
+          "itemType": "Label",
+          "itemStyleName": "SquadToggleInfo",
+          "arrowType": "blue_small",
+          "toggleAction": {
+            "action": "act_change_league",
+            "binding": "bnd_league_index_change"
+          },
+          "bindings": [
+            {
+              "binding": "bnd_league_selector_data",
+              "property": "dataProviders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TeamGridPanel",
+      "alignH": "LEFT",
+      "alignV": "CENTER",
+      "marginLeft": 100,
+      "marginTop": 20,
+      "width": 500,
+      "height": 500,
+      "children": [
+        {
+          "commonName": "GridTable",
+          "name": "CupHubGridTeam",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "width": 500,
+          "height": 450,
+          "columns": 3,
+          "rows": 3,
+          "consumeInput": true,
+          "resetPageOnData": false,
+          "hasBulletIndicator": false,
+          "itemType": "TeamGridCell",
+		  "alternateBacking": false,
+          "cellIndexChangeAction": {
+            "action": "act_change_team",
+            "binding": "bnd_selected_team_index"
+          },
+          "bindings": [
+            {
+              "binding": "bnd_default_cell_data",
+              "property": "selectedCellID"
+            },
+            {
+              "binding": "bnd_teams_menu",
+              "property": "dataProviders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "TeamSelected",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginTop": 40,
+      "marginLeft": 300,
+      "width": 400,
+      "height": 450,
+      "children": [
+        {
+          "commonName": "Rectangle",
+          "alignV": "FILL",
+          "alignH": "FILL",
+          "color": "0x2C2C2C",
+          "cornerRaduis": 8,
+          "alpha": 0
+        },
+    {
+      "commonName": "Image",
+      "alignH": "CENTER",
+      "alignV": "TOP",
+	  "marginTop": 60,
+      "width": 180,
+      "height": 180,
+      "alpha": 1,
+      "bindings": [
+        {
+          "binding": "bnd_team_crest",
+          "property": "image"
+        }
+      ]
+    },
+    {
+      "commonName": "Label",
+      "alignH": "CENTER",
+      "alignV": "TOP",
+	  "marginTop": 20,
+	  "fontSize": 22,
+	  "fontColor": "0xffffff",
+      "alpha": 1,
+      "bindings": [
+        {
+          "binding": "bnd_team_name",
+          "property": "text"
+        }
+      ]
+    },
+    {
+      "commonName": "StarRating",
+      "alignH": "CENTER",
+      "alignV": "CENTER",
+	  "marginTop": 40,
+	  "size": "medium",
+      "bindings": [
+        {
+          "binding": "bnd_team_stars",
+          "property": "stars"
+        }
+      ]
+    },
+        {
+          "commonName": "Panel",
+          "name": "dataPanel",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 100,
+          "height": 50,
+          "width": 200,
+          "authoringData": {
+            "expanded": false
+          },
+          "children": [
+            {
+              "commonName": "TeamRating",
+              "name": "teamRating",
+              "width": 190,
+              "attLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "attValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "defLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "defValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "dividersVisible": true,
+              "midLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "midValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "bindings": [
+                {
+                  "binding": "bnd_team_rating",
+                  "property": "dataProviders"
+                }
+              ]
+            }
+          ]
+        }
+  ]
+}
+]
+}

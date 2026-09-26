@@ -1,0 +1,42 @@
+{
+    "name": "MenuSquadHub",
+    "onEnter":
+    [
+        ["setTabContext", [2]],
+        ["stateChange", [".flowState"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuSquadHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_menusquad_home",
+            "targets": ["out_menusquad_home"]
+        },
+        {
+            "event": "evt_menusquad_away",
+            "targets": ["out_menusquad_away"]
+        },
+        {
+            "event": "evt_menu_match",
+            "targets": ["out_menu_match"]
+        },
+        {
+            "event": "evt_menu_settings",
+            "targets": ["out_menu_settings"]
+        },
+        {
+            "event": "evt_menu_sides",
+            "targets": ["out_menu_sides"]
+        },
+        {
+            "event": "evt_menu_stats",
+            "targets": ["out_menu_stats"]
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_play_ucl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_ucl"
+                }
+        },
+        {
+            "viewname": "act_play_womenleague",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_womenleague"
+                }
+        },
+        {
+            "viewname": "act_play_tornei",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_tornei"
+            }
+        },
+        {
+        "viewname": "act_tournaments",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tournaments"
+            }
+        },
+        {
+        "viewname": "act_sele_16",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_sele_16"
+            }
+        },
+        {
+            "viewname": "act_play_act_cup",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_play_man_cup"
+                }
+        },
+        {
+            "viewname": "act_sele_league",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_sele_league"
+            }
+        },
+        {
+            "viewname":"act_mvnprod",
+            "actionname":"act_mvnprod"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}

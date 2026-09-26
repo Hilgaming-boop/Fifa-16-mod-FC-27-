@@ -1,0 +1,87 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+    {
+      "viewname": "act_next_team",
+      "actionname": "act_next_team"
+    },
+    {
+      "viewname": "act_next_matchday",
+      "actionname": "act_next_matchday"
+    },
+    {
+      "viewname": "act_prev_team",
+      "actionname": "act_prev_team"
+    },
+    {
+      "viewname": "act_prev_matchday",
+      "actionname": "act_prev_matchday"
+    }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_standings_list",
+            "binding":  "bnd_standings_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_fixtures_list",
+            "binding":  "bnd_fixtures_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_matchday_label",
+            "binding":  "bnd_matchday_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_label",
+            "binding":  "bnd_team_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_month_label",
+            "binding":  "bnd_month_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_league_label",
+            "binding":  "bnd_league_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_League_Name",
+            "binding":  "bnd_League_Name",
+            "type":     "string"      
+        },
+        {
+            "viewname": "bnd_background_career",
+            "binding":  "bnd_background_career",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_standings_career",
+            "binding":  "bnd_standings_career",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_table_career",
+            "binding":  "bnd_table_career",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_league_logo",
+            "binding":  "bnd_league_logo",
+            "type":     "object"
+        }
+    ]
+}

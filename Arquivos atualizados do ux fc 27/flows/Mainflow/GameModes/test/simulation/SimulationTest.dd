@@ -1,0 +1,97 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+            "viewname": "act_to_pause_sim",
+			"actionname": "act_to_pause_sim"
+        },
+		{
+            "viewname": "act_finish_sim",
+			"actionname": "act_finish_sim"
+        },
+		{
+            "viewname":   "act_update_mentality",
+            "actionname": "act_update_mentality"
+        },
+		{
+            "viewname":   "act_update_event_pool",
+            "actionname": "act_update_event_pool"
+        }
+	],
+	"data":
+    [
+        {
+            "viewname": "bnd_match_events_list",
+            "binding":  "bnd_match_events_list",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_publish_minute",
+            "binding":  "bnd_publish_minute",
+            "type":     "string"
+        },
+		{
+            "viewname": "bnd_publish_home_score",
+            "binding":  "bnd_publish_home_score",
+            "type":     "string"
+        },
+		{
+            "viewname": "bnd_publish_away_score",
+            "binding":  "bnd_publish_away_score",
+            "type":     "string"
+        },
+		{
+            "viewname": "bnd_ultra_def_btn_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_TACTICS_ULTRA_DEFENSIVE"
+            }
+        },
+		{
+            "viewname": "bnd_def_btn_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_TACTICS_DEFENSIVE"
+            }
+        },
+		{
+            "viewname": "bnd_neutral_btn_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_TACTICS_BALANCED"
+            }
+        },
+		{
+            "viewname": "bnd_att_btn_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_TACTICS_ATTACKING"
+            }
+        },
+		{
+            "viewname": "bnd_ultra_att_btn_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_TACTICS_ULTRA_ATTACKING"
+            }
+        }
+    ]
+}

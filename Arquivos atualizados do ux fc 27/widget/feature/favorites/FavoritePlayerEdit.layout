@@ -1,0 +1,155 @@
+{
+    "commonName": "Composite",
+    "name":       "FavoritePlayerEditRoot",
+    "height":     500,
+    "children":
+    [
+        {
+            "commonName":   "Group",
+            "name":         "insBottom",
+            "y":            170,
+            "children":
+            [
+                {
+                    "commonName":   "Image",
+                    "name":         "insBackground",
+                    "image":        "$EditBioPopupBG"
+                },
+                {
+                    "commonName":   "Label",
+                    "name":         "insPlayerName",
+                    "x":            135,
+                    "y":            28,
+                    "width":        250,
+                    "multiline":    true,
+                    "wordWrap":     true,
+                    "styles":       ["TF_USER_BIO_EDIT_PLAYER_NAME"],
+                    "bindings":
+                    [
+                        {
+                            "property": "text",
+                            "binding":  "bnd_player_name"
+                        },
+                        {
+                            "property": "y",
+                            "binding":  "bnd_player_name_position"
+                        }
+                    ]
+                },
+                {
+                    "commonName":   "Rectangle",
+                    "name":         "insDivider",
+                    "width":        305,
+                    "height":       1,
+                    "x":            137,
+                    "y":            100,
+                    "fillColor":    "0xBEBEBE"
+                },
+                {
+                    "commonName":   "Image",
+                    "name":         "insPlayerHead",
+                    "y":            15,
+                    "scaleX":       0.8,
+                    "scaleY":       0.8,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_player_head"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName":   "Group",
+            "name":         "insRows",
+            "x":            -2,
+            "children":
+            [
+                {
+                    "commonName":   "Group",
+                    "name":         "insRowPlayer",
+                    "y":            120,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name":       "insPlayerLabel",
+                            "styles":     ["TF_LABEL_LEFT"],
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_player_label"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":        "ComboBox",
+                            "name":              "insPlayerCB",
+                            "x":                 230,
+                            "y":                 -5,
+                            "width":             239,
+                            "height":            30,
+                            "displayRange":      5,
+                            "indexChangeAction":
+                            {
+                                "action":  "act_change",
+                                "binding": "bnd_player_index"
+                            },
+                            "bindings":
+                            [
+                                {
+                                    "property": "dataProviders",
+                                    "binding":  "bnd_player_list"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName":   "Group",
+                    "name":         "insRowTeam",
+                    "y":            80,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name":       "insTeamLabel",
+                            "styles":     ["TF_LABEL_LEFT"],
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_team_label"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":        "ComboBox",
+                            "name":              "insTeamCB",
+                            "x":                 230,
+                            "y":                 -5,
+                            "width":             239,
+                            "height":            30,
+                            "displayRange":      7,
+                            "indexChangeAction":
+                            {
+                                "action":  "act_change",
+                                "binding": "bnd_team_index"
+                            },
+                            "bindings":
+                            [
+                                {
+                                    "property": "dataProviders",
+                                    "binding":  "bnd_team_list"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "name": "TeamSheets",
+    "states":
+    [
+		{
+            "name": "RedirectTeamSheets",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamSheets.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        }
+        
+    ]
+}

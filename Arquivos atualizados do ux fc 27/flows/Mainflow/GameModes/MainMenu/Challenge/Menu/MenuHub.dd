@@ -1,0 +1,40 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_menuicons",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_menuicons"
+            }
+        },
+        {
+            "viewname": "act_menuseasons",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_menuseasons"
+            }
+        },
+        
+        
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+          "viewname": 	"bnd_player3d",
+          "binding": 		"bnd_player3d",
+          "type": 			"object"
+        }
+    ]
+}

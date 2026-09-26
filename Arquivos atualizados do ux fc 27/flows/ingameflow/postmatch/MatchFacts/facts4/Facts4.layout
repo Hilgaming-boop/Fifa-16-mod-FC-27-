@@ -1,0 +1,425 @@
+{
+    "children":
+    [
+    {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginBottom": -6,
+                    "marginLeft": 0,
+                    "x": -170.0,
+                    "y": -5.0,
+                    "marginLeft": 12,
+                    "width": 1199,
+                    "height": 450,                    
+                    "type": "$passi"                    
+                },
+        {
+            "commonName": "",
+            "name": "matchFacts",
+            "alignH": "CENTER",
+            "height": 300.0,
+            "marginTop": 395.0,
+            "width": 590.0,
+            "x": 147.0,
+            "y": 0.0,
+            "displayRange": 9,
+            "row": "MatchFactRow",
+            "rowHeight": 40.0,
+            "rowWidth": 590.0,
+            "useAlternating": false,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_match_facts",
+                    "property": "dataProviders"
+                }
+            ]
+            },
+               {
+                    "commonName": "",
+                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+                    "x": 387.0,
+            "y": 375.0,
+                    "fontSize": 15.8,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "Fouls Committed"
+                    
+                    },
+               {
+                    "commonName": "",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 250.0,
+            "y": 375.0,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "4"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 620.0,
+            "y": 375.0,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "2"
+            },            
+                      {
+		                    "commonName": "",
+		                    "name": "StatsWon1",
+		                    
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 59.0,
+            "y": 41.0,
+                            "fontSize": 27,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_won_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_w1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		
+		},
+                      {
+		                    "commonName": "",
+		                    "name": "CircleBarWon1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 30.0,
+            "y": 4.0,
+                            "width": 110,
+                    "height": 100,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar5",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_won_footer_visible",
+                                    "property": "visible"
+                                }
+                           ]
+                           },
+               {
+                    "commonName": "",
+                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 0.0,
+            "y": 107.0,
+                    "fontSize": 13,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "DRIBBLE SUCCES RATE"
+                    },
+                      {
+		                    "commonName": "",
+		                    "name": "StatsLose1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 60.0,
+            "y": 181.0,
+                            "fontSize": 27,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "",
+		                    "name": "CircleBarLose1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 30.0,
+            "y": 144.0,
+                            "width": 110,
+                    "height": 100,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar5",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_lost_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                           },
+               {
+                    "commonName": "",
+                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 23.0,
+            "y": 247.0,
+                    "fontSize": 13,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "INTERCEPTIONS"
+                    },
+                      {
+		                    "commonName": "",
+		                    "name": "StatsLose2",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 59.0,
+            "y": 321.0,
+                            "fontSize": 27,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium",
+                            "bindings":
+		                     [
+			                       {
+			                            "binding": "bnd_match_lost_footer_visible",
+			                            "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l2",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "",
+		                    "name": "CircleBarLose2",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 30.0,
+            "y": 284.0,
+                            "width": 110,
+                    "height": 100,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar5",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_lost_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                           },
+               {
+                    "commonName": "",
+                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 15.0,
+            "y": 387.0,
+                    "fontSize": 13,
+               "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "EXPECTED GOALS"
+                           },
+                      {
+		                    "commonName": "",
+		                    "name": "StatsLose3",
+		"alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                "x": 780.0,
+            "y": 41.0,
+                            "fontSize": 27,
+        "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium",
+		                    
+                            "bindings":
+		                     [
+			                      {
+			                           "binding": "bnd_match_lost_footer_visible",
+			                           "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l3",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "",
+		                    "name": "CircleBarLose3",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 750.0,
+            "y": 4.0,
+                            "width": 110,
+                    "height": 100,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar4",
+                            "bindings":
+                            [
+                                 {
+                                       "binding": "bnd_match_lost_footer_visible",
+                                       "property": "visible"
+                                 }
+                           ]
+                           },
+               {
+                    "commonName": "",
+                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 720.0,
+            "y": 107.0,
+                    "fontSize": 13,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "DRIBBLE SUCCES RATE"
+                           },
+                      {
+		                    "commonName": "",
+		                    "name": "StatsLose1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 780.0,
+            "y": 181.0,
+                            "fontSize": 27,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium",
+                            "bindings":
+		                    [
+			                    {
+			                        "binding": "bnd_match_lost_footer_visible",
+			                        "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l1",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "",
+		                    "name": "CircleBarLose1",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 750.0,
+            "y": 144.0,
+                            "width": 110,
+                    "height": 100,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar4",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_lost_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                           },
+               {
+                    "commonName": "",
+                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 745.0,
+            "y": 247.0,
+                    "fontSize": 13,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "INTERCEPTIONS"
+                    },
+                      {
+		                    "commonName": "",
+		                    "name": "StatsLose2",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 780.0,
+            "y": 321.0,
+                            "fontSize": 27,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$CruyffSansMedium",
+                            "bindings":
+		                     [
+			                       {
+			                            "binding": "bnd_match_lost_footer_visible",
+			                            "property": "visible"
+			                    },
+		                        {
+		                            "binding": "bnd_pr_l2",
+		                            "property": "text"
+		                        }
+		                    ],
+		                    "styles":
+		                    [
+		                        "TF_MATCH_POST_PERFORMANCE"
+		                    ]
+		},
+                      {
+		                    "commonName": "",
+		                    "name": "CircleBarLose2",
+		                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 750.0,
+            "y": 284.0,
+                            "width": 110,
+                    "height": 100,
+                            "enabled": false,
+                            "isInteractive": false,
+                            "alpha": 1.0,
+		                    "type": "$CircleBar4",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_lost_footer_visible",
+                                     "property": "visible"
+                                }
+                           ]
+                           },
+               {
+                    "commonName": "",
+                    "alignH": "CENTER",
+		                    "alignV": "CENTER",
+		                    "x": 735.0,
+            "y": 387.0,
+                    "fontSize": 13,
+               "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "EXPECTED GOALS"
+        }
+    ]
+}

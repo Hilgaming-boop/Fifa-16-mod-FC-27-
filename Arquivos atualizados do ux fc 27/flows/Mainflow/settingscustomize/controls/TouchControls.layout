@@ -1,0 +1,135 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "marginLeft": -15,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 255,
+                    "marginLeft": 88,
+                    "width": 495,
+                    "height": 280,
+                    "type": "$ImgVirtual"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginTop": -28,
+            "marginLeft": 115,
+            "height": 300,
+            "width": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 5,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "text": "Control Scheme"
+                },
+                {
+                    "commonName": "Stack",
+                    "name": "PengaturanControlScheme",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 22,
+                    "width": 250,
+                    "children":
+                    [
+                        {
+                            "commonName": "DragToggle",
+                            "alignH": "FILL",
+                            "marginTop": 10,
+                            "isCircular": true,
+                            "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                            "itemType": "Label",
+                            "maskContent": true,
+                            "hasArrows": true,
+                            "arrowType" : "blue_medium",
+                            "toggleAction":
+                            {
+                                  "action": "act_change_control_scheme_option",
+                                  "binding": "bnd_control_scheme_index"
+                            },
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_control_scheme_options",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_enable_control_scheme",
+                                    "property": "active"
+                                }
+                            ]
+                        }
+                    ]				
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "VerticalList",
+                    "name": "PengaturanMatch",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": -135,
+                    "marginLeft": 85,
+                    "rowWidth": 610,
+                    "rowHeight": 60,
+                    "displayRange": 7,
+                    "useAlternating": false,
+                    "row": "CustomizationRow",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_touch_controls_list_data",
+                            "property": "dataProviders"
+                        }
+                    ]
+                 }
+             ]
+         }
+     ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

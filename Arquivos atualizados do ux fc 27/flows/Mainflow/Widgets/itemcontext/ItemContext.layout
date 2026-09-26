@@ -1,0 +1,148 @@
+{
+	"commonName": "Overlay",
+	"name": "unassignedItemsPopup",
+	"width": 772,
+	"height": 418,
+	"footer":
+	[
+		{
+			"icon": "$FooterIconNo",
+			"clickAction": "act_exit_context_popup",
+			"bindings":
+			[
+				{
+					"property": "label",
+					"binding": "BND_LTXT_CLOSE"
+				}
+			]
+		}
+	],
+	"bindings":
+	[
+		{
+			"property": "title",
+			"binding": "bnd_title"
+		}
+	],
+	"children":
+	[
+		{
+			"commonName": "Panel",
+			"name": "unassignedItemsContainer",
+			"width": 672,
+			"height": 418,
+			"x": 50,
+			"children":
+			[
+				{
+					"commonName": "Panel",
+					"name": "itemContextMenuContainer",
+					"alignV": "TOP",
+					"alignH": "LEFT",
+					"height": 54.0,
+					"width": 350.0,
+					"children":
+					[
+						{
+							"commonName": "ItemContextMenu",
+							"name": "itemContextMenu",
+							"alignV": "TOP",
+							"alignH": "LEFT",
+							"marginTop": 10,
+							"width": 250,
+							"bindings":
+							[
+								{
+									"property": "dataProviders",
+									"binding":  "bnd_item_options_data"
+								},
+								{
+									"property": "id",
+									"binding":  "bnd_context_group_id"
+								},
+								{
+									"property": "squadPositionID",
+									"binding":  "bnd_context_squad_pos_id"
+								}
+							]
+						}
+					]
+				},
+				{
+					"commonName": "Panel",
+					"name": "itemToggleContainer",
+					"alignV": "TOP",
+					"alignH": "RIGHT",
+					"height": 418.0,
+					"width": 270.0,
+					"marginTop": 50,
+					"children":
+					[
+						{
+							"commonName": "DragToggle",
+							"name": "itemViewToggle",
+							"alignH": "FILL",
+							"height": 33.0,
+							"marginTop": 10.0,
+							"arrowType": "blue_small",
+                            "arrowYOffset":5,
+							"hasArrows": true,
+							"isCircular": true,
+							"itemStyleName": "TF_CONTEXT_MENU_TOGGLE",
+							"itemType": "IconWithLabel",
+							"toggleAction":
+							{
+								"action": "act_change",
+								"binding": "bnd_item_view_index"
+							},
+							"bindings":
+							[
+								{
+									"binding": "bnd_item_view_list",
+									"property": "dataProviders"
+								},
+								{
+									"binding": "bnd_item_view_enabled",
+									"property": "active"
+								}
+							]
+						},
+						{
+							"commonName": "ItemToggle",
+							"name": "itemToggler",
+							"alignV": "TOP",
+							"alignH": "FILL",
+							"marginTop": 60.0,
+							"height": 250.0,
+							"width": 250.0,
+							"arrowType": "blue_thick",
+							"hasArrows": true,
+							"isCircular": true,
+							"setItemSize": 2,
+							"autoAdaptToExchangeTarget": false,
+							"indexChangeAction":
+							{
+								"action":  "act_on_item_toggle_complete"
+							},
+							"bindings":
+							[
+								{
+									"property": "dataProviders",
+									"binding":  "bnd_itemcontext_items_data"
+								},
+								{
+									"property": "setItemView",
+									"binding":  "bnd_item_view"
+								},
+								{
+									"property": "requestedItemData",
+									"binding":  "bnd_requested_item_data"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

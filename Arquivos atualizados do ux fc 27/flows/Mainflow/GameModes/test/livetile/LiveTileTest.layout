@@ -1,0 +1,31 @@
+{
+	"commonName": "Group",
+    "name": "container",
+    "children":
+    [
+		{
+			"commonName": "LiveTile",
+			"clickAction": "act_back",
+			"name": "futTile",
+			"x": 700,
+			"y": 200,
+			"width": 657,
+			"height": 401,
+			"images":
+			[
+				"$_MainHHUBImage"
+			],
+			"bindings":
+			[
+				{
+					"binding": "bnd_live_tile_fut_description",
+					"property": "description"
+				},
+				{
+					"binding": "bnd_live_tile_fut_title",
+					"property": "headline"
+				}
+			]
+		}
+    ]
+}

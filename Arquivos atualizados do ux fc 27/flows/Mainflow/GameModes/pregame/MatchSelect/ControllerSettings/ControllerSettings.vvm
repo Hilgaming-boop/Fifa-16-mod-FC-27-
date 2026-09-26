@@ -1,0 +1,10 @@
+{
+    "dds":   ["ControllerSettings.dd",
+    "/flows/mainflow/gamemodes/pregame/MatchSelect/Animated.dd"
+    ],
+    "vms":   [
+    ["lua", "ControllerSettings.lua"],
+    ["lua", "/flows/mainflow/gamemodes/pregame/MatchSelect/Animated.lua"]
+    ],
+    "views": [["gfx", { "layout": "ControllerSettings.layout" }]]
+}

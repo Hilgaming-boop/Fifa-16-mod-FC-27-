@@ -1,0 +1,157 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectLegendsHub",
+                    "states":
+                    [
+                        {
+                            "name": "LegendsHub",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [0]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/RivalFootball/Menu/Legends/LegendsHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_mensteams",
+                            "targets": ["MensTeamsHub"]
+                        },
+                        {
+                            "event": "evt_womensteams",
+                            "targets": ["WomensTeamsHub"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectMensTeamsHub",
+                    "states":
+                    [
+                        {
+                            "name": "MensTeamsHub",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [1]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/RivalFootball/Menu/MensTeams/MensTeamsHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_legends",
+                            "targets": ["LegendsHub"]
+                        },
+                        {
+                            "event": "evt_womensteams",
+                            "targets": ["WomensTeamsHub"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectWomensTeamsHub",
+                    "states":
+                    [
+                        {
+                            "name": "WomensTeamsHub",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [2]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/RivalFootball/Menu/WomensTeams/WomensTeamsHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_legends",
+                            "targets": ["LegendsHub"]
+                        },
+                        {
+                            "event": "evt_mensteams",
+                            "targets": ["MensTeamsHub"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_rivallegends",
+                    "targets": ["Classicmatch"]
+                },
+                {
+                    "event": "evt_rivalmens",
+                    "targets": ["ClassicmatchMens"]
+                },
+                {
+                    "event": "evt_rivalwomens",
+                    "targets": ["ClassicmatchWomens"]
+                }
+            ]
+        },
+        {
+            "name": "Classicmatch",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Classicmatch/Classicmatch/Classicmatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectLegendsHub"
+            }
+        },
+        {
+            "name": "ClassicmatchMens",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Classicmatch/ClassicmatchMens/ClassicmatchMens.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMensTeamsHub"
+            }
+        },
+        {
+            "name": "ClassicmatchWomens",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/Classicmatch/ClassicmatchWomens/ClassicmatchWomens.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectWomensTeamsHub"
+            }
+        }
+    ]
+}

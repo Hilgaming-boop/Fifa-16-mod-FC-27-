@@ -1,0 +1,34 @@
+{
+    "name": "KickHub",
+    "onEnter":
+    [
+        ["setTabContext", [0]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["KickHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_kickoff",
+            "targets": ["out_menu_kickoff"]
+        },
+        {
+            "event": "evt_menu_beapro",
+            "targets": ["out_menu_beapro"]
+        },
+        {
+            "event": "evt_menu_manager",
+            "targets": ["out_menu_manager"]
+        },
+        {
+            "event": "evt_menu_ucl",
+            "targets": ["out_menu_ucl"]
+        }
+    ]
+}

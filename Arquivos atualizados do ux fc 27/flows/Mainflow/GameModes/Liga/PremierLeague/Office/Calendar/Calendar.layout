@@ -1,0 +1,554 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings": 
+            [
+               {
+                   "binding": "bnd_background_career",
+                   "property": "image"
+               }
+            ]        
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },      
+         {
+         "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -275,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Cm"
+                                    },      
+         {
+            "commonName": "Panel",
+            "name": "SelectTransfers",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -40,
+            "marginLeft": -80,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 40,
+                    "marginLeft": -50,
+                    "width": 900,
+                    "height": 574,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 15,
+                    "alpha": 0
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 10,
+                    "marginLeft": 300,
+                    "width": 1050,
+                    "height": 550,
+                    "color": "0x2B2B2B",
+                    "cornerRaduis": 15,
+                    "alpha": 0
+                 },
+                 {
+                    "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 390,
+                            "marginLeft": 0,
+                            "fontFace": "$CruyffSans-Regular",
+                            "fontSize": 0,
+                            "fontColor": "$COLOR_WHITE",
+                            "bold": true,
+                            "width": 1000,
+                            "multiline": true,
+                            "leading": 10000000,
+                            "alpha": 0.4,
+                            "text": "-------------------------"
+                 },
+                {
+                "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 3,
+                    "marginLeft": -480,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Office"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -545,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -400,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Calendar"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -430,
+                    "fontFace": "$DINPro",
+                    "fontSize": 0,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -370,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 0,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": "Top Scorers"
+                 },
+                 {
+                "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 110,
+                    "marginLeft": -400,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 1.6,
+                    "scaleY": 1.5,
+                    "alpha": 0.8,
+                    "text": "24-25 Season"
+                 },
+                {
+                "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 420,
+                    "marginLeft": -390,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 1.6,
+                    "scaleY": 1.5,
+                    "alpha": 0.8,
+                    "text": "Transfer Window Open"
+                 },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 370,
+                    "marginLeft": 400,
+                    "fontSize": 100,
+                    "fontFace": "$FONT_TIMER",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_goalscount",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 660,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_KNULMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playerteam",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "playerhead",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -60.0,
+                    "marginLeft": 450,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "scaleZ": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playerhead",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "playerteam",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -60.0,
+                    "marginLeft": 670,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "scaleZ": 0.6,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playerteamcrest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                 {
+                    "commonName": "GridTable",
+                    "name": "leaguesGridTable",
+                    "height": 580,
+                    "width": 950,
+                    "alpha": 1,
+                    "marginTop": 0,
+                    "marginLeft": 300,
+                    "color": "0xFFFFFF",
+                    
+                    "cellIndexChangeAction":
+                    {
+                        "action": "act_change",
+                        "binding": "bnd_player_index"
+                    },
+                    "columns": 7,
+                    "hasBulletIndicator": true,
+                    "itemType": "LeagueGridCell",
+                    "rows": 5,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_default_cell_data",
+                            "property": "defaultCellData"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 70,
+                    "marginLeft": -400,
+                    "fontSize": 23,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_date",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 350,
+                    "marginLeft": -400,
+                    "fontSize": 22,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 1.4,
+                    "scaleY": 1.5,
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_teamname",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 320,
+                    "marginLeft": -400,
+                    "fontSize": 22,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 1.0,
+                    "scaleY": 1.0,
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_result",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "teamcrest",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -10,
+                    "marginLeft": -400,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "scaleZ": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_teamcrest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 140,
+                    "marginLeft": -260,
+                    "fontSize": 22,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 2.2,
+                    "scaleY": 1.9,
+                    "bold": false,
+                    "alpha": 0.5,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_groundcol1",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 190,
+                    "marginLeft": -260,
+                    "fontSize": 22,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 2.2,
+                    "scaleY": 1.9,
+                    "bold": false,
+                    "alpha": 0.5,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_groundcol2",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 240,
+                    "marginLeft": -260,
+                    "fontSize": 22,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 2.2,
+                    "scaleY": 1.9,
+                    "bold": false,
+                    "alpha": 0.5,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_groundcol3",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 290,
+                    "marginLeft": -260,
+                    "fontSize": 22,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 2.2,
+                    "scaleY": 1.9,
+                    "bold": false,
+                    "alpha": 0.5,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_groundcol4",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+		            "commonName": "Panel",
+		            "name": "UIFrame",
+		            "alignV": "CENTER",
+		            "alignH": "FILL",
+					"marginBottom": -35,
+		            "marginLeft": 1250,
+		            "height": 580,
+		            "children":
+		            [
+		               {
+		                    "commonName": "GenericButton",
+		                    "alignH": "LEFT",
+		                    "alignV": "BOTTOM",
+		                    "marginBottom": 0,
+		                    "marginLeft": -126,
+		                    "scaleX": 0.6,
+		                    "scaleY": 0.6,
+		                    "clickAction": "act_simtodate",
+							"bindings":
+		                    [
+		                        {
+		                            "binding": "bnd_simicon",
+		                            "property": "icon"
+		                        }
+		                    ]
+		                },
+		                {
+		                    "commonName": "Label",
+		                    "alignV": "BOTTOM",
+		                    "alignH": "LEFT",
+		                    "marginBottom": 0,
+		                    "marginLeft": -70,
+		                    "fontSize": 14,
+		                    "fontColor": "$COLOR_LIGHT_GRAY",
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+							"bindings":
+		                    [
+		                        {
+		                            "binding": "bnd_simtext",
+		                            "property": "text"
+		                        }
+		                    ]
+		                }
+		            ]
+		         },
+                {
+		            "commonName": "Panel",
+		            "name": "UIFrame",
+		            "alignV": "CENTER",
+		            "alignH": "FILL",
+		            "height": 580,
+		            "children":
+		            [
+		               {
+		                    "commonName": "GenericButton",
+		                    "alignH": "LEFT",
+		                    "alignV": "BOTTOM",
+		                    "marginBottom": -35,
+		                    "marginLeft": -126,
+		                    "scaleX": 0.6,
+		                    "scaleY": 0.6,
+		                    "icon": "$SimMatchIcon2",
+		                    "clickAction": "act_back"
+		                },
+		                {
+		                    "commonName": "Label",
+		                    "alignV": "BOTTOM",
+		                    "alignH": "LEFT",
+		                    "marginBottom": -35,
+		                    "marginLeft": -70,
+		                    "fontSize": 14,
+		                    "fontColor": "$COLOR_LIGHT_GRAY",
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+		                    "text": "Back"
+                            },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 150,
+                            "marginLeft": -20,
+                            "width": 260,
+                            "height": 2,
+                            "color": "0xffffff",
+                            "alpha": 0.5
+		                }
+		            ]
+		         }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

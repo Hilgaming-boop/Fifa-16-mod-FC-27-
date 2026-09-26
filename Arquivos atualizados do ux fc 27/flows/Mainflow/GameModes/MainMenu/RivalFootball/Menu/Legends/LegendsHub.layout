@@ -1,0 +1,138 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 7,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 212,
+                            "height": 90,
+                            "width": 250,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 259.9,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Legends Clubs"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 5,
+                    "width": 700,
+                    "height": 380,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 700,
+                            "height": 320,
+                            "type": "$Legends"
+                        },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 42,
+                                    "width": 214,
+                                    "backgroundImage": "$_ClickToEnterOn4",
+                                    "backgroundHighlightImage": "$_ClickToEnterOn4",
+                                    "clickAction": "act_rivallegends"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 5,
+                                    "marginBottom": 0,
+                                    "fontSize": 13,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                                    "text": "Expand Legends Clubs"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

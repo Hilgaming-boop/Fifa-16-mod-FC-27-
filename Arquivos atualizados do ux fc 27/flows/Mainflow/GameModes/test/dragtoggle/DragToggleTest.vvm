@@ -1,0 +1,5 @@
+{
+	"dds":	 ["DragToggleTest.dd", "/flows/mainflow/widgets/cab/CAB.dd"],
+	"vms":	 [["lua", "DragToggleTest.lua"]],
+    "views": [["gfx", {"layout": "DragToggleTest.layout"}]]
+}

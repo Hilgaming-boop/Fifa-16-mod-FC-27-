@@ -1,0 +1,987 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "children":
+    [	    
+      {
+			"commonName": "Panel",
+			"alignV": "FILL",
+			"alignH": "FILL",
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				}
+			],
+			"children":
+			[
+				{
+					"commonName": "Panel",
+					"name": "background",
+                    "alignV": "CENTER",
+                   "alignH": "CENTER",
+					"bindings":
+					[
+						{
+							"property": "visible",
+							"binding":  "bnd_background_show"
+						},
+						{
+							"property": "height",
+							"binding":  "bnd_background_height"
+						},
+						{
+							"property": "width",
+							"binding":  "bnd_background_width"
+						},
+						{
+							"property": "alignH",
+							"binding":  "bnd_background_alignH"
+						},
+						{
+							"property": "alignV",
+							"binding":  "bnd_background_alignV"
+						},
+						{
+							"property": "marginBottom",
+							"binding":  "bnd_background_bottom"
+						}
+					],
+					"children":
+					[
+						{
+							"commonName": "Image",
+							"alignH": "FILL",
+							"alignV": "FILL",
+							"bindings":[
+								{
+									"property": "image",
+									"binding":  "bnd_background"
+								},
+								{
+									"property": "alpha",
+									"binding":  "bnd_background_alpha"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"commonName": "Panel",
+					"name": "HomeTeamLabel",
+					"alignH": "CENTER",
+					"alignV": "CENTER",
+					"bindings":
+					[
+						{
+							"property": "height",
+							"binding":  "bnd_label_height"
+						},
+						{
+							"property": "width",
+							"binding":  "bnd_label_width"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_homelabel_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_homelabel_top"
+						}
+					],
+					"children":
+					[
+						{
+							"commonName": "Rectangle",
+							"alignH": "FILL",
+							"alignV": "FILL",
+							"bindings":[
+								{
+									"property": "color",
+									"binding":  "bnd_homelabel_color"
+								},
+								{
+									"property": "alpha",
+									"binding":  "bnd_background_alpha_1"								
+								}
+							]
+						},
+            {
+							"commonName": "Label",
+              "name": "LongName",
+							"alignV": "CENTER",
+							"alignH": "CENTER",
+              "fontFace":"$FONT_EPL",
+							"bindings":[
+								{
+									"property": "text",
+									"binding":  "bnd_homelabel_text"
+								},
+                {
+									"property": "marginTop",
+									"binding":  "bnd_label_text_top"
+								},
+                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+								},
+								{
+									"property": "fontSize",
+									"binding":  "bnd_homelabel_fontSize"
+								},
+								{
+									"property": "fontColor",
+									"binding":  "bnd_homelabel_text_fontcolor"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_homeLabel_alignH"
+								}
+							]
+						},
+            {
+							"commonName": "Label",
+              "name": "ShortName",
+							"alignV": "CENTER",
+							"alignH": "CENTER",
+              "fontFace":"$FONT_ORIGIN_KNULEXTRABOLD",
+              "scaleX": 2.5,
+              "scaleY": 2.5,             
+							"bindings":[
+                {
+									"property": "text",
+									"binding":  "bnd_homelabel_short"
+								},
+					        	{
+						        	"property": "marginLeft",
+						        	"binding":  "bnd_homelabel_short_left"
+								},
+								{
+									"property": "fontSize",
+									"binding":  "bnd_homelabel_short_fontSize"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_homelabel_short_top"
+								},
+								{
+									"property": "fontColor",
+									"binding":  "bnd_homelabel_text_fontcolor"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_homelabel_alignH"
+							    },
+                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+								}
+							]
+						},
+						{
+							"commonName": "Rectangle",
+							"alignH": "CENTER",
+							"alignV": "CENTER",
+							"bindings":[
+								{
+									"property": "color",
+									"binding":  "bnd_homelabel_color"
+								},
+								{
+									"property": "height",
+									"binding":  "bnd_label_rect_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_label_rect_width"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_homelabel_rect_left"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_homelabel_rect_top"							    
+								}
+							]
+						},
+						{
+							"commonName": "Panel",
+							"name": "HomeTeamCrest",
+							"alignH": "CENTER",
+							"alignV": "CENTER",
+							"bindings":
+							[
+								{
+									"property": "height",
+									"binding":  "bnd_crest_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_crest_width"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_homecrest_left"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_homecrest_top"
+								}
+							],
+							"children":
+							[
+								{
+									"commonName": "Rectangle",
+									"alignH": "FILL",
+									"alignV": "FILL",
+									"bindings":[
+										{
+											"property": "color",
+											"binding":  "bnd_homecrest_color"
+										},
+										{
+											"property": "alpha",
+											"binding":  "bnd_background_alpha_1"
+										}
+									]
+								},
+								{
+									"commonName": "Image",
+									"alignV": "CENTER",
+									"alignH": "CENTER",
+									"bindings":[
+										{
+									"property": "height",
+									"binding":  "bnd_crest_image_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_crest_image_width"
+								},
+										{
+											"property": "image",
+											"binding":  "bnd_homecrest_image"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"commonName": "Panel",
+					"name": "AwayTeamLabel",
+					"alignH": "CENTER",
+					"alignV": "CENTER",
+					"bindings":
+					[
+						{
+							"property": "height",
+							"binding":  "bnd_label_height"
+						},
+						{
+							"property": "width",
+							"binding":  "bnd_label_width"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_awaylabel_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_awaylabel_top"
+						}
+					],
+					"children":
+					[
+						{
+							"commonName": "Rectangle",
+							"alignH": "FILL",
+							"alignV": "FILL",
+							"bindings":[
+								{
+									"property": "color",
+									"binding":  "bnd_awaylabel_color"
+								},
+								{
+									"property": "alpha",
+									"binding":  "bnd_background_alpha_1"						
+								}
+							]
+						},
+						{
+							"commonName": "Label",
+                            "name": "LongName",
+							"alignV": "CENTER",
+							"alignH": "CENTER",
+                            "fontFace":"$FONT_EPL",
+							"bindings":[
+								{
+									"property": "text",
+									"binding":  "bnd_awaylabel_text"
+								},
+                                {
+									"property": "marginTop",
+									"binding":  "bnd_label_text_top"
+								},
+                                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+								},
+								{
+									"property": "fontSize",
+									"binding":  "bnd_awaylabel_fontSize"
+								},
+								{
+									"property": "fontColor",
+									"binding":  "bnd_awaylabel_text_fontcolor"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_awayLabel_alignH"
+								}
+							]
+						},
+                        {
+							"commonName": "Label",
+                            "name": "ShortName",
+							"alignV": "CENTER",
+							"alignH": "CENTER",
+                            "fontFace":"$FONT_ORIGIN_KNULEXTRABOLD",
+                            "scaleX": 2.5,
+                            "scaleY": 2.5,
+							"bindings":[
+                            {
+									"property": "text",
+									"binding":  "bnd_awaylabel_short"
+								},
+					        	{
+						        	"property": "marginLeft",
+						        	"binding":  "bnd_awaylabel_short_left"
+								},
+								{
+									"property": "fontSize",
+									"binding":  "bnd_awaylabel_short_fontSize"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_awaylabel_short_top"
+								},
+								{
+									"property": "fontColor",
+									"binding":  "bnd_awaylabel_text_fontcolor"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_awayLabel_alignH"
+							    },
+                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+								}
+							]
+						},
+						{
+							"commonName": "Rectangle",
+							"alignH": "CENTER",
+							"alignV": "CENTER",
+							"bindings":[
+								{
+									"property": "color",
+									"binding":  "bnd_awaylabel_color"
+								},
+								{
+									"property": "height",
+									"binding":  "bnd_label_rect_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_label_rect_width"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_awayLabel_rect_left"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_awayLabel_rect_top"							    
+								}
+							]
+						},
+						{
+							"commonName": "Panel",
+							"name": "AwayTeamCrest",
+							"alignH": "CENTER",
+							"alignV": "CENTER",
+							"bindings":
+							[
+								{
+									"property": "height",
+									"binding":  "bnd_crest_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_crest_width"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_awaycrest_left"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_awaycrest_top"
+								}
+							],
+							"children":
+							[
+								{
+									"commonName": "Rectangle",
+									"alignH": "FILL",
+									"alignV": "FILL",
+									"bindings":[
+										{
+											"property": "color",
+											"binding":  "bnd_awaycrest_color"
+										},
+										{
+											"property": "alpha",
+											"binding":  "bnd_background_alpha_1"
+										}
+									]
+								},
+								{
+									"commonName": "Image",
+									"alignV": "CENTER",
+									"alignH": "CENTER",
+									"bindings":[
+										{
+									"property": "height",
+									"binding":  "bnd_crest_image_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_crest_image_width"
+								},
+										{
+											"property": "image",
+											"binding":  "bnd_awaycrest_image"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+
+				
+
+				{
+					"commonName": "Panel",
+					"name": "Stadium",
+					"alignH": "CENTER",
+					"alignV": "CENTER",
+					"bindings":
+					[
+						{
+							"property": "height",
+							"binding":  "bnd_stadium_height"
+						},
+						{
+							"property": "width",
+							"binding":  "bnd_stadium_width"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_stadium_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_stadium_top"
+						}
+					],
+					"children":
+					[
+						{
+							"commonName": "Rectangle",
+							"alignH": "FILL",
+							"alignV": "FILL",
+							"bindings":[
+								{
+									"property": "color",
+									"binding":  "bnd_stadium_color"
+								},
+								{
+									"property": "alpha",
+									"binding":  "bnd_background_stadium_alpha"
+								}
+							]
+                        },
+						{
+							"commonName": "Image",
+							"name": "stadiumIcon",
+							"alignV": "CENTER",
+							"bindings":[
+								{
+									"property": "image",
+									"binding":  "bnd_stadium_icon"
+								},
+								{
+									"property": "height",
+									"binding":  "bnd_stadium_icon_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_stadium_icon_width"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_stadium_icon_top"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_stadium_text_alignH"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_stadium_icon_left"
+								}
+							]					    
+						},
+						{
+							"commonName": "Label",
+							"alignV": "CENTER",
+							"bindings":[
+								{
+									"property": "text",
+									"binding":  "bnd_stadium_text"
+								},
+								{
+									"property": "fontSize",
+									"binding":  "bnd_stadium_fontSize"
+								},
+								{
+									"property": "fontColor",
+									"binding":  "bnd_stadium_fontColor"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_stadium_text_alignH"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_stadium_text_left"
+							    },
+                                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"commonName": "Panel",
+					"name": "Title",
+					"alignH": "CENTER",
+					"alignV": "CENTER",
+					"bindings":
+					[
+						{
+							"property": "height",
+							"binding":  "bnd_title_height"
+						},
+						{
+							"property": "width",
+							"binding":  "bnd_title_width"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_title_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_title_top"
+						}
+					],
+					"children":
+					[
+						{
+							"commonName": "Rectangle",
+							"alignH": "FILL",
+							"alignV": "FILL",
+							"bindings":[
+								{
+									"property": "color",
+									"binding":  "bnd_title_color"
+								},
+								{
+									"property": "alpha",
+									"binding":  "bnd_background_alpha_1"
+								}
+							]
+						},
+						{
+							"commonName": "Image",
+							"name": "logo",
+							"alignV": "CENTER",
+							"bindings":[
+								{
+									"property": "image",
+									"binding":  "bnd_logo"
+								},
+								{
+									"property": "height",
+									"binding":  "bnd_logo_height"
+								},
+								{
+									"property": "width",
+									"binding":  "bnd_logo_width"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_logo_left"
+								},
+								{
+									"property": "marginTop",
+									"binding":  "bnd_logo_top"
+								},
+								{
+									"property": "alpha",
+									"binding":  "bnd_logo_alpha"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_title_text_alignH"
+								}
+							]
+						},
+						{
+							"commonName": "Label",
+							"alignV": "CENTER",
+							"bindings":[
+								{
+									"property": "text",
+									"binding":  "bnd_title_text"
+								},
+                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+								},
+								{
+									"property": "fontSize",
+									"binding":  "bnd_title_fontSize"
+								},
+								{
+									"property": "fontColor",
+									"binding":  "bnd_title_fontColor"
+								},
+								{
+									"property": "alignH",
+									"binding":  "bnd_title_text_alignH"
+								},
+								{
+									"property": "marginLeft",
+									"binding":  "bnd_title_text_left"
+								},
+                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+								}
+							]
+						}
+					]
+				},
+
+				{
+					"commonName": "Label",
+					"name": "vs",
+					"alignV": "CENTER",
+					"alignH": "CENTER",
+					"bindings":[
+						{
+							"property": "text",
+							"binding":  "bnd_match_vs"
+						},
+						{
+							"property": "fontSize",
+							"binding":  "bnd_vs_fontSize"
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_vs_fontColor"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_vs_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_vs_top"
+						},
+                {
+									"property": "fontFace",
+									"binding":  "bnd_fontFace"
+								},
+								{
+									"property": "forceCaps",
+									"binding":  "bnd_forceCaps"
+						}
+					]
+				},
+        
+        {
+					"commonName": "Label",
+					"name": "RealTime",
+					"alignV": "CENTER",
+					"alignH": "CENTER",
+          "fontFace":"$FONT_ORIGIN_KNULEXTRABOLD",
+					"bindings":[
+						{
+							"property": "text",
+							"binding":  "bnd_realtime"
+						},
+						{
+							"property": "fontSize",
+							"binding":  "bnd_realtime_fontSize"
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_realtime_fontColor"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_realtime_top"
+						},
+            {
+							"property": "marginLeft",
+							"binding":  "bnd_realtime_left"
+						},
+				        {
+							"property": "fontFace",
+					        "binding":  "bnd_fontFace"
+					    },
+		         	   {
+						    "property": "forceCaps",
+					    	"binding":  "bnd_forceCaps"
+					    }
+				     ]
+			       },
+                {
+					"commonName": "Label",
+					"name": "JAM",
+					"alignV": "CENTER",
+					"alignH": "CENTER",	 
+	                "forceCaps": true,
+	                "autoTextShadow": true,
+					"bindings":[
+						{
+							"property": "text",
+							"binding":  "bnd_match_jam"
+						},
+						{
+							"property": "fontSize",
+							"binding":  "bnd_jam_fontSize"
+						},
+						{
+						    "property": "fontFace",
+							"binding":  "bnd_jam_fontFace"
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_jam_fontColor"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_jam_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_jam_top"
+					    },
+				        {
+							"property": "fontFace",
+					        "binding":  "bnd_fontFace"
+					    },
+		         	   {
+						    "property": "forceCaps",
+					    	"binding":  "bnd_forceCaps"
+					    }
+                    ]
+                },
+                {					
+                   "commonName": "Label",
+					"name": "HARI",
+					"alignV": "CENTER",
+					"alignH": "CENTER",	
+	                "forceCaps": true,
+	                "alpha": 0.7,
+	                "autoTextShadow": false,
+					"bindings":[
+						{
+							"property": "text",
+							"binding":  "bnd_match_hari"
+						},
+						{
+							"property": "fontFace",
+							"binding":  "bnd_hari_fontFace"
+						},
+						{
+						    "property": "fontSize",
+							"binding":  "bnd_hari_fontSize"
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_hari_fontColor"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_hari_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_hari_top"
+					    },
+				        {
+							"property": "fontFace",
+					        "binding":  "bnd_fontFace"
+					    },
+		         	   {
+						    "property": "forceCaps",
+					    	"binding":  "bnd_forceCaps"
+					    }
+                    ]
+                },
+                {					
+					"commonName": "Label",
+					"name": "TANGGAL",
+					"alignV": "CENTER",
+					"alignH": "CENTER",	
+	                "forceCaps": true,
+	                "alpha": 0.9,
+	                "autoTextShadow": false,
+					"bindings":[
+						{
+							"property": "text",
+							"binding":  "bnd_match_tanggal"
+						},
+						{
+							"property": "fontSize",
+							"binding":  "bnd_tanggal_fontSize"
+						},
+						{
+						    "property": "fontFace",
+							"binding":  "bnd_tanggal_fontFace"
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_tanggal_fontColor"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_tanggal_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_tanggal_top"
+					    },
+				        {
+							"property": "fontFace",
+					        "binding":  "bnd_fontFace"
+					    },
+		         	   {
+						    "property": "forceCaps",
+					    	"binding":  "bnd_forceCaps"
+					    }
+                    ]
+                },
+                {                    
+					"commonName": "Label",
+					"name": "BULAN",
+					"alignV": "CENTER",
+					"alignH": "CENTER",
+				    "forceCaps": true,
+			    	"alpha": 0.9,
+				    "autoTextShadow": false,
+					"bindings":[
+						{
+							"property": "text",
+							"binding":  "bnd_match_bulan"
+						},
+						{
+						    "property": "fontSize",
+							"binding":  "bnd_bulan_fontSize"
+						},
+						{
+						    "property": "fontFace",
+							"binding":  "bnd_bulan_fontFace"
+						},
+						{
+							"property": "fontSize",
+							"binding":  "bnd_bulan_fontSize"
+						},
+						{
+							"property": "fontColor",
+							"binding":  "bnd_bulan_fontColor"
+						},
+						{
+							"property": "marginLeft",
+							"binding":  "bnd_bulan_left"
+						},
+						{
+							"property": "marginTop",
+							"binding":  "bnd_bulan_top"
+						},
+				        {
+							"property": "fontFace",
+					        "binding":  "bnd_fontFace"
+					    },
+		         	   {
+						    "property": "forceCaps",
+					    	"binding":  "bnd_forceCaps"
+						}
+					]
+				}
+			]
+		}    
+	]
+}                    
+
+/*-- Mod By MVNPROD Youtube Channel --*/

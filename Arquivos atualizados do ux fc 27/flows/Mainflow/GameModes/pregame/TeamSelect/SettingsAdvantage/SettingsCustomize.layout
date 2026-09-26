@@ -1,0 +1,296 @@
+/* ------------------------------------- */
+/* Advantage Created By MounTsa */
+/* ------------------------------------- */
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings": [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts": [
+        {
+            "name": "show",
+            "script": [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "",
+            "script": [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "style-definitions": {
+        "TF_RIGHT_PANEL": {
+            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+            "fontSize": "$FONT_SIZE_MEDIUM",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER",
+            "leading": -2
+        },
+        "TF_SETTINGS_ROW_LABEL": {
+            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+            "fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "LEFT"
+        },
+        "TF_SETTINGS_ROW_LABEL_DISABLED": {
+            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+            "fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "LEFT"
+        },
+        "TF_SETTINGS_ROW_TOGGLE": {
+            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+            "fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER"
+        },
+        "TF_GENERAL_TEXT": {
+            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+            "fontSize": "$FONT_SIZE_MEDIUM",
+            "fontColor": "$COLOR_WHITE"
+        },
+        "TF_MULTILINE_TEXT": {
+            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+            "fontSize": "$FONT_SIZE_LARGEST",
+            "fontColor": "$COLOR_WHITE",
+            "leading": 0.1
+        },
+        "TF_CUSTOMIZE_INGAME_WARNING": {
+            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+            "fontSize": 14,
+            "fontColor": "$COLOR_BLUE"
+        }
+    },
+    "children": [
+        {
+            "commonName": "Panel",
+            "name": "Menu",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 40,
+            "height": 480,
+            "width": 650,
+            "children": [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0xffffff",
+                    "cornerRaduis": 10,
+                    "alpha": 0.8
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 88,
+                    "color": "0x000000",
+                    "height": 40,
+                    "width": 500,
+                    "cornerRaduis": 10,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 20,
+                    "marginLeft": 0,
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "fontSize": 28,
+                    "fontColor": "$COLOR_BLACK",
+                    "text": "Advantage Settings"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 40,
+                    "marginLeft": 0,
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_BLACK",
+                    "text": "CPU Teammate Difficulty"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 78,
+                    "marginLeft": 0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "Choose the starting score and what difficult you want the CPU AI teammates"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 100,
+                    "marginLeft": 0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "to be. Adjusting this difficulty will effect how your own AI teammates play with"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 122,
+                    "marginLeft": 0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "& without the ball."
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 10,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "text": "Home"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 150,
+                    "marginRight": 10,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "text": "Away"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 190,
+                    "marginLeft": 10,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "text": "Player1"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 190,
+                    "marginRight": 10,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "text": "Away1"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 178,
+                    "color": "$COLOR_LIGHT_GREEN",
+                    "height": 10,
+                    "width": 325,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 178,
+                    "color": "0x007DFF",
+                    "height": 10,
+                    "width": 325,
+                    "alpha": 1
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Menu",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 150,
+            "height": 40,
+            "width": 550,
+            "children": [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 10,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 15,
+                    "fontSize": 17,
+                    "fontColor": "0x007DFF",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "text": "0"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 15,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GREEN",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "text": "0"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 40,
+                    "color": "0x007DFF",
+                    "cornerRaduis": 5,
+                    "height": 5,
+                    "width": 235,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 40,
+                    "color": "$COLOR_LIGHT_GREEN",
+                    "cornerRaduis": 5,
+                    "height": 5,
+                    "width": 235,
+                    "alpha": 1
+                }
+            ]
+        },
+        {
+            "commonName": "Layer",
+            "name": "SettingsCustomizeContent"
+        }
+    ]
+}

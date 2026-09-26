@@ -1,0 +1,52 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_about",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_about"
+            }
+        },
+        {
+            "viewname": "act_web",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_web"
+            }
+        },
+        {
+            "viewname": "act_youtube",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_youtube"
+            }
+        },
+        
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        }
+        
+    ],
+    "data":
+    [
+    {
+      "viewname": "bnd_name_dev",
+      "binding": "bnd_name_dev",
+      "type": "string"
+    },
+    {
+      "viewname": "bnd_avatar_dev",
+      "binding": "bnd_avatar_dev",
+      "type": "object"
+    }
+    ]
+}

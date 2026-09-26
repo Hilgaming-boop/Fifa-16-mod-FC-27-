@@ -1,0 +1,212 @@
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "ANIMASI_MASUK_MAINMENU"
+        }
+      ]
+    },
+    {
+      "name": "",
+      "script": [
+        {
+          "anim": "ANIMASI_KELUAR_MAINMENU"
+        }
+      ]
+    }
+  ],
+  "style-definitions": {
+    "TF_TABS_IDLE": {
+      "alignH": "LEFT",
+      "fontFace": "$Title",
+      "fontSize": 22,
+      "fontColor": "$COLOR_LIGHT_GRAY",
+      "alpha": 0.5,
+      "width": 200
+    },
+    "TF_TABS_HIGHLIGHT": {
+      "alignH": "LEFT",
+      "fontFace": "$Title",
+      "fontSize": 22,
+      "fontColor": "$COLOR_WHITE"
+    },
+    "TF_TABS_SELECTED": {
+      "alignH": "LEFT",
+      "fontFace": "$Title",
+      "fontSize": 22,
+      "fontColor": "$COLOR_WHITE",
+      "alpha": 1
+    }
+  },
+  "children": [
+    {
+      "commonName": "Image",
+      "alignV": "FILL",
+      "alignH": "FILL",
+      "bindings": [
+        { 
+          "binding": "bnd_bg_tour",
+          "property": "image" 
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "CENTER",
+      "alignH": "FILL",
+      "height": 580,
+      "children": [
+        {
+          "commonName": "GenericButton",
+          "alignH": "LEFT",
+          "alignV": "BOTTOM",
+          "marginBottom": 0,
+          "marginLeft": 30,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "icon": "$SimMatchIcon2",
+          "clickAction": "act_back"
+        },
+        {
+          "commonName": "Label",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 0,
+          "marginLeft": 86,
+          "fontSize": 14,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+          "text": "Back"
+        },
+        {
+          "commonName": "Panel",
+          "name": "MenuLayout",
+          "alignV": "TOP",
+          "alignH": "FILL",
+          "marginTop": 7,
+          "height": 30,
+          "children": [
+            {
+              "commonName": "Asset",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "marginLeft": 60,
+              "width": 65,
+              "height": 65,
+              "type": "$Icon_T"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": -2,
+              "marginLeft": 130,
+              "fontSize": 22,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$MONTBLANC_TRIAL_BOLD",
+              "text": "Office"
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "marginLeft": 215,
+              "fontSize": 25,
+              "fontColor": "$COLOR_LIGHT_GRAY",
+              "fontFace": "$FONT_ORIGIN_NORMAL",
+              "alpha": 0.3,
+              "text": "|"
+            },
+            {
+              "commonName": "TabBar",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": -7,
+              "marginLeft": 232,
+              "textAlign": "LEFT",
+              "width": 252,
+              "height": 20,
+              "tabs": [
+                {
+                  "label": "Group Stage",
+                  "clickAction": "act_groupstage"
+                },
+                {
+                  "label": "Knock-out",
+                  "clickAction": "act_bracket"
+                }
+				]
+				}
+              ]
+            }
+          ]
+        },
+    {
+      "commonName": "Label",
+      "name": "Name",
+      "alignV": "TOP",
+      "alignH": "CENTER",
+      "marginTop": 110,
+      "marginLeft": -400,
+      "fontSize": 0,
+      "fontColor": "$COLOR_WHITE",
+      "fontFace": "$MONTBLANC_TRIAL_BOLD",
+      "bindings": [
+        { "binding": "bnd_tour_label", "property": "text" }
+      ]
+    },
+                {
+                    "commonName": "Asset",
+                    "name": "Proggres",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": 1150,
+                    "scaleY": 0.6,
+                    "scaleX": 0.6,
+					"path": "views/loadingindicator/busyState.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 40,
+                    "marginLeft": 1190,
+                    "fontSize": 16,
+                    "fontFace": "$FONT_DINPRO",
+                    "fontColor": "0xffffff",
+                    "alpha": 0.5,
+					"width": 100,
+					"autoScroll": true,
+					"autoTextShadow": true,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_info_progres",
+                            "property": "text"
+                        }
+                    ]
+                }
+      ]
+    }
+  ]
+}

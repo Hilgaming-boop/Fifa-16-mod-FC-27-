@@ -1,0 +1,53 @@
+{
+    "commonName": "Group",
+    "name": "container",
+    "children":
+    [
+        {
+            "commonName": "DragToggle",
+            "name": "testdrag",
+            "alignH": "CENTER",
+            "height": 300.0,
+            "width": 470.0,
+            "x": 100.0,
+            "y": 300.0,
+            "consumeInput": true,
+            "isCircular": true,
+			"hasArrows": false,
+            "itemType": "LiveTile",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_live_tile_list",
+                    "property": "dataProviders"
+                }
+            ],
+            "useTimer": true,
+            "timeRemaining": 3,
+            "behaviors":
+            [
+                {
+                    "commonName": "TileBulletMediator",
+                    "name": "testbullet",
+                    "x": 0.0,
+                    "y": 0.0,
+                    "positionType": 3,
+                    "style": "ingame",
+                    "showBackground": true,
+					"activateBackground": true,
+                    "currentIndex": 0
+                }
+            ]
+        },
+        {
+            "commonName": "GenericButton",
+            "name": "GenericButton1",
+            "height": 68.0,
+            "width": 319.0,
+            "x": 101.0,
+            "y": 107.0,
+			"clickAction": "act_back",
+			"label": "Back to Test Screen"
+        }
+    ]
+}

@@ -1,0 +1,445 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 320,
+            "width": 0,
+            "height": 0,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 20,
+                    "color": "0x1E1E1E",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Scout",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -60.0,
+                    "scaleX": 0.29,
+                    "scaleY": 0.29,
+                    "scaleZ": 0.29,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_scout",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -50,
+            "marginLeft": -5400,
+            "width": 270,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 20,
+                    "color": "0x1C1C1C",
+                    "alpha": 0.6
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -10,
+                    "marginLeft": 120,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -10,
+                    "marginLeft": 176,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+		                {
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -180,
+                            "marginLeft": 100,
+                            "width": 400,
+                            "height": 150,
+                            "type": "$Set_Scout_Info"
+                            },		                		                
+		                {
+                        "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -580,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Office"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": -545,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -3,
+                    "marginLeft": -492,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Set Scout"
+                    },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -3,
+                    "marginLeft": -430,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -3,
+                    "marginLeft": -310,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "New Scouting Mission"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -40,
+            "marginLeft": -360,
+            "width": 500,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "color": "0x1C1C1C",
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 330,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.4
+                },
+                {
+                "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 260,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.3
+                },
+                {
+                "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 200,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.3
+                },
+                {
+                "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 420,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0.3
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "text": ""
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 430,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Bold",
+                    "text": "Estimated Mission Cost"
+                },
+                {
+                "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 450,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSans-Bold",
+                    "alpha": 0.6,
+                    "text": "---"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 526,
+                    "marginLeft": -15,
+                    "fontSize": 0,
+                    "fontFace": "$CruyffSans-Bold",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchday_label",
+                            "property": "text"
+                        },
+                        {
+                            "binding":  "bnd_fontColor",
+                            "property": "fontColor"                           
+                         }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 233,
+                    "marginLeft": -1000,
+                    "fontSize": 20,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": -130,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 7,
+                    "highlightable": true,
+                    "row": "Setscout",
+                    "rowHeight": 60,
+                    "rowWidth": 455,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                },
+                {
+		            "commonName": "Panel",
+		            "name": "scoutbtn",
+		            "alignV": "CENTER",
+		            "alignH": "CENTER",
+		            "marginTop": 330,
+		            "marginLeft": 170,
+		            "width": 90,
+		            "height": 25,
+		            "children":
+		            [
+		                {
+		                    "commonName": "Label",
+		                    "alignV": "CENTER",
+		                    "alignH": "CENTER",
+							"marginLeft": 35,
+		                    "fontSize": 14,
+		                    "fontColor": "$COLOR_WHITE",
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                            "alpha": 0.7,
+		                    "text": "Set Up"
+		                },
+						{
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 30,
+                            "height": 30,
+                            "type": "$SimMatchIcon1"
+                            },
+		                {
+		                    "commonName": "GenericButton",
+		                    "alignV": "CENTER",
+		                    "clickAction": "act_submit"
+		                }
+		            ]
+		        },
+				{
+		            "commonName": "Panel",
+		            "name": "togglebtn1",
+		            "alignV": "CENTER",
+		            "alignH": "CENTER",
+		            "marginTop": 290,
+                    "marginLeft": 80,
+                    "scaleX": 2.5,
+                    "scaleY": 2.5,
+		            "width": 90,
+		            "height": 25,
+		            "children":
+		            [
+						{
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 30,
+                            "height": 30,
+                            "type": "$BlueArrowRight"
+                            },
+			                {
+		                    "commonName": "GenericButton",
+		                    "alignV": "CENTER",
+		                    "clickAction": "act_next"                    
+		                }
+		            ]
+		        },
+				{
+		            "commonName": "Panel",
+		            "name": "togglebtn1",
+		            "alignV": "CENTER",
+		            "alignH": "CENTER",
+		            "marginTop": 290,
+                    "marginLeft": -50,
+                    "scaleX": 2.5,
+                    "scaleY": 2.5,
+		            "width": 90,
+		            "height": 25,
+		            "children":
+		            [
+						{
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 30,
+                            "height": 30,
+                            "type": "$BlueArrowLeft"
+                            },
+			                {
+		                    "commonName": "GenericButton",
+		                    "alignV": "CENTER",
+		                    "clickAction": "act_decrease"                    
+		                }
+		            ]
+		        }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

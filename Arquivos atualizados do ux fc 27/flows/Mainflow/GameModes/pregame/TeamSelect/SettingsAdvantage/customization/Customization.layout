@@ -1,0 +1,95 @@
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts": [
+        {
+            "name": "show",
+            "script": [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "",
+            "script": [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "MouseClickActionBehavior",
+            "actionName": "act_accept"
+        },
+        {
+            "commonName": "KeyPressActionBehavior",
+            "actionName": "act_accept"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Menu",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 90,
+            "height": 500,
+            "width": 650,
+
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 215,
+                    "marginLeft": 90,
+                    "width": 480,
+                    "height": 250,
+                    "type": "$Stadium2"
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "PengaturanMatch",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 50,
+                    "marginLeft": -250,
+                    "rowWidth": 500,
+                    "rowHeight": 50,
+                    "displayRange": 2,
+                    "useAlternating": false,
+                    "row": "CustomizationRow",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_settings_list_data",
+                            "property": "dataProviders"
+                        }
+                    ]
+                 }
+              ]
+           }
+        ]
+     }
+  ]
+}

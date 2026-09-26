@@ -1,0 +1,317 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTabMission1",
+                    "states":
+                    [
+                        {
+                            "name": "TabMission1",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [0]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/CareerMode/Menu/SelectMission/TabMission1.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab_mission2",
+                            "targets": ["TabMission2"]
+                        },
+                        {
+                            "event": "evt_tab_mission3",
+                            "targets": ["TabMission3"]
+                        },
+                        {
+                            "event": "evt_tab_mission4",
+                            "targets": ["TabMission4"]
+                        },
+                        {
+                            "event": "evt_tab_mission5",
+                            "targets": ["TabMission5"]
+                         },
+                        {
+                            "event": "evt_play_next",
+                            "targets": ["Next"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTabMission2",
+                    "states":
+                    [
+                        {
+                            "name": "TabMission2",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [1]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/CareerMode/Menu/SelectMission/TabMission2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab_mission1",
+                            "targets": ["TabMission1"]
+                        },
+                        {
+                            "event": "evt_tab_mission3",
+                            "targets": ["TabMission3"]
+                        },
+                        {
+                            "event": "evt_tab_mission4",
+                            "targets": ["TabMission4"]
+                        },
+                        {
+                            "event": "evt_tab_mission5",
+                            "targets": ["TabMission5"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTabMission3",
+                    "states":
+                    [
+                        {
+                            "name": "TabMission3",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [2]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/CareerMode/Menu/SelectMission/TabMission3.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab_mission1",
+                            "targets": ["TabMission1"]
+                        },
+                        {
+                            "event": "evt_tab_mission2",
+                            "targets": ["TabMission2"]
+                        },
+                        {
+                            "event": "evt_tab_mission4",
+                            "targets": ["TabMission4"]
+                        },
+                        {
+                            "event": "evt_tab_mission5",
+                            "targets": ["TabMission5"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTabMission4",
+                    "states":
+                    [
+                        {
+                            "name": "TabMission4",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [3]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/CareerMode/Menu/SelectMission/TabMission4.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab_mission1",
+                            "targets": ["TabMission1"]
+                        },
+                        {
+                            "event": "evt_tab_mission2",
+                            "targets": ["TabMission2"]
+                        },
+                        {
+                            "event": "evt_tab_mission3",
+                            "targets": ["TabMission3"]
+                        },
+                        {
+                            "event": "evt_tab_mission5",
+                            "targets": ["TabMission5"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTabMission5",
+                    "states":
+                    [
+                        {
+                            "name": "TabMission5",
+                            "onEnter":
+                            [
+                              ["setTabMVNPROD", [4]],
+                              ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/CareerMode/Menu/SelectMission/TabMission5.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab_mission1",
+                            "targets": ["TabMission1"]
+                        },
+                        {
+                            "event": "evt_tab_mission2",
+                            "targets": ["TabMission2"]
+                        },
+                        {
+                            "event": "evt_tab_mission3",
+                            "targets": ["TabMission3"]
+                        },
+                        {
+                            "event": "evt_tab_mission4",
+                            "targets": ["TabMission4"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_missionmode1",
+                    "targets": ["Mission1"]
+                },
+                {
+                    "event": "evt_missionmode2",
+                    "targets": ["Mission2"]
+                },
+                {
+                    "event": "evt_missionmode3",
+                    "targets": ["Mission3"]
+                },
+                {
+                    "event": "evt_start",
+                    "targets": ["Start"]
+                },
+                {
+                    "event": "evt_next",
+                    "targets": ["Next"] 
+                },
+                {
+                    "event": "evt_missionmode4",
+                    "targets": ["Mission4"]
+                },
+                {
+                    "event": "evt_missionmode5",
+                    "targets": ["Mission5"]
+                }
+            ]
+        },
+        {
+            "name": "Start",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MissionHub",            
+                "out_exit_gamemode1": "MissionHub"
+            }
+        },
+        {
+            "name": "Mission1",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission1/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TabMission1",            
+                "out_exit_gamemode1": "TabMission1"
+            }
+        },
+        {
+            "name": "Next",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MainMenu/CareerMode/Menu/Laliga/MenuHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectMenuHub"
+            }
+        },
+        {
+            "name": "Mission5",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission5/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TabMission5",            
+                "out_exit_gamemode1": "TabMission5"
+            }
+        },
+        {
+            "name": "Mission2",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission2/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TabMission2",            
+                "out_exit_gamemode1": "TabMission2"
+            }
+        },
+        {
+            "name": "Mission3",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission3/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TabMission3",            
+                "out_exit_gamemode1": "TabMission3"
+            }
+        },
+        {
+            "name": "Mission4",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission4/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TabMission4",            
+                "out_exit_gamemode1": "TabMission4"
+            }
+        }
+    ]
+}

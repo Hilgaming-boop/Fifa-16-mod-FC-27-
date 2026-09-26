@@ -1,0 +1,362 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+		        "script" : [ { "anim" : "MOD_SLIDE_IN_RIGHT" } ]
+        },
+        {
+            "name": "hide",
+		        "script" : [ { "anim" : "SCREEN_TRANSITION_OUT" } ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 230,
+                    "marginTop": -20,
+                    "width": 300,
+                    "height": 370,
+                    "children":
+                    [
+						{
+							"commonName": "Rectangle",
+							"alignV": "TOP",
+							"alignH": "CENTER",
+							"cornerRaduis": 8,
+							"marginTop": 0,
+                            "width": 340,
+                            "height": 370,
+							"alpha": 1,
+							"bindings":[
+								{
+									"binding": "bnd_color_tourid",
+									"property": "color"
+								}
+							]
+						},
+						{
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+							"alpha": 0.5,
+                            "icon": "",
+                            "clickAction": "act_tab3sub1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 20,
+                            "marginLeft": 0,
+                            "fontSize": 20,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": "Standings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 60,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor": "0xFFCA6D",
+							"forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tour_label",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 120,
+                            "marginLeft": 70,
+                            "fontSize": 16,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+							"alpha": 0.8,
+                            "text": "Club"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 120,
+                            "marginLeft": 20,
+                            "fontSize": 16,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+							"alpha": 0.8,
+                            "text": "Pos"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 120,
+                            "marginLeft": 260,
+                            "fontSize": 16,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "0xFFFFFF",
+							"alpha": 0.8,
+                            "text": "Poin"
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "TableMatch",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "width": 300,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7,
+                            "alpha": 1,
+                            "children":
+                            [
+                                {
+                                    "commonName": "VerticalList",
+                                    "name": "matchlist",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginTop": 20,
+                                    "marginLeft": -125,
+                                    "x": 0,
+                                    "y": 0,
+                                    "displayRange": 4,
+                                    "highlightable": true,
+                                    "row": "StandingsGroupRow",
+                                    "rowHeight": 63,
+                                    "rowWidth": 400,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_group_standings",
+                                            "property": "dataProviders"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+		},
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 30,
+                    "marginTop": -20,
+                    "width": 300,
+                    "height": 370,
+                    "children":
+                    [
+						{
+							"commonName": "Rectangle",
+							"alignV": "TOP",
+							"alignH": "CENTER",
+							"cornerRaduis": 8,
+							"marginTop": 0,
+                            "width": 340,
+                            "height": 370,
+							"alpha": 1,
+							"bindings":[
+								{
+									"binding": "bnd_color_tourid",
+									"property": "color"
+								}
+							]
+						},
+						{
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+							"alpha": 0.5,
+                            "icon": "",
+                            "clickAction": "act_tab3sub2"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 20,
+                            "marginLeft": 0,
+                            "fontSize": 20,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": "Players Stas"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 60,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor": "0xFFCA6D",
+							"text": "Top Scorers"
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "TableMatch",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "width": 300,
+                            "scaleX": 0.65,
+                            "scaleY": 0.65,
+                            "alpha": 1,
+                            "children":
+                            [
+                                {
+                                    "commonName": "VerticalList",
+                                    "name": "matchlist",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginTop": -20,
+                                    "marginLeft": -145,
+                                    "x": 0,
+                                    "y": 0,
+                                    "displayRange": 5,
+                                    "highlightable": true,
+                                    "row": "TopGoalRow",
+                                    "rowHeight": 63,
+                                    "rowWidth": 450,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_match_list",
+                                            "property": "dataProviders"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+		},
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 390,
+                    "marginTop": -20,
+                    "width": 300,
+                    "height": 370,
+                    "children":
+                    [
+						{
+							"commonName": "Rectangle",
+							"alignV": "TOP",
+							"alignH": "CENTER",
+							"cornerRaduis": 8,
+							"marginTop": 0,
+                            "width": 340,
+                            "height": 370,
+							"alpha": 1,
+							"bindings":[
+								{
+									"binding": "bnd_color_tourid",
+									"property": "color"
+								}
+							]
+						},
+						{
+                            "commonName": "GenericButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 300,
+                            "height": 370,
+							"alpha": 0.5,
+                            "icon": "",
+                            "clickAction": "act_tab3sub3"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 20,
+                            "marginLeft": 0,
+                            "fontSize": 20,
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": "Fixtures"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": 0,
+							"scaleX": 1,
+							"scaleY": 1,
+							"type": "$Icon_Stats"
+						},
+						{
+							"commonName": "Label",
+							"alignV": "CENTER",
+							"alignH": "CENTER",
+							"marginTop": 100,
+							"marginLeft": 0,
+							"fontSize": 12,
+							"fontFace": "$MONTBLANC_TRIAL_BOLD",
+							"fontColor": "0xFFFFFF",
+							"bold": false,
+							"alpha": 0.7,
+							"text": "In-dept statistics for all the players"
+                        }
+                    ]
+                }
+            ]
+		}
+     ]
+}

@@ -1,0 +1,356 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+       {          
+            "commonName": "Asset",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -125,
+            "marginLeft": 65,
+            "height": 90,
+            "width": 290,
+            "alpha": 1,
+            "path": "views/backgrounds/Green_Effect.swf"
+        },    
+        {          
+            "commonName": "Label",
+            "name": "Live",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -126,
+            "marginLeft": 109,
+            "fontSize": 16,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$CruyffSans-Expandes",
+            "text": "TEAM MANAGEMENT HOME"
+        },
+        {
+            "commonName": "GenericButton",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 30,
+            "marginLeft": 130,
+            "scaleX": 0.6,
+            "scaleY": 0.6,
+            "icon": "$SimMatchIcon1",
+            "clickAction": "act_to_ingame_squad"
+        },
+        {               
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 120,
+            "marginTop": 10,
+            "width": 550,
+            "height": 380,
+            "color": "0x151515",
+            "cornerRaduis": 19,
+            "alpha": 0.9
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 130,
+            "marginTop": 10,
+            "width": 550,
+            "height": 380,
+            "alpha": 1,
+            "type": "$Tab_inTeam"                          
+        },
+        {
+            "commonName": "Image",
+            "name": "LogoTeam",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -108,
+            "marginLeft": 520,
+            "scaleX": 0.20,
+            "scaleY": 0.20,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_home_team_crest",
+                  "property": "image"
+               }
+            ]
+        },
+        {                  
+            "commonName": "Label",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -90,
+            "marginLeft": 100,
+            "fontSize": 17,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "fontFace": "$FONT_TIMER",
+            "forceCaps": true,
+            "text": "Formation"
+        },
+        {
+            "commonName": "Label",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -162,
+            "marginLeft": 510,
+            "fontSize": 15,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$FONT_DINPRO",
+            "text": "Default"
+        },
+        {
+            "commonName": "Label",
+            "name": "NameTeam",
+            "alignH": "LEFT",
+            "alignV": "CENTER",
+            "marginTop": -115,
+            "marginLeft": 728,
+            "fontSize": 25,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$FONT_DINPROBOLD",
+            "textAlignH": "LEFT",
+            "forceCaps": true,
+            "autoScroll":true,
+            "width": 250,
+            "bindings":
+            [
+               {
+                   "binding": "bnd_home_team_name",
+                   "property": "text"
+               }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "NamaTeamShorts",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -162,
+            "marginLeft": 440,
+            "fontSize": 15,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$FONT_DINPRO",
+            "forceCaps": false,
+            "bindings":
+            [
+               {
+                   "binding": "bnd_home_team_name_abbr",
+                   "property": "text"
+               }
+            ]
+        },
+        {
+		    "commonName": "Image",
+		    "name": "Goalkeeper",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 290,
+	        "marginTop": 155,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_homegk_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "RightBack",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 460,
+	        "marginTop": 80,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+        },
+        {
+		    "commonName": "Image",
+		    "name": "CenterBack",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 375,
+	        "marginTop": 100,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "CenterBack",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 210,
+	        "marginTop": 100,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "LeftBack",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 120,
+	        "marginTop": 80,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "DefensiveMidfilders",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 290,
+	        "marginTop": 35,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "CentralMidfilders",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 375,
+	        "marginTop": 10,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "CentralMidfilders",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 210,
+	        "marginTop": 10,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "RightWinger",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 438,
+	        "marginTop": -40,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "LeftWinger",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 150,
+	        "marginTop": -40,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]
+		},
+        {
+		    "commonName": "Image",
+		    "name": "Striker",
+		    "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 290,
+	        "marginTop": -45,
+            "width": 50,
+            "height": 50,
+            "bindings":
+		    [
+		       {
+		           "binding": "bnd_kit_home_team",
+		           "property": "image"
+		       }
+		    ]                  
+        }
+    ]
+}

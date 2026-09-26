@@ -1,0 +1,28 @@
+{
+    "name": "Controls",
+    "initial":
+    {
+        "targets": ["RedirectControls"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectControls",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["Controls.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        }
+    ]
+}
